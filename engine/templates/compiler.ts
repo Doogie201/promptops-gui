@@ -2,9 +2,10 @@ import { canonicalSerialize } from '../events/schema';
 import { TemplateVersion } from './registry';
 
 export interface CompilationResult {
-  state: 'needs_input' | 'ready';
+  state: 'needs_input' | 'ready' | 'invalid';
   missingKeys: string[];
   outputJson?: string;
+  reasons?: string[];
 }
 
 export function compileTemplate(template: TemplateVersion, context: Record<string, unknown>): CompilationResult {
@@ -27,7 +28,9 @@ export function compileTemplate(template: TemplateVersion, context: Record<strin
   }
 
   const rendered = template.body.replace(placeholderRegex, (_, key) => {
-    return String(context[key.trim()]);
+    const rawVal = String(context[key.trim()]);
+    const escaped = JSON.stringify(rawVal);
+    return escaped.substring(1, escaped.length - 1);
   });
 
   try {
@@ -40,11 +43,10 @@ export function compileTemplate(template: TemplateVersion, context: Record<strin
       outputJson
     };
   } catch(e) {
-    // Fallback: literal string replacement (if not valid JSON initially, the validator will catch it)
     return {
-      state: 'ready',
+      state: 'invalid',
       missingKeys: [],
-      outputJson: rendered
+      reasons: ['Malformed JSON after binding placeholders']
     };
   }
 }

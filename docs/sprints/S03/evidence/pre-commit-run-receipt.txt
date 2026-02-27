@@ -5,9 +5,6 @@ trim trailing whitespace.................................................Failed
 - files were modified by this hook
 
 Fixing engine/templates/compiler.test.ts
-Fixing engine/templates/registry.ts
-Fixing engine/templates/compiler.ts
-Fixing engine/templates/safety.ts
 
 fix end of files.........................................................
 Failed
@@ -40,13 +37,13 @@ TAP version 13
 # Subtest: valid transitions
 ok 1 - valid transitions
   ---
-  duration_ms: 0.616042
+  duration_ms: 0.385209
   type: 'test'
   ...
 # Subtest: illegal transitions throw explicitly
 ok 2 - illegal transitions throw explicitly
   ---
-  duration_ms: 0.205208
+  duration_ms: 0.184666
   type: 'test'
   ...
 1..2
@@ -57,7 +54,7 @@ ok 2 - illegal transitions throw explicitly
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 39.034792
+# duration_ms 38.531
 [3/3] Lint & Stoplight Greps
 ./docs/sprints/S02/evidence/run_receipt.txt:28:./docs/sprints/S02/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
 ./docs/sprints/S02/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:27:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt

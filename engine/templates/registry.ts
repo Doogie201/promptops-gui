@@ -1,4 +1,5 @@
 import * as crypto from 'crypto';
+import { assertSafeActivation } from './safety';
 
 export type TemplateStatus = 'active' | 'archived';
 
@@ -13,7 +14,7 @@ export interface TemplateVersion {
 export class TemplateRegistry {
   private templates: Map<string, TemplateVersion[]> = new Map();
 
-  register(templateId: string, versionId: string, body: string, protectedSections: string[] = [], status: TemplateStatus = 'active'): TemplateVersion {
+  register(templateId: string, versionId: string, body: string, protectedSections: string[] = [], status: TemplateStatus = 'active', overrideSafety: boolean = false): TemplateVersion {
     const contentHash = crypto.createHash('sha256').update(body).digest('hex');
     const version: TemplateVersion = { versionId, contentHash, status, body, protectedSections };
 
@@ -21,6 +22,13 @@ export class TemplateRegistry {
     if (!versions) {
       versions = [];
       this.templates.set(templateId, versions);
+    }
+
+    if (status === 'active') {
+      const activeV = this.getActiveVersion(templateId);
+      if (activeV && activeV.versionId !== versionId) {
+        assertSafeActivation(activeV, version, overrideSafety);
+      }
     }
 
     const idx = versions.findIndex(v => v.versionId === versionId);

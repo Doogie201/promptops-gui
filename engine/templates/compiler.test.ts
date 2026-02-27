@@ -79,7 +79,49 @@ test('S03.D Safety Diff test (Protected sections)', () => {
   const v1 = registry.register('ticket', 'v1', `body { SECURE_BLOCK }`, ['SECURE_BLOCK']);
 
   assert.throws(() => {
-    const v2Raw = registry.register('ticket', 'v2', `body { NOPE }`);
+    const v2Raw = registry.register('ticket', 'v2', `body { NOPE }`, [], 'archived');
+    // We already check this in AT-S03-05 directly against registry.register
     assertSafeActivation(v1, v2Raw);
   }, /Safety violation/);
+});
+
+test('AT-S03-04: JSON-safe placeholder injection with quotes and newlines', () => {
+  const registry = new TemplateRegistry();
+  const rawBody = `{"title": "{{TITLE}}", "description": "{{DESC}}"}`;
+  const v1 = registry.register('ticket', 'v1', rawBody);
+
+  const ctx = {
+    TITLE: 'He said "hi"',
+    DESC: 'Line 1\nLine 2\nWith \\backslash'
+  };
+
+  const res = compileTemplate(v1, ctx);
+  assert.strictEqual(res.state, 'ready');
+  assert.strictEqual(res.outputJson, '{"description":"Line 1\\nLine 2\\nWith \\\\backslash","title":"He said \\"hi\\""}');
+});
+
+test('AT-S03-05: Safety enforcement on activation (with and without override)', () => {
+  const registry = new TemplateRegistry();
+  const rawBodyV1 = `{"content": "abc SECURE_MARKER xyz"}`;
+
+  // Register v1 as active with protected section
+  registry.register('ticket', 'v1', rawBodyV1, ['SECURE_MARKER'], 'active');
+
+  const rawBodyV2 = `{"content": "unsafe removed marker"}`;
+
+  // Attempt to register v2 as active (fails because it drops SECURE_MARKER)
+  assert.throws(() => {
+    registry.register('ticket', 'v2', rawBodyV2, [], 'active');
+  }, /Safety violation/);
+
+  // Active version remains v1
+  let active = registry.getActiveVersion('ticket');
+  assert.strictEqual(active?.versionId, 'v1');
+
+  // Register v2 as active with override flag
+  registry.register('ticket', 'v2', rawBodyV2, [], 'active', true);
+
+  // Active version is now v2
+  active = registry.getActiveVersion('ticket');
+  assert.strictEqual(active?.versionId, 'v2');
 });

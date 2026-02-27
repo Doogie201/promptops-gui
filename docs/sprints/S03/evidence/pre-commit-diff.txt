@@ -1,9 +1,14 @@
 $ git diff origin/main...HEAD -- .pre-commit-config.yaml
 diff --git a/.pre-commit-config.yaml b/.pre-commit-config.yaml
-index 1ab8d19..9829352 100644
+index 1ab8d19..e8aab12 100644
 --- a/.pre-commit-config.yaml
 +++ b/.pre-commit-config.yaml
-@@ -4,3 +4,14 @@ repos:
+@@ -1,6 +1,19 @@
++ci:
++    skip: [gates]
+ repos:
+ -   repo: https://github.com/pre-commit/pre-commit-hooks
+     rev: v4.4.0
      hooks:
      -   id: trailing-whitespace
      -   id: end-of-file-fixer
