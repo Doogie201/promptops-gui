@@ -1,2 +1,12 @@
 $ git diff --name-only origin/main...HEAD
-EXIT_CODE=0
+docs/backlog/README.md
+docs/sprints/README.md
+docs/sprints/S02/README.md
+docs/sprints/S02/evidence/run_receipt.txt
+docs/sprints/S02/evidence/scope-proof.txt
+docs/sprints/S02/evidence/stoplight_greps.txt
+docs/sprints/S02/evidence/store-ats-receipt.txt
+docs/sprints/S02/evidence/store-paths-receipt.txt
+engine/store.test.ts
+engine/store.ts
+EXIT_CODE=$?
