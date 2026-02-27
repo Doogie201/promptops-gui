@@ -30,4 +30,3 @@ $ ls -la /tmp/promptops/S01/schema/events1.jsonl /tmp/promptops/S01/schema/event
 -rw-r--r--@ 1 marcussmith  staff  306 Feb 26 20:57 /tmp/promptops/S01/schema/events1.jsonl
 -rw-r--r--@ 1 marcussmith  staff  306 Feb 26 20:58 /tmp/promptops/S01/schema/events2.jsonl
 EXIT_CODE=0
-
