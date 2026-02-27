@@ -1,0 +1,11 @@
+$ rg -n "dangerouslySetInnerHTML|new Date\(|timestamp|eval\(|token:|repeat_request_detected|needs_input" engine/evaluator.ts engine/evaluator.test.ts .github/workflows/codecov.yml package.json docs/sprints/S04/README.md
+engine/evaluator.test.ts:109:test('AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket', () => {
+engine/evaluator.test.ts:135:  assert.strictEqual(report1.verdict, 'needs_input');
+engine/evaluator.test.ts:144:  assert.strictEqual(report2.verdict, 'needs_input');
+docs/sprints/S04/README.md:10:- Add repeat-request detection: if a requirement was already DONE with evidence, re-asking it returns `blocked` / `needs_input` and does not produce a looping delta ticket.
+docs/sprints/S04/README.md:20:- **AT-S04-05**: Repeat-request detection returns `blocked` / `needs_input` deterministically and emits no looping delta ticket.
+engine/evaluator.ts:27:  verdict: 'complete' | 'delta' | 'needs_input';
+engine/evaluator.ts:66:        verdict: complete ? 'complete' : 'needs_input',
+engine/evaluator.ts:96:    citations: stableUnique(entry.citations.concat(['ledger:repeat_request_detected']).concat(priorCitations))
+.github/workflows/codecov.yml:33:          token: ${{ secrets.CODECOV_TOKEN }}
+EXIT_CODE:0

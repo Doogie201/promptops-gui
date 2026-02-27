@@ -1,0 +1,6 @@
+{
+  "allow_exact_paths": [
+    "engine/evaluator.test.ts",
+    "engine/evaluator.ts"
+  ]
+}

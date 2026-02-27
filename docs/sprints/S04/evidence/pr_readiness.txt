@@ -1,0 +1,20 @@
+$ git rev-parse --abbrev-ref HEAD
+sprint/S04-evaluator-evidence-ledger-codecov
+EXIT_CODE:0
+
+$ git status --porcelain=v1 --branch
+## sprint/S04-evaluator-evidence-ledger-codecov
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+ M package.json
+?? .github/
+?? docs/sprints/S04/
+?? engine/evaluator.test.ts
+?? engine/evaluator.ts
+EXIT_CODE:0
+
+$ git diff --name-only
+docs/backlog/README.md
+docs/sprints/README.md
+package.json
+EXIT_CODE:0
