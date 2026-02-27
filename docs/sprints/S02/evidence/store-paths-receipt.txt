@@ -1,0 +1,12 @@
+$ ls -la /tmp/promptops/S02/runs/*
+-rw-r--r--@ 1 marcussmith  wheel  130 Feb 26 21:31 /tmp/promptops/S02/runs/run-idem.jsonl
+EXIT_CODE=0
+$ shasum -a 256 /tmp/promptops/S02/runs/*
+24ba0c9f5d3bbbf64c94b4427a2a8f7b53bb4ad782fd2ce051674331d42d1bf4  /tmp/promptops/S02/runs/run-idem.jsonl
+EXIT_CODE=0
+$ ls -la /tmp/promptops/S02/resume/*
+-rw-r--r--@ 1 marcussmith  wheel  233 Feb 26 21:31 /tmp/promptops/S02/resume/run-resume.jsonl
+EXIT_CODE=0
+$ shasum -a 256 /tmp/promptops/S02/resume/*
+21d2a44d611b7b2d40e620daaf8a4f5bc243db97114008443cb24d9655d08ccc  /tmp/promptops/S02/resume/run-resume.jsonl
+EXIT_CODE=0
