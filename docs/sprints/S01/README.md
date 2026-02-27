@@ -1,5 +1,8 @@
 # S01: Repo Bootstrap, Guardrails, and Event Schema
 
+## Objective
+Bootstrap a new macOS-only PromptOps GUI project repo with strict module boundaries, deterministic event schema + hashing, and a run state machine skeleton with gates and recorded stoplight greps.
+
 ## Work Plan
 - Setup primary worktree preflight and open PR checks.
 - Create new PromptOps GUI repository and sync to GitHub.

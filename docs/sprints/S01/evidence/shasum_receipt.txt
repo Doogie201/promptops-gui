@@ -1,0 +1,4 @@
+9a6d28b773b8b467bf7cf7c5b8eb6577d2e46cc691bd607745277498e0b83914  /tmp/promptops/S01/schema/events1.jsonl
+9a6d28b773b8b467bf7cf7c5b8eb6577d2e46cc691bd607745277498e0b83914  /tmp/promptops/S01/schema/events2.jsonl
+cmp /tmp/promptops/S01/schema/events1.jsonl /tmp/promptops/S01/schema/events2.jsonl
+CMP SUCCESS: byte-identical
