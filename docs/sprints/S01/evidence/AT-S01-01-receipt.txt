@@ -1,5 +1,4 @@
-$ npx ts-node fixtures/generate_events.ts
-npm warn exec The following package was not found and will be installed: ts-node@10.9.2
+$ npx tsx fixtures/generate_events.ts
 Event A Hash: 44f621a0333680692e0050cc9087753f88268b8c7a922789b88cc7c9045c93d7
 Event B Hash: 44f621a0333680692e0050cc9087753f88268b8c7a922789b88cc7c9045c93d7
 SUCCESS: Events are deterministic and produce identical hashes.
@@ -9,7 +8,7 @@ EXIT_CODE=0
 $ mv fixtures/events.jsonl /tmp/promptops/S01/schema/events1.jsonl
 EXIT_CODE=0
 
-$ npx ts-node fixtures/generate_events.ts
+$ npx tsx fixtures/generate_events.ts
 Event A Hash: 44f621a0333680692e0050cc9087753f88268b8c7a922789b88cc7c9045c93d7
 Event B Hash: 44f621a0333680692e0050cc9087753f88268b8c7a922789b88cc7c9045c93d7
 SUCCESS: Events are deterministic and produce identical hashes.
@@ -25,5 +24,10 @@ $ shasum -a 256 /tmp/promptops/S01/schema/events1.jsonl /tmp/promptops/S01/schem
 EXIT_CODE=0
 
 $ cmp /tmp/promptops/S01/schema/events1.jsonl /tmp/promptops/S01/schema/events2.jsonl
+EXIT_CODE=0
+
+$ ls -la /tmp/promptops/S01/schema/events1.jsonl /tmp/promptops/S01/schema/events2.jsonl
+-rw-r--r--@ 1 marcussmith  staff  306 Feb 26 20:57 /tmp/promptops/S01/schema/events1.jsonl
+-rw-r--r--@ 1 marcussmith  staff  306 Feb 26 20:58 /tmp/promptops/S01/schema/events2.jsonl
 EXIT_CODE=0
 

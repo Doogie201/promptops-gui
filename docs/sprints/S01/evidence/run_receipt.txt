@@ -6,13 +6,13 @@ TAP version 13
 # Subtest: valid transitions
 ok 1 - valid transitions
   ---
-  duration_ms: 0.568833
+  duration_ms: 0.851334
   type: 'test'
   ...
 # Subtest: illegal transitions throw explicitly
 ok 2 - illegal transitions throw explicitly
   ---
-  duration_ms: 0.212375
+  duration_ms: 0.198916
   type: 'test'
   ...
 1..2
@@ -23,18 +23,11 @@ ok 2 - illegal transitions throw explicitly
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 39.620542
+# duration_ms 41.37425
 [3/3] Lint & Stoplight Greps
-./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S01/evidence/run_receipt.txt:29:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
 ./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
 Gates passed.
-EXIT_CODE=0
-
-$ ls -la /tmp/promptops/S01/gates/stoplight_greps.txt
--rw-r--r--@ 1 marcussmith  wheel  32 Feb 26 20:49 /tmp/promptops/S01/gates/stoplight_greps.txt
-EXIT_CODE=0
-
-$ shasum -a 256 /tmp/promptops/S01/gates/stoplight_greps.txt
-50c1a6b7e061915f944ea47518b68317861b04ee6a058506b9e334776d8297e5  /tmp/promptops/S01/gates/stoplight_greps.txt
 EXIT_CODE=0
 
