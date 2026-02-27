@@ -16,13 +16,13 @@ export class TemplateRegistry {
   register(templateId: string, versionId: string, body: string, protectedSections: string[] = [], status: TemplateStatus = 'active'): TemplateVersion {
     const contentHash = crypto.createHash('sha256').update(body).digest('hex');
     const version: TemplateVersion = { versionId, contentHash, status, body, protectedSections };
-    
+
     let versions = this.templates.get(templateId);
     if (!versions) {
       versions = [];
       this.templates.set(templateId, versions);
     }
-    
+
     const idx = versions.findIndex(v => v.versionId === versionId);
     if (idx >= 0) {
       if (versions[idx].contentHash !== contentHash) {

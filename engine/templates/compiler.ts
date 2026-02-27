@@ -10,7 +10,7 @@ export interface CompilationResult {
 export function compileTemplate(template: TemplateVersion, context: Record<string, unknown>): CompilationResult {
   const placeholderRegex = /\{\{([^}]+)\}\}/g;
   const missingKeys = new Set<string>();
-  
+
   let match;
   while ((match = placeholderRegex.exec(template.body)) !== null) {
     const key = match[1].trim();
@@ -29,7 +29,7 @@ export function compileTemplate(template: TemplateVersion, context: Record<strin
   const rendered = template.body.replace(placeholderRegex, (_, key) => {
     return String(context[key.trim()]);
   });
-  
+
   try {
     // If body aims to be JSON, make it deterministically sorted/byte-stable
     const parsed = JSON.parse(rendered);
