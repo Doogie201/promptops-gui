@@ -1,9 +1,90 @@
 $ pre-commit run --all-files
-trim trailing whitespace.................................................Passed
-fix end of files.........................................................Passed
-check yaml...............................................................Passed
-check json...............................................................Passed
-check for case conflicts.................................................Passed
-mixed line ending........................................................Passed
-Operator Gates (Build/Test/Lint/Stoplight)...............................Passed
-EXIT_CODE=0
+trim trailing whitespace.................................................Failed
+- hook id: trailing-whitespace
+- exit code: 1
+- files were modified by this hook
+
+Fixing engine/templates/compiler.test.ts
+Fixing engine/templates/registry.ts
+Fixing engine/templates/compiler.ts
+Fixing engine/templates/safety.ts
+
+fix end of files.........................................................
+Failed
+- hook id: end-of-file-fixer
+- exit code: 1
+- files were modified by this hook
+
+Fixing docs/sprints/S03/evidence/pre-commit-run-receipt.txt
+
+check yaml...............................................................Failed
+- hook id: check-yaml
+- files were modified by this hook
+check json...............................................................Failed
+- hook id: check-json
+- files were modified by this hook
+check for case conflicts.................................................Failed
+- hook id: check-case-conflict
+- files were modified by this hook
+mixed line ending........................................................Failed
+- hook id: mixed-line-ending
+- files were modified by this hook
+Operator Gates (Build/Test/Lint/Stoplight)...............................Failed
+- hook id: gates
+- files were modified by this hook
+
+--- Running Gates ---
+[1/3] Build (tsc)
+[2/3] Test
+TAP version 13
+# Subtest: valid transitions
+ok 1 - valid transitions
+  ---
+  duration_ms: 0.616042
+  type: 'test'
+  ...
+# Subtest: illegal transitions throw explicitly
+ok 2 - illegal transitions throw explicitly
+  ---
+  duration_ms: 0.205208
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 39.034792
+[3/3] Lint & Stoplight Greps
+./docs/sprints/S02/evidence/run_receipt.txt:28:./docs/sprints/S02/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
+./docs/sprints/S02/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:27:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S02/evidence/run_receipt.txt:30:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:29:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S02/evidence/run_receipt.txt:31:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S02/evidence/run_receipt.txt:32:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S02/evidence/run_receipt.txt:33:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S02/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
+./docs/sprints/S03/evidence/run_receipt.txt:28:./docs/sprints/S02/evidence/run_receipt.txt:28:./docs/sprints/S02/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
+./docs/sprints/S03/evidence/run_receipt.txt:29:./docs/sprints/S02/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:27:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:30:./docs/sprints/S02/evidence/run_receipt.txt:30:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:29:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:31:./docs/sprints/S02/evidence/run_receipt.txt:31:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:32:./docs/sprints/S02/evidence/run_receipt.txt:32:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:33:./docs/sprints/S02/evidence/run_receipt.txt:33:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:34:./docs/sprints/S02/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
+./docs/sprints/S03/evidence/run_receipt.txt:35:./docs/sprints/S03/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
+./docs/sprints/S03/evidence/run_receipt.txt:36:./docs/sprints/S01/evidence/run_receipt.txt:27:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:37:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:29:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:38:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:39:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/run_receipt.txt:40:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S03/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
+./docs/sprints/S01/evidence/run_receipt.txt:27:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:29:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+Gates passed.
+
+EXIT_CODE=1

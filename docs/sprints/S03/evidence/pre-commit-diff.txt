@@ -1,2 +1,21 @@
 $ git diff origin/main...HEAD -- .pre-commit-config.yaml
+diff --git a/.pre-commit-config.yaml b/.pre-commit-config.yaml
+index 1ab8d19..9829352 100644
+--- a/.pre-commit-config.yaml
++++ b/.pre-commit-config.yaml
+@@ -4,3 +4,14 @@ repos:
+     hooks:
+     -   id: trailing-whitespace
+     -   id: end-of-file-fixer
++    -   id: check-yaml
++    -   id: check-json
++    -   id: check-case-conflict
++    -   id: mixed-line-ending
++-   repo: local
++    hooks:
++    -   id: gates
++        name: Operator Gates (Build/Test/Lint/Stoplight)
++        entry: ./gates.sh
++        language: script
++        pass_filenames: false
 EXIT_CODE=0
