@@ -1,0 +1,2 @@
+$ git diff origin/main...HEAD -- .pre-commit-config.yaml
+EXIT_CODE=0

@@ -1,0 +1,9 @@
+$ pre-commit run --all-files
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+check yaml...............................................................Passed
+check json...............................................................Passed
+check for case conflicts.................................................Passed
+mixed line ending........................................................Passed
+Operator Gates (Build/Test/Lint/Stoplight)...............................Passed
+EXIT_CODE=0

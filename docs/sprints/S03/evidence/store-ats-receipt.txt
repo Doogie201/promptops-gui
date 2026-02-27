@@ -1,0 +1,36 @@
+$ npx tsx --test engine/templates/compiler.test.ts
+TAP version 13
+# Subtest: AT-S03-01: Compiler emits schema-valid ticket deterministically
+ok 1 - AT-S03-01: Compiler emits schema-valid ticket deterministically
+  ---
+  duration_ms: 1.323125
+  type: 'test'
+  ...
+# Subtest: AT-S03-02: Missing placeholder triggers "needs input" state deterministically
+ok 2 - AT-S03-02: Missing placeholder triggers "needs input" state deterministically
+  ---
+  duration_ms: 0.847667
+  type: 'test'
+  ...
+# Subtest: AT-S03-03: Template version pinning keeps older sprints stable
+ok 3 - AT-S03-03: Template version pinning keeps older sprints stable
+  ---
+  duration_ms: 0.170166
+  type: 'test'
+  ...
+# Subtest: S03.D Safety Diff test (Protected sections)
+ok 4 - S03.D Safety Diff test (Protected sections)
+  ---
+  duration_ms: 0.201959
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 123.423166
+EXIT_CODE=0
