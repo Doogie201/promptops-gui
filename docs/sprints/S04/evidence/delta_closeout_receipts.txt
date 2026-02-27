@@ -1,0 +1,204 @@
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && npm run -s test:evaluator)
+TAP version 13
+# (node:26325) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:26325) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/engine/evaluator.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/package.json.
+# Subtest: AT-S04-01: ledger marks done/partial/todo with stable citations
+ok 1 - AT-S04-01: ledger marks done/partial/todo with stable citations
+  ---
+  duration_ms: 10.311709
+  type: 'test'
+  ...
+# Subtest: AT-S04-02: delta ticket includes only outstanding items and is deterministic
+ok 2 - AT-S04-02: delta ticket includes only outstanding items and is deterministic
+  ---
+  duration_ms: 1.147917
+  type: 'test'
+  ...
+# Subtest: AT-S04-03: done items are never re-asked in delta ticket
+ok 3 - AT-S04-03: done items are never re-asked in delta ticket
+  ---
+  duration_ms: 0.467959
+  type: 'test'
+  ...
+# Subtest: AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
+ok 4 - AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
+  ---
+  duration_ms: 0.692875
+  type: 'test'
+  ...
+# Subtest: AT-S04-06: when complete, evaluator emits no delta ticket file
+ok 5 - AT-S04-06: when complete, evaluator emits no delta ticket file
+  ---
+  duration_ms: 0.553333
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 150.471542
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && npm run -s coverage:evaluator)
+TAP version 13
+# (node:26365) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:26365) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/engine/evaluator.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/package.json.
+# Subtest: AT-S04-01: ledger marks done/partial/todo with stable citations
+ok 1 - AT-S04-01: ledger marks done/partial/todo with stable citations
+  ---
+  duration_ms: 8.711708
+  type: 'test'
+  ...
+# Subtest: AT-S04-02: delta ticket includes only outstanding items and is deterministic
+ok 2 - AT-S04-02: delta ticket includes only outstanding items and is deterministic
+  ---
+  duration_ms: 1.153
+  type: 'test'
+  ...
+# Subtest: AT-S04-03: done items are never re-asked in delta ticket
+ok 3 - AT-S04-03: done items are never re-asked in delta ticket
+  ---
+  duration_ms: 0.413458
+  type: 'test'
+  ...
+# Subtest: AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
+ok 4 - AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
+  ---
+  duration_ms: 0.711625
+  type: 'test'
+  ...
+# Subtest: AT-S04-06: when complete, evaluator emits no delta ticket file
+ok 5 - AT-S04-06: when complete, evaluator emits no delta ticket file
+  ---
+  duration_ms: 0.371167
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 107.026333
+# start of coverage report
+# -------------------------------------------------------------------------------------------
+# file               | line % | branch % | funcs % | uncovered lines
+# -------------------------------------------------------------------------------------------
+# engine             |        |          |         | 
+#  evaluator.test.ts | 100.00 |   100.00 |  100.00 | 
+#  evaluator.ts      |  95.35 |    86.21 |  100.00 | 159-160 167-168 184-185 200-201 211-212
+# -------------------------------------------------------------------------------------------
+# all files          |  97.39 |    89.04 |  100.00 | 
+# -------------------------------------------------------------------------------------------
+# end of coverage report
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && ls -lah /tmp/promptops/S04/fixtures)
+total 48
+drwxr-xr-x@ 8 marcussmith  wheel   256B Feb 27 12:01 .
+drwxr-xr-x@ 5 marcussmith  wheel   160B Feb 27 11:43 ..
+-rw-r--r--@ 1 marcussmith  wheel   787B Feb 27 12:01 at-s04-01-ledger.json
+-rw-r--r--@ 1 marcussmith  wheel   674B Feb 27 12:01 at-s04-02-ledger-a.json
+-rw-r--r--@ 1 marcussmith  wheel   674B Feb 27 12:01 at-s04-02-ledger-b.json
+-rw-r--r--@ 1 marcussmith  wheel   402B Feb 27 12:01 at-s04-03-ledger.json
+-rw-r--r--@ 1 marcussmith  wheel   357B Feb 27 12:01 at-s04-05-ledger.json
+-rw-r--r--@ 1 marcussmith  wheel   206B Feb 27 12:01 at-s04-06-ledger.json
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && ls -lah /tmp/promptops/S04/delta)
+total 32
+drwxr-xr-x@ 6 marcussmith  wheel   192B Feb 27 12:01 .
+drwxr-xr-x@ 5 marcussmith  wheel   160B Feb 27 11:43 ..
+-rw-r--r--@ 1 marcussmith  wheel   633B Feb 27 12:01 at-s04-01-delta.json
+-rw-r--r--@ 1 marcussmith  wheel   576B Feb 27 12:01 at-s04-02-delta-a.json
+-rw-r--r--@ 1 marcussmith  wheel   576B Feb 27 12:01 at-s04-02-delta-b.json
+-rw-r--r--@ 1 marcussmith  wheel   282B Feb 27 12:01 at-s04-03-delta.json
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc test ! -e /tmp/promptops/S04/delta/at-s04-05-delta.json)
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc test ! -e /tmp/promptops/S04/delta/at-s04-06-delta.json)
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && shasum -a 256 /tmp/promptops/S04/fixtures/at-s04-05-ledger.json /tmp/promptops/S04/fixtures/at-s04-06-ledger.json)
+16abfce13267c91ecc3776217403cc55626de5abba510c9f74439d4162ad24f1  /tmp/promptops/S04/fixtures/at-s04-05-ledger.json
+f7a8851dc7b1ba7f212e4ae5908968c6beb241f29e49af7b6e1bb3e18fe2dd0a  /tmp/promptops/S04/fixtures/at-s04-06-ledger.json
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc mkdir -p /tmp/promptops/S04/coverage && cp coverage/tmp/coverage-*.json /tmp/promptops/S04/coverage/)
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc shasum -a 256 /tmp/promptops/S04/coverage/coverage-*.json)
+ccafe4340b450845329e0db19ab9d8619bac63f65c5d8c93fbba25c827011d39  /tmp/promptops/S04/coverage/coverage-17579-1772210682748-0.json
+186e2a23364b7506301ad7108a2af6b596e7bc3cffc8795cb3e8f74f41624aa4  /tmp/promptops/S04/coverage/coverage-17580-1772210682845-0.json
+863df4525e7757e1b35debf1316e531dbfd8a7ffe651b6d698527e129f957754  /tmp/promptops/S04/coverage/coverage-20721-1772210874726-0.json
+51eca1975d2dcde5b8b96d7add89a6469f7468c6e7326c93190a67d67b802df0  /tmp/promptops/S04/coverage/coverage-21466-1772210912859-0.json
+174b3f3c24b68538cd4da950317d0f23fff8e691106c138120090d2c5ee9e438  /tmp/promptops/S04/coverage/coverage-26365-1772211662608-0.json
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc test -f .github/workflows/codecov.yml && test ! -f codecov.yml)
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && sed -n 1,220p .github/workflows/codecov.yml)
+name: "Codecov Coverage"
+
+on:
+  push:
+    branches: ["main", "sprint/**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run evaluator tests
+        run: npm run -s test:evaluator
+
+      - name: Generate evaluator coverage
+        run: npm run -s coverage:evaluator
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/tmp/*.json
+          disable_search: true
+          slug: Doogie201/promptops-gui
+          fail_ci_if_error: false
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc [ -d coverage ] && find coverage -type f -delete || true)
+find: -delete: unlink(coverage/tmp/._coverage-26365-1772211662608-0.json): No such file or directory
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && bash -lc [ -d coverage ] && find coverage -depth -type d -empty -delete || true)
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && find . -name ._* -type f -delete)
+EXIT_CODE:0

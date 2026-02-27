@@ -1,0 +1,27 @@
+WHITELIST_PATHS_CHECK
+- .github/workflows/codecov.yml
+- docs/backlog/README.md
+- docs/sprints/README.md
+- docs/sprints/S04/README.md
+- docs/sprints/S04/evidence/._delta_closeout_receipts.txt
+- docs/sprints/S04/evidence/._stoplight_delta_closeout.txt
+- docs/sprints/S04/evidence/at_receipts.txt
+- docs/sprints/S04/evidence/delta_closeout_receipts.txt
+- docs/sprints/S04/evidence/pr_readiness.txt
+- docs/sprints/S04/evidence/pre-commit-run-receipt.txt
+- docs/sprints/S04/evidence/run_receipt.txt
+- docs/sprints/S04/evidence/scope_and_budget_receipts.txt
+- docs/sprints/S04/evidence/section1_preflight.txt
+- docs/sprints/S04/evidence/stoplight_delta_closeout.txt
+- docs/sprints/S04/evidence/stoplight_greps.txt
+- docs/sprints/S04/whitelist.override.json
+- engine/evaluator.test.ts
+- engine/evaluator.ts
+- package.json
+WHITELIST_RESULT:OK
+
+MAINTAINABILITY_DELTA
+docs/backlog/README.md	add=1	del=0	net=1	loc=7
+docs/sprints/README.md	add=1	del=0	net=1	loc=6
+package.json	add=4	del=1	net=3	loc=30
+BUDGET_LIMITS:max_net_new_lines=120,max_total_loc=1200,max_fn_len=80

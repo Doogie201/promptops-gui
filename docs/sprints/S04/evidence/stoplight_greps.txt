@@ -1,0 +1,3 @@
+$ rg -n "dangerouslySetInnerHTML|eval\(|new Date\(|timestamp|token:" engine/evaluator.ts engine/evaluator.test.ts .github/workflows/codecov.yml package.json docs/backlog/README.md docs/sprints/README.md docs/sprints/S04/README.md
+.github/workflows/codecov.yml:33:          token: ${{ secrets.CODECOV_TOKEN }}
+EXIT_CODE:0

@@ -1,0 +1,100 @@
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && ls -ld /Volumes/SharedDrive)
+drwx------  1 marcussmith  staff  262144 Dec 31  1969 /Volumes/SharedDrive
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && ls -ld /Volumes/SharedDrive/Dev/Projects/promptops-gui)
+drwx------@ 1 marcussmith  staff  262144 Feb 27 10:45 /Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && pwd)
+/Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git rev-parse --show-toplevel)
+/Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git worktree list --porcelain)
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD fe6bdff414bc90b9c96b31dfaebf7163790cb260
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD fe6bdff414bc90b9c96b31dfaebf7163790cb260
+branch refs/heads/main
+
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git status --porcelain=v1 --branch)
+## main...origin/main
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && env GIT_TERMINAL_PROMPT=0 git fetch --all --prune --tags) [timeout 20s]
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git rev-list --left-right --count HEAD...origin/main)
+0	0
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git rev-parse --abbrev-ref HEAD)
+main
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git log --oneline -5)
+fe6bdff [S03] test : policy + template compiler (ticket factory v1) (#3)
+b26b1d6 [S02] refactor : engine run store + idempotency + crash-safe resume v1 (#2)
+ce3d220 [S01] devops : repo bootstrap + guardrails + event schema v1 (#1)
+05c58c5 chore: initial commit
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git worktree prune)
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git fsck --no-reflogs) [timeout 120s]
+dangling commit 8fa00d7e8b08dcd42f9496181defd8e483167bb5
+dangling blob a2b8ac0ffdadbee08914c165a9562a4cd886bbbe
+dangling commit 4df2f6589750bbe6631087556cdfad9b4ce8c473
+dangling commit cfaa10872a9a3c33376c4822df3cb03c41ac4fa6
+dangling commit 181b5dfa61b72e7357b5bff2655ec7627444087b
+dangling commit 0d0c1ab1f16c7ae556087f7c02568c5e5ee791c0
+dangling blob ff04fe88520e398fab3ebac64df59f18f8672ee3
+dangling tree 9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git worktree list --porcelain)
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD fe6bdff414bc90b9c96b31dfaebf7163790cb260
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD fe6bdff414bc90b9c96b31dfaebf7163790cb260
+branch refs/heads/main
+
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && git rev-parse --abbrev-ref HEAD)
+sprint/S04-evaluator-evidence-ledger-codecov
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && pwd)
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && git rev-parse --show-toplevel)
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && git status --porcelain=v1 --branch)
+## sprint/S04-evaluator-evidence-ledger-codecov
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+ M package.json
+?? .github/
+?? docs/sprints/S04/
+?? engine/evaluator.test.ts
+?? engine/evaluator.ts
+EXIT_CODE:0
+
+$ (cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && gh pr list --repo Doogie201/promptops-gui --state open)
+EXIT_CODE:0
