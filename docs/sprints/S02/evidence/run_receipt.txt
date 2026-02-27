@@ -6,13 +6,13 @@ TAP version 13
 # Subtest: valid transitions
 ok 1 - valid transitions
   ---
-  duration_ms: 0.44625
+  duration_ms: 0.417667
   type: 'test'
   ...
 # Subtest: illegal transitions throw explicitly
 ok 2 - illegal transitions throw explicitly
   ---
-  duration_ms: 0.199833
+  duration_ms: 0.19575
   type: 'test'
   ...
 1..2
@@ -23,8 +23,9 @@ ok 2 - illegal transitions throw explicitly
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 41.280375
+# duration_ms 38.886666
 [3/3] Lint & Stoplight Greps
+./docs/sprints/S02/evidence/stoplight_greps.txt:1:$ grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true
 ./docs/sprints/S01/evidence/run_receipt.txt:27:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:28:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
 ./docs/sprints/S01/evidence/run_receipt.txt:28:./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:29:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
 ./docs/sprints/S01/evidence/run_receipt.txt:29:./docs/sprints/S01/evidence/run_receipt.txt:30:./gates.sh:18:grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt

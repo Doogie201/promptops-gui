@@ -21,12 +21,22 @@ export class EngineRun {
     if (!fs.existsSync(logFile)) return;
 
     const lines = fs.readFileSync(logFile, 'utf-8').split('\n').filter(Boolean);
-    for (const line of lines) {
-      const ev = JSON.parse(line) as BaseEvent;
-      const id = idForEvent(ev);
-      this.events.set(id, ev);
-      this.eventLog.push(id);
-      this.applyEventToMachine(ev);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      try {
+        const ev = JSON.parse(line) as BaseEvent;
+        const id = idForEvent(ev);
+        this.events.set(id, ev);
+        this.eventLog.push(id);
+        this.applyEventToMachine(ev);
+      } catch (e) {
+        if (i === lines.length - 1) {
+          // Tolerate malformed final line (e.g. crash during append)
+          break;
+        } else {
+          throw e;
+        }
+      }
     }
   }
 

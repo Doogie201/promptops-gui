@@ -61,8 +61,11 @@ test('AT-S02-03: Crash-safe resume restores state precisely and completes workfl
 
   assert.strictEqual(run1.eventLog.length, 2);
   assert.strictEqual(run1.machine.currentPhase, 'RUNNING');
-
-  // Simulation of crash -> New instance rehydrates from disk
+  // Simulate mid-write crash by manually appending a truncated JSON fragment to the log
+  const logPath = path.join(TEST_RESUME_DIR, 'run-resume.jsonl');
+  fs.appendFileSync(logPath, '{"type":"USER_ACTION","version":"1.0","payload":{"step":3}'); // missing closing brace and newline
+  
+  // Simulation of crash -> New instance rehydrates from disk (tolerates truncated log)
   const run2 = new EngineRun('run-resume', TEST_RESUME_DIR);
 
   // Verify state is precisely restored without re-running dispatch
