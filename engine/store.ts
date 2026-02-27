@@ -43,7 +43,7 @@ export class EngineRun {
         }
       }
     } catch (e) {
-      // Ignore illegal transitions during replay/hydrate to maintain determinism 
+      // Ignore illegal transitions during replay/hydrate to maintain determinism
       // of the store itself, or handle them based on strict state machine rules.
     }
   }
@@ -57,11 +57,11 @@ export class EngineRun {
     const logFile = this.getLogFilePath();
     fs.mkdirSync(this.persistDir, { recursive: true });
     fs.appendFileSync(logFile, JSON.stringify(ev) + '\n');
-    
+
     this.events.set(id, ev);
     this.eventLog.push(id);
     this.applyEventToMachine(ev);
-    
+
     return { newAction: true, id };
   }
 }
