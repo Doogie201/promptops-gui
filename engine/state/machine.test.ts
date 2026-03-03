@@ -1,6 +1,6 @@
 import test from 'node:test';
 import * as assert from 'node:assert';
-import { RunStateMachine } from './machine';
+import { RunStateMachine } from './machine.ts';
 
 test('valid transitions', () => {
   const machine = new RunStateMachine();

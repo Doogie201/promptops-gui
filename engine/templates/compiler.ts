@@ -1,5 +1,5 @@
 import { canonicalSerialize } from '../events/schema';
-import { TemplateVersion } from './registry';
+import type { TemplateVersion } from './registry.ts';
 
 export interface CompilationResult {
   state: 'needs_input' | 'ready' | 'invalid';

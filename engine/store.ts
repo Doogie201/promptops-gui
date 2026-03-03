@@ -1,7 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { BaseEvent, idForEvent } from './events/schema';
-import { RunStateMachine } from './state/machine';
+import { idForEvent } from './events/schema.ts';
+import type { BaseEvent } from './events/schema.ts';
+import { RunStateMachine } from './state/machine.ts';
 
 export class EngineRun {
   public machine = new RunStateMachine();

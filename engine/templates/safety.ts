@@ -1,4 +1,4 @@
-import { TemplateVersion } from './registry';
+import type { TemplateVersion } from './registry.ts';
 
 export function assertSafeActivation(
   oldVersion: TemplateVersion | undefined,
