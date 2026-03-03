@@ -11,7 +11,7 @@ export interface RepositoryPolicy {
   };
 }
 
-const repoRoot = path.resolve(__dirname, '..');
+const repoRoot = path.resolve(process.cwd());
 
 export const GlobalPolicy: RepositoryPolicy = {
   whitelist: [
