@@ -1,0 +1,16 @@
+{
+  "packet_a": {
+    "packet_path": "/tmp/promptops/S08/continuity/AT-S08-03/packet-a/continuity_packet.json",
+    "hash_path": "/tmp/promptops/S08/continuity/AT-S08-03/packet-a/continuity_packet.sha256",
+    "sha256": "fa76a99048f67d2063233b65fd612379578f67a2b56e4d142b4b8f05c9b708ce"
+  },
+  "packet_b": {
+    "packet_path": "/tmp/promptops/S08/continuity/AT-S08-03/packet-b/continuity_packet.json",
+    "hash_path": "/tmp/promptops/S08/continuity/AT-S08-03/packet-b/continuity_packet.sha256",
+    "sha256": "fa76a99048f67d2063233b65fd612379578f67a2b56e4d142b4b8f05c9b708ce"
+  },
+  "hashes_equal": true,
+  "first_message_a": "continuity_sha256=fa76a99048f67d2063233b65fd612379578f67a2b56e4d142b4b8f05c9b708ce | do not redo evidenced work; close only listed deltas | deltas=R-2,R-3",
+  "first_message_b": "continuity_sha256=fa76a99048f67d2063233b65fd612379578f67a2b56e4d142b4b8f05c9b708ce | do not redo evidenced work; close only listed deltas | deltas=R-2,R-3",
+  "first_messages_equal": true
+}

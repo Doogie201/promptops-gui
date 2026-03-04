@@ -1,0 +1,1 @@
+{"adapter":"claude","status":"success","deterministic_error_type":"none","exit_code":0,"stdout":"{\"status\":\"success\",\"work_summary\":\"resumed and completed\",\"parsed_evidence\":{\"touched_ids\":[\"R-2\"]}}","stderr":"","parsed_payload":{"status":"success","work_summary":"resumed and completed","parsed_evidence":{"touched_ids":["R-2"]}}}

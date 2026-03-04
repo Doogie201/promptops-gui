@@ -1,0 +1,112 @@
+[CMD] pwd
+/Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+[CMD] git rev-parse --abbrev-ref HEAD
+sprint/S08-agent-adapters-v1-continuity
+EXIT_CODE:0
+
+[CMD] git status --porcelain=v1
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+?? docs/sprints/S08/
+?? src/s08/
+EXIT_CODE:0
+
+[CMD] git diff --name-only
+docs/backlog/README.md
+docs/sprints/README.md
+EXIT_CODE:0
+
+[CMD] git ls-files --others --exclude-standard
+docs/sprints/S08/README.md
+docs/sprints/S08/evidence/adapters/claude-run-0002.normalized_output.json
+docs/sprints/S08/evidence/adapters/claude-run-0002.request.jsonl
+docs/sprints/S08/evidence/adapters/claude-run-0002.response.jsonl
+docs/sprints/S08/evidence/adapters/claude-run-0004.normalized_output.json
+docs/sprints/S08/evidence/adapters/claude-run-0004.request.jsonl
+docs/sprints/S08/evidence/adapters/claude-run-0004.response.jsonl
+docs/sprints/S08/evidence/adapters/codex-run-0001.normalized_output.json
+docs/sprints/S08/evidence/adapters/codex-run-0001.request.jsonl
+docs/sprints/S08/evidence/adapters/codex-run-0001.response.jsonl
+docs/sprints/S08/evidence/at/AT-S08-01_run.json
+docs/sprints/S08/evidence/at/AT-S08-02_run.json
+docs/sprints/S08/evidence/at/AT-S08-03_run.json
+docs/sprints/S08/evidence/at/AT-S08-all.tap
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-01.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-01.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-02.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-02.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-02_checkpoint-auto.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-02_checkpoint-auto.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-a.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-a.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-b.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-b.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity_hash_proof.md
+docs/sprints/S08/evidence/contract_input_example.json
+docs/sprints/S08/evidence/contract_output_example.json
+docs/sprints/S08/evidence/gates/00_npm_ci.txt
+docs/sprints/S08/evidence/gates/01_verify_initial_fail.txt
+docs/sprints/S08/evidence/gates/04_verify_after_npm_ci.txt
+docs/sprints/S08/evidence/gates/05_gates_after_npm_ci.txt
+docs/sprints/S08/evidence/gates/06_verify_retry_pass.txt
+docs/sprints/S08/evidence/open_pr/00_pr_list.json
+docs/sprints/S08/evidence/preflight/01_primary_preflight.txt
+docs/sprints/S08/evidence/preflight/02_branch_and_context.txt
+docs/sprints/S08/evidence/preflight/03_active_repo_context.txt
+docs/sprints/S08/evidence/stoplight/01_stoplight_greps.md
+src/s08/agent_adapters.ts
+src/s08/continuity_packet.ts
+src/s08/contract.ts
+src/s08/s08.test.ts
+src/s08/switching.ts
+EXIT_CODE:0
+
+[CHECK] whitelist compliance
+docs/backlog/README.md
+docs/sprints/README.md
+docs/sprints/S08/README.md
+docs/sprints/S08/evidence/adapters/claude-run-0002.normalized_output.json
+docs/sprints/S08/evidence/adapters/claude-run-0002.request.jsonl
+docs/sprints/S08/evidence/adapters/claude-run-0002.response.jsonl
+docs/sprints/S08/evidence/adapters/claude-run-0004.normalized_output.json
+docs/sprints/S08/evidence/adapters/claude-run-0004.request.jsonl
+docs/sprints/S08/evidence/adapters/claude-run-0004.response.jsonl
+docs/sprints/S08/evidence/adapters/codex-run-0001.normalized_output.json
+docs/sprints/S08/evidence/adapters/codex-run-0001.request.jsonl
+docs/sprints/S08/evidence/adapters/codex-run-0001.response.jsonl
+docs/sprints/S08/evidence/at/AT-S08-01_run.json
+docs/sprints/S08/evidence/at/AT-S08-02_run.json
+docs/sprints/S08/evidence/at/AT-S08-03_run.json
+docs/sprints/S08/evidence/at/AT-S08-all.tap
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-01.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-01.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-02.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-02.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-02_checkpoint-auto.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-02_checkpoint-auto.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-a.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-a.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-b.continuity_packet.json
+docs/sprints/S08/evidence/continuity/AT-S08-03_packet-b.continuity_packet.sha256
+docs/sprints/S08/evidence/continuity_hash_proof.md
+docs/sprints/S08/evidence/contract_input_example.json
+docs/sprints/S08/evidence/contract_output_example.json
+docs/sprints/S08/evidence/gates/00_npm_ci.txt
+docs/sprints/S08/evidence/gates/01_verify_initial_fail.txt
+docs/sprints/S08/evidence/gates/04_verify_after_npm_ci.txt
+docs/sprints/S08/evidence/gates/05_gates_after_npm_ci.txt
+docs/sprints/S08/evidence/gates/06_verify_retry_pass.txt
+docs/sprints/S08/evidence/open_pr/00_pr_list.json
+docs/sprints/S08/evidence/preflight/01_primary_preflight.txt
+docs/sprints/S08/evidence/preflight/02_branch_and_context.txt
+docs/sprints/S08/evidence/preflight/03_active_repo_context.txt
+docs/sprints/S08/evidence/stoplight/01_stoplight_greps.md
+src/s08/agent_adapters.ts
+src/s08/continuity_packet.ts
+src/s08/contract.ts
+src/s08/s08.test.ts
+src/s08/switching.ts
+WHITELIST_CHECK:PASS
+EXIT_CODE:0

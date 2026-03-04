@@ -1,0 +1,32 @@
+{
+  "adapter": "codex",
+  "deterministic_error_type": "none",
+  "parsed_evidence": {
+    "at_results": [],
+    "diff_summary": [],
+    "receipt_paths": [
+      "/tmp/promptops/S08/tests/at1/codex/receipt_01/receipt.json"
+    ],
+    "touched_ids": [
+      "R-3"
+    ]
+  },
+  "parsed_payload": {
+    "parsed_evidence": {
+      "touched_ids": [
+        "R-3"
+      ]
+    },
+    "status": "needs_input",
+    "work_summary": "switch to claude"
+  },
+  "raw_output": "{\"status\":\"needs_input\",\"work_summary\":\"switch to claude\",\"parsed_evidence\":{\"touched_ids\":[\"R-3\"]}}",
+  "status": "needs_input",
+  "transcript_paths": {
+    "normalized_output": "/tmp/promptops/S08/adapters/codex/codex-run-0001/normalized_output.json",
+    "prompt_txt": "/tmp/promptops/S08/adapters/codex/codex-run-0001/prompt.txt",
+    "request_jsonl": "/tmp/promptops/S08/adapters/codex/codex-run-0001/request.jsonl",
+    "response_jsonl": "/tmp/promptops/S08/adapters/codex/codex-run-0001/response.jsonl"
+  },
+  "work_summary": "switch to claude"
+}

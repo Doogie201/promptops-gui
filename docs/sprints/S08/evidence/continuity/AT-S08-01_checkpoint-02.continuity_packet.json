@@ -1,0 +1,64 @@
+{
+  "evidence_ledger_snapshot": {
+    "items": [
+      {
+        "citations": [
+          "/tmp/promptops/S08/preflight/01_primary_preflight.txt"
+        ],
+        "requirement_id": "R-1",
+        "status": "done"
+      },
+      {
+        "citations": [],
+        "requirement_id": "R-2",
+        "status": "partial"
+      },
+      {
+        "citations": [],
+        "requirement_id": "R-3",
+        "status": "todo"
+      }
+    ]
+  },
+  "last_checkpoint_id": "checkpoint-02",
+  "outstanding_delta_ids": [
+    "R-2",
+    "R-3"
+  ],
+  "policy_bundle": {
+    "budgets": {
+      "max_function_len": 80,
+      "max_new_lines": 120
+    },
+    "policy": {
+      "deterministic": true,
+      "no_scope_creep": true
+    },
+    "whitelist": [
+      "src/**",
+      "docs/sprints/S08/**",
+      "/tmp/promptops/S08/**"
+    ]
+  },
+  "rendered_ticket_json": {
+    "objective": "agent adapters + continuity",
+    "sprint": "S08"
+  },
+  "repo_context_snapshot": {
+    "branch": "sprint/S08-agent-adapters-v1-continuity",
+    "diff_summary": [],
+    "preflight_receipts": [
+      "/tmp/promptops/S08/preflight/01_primary_preflight.txt"
+    ]
+  },
+  "run_timeline_tail": [
+    {
+      "adapter": "claude",
+      "event_id": "evt-02",
+      "reason": "delta closed",
+      "status": "success"
+    }
+  ],
+  "template_version_hash": "template-v1-hash-001",
+  "version": "continuity_packet_v1"
+}

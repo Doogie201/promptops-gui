@@ -7,3 +7,4 @@
 - [S05 - Command Executor + Receipts Engine](./S05/README.md)
 - [S06 - Git + Worktree Preflight Automation](./S06/README.md)
 - [S07 - GitHub PR Protocol Automation](./S07/README.md)
+- [S08 - Agent Adapters v1 + Continuity Packet](./S08/README.md)

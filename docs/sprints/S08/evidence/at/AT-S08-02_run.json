@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "switch_reason": "AUTO_SWITCH_EXHAUSTED",
+  "checkpoints": [
+    {
+      "packet_path": "/tmp/promptops/S08/continuity/AT-S08-02/checkpoint-auto/continuity_packet.json",
+      "hash_path": "/tmp/promptops/S08/continuity/AT-S08-02/checkpoint-auto/continuity_packet.sha256",
+      "sha256": "bb252229c5477d26a81d1d077d9a581bec90a1d3918ba7696de4ae43a3a3b178"
+    }
+  ],
+  "codex_status": "exhausted",
+  "auto_switch_sequence": [
+    "codex",
+    "claude"
+  ],
+  "claude_transcript": {
+    "request_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0004/request.jsonl",
+    "response_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0004/response.jsonl",
+    "normalized_output": "/tmp/promptops/S08/adapters/claude/claude-run-0004/normalized_output.json",
+    "prompt_txt": "/tmp/promptops/S08/adapters/claude/claude-run-0004/prompt.txt"
+  }
+}

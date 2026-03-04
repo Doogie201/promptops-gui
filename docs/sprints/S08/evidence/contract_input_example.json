@@ -1,0 +1,63 @@
+{
+  "rendered_ticket_json": {
+    "sprint": "S08",
+    "objective": "agent adapters + continuity"
+  },
+  "template_version_hash": "template-v1-hash-001",
+  "continuity_sha256": "10acc998f56dbed237435385a9ca4510d7937a51983c457ec8706582c868787e",
+  "evidence_ledger_snapshot": {
+    "items": [
+      {
+        "requirement_id": "R-1",
+        "status": "done",
+        "citations": [
+          "/tmp/promptops/S08/preflight/01_primary_preflight.txt"
+        ]
+      },
+      {
+        "requirement_id": "R-2",
+        "status": "partial",
+        "citations": []
+      }
+    ]
+  },
+  "repo_context_snapshot": {
+    "branch": "sprint/S08-agent-adapters-v1-continuity",
+    "diff_summary": [],
+    "preflight_receipts": [
+      "/tmp/promptops/S08/preflight/01_primary_preflight.txt"
+    ]
+  },
+  "run_timeline_tail": [
+    {
+      "event_id": "evt-0",
+      "adapter": "codex",
+      "status": "needs_input",
+      "reason": "start"
+    }
+  ],
+  "last_checkpoint_id": "checkpoint-0",
+  "outstanding_delta_ids": [
+    "R-2",
+    "R-3"
+  ],
+  "policy_bundle": {
+    "budgets": {
+      "max_new_lines": 120,
+      "max_function_len": 80
+    },
+    "whitelist": [
+      "src/**",
+      "docs/sprints/S08/**",
+      "/tmp/promptops/S08/**"
+    ],
+    "policy": {
+      "no_scope_creep": true,
+      "deterministic": true
+    }
+  },
+  "no_rework_rule": {
+    "close_deltas_only": true,
+    "directive": "do not redo evidenced work; close only listed deltas"
+  }
+}
