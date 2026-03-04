@@ -1,0 +1,52 @@
+[CMD] pwd
+/Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+[CMD] git rev-parse --abbrev-ref HEAD
+sprint/S08-agent-adapters-v1-continuity
+EXIT_CODE:0
+
+[CMD] git status --porcelain=v1
+ M docs/sprints/S08/README.md
+?? docs/sprints/S08/evidence/pr_readiness/
+EXIT_CODE:0
+
+[CMD] git diff --name-only
+docs/sprints/S08/README.md
+EXIT_CODE:0
+
+[CMD] git ls-files --others --exclude-standard
+docs/sprints/S08/evidence/pr_readiness/01_checks_watch.txt
+docs/sprints/S08/evidence/pr_readiness/02_pr_view.json
+docs/sprints/S08/evidence/pr_readiness/03_review_threads_graphql.json
+docs/sprints/S08/evidence/pr_readiness/04_pr_checks.txt
+docs/sprints/S08/evidence/pr_readiness/05_review_threads_before_resolve.json
+docs/sprints/S08/evidence/pr_readiness/06_codex_resolution_comment.md
+docs/sprints/S08/evidence/pr_readiness/07_codex_threads_before.json
+docs/sprints/S08/evidence/pr_readiness/08_codex_thread_mutations.jsonl
+docs/sprints/S08/evidence/pr_readiness/09_codex_threads_after.json
+docs/sprints/S08/evidence/pr_readiness/10_checks_until_green.txt
+docs/sprints/S08/evidence/pr_readiness/11_pr_readiness_final.json
+docs/sprints/S08/evidence/pr_readiness/12_pr_checks_final.txt
+docs/sprints/S08/evidence/pr_readiness/13_unresolved_threads_count.txt
+docs/sprints/S08/evidence/pr_readiness/14_pr_readiness_eval.md
+EXIT_CODE:0
+
+[CHECK] whitelist compliance
+docs/sprints/S08/README.md
+docs/sprints/S08/evidence/pr_readiness/01_checks_watch.txt
+docs/sprints/S08/evidence/pr_readiness/02_pr_view.json
+docs/sprints/S08/evidence/pr_readiness/03_review_threads_graphql.json
+docs/sprints/S08/evidence/pr_readiness/04_pr_checks.txt
+docs/sprints/S08/evidence/pr_readiness/05_review_threads_before_resolve.json
+docs/sprints/S08/evidence/pr_readiness/06_codex_resolution_comment.md
+docs/sprints/S08/evidence/pr_readiness/07_codex_threads_before.json
+docs/sprints/S08/evidence/pr_readiness/08_codex_thread_mutations.jsonl
+docs/sprints/S08/evidence/pr_readiness/09_codex_threads_after.json
+docs/sprints/S08/evidence/pr_readiness/10_checks_until_green.txt
+docs/sprints/S08/evidence/pr_readiness/11_pr_readiness_final.json
+docs/sprints/S08/evidence/pr_readiness/12_pr_checks_final.txt
+docs/sprints/S08/evidence/pr_readiness/13_unresolved_threads_count.txt
+docs/sprints/S08/evidence/pr_readiness/14_pr_readiness_eval.md
+WHITELIST_CHECK:PASS
+EXIT_CODE:0

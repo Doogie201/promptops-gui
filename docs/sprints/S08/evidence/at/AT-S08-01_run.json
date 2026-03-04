@@ -1,0 +1,40 @@
+{
+  "status": "success",
+  "sequence": [
+    "codex",
+    "claude"
+  ],
+  "checkpoints": [
+    {
+      "packet_path": "/tmp/promptops/S08/continuity/AT-S08-01/checkpoint-01/continuity_packet.json",
+      "hash_path": "/tmp/promptops/S08/continuity/AT-S08-01/checkpoint-01/continuity_packet.sha256",
+      "sha256": "10acc998f56dbed237435385a9ca4510d7937a51983c457ec8706582c868787e"
+    },
+    {
+      "packet_path": "/tmp/promptops/S08/continuity/AT-S08-01/checkpoint-02/continuity_packet.json",
+      "hash_path": "/tmp/promptops/S08/continuity/AT-S08-01/checkpoint-02/continuity_packet.sha256",
+      "sha256": "7d5a6b09e1a5032342d45700f12f54ae4462cc560ae9e7722f6d754d63e7be54"
+    }
+  ],
+  "evidence_ledger_diff": {
+    "done_ids_before": [
+      "R-1"
+    ],
+    "touched_ids_after_switch": [
+      "R-2"
+    ],
+    "reworked_done_ids": []
+  },
+  "codex_transcript": {
+    "request_jsonl": "/tmp/promptops/S08/adapters/codex/codex-run-0001/request.jsonl",
+    "response_jsonl": "/tmp/promptops/S08/adapters/codex/codex-run-0001/response.jsonl",
+    "normalized_output": "/tmp/promptops/S08/adapters/codex/codex-run-0001/normalized_output.json",
+    "prompt_txt": "/tmp/promptops/S08/adapters/codex/codex-run-0001/prompt.txt"
+  },
+  "claude_transcript": {
+    "request_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0002/request.jsonl",
+    "response_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0002/response.jsonl",
+    "normalized_output": "/tmp/promptops/S08/adapters/claude/claude-run-0002/normalized_output.json",
+    "prompt_txt": "/tmp/promptops/S08/adapters/claude/claude-run-0002/prompt.txt"
+  }
+}

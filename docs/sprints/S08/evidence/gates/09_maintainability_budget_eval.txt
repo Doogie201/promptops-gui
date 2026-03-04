@@ -1,0 +1,76 @@
+[CMD] git diff --numstat
+20	4	src/s08/agent_adapters.ts
+69	0	src/s08/s08.test.ts
+27	8	src/s08/switching.ts
+EXIT_CODE:0
+
+[CMD] wc -l touched files
+     242 src/s08/agent_adapters.ts
+      81 src/s08/continuity_packet.ts
+     122 src/s08/contract.ts
+     268 src/s08/s08.test.ts
+     165 src/s08/switching.ts
+      11 docs/backlog/README.md
+      10 docs/sprints/README.md
+      59 docs/sprints/S08/README.md
+     958 total
+EXIT_CODE:0
+
+[CHECK] existing-file net-new-lines <= 120
+NO_EXISTING_FILE_DIFFS
+EXIT_CODE:0
+
+[CHECK] touched-file total-loc <= 1200
+src/s08/agent_adapters.ts loc=242
+src/s08/continuity_packet.ts loc=81
+src/s08/contract.ts loc=122
+src/s08/s08.test.ts loc=268
+src/s08/switching.ts loc=165
+docs/backlog/README.md loc=11
+docs/sprints/README.md loc=10
+docs/sprints/S08/README.md loc=59
+EXIT_CODE:0
+
+[CHECK] function lengths <= 80 (top-level function declarations)
+src/s08/contract.ts:97 function=normalizeAdapterStatus length=8
+src/s08/contract.ts:106 function=validateNoReworkRule length=13
+src/s08/contract.ts:120 function=continuityFirstLine length=3
+src/s08/continuity_packet.ts:16 function=canonicalJson length=3
+src/s08/continuity_packet.ts:20 function=continuitySha256 length=3
+src/s08/continuity_packet.ts:24 function=validateContinuityPacket length=14
+src/s08/continuity_packet.ts:39 function=writeContinuityPacket length=19
+src/s08/continuity_packet.ts:59 function=buildNextAgentFirstMessage length=4
+src/s08/continuity_packet.ts:64 function=canonicalize length=13
+src/s08/continuity_packet.ts:78 function=redactSensitiveString length=4
+src/s08/agent_adapters.ts:42 function=createCodexAdapter length=3
+src/s08/agent_adapters.ts:46 function=createClaudeAdapter length=3
+src/s08/agent_adapters.ts:50 function=createAdapter length=8
+src/s08/agent_adapters.ts:59 function=invokeAdapter length=27
+src/s08/agent_adapters.ts:87 function=executeAdapterCommand length=22
+src/s08/agent_adapters.ts:110 function=buildOutputEnvelope length=25
+src/s08/agent_adapters.ts:144 function=writeRequestArtifacts length=11
+src/s08/agent_adapters.ts:156 function=writeAdapterScript length=9
+src/s08/agent_adapters.ts:166 function=parsePayload length=12
+src/s08/agent_adapters.ts:179 function=inferStatus length=6
+src/s08/agent_adapters.ts:186 function=inferErrorType length=8
+src/s08/agent_adapters.ts:195 function=toParsedEvidence length=8
+src/s08/agent_adapters.ts:204 function=toWorkSummary length=5
+src/s08/agent_adapters.ts:210 function=nextRunId length=4
+src/s08/agent_adapters.ts:215 function=continuityHashForInput length=16
+src/s08/agent_adapters.ts:232 function=parseJsonObject length=11
+src/s08/switching.ts:41 function=runManualSwitchFlow length=8
+src/s08/switching.ts:50 function=runAutoSwitchFlow length=23
+src/s08/switching.ts:74 function=deterministicHandoffMessage length=6
+src/s08/switching.ts:81 function=withContinuity length=3
+src/s08/switching.ts:85 function=createCheckpoint length=20
+src/s08/switching.ts:106 function=buildFlowResult length=29
+src/s08/switching.ts:136 function=autoSwitchDecision length=15
+src/s08/switching.ts:152 function=toFlowStatus length=5
+src/s08/switching.ts:158 function=toTimeline length=8
+src/s08/s08.test.ts:175 function=makeInputEnvelope length=30
+src/s08/s08.test.ts:206 function=toPacket length=13
+src/s08/s08.test.ts:220 function=makeMockExecutor length=33
+src/s08/s08.test.ts:254 function=readFirstMessage length=5
+src/s08/s08.test.ts:260 function=writeEvidence length=4
+src/s08/s08.test.ts:265 function=resetDir length=4
+EXIT_CODE:0

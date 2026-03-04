@@ -1,0 +1,11 @@
+CMD: cd ~/Projects/promptops-gui && pwd
+/Users/marcussmith/Projects/promptops-gui
+EXIT_CODE:0
+
+CMD: cd ~/Projects/promptops-gui && git rev-parse --show-toplevel
+/Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+CMD: cd ~/Projects/promptops-gui && git status --porcelain=v1 --branch
+## sprint/S08-agent-adapters-v1-continuity
+EXIT_CODE:0

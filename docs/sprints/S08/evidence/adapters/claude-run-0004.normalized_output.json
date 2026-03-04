@@ -1,0 +1,32 @@
+{
+  "adapter": "claude",
+  "deterministic_error_type": "none",
+  "parsed_evidence": {
+    "at_results": [],
+    "diff_summary": [],
+    "receipt_paths": [
+      "/tmp/promptops/S08/tests/at2/claude/receipt_01/receipt.json"
+    ],
+    "touched_ids": [
+      "R-2"
+    ]
+  },
+  "parsed_payload": {
+    "parsed_evidence": {
+      "touched_ids": [
+        "R-2"
+      ]
+    },
+    "status": "success",
+    "work_summary": "resumed and completed"
+  },
+  "raw_output": "{\"status\":\"success\",\"work_summary\":\"resumed and completed\",\"parsed_evidence\":{\"touched_ids\":[\"R-2\"]}}",
+  "status": "success",
+  "transcript_paths": {
+    "normalized_output": "/tmp/promptops/S08/adapters/claude/claude-run-0004/normalized_output.json",
+    "prompt_txt": "/tmp/promptops/S08/adapters/claude/claude-run-0004/prompt.txt",
+    "request_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0004/request.jsonl",
+    "response_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0004/response.jsonl"
+  },
+  "work_summary": "resumed and completed"
+}

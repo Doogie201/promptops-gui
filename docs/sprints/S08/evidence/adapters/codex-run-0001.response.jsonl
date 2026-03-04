@@ -1,0 +1,1 @@
+{"adapter":"codex","status":"needs_input","deterministic_error_type":"none","exit_code":0,"stdout":"{\"status\":\"needs_input\",\"work_summary\":\"switch to claude\",\"parsed_evidence\":{\"touched_ids\":[\"R-3\"]}}","stderr":"","parsed_payload":{"status":"needs_input","work_summary":"switch to claude","parsed_evidence":{"touched_ids":["R-3"]}}}

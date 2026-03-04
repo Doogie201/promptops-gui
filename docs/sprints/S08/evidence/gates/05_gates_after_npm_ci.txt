@@ -1,0 +1,167 @@
+--- Running Deterministic Gates ---
+[1/4] Preflight
+preflight ok: repo_root=/Volumes/SharedDrive/Dev/Projects/promptops-gui node=v22.15.0 npm=10.9.2
+[2/4] Build
+[3/4] Test
+TAP version 13
+# (node:62837) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:62837) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Projects/promptops-gui/engine/command_executor.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Projects/promptops-gui/package.json.
+# Subtest: AT-S05-01 disallowed command/path is blocked with clear error and recorded event
+ok 1 - AT-S05-01 disallowed command/path is blocked with clear error and recorded event
+  ---
+  duration_ms: 9.216375
+  type: 'test'
+  ...
+# Subtest: AT-S05-02 allowed command captures stdout/stderr/exit code receipts
+ok 2 - AT-S05-02 allowed command captures stdout/stderr/exit code receipts
+  ---
+  duration_ms: 11.2515
+  type: 'test'
+  ...
+# Subtest: AT-S05-03 repeated allowed command yields stable normalized hash
+ok 3 - AT-S05-03 repeated allowed command yields stable normalized hash
+  ---
+  duration_ms: 20.369417
+  type: 'test'
+  ...
+# (node:62839) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:62839) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Projects/promptops-gui/engine/evaluator.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Projects/promptops-gui/package.json.
+# Subtest: AT-S04-01: ledger marks done/partial/todo with stable citations
+ok 4 - AT-S04-01: ledger marks done/partial/todo with stable citations
+  ---
+  duration_ms: 9.680375
+  type: 'test'
+  ...
+# Subtest: AT-S04-02: delta ticket includes only outstanding items and is deterministic
+ok 5 - AT-S04-02: delta ticket includes only outstanding items and is deterministic
+  ---
+  duration_ms: 4.92425
+  type: 'test'
+  ...
+# Subtest: AT-S04-03: done items are never re-asked in delta ticket
+ok 6 - AT-S04-03: done items are never re-asked in delta ticket
+  ---
+  duration_ms: 1.107584
+  type: 'test'
+  ...
+# Subtest: AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
+ok 7 - AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
+  ---
+  duration_ms: 1.267958
+  type: 'test'
+  ...
+# Subtest: AT-S04-06: when complete, evaluator emits no delta ticket file
+ok 8 - AT-S04-06: when complete, evaluator emits no delta ticket file
+  ---
+  duration_ms: 0.417333
+  type: 'test'
+  ...
+# (node:62841) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:62841) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Projects/promptops-gui/engine/events/schema.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Projects/promptops-gui/package.json.
+# Subtest: canonicalSerialize sorts keys deterministically
+ok 9 - canonicalSerialize sorts keys deterministically
+  ---
+  duration_ms: 0.477667
+  type: 'test'
+  ...
+# Subtest: idForEvent is stable across payload key ordering
+ok 10 - idForEvent is stable across payload key ordering
+  ---
+  duration_ms: 0.302584
+  type: 'test'
+  ...
+# (node:62843) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:62843) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Projects/promptops-gui/engine/preflight_s06.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Projects/promptops-gui/package.json.
+# Subtest: AT-S06-02 branch noncompliance triggers hard stop with deterministic remediation
+ok 11 - AT-S06-02 branch noncompliance triggers hard stop with deterministic remediation
+  ---
+  duration_ms: 305.691125
+  type: 'test'
+  ...
+# Subtest: AT-S06-03 out-of-sync state change emits deterministic OUT_OF_SYNC hard stop
+ok 12 - AT-S06-03 out-of-sync state change emits deterministic OUT_OF_SYNC hard stop
+  ---
+  duration_ms: 285.2435
+  type: 'test'
+  ...
+# (node:62846) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:62846) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Projects/promptops-gui/policy/index.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Projects/promptops-gui/package.json.
+# Subtest: policy defaults satisfy invariants
+ok 13 - policy defaults satisfy invariants
+  ---
+  duration_ms: 0.388208
+  type: 'test'
+  ...
+# Subtest: policy rejects duplicate whitelist entries
+ok 14 - policy rejects duplicate whitelist entries
+  ---
+  duration_ms: 0.177459
+  type: 'test'
+  ...
+# Subtest: policy enforces positive line and function budgets
+ok 15 - policy enforces positive line and function budgets
+  ---
+  duration_ms: 0.064167
+  type: 'test'
+  ...
+# Subtest: policy whitelist root is absolute
+ok 16 - policy whitelist root is absolute
+  ---
+  duration_ms: 0.082459
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 841.887292
+TAP version 13
+# (node:66911) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:66911) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/SharedDrive/Dev/Projects/promptops-gui/engine/integration.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/SharedDrive/Dev/Projects/promptops-gui/package.json.
+# Subtest: integration: store plus evaluator remains deterministic
+ok 1 - integration: store plus evaluator remains deterministic
+  ---
+  duration_ms: 10.203125
+  type: 'test'
+  ...
+# Subtest: integration: complete flow removes stale delta ticket
+ok 2 - integration: complete flow removes stale delta ticket
+  ---
+  duration_ms: 0.782542
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 130.122916
+[4/4] Lint & Stoplight Greps
+[verify] lint
+Gates passed.
+EXIT_CODE:0

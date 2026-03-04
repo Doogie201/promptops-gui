@@ -1,0 +1,32 @@
+{
+  "adapter": "claude",
+  "status": "success",
+  "raw_output": "{\"status\":\"success\",\"work_summary\":\"delta closed\"}",
+  "parsed_payload": {
+    "status": "success",
+    "work_summary": "delta closed",
+    "parsed_evidence": {
+      "touched_ids": [
+        "R-2"
+      ]
+    }
+  },
+  "parsed_evidence": {
+    "receipt_paths": [
+      "/tmp/promptops/S08/tests/at1/claude/receipt_01/receipt.json"
+    ],
+    "diff_summary": [],
+    "at_results": [],
+    "touched_ids": [
+      "R-2"
+    ]
+  },
+  "work_summary": "delta closed",
+  "deterministic_error_type": "none",
+  "transcript_paths": {
+    "request_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0002/request.jsonl",
+    "response_jsonl": "/tmp/promptops/S08/adapters/claude/claude-run-0002/response.jsonl",
+    "normalized_output": "/tmp/promptops/S08/adapters/claude/claude-run-0002/normalized_output.json",
+    "prompt_txt": "/tmp/promptops/S08/adapters/claude/claude-run-0002/prompt.txt"
+  }
+}

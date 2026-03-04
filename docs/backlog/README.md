@@ -1,5 +1,6 @@
 # Product Backlog
 
+- **S08-agent-adapters-v1-continuity**: Add deterministic programmatic invocation for Codex (primary) and Claude (secondary), auto/manual adapter switching, and Continuity Packet v1 with canonical hashing to resume without rework.
 - **S07-github-pr-protocol-automation**: Implement Open PR Handling Protocol in-engine with GUI-visible status, deterministic stop conditions, codex-thread resolution gating, and operator-grade receipts, while enforcing canonical-worktree preflight and migration-resilient canonical root discovery.
 - **S06-git-worktree-preflight-automation**: Implement operator-grade git/worktree preflight automation in the engine using the receipts executor, including primary-worktree hard-stop evidence, sprint branch-prefix compliance with remediation guidance, prune/worktree sanity policy checks, and deterministic OUT_OF_SYNC event emission.
 - **S05-command-executor-receipts-engine**: Implement a sandboxed command execution layer with deny-by-default allowlisted commands/paths and a deterministic receipts engine (stdout/stderr/exit code, deterministic redaction, normalized stable hashing) for GUI-first use and future terminal-panel reuse without divergence.

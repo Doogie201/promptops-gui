@@ -1,0 +1,13 @@
+[CMD] find docs/sprints/S08 -type f -name '._*' -print | sort
+docs/sprints/S08/evidence/gates/._08_scope_proof.txt
+docs/sprints/S08/evidence/gates/._09_maintainability_budget_eval.txt
+docs/sprints/S08/evidence/gates/._10_verify_final.txt
+docs/sprints/S08/evidence/gates/._11_gates_final.txt
+docs/sprints/S08/evidence/stoplight/._01_stoplight_greps.md
+EXIT_CODE:0
+
+[CMD] find docs/sprints/S08 -type f -name '._*' -print0 | xargs -0 -I{} rm -f -- '{}'
+EXIT_CODE:0
+
+[CMD] find docs/sprints/S08 -type f -name '._*' -print | sort
+EXIT_CODE:0

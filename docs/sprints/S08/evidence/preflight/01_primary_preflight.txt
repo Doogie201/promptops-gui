@@ -1,0 +1,53 @@
+### pwd
+CMD: pwd
+/Users/marcussmith/Projects/promptops-gui
+EXIT_CODE:0
+
+### show_toplevel
+CMD: git rev-parse --show-toplevel
+/Volumes/SharedDrive/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+### worktree_list
+CMD: git worktree list --porcelain
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD 91a9263bf3e52a9847d5236f700adcc274d1d8c0
+branch refs/heads/main
+
+EXIT_CODE:0
+
+### status_branch
+CMD: git status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE:0
+
+### fetch_all
+CMD: git fetch --all --prune --tags
+EXIT_CODE:0
+
+### ahead_behind_vs_main
+CMD: git rev-list --left-right --count HEAD...origin/main
+0	0
+EXIT_CODE:0
+
+### abbrev_branch
+CMD: git rev-parse --abbrev-ref HEAD
+main
+EXIT_CODE:0
+
+### log5
+CMD: git log --oneline -5
+91a9263 [S07] feature : github pr protocol automation (#11)
+fe432b3 ci: switch codecov upload to lcov (#10)
+9751773 ci: harden codecov upload checks (#9)
+a7b7c76 Merge pull request #8 from Doogie201/sprint/S06-git-worktree-preflight-automation
+73ca924 fix: align primary sync probe with configured base branch
+EXIT_CODE:0
+
+### prune_dry_run
+CMD: git prune --dry-run
+EXIT_CODE:0
+
+### fsck_no_reflogs
+CMD: git fsck --no-reflogs
+EXIT_CODE:0
