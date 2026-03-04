@@ -1,0 +1,9 @@
+snapshot_a_utc=2026-03-04T21:09:45Z
+headRefOid=9319d0f300907b9dbf96fe98f236697a87cf5404
+state=OPEN
+mergeable=MERGEABLE
+mergeStateStatus=CLEAN
+reviewDecision=
+statusCheckRollup_count=6
+unresolvedThreadCount=0
+GREEN_A=1

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd -P)"
 STATE_DIR="$REPO_ROOT/.agent_state"
 PROBE_FILE="$STATE_DIR/preflight.write_probe"
 
@@ -24,7 +24,8 @@ if ! git -C "$REPO_ROOT" rev-parse --show-toplevel >/dev/null 2>&1; then
   exit 11
 fi
 
-TOPLEVEL="$(git -C "$REPO_ROOT" rev-parse --show-toplevel)"
+TOPLEVEL_RAW="$(git -C "$REPO_ROOT" rev-parse --show-toplevel)"
+TOPLEVEL="$(cd "$TOPLEVEL_RAW" && pwd -P)"
 if [[ "$TOPLEVEL" != "$REPO_ROOT" ]]; then
   echo "preflight failure: script-derived root '$REPO_ROOT' != git root '$TOPLEVEL'" >&2
   exit 12

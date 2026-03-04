@@ -1,0 +1,55 @@
+ROOT_INDEX=2
+ROOT=/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
+START_UTC=2026-03-04T21:07:31Z
+CMD: pwd -P
+/Volumes/X9_DEV/Dev
+EXIT_CODE: 0
+
+CMD: echo "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt"
+/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" rev-parse --show-toplevel
+/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" worktree list --porcelain
+worktree /private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
+HEAD 91a9263bf3e52a9847d5236f700adcc274d1d8c0
+branch refs/heads/main
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" fetch --all --prune --tags
+From github.com:Doogie201/promptops-gui
+ - [deleted]         (none)     -> origin/sprint/S08-agent-adapters-v1-continuity
+   91a9263..83ba4d3  main       -> origin/main
+ * [new branch]      sprint/S09-gui-shell-setup-wizard-agent-switching -> origin/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" rev-list --left-right --count HEAD...origin/main
+0	1
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" rev-parse --abbrev-ref HEAD
+main
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" log --oneline -5
+91a9263 [S07] feature : github pr protocol automation (#11)
+fe432b3 ci: switch codecov upload to lcov (#10)
+9751773 ci: harden codecov upload checks (#9)
+a7b7c76 Merge pull request #8 from Doogie201/sprint/S06-git-worktree-preflight-automation
+73ca924 fix: align primary sync probe with configured base branch
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" prune --dry-run
+
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" fsck --no-reflogs
+dangling commit c059e25258c5345b5e3828cfd17f73825f28a688
+EXIT_CODE: 0

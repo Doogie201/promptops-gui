@@ -1,0 +1,54 @@
+ROOT_INDEX=6
+ROOT=/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo
+START_UTC=2026-03-04T21:07:34Z
+CMD: pwd -P
+/Volumes/X9_DEV/Dev
+EXIT_CODE: 0
+
+CMD: echo "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo"
+/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" rev-parse --show-toplevel
+/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" worktree list --porcelain
+worktree /private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo
+HEAD 9319d0f300907b9dbf96fe98f236697a87cf5404
+branch refs/heads/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" status --porcelain=v1 --branch
+## sprint/S09-gui-shell-setup-wizard-agent-switching...origin/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" fetch --all --prune --tags
+
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" rev-list --left-right --count HEAD...origin/main
+fatal: ambiguous argument 'HEAD...origin/main': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+EXIT_CODE: 128
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" rev-parse --abbrev-ref HEAD
+sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" log --oneline -5
+9319d0f fix(s09): close codex review blockers for PR #13
+b922cfa [pre-commit.ci] auto fixes from pre-commit.com hooks
+9922656 docs: add S09 PR sync receipts
+126b0d0 [pre-commit.ci] auto fixes from pre-commit.com hooks
+24f063b docs: refresh S09 evidence receipts
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" prune --dry-run
+
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" fsck --no-reflogs
+
+EXIT_CODE: 0

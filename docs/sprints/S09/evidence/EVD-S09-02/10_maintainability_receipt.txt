@@ -1,0 +1,16 @@
+# Maintainability Receipt
+
+Touched files counted: 9
+
+- docs/sprints/S09/evidence/EVD-S09-02/08_stoplight_greps.md::file_lines=25
+- docs/sprints/S09/evidence/EVD-S09-02/18_pr_readiness_receipt.txt::file_lines=13
+- docs/sprints/S09/evidence/pr/16b_label_create_sprint_s09.txt::file_lines=1
+- docs/sprints/S09/evidence/pr/16c_label_create_area_navigation.txt::file_lines=1
+- docs/sprints/S09/evidence/pr/16d_pr_labels_apply_api.json::file_lines=1
+- docs/sprints/S09/evidence/pr/16d_pr_labels_apply_api.stderr::file_lines=1
+- docs/sprints/S09/evidence/pr/17_pr_readiness_snapshot.json::file_lines=1
+- docs/sprints/S09/evidence/pr/18_pr_readiness_receipt.txt::file_lines=13
+- docs/sprints/S09/evidence/stoplight/08_stoplight_greps.md::file_lines=25
+
+Largest touched file: docs/sprints/S09/evidence/EVD-S09-02/08_stoplight_greps.md (25 lines)
+Budget note: docs/** are exempt from line-count budget; existing-code net-new budget checked in diffstat receipt.

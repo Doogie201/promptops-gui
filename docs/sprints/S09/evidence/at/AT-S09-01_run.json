@@ -1,0 +1,188 @@
+{
+  "wizard_eval_before_prompt": {
+    "missingPersistentFields": [],
+    "sprintScopedPlaceholders": [
+      "PR_NUMBER"
+    ],
+    "promptRequired": true,
+    "readyForRun": false
+  },
+  "wizard_eval_after_prompt": {
+    "missingPersistentFields": [],
+    "sprintScopedPlaceholders": [],
+    "promptRequired": false,
+    "readyForRun": true
+  },
+  "run_status": {
+    "runId": "run-s09-gui-shell-setup-wizard-agent-switching-001",
+    "status": "running",
+    "phase": "agent_invocation",
+    "currentAgent": "codex",
+    "outstandingDeltaIds": [
+      "PR_NUMBER"
+    ],
+    "doneLedgerIds": [],
+    "continuityHash": null,
+    "lastCheckpointId": null,
+    "waitingReason": null,
+    "safeMode": false,
+    "autoSwitchEnabled": true,
+    "manualSwitchEnabled": true,
+    "lastAutoSwitchReason": null,
+    "adapterHealth": {
+      "codex": {
+        "installed": true,
+        "available": true,
+        "lastExitCode": null,
+        "lastErrorType": null
+      },
+      "claude": {
+        "installed": true,
+        "available": true,
+        "lastExitCode": null,
+        "lastErrorType": null
+      }
+    },
+    "adapterSequence": [
+      "codex"
+    ],
+    "checkpoints": [],
+    "timeline": [
+      {
+        "eventId": "evt-001",
+        "status": "running",
+        "phase": "agent_invocation",
+        "reason": "run_started",
+        "at": "2026-03-04T00:00:01Z"
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "id": "home",
+      "active": false,
+      "label": "HOME"
+    },
+    {
+      "id": "run",
+      "active": true,
+      "label": "RUN"
+    },
+    {
+      "id": "history",
+      "active": false,
+      "label": "HISTORY"
+    },
+    {
+      "id": "evidence",
+      "active": false,
+      "label": "EVIDENCE"
+    },
+    {
+      "id": "templates",
+      "active": false,
+      "label": "TEMPLATES"
+    },
+    {
+      "id": "agents",
+      "active": false,
+      "label": "AGENTS"
+    },
+    {
+      "id": "settings",
+      "active": false,
+      "label": "SETTINGS"
+    },
+    {
+      "id": "diagnostics",
+      "active": false,
+      "label": "DIAGNOSTICS"
+    }
+  ],
+  "route_back": {
+    "screen": "run",
+    "runId": "run-s09-gui-shell-setup-wizard-agent-switching-001",
+    "key": "run/run-s09-gui-shell-setup-wizard-agent-switching-001"
+  },
+  "route_forward": {
+    "screen": "history",
+    "runId": "run-s09-gui-shell-setup-wizard-agent-switching-001",
+    "key": "history/run-s09-gui-shell-setup-wizard-agent-switching-001"
+  },
+  "panels": {
+    "home": "Operator home: sprint context, branch, and guardrails.",
+    "run": "Run controls: Start/Pause/Resume/Cancel/Safe Mode and active phase.",
+    "history": "Run history: immutable event timeline and checkpoints.",
+    "evidence": "Evidence viewer: receipts with command + exit code + raw output links.",
+    "templates": "Template/task pinning and versioned policy edits.",
+    "agents": "Agent order, auto/manual switch, and health indicators.",
+    "settings": "Repository defaults, budgets, whitelist, and root resolution strategy.",
+    "diagnostics": "Preflight status, integrity checks, and troubleshooting traces."
+  },
+  "ui_snapshot": {
+    "nav": [
+      {
+        "id": "home",
+        "active": false,
+        "label": "HOME"
+      },
+      {
+        "id": "run",
+        "active": true,
+        "label": "RUN"
+      },
+      {
+        "id": "history",
+        "active": false,
+        "label": "HISTORY"
+      },
+      {
+        "id": "evidence",
+        "active": false,
+        "label": "EVIDENCE"
+      },
+      {
+        "id": "templates",
+        "active": false,
+        "label": "TEMPLATES"
+      },
+      {
+        "id": "agents",
+        "active": false,
+        "label": "AGENTS"
+      },
+      {
+        "id": "settings",
+        "active": false,
+        "label": "SETTINGS"
+      },
+      {
+        "id": "diagnostics",
+        "active": false,
+        "label": "DIAGNOSTICS"
+      }
+    ],
+    "panels": {
+      "home": "Operator home: sprint context, branch, and guardrails.",
+      "run": "Run controls: Start/Pause/Resume/Cancel/Safe Mode and active phase.",
+      "history": "Run history: immutable event timeline and checkpoints.",
+      "evidence": "Evidence viewer: receipts with command + exit code + raw output links.",
+      "templates": "Template/task pinning and versioned policy edits.",
+      "agents": "Agent order, auto/manual switch, and health indicators.",
+      "settings": "Repository defaults, budgets, whitelist, and root resolution strategy.",
+      "diagnostics": "Preflight status, integrity checks, and troubleshooting traces."
+    },
+    "runSummary": {
+      "runId": "run-s09-gui-shell-setup-wizard-agent-switching-001",
+      "phase": "agent_invocation",
+      "currentAgent": "codex",
+      "continuityHash": null,
+      "waitingReason": null
+    }
+  },
+  "evidence_summary": {
+    "total": 2,
+    "failed": 1,
+    "success": 1
+  }
+}

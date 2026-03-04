@@ -1,0 +1,53 @@
+ROOT_INDEX=3
+ROOT=/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui
+START_UTC=2026-03-04T21:07:32Z
+CMD: pwd -P
+/Volumes/X9_DEV/Dev
+EXIT_CODE: 0
+
+CMD: echo "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui"
+/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" rev-parse --show-toplevel
+/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" worktree list --porcelain
+worktree /private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui
+HEAD 83ba4d32b2a449332d50924318f03282a39568f9
+branch refs/heads/main
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" fetch --all --prune --tags
+From github.com:Doogie201/promptops-gui
+ * [new branch]      sprint/S09-gui-shell-setup-wizard-agent-switching -> origin/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" rev-list --left-right --count HEAD...origin/main
+0	0
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" rev-parse --abbrev-ref HEAD
+main
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" log --oneline -5
+83ba4d3 [S08] security : agent adapters v1 + continuity packet (#12)
+91a9263 [S07] feature : github pr protocol automation (#11)
+fe432b3 ci: switch codecov upload to lcov (#10)
+9751773 ci: harden codecov upload checks (#9)
+a7b7c76 Merge pull request #8 from Doogie201/sprint/S06-git-worktree-preflight-automation
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" prune --dry-run
+
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" fsck --no-reflogs
+dangling commit c059e25258c5345b5e3828cfd17f73825f28a688
+EXIT_CODE: 0
