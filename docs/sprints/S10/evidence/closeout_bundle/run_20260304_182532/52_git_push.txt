@@ -1,0 +1,4 @@
+CMD: git push
+To https://github.com/Doogie201/promptops-gui.git
+   d285a0b..2cb148f  sprint/S10-gui-operator-tools-v1 -> sprint/S10-gui-operator-tools-v1
+EXIT_CODE: 0

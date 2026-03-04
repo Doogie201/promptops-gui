@@ -1,0 +1,2 @@
+CMD: git add apps/s10_gui_operator_tools_v1.ts src/s10 docs/sprints/S10 docs/backlog/README.md docs/sprints/README.md
+EXIT_CODE: 0

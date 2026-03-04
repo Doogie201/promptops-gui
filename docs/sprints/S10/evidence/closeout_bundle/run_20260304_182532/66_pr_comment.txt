@@ -1,0 +1,3 @@
+CMD: gh pr comment 15 --repo Doogie201/promptops-gui --body "S10 operator-tools receipts attached. Evidence: docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532, docs/sprints/S10/evidence/tools/, docs/sprints/S10/evidence/at/."
+https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4000975203
+EXIT_CODE: 0

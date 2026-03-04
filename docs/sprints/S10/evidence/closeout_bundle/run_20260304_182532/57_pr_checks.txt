@@ -1,0 +1,7 @@
+CMD: gh pr checks 15 --repo Doogie201/promptops-gui
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22694556764/job/65797935095	
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22694557749/job/65797938343	
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22694556754/job/65797935033	
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22694557744/job/65797938335	
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772667184.dWEGZCYGQO2mvca8Ju8j9Q	checks completed successfully
+EXIT_CODE: 8
