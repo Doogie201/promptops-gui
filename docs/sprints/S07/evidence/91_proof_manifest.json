@@ -1,6 +1,6 @@
 {
   "root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S07/evidence",
-  "generated_at_utc": "2026-03-04T15:45:46Z",
+  "generated_at_utc": "2026-03-04T15:46:16Z",
   "files": [
     {
       "path": "02_primary_worktree_preflight_after_remediation.txt",
@@ -106,6 +106,16 @@
       "path": "15_ci_green_stability_eval.md",
       "sha256": "219436e386c666b9471b052a02cbcf7f8d20fb0b10fcd57e6e24e8ed14aae714",
       "bytes": 515
+    },
+    {
+      "path": "19_verify_after_evidence_commit.txt",
+      "sha256": "cb7912faa27d37943d1c35469255518d24d830baa78bb1d1e733fad6170139bb",
+      "bytes": 7367
+    },
+    {
+      "path": "20_gates_after_evidence_commit.txt",
+      "sha256": "c3f33ee931fb97fa50cba8f94e61c138bdee4f7eb75a426f2a6aa2ec17033e67",
+      "bytes": 7439
     },
     {
       "path": "42_graphql_before_11.json",
