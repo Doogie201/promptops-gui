@@ -1,0 +1,8 @@
+# Maintainability Receipt
+
+- docs/backlog/README.md::file_lines=12
+- docs/sprints/README.md::file_lines=11
+- scripts/preflight.sh::file_lines=54
+
+Largest touched file: scripts/preflight.sh (54 lines)
+Budget note: docs/** are exempt from line-count budget; max net new lines in existing code files checked via diffstat.

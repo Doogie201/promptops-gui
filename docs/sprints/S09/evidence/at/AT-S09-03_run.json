@@ -1,0 +1,41 @@
+{
+  "cancelled_status": "cancelled",
+  "resume_payload_a": {
+    "adapter_sequence": [
+      "codex",
+      "claude"
+    ],
+    "checkpoint_id": "checkpoint-01",
+    "continuity_sha256": "d5bb7afcd05b60f615969f23241bdf563a1728db878025ffb2a6b4d4518c5d0f",
+    "current_agent": "claude",
+    "no_rework": "do not redo evidenced work; close only listed deltas",
+    "outstanding_delta_ids": [],
+    "run_id": "run-s09-gui-shell-setup-wizard-agent-switching-001",
+    "sprint_id": "S09-gui-shell-setup-wizard-agent-switching"
+  },
+  "resume_payload_b": {
+    "adapter_sequence": [
+      "codex",
+      "claude"
+    ],
+    "checkpoint_id": "checkpoint-01",
+    "continuity_sha256": "d5bb7afcd05b60f615969f23241bdf563a1728db878025ffb2a6b4d4518c5d0f",
+    "current_agent": "claude",
+    "no_rework": "do not redo evidenced work; close only listed deltas",
+    "outstanding_delta_ids": [],
+    "run_id": "run-s09-gui-shell-setup-wizard-agent-switching-001",
+    "sprint_id": "S09-gui-shell-setup-wizard-agent-switching"
+  },
+  "payload_identical": true,
+  "resumed_status": "running",
+  "resumed_checkpoint": "checkpoint-01",
+  "timeline_ids": [
+    "evt-001",
+    "evt-002",
+    "evt-003",
+    "evt-004",
+    "evt-005",
+    "evt-006",
+    "evt-007"
+  ]
+}

@@ -1,0 +1,22 @@
+# Scope Proof
+
+CMD: git status --porcelain=v1
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+ M scripts/preflight.sh
+?? apps/
+?? docs/sprints/S09/
+?? src/s09/
+EXIT_CODE: 0
+
+Touched paths (tracked + untracked):
+- docs/backlog/README.md
+- docs/sprints/README.md
+- scripts/preflight.sh
+- apps/
+- docs/sprints/S09/
+- src/s09/
+
+Whitelist violations:
+- none
+SCOPE_PASS=1

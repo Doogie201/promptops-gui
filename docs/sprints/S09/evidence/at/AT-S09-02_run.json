@@ -1,0 +1,24 @@
+{
+  "sequence_after_manual": [
+    "codex",
+    "claude"
+  ],
+  "checkpoints_after_manual": [
+    {
+      "checkpointId": "checkpoint-01",
+      "continuitySha256": "db801d241d5bbe5b80ec64556a09af062af238465de2c3d08e6255d3e1957691",
+      "nextAgentFirstMessage": "continuity_sha256=db801d241d5bbe5b80ec64556a09af062af238465de2c3d08e6255d3e1957691 | do not redo evidenced work; close only listed deltas | deltas=",
+      "createdAt": "2026-03-04T00:01:10Z",
+      "reason": "MANUAL_SWITCH_OPERATOR",
+      "fromAgent": "codex",
+      "toAgent": "claude"
+    }
+  ],
+  "sequence_after_auto": [
+    "codex",
+    "claude",
+    "codex",
+    "claude"
+  ],
+  "last_auto_switch_reason": "AUTO_SWITCH_EXHAUSTED"
+}

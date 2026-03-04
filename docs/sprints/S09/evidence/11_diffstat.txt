@@ -1,0 +1,4 @@
+ docs/backlog/README.md | 1 +
+ docs/sprints/README.md | 1 +
+ scripts/preflight.sh   | 7 ++++---
+ 3 files changed, 6 insertions(+), 3 deletions(-)
