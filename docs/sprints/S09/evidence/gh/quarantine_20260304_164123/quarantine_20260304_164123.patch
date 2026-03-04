@@ -4,7 +4,7 @@ index d204a39..45a2fed 100644
 +++ b/docs/sprints/S06/README.md
 @@ -4,7 +4,7 @@
  Implement full git/worktree preflight automation inside the engine using the S05 receipts executor: primary worktree command-set validation with hard-stop flows, sprint branch-prefix compliance with remediation guidance, prune/worktree sanity policy checks, and deterministic `OUT_OF_SYNC` event emission.
- 
+
  ## Work Plan
 -- **S06.A Primary worktree automation**: Execute the canonical command set against `~/Projects/promptops-gui` and emit structured pass/hard-stop outcomes with receipts.
 +- **S06.A Primary worktree automation**: Execute the canonical command set against `PROMPTOPS_REPO` (resolved git toplevel), emit structured pass/hard-stop outcomes with receipts, and avoid hardcoded absolute path assumptions.
@@ -21,7 +21,7 @@ index 5cd9757..3eb040b 100644
  - **S07.D Codex protocol**: Detect codex comments/threads, identify unresolved codex threads, resolve via GraphQL where possible, and stop with deterministic blocker when unresolved.
 -- **S07.E Canonical root policy**: Resolve canonical root via `PROMPTOPS_GUI_CANONICAL_ROOT` or git toplevel fallback and enforce cwd guardrails.
 +- **S07.E Canonical root policy**: Resolve canonical root from `PROMPTOPS_REPO` (mandatory) and validate against git toplevel before running protocol steps.
- 
+
  ## Acceptance Tests
  - **AT-S07-01**: Unrelated open PR inventory triggers deterministic stop with evidence.
 diff --git a/docs/sprints/S08/README.md b/docs/sprints/S08/README.md
@@ -33,7 +33,7 @@ index d4ac039..1661e25 100644
  - No new endpoints/routes.
  - No new dependencies.
 +- Root remediation delta: operator scripts must resolve repository root from `PROMPTOPS_REPO` + git toplevel (no hardcoded `~/Projects` assumptions).
- 
+
  ## Canonical Contract (S08.A)
  - Input envelope fields: rendered ticket JSON, continuity packet/hash, repo context snapshot, policy bundle, evidence ledger snapshot, run timeline tail, checkpoint id, outstanding deltas, no-rework directive.
 @@ -58,3 +59,4 @@ Hashing rules:
@@ -48,7 +48,7 @@ index db0fc47..072ec9e 100644
 @@ -1,8 +1,17 @@
  #!/usr/bin/env bash
  set -euo pipefail
- 
+
 -SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 -REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 +if [[ -z "${PROMPTOPS_REPO:-}" ]]; then
@@ -62,9 +62,9 @@ index db0fc47..072ec9e 100644
 +  exit 43
 +fi
 +REPO_ROOT="$(cd "$TOPLEVEL_RAW" && pwd -P)"
- 
+
  bash "$REPO_ROOT/scripts/preflight.sh"
- 
+
 diff --git a/scripts/preflight.sh b/scripts/preflight.sh
 index e1a9c6b..29fcd22 100644
 --- a/scripts/preflight.sh
@@ -72,20 +72,20 @@ index e1a9c6b..29fcd22 100644
 @@ -1,10 +1,8 @@
  #!/usr/bin/env bash
  set -euo pipefail
- 
+
 -SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 -REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 -STATE_DIR="$REPO_ROOT/.agent_state"
 -PROBE_FILE="$STATE_DIR/preflight.write_probe"
 +BASE_BRANCH="${PROMPTOPS_BASE_BRANCH:-main}"
 +CORRUPTION_PATTERN='bad sha1|invalid ref|badRefName|badRefContent'
- 
+
  need_cmd() {
    local cmd="$1"
 @@ -19,20 +17,102 @@ need_cmd node
  need_cmd npm
  need_cmd rg
- 
+
 -if ! git -C "$REPO_ROOT" rev-parse --show-toplevel >/dev/null 2>&1; then
 -  echo "preflight failure: '$REPO_ROOT' is not a git repository root" >&2
 -  exit 11
@@ -93,7 +93,7 @@ index e1a9c6b..29fcd22 100644
 +  echo "HARD STOP: MISSING_REPO_ROOT (set PROMPTOPS_REPO to the intended repository root)." >&2
 +  exit 41
  fi
- 
+
 -TOPLEVEL="$(git -C "$REPO_ROOT" rev-parse --show-toplevel)"
 +if [[ ! -d "$PROMPTOPS_REPO" ]]; then
 +  echo "HARD STOP: MISSING_REPO_ROOT (path '$PROMPTOPS_REPO' does not exist)." >&2
@@ -127,7 +127,7 @@ index e1a9c6b..29fcd22 100644
 +  echo "HARD STOP: NOT_A_GIT_REPO_ROOT (PROMPTOPS_REPO='$REPO_ROOT' git_toplevel='$TOPLEVEL')." >&2
 +  exit 44
  fi
- 
+
 -mkdir -p "$STATE_DIR"
 -echo "probe" >"$PROBE_FILE"
 -rm -f "$PROBE_FILE"
@@ -191,7 +191,7 @@ index e1a9c6b..29fcd22 100644
 +  echo "HARD STOP: GIT OBJECT HEALTH (corruption signals detected in prune/fsck output)." >&2
 +  exit 46
 +fi
- 
+
  if [[ "$REPO_ROOT" == /Volumes/* ]]; then
    MOUNT_ROOT="$(echo "$REPO_ROOT" | awk -F/ '{print "/"$2"/"$3}')"
 diff --git a/scripts/s07-open-pr-protocol.ts b/scripts/s07-open-pr-protocol.ts
@@ -214,7 +214,7 @@ index a20055b..cf48a11 100644
 @@ -1,7 +1,22 @@
  #!/usr/bin/env bash
  set -euo pipefail
- 
+
 -ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 +if [[ -z "${PROMPTOPS_REPO:-}" ]]; then
 +  echo "HARD STOP: MISSING_REPO_ROOT (set PROMPTOPS_REPO to the intended repository root)." >&2
@@ -233,7 +233,7 @@ index a20055b..cf48a11 100644
 +fi
 +ROOT_DIR="$(cd "$TOPLEVEL_RAW" && pwd -P)"
  cd "$ROOT_DIR"
- 
+
  MODE="${1:-all}"
 diff --git a/src/s07/open_pr_protocol.ts b/src/s07/open_pr_protocol.ts
 index 6c0dd13..d779312 100644
