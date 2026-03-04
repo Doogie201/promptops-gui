@@ -165,11 +165,15 @@ function writeAdapterScript(adapter: AdapterName, runRoot: string): string {
 
 function parsePayload(stdout: string): Record<string, unknown> | null {
   if (!stdout || stdout.trim().length === 0) return null;
-  try {
-    return JSON.parse(stdout) as Record<string, unknown>;
-  } catch {
-    return null;
+  const trimmed = stdout.trim();
+  const direct = parseJsonObject(trimmed);
+  if (direct) return direct;
+  const lines = trimmed.split(/\r?\n/).map((line) => line.trim()).filter((line) => line.length > 0);
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const parsed = parseJsonObject(lines[i]);
+    if (parsed) return parsed;
   }
+  return null;
 }
 
 function inferStatus(receipt: CommandReceipt) {
@@ -223,4 +227,16 @@ function continuityHashForInput(input: AdapterInputEnvelope): string {
     policy_bundle: input.policy_bundle,
   };
   return continuitySha256(synthetic);
+}
+
+function parseJsonObject(value: string): Record<string, unknown> | null {
+  try {
+    const parsed = JSON.parse(value);
+    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+      return parsed as Record<string, unknown>;
+    }
+    return null;
+  } catch {
+    return null;
+  }
 }

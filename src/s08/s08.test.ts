@@ -83,6 +83,49 @@ test('AT-S08-02 Auto switch', () => {
   });
 });
 
+test('AT-S08-02b Auto switch does not run secondary when primary succeeds', () => {
+  resetDir(MOCK_REPO_ROOT);
+  const codexExec = makeMockExecutor(path.join(TEST_ROOT, 'at2b', 'codex'), [
+    { stdout: JSON.stringify({ status: 'success', work_summary: 'already complete', parsed_evidence: { touched_ids: ['R-2'] } }) },
+  ]);
+  const claudeRoot = path.join(TEST_ROOT, 'at2b', 'claude');
+  const claudeExec = makeMockExecutor(claudeRoot, [
+    { stdout: JSON.stringify({ status: 'success', work_summary: 'should not run', parsed_evidence: { touched_ids: [] } }) },
+  ]);
+  const result = runAutoSwitchFlow({
+    primary: createCodexAdapter({ repoRoot: MOCK_REPO_ROOT, stagingRoot: STAGING_ROOT, timeoutMs: 3_000, commandExecutor: codexExec }),
+    secondary: createClaudeAdapter({ repoRoot: MOCK_REPO_ROOT, stagingRoot: STAGING_ROOT, timeoutMs: 3_000, commandExecutor: claudeExec }),
+    input: makeInputEnvelope(),
+    continuityRoot: path.join(CONTINUITY_ROOT, 'AT-S08-02b'),
+    maxPrimaryRetries: 1,
+  });
+
+  assert.strictEqual(result.status, 'success');
+  assert.strictEqual(result.switch_reason, 'AUTO_SWITCH_NOT_REQUIRED');
+  assert.deepStrictEqual(result.sequence, ['codex']);
+  assert.deepStrictEqual(fs.readdirSync(claudeRoot), []);
+});
+
+test('AT-S08-02c Secondary error stays error', () => {
+  resetDir(MOCK_REPO_ROOT);
+  const codexExec = makeMockExecutor(path.join(TEST_ROOT, 'at2c', 'codex'), [
+    { stdout: JSON.stringify({ status: 'exhausted', work_summary: 'context exhausted', parsed_evidence: { touched_ids: [] } }) },
+  ]);
+  const claudeExec = makeMockExecutor(path.join(TEST_ROOT, 'at2c', 'claude'), [
+    { stdout: JSON.stringify({ status: 'error', work_summary: 'secondary failed', parsed_evidence: { touched_ids: [] } }), exitCode: 1 },
+  ]);
+  const result = runAutoSwitchFlow({
+    primary: createCodexAdapter({ repoRoot: MOCK_REPO_ROOT, stagingRoot: STAGING_ROOT, timeoutMs: 3_000, commandExecutor: codexExec }),
+    secondary: createClaudeAdapter({ repoRoot: MOCK_REPO_ROOT, stagingRoot: STAGING_ROOT, timeoutMs: 3_000, commandExecutor: claudeExec }),
+    input: makeInputEnvelope(),
+    continuityRoot: path.join(CONTINUITY_ROOT, 'AT-S08-02c'),
+    maxPrimaryRetries: 1,
+  });
+
+  assert.strictEqual(result.switch_reason, 'AUTO_SWITCH_EXHAUSTED');
+  assert.strictEqual(result.status, 'error');
+});
+
 test('AT-S08-03 Deterministic handoff', () => {
   const packet = toPacket(makeInputEnvelope(), 'checkpoint-deterministic');
   const a = writeContinuityPacket(path.join(CONTINUITY_ROOT, 'AT-S08-03'), 'packet-a', packet);
@@ -101,6 +144,32 @@ test('AT-S08-03 Deterministic handoff', () => {
     first_message_b: firstB.first_message,
     first_messages_equal: firstA.first_message === firstB.first_message,
   });
+});
+
+test('AT-S08-03b Codex JSONL payload parsing is deterministic', () => {
+  resetDir(MOCK_REPO_ROOT);
+  const codexExec = makeMockExecutor(path.join(TEST_ROOT, 'at3b', 'codex'), [
+    {
+      stdout: [
+        JSON.stringify({ event: 'stream-start' }),
+        JSON.stringify({
+          status: 'needs_input',
+          work_summary: 'jsonl parsed',
+          parsed_evidence: { touched_ids: ['R-2'], diff_summary: ['src/s08/agent_adapters.ts'] },
+        }),
+      ].join('\n'),
+    },
+  ]);
+  const adapter = createCodexAdapter({
+    repoRoot: MOCK_REPO_ROOT,
+    stagingRoot: STAGING_ROOT,
+    timeoutMs: 3_000,
+    commandExecutor: codexExec,
+  });
+  const result = adapter.invoke(makeInputEnvelope());
+  assert.strictEqual(result.output.status, 'needs_input');
+  assert.deepStrictEqual(result.output.parsed_evidence.touched_ids, ['R-2']);
+  assert.deepStrictEqual(result.output.parsed_evidence.diff_summary, ['src/s08/agent_adapters.ts']);
 });
 
 function makeInputEnvelope(): AdapterInputEnvelope {

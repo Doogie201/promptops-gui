@@ -61,11 +61,14 @@ export function runAutoSwitchFlow(config: SwitchFlowConfig): SwitchFlowResult {
   }
 
   if (!finalPrimary) throw new Error('HARD_STOP: auto-switch flow could not start primary adapter');
-  const reason = autoSwitchReason(finalPrimary.output.status, attempts.length, retries);
+  const decision = autoSwitchDecision(finalPrimary, attempts.length, retries);
+  if (!decision.should_switch) {
+    return buildFlowResult(config, attempts, [], decision.reason);
+  }
   const checkpoint = createCheckpoint(config, config.input, attempts.map((run, i) => toTimeline(`evt-${i + 1}`, run)), 'checkpoint-auto');
   const resumeInput = withContinuity(config.input, checkpoint.sha256, checkpoint.packet);
   const secondary = config.secondary.invoke(resumeInput);
-  return buildFlowResult(config, [...attempts, secondary], [checkpoint.artifact], reason);
+  return buildFlowResult(config, [...attempts, secondary], [checkpoint.artifact], decision.reason);
 }
 
 export function deterministicHandoffMessage(packet: ContinuityPacketV1): { hash: string; first_message: string } {
@@ -117,7 +120,8 @@ function buildFlowResult(
   const reworked = touched.filter((item) => doneBefore.includes(item));
   const keyMaterial = `${checkpoints.map((item) => item.sha256).join('|')}|${runs.map((run) => run.output.adapter).join('>')}`;
   const idempotencyKey = crypto.createHash('sha256').update(keyMaterial).digest('hex');
-  const status = runs[runs.length - 1].output.status === 'success' ? 'success' : 'blocked';
+  const terminalStatus = runs[runs.length - 1].output.status;
+  const status = toFlowStatus(terminalStatus);
   return {
     status,
     sequence: runs.map((run) => run.output.adapter),
@@ -129,11 +133,26 @@ function buildFlowResult(
   };
 }
 
-function autoSwitchReason(status: string, attempts: number, retries: number): string {
-  if (status === 'exhausted') return 'AUTO_SWITCH_EXHAUSTED';
-  if (status === 'blocked') return 'AUTO_SWITCH_APPROVAL_BLOCKED';
-  if (status === 'error' && attempts > retries) return 'AUTO_SWITCH_RETRY_EXCEEDED';
-  return 'AUTO_SWITCH_MANUAL_FALLBACK';
+function autoSwitchDecision(
+  finalPrimary: AdapterInvocationResult,
+  attempts: number,
+  retries: number,
+): { should_switch: boolean; reason: string } {
+  const status = finalPrimary.output.status;
+  if (status === 'exhausted') return { should_switch: true, reason: 'AUTO_SWITCH_EXHAUSTED' };
+  if (status === 'blocked' && finalPrimary.output.deterministic_error_type === 'approval_required') {
+    return { should_switch: true, reason: 'AUTO_SWITCH_APPROVAL_BLOCKED' };
+  }
+  if (status === 'error' && finalPrimary.output.deterministic_error_type === 'transient_failure' && attempts > retries) {
+    return { should_switch: true, reason: 'AUTO_SWITCH_RETRY_EXCEEDED' };
+  }
+  return { should_switch: false, reason: 'AUTO_SWITCH_NOT_REQUIRED' };
+}
+
+function toFlowStatus(terminalStatus: AdapterOutputEnvelope['status']): SwitchFlowResult['status'] {
+  if (terminalStatus === 'success') return 'success';
+  if (terminalStatus === 'blocked' || terminalStatus === 'needs_input') return 'blocked';
+  return 'error';
 }
 
 function toTimeline(eventId: string, run: AdapterInvocationResult): TimelineEvent {
