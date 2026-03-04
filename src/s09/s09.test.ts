@@ -156,6 +156,27 @@ test('AT-S09-02 Manual and auto switch flows in UI model', () => {
   });
 });
 
+test('blocks run until all sprint placeholders are resolved', () => {
+  let wizard = readyWizard('2026-03-04T00:00:00Z');
+  wizard = withSprintRequirements(
+    wizard,
+    JSON.stringify({
+      'Sprint Metadata': { 'Sprint ID': 'S09-gui-shell-setup-wizard-agent-switching' },
+      placeholders: ['[[PR_NUMBER]]', '[[SPRINT_BRANCH]]'],
+    }),
+  );
+  wizard = withSprintPlaceholderValues(wizard, { PR_NUMBER: '13' });
+  const partialEval = evaluateWizard(wizard);
+  assert.strictEqual(partialEval.promptRequired, true);
+  assert.strictEqual(partialEval.readyForRun, false);
+  assert.deepStrictEqual(partialEval.sprintScopedPlaceholders, ['SPRINT_BRANCH']);
+
+  const blocked = startRun(createShellState(wizard), '2026-03-04T00:00:40Z');
+  assert.strictEqual(blocked.run?.status, 'paused');
+  assert.strictEqual(blocked.run?.phase, 'wizard');
+  assert.match(blocked.run?.waitingReason ?? '', /Wizard prerequisites incomplete/);
+});
+
 test('AT-S09-03 Cancel + resume determinism', () => {
   let shell = createShellState(wizardWithNoSprintPlaceholders());
   shell = startRun(shell, '2026-03-04T00:02:00Z');
@@ -163,6 +184,8 @@ test('AT-S09-03 Cancel + resume determinism', () => {
   shell = pauseRun(shell, 'operator_pause', '2026-03-04T00:02:10Z');
   shell = setSafeMode(shell, true, '2026-03-04T00:02:11Z');
   shell = setSafeMode(shell, false, '2026-03-04T00:02:12Z');
+  assert.strictEqual(shell.run?.phase, 'agent_invocation');
+  assert.strictEqual(shell.run?.waitingReason, null);
 
   const cancelled = cancelRun(shell, 'operator_cancel', '2026-03-04T00:02:20Z');
   assert.strictEqual(cancelled.run?.status, 'cancelled');

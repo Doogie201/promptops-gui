@@ -83,7 +83,7 @@ export function evaluateWizard(state: WizardState): WizardEvaluation {
 
   const sprintScopedPlaceholders = state.parsedRequirements.placeholders.filter(isSprintScopedPlaceholder);
   const unresolvedSprintPlaceholders = sprintScopedPlaceholders.filter((key) => !state.sprintPlaceholderValues[key]);
-  const promptRequired = unresolvedSprintPlaceholders.length > 0 && !state.sprintPromptShown;
+  const promptRequired = unresolvedSprintPlaceholders.length > 0;
   const readyForRun = missingPersistentFields.length === 0 && !promptRequired;
 
   return {

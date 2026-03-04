@@ -95,7 +95,8 @@ export function cancelRun(state: ShellState, reason: string, nowIso: string): Sh
 
 export function setSafeMode(state: ShellState, enabled: boolean, nowIso: string): ShellState {
   if (!state.run) return state;
-  const nextPhase: RunPhase = enabled ? 'evidence' : state.run.phase;
+  const nextPhase: RunPhase = enabled ? 'evidence' : resolvePhaseAfterSafeMode(state.run);
+  const waitingReason = enabled ? 'Safe Mode: diagnostics-only' : null;
   const event = makeEvent(state.run.timeline.length + 1, enabled ? 'paused' : state.run.status, nextPhase, 'safe_mode_toggled', nowIso);
   return {
     ...state,
@@ -103,7 +104,7 @@ export function setSafeMode(state: ShellState, enabled: boolean, nowIso: string)
       ...state.run,
       safeMode: enabled,
       phase: nextPhase,
-      waitingReason: enabled ? 'Safe Mode: diagnostics-only' : state.run.waitingReason,
+      waitingReason,
       timeline: [...state.run.timeline, event],
     },
   };
@@ -330,4 +331,12 @@ function makeEvent(index: number, status: RunSession['status'], phase: RunPhase,
 function appendSequence(sequence: AdapterName[], next: AdapterName): AdapterName[] {
   if (sequence[sequence.length - 1] === next) return sequence;
   return [...sequence, next];
+}
+
+function resolvePhaseAfterSafeMode(run: RunSession): RunPhase {
+  for (let idx = run.timeline.length - 1; idx >= 0; idx -= 1) {
+    const phase = run.timeline[idx]?.phase;
+    if (phase && phase !== 'evidence') return phase;
+  }
+  return 'agent_invocation';
 }
