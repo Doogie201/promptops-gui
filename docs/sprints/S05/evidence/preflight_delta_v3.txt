@@ -1,0 +1,28 @@
+\n$ date
+Tue Mar  3 19:41:00 EST 2026
+EXIT_CODE=0
+\n$ git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui rev-parse --abbrev-ref HEAD
+sprint/S05-command-executor-receipts-engine
+EXIT_CODE=0
+\n$ git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui status --porcelain=v1 --branch
+## sprint/S05-command-executor-receipts-engine...origin/sprint/S05-command-executor-receipts-engine
+EXIT_CODE=0
+\n$ gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt
+[]
+EXIT_CODE=0
+\n$ git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui fsck --full
+dangling commit 8fa00d7e8b08dcd42f9496181defd8e483167bb5
+dangling blob a2b8ac0ffdadbee08914c165a9562a4cd886bbbe
+dangling blob 81d262db85f54d311f5de5dabe46bc2a5933c9eb
+dangling blob ff04fe88520e398fab3ebac64df59f18f8672ee3
+dangling tree 9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c
+EXIT_CODE=0
+\n$ git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui prune --dry-run
+0bac487c413baef023d86853c18854a8261e48e1 tree
+81d262db85f54d311f5de5dabe46bc2a5933c9eb blob
+8fa00d7e8b08dcd42f9496181defd8e483167bb5 commit
+9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c tree
+a2b8ac0ffdadbee08914c165a9562a4cd886bbbe blob
+fc7055dc01609065ad3b7549b1d15d2268e75701 blob
+ff04fe88520e398fab3ebac64df59f18f8672ee3 blob
+EXIT_CODE=0

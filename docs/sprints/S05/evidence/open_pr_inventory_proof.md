@@ -1,0 +1,5 @@
+# Open PR Inventory Proof
+
+`gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt`
+[]
+EXIT_CODE=0

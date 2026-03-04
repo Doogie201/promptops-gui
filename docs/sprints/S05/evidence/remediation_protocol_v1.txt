@@ -1,0 +1,387 @@
+[timestamp] 2026-03-03T19:36:37-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git worktree list --porcelain
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD 3c167d4853a4f051eb0cde211a818463ac739298
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD c95ab188c739f214f10f2bc52a27e652c3dfa724
+branch refs/heads/sprint/S05-command-executor-receipts-engine
+
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:43-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git rev-parse --git-dir
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/.git/worktrees/promptops-gui
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:44-0500
+[command] cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && git rev-parse --git-dir || true
+.git
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:44-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && find .git -name '._*' -print | sort
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:45-0500
+[command] cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && find .git -name '._*' -print | sort
+.git/._config
+.git/logs/refs/heads/sprint/._S05-command-executor-receipts-engine
+.git/logs/refs/remotes/origin/._main
+.git/logs/refs/remotes/origin/._sprint
+.git/logs/refs/remotes/origin/sprint/._S05-command-executor-receipts-engine
+.git/objects/._31
+.git/objects/._66
+.git/objects/._c7
+.git/objects/09/._abb73836c858e4392b543970d1677b809cc2fb
+.git/objects/0c/._4cc24808399bcb07fd3c3d55aeebc984e29a98
+.git/objects/0e/._ae824e521281c07d377a1baacb28397e2492ca
+.git/objects/17/._b45af782df2a3624a419358a63304309659e5e
+.git/objects/18/._4bd4d6341ee239363bb31d72e9366c077b9393
+.git/objects/18/._e5b534c802975b93e8aad8256b8abfdb6853e8
+.git/objects/1d/._ad502f47e90c98e63149fbb2cebbc9536338e6
+.git/objects/22/._b06305b27594bc8fe087f54e1d4e2eafe09ec0
+.git/objects/26/._b696429ddb9cb5d9242ae327bb1e546c95407d
+.git/objects/2b/._1dcb5c06f8c875d3a95dcc95f15932915a2e8c
+.git/objects/31/._ce9dc11225b93cab97161c0dd8137715d86191
+.git/objects/3a/._854a4ad56f7eec693798889b81f31c6cfaaa9b
+.git/objects/3f/._b2e17917f7b60896771e9b6cc2d5e078e59044
+.git/objects/40/._e2a382f069ac59319417e830a690e03c480628
+.git/objects/4c/._4cba1d9a4d133f7875b1361639959b8f963067
+.git/objects/5a/._f21aa309e737a9bf0186f20105efe8127c09d7
+.git/objects/5b/._4558c5b15f72fd11706b205e719c4c61f48220
+.git/objects/61/._526826482d47393adca268fadebdd3ee1bc0e0
+.git/objects/66/._eda6e0c7f04d53ca75324576efc3f06019c0f4
+.git/objects/68/._c974f614833fe2dcc93072845b9454800f8ce3
+.git/objects/6c/._1951ed0d7ac3a10c85afaf9b3196bf606d27d2
+.git/objects/6c/._e670280a8373aeef097f4ea345a64a2a6cefa7
+.git/objects/70/._34a6dd4fad71c67941cc17a5889d23c69ea9c7
+.git/objects/70/._ad71f0f1338acba8687eecb13e53ce15df6223
+.git/objects/75/._1dd8db5dd3274384c647864ede670736915f47
+.git/objects/7a/._9bb78ef8c341b52b2bd370a937d8dff0d76e0d
+.git/objects/7f/._058f167fc7f17a77d3f3f8203ca4c9198c214b
+.git/objects/7f/._9651cb03fc4672c581965e7b7904898fe51f51
+.git/objects/7f/._bb2533ec7622d2783dc4caf7a57c781dedd226
+.git/objects/81/._30d5bef5dc2f2f3b7426c7bcd146e638649fe3
+.git/objects/91/._5c690fb99a7841781cd245ef67821278ddfae4
+.git/objects/92/._6e1684b5ac35031e0ce378f04c276ede31868f
+.git/objects/97/._7d015d6b6c587172b9f29164d47f2f3ccceab6
+.git/objects/9a/._73c2ef8d97191a80e617ee7aaf148a5eeecefd
+.git/objects/9b/._d172663a7d6eafa9108cc3214b5e9e71cf01e6
+.git/objects/a2/._0055bafa9b6f583295afa16aedf8ec2e597a0f
+.git/objects/a4/._7219e7e48ef0857261968c86d68d7b562dc321
+.git/objects/a7/._d824bcd214d2aa024183e1e9a3b12517d5c536
+.git/objects/a8/._abcdd205c41e94e6374e165e6058471318fdd9
+.git/objects/af/._cb516f7ed28b3fddee213fe4579ec54b50e348
+.git/objects/b3/._04ad7acd397cbb36f0bb7cd02b08d0edd36101
+.git/objects/bd/._e4c525a9bcf2586ebb00f47d3d74f98c2ff3fb
+.git/objects/bf/._1a14d5741a118b247c4f281d416987fc4fa384
+.git/objects/c0/._881b5e2bb892377b19a506d7d6b8e26d514df3
+.git/objects/c0/._ce8035a75329e2b1601131b4aff0b8d72f5dcf
+.git/objects/c1/._783d2ed7434c328a4186c5b14df37984d1ae37
+.git/objects/c2/._58d41b1d49c4520a8d5575e560cf895206e4c4
+.git/objects/c3/._be1afd88b90549826c1cc9e4bbcbf7e9766128
+.git/objects/c4/._ea0b45ed7d7a2ae32c8bb132ff5ef83e0da14f
+.git/objects/c6/._7f262d875ec51928259c17382df17a49deb14b
+.git/objects/c7/._28cf92604c40c81301856e75734e7e7ceb53a5
+.git/objects/c9/._5ab188c739f214f10f2bc52a27e652c3dfa724
+.git/objects/c9/._9e9ffa9ec3bfb9a72c9bcb965ebd312f508954
+.git/objects/cb/._139fb1fdf709ef4bb5e870ebeadd17a8f222a9
+.git/objects/d3/._629cfb69c92831cf1a78f6f83565fa32c01c40
+.git/objects/d6/._39485e8abd35a6b1ef1f1e40a972111dc9eb52
+.git/objects/db/._0fc477ef85b09f337d4b384ed4fbb60d49233e
+.git/objects/dc/._99db4588bc774a96dd71afa68f980c85c05850
+.git/objects/df/._a0d060a0f12ce0c6694ed9f2d3de5ec665b77e
+.git/objects/df/._f627313bf2cbf6e37d3fd786e58dea7b3f6874
+.git/objects/e1/._a9c6bd9c376fe51810c795a320b333548d7973
+.git/objects/e4/._43b385fbde9447fa0321eaa48dd0ae27871b35
+.git/objects/e4/._85c393f221b04f67be074c047572683d2847fc
+.git/objects/e4/._ac7fd939ce05b903ee264a7057142eb7a3a55d
+.git/objects/e8/._ff571a9fe897b73f46dcc50a9235608ab53f47
+.git/objects/f2/._ca76b8e535afa150b4e2173556e744ce35c379
+.git/objects/f8/._88b5f36e98da108e9e9eb2ccc8dbf02f410757
+.git/objects/fc/._518a874112fa0b04d2ef738c1018119e147ec4
+.git/refs/heads/sprint/._S05-command-executor-receipts-engine
+.git/refs/remotes/origin/._main
+.git/refs/remotes/origin/._sprint
+.git/refs/remotes/origin/sprint/._S05-command-executor-receipts-engine
+.git/worktrees/promptops-gui/._COMMIT_EDITMSG
+.git/worktrees/promptops-gui/._FETCH_HEAD
+.git/worktrees/promptops-gui/._HEAD
+.git/worktrees/promptops-gui/._ORIG_HEAD
+.git/worktrees/promptops-gui/._index
+.git/worktrees/promptops-gui/logs/._HEAD
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:50-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && find .git -name '._*' -type f -print > '/tmp/promptops/S05/remediation/primary_candidates.txt'
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:51-0500
+[command] cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && find .git -name '._*' -type f -print > '/tmp/promptops/S05/remediation/s04_candidates.txt'
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:52-0500
+[command] quarantine primary ._* with sha256 mapping
+[result] primary_quarantined_count=0
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:52-0500
+[command] quarantine s04 ._* with sha256 mapping
+[result] s04_quarantined_count=0
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:55-0500
+[command] sh -lc 'ls -la /tmp/promptops/S05/remediation/quarantine_primary_git || true'
+total 0
+drwxr-xr-x@ 2 marcussmith  wheel   64 Mar  3 19:36 .
+drwxr-xr-x@ 7 marcussmith  wheel  224 Mar  3 19:36 ..
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:55-0500
+[command] sh -lc 'ls -la /tmp/promptops/S05/remediation/quarantine_s04_git || true'
+total 688
+drwxr-xr-x@ 88 marcussmith  wheel  2816 Mar  3 19:36 .
+drwxr-xr-x@  7 marcussmith  wheel   224 Mar  3 19:36 ..
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_._config
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_logs_refs_heads_sprint_._S05-command-executor-receipts-engine
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_logs_refs_remotes_origin_._main
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_logs_refs_remotes_origin_._sprint
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_logs_refs_remotes_origin_sprint_._S05-command-executor-receipts-engine
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_._31
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_._66
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:03 .git_objects_._c7
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_09_._abb73836c858e4392b543970d1677b809cc2fb
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_objects_0c_._4cc24808399bcb07fd3c3d55aeebc984e29a98
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_0e_._ae824e521281c07d377a1baacb28397e2492ca
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:03 .git_objects_17_._b45af782df2a3624a419358a63304309659e5e
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_18_._4bd4d6341ee239363bb31d72e9366c077b9393
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:05 .git_objects_18_._e5b534c802975b93e8aad8256b8abfdb6853e8
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_1d_._ad502f47e90c98e63149fbb2cebbc9536338e6
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_22_._b06305b27594bc8fe087f54e1d4e2eafe09ec0
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_26_._b696429ddb9cb5d9242ae327bb1e546c95407d
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_2b_._1dcb5c06f8c875d3a95dcc95f15932915a2e8c
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_31_._ce9dc11225b93cab97161c0dd8137715d86191
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_3a_._854a4ad56f7eec693798889b81f31c6cfaaa9b
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_3f_._b2e17917f7b60896771e9b6cc2d5e078e59044
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_40_._e2a382f069ac59319417e830a690e03c480628
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_4c_._4cba1d9a4d133f7875b1361639959b8f963067
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_5a_._f21aa309e737a9bf0186f20105efe8127c09d7
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:05 .git_objects_5b_._4558c5b15f72fd11706b205e719c4c61f48220
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_61_._526826482d47393adca268fadebdd3ee1bc0e0
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_66_._eda6e0c7f04d53ca75324576efc3f06019c0f4
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_68_._c974f614833fe2dcc93072845b9454800f8ce3
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:05 .git_objects_6c_._1951ed0d7ac3a10c85afaf9b3196bf606d27d2
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_6c_._e670280a8373aeef097f4ea345a64a2a6cefa7
+-rwx------@  1 marcussmith  staff  4096 Mar  3 14:55 .git_objects_70_._34a6dd4fad71c67941cc17a5889d23c69ea9c7
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_70_._ad71f0f1338acba8687eecb13e53ce15df6223
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_75_._1dd8db5dd3274384c647864ede670736915f47
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_7a_._9bb78ef8c341b52b2bd370a937d8dff0d76e0d
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_7f_._058f167fc7f17a77d3f3f8203ca4c9198c214b
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_7f_._9651cb03fc4672c581965e7b7904898fe51f51
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_7f_._bb2533ec7622d2783dc4caf7a57c781dedd226
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_81_._30d5bef5dc2f2f3b7426c7bcd146e638649fe3
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_91_._5c690fb99a7841781cd245ef67821278ddfae4
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_92_._6e1684b5ac35031e0ce378f04c276ede31868f
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_objects_97_._7d015d6b6c587172b9f29164d47f2f3ccceab6
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_9a_._73c2ef8d97191a80e617ee7aaf148a5eeecefd
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:03 .git_objects_9b_._d172663a7d6eafa9108cc3214b5e9e71cf01e6
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_a2_._0055bafa9b6f583295afa16aedf8ec2e597a0f
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_a4_._7219e7e48ef0857261968c86d68d7b562dc321
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_a7_._d824bcd214d2aa024183e1e9a3b12517d5c536
+-rwx------@  1 marcussmith  staff  4096 Mar  3 14:55 .git_objects_a8_._abcdd205c41e94e6374e165e6058471318fdd9
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_af_._cb516f7ed28b3fddee213fe4579ec54b50e348
+-rwx------@  1 marcussmith  staff  4096 Mar  3 14:55 .git_objects_b3_._04ad7acd397cbb36f0bb7cd02b08d0edd36101
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_bd_._e4c525a9bcf2586ebb00f47d3d74f98c2ff3fb
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_bf_._1a14d5741a118b247c4f281d416987fc4fa384
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c0_._881b5e2bb892377b19a506d7d6b8e26d514df3
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c0_._ce8035a75329e2b1601131b4aff0b8d72f5dcf
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c1_._783d2ed7434c328a4186c5b14df37984d1ae37
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c2_._58d41b1d49c4520a8d5575e560cf895206e4c4
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c3_._be1afd88b90549826c1cc9e4bbcbf7e9766128
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c4_._ea0b45ed7d7a2ae32c8bb132ff5ef83e0da14f
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c6_._7f262d875ec51928259c17382df17a49deb14b
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:03 .git_objects_c7_._28cf92604c40c81301856e75734e7e7ceb53a5
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_objects_c9_._5ab188c739f214f10f2bc52a27e652c3dfa724
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_c9_._9e9ffa9ec3bfb9a72c9bcb965ebd312f508954
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_cb_._139fb1fdf709ef4bb5e870ebeadd17a8f222a9
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_d3_._629cfb69c92831cf1a78f6f83565fa32c01c40
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_d6_._39485e8abd35a6b1ef1f1e40a972111dc9eb52
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_db_._0fc477ef85b09f337d4b384ed4fbb60d49233e
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_dc_._99db4588bc774a96dd71afa68f980c85c05850
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_df_._a0d060a0f12ce0c6694ed9f2d3de5ec665b77e
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:05 .git_objects_df_._f627313bf2cbf6e37d3fd786e58dea7b3f6874
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_e1_._a9c6bd9c376fe51810c795a320b333548d7973
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_e4_._43b385fbde9447fa0321eaa48dd0ae27871b35
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_e4_._85c393f221b04f67be074c047572683d2847fc
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:03 .git_objects_e4_._ac7fd939ce05b903ee264a7057142eb7a3a55d
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:03 .git_objects_e8_._ff571a9fe897b73f46dcc50a9235608ab53f47
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_f2_._ca76b8e535afa150b4e2173556e744ce35c379
+-rwx------@  1 marcussmith  staff  4096 Mar  3 18:05 .git_objects_f8_._88b5f36e98da108e9e9eb2ccc8dbf02f410757
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_objects_fc_._518a874112fa0b04d2ef738c1018119e147ec4
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_refs_heads_sprint_._S05-command-executor-receipts-engine
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_refs_remotes_origin_._main
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_refs_remotes_origin_._sprint
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_refs_remotes_origin_sprint_._S05-command-executor-receipts-engine
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_worktrees_promptops-gui_._COMMIT_EDITMSG
+-rwx------@  1 marcussmith  staff  4096 Mar  3 14:55 .git_worktrees_promptops-gui_._FETCH_HEAD
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:20 .git_worktrees_promptops-gui_._HEAD
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_worktrees_promptops-gui_._ORIG_HEAD
+-rwx------@  1 marcussmith  staff  4096 Mar  3 19:04 .git_worktrees_promptops-gui_._index
+-rwx------@  1 marcussmith  staff  4096 Mar  3 17:28 .git_worktrees_promptops-gui_logs_._HEAD
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:56-0500
+[command] sh -lc 'find /tmp/promptops/S05/remediation -type f -maxdepth 2 -print0 | xargs -0 -I{} shasum -a 256 "{}"'
+07e62659f188520d743577a5b9a0696abe7a17ec6c143cb329f3a34e406640a7  /tmp/promptops/S05/remediation/s04_candidates.txt
+514a0bf9304d1a9399a0d1e3ef0404f98389852a8591deac69f9c38b3ff5e98f  /tmp/promptops/S05/remediation/quarantine_s04_manifest.tsv
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_66_._eda6e0c7f04d53ca75324576efc3f06019c0f4
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_refs_remotes_origin_._main
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_70_._ad71f0f1338acba8687eecb13e53ce15df6223
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_3a_._854a4ad56f7eec693798889b81f31c6cfaaa9b
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_e1_._a9c6bd9c376fe51810c795a320b333548d7973
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_0e_._ae824e521281c07d377a1baacb28397e2492ca
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_refs_remotes_origin_._sprint
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_e4_._85c393f221b04f67be074c047572683d2847fc
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_7a_._9bb78ef8c341b52b2bd370a937d8dff0d76e0d
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_worktrees_promptops-gui_._FETCH_HEAD
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_81_._30d5bef5dc2f2f3b7426c7bcd146e638649fe3
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_31_._ce9dc11225b93cab97161c0dd8137715d86191
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_dc_._99db4588bc774a96dd71afa68f980c85c05850
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_._31
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_logs_refs_remotes_origin_._sprint
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_26_._b696429ddb9cb5d9242ae327bb1e546c95407d
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_db_._0fc477ef85b09f337d4b384ed4fbb60d49233e
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_._config
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_68_._c974f614833fe2dcc93072845b9454800f8ce3
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_worktrees_promptops-gui_logs_._HEAD
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c0_._ce8035a75329e2b1601131b4aff0b8d72f5dcf
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c7_._28cf92604c40c81301856e75734e7e7ceb53a5
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_a2_._0055bafa9b6f583295afa16aedf8ec2e597a0f
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_e4_._43b385fbde9447fa0321eaa48dd0ae27871b35
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_70_._34a6dd4fad71c67941cc17a5889d23c69ea9c7
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_3f_._b2e17917f7b60896771e9b6cc2d5e078e59044
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_40_._e2a382f069ac59319417e830a690e03c480628
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_6c_._1951ed0d7ac3a10c85afaf9b3196bf606d27d2
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_1d_._ad502f47e90c98e63149fbb2cebbc9536338e6
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c4_._ea0b45ed7d7a2ae32c8bb132ff5ef83e0da14f
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_e8_._ff571a9fe897b73f46dcc50a9235608ab53f47
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_df_._f627313bf2cbf6e37d3fd786e58dea7b3f6874
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_92_._6e1684b5ac35031e0ce378f04c276ede31868f
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_df_._a0d060a0f12ce0c6694ed9f2d3de5ec665b77e
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_61_._526826482d47393adca268fadebdd3ee1bc0e0
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_logs_refs_remotes_origin_._main
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_refs_remotes_origin_sprint_._S05-command-executor-receipts-engine
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_logs_refs_remotes_origin_sprint_._S05-command-executor-receipts-engine
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_logs_refs_heads_sprint_._S05-command-executor-receipts-engine
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c6_._7f262d875ec51928259c17382df17a49deb14b
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_09_._abb73836c858e4392b543970d1677b809cc2fb
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_5b_._4558c5b15f72fd11706b205e719c4c61f48220
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_18_._4bd4d6341ee239363bb31d72e9366c077b9393
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_b3_._04ad7acd397cbb36f0bb7cd02b08d0edd36101
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_bd_._e4c525a9bcf2586ebb00f47d3d74f98c2ff3fb
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_4c_._4cba1d9a4d133f7875b1361639959b8f963067
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_worktrees_promptops-gui_._COMMIT_EDITMSG
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_refs_heads_sprint_._S05-command-executor-receipts-engine
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_bf_._1a14d5741a118b247c4f281d416987fc4fa384
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_2b_._1dcb5c06f8c875d3a95dcc95f15932915a2e8c
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c9_._9e9ffa9ec3bfb9a72c9bcb965ebd312f508954
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c9_._5ab188c739f214f10f2bc52a27e652c3dfa724
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_worktrees_promptops-gui_._ORIG_HEAD
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_5a_._f21aa309e737a9bf0186f20105efe8127c09d7
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_7f_._bb2533ec7622d2783dc4caf7a57c781dedd226
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_9a_._73c2ef8d97191a80e617ee7aaf148a5eeecefd
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_a8_._abcdd205c41e94e6374e165e6058471318fdd9
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_d6_._39485e8abd35a6b1ef1f1e40a972111dc9eb52
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_cb_._139fb1fdf709ef4bb5e870ebeadd17a8f222a9
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_a4_._7219e7e48ef0857261968c86d68d7b562dc321
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_7f_._9651cb03fc4672c581965e7b7904898fe51f51
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_9b_._d172663a7d6eafa9108cc3214b5e9e71cf01e6
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_._66
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_17_._b45af782df2a3624a419358a63304309659e5e
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_7f_._058f167fc7f17a77d3f3f8203ca4c9198c214b
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c2_._58d41b1d49c4520a8d5575e560cf895206e4c4
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_97_._7d015d6b6c587172b9f29164d47f2f3ccceab6
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_0c_._4cc24808399bcb07fd3c3d55aeebc984e29a98
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_e4_._ac7fd939ce05b903ee264a7057142eb7a3a55d
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_22_._b06305b27594bc8fe087f54e1d4e2eafe09ec0
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_fc_._518a874112fa0b04d2ef738c1018119e147ec4
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_af_._cb516f7ed28b3fddee213fe4579ec54b50e348
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_f2_._ca76b8e535afa150b4e2173556e744ce35c379
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_worktrees_promptops-gui_._HEAD
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_f8_._88b5f36e98da108e9e9eb2ccc8dbf02f410757
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c0_._881b5e2bb892377b19a506d7d6b8e26d514df3
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_6c_._e670280a8373aeef097f4ea345a64a2a6cefa7
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c3_._be1afd88b90549826c1cc9e4bbcbf7e9766128
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_a7_._d824bcd214d2aa024183e1e9a3b12517d5c536
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_worktrees_promptops-gui_._index
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_75_._1dd8db5dd3274384c647864ede670736915f47
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_d3_._629cfb69c92831cf1a78f6f83565fa32c01c40
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_91_._5c690fb99a7841781cd245ef67821278ddfae4
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_c1_._783d2ed7434c328a4186c5b14df37984d1ae37
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_18_._e5b534c802975b93e8aad8256b8abfdb6853e8
+f1e8641bf5ef4e7b54f62554e8538282f6f9eb11ecf1a1129379b5a8e70b88b7  /tmp/promptops/S05/remediation/quarantine_s04_git/.git_objects_._c7
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /tmp/promptops/S05/remediation/primary_candidates.txt
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:58-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && find .git -name '._*' -type f -print > '/tmp/promptops/S05/remediation/primary_to_delete.txt'
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:58-0500
+[command] cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && find .git -name '._*' -type f -print > '/tmp/promptops/S05/remediation/s04_to_delete.txt'
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:36:59-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && (find .git -name '._*' -type f -print0 | xargs -0 -I{} rm -f "{}")
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:00-0500
+[command] cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && (find .git -name '._*' -type f -print0 | xargs -0 -I{} rm -f "{}")
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:01-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git fsck --full
+dangling commit 8fa00d7e8b08dcd42f9496181defd8e483167bb5
+dangling blob a2b8ac0ffdadbee08914c165a9562a4cd886bbbe
+dangling blob 81d262db85f54d311f5de5dabe46bc2a5933c9eb
+dangling blob ff04fe88520e398fab3ebac64df59f18f8672ee3
+dangling tree 9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:11-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git prune --dry-run
+0bac487c413baef023d86853c18854a8261e48e1 tree
+81d262db85f54d311f5de5dabe46bc2a5933c9eb blob
+8fa00d7e8b08dcd42f9496181defd8e483167bb5 commit
+9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c tree
+a2b8ac0ffdadbee08914c165a9562a4cd886bbbe blob
+fc7055dc01609065ad3b7549b1d15d2268e75701 blob
+ff04fe88520e398fab3ebac64df59f18f8672ee3 blob
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:12-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && find .git -name '._*' -print | sort
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:13-0500
+[command] cd /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 && find .git -name '._*' -print | sort
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:13-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git status --porcelain=v1 --branch
+## sprint/S05-command-executor-receipts-engine...origin/sprint/S05-command-executor-receipts-engine
+[exit_code] 0
+
+[timestamp] 2026-03-03T19:37:14-0500
+[command] cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git worktree list --porcelain
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD 3c167d4853a4f051eb0cde211a818463ac739298
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD c95ab188c739f214f10f2bc52a27e652c3dfa724
+branch refs/heads/sprint/S05-command-executor-receipts-engine
+
+[exit_code] 0
