@@ -1,0 +1,18 @@
+CMD: cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git worktree list --porcelain
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD 3c167d4853a4f051eb0cde211a818463ac739298
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD 9f65ec50289d130d6e61fc37f5046a040d2c23a5
+branch refs/heads/sprint/S07-github-pr-protocol-automation
+
+EXIT_CODE:0
+
+CMD: cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git rev-parse --git-dir
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/.git/worktrees/promptops-gui
+EXIT_CODE:0
+
+CMD: cd /Volumes/SharedDrive/Dev/Projects/promptops-gui && git rev-parse --absolute-git-dir
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/.git/worktrees/promptops-gui
+EXIT_CODE:0

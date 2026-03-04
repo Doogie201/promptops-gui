@@ -1,14 +1,14 @@
 CMD: node --test --experimental-transform-types --test-name-pattern 'AT-S07-01' src/s07/open_pr_protocol.test.ts
 TAP version 13
-# (node:52793) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:69178) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:52793) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/src/s07/open_pr_protocol.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:69178) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/src/s07/open_pr_protocol.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: AT-S07-01 stops on unrelated open PR inventory
 ok 1 - AT-S07-01 stops on unrelated open PR inventory
   ---
-  duration_ms: 6.5935
+  duration_ms: 5.9005
   type: 'test'
   ...
 1..1
@@ -19,5 +19,5 @@ ok 1 - AT-S07-01 stops on unrelated open PR inventory
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 178.231417
+# duration_ms 163.213833
 EXIT_CODE:0

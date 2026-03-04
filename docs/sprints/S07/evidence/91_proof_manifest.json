@@ -1,516 +1,306 @@
 {
-  "bundle": "/tmp/promptops/S07/20260304-062146-37340",
-  "generated_at": "2026-03-04T06:47:45.761057Z",
+  "root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S07/evidence",
+  "generated_at_utc": "2026-03-04T15:45:46Z",
   "files": [
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/00_context.txt",
-      "sha256": "0f6c0aca8dc0b7668f91b2fe702386dc58f792bca10b3e0b3b2cdcea795031b4",
-      "bytes": 157
+      "path": "02_primary_worktree_preflight_after_remediation.txt",
+      "sha256": "9eabb8d7246dc522921c0abe9bb387a3cf3a73d103467952fd76502773e4f582",
+      "bytes": 1603
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/00_context_refresh.txt",
-      "sha256": "075031a05d44508e522cc783c7b0df5375e6d2c6e8d78946262f48dbbb54d67b",
-      "bytes": 76
+      "path": "03_open_pr_inventory.json",
+      "sha256": "1e74ee3b0281883085bbc26abb4ac833fd09af2f004b5587bcbf66b32f190c67",
+      "bytes": 164
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/02_primary_worktree_preflight_after_remediation.txt",
-      "sha256": "ae243a93c3c47ea7e40bc2e343ee4d2c9271c395bf47bb299cd24c8c47419c01",
-      "bytes": 1604
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/03_open_pr_inventory.json",
-      "sha256": "63abb62d7835efa41958b43d3e97a8ddb7eeb11ab7c7b0a38b5bf6c65f421e2c",
-      "bytes": 133
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/03_repo_preflight_after_remediation.txt",
+      "path": "03_repo_preflight_after_remediation.txt",
       "sha256": "6b0ffd87a88335be699961eee2e8facd18680839cb5836103b209caaec95237a",
       "bytes": 1105
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/04_hardstop_clearance_receipts.md",
+      "path": "04_hardstop_clearance_receipts.md",
       "sha256": "f3ce370f4c0c1605f3b212217de185e7bf9e53b552860ac52393a653e460c048",
       "bytes": 739
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/04_primary_dirty_clearance.txt",
-      "sha256": "f8028eb4b9995d1be4447b7f4ad92a08cce3e73d8f134e063a22dd547add829b",
-      "bytes": 637
+      "path": "05_docs_sync_proof.md",
+      "sha256": "4e899325010490f7482ab49c6253aa8e0b43552a716bd4524be7d7f0876171a9",
+      "bytes": 1880
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/05_docs_sync_proof.md",
-      "sha256": "b20684a26cf05a321852bbf53790d55e1c830dcf9fd976bb204ca00a96859ce8",
-      "bytes": 1881
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/06_scope_proof.txt",
+      "path": "06_scope_proof.txt",
       "sha256": "02b208421e6bcb87368cdaa5fbb1159a9ac78d8cda30df9c7976d742e8a2ce5b",
       "bytes": 1785
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_gates_sh.txt",
-      "sha256": "b16c1a8916b9074dae39925bc978e4572e9e525f55cfa5a23d853ba8304a6b0c",
-      "bytes": 8292
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_gates_sh_after.txt",
+      "path": "07_gates_gates_sh_after.txt",
       "sha256": "3ee85f3826e96108205b0f19d6b2e87bfcb888f462358c977cc8413b9b5ed0e4",
       "bytes": 7437
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_gates_sh_final.txt",
+      "path": "07_gates_gates_sh_final.txt",
       "sha256": "9966e71397cf9261808c2f746a1a0e1d29ae4cdded8025147562e441f7128766",
       "bytes": 7429
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_index.txt",
-      "sha256": "f8b9c15a2ec3d9160db94b162903db5fa8c6617d196c6b21ce4badaac26ce93b",
-      "bytes": 153
+      "path": "07_gates_gates_sh_final2.txt",
+      "sha256": "b6ba708e21a70cf47af6bcd77a154b995dfa2d17f91a5d8252f6c058b555799e",
+      "bytes": 7434
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_verify.txt",
-      "sha256": "3864db72fd4ab659be645f4e29d740a100f324d589ac1b63131f223239feb255",
-      "bytes": 8242
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_verify_after.txt",
+      "path": "07_gates_verify_after.txt",
       "sha256": "d4605cd8486e195ef56ebe2c5c08d185d7aa11f7eecc6f83322154c39a09201b",
       "bytes": 7361
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_gates_verify_final.txt",
+      "path": "07_gates_verify_final.txt",
       "sha256": "79556a47d1d85b88985c576cd63ccd314b11c49f4ddf365875ac4ac610f276e6",
       "bytes": 7364
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/07_maintainability_receipts.txt",
+      "path": "07_gates_verify_final2.txt",
+      "sha256": "22071e935897f7c45b2a55d4ab1d5c4e5ce277cdd44477b80db2d16dfba9fedb",
+      "bytes": 7370
+    },
+    {
+      "path": "07_maintainability_receipts.txt",
       "sha256": "d860670b9af2d2e36bc92658339dd95b623402cf2e3c5d43ca7e48a7914455af",
       "bytes": 2863
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/10_appledouble_prescan.txt",
-      "sha256": "5a6b8c2463220ec44e55b6582a5af86195470f89d404c8fe744f3d3ac16964b5",
-      "bytes": 3857
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/10_stoplight_greps.md",
+      "path": "10_stoplight_greps.md",
       "sha256": "a63dc95774f98f8a87186bf38afd39a502d569b1dac4bca65fbf5b37917ca904",
       "bytes": 486
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/11_appledouble_prescan_count.txt",
-      "sha256": "c4cb073cfcad188925f4c5159ef5f0d53b201d608071539e77663794518bce76",
-      "bytes": 77
+      "path": "11_pr_readiness_snapshot_a.json",
+      "sha256": "6696fdf216c33df41eaee60522dd23cbb61db336948e9f6a92a591a6116f1b0e",
+      "bytes": 4661
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/12_delete_execution.txt",
-      "sha256": "50ef75e89d60a71da832d04033199387697797d614e9bafc94499818b7e89d7a",
-      "bytes": 9652
+      "path": "11_snapshot_a_time.txt",
+      "sha256": "e812f3633304104cc67f022698d73afb37b0f790417194616c0877fac1d51e37",
+      "bytes": 21
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/13_delete_summary.txt",
-      "sha256": "7b4ee1f705be79caf072464088ac8ff6fed19375a92551a62299af34ffa5b13c",
-      "bytes": 18
+      "path": "12_pr_threads_a.json",
+      "sha256": "9356949f2d98d0388a8d55d3bf20b5a56bcae8f6ccdf0d2766edf5538c31117f",
+      "bytes": 886
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/14_appledouble_postscan.txt",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0
+      "path": "13_pr_readiness_snapshot_b.json",
+      "sha256": "6696fdf216c33df41eaee60522dd23cbb61db336948e9f6a92a591a6116f1b0e",
+      "bytes": 4661
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/15_appledouble_postscan_count.txt",
-      "sha256": "c6362b278371c90b8653babb2fc64ef924b74c62cd48b41a8bc71809be10c0e3",
-      "bytes": 78
+      "path": "13_snapshot_b_time.txt",
+      "sha256": "7ab58172d5ac2c83c631616d38f1e3ea50528b289f1f8f7651461392b2e6606c",
+      "bytes": 21
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/16_primary_object_health_post.txt",
-      "sha256": "e0a5a14c0f0ba24823f4e6dff9c716819ce6bd31e0a10e92f2e80a1230c5a12c",
-      "bytes": 1102
+      "path": "14_pr_threads_b.json",
+      "sha256": "9356949f2d98d0388a8d55d3bf20b5a56bcae8f6ccdf0d2766edf5538c31117f",
+      "bytes": 886
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/17_worktrees.txt",
-      "sha256": "1dc3686fca83fc90a01c96a0a63d1daa221844b1c499eb7b9bdbe7c722f606e3",
-      "bytes": 335
+      "path": "15_ci_green_stability_eval.md",
+      "sha256": "219436e386c666b9471b052a02cbcf7f8d20fb0b10fcd57e6e24e8ed14aae714",
+      "bytes": 515
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/18_fsck_post.txt",
-      "sha256": "5d1b135b78e64d38f18b47a3da766e95f8030e64f9900d9dbe8c6f70450b30f3",
-      "bytes": 770
+      "path": "42_graphql_before_11.json",
+      "sha256": "680ad3eb0dd3b8834882bf9bc04f8a45c22c929f7017e858494ce77130c3cc53",
+      "bytes": 2476
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/19_appledouble_prescan_second.txt",
-      "sha256": "de4353d1457961dae439571985612df0daa975538696f2061ffa1ec9eaecd29a",
-      "bytes": 1090
+      "path": "43_comment_post_receipt_11.json",
+      "sha256": "41d641e3d9f243b4079c4efefac43b8aa1d5882cfe1c4e50fb11e4aac0cb8153",
+      "bytes": 3137
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/20_appledouble_prescan_second_count.txt",
-      "sha256": "fbc969bb677b4acff7d253e2513d8f29b56998a9936c450b842b7251f950a9ab",
-      "bytes": 84
+      "path": "43_graphql_mutations_11.jsonl",
+      "sha256": "610c5576a1bb40efda93ec72b3150508f95a74f12c097143371fd26cd57892e4",
+      "bytes": 279
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/21_delete_execution_second.txt",
-      "sha256": "40cf170a5655dea25c1be176d3b2267ee7e314ef9183c724775735bb802375a5",
-      "bytes": 2444
+      "path": "44_graphql_after_11.json",
+      "sha256": "f8703950f7889f40ead5a775cb86855b3505ec4d34108736ba9553211a538ec1",
+      "bytes": 819
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/22_delete_summary_second.txt",
-      "sha256": "54e5117d40bbd707245167a6e55cbf788c3c8f82c676bb4793f4ef29c1f3cfaf",
-      "bytes": 18
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/23_appledouble_postscan_second.txt",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/24_appledouble_postscan_second_count.txt",
-      "sha256": "394f6069bfc5917bab07b6842aea19b357f7d6c6371e438826aa8fbb8d5b2df0",
-      "bytes": 85
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/25_prune_after_second.txt",
-      "sha256": "c306ac3ea4ae6dbd1bb30f57753c29166aeba189cf328965cbeaa9b0501a616b",
-      "bytes": 324
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/26_fsck_after_second.txt",
-      "sha256": "6505a5211859c2b09f238765265975d5e281694c4e8c32765bedc4f42ca7d1e5",
-      "bytes": 277
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/30_live_env_result_path.txt",
-      "sha256": "11d5c7d764edcc7f0d42818c5d3aea08310cbdc2d39d5d794556b4432f0ab269",
-      "bytes": 75
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/30_live_env_result_path_refresh.txt",
-      "sha256": "d4d8fe90a3cbb3b0c019d104a82d0bd889d1f9c6dc4c78ad023524484f082c47",
-      "bytes": 664
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/31_live_git_result_path.txt",
-      "sha256": "2edb959674ca98ab13622d5a14e94137ca06f5e08f9a041856d18e8f24f134c6",
-      "bytes": 75
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/31_live_git_result_path_refresh.txt",
-      "sha256": "af9eea030023b7d7750b0ed8dab8f21eba86ee1a305dbf903e7d09200e37a9a7",
-      "bytes": 664
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/90_operator_briefing.md",
+      "path": "90_operator_briefing.md",
       "sha256": "dbb353aae7becf01de3cd63b1a59321c338851c0cbb0cad749598bbbbf1ecdb8",
       "bytes": 1259
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/92_cleanup_receipts.txt",
+      "path": "92_cleanup_receipts.txt",
       "sha256": "4eeaa36a70bd738d38dae0b49d89e911ec07bda4a85dc080dbd93c0c7d5f9dab",
       "bytes": 7830
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-01.md",
+      "path": "at/AT-S07-01.md",
       "sha256": "bc66bce4238ca0dd7569b48d8c786e9441f3b9be587bffc8afcb4db722266fe4",
       "bytes": 174
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-01.tap",
-      "sha256": "e66a878a841553dc3115c82f34b5709a94b2ac6c8b9364ff11a52a0ae321cbc5",
+      "path": "at/AT-S07-01.tap",
+      "sha256": "21a6f4905e764a5fa05ebd2292c075214414b243316e1a04763ada42a4c50f1d",
       "bytes": 997
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-02.md",
+      "path": "at/AT-S07-02.md",
       "sha256": "9753a8bdc64a690ed300b5050fe44e25e6feaf5ef08ea9a472628394beb7a679",
       "bytes": 187
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-02.tap",
-      "sha256": "c071199795145682327cbef8261783eb9be6171b246dd9c8c601801bc9c8d37a",
-      "bytes": 1025
+      "path": "at/AT-S07-02.tap",
+      "sha256": "23b49eebd42ed52c1699465dde27bc966a5724bb0d49dd649683e0eee5ba3dcf",
+      "bytes": 1023
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-03.md",
+      "path": "at/AT-S07-03.md",
       "sha256": "a030c714cbe69020f778d3ecea5c4cc2d2a9a5f40d6e4619dc60f34941c99670",
       "bytes": 193
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-03.tap",
-      "sha256": "3a4872ecbd1900d40d908259ded0f155323f5e6575a0bc6234512c8b42b79e1d",
-      "bytes": 1037
+      "path": "at/AT-S07-03.tap",
+      "sha256": "396c3dd44cb0e80e9ab598db0eeced5cc8b3e9f40dffbfa22d46cdc7c2189192",
+      "bytes": 1034
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-tests.exit",
-      "sha256": "bde294368bfed77c2cddf8cec271d398aee9cdbab3b26e1059281bd33adb0120",
-      "bytes": 12
+      "path": "live/s07_protocol_result_env.json",
+      "sha256": "2521fd30673291ae81a799677f8ab829fd55f291d03fc98b114ab86d6815df80",
+      "bytes": 13863
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-tests.summary",
-      "sha256": "d9a598dee254275e547299c415d91eb012cdee45431307b337ba3173c72827b8",
-      "bytes": 416
+      "path": "live/s07_protocol_result_git.json",
+      "sha256": "beba9381c63ef6d49788277b2c12c594ab7ed413fee74349dc12385c4d7783c2",
+      "bytes": 13863
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/at/AT-S07-tests.tap",
-      "sha256": "77d3596310cdf0145302b910797f0037d52199e399c03b7d2b0657be0f02e2b8",
-      "bytes": 1262
+      "path": "worktree_repair/00_context.txt",
+      "sha256": "cdc97981d26639c3889f29849f114111da9f7bf5b15eec70019063666f7db952",
+      "bytes": 222
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/00_pr_list.json",
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-      "bytes": 3
+      "path": "worktree_repair/01_x9_failing_state.txt",
+      "sha256": "5f9f86ac811b4e5f870ddb64865662116d4f5b02493758237d9a945546ae0e9b",
+      "bytes": 1315
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/gh_inventory.receipt.json",
-      "sha256": "5de617b62ec588b03571d065ccf40f339153b0115ecc2ecad3305d46700a6f89",
-      "bytes": 939
+      "path": "worktree_repair/02_control_worktree_map.txt",
+      "sha256": "ac0895b89de666c1e6efd7955766fd98a1ebfea4c5909abbe1f894c843f964ad",
+      "bytes": 801
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_ahead_behind.receipt.json",
-      "sha256": "cd0934299496e7e14496605fe362a696b538e9ff7944fd218994749418cb12a1",
-      "bytes": 853
+      "path": "worktree_repair/03_repair_and_reprove.txt",
+      "sha256": "3ff48d2068bc7cd02c0a9e866371145e8980dbf8ebe333437d55f7ffcb6e6796",
+      "bytes": 10954
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_branch.receipt.json",
-      "sha256": "8a900d54fbda9d70093f28065b9d4aca486897b1d22f5d461615a1563c31b030",
-      "bytes": 861
+      "path": "worktree_repair/04_gitdir_worktrees_listing.txt",
+      "sha256": "a86be858fe1daecad3ddc306eb72c3f1bd71f3388f3bd1dcc256eb1849a48d90",
+      "bytes": 284
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_common_dir.receipt.json",
-      "sha256": "dc321cc4da757254301c57371e7ad4c69b1d5404d1f455c445983b87189e85af",
-      "bytes": 870
+      "path": "worktree_repair/05_common_dir_and_prune_pre.txt",
+      "sha256": "fab510fbd06bc2d5d6f3d8e03dfa373198a02139e5a2ef1d2972085fcd89d1b4",
+      "bytes": 9576
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_fetch.receipt.json",
-      "sha256": "6afa8d15990ca1f41b58482b404163ea24b24d4dc47cf770818aa7dc291b1b77",
-      "bytes": 825
+      "path": "worktree_repair/05_common_dir_path.txt",
+      "sha256": "da6d3cf89c79af23086aeb8e49d64ea126318302fea983a72ee5bde15bd93985",
+      "bytes": 58
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_fsck.receipt.json",
-      "sha256": "06f9574808b0e555d0cb7580a3f58665e9c2fa114eb98929287cb2522e5b3f9a",
-      "bytes": 1078
+      "path": "worktree_repair/06_appledouble_prescan_classified.txt",
+      "sha256": "60515d03e1857d78fe5e6f944e3f33ff309f4485858d0379a31771b26f07f856",
+      "bytes": 9262
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_log.receipt.json",
-      "sha256": "7630e0ae56a466623dfea397612ad908325ce6f41c1051eb327b750b21afb178",
-      "bytes": 1121
+      "path": "worktree_repair/06_appledouble_prescan_count.txt",
+      "sha256": "2450b792447daa43c94bdb5bc78933da52eecfb63584aa4bb005dd24f769ace7",
+      "bytes": 100
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_prune.receipt.json",
-      "sha256": "def701fb21bbd4226ffdc8f236623493bbe6bc69188fc2916b75ed2a3ae718e9",
-      "bytes": 1131
+      "path": "worktree_repair/06_appledouble_prescan_paths.txt",
+      "sha256": "ac06c9784e12b0c75fbed09d095bb5c0f545d14ed92112c0ecea48ef39dff09a",
+      "bytes": 9237
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_pwd.receipt.json",
-      "sha256": "771e1d561801c55ede4ac667365f83a7bb7dfc34e1e41e66cbf25f7069bde96f",
-      "bytes": 812
+      "path": "worktree_repair/07_delete_manifest_pre.jsonl",
+      "sha256": "91c40329ab820bd2ee9081db254adb9f55677867a7aafa8f0e8cd8f616fbf578",
+      "bytes": 20236
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_status.receipt.json",
-      "sha256": "dff9de16c1f5f070eb9be5bbd1a8ed30002725358044b2b741844e495653115f",
-      "bytes": 1038
+      "path": "worktree_repair/08_delete_execution.txt",
+      "sha256": "fc318c4377649d26412ec37a48f6c6f84c806128f53b256061757ee95ff10e5c",
+      "bytes": 10053
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_toplevel.receipt.json",
-      "sha256": "1aa6bc81d62c048d701ea3cd65b57a5fb84df7cb0e714d16120175b86377a876",
-      "bytes": 854
+      "path": "worktree_repair/09_appledouble_postscan_count.txt",
+      "sha256": "e7216b9c928a647d27dadfaa127d25fe5bfb3fcab601b11fe8dc638de843e999",
+      "bytes": 101
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/gh/pre_worktree.receipt.json",
-      "sha256": "1f6b2500c697e2b346f365c6937826f29ff05191269a2e1fc7eedf52667e290c",
-      "bytes": 1160
+      "path": "worktree_repair/09_appledouble_postscan_paths.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env/s07_protocol_result.json",
-      "sha256": "19f144de6853d7b761bd6a7d0dfccbbdb5a0191b837b49c790d7962394736079",
-      "bytes": 15266
+      "path": "worktree_repair/10_reverify_post_cleanup.txt",
+      "sha256": "5b9a5b72d61d933cadea21653bab659b2374f65f78e5006876866285f15568ba",
+      "bytes": 2268
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_ahead_behind.receipt.json",
-      "sha256": "7fb16822174dbe4b9d80cda85af103822a1ae804a0ca0aabff86098a25fb18d4",
-      "bytes": 853
+      "path": "worktree_repair/11_preflight_branch_remediation.txt",
+      "sha256": "c6c481a9e8dcb2e82ee53ab573f68f3e90364ef36ebfb6c8d0ec6eae4c86f337",
+      "bytes": 1557
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_branch.receipt.json",
-      "sha256": "c9cb89e565f9dc5d2d60bdad64eee20457a88bf8f867dce019b5b4782ae1036e",
-      "bytes": 861
+      "path": "worktree_repair/12_primary_worktree_preflight_on_main.txt",
+      "sha256": "6be600b2071a901526292f72b40cb82718a67f266ab9d30a9d331c189c22f6c3",
+      "bytes": 9266
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_common_dir.receipt.json",
-      "sha256": "65e7a8890ebf855ab7bcebd71528b7ad5d7d962015c576219551d29cef642311",
-      "bytes": 870
+      "path": "worktree_repair/13_return_to_sprint_branch.txt",
+      "sha256": "4c5ee24ca3ce97bd7a2cb1ea89bdb4052e4bc216f953fe91b989592738334a95",
+      "bytes": 3235
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_fetch.receipt.json",
-      "sha256": "c5973f642a387fe256678fe09f765b4acf749f57c2daa71cfb5994ce0c4453cb",
-      "bytes": 825
+      "path": "worktree_repair/14_appledouble_prescan_pass2_count.txt",
+      "sha256": "2e5cd46a9a22b9b5cf975c669d724b7d6d19a9ac6f0a0e08af4235da0120061f",
+      "bytes": 106
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_fsck.receipt.json",
-      "sha256": "670396da149151111ea771cfef746793dabf3a33c876240251d63883e8136fc2",
-      "bytes": 1078
+      "path": "worktree_repair/14_appledouble_prescan_pass2_paths.txt",
+      "sha256": "fe6e3833953254b020f1f22978f879caf3635e3b578ed01ce3eb2338390de534",
+      "bytes": 3855
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_log.receipt.json",
-      "sha256": "2ce6d8772cc99ddee5daa8d6141de0e0093b9dd6a430aa18b86fbdd71fa6d792",
-      "bytes": 1121
+      "path": "worktree_repair/15_delete_manifest_pre_pass2.jsonl",
+      "sha256": "5aa4e71fe0c6c6073886572d4b445bf050fc7394b1925f1db59bd38f6e76349d",
+      "bytes": 8586
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_prune.receipt.json",
-      "sha256": "e81f4623675112a7c8f3a327cb6b13c4f6c14919bc8704051a018893b3e8d820",
-      "bytes": 1131
+      "path": "worktree_repair/16_delete_execution_pass2.txt",
+      "sha256": "04719783ac63801857b19dee8fefaba0fe31be0f2c96aa3acf5496210d7fb666",
+      "bytes": 4180
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_pwd.receipt.json",
-      "sha256": "44ab5ccb93a4cce1777ed43367d55a109b882ba9fcfd904ee948df0cac0a582d",
-      "bytes": 812
+      "path": "worktree_repair/17_appledouble_postscan_pass2_count.txt",
+      "sha256": "65134257d001564f9864e3013d58b6628899aa4536abd2a7d6ace823035112d8",
+      "bytes": 107
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_status.receipt.json",
-      "sha256": "d18753978d5500a8df43774b5e098e84d69ca7b87beee02ae939ff8792bcf060",
-      "bytes": 1038
+      "path": "worktree_repair/17_appledouble_postscan_pass2_paths.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
     },
     {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_toplevel.receipt.json",
-      "sha256": "f0d199d608bb901f2eadca9f1f6e92814645a66f90f4b6bd08a624a3c9b07056",
-      "bytes": 854
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/gh/pre_worktree.receipt.json",
-      "sha256": "73bb355b2b847b1bd24ca25ddd0106a547ca93375f2e35d19b1571565bcf9c9d",
-      "bytes": 1160
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_env_refresh/s07_protocol_result.json",
-      "sha256": "afec6f11f54e6e211443c77d1c086b84d3383532db84b9701d8618440f724cc0",
-      "bytes": 13862
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/00_pr_list.json",
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-      "bytes": 3
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/gh_inventory.receipt.json",
-      "sha256": "8eb3b3e2c128e764dd37b80c62b64cb2b30c4fb5377a5a9e23e364654d835dbe",
-      "bytes": 939
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_ahead_behind.receipt.json",
-      "sha256": "9ae2bd88743c769988df1780aa6d5dfce938d5e7b1497b888cc784b6eafb20b2",
-      "bytes": 853
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_branch.receipt.json",
-      "sha256": "f65f013927a193004e5a1bf255f30d15bfc024d02ed46bed075b83959075526c",
-      "bytes": 861
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_common_dir.receipt.json",
-      "sha256": "97bdbb1a0511eab7bfa94497e8e8cc5426998cbfdcc0b721052c074f2207ffd1",
-      "bytes": 870
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_fetch.receipt.json",
-      "sha256": "0f08948eb8cf43ec8785e175ec82df46ea3619770d1397ff878c2c6b7ddc953e",
-      "bytes": 825
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_fsck.receipt.json",
-      "sha256": "6724ae214737762584f753d15a381dfff7c65108d83eae751ad10fa496ad729b",
-      "bytes": 1078
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_log.receipt.json",
-      "sha256": "42eb7e0503d04e5c25c8fc0639f4579ea9e6fc553c3007186d7a251c58c78a46",
-      "bytes": 1121
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_prune.receipt.json",
-      "sha256": "cf1000cac9eded45996a0bc66a3be21b5fc84acce6f1c3556283429a75750a53",
-      "bytes": 1131
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_pwd.receipt.json",
-      "sha256": "9989ed2b81f23c87b73cd0f6c8649543142d89d8615874f76c154f7c5e4cd6d4",
-      "bytes": 812
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_status.receipt.json",
-      "sha256": "e6b0810d33ac7e1f7c1aa6178aeaa759ee8b39eb7674d2a0feb5f82cf2e79c1a",
-      "bytes": 1038
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_toplevel.receipt.json",
-      "sha256": "6b063b4ab7f25ed6c20d6156a952e941f6f35105631fa80a9b039bf8fe0be5ba",
-      "bytes": 854
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/gh/pre_worktree.receipt.json",
-      "sha256": "ebe2f99ce3bbc1612b303e81dbe2edb26989a0e39b614a1b531abdd5a90904cb",
-      "bytes": 1160
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git/s07_protocol_result.json",
-      "sha256": "b16d16e02dcf8e7bc8864585f36fc27413a62ebf46ebfa4b8d086795ef5dcd5f",
-      "bytes": 15266
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_ahead_behind.receipt.json",
-      "sha256": "ffc6ca899a7f18a4ba9a3d05530700d275df6d55cf8b5865d3201288a3eecd66",
-      "bytes": 853
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_branch.receipt.json",
-      "sha256": "2d7173c7138c52fe1425f7b3611e889d2e47959f770355a1cd47a6040474310b",
-      "bytes": 861
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_common_dir.receipt.json",
-      "sha256": "f0f1800feed14498a44fa9eb9d4ba7041358252f6f7515cef0af5f4387a1636e",
-      "bytes": 870
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_fetch.receipt.json",
-      "sha256": "9ce6e89e2a6c53af444e37905d07bfacb0dccc69fe6f20ee2183e1c1002afa2b",
-      "bytes": 825
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_fsck.receipt.json",
-      "sha256": "5db1729ea95aff8e228e443afc41be2259661f55c5f2bef851cd864d7a3cd368",
-      "bytes": 1078
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_log.receipt.json",
-      "sha256": "a10f8cf40df9f9c9bcdafca6cdbae4b3f82bff7359f86e2deaeee1fa1d471255",
-      "bytes": 1121
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_prune.receipt.json",
-      "sha256": "09ea76065ae70a591a93d4188d89b8596435c0181e94c4e9a2d81189558fbd3e",
-      "bytes": 1131
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_pwd.receipt.json",
-      "sha256": "49ad53d85576c548533cc2bebdd26c0140f0980355e33815bb7872d81e83fbf2",
-      "bytes": 812
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_status.receipt.json",
-      "sha256": "649a1349dc8ddcb5e88cdee42f0dd07a4de83806dc7d27b0d387336237143cec",
-      "bytes": 1038
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_toplevel.receipt.json",
-      "sha256": "4e93b64570ceefb1189ebf6a571fb090f42ab27164173504fd9211e4c85296f0",
-      "bytes": 854
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_worktree.receipt.json",
-      "sha256": "7dc7a3cb0a1e53fb04192ef1ffa8ab34ad473360e49aff9fa9bc3789c5000737",
-      "bytes": 1160
-    },
-    {
-      "path": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/s07_protocol_result.json",
-      "sha256": "ac17ae52b5fc390243981a7bb2d86d706c045a246281fba05d70a928f9b04c0c",
-      "bytes": 13862
+      "path": "worktree_repair/18_object_health_post_pass2.txt",
+      "sha256": "34e6170ef435612158e6c5f64a3b8a671c1791d3be4b38daa83a803eb7b82ad3",
+      "bytes": 2131
     }
   ]
 }
