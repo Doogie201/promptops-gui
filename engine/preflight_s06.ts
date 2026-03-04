@@ -89,7 +89,13 @@ export function runS06PreflightAutomation(options: S06PreflightOptions): S06Pref
     'LOCAL_WORKTREE',
     receipts,
   );
-  const primaryReceipts = runPrimaryWorktreeCommandSet(config.primaryPath, config.roots, config.receiptDir, receipts);
+  const primaryReceipts = runPrimaryWorktreeCommandSet(
+    config.primaryPath,
+    config.baseBranch,
+    config.roots,
+    config.receiptDir,
+    receipts,
+  );
   const primaryAssessment = assessPrimaryWorktree(primaryReceipts, config.baseBranch);
   if (!primaryAssessment.pass) {
     return hardStop('HARD_STOP_PRIMARY_WORKTREE_NOT_ON_MAIN_NOT_SYNCED', events, receipts, baseline, undefined, {
@@ -161,6 +167,7 @@ export function evaluateBranchCompliance(
 
 function runPrimaryWorktreeCommandSet(
   primaryPath: string,
+  baseBranch: string,
   roots: string[],
   receiptDir: string,
   receipts: CommandReceipt[],
@@ -205,7 +212,7 @@ function runPrimaryWorktreeCommandSet(
       cwd: primaryPath,
       repoRoot: primaryPath,
       command: 'git',
-      args: ['rev-list', '--left-right', '--count', 'HEAD...origin/main'],
+      args: ['rev-list', '--left-right', '--count', `HEAD...origin/${baseBranch}`],
     },
     {
       id: 'branch',
@@ -327,11 +334,18 @@ function assessPrimaryWorktree(receipts: CommandReceipt[], baseBranch: string): 
 
   const branchReceipt = byCommand.get('rev-parse --abbrev-ref HEAD');
   const statusReceipt = byCommand.get('status --porcelain=v1 --branch');
-  const aheadBehindReceipt = byCommand.get('rev-list --left-right --count HEAD...origin/main');
-  if (!branchReceipt || !statusReceipt || !aheadBehindReceipt) {
+  const fetchReceipt = byCommand.get('fetch --all --prune --tags');
+  const aheadBehindKey = `rev-list --left-right --count HEAD...origin/${baseBranch}`;
+  const aheadBehindReceipt = byCommand.get(aheadBehindKey);
+  if (!branchReceipt || !statusReceipt || !fetchReceipt || !aheadBehindReceipt) {
     return { pass: false, details: { reason: 'missing required receipt' } };
   }
-  if (branchReceipt.exit_code !== 0 || statusReceipt.exit_code !== 0 || aheadBehindReceipt.exit_code !== 0) {
+  if (
+    branchReceipt.exit_code !== 0 ||
+    statusReceipt.exit_code !== 0 ||
+    fetchReceipt.exit_code !== 0 ||
+    aheadBehindReceipt.exit_code !== 0
+  ) {
     return { pass: false, details: { reason: 'required command failed' } };
   }
 
