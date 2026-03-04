@@ -16,7 +16,7 @@
     "test:all": "npm run -s test:unit && npm run -s test:integration",
     "test:evaluator": "node --test --experimental-transform-types engine/evaluator.test.ts",
     "test:evaluator:junit": "mkdir -p coverage && node --test --experimental-transform-types --test-reporter=junit --test-reporter-destination=coverage/junit.xml engine/evaluator.test.ts",
-    "coverage:evaluator": "mkdir -p coverage/tmp && find coverage/tmp -type f -name 'coverage-*.json' -delete && NODE_V8_COVERAGE=coverage/tmp node --test --experimental-transform-types --experimental-test-coverage engine/evaluator.test.ts",
+    "coverage:evaluator": "rm -rf coverage && mkdir -p coverage && c8 --reporter=lcov --reporter=text-summary --report-dir=coverage node --test --experimental-transform-types engine/evaluator.test.ts",
     "simulate:migration": "bash scripts/migration-sim.sh",
     "lint": "bash scripts/verify.sh lint",
     "verify": "bash scripts/verify.sh all"
@@ -35,6 +35,7 @@
   "devDependencies": {
     "@codecov/vite-plugin": "^1.9.1",
     "@types/node": "^25.3.2",
+    "c8": "^11.0.0",
     "typescript": "^5.9.3",
     "vite": "^6.4.1"
   }
