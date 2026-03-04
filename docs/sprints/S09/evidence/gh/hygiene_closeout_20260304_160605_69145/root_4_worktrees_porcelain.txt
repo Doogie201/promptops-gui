@@ -1,4 +1,3 @@
 worktree /private/tmp/promptops/S09/20260304_140939_31327/repo
 HEAD 9922656a0ef9a16a34db77829912770b08340374
 branch refs/heads/sprint/S09-gui-shell-setup-wizard-agent-switching
-

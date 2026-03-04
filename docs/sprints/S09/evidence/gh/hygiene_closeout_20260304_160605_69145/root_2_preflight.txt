@@ -53,4 +53,3 @@ EXIT_CODE: 0
 CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" fsck --no-reflogs
 dangling commit c059e25258c5345b5e3828cfd17f73825f28a688
 EXIT_CODE: 0
-

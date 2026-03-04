@@ -51,4 +51,3 @@ EXIT_CODE: 0
 CMD: git -C "/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui" fsck --no-reflogs
 dangling commit c059e25258c5345b5e3828cfd17f73825f28a688
 EXIT_CODE: 0
-

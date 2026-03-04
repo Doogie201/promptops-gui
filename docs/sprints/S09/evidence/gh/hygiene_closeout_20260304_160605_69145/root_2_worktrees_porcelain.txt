@@ -1,4 +1,3 @@
 worktree /private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
 HEAD 91a9263bf3e52a9847d5236f700adcc274d1d8c0
 branch refs/heads/main
-

@@ -52,4 +52,3 @@ CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" fsck --no-re
 dangling commit 5e322f92b92fc627be969da4efdc52afcc351b71
 dangling commit 2f671e7389d46ce19e6077a44e783ddcec43c587
 EXIT_CODE: 0
-

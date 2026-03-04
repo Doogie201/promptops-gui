@@ -51,4 +51,3 @@ EXIT_CODE: 0
 CMD: git -C "/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo" fsck --no-reflogs
 
 EXIT_CODE: 0
-
