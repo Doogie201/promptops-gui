@@ -1,8 +1,8 @@
 Switched to a new branch 'sprint/S09-gui-shell-setup-wizard-agent-switching'
-remote: 
-remote: Create a pull request for 'sprint/S09-gui-shell-setup-wizard-agent-switching' on GitHub by visiting:        
-remote:      https://github.com/Doogie201/promptops-gui/pull/new/sprint/S09-gui-shell-setup-wizard-agent-switching        
-remote: 
+remote:
+remote: Create a pull request for 'sprint/S09-gui-shell-setup-wizard-agent-switching' on GitHub by visiting:
+remote:      https://github.com/Doogie201/promptops-gui/pull/new/sprint/S09-gui-shell-setup-wizard-agent-switching
+remote:
 To github.com:Doogie201/promptops-gui.git
  * [new branch]      sprint/S09-gui-shell-setup-wizard-agent-switching -> sprint/S09-gui-shell-setup-wizard-agent-switching
 branch 'sprint/S09-gui-shell-setup-wizard-agent-switching' set up to track 'origin/sprint/S09-gui-shell-setup-wizard-agent-switching'.
