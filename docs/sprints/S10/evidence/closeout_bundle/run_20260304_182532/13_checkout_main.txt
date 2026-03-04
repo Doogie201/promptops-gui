@@ -1,0 +1,7 @@
+CMD: git checkout main
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+Switched to branch 'main'
+M	docs/backlog/README.md
+M	docs/sprints/README.md
+Your branch is up to date with 'origin/main'.
+EXIT_CODE: 0

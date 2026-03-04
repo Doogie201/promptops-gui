@@ -1,0 +1,8 @@
+CMD: git log --oneline -5
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+d285a0b [S09] docs : SharedDrive complex quarantine disposition + evidence
+b35d583 [S09] docs : quarantine disposition for S08 root remediation (#14)
+e3f72e4 [S09] nav : gui shell v1 + setup wizard + agent switching (#13)
+83ba4d3 [S08] security : agent adapters v1 + continuity packet (#12)
+91a9263 [S07] feature : github pr protocol automation (#11)
+EXIT_CODE: 0

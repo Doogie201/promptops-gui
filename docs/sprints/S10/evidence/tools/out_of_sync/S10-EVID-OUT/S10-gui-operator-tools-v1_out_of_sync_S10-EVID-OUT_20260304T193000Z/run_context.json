@@ -1,0 +1,11 @@
+{
+  "sprintId": "S10-gui-operator-tools-v1",
+  "tool": "out_of_sync",
+  "runId": "S10-EVID-OUT",
+  "timestamp": "20260304T193000Z",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S10/tools/out_of_sync/S10-EVID-OUT",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/out_of_sync/S10-EVID-OUT",
+  "bundleRoot": "/tmp/promptops/S10/tools/out_of_sync/S10-EVID-OUT/S10-gui-operator-tools-v1_out_of_sync_S10-EVID-OUT_20260304T193000Z",
+  "continuityHash": "1b09f640a3e0759ec408a0ea7f0a5dfee85a626dd5e99dafd62b737cd7218702"
+}

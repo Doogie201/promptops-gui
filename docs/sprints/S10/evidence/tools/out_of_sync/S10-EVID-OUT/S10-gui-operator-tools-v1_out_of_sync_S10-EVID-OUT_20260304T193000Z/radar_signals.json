@@ -1,0 +1,27 @@
+[
+  {
+    "id": "DIRTY_TREE_MID_RUN",
+    "active": false,
+    "detail": "clean"
+  },
+  {
+    "id": "HEAD_CHANGED_UNEXPECTEDLY",
+    "active": false,
+    "detail": "expected=abc123 current=abc123"
+  },
+  {
+    "id": "BEHIND_ORIGIN_MAIN",
+    "active": false,
+    "detail": "ahead=0 behind=0"
+  },
+  {
+    "id": "MISSING_EVIDENCE_PATHS",
+    "active": false,
+    "detail": "none"
+  },
+  {
+    "id": "MISSING_SPRINT_DOCS",
+    "active": false,
+    "detail": "docs/sprints/S10/README.md"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "sprintId": "S10-gui-operator-tools-v1",
+  "tool": "closeout",
+  "runId": "S10-EVID-CLOSEOUT",
+  "timestamp": "20260304T193000Z",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S10/tools/closeout/S10-EVID-CLOSEOUT",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/closeout/S10-EVID-CLOSEOUT",
+  "bundleRoot": "/tmp/promptops/S10/tools/closeout/S10-EVID-CLOSEOUT/S10-gui-operator-tools-v1_closeout_S10-EVID-CLOSEOUT_20260304T193000Z",
+  "continuityHash": "5ace9bf9bdde9123cef11196185ae74e7c15cba40ece39ec388a8b288cbe77f7"
+}

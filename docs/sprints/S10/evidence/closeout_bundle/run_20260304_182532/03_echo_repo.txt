@@ -1,0 +1,4 @@
+CMD: bash -lc echo "/Volumes/X9_DEV/Dev/Projects/promptops-gui"
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0

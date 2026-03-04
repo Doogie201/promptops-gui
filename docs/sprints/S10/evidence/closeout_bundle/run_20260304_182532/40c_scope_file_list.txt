@@ -1,0 +1,10 @@
+CMD: scope_file_list_from_status(expanded)
+apps/s10_gui_operator_tools_v1.ts
+docs/backlog/README.md
+docs/sprints/README.md
+docs/sprints/S10/README.md
+src/s10/operator_exec.ts
+src/s10/operator_tools.ts
+src/s10/operator_types.ts
+src/s10/s10.test.ts
+EXIT_CODE: 0

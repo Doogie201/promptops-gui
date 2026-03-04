@@ -1,0 +1,31 @@
+{
+  "sprint_id": "S10-gui-operator-tools-v1",
+  "run_id": "S10-EVID-CLOSEOUT",
+  "continuity_hash": "5ace9bf9bdde9123cef11196185ae74e7c15cba40ece39ec388a8b288cbe77f7",
+  "checklist": [
+    {
+      "id": "AT-S10-01",
+      "label": "Preflight",
+      "done": true
+    },
+    {
+      "id": "AT-S10-02",
+      "label": "PR Protocol",
+      "done": true
+    },
+    {
+      "id": "AT-S10-03",
+      "label": "Workflow",
+      "done": true
+    }
+  ],
+  "required_paths": [
+    "/tmp/promptops/S10/tools/preflight/S10-EVID-PREFLIGHT/S10-gui-operator-tools-v1_preflight_S10-EVID-PREFLIGHT_20260304T193000Z/preflight_eval.md",
+    "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/pr_protocol_eval.md",
+    "/tmp/promptops/S10/tools/gates/S10-EVID-GATES/S10-gui-operator-tools-v1_gates_S10-EVID-GATES_20260304T193000Z/gates_eval.md",
+    "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z/whitelist_eval.md",
+    "/tmp/promptops/S10/tools/out_of_sync/S10-EVID-OUT/S10-gui-operator-tools-v1_out_of_sync_S10-EVID-OUT_20260304T193000Z/diagnosis_report.md"
+  ],
+  "missing_paths": [],
+  "pass": true
+}

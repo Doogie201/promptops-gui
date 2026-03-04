@@ -1,0 +1,10 @@
+CMD: whitelist_check(scope files expanded)
+ALLOW apps/s10_gui_operator_tools_v1.ts
+ALLOW docs/backlog/README.md
+ALLOW docs/sprints/README.md
+ALLOW docs/sprints/S10/README.md
+ALLOW src/s10/operator_exec.ts
+ALLOW src/s10/operator_tools.ts
+ALLOW src/s10/operator_types.ts
+ALLOW src/s10/s10.test.ts
+EXIT_CODE: 0

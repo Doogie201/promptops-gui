@@ -1,0 +1,26 @@
+[
+  {
+    "id": "diff_files",
+    "command": "git",
+    "args": [
+      "diff",
+      "--name-only"
+    ]
+  },
+  {
+    "id": "diffstat",
+    "command": "git",
+    "args": [
+      "diff",
+      "--stat"
+    ]
+  },
+  {
+    "id": "diff_numstat",
+    "command": "git",
+    "args": [
+      "diff",
+      "--numstat"
+    ]
+  }
+]

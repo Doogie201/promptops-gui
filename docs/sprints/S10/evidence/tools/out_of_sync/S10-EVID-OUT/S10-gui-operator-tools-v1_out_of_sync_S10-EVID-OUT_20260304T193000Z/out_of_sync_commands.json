@@ -1,0 +1,29 @@
+[
+  {
+    "id": "radar_status",
+    "command": "git",
+    "args": [
+      "status",
+      "--porcelain=v1",
+      "--branch"
+    ]
+  },
+  {
+    "id": "radar_head",
+    "command": "git",
+    "args": [
+      "rev-parse",
+      "HEAD"
+    ]
+  },
+  {
+    "id": "radar_ahead_behind",
+    "command": "git",
+    "args": [
+      "rev-list",
+      "--left-right",
+      "--count",
+      "HEAD...origin/main"
+    ]
+  }
+]

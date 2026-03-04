@@ -9,3 +9,4 @@
 - [S07 - GitHub PR Protocol Automation](./S07/README.md)
 - [S08 - Agent Adapters v1 + Continuity Packet](./S08/README.md)
 - [S09 - GUI Shell v1 + Setup Wizard + Agent Switching](./S09/README.md)
+- [S10 - GUI Operator Tools v1](./S10/README.md)

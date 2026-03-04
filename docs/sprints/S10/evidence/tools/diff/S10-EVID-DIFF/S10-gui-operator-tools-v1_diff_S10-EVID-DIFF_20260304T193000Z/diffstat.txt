@@ -1,0 +1,1 @@
+ src/s10/operator_tools.ts | 12 ++++++++++--

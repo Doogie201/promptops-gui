@@ -1,0 +1,11 @@
+{
+  "sprintId": "S10-gui-operator-tools-v1",
+  "tool": "gates",
+  "runId": "S10-EVID-GATES",
+  "timestamp": "20260304T193000Z",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S10/tools/gates/S10-EVID-GATES",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/gates/S10-EVID-GATES",
+  "bundleRoot": "/tmp/promptops/S10/tools/gates/S10-EVID-GATES/S10-gui-operator-tools-v1_gates_S10-EVID-GATES_20260304T193000Z",
+  "continuityHash": "73da3f756fd6b2ab5379e1b8e11ba64f4e9fc09c1872ee501d6049723fae3fed"
+}

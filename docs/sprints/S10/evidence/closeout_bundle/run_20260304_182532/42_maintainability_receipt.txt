@@ -1,0 +1,10 @@
+CMD: maintainability_line_counts(scope files expanded, tracked-aware)
+apps/s10_gui_operator_tools_v1.ts | tracked=0 | total_lines=96 | added=96 | removed=0 | net=96
+docs/backlog/README.md | tracked=1 | total_lines=14 | added=1 | removed=0 | net=1
+docs/sprints/README.md | tracked=1 | total_lines=12 | added=1 | removed=0 | net=1
+docs/sprints/S10/README.md | tracked=0 | total_lines=28 | added=28 | removed=0 | net=28
+src/s10/operator_exec.ts | tracked=0 | total_lines=147 | added=147 | removed=0 | net=147
+src/s10/operator_tools.ts | tracked=0 | total_lines=687 | added=687 | removed=0 | net=687
+src/s10/operator_types.ts | tracked=0 | total_lines=70 | added=70 | removed=0 | net=70
+src/s10/s10.test.ts | tracked=0 | total_lines=271 | added=271 | removed=0 | net=271
+EXIT_CODE: 0

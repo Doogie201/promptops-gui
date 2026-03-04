@@ -1,0 +1,32 @@
+{
+  "result": {
+    "tool": "pr_protocol",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "PR protocol readiness checks passed.",
+    "receiptPaths": {
+      "open_pr_list": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/open_pr_list.json",
+      "pr_view": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_view.json",
+      "pr_threads_before": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_threads_before.json",
+      "pr_threads_after": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_threads_after.json",
+      "graphql_resolve_mutations": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/graphql_resolve_mutations.jsonl",
+      "pr_protocol_eval": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_protocol_eval.md"
+    },
+    "summary": {
+      "open_count": 1,
+      "candidate_pr": 21,
+      "unresolved_before": 1,
+      "unresolved_after": 0,
+      "continuity_hash": "320c13c6c593976f0ca50d8d05411faf2c3c2ed4fd458d62a889abd656d3505f"
+    }
+  },
+  "receipt_paths": {
+    "open_pr_list": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/open_pr_list.json",
+    "pr_view": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_view.json",
+    "pr_threads_before": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_threads_before.json",
+    "pr_threads_after": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_threads_after.json",
+    "graphql_resolve_mutations": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/graphql_resolve_mutations.jsonl",
+    "pr_protocol_eval": "/tmp/promptops/S10/test_workspace/tools/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z/pr_protocol_eval.md"
+  },
+  "durable_path": "/tmp/promptops/S10/test_workspace/durable/pr_protocol/AT-S10-02/S10-gui-operator-tools-v1_pr_protocol_AT-S10-02_20260304T190000Z"
+}
