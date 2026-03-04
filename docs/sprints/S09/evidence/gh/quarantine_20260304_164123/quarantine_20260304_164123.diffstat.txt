@@ -1,0 +1,9 @@
+ docs/sprints/S06/README.md      |   2 +-
+ docs/sprints/S07/README.md      |   2 +-
+ docs/sprints/S08/README.md      |   2 +
+ scripts/migration-sim.sh        |  13 ++++-
+ scripts/preflight.sh            | 106 +++++++++++++++++++++++++++++++++++-----
+ scripts/s07-open-pr-protocol.ts |   2 +-
+ scripts/verify.sh               |  17 ++++++-
+ src/s07/open_pr_protocol.ts     |   3 +-
+ 8 files changed, 127 insertions(+), 20 deletions(-)

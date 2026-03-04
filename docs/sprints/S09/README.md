@@ -21,6 +21,11 @@ Deliver macOS GUI shell v1 with Setup Wizard that pins Template/Task via version
 - S09 model code and tests pass with receipts, including navigation determinism, wizard gating, run controls, switching, and evidence-view behavior.
 - Durable evidence is stored under `docs/sprints/S09/evidence/` (EVD-S09-01 + EVD-S09-02).
 
+## Quarantine Disposition
+- **KEEP_QUARANTINED**: `promptops-gui.quarantine_20260304_164123`
+- **Reason**: Root remediation (PROMPTOPS_REPO env var adoption) is coherent but too impactful/conflicting for hygiene PR; schedule as dedicated sprint.
+- **Evidence**: `docs/sprints/S09/evidence/gh/quarantine_20260304_164123/`
+
 ## Evidence Paths
 - EVD-S09-01: `docs/sprints/S09/evidence/EVD-S09-01/`
 - EVD-S09-02: `docs/sprints/S09/evidence/EVD-S09-02/`
