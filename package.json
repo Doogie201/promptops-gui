@@ -10,7 +10,7 @@
     "preflight": "bash scripts/preflight.sh",
     "build": "tsc --noEmit",
     "test": "npm run -s test:all",
-    "test:unit": "node --test --experimental-transform-types engine/evaluator.test.ts engine/events/schema.test.ts policy/index.test.ts",
+    "test:unit": "node --test --experimental-transform-types engine/command_executor.test.ts engine/evaluator.test.ts engine/events/schema.test.ts policy/index.test.ts",
     "test:integration": "node --test --experimental-transform-types engine/integration.test.ts",
     "test:all": "npm run -s test:unit && npm run -s test:integration",
     "test:evaluator": "node --test --experimental-transform-types engine/evaluator.test.ts",
