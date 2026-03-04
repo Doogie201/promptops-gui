@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-import { assertSafeActivation } from './safety';
+import { assertSafeActivation } from './safety.ts';
 
 export type TemplateStatus = 'active' | 'archived';
 

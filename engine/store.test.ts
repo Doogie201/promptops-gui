@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert';
 import * as fs from 'fs';
 import * as path from 'path';
-import { EngineRun } from './store';
-import { BaseEvent } from './events/schema';
+import { EngineRun } from './store.ts';
+import type { BaseEvent } from './events/schema.ts';
 
 const TEST_RUNS_DIR = '/tmp/promptops/S02/runs';
 const TEST_RESUME_DIR = '/tmp/promptops/S02/resume';

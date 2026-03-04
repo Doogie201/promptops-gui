@@ -2,10 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert';
 import * as fs from 'fs';
 import * as path from 'path';
-import { TemplateRegistry, TemplateVersion } from './registry';
-import { compileTemplate } from './compiler';
-import { validateTicketOutput } from './validator';
-import { assertSafeActivation } from './safety';
+import { TemplateRegistry } from './registry.ts';
+import type { TemplateVersion } from './registry.ts';
+import { compileTemplate } from './compiler.ts';
+import { validateTicketOutput } from './validator.ts';
+import { assertSafeActivation } from './safety.ts';
 
 const TEST_TICKETS_DIR = '/tmp/promptops/S03/tickets';
 const TEST_VALIDATE_DIR = '/tmp/promptops/S03/validate';

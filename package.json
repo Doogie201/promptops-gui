@@ -7,10 +7,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "test:placeholder": "echo \"Error: no test specified\" && exit 1",
-    "test": "echo \"No real tests defined\" && exit 0",
-    "test:evaluator": "node --test --experimental-strip-types engine/evaluator.test.ts",
-    "coverage:evaluator": "mkdir -p coverage/tmp && find coverage/tmp -type f -name 'coverage-*.json' -delete && NODE_V8_COVERAGE=coverage/tmp node --test --experimental-strip-types --experimental-test-coverage engine/evaluator.test.ts"
+    "preflight": "bash scripts/preflight.sh",
+    "build": "tsc --noEmit",
+    "test": "npm run -s test:all",
+    "test:unit": "node --test --experimental-transform-types engine/evaluator.test.ts engine/events/schema.test.ts policy/index.test.ts",
+    "test:integration": "node --test --experimental-transform-types engine/integration.test.ts",
+    "test:all": "npm run -s test:unit && npm run -s test:integration",
+    "test:evaluator": "node --test --experimental-transform-types engine/evaluator.test.ts",
+    "coverage:evaluator": "mkdir -p coverage/tmp && find coverage/tmp -type f -name 'coverage-*.json' -delete && NODE_V8_COVERAGE=coverage/tmp node --test --experimental-transform-types --experimental-test-coverage engine/evaluator.test.ts",
+    "simulate:migration": "bash scripts/migration-sim.sh",
+    "lint": "bash scripts/verify.sh lint",
+    "verify": "bash scripts/verify.sh all"
   },
   "repository": {
     "type": "git",

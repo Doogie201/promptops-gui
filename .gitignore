@@ -1,6 +1,10 @@
 node_modules/
+coverage/
+artifacts/proof/
+.agent_state/
 *.js
 *.d.ts
 *.map
 !gates.sh
 .DS_Store
+._*

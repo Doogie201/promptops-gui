@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-echo "--- Running Gates ---"
-cd /Users/marcussmith/Projects/promptops-gui
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT_DIR"
 
-echo "[1/3] Build (tsc)"
-npx tsc
+echo "--- Running Deterministic Gates ---"
+echo "[1/4] Preflight"
+npm run -s preflight
 
-echo "[2/3] Test"
-node --test engine/state/machine.test.js
+echo "[2/4] Build"
+npm run -s build
 
-echo "[3/3] Lint & Stoplight Greps"
-mkdir -p docs/sprints/S01/evidence
-echo "--- Stoplight Greps Catalog ---" > docs/sprints/S01/evidence/stoplight_greps.txt
-grep -rn "dangerouslySetInnerHTML" ui/ || true >> docs/sprints/S01/evidence/stoplight_greps.txt
-grep -rn "console.log" engine/ || true >> docs/sprints/S01/evidence/stoplight_greps.txt
-grep -rn --exclude-dir=node_modules --exclude-dir=.git "TODO" . || true >> docs/sprints/S01/evidence/stoplight_greps.txt
+echo "[3/4] Test"
+npm run -s test:all
+
+echo "[4/4] Lint & Stoplight Greps"
+npm run -s lint
 
 echo "Gates passed."
