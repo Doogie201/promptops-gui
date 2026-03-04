@@ -5,3 +5,4 @@
 - [S03 - Policy + Template Compiler (Ticket Factory v1)](./S03/README.md)
 - [S04 - Evaluator, Evidence Ledger, and Codecov](./S04/README.md)
 - [S05 - Command Executor + Receipts Engine](./S05/README.md)
+- [S06 - Git + Worktree Preflight Automation](./S06/README.md)
