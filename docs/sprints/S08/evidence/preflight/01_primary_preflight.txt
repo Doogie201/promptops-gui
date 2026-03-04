@@ -51,4 +51,3 @@ EXIT_CODE:0
 ### fsck_no_reflogs
 CMD: git fsck --no-reflogs
 EXIT_CODE:0
-
