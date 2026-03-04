@@ -15,4 +15,3 @@ Command evidence source: `EVD-S05-02_whitelist_violation_proofs.jsonl`
 - exit_code: `126`
 - stderr: `policy denied: path '/etc/passwd' escapes allowlisted roots`
 - receipt_path: `/private/tmp/promptops/S05/security/at-s05-01/1772585060229-77770-36c08bba5ec2.receipt.json`
-
