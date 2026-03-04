@@ -1,0 +1,17 @@
+[INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Failed
+- hook id: end-of-file-fixer
+- exit code: 1
+- files were modified by this hook
+
+Fixing docs/sprints/S08/evidence/preflight/01_primary_preflight.txt
+
+check yaml...............................................................Passed
+check json...............................................................Passed
+check for case conflicts.................................................Passed
+mixed line ending........................................................Passed
+Operator Gates (Build/Test/Lint/Stoplight)...............................Passed
+EXIT_CODE:1
