@@ -1,0 +1,63 @@
+CMD: git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui checkout sprint/S07-github-pr-protocol-automation
+Switched to branch 'sprint/S07-github-pr-protocol-automation'
+Your branch is up to date with 'origin/sprint/S07-github-pr-protocol-automation'.
+EXIT_CODE:0
+
+CMD: git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui stash list | head
+stash@{0}: On sprint/S07-github-pr-protocol-automation: S07-preflight-temp-20260304T154319Z
+stash@{1}: On main: S07-preflight-dirty-quarantine
+stash@{2}: On main: S06-return-to-sprint-20260303-235556
+stash@{3}: On sprint/S06-git-worktree-preflight-automation: S06-primary-hardstop-clearance-20260303-235519
+stash@{4}: On main: S06-preflight-clearance-20260303-232646
+EXIT_CODE:0
+
+CMD: git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui stash pop
+On branch sprint/S07-github-pr-protocol-automation
+Your branch is up to date with 'origin/sprint/S07-github-pr-protocol-automation'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   docs/sprints/S07/evidence/at/AT-S07-01.tap
+	modified:   docs/sprints/S07/evidence/at/AT-S07-02.tap
+	modified:   docs/sprints/S07/evidence/at/AT-S07-03.tap
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	docs/sprints/S07/evidence/07_gates_gates_sh_final2.txt
+	docs/sprints/S07/evidence/07_gates_verify_final2.txt
+	docs/sprints/S07/evidence/11_pr_readiness_snapshot_a.json
+	docs/sprints/S07/evidence/11_snapshot_a_time.txt
+	docs/sprints/S07/evidence/12_pr_threads_a.json
+	docs/sprints/S07/evidence/13_pr_readiness_snapshot_b.json
+	docs/sprints/S07/evidence/13_snapshot_b_time.txt
+	docs/sprints/S07/evidence/14_pr_threads_b.json
+	docs/sprints/S07/evidence/15_ci_green_stability_eval.md
+	docs/sprints/S07/evidence/42_graphql_before_11.json
+	docs/sprints/S07/evidence/43_comment_post_receipt_11.json
+	docs/sprints/S07/evidence/43_graphql_mutations_11.jsonl
+	docs/sprints/S07/evidence/44_graphql_after_11.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (f4588ef04789aee7c6f980b105bf39fbc699715b)
+EXIT_CODE:0
+
+CMD: git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui status --porcelain=v1 --branch
+## sprint/S07-github-pr-protocol-automation...origin/sprint/S07-github-pr-protocol-automation
+ M docs/sprints/S07/evidence/at/AT-S07-01.tap
+ M docs/sprints/S07/evidence/at/AT-S07-02.tap
+ M docs/sprints/S07/evidence/at/AT-S07-03.tap
+?? docs/sprints/S07/evidence/07_gates_gates_sh_final2.txt
+?? docs/sprints/S07/evidence/07_gates_verify_final2.txt
+?? docs/sprints/S07/evidence/11_pr_readiness_snapshot_a.json
+?? docs/sprints/S07/evidence/11_snapshot_a_time.txt
+?? docs/sprints/S07/evidence/12_pr_threads_a.json
+?? docs/sprints/S07/evidence/13_pr_readiness_snapshot_b.json
+?? docs/sprints/S07/evidence/13_snapshot_b_time.txt
+?? docs/sprints/S07/evidence/14_pr_threads_b.json
+?? docs/sprints/S07/evidence/15_ci_green_stability_eval.md
+?? docs/sprints/S07/evidence/42_graphql_before_11.json
+?? docs/sprints/S07/evidence/43_comment_post_receipt_11.json
+?? docs/sprints/S07/evidence/43_graphql_mutations_11.jsonl
+?? docs/sprints/S07/evidence/44_graphql_after_11.json
+EXIT_CODE:0

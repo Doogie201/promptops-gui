@@ -1,0 +1,6 @@
+CMD: ls -la /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/.git/worktrees
+total 1536
+drwx------  1 marcussmith  staff  262144 Feb 27 10:46 .
+drwx------  1 marcussmith  staff  262144 Mar  4 10:40 ..
+drwx------  1 marcussmith  staff  262144 Mar  4 10:41 promptops-gui
+EXIT_CODE:0

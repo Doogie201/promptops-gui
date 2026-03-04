@@ -1,0 +1,27 @@
+CMD: cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && pwd
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+CMD: cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git rev-parse --show-toplevel
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+CMD: cd /Volumes/X9_DEV/Dev/Projects/promptops-gui && git status --porcelain=v1 --branch
+## sprint/S07-github-pr-protocol-automation...origin/sprint/S07-github-pr-protocol-automation
+ M docs/sprints/S07/evidence/at/AT-S07-01.tap
+ M docs/sprints/S07/evidence/at/AT-S07-02.tap
+ M docs/sprints/S07/evidence/at/AT-S07-03.tap
+?? docs/sprints/S07/evidence/07_gates_gates_sh_final2.txt
+?? docs/sprints/S07/evidence/07_gates_verify_final2.txt
+?? docs/sprints/S07/evidence/11_pr_readiness_snapshot_a.json
+?? docs/sprints/S07/evidence/11_snapshot_a_time.txt
+?? docs/sprints/S07/evidence/12_pr_threads_a.json
+?? docs/sprints/S07/evidence/13_pr_readiness_snapshot_b.json
+?? docs/sprints/S07/evidence/13_snapshot_b_time.txt
+?? docs/sprints/S07/evidence/14_pr_threads_b.json
+?? docs/sprints/S07/evidence/15_ci_green_stability_eval.md
+?? docs/sprints/S07/evidence/42_graphql_before_11.json
+?? docs/sprints/S07/evidence/43_comment_post_receipt_11.json
+?? docs/sprints/S07/evidence/43_graphql_mutations_11.jsonl
+?? docs/sprints/S07/evidence/44_graphql_after_11.json
+EXIT_CODE:0

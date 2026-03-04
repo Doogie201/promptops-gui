@@ -1,0 +1,360 @@
+{
+  "status": "HARD_STOP",
+  "reason_code": "HARD_STOP_PRIMARY_WORKTREE_NOT_ON_MAIN_NOT_SYNCED",
+  "message": "Canonical root not ready: branch='sprint/S07-github-pr-protocol-automation', dirty=true, behind=0.",
+  "canonical_root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "canonical_source": "git",
+  "timeline": [
+    {
+      "stage": "INVENTORY",
+      "state": "STOPPED",
+      "reason_code": "HARD_STOP_PRIMARY_WORKTREE_NOT_ON_MAIN_NOT_SYNCED",
+      "message": "Canonical root not ready: branch='sprint/S07-github-pr-protocol-automation', dirty=true, behind=0.",
+      "evidence_paths": []
+    }
+  ],
+  "evidence": {
+    "pre_pwd": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_pwd.receipt.json",
+    "pre_toplevel": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_toplevel.receipt.json",
+    "pre_common_dir": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_common_dir.receipt.json",
+    "pre_worktree": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_worktree.receipt.json",
+    "pre_status": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_status.receipt.json",
+    "pre_fetch": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_fetch.receipt.json",
+    "pre_ahead_behind": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_ahead_behind.receipt.json",
+    "pre_branch": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_branch.receipt.json",
+    "pre_log": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_log.receipt.json",
+    "pre_prune": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_prune.receipt.json",
+    "pre_fsck": "/tmp/promptops/S07/20260304-062146-37340/live_git_refresh/gh/pre_fsck.receipt.json"
+  },
+  "receipts": [
+    {
+      "command": "pwd",
+      "args": [],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.328Z",
+      "end_ts": "2026-03-04T06:45:13.331Z",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "2911dc9256d37d0c1159c3d5726cb195fa21fce93aaa7f6020741bb54a9b708c",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713333-52708-2911dc9256d3.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713333-52708-2911dc9256d3.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713333-52708-2911dc9256d3.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.334Z",
+      "end_ts": "2026-03-04T06:45:13.342Z",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "852322cf24432791efb3e133a8566da88e3024b330098fd4a454ed433ceda801",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713342-52708-852322cf2443.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713342-52708-852322cf2443.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713342-52708-852322cf2443.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "--git-common-dir"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.343Z",
+      "end_ts": "2026-03-04T06:45:13.351Z",
+      "stdout": "/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/.git\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "f7c4b7929b1f9b8b9570118baf2b70fd2562158b1e34c4f11b65d7aac985e9e8",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713352-52708-f7c4b7929b1f.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713352-52708-f7c4b7929b1f.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713352-52708-f7c4b7929b1f.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "worktree",
+        "list",
+        "--porcelain"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.352Z",
+      "end_ts": "2026-03-04T06:45:13.361Z",
+      "stdout": "worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04\nHEAD 3c167d4853a4f051eb0cde211a818463ac739298\nbranch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov\n\nworktree /Volumes/SharedDrive/Dev/Projects/promptops-gui\nHEAD fe432b3a63acb15171cb1d73d88e1d9dc8239189\nbranch refs/heads/sprint/S07-github-pr-protocol-automation\n\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "a8e44ca38486bdd3a2aecf0656cdeaf5b5ef49ea4ecf2dc276acb3f137b39676",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713361-52708-a8e44ca38486.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713361-52708-a8e44ca38486.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713361-52708-a8e44ca38486.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "status",
+        "--porcelain=v1",
+        "--branch"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.362Z",
+      "end_ts": "2026-03-04T06:45:13.420Z",
+      "stdout": "## sprint/S07-github-pr-protocol-automation...origin/sprint/S07-github-pr-protocol-automation\n M docs/backlog/README.md\n M docs/sprints/README.md\n?? docs/sprints/S07/\n?? scripts/s07-open-pr-protocol.ts\n?? src/\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "041373f270a4e429489e9a96ffc3e200699d494fbed1b58c7302ec2e88596e0b",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713420-52708-041373f270a4.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713420-52708-041373f270a4.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713420-52708-041373f270a4.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "fetch",
+        "--all",
+        "--prune",
+        "--tags"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.421Z",
+      "end_ts": "2026-03-04T06:45:13.923Z",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "96fe53da931663726bb05034a0cc33d6873350dac01f3b9c6f0046b146e695ba",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713923-52708-96fe53da9316.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713923-52708-96fe53da9316.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713923-52708-96fe53da9316.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "rev-list",
+        "--left-right",
+        "--count",
+        "HEAD...origin/main"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.924Z",
+      "end_ts": "2026-03-04T06:45:13.935Z",
+      "stdout": "0\t0\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "76bd52ce20cba82ec8473d6ecb234153e8311328978fdf1dc6bd4ea85fcfe91c",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713935-52708-76bd52ce20cb.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713935-52708-76bd52ce20cb.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713935-52708-76bd52ce20cb.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "rev-parse",
+        "--abbrev-ref",
+        "HEAD"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.936Z",
+      "end_ts": "2026-03-04T06:45:13.944Z",
+      "stdout": "sprint/S07-github-pr-protocol-automation\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "3388949708a19150898383feebb28f924f7f1bcc35d4e8b6bb3de39809b5989b",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713944-52708-3388949708a1.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713944-52708-3388949708a1.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713944-52708-3388949708a1.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "log",
+        "--oneline",
+        "-5"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.945Z",
+      "end_ts": "2026-03-04T06:45:13.957Z",
+      "stdout": "fe432b3 ci: switch codecov upload to lcov (#10)\n9751773 ci: harden codecov upload checks (#9)\na7b7c76 Merge pull request #8 from Doogie201/sprint/S06-git-worktree-preflight-automation\n73ca924 fix: align primary sync probe with configured base branch\na4631ae [S06] chore : git + worktree preflight automation\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "6716a30225f40cd2695e622c3f446cdd2ec22f9af204f29bdc7cee12407ffd85",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606713957-52708-6716a30225f4.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606713957-52708-6716a30225f4.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606713957-52708-6716a30225f4.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "prune",
+        "--dry-run"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:13.958Z",
+      "end_ts": "2026-03-04T06:45:14.294Z",
+      "stdout": "0bac487c413baef023d86853c18854a8261e48e1 tree\n81d262db85f54d311f5de5dabe46bc2a5933c9eb blob\n8fa00d7e8b08dcd42f9496181defd8e483167bb5 commit\n9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c tree\na2b8ac0ffdadbee08914c165a9562a4cd886bbbe blob\nfc7055dc01609065ad3b7549b1d15d2268e75701 blob\nff04fe88520e398fab3ebac64df59f18f8672ee3 blob\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "85a0803488622c1bd5b07e924d041ae21bb242db72ff01ccb21185e628a84dc1",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606714294-52708-85a080348862.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606714294-52708-85a080348862.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606714294-52708-85a080348862.stderr.txt"
+      }
+    },
+    {
+      "command": "git",
+      "args": [
+        "fsck",
+        "--full"
+      ],
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "env_allowlist": [
+        "HOME",
+        "LANG",
+        "LC_ALL",
+        "NO_COLOR",
+        "PATH",
+        "TERM"
+      ],
+      "start_ts": "2026-03-04T06:45:14.296Z",
+      "end_ts": "2026-03-04T06:45:15.002Z",
+      "stdout": "dangling commit 8fa00d7e8b08dcd42f9496181defd8e483167bb5\ndangling blob a2b8ac0ffdadbee08914c165a9562a4cd886bbbe\ndangling blob 81d262db85f54d311f5de5dabe46bc2a5933c9eb\ndangling blob ff04fe88520e398fab3ebac64df59f18f8672ee3\ndangling tree 9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c\n",
+      "stderr": "",
+      "exit_code": 0,
+      "timeout": false,
+      "policy_decision": "executed",
+      "normalized_hash": "8aa5b90ae9a797c1b87960e1bca49bf072366fb443658328d9ecb489439ba86b",
+      "raw_artifact_paths": {
+        "receipt": "/tmp/promptops/S05/security/1772606715003-52708-8aa5b90ae9a7.receipt.json",
+        "stdout": "/tmp/promptops/S05/security/1772606715003-52708-8aa5b90ae9a7.stdout.txt",
+        "stderr": "/tmp/promptops/S05/security/1772606715003-52708-8aa5b90ae9a7.stderr.txt"
+      }
+    }
+  ],
+  "details": {
+    "branch": "sprint/S07-github-pr-protocol-automation",
+    "dirty": true,
+    "behind": 0
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S07/evidence",
+  "generated_at_utc": "2026-03-04T15:46:58Z",
+  "files": [
+    {
+      "path": "02_primary_worktree_preflight_after_remediation.txt",
+      "sha256": "9eabb8d7246dc522921c0abe9bb387a3cf3a73d103467952fd76502773e4f582",
+      "bytes": 1603
+    },
+    {
+      "path": "03_open_pr_inventory.json",
+      "sha256": "1e74ee3b0281883085bbc26abb4ac833fd09af2f004b5587bcbf66b32f190c67",
+      "bytes": 164
+    },
+    {
+      "path": "03_repo_preflight_after_remediation.txt",
+      "sha256": "6b0ffd87a88335be699961eee2e8facd18680839cb5836103b209caaec95237a",
+      "bytes": 1105
+    },
+    {
+      "path": "04_hardstop_clearance_receipts.md",
+      "sha256": "f3ce370f4c0c1605f3b212217de185e7bf9e53b552860ac52393a653e460c048",
+      "bytes": 739
+    },
+    {
+      "path": "05_docs_sync_proof.md",
+      "sha256": "4e899325010490f7482ab49c6253aa8e0b43552a716bd4524be7d7f0876171a9",
+      "bytes": 1880
+    },
+    {
+      "path": "06_scope_proof.txt",
+      "sha256": "02b208421e6bcb87368cdaa5fbb1159a9ac78d8cda30df9c7976d742e8a2ce5b",
+      "bytes": 1785
+    },
+    {
+      "path": "07_gates_gates_sh_after.txt",
+      "sha256": "3ee85f3826e96108205b0f19d6b2e87bfcb888f462358c977cc8413b9b5ed0e4",
+      "bytes": 7437
+    },
+    {
+      "path": "07_gates_gates_sh_final.txt",
+      "sha256": "9966e71397cf9261808c2f746a1a0e1d29ae4cdded8025147562e441f7128766",
+      "bytes": 7429
+    },
+    {
+      "path": "07_gates_gates_sh_final2.txt",
+      "sha256": "b6ba708e21a70cf47af6bcd77a154b995dfa2d17f91a5d8252f6c058b555799e",
+      "bytes": 7434
+    },
+    {
+      "path": "07_gates_verify_after.txt",
+      "sha256": "d4605cd8486e195ef56ebe2c5c08d185d7aa11f7eecc6f83322154c39a09201b",
+      "bytes": 7361
+    },
+    {
+      "path": "07_gates_verify_final.txt",
+      "sha256": "79556a47d1d85b88985c576cd63ccd314b11c49f4ddf365875ac4ac610f276e6",
+      "bytes": 7364
+    },
+    {
+      "path": "07_gates_verify_final2.txt",
+      "sha256": "22071e935897f7c45b2a55d4ab1d5c4e5ce277cdd44477b80db2d16dfba9fedb",
+      "bytes": 7370
+    },
+    {
+      "path": "07_maintainability_receipts.txt",
+      "sha256": "d860670b9af2d2e36bc92658339dd95b623402cf2e3c5d43ca7e48a7914455af",
+      "bytes": 2863
+    },
+    {
+      "path": "10_stoplight_greps.md",
+      "sha256": "a63dc95774f98f8a87186bf38afd39a502d569b1dac4bca65fbf5b37917ca904",
+      "bytes": 486
+    },
+    {
+      "path": "11_pr_readiness_snapshot_a.json",
+      "sha256": "6696fdf216c33df41eaee60522dd23cbb61db336948e9f6a92a591a6116f1b0e",
+      "bytes": 4661
+    },
+    {
+      "path": "11_snapshot_a_time.txt",
+      "sha256": "e812f3633304104cc67f022698d73afb37b0f790417194616c0877fac1d51e37",
+      "bytes": 21
+    },
+    {
+      "path": "12_pr_threads_a.json",
+      "sha256": "9356949f2d98d0388a8d55d3bf20b5a56bcae8f6ccdf0d2766edf5538c31117f",
+      "bytes": 886
+    },
+    {
+      "path": "13_pr_readiness_snapshot_b.json",
+      "sha256": "6696fdf216c33df41eaee60522dd23cbb61db336948e9f6a92a591a6116f1b0e",
+      "bytes": 4661
+    },
+    {
+      "path": "13_snapshot_b_time.txt",
+      "sha256": "7ab58172d5ac2c83c631616d38f1e3ea50528b289f1f8f7651461392b2e6606c",
+      "bytes": 21
+    },
+    {
+      "path": "14_pr_threads_b.json",
+      "sha256": "9356949f2d98d0388a8d55d3bf20b5a56bcae8f6ccdf0d2766edf5538c31117f",
+      "bytes": 886
+    },
+    {
+      "path": "15_ci_green_stability_eval.md",
+      "sha256": "219436e386c666b9471b052a02cbcf7f8d20fb0b10fcd57e6e24e8ed14aae714",
+      "bytes": 515
+    },
+    {
+      "path": "19_verify_after_evidence_commit.txt",
+      "sha256": "cb7912faa27d37943d1c35469255518d24d830baa78bb1d1e733fad6170139bb",
+      "bytes": 7367
+    },
+    {
+      "path": "20_gates_after_evidence_commit.txt",
+      "sha256": "c3f33ee931fb97fa50cba8f94e61c138bdee4f7eb75a426f2a6aa2ec17033e67",
+      "bytes": 7439
+    },
+    {
+      "path": "21_open_pr_inventory_after_push.json",
+      "sha256": "2735a818a0def2959804154642005c3d6b0660f14064961ad79d54c55b68b58f",
+      "bytes": 372
+    },
+    {
+      "path": "42_graphql_before_11.json",
+      "sha256": "680ad3eb0dd3b8834882bf9bc04f8a45c22c929f7017e858494ce77130c3cc53",
+      "bytes": 2476
+    },
+    {
+      "path": "43_comment_post_receipt_11.json",
+      "sha256": "41d641e3d9f243b4079c4efefac43b8aa1d5882cfe1c4e50fb11e4aac0cb8153",
+      "bytes": 3137
+    },
+    {
+      "path": "43_graphql_mutations_11.jsonl",
+      "sha256": "610c5576a1bb40efda93ec72b3150508f95a74f12c097143371fd26cd57892e4",
+      "bytes": 279
+    },
+    {
+      "path": "44_graphql_after_11.json",
+      "sha256": "f8703950f7889f40ead5a775cb86855b3505ec4d34108736ba9553211a538ec1",
+      "bytes": 819
+    },
+    {
+      "path": "90_operator_briefing.md",
+      "sha256": "dbb353aae7becf01de3cd63b1a59321c338851c0cbb0cad749598bbbbf1ecdb8",
+      "bytes": 1259
+    },
+    {
+      "path": "92_cleanup_receipts.txt",
+      "sha256": "4eeaa36a70bd738d38dae0b49d89e911ec07bda4a85dc080dbd93c0c7d5f9dab",
+      "bytes": 7830
+    },
+    {
+      "path": "at/AT-S07-01.md",
+      "sha256": "bc66bce4238ca0dd7569b48d8c786e9441f3b9be587bffc8afcb4db722266fe4",
+      "bytes": 174
+    },
+    {
+      "path": "at/AT-S07-01.tap",
+      "sha256": "21a6f4905e764a5fa05ebd2292c075214414b243316e1a04763ada42a4c50f1d",
+      "bytes": 997
+    },
+    {
+      "path": "at/AT-S07-02.md",
+      "sha256": "9753a8bdc64a690ed300b5050fe44e25e6feaf5ef08ea9a472628394beb7a679",
+      "bytes": 187
+    },
+    {
+      "path": "at/AT-S07-02.tap",
+      "sha256": "23b49eebd42ed52c1699465dde27bc966a5724bb0d49dd649683e0eee5ba3dcf",
+      "bytes": 1023
+    },
+    {
+      "path": "at/AT-S07-03.md",
+      "sha256": "a030c714cbe69020f778d3ecea5c4cc2d2a9a5f40d6e4619dc60f34941c99670",
+      "bytes": 193
+    },
+    {
+      "path": "at/AT-S07-03.tap",
+      "sha256": "396c3dd44cb0e80e9ab598db0eeced5cc8b3e9f40dffbfa22d46cdc7c2189192",
+      "bytes": 1034
+    },
+    {
+      "path": "live/s07_protocol_result_env.json",
+      "sha256": "2521fd30673291ae81a799677f8ab829fd55f291d03fc98b114ab86d6815df80",
+      "bytes": 13863
+    },
+    {
+      "path": "live/s07_protocol_result_git.json",
+      "sha256": "beba9381c63ef6d49788277b2c12c594ab7ed413fee74349dc12385c4d7783c2",
+      "bytes": 13863
+    },
+    {
+      "path": "worktree_repair/00_context.txt",
+      "sha256": "cdc97981d26639c3889f29849f114111da9f7bf5b15eec70019063666f7db952",
+      "bytes": 222
+    },
+    {
+      "path": "worktree_repair/01_x9_failing_state.txt",
+      "sha256": "5f9f86ac811b4e5f870ddb64865662116d4f5b02493758237d9a945546ae0e9b",
+      "bytes": 1315
+    },
+    {
+      "path": "worktree_repair/02_control_worktree_map.txt",
+      "sha256": "ac0895b89de666c1e6efd7955766fd98a1ebfea4c5909abbe1f894c843f964ad",
+      "bytes": 801
+    },
+    {
+      "path": "worktree_repair/03_repair_and_reprove.txt",
+      "sha256": "3ff48d2068bc7cd02c0a9e866371145e8980dbf8ebe333437d55f7ffcb6e6796",
+      "bytes": 10954
+    },
+    {
+      "path": "worktree_repair/04_gitdir_worktrees_listing.txt",
+      "sha256": "a86be858fe1daecad3ddc306eb72c3f1bd71f3388f3bd1dcc256eb1849a48d90",
+      "bytes": 284
+    },
+    {
+      "path": "worktree_repair/05_common_dir_and_prune_pre.txt",
+      "sha256": "fab510fbd06bc2d5d6f3d8e03dfa373198a02139e5a2ef1d2972085fcd89d1b4",
+      "bytes": 9576
+    },
+    {
+      "path": "worktree_repair/05_common_dir_path.txt",
+      "sha256": "da6d3cf89c79af23086aeb8e49d64ea126318302fea983a72ee5bde15bd93985",
+      "bytes": 58
+    },
+    {
+      "path": "worktree_repair/06_appledouble_prescan_classified.txt",
+      "sha256": "60515d03e1857d78fe5e6f944e3f33ff309f4485858d0379a31771b26f07f856",
+      "bytes": 9262
+    },
+    {
+      "path": "worktree_repair/06_appledouble_prescan_count.txt",
+      "sha256": "2450b792447daa43c94bdb5bc78933da52eecfb63584aa4bb005dd24f769ace7",
+      "bytes": 100
+    },
+    {
+      "path": "worktree_repair/06_appledouble_prescan_paths.txt",
+      "sha256": "ac06c9784e12b0c75fbed09d095bb5c0f545d14ed92112c0ecea48ef39dff09a",
+      "bytes": 9237
+    },
+    {
+      "path": "worktree_repair/07_delete_manifest_pre.jsonl",
+      "sha256": "91c40329ab820bd2ee9081db254adb9f55677867a7aafa8f0e8cd8f616fbf578",
+      "bytes": 20236
+    },
+    {
+      "path": "worktree_repair/08_delete_execution.txt",
+      "sha256": "fc318c4377649d26412ec37a48f6c6f84c806128f53b256061757ee95ff10e5c",
+      "bytes": 10053
+    },
+    {
+      "path": "worktree_repair/09_appledouble_postscan_count.txt",
+      "sha256": "e7216b9c928a647d27dadfaa127d25fe5bfb3fcab601b11fe8dc638de843e999",
+      "bytes": 101
+    },
+    {
+      "path": "worktree_repair/09_appledouble_postscan_paths.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "worktree_repair/10_reverify_post_cleanup.txt",
+      "sha256": "5b9a5b72d61d933cadea21653bab659b2374f65f78e5006876866285f15568ba",
+      "bytes": 2268
+    },
+    {
+      "path": "worktree_repair/11_preflight_branch_remediation.txt",
+      "sha256": "c6c481a9e8dcb2e82ee53ab573f68f3e90364ef36ebfb6c8d0ec6eae4c86f337",
+      "bytes": 1557
+    },
+    {
+      "path": "worktree_repair/12_primary_worktree_preflight_on_main.txt",
+      "sha256": "6be600b2071a901526292f72b40cb82718a67f266ab9d30a9d331c189c22f6c3",
+      "bytes": 9266
+    },
+    {
+      "path": "worktree_repair/13_return_to_sprint_branch.txt",
+      "sha256": "4c5ee24ca3ce97bd7a2cb1ea89bdb4052e4bc216f953fe91b989592738334a95",
+      "bytes": 3235
+    },
+    {
+      "path": "worktree_repair/14_appledouble_prescan_pass2_count.txt",
+      "sha256": "2e5cd46a9a22b9b5cf975c669d724b7d6d19a9ac6f0a0e08af4235da0120061f",
+      "bytes": 106
+    },
+    {
+      "path": "worktree_repair/14_appledouble_prescan_pass2_paths.txt",
+      "sha256": "fe6e3833953254b020f1f22978f879caf3635e3b578ed01ce3eb2338390de534",
+      "bytes": 3855
+    },
+    {
+      "path": "worktree_repair/15_delete_manifest_pre_pass2.jsonl",
+      "sha256": "5aa4e71fe0c6c6073886572d4b445bf050fc7394b1925f1db59bd38f6e76349d",
+      "bytes": 8586
+    },
+    {
+      "path": "worktree_repair/16_delete_execution_pass2.txt",
+      "sha256": "04719783ac63801857b19dee8fefaba0fe31be0f2c96aa3acf5496210d7fb666",
+      "bytes": 4180
+    },
+    {
+      "path": "worktree_repair/17_appledouble_postscan_pass2_count.txt",
+      "sha256": "65134257d001564f9864e3013d58b6628899aa4536abd2a7d6ace823035112d8",
+      "bytes": 107
+    },
+    {
+      "path": "worktree_repair/17_appledouble_postscan_pass2_paths.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "worktree_repair/18_object_health_post_pass2.txt",
+      "sha256": "34e6170ef435612158e6c5f64a3b8a671c1791d3be4b38daa83a803eb7b82ad3",
+      "bytes": 2131
+    }
+  ]
+}

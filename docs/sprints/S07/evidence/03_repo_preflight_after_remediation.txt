@@ -1,0 +1,31 @@
+### prune_dry_run
+CMD: git prune --dry-run
+0bac487c413baef023d86853c18854a8261e48e1 tree
+81d262db85f54d311f5de5dabe46bc2a5933c9eb blob
+8fa00d7e8b08dcd42f9496181defd8e483167bb5 commit
+9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c tree
+a2b8ac0ffdadbee08914c165a9562a4cd886bbbe blob
+fc7055dc01609065ad3b7549b1d15d2268e75701 blob
+ff04fe88520e398fab3ebac64df59f18f8672ee3 blob
+EXIT_CODE:0
+
+### fsck_full
+CMD: git fsck --full
+dangling commit 8fa00d7e8b08dcd42f9496181defd8e483167bb5
+dangling blob a2b8ac0ffdadbee08914c165a9562a4cd886bbbe
+dangling blob 81d262db85f54d311f5de5dabe46bc2a5933c9eb
+dangling blob ff04fe88520e398fab3ebac64df59f18f8672ee3
+dangling tree 9a070da9d3f9f45fe65d1e46a2702ce0a7cbf77c
+EXIT_CODE:0
+
+### worktree_list
+CMD: git worktree list --porcelain
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD 3c167d4853a4f051eb0cde211a818463ac739298
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD fe432b3a63acb15171cb1d73d88e1d9dc8239189
+branch refs/heads/sprint/S07-github-pr-protocol-automation
+
+EXIT_CODE:0

@@ -1,0 +1,61 @@
+CMD: git diff --name-only
+
+docs/backlog/README.md
+docs/sprints/README.md
+
+
+CMD: git ls-files --others --exclude-standard
+
+docs/sprints/S07/README.md
+docs/sprints/S07/evidence/02_primary_worktree_preflight_after_remediation.txt
+docs/sprints/S07/evidence/03_open_pr_inventory.json
+docs/sprints/S07/evidence/03_repo_preflight_after_remediation.txt
+docs/sprints/S07/evidence/04_hardstop_clearance_receipts.md
+docs/sprints/S07/evidence/05_docs_sync_proof.md
+docs/sprints/S07/evidence/06_scope_proof.txt
+docs/sprints/S07/evidence/07_gates_gates_sh_after.txt
+docs/sprints/S07/evidence/07_gates_gates_sh_final.txt
+docs/sprints/S07/evidence/07_gates_verify_after.txt
+docs/sprints/S07/evidence/07_gates_verify_final.txt
+docs/sprints/S07/evidence/07_maintainability_receipts.txt
+docs/sprints/S07/evidence/10_stoplight_greps.md
+docs/sprints/S07/evidence/90_operator_briefing.md
+docs/sprints/S07/evidence/91_proof_manifest.json
+docs/sprints/S07/evidence/92_cleanup_receipts.txt
+docs/sprints/S07/evidence/at/AT-S07-01.md
+docs/sprints/S07/evidence/at/AT-S07-01.tap
+docs/sprints/S07/evidence/at/AT-S07-02.md
+docs/sprints/S07/evidence/at/AT-S07-02.tap
+docs/sprints/S07/evidence/at/AT-S07-03.md
+docs/sprints/S07/evidence/at/AT-S07-03.tap
+docs/sprints/S07/evidence/live/s07_protocol_result_env.json
+docs/sprints/S07/evidence/live/s07_protocol_result_git.json
+scripts/s07-open-pr-protocol.ts
+src/s07/open_pr_protocol.test.ts
+src/s07/open_pr_protocol.ts
+
+
+CMD: git status --porcelain=v1
+
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+?? docs/sprints/S07/
+?? scripts/s07-open-pr-protocol.ts
+?? src/
+
+
+CMD: whitelist check
+
+changed_paths:
+- docs/backlog/README.md
+- docs/sprints/README.md
+- docs/sprints/S07/
+- scripts/s07-open-pr-protocol.ts
+- src/
+
+violations:
+- none
+
+whitelist_ok=True
+
+EXIT_CODE:0

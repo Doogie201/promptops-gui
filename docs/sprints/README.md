@@ -6,3 +6,4 @@
 - [S04 - Evaluator, Evidence Ledger, and Codecov](./S04/README.md)
 - [S05 - Command Executor + Receipts Engine](./S05/README.md)
 - [S06 - Git + Worktree Preflight Automation](./S06/README.md)
+- [S07 - GitHub PR Protocol Automation](./S07/README.md)
