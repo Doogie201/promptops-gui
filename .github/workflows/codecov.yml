@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,6 +32,11 @@ jobs:
       - name: Generate evaluator JUnit results
         run: npm run -s test:evaluator:junit
 
+      - name: Assert coverage artifacts
+        run: |
+          test -s coverage/junit.xml
+          ls coverage/tmp/coverage-*.json >/dev/null
+
       - name: Build bundle analysis artifact
         run: npm run -s build:bundle-analysis
         env:
@@ -42,12 +49,16 @@ jobs:
           files: ./coverage/tmp/*.json
           disable_search: true
           slug: Doogie201/promptops-gui
-          fail_ci_if_error: false
+          fail_ci_if_error: true
+          verbose: true
 
       - name: Upload test results to Codecov
-        uses: codecov/test-results-action@v1
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage/junit.xml
           disable_search: true
-          fail_ci_if_error: false
+          report_type: test_results
+          slug: Doogie201/promptops-gui
+          fail_ci_if_error: true
+          verbose: true
