@@ -57,3 +57,4 @@ Hashing rules:
 ## Evidence Paths
 - Staging: `/tmp/promptops/S08/**`
 - Durable: `docs/sprints/S08/evidence/**`
+- PR readiness + codex thread resolution: `docs/sprints/S08/evidence/pr_readiness/**`
