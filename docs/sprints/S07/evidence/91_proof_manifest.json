@@ -1,6 +1,6 @@
 {
   "root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S07/evidence",
-  "generated_at_utc": "2026-03-04T15:46:16Z",
+  "generated_at_utc": "2026-03-04T15:46:58Z",
   "files": [
     {
       "path": "02_primary_worktree_preflight_after_remediation.txt",
@@ -116,6 +116,11 @@
       "path": "20_gates_after_evidence_commit.txt",
       "sha256": "c3f33ee931fb97fa50cba8f94e61c138bdee4f7eb75a426f2a6aa2ec17033e67",
       "bytes": 7439
+    },
+    {
+      "path": "21_open_pr_inventory_after_push.json",
+      "sha256": "2735a818a0def2959804154642005c3d6b0660f14064961ad79d54c55b68b58f",
+      "bytes": 372
     },
     {
       "path": "42_graphql_before_11.json",
