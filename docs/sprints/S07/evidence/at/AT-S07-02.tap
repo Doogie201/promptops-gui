@@ -1,0 +1,23 @@
+CMD: node --test --experimental-transform-types --test-name-pattern 'AT-S07-02' src/s07/open_pr_protocol.test.ts
+TAP version 13
+# (node:52809) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:52809) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/src/s07/open_pr_protocol.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: AT-S07-02 readiness gate fails with explicit failing checks
+ok 1 - AT-S07-02 readiness gate fails with explicit failing checks
+  ---
+  duration_ms: 5.231708
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 171.813458
+EXIT_CODE:0

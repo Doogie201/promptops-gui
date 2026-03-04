@@ -1,0 +1,60 @@
+### pwd
+CMD: pwd
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+### show_toplevel
+CMD: git rev-parse --show-toplevel
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE:0
+
+### show_git_common_dir
+CMD: git rev-parse --git-common-dir
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04/.git
+EXIT_CODE:0
+
+### worktree_list
+CMD: git worktree list --porcelain
+worktree /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04
+HEAD 3c167d4853a4f051eb0cde211a818463ac739298
+branch refs/heads/sprint/S04-evaluator-evidence-ledger-codecov
+
+worktree /Volumes/SharedDrive/Dev/Projects/promptops-gui
+HEAD fe432b3a63acb15171cb1d73d88e1d9dc8239189
+branch refs/heads/sprint/S07-github-pr-protocol-automation
+
+EXIT_CODE:0
+
+### status_branch
+CMD: git status --porcelain=v1 --branch
+## sprint/S07-github-pr-protocol-automation...origin/sprint/S07-github-pr-protocol-automation
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+?? docs/sprints/S07/
+?? scripts/s07-open-pr-protocol.ts
+?? src/
+EXIT_CODE:0
+
+### fetch
+CMD: git fetch --all --prune --tags
+EXIT_CODE:0
+
+### ahead_behind
+CMD: git rev-list --left-right --count HEAD...origin/main
+0	0
+EXIT_CODE:0
+
+### branch
+CMD: git rev-parse --abbrev-ref HEAD
+sprint/S07-github-pr-protocol-automation
+EXIT_CODE:0
+
+### log5
+CMD: git log --oneline -5
+fe432b3 ci: switch codecov upload to lcov (#10)
+9751773 ci: harden codecov upload checks (#9)
+a7b7c76 Merge pull request #8 from Doogie201/sprint/S06-git-worktree-preflight-automation
+73ca924 fix: align primary sync probe with configured base branch
+a4631ae [S06] chore : git + worktree preflight automation
+EXIT_CODE:0
+

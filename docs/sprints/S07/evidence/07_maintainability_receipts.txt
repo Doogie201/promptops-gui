@@ -1,0 +1,48 @@
+# Maintainability receipts
+CMD: wc -l <touched files>
+     760 src/s07/open_pr_protocol.ts
+     233 src/s07/open_pr_protocol.test.ts
+      58 scripts/s07-open-pr-protocol.ts
+      26 docs/sprints/S07/README.md
+      10 docs/backlog/README.md
+       9 docs/sprints/README.md
+    1096 total
+
+CMD: rg -n ^function|^export function src/s07/open_pr_protocol.ts
+133:export function runOpenPrProtocol(config: ProtocolConfig): ProtocolResult {
+181:function resolveConfig(config: ProtocolConfig): Required<ProtocolConfig> {
+205:function resolveCanonicalRoot(cwd: string, envRoot: string): { root: string; source: 'env' | 'git' } {
+219:function buildRunState(
+238:function ensureCwdWithinCanonical(state: RunState): ProtocolResult | null {
+249:function runCanonicalPreflight(state: RunState): ProtocolResult | null {
+297:function runInventoryStage(state: RunState): { candidatePr: OpenPr | null; stop: ProtocolResult | null } {
+332:function runReadinessStage(state: RunState, prNumber: number): { stop: ProtocolResult | null } {
+367:function runCodexStage(state: RunState, prNumber: number): { stop: ProtocolResult | null } {
+427:function runMergeStage(state: RunState, prNumber: number): { stop: ProtocolResult | null; reason: ReasonCode; message: string } {
+478:function queryThreads(state: RunState, prNumber: number, id: string): PrThreadPayload {
+505:function evaluateReadinessIssues(prView: Record<string, unknown>, threads: PrThreadPayload): CheckIssue[] {
+540:function codexUnresolvedThreadIds(payload: PrThreadPayload): { unresolvedIds: string[]; allCodexCommentsCount: number } {
+556:function threadHasCodexAuthor(thread: ThreadNode): boolean {
+560:function writeGraphqlThreadQuery(state: RunState): string {
+583:function writeGraphqlMutation(state: RunState, threadId: string): string {
+596:function writeMutationWrapper(state: RunState, mutationPath: string, threadId: string): string {
+603:function runCommand(
+627:function hasObjectStoreRisk(state: RunState): boolean {
+635:function readStdout(state: RunState, id: string): string {
+646:function readExitCode(state: RunState, id: string): number {
+657:function parseAheadBehind(value: string): { ahead: number; behind: number } {
+665:function ownerFromRepo(repo: string): string {
+669:function nameFromRepo(repo: string): string {
+673:function isPreviousSprintPr(pr: OpenPr, sprintPrefix: string): boolean {
+677:function isCodexAuthor(login: string | null | undefined): boolean {
+682:function parseJsonArray<T>(input: string): T[] {
+691:function parseJsonObject(input: string): Record<string, unknown> {
+699:function passResult(
+719:function hardStop(
+740:function pushTimeline(
+757:function isWithin(candidate: string, root: string): boolean {
+
+budget_notes:
+- max touched file LOC budget: 1200
+- max net-new lines in existing file budget: 120
+- new module functions remain concise; see function index above
