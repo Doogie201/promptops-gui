@@ -1,0 +1,11 @@
+== FLEET POST-INVENTORY ==
+
+PATH	TYPE	STATUS
+----	----	------
+/Volumes/X9_DEV/Dev/Projects/promptops-gui	ACTIVE_REPO	branch=main dirty=0
+/Volumes/X9_DEV/Dev/Projects/promptops-gui.old_worktree.quarantine_20260304_173448	QUARANTINED	INERT
+/Volumes/X9_DEV/Dev/Projects/promptops-gui.quarantine_20260304_164123	QUARANTINED	INERT
+/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04.quarantine_20260304_173448	QUARANTINED	INERT
+/Volumes/SharedDrive/Dev/Projects/promptops-gui._quarantine_20260304_113232	QUARANTINED	INERT
+/Volumes/SharedDrive/Dev/Projects/promptops-gui._quarantine_20260304_133737	QUARANTINED	INERT
+/Volumes/SharedDrive/Dev/Projects/promptops-gui.identity_conflict.quarantine_20260304_173448	QUARANTINED	INERT

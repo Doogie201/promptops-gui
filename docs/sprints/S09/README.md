@@ -26,6 +26,14 @@ Deliver macOS GUI shell v1 with Setup Wizard that pins Template/Task via version
 - **Reason**: Root remediation (PROMPTOPS_REPO env var adoption) is coherent but too impactful/conflicting for hygiene PR; schedule as dedicated sprint.
 - **Evidence**: `docs/sprints/S09/evidence/gh/quarantine_20260304_164123/`
 
+## Hygiene — SharedDrive Complex Disposal
+- **Decision**: QUARANTINE_AND_DEACTIVATE — all legacy SharedDrive git roots (ROOT 3a/3b/3c) renamed with `.quarantine_20260304_173448` suffix.
+- **ROOT 3a**: AppleDouble-corrupted parent repo (`promptops-gui-S04`) on SharedDrive — pack index corruption, 6 stale branches.
+- **ROOT 3b**: Identity-conflicted independent repo at worktree-registered path on SharedDrive — `.git` directory overwrote linked worktree.
+- **ROOT 3c**: Stale worktree on X9_DEV with broken SharedDrive pointer — 5 stashes exported as patches.
+- **Canonical**: ROOT 1 (canonical repo root) confirmed PRISTINE, sole active repo.
+- **Evidence**: `docs/sprints/S09/evidence/gh/sharedrive_disposal/20260304_173448/`
+
 ## Evidence Paths
 - EVD-S09-01: `docs/sprints/S09/evidence/EVD-S09-01/`
 - EVD-S09-02: `docs/sprints/S09/evidence/EVD-S09-02/`

@@ -1,0 +1,13 @@
+== QUARANTINE RENAMES ==
+
+--- ROOT 3a: /Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04 ---
+CMD: mv '/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04' '/Volumes/SharedDrive/Dev/Worktrees/promptops-gui-S04.quarantine_20260304_173448'
+EXIT_CODE:0
+
+--- ROOT 3b: /Volumes/SharedDrive/Dev/Projects/promptops-gui ---
+CMD: mv '/Volumes/SharedDrive/Dev/Projects/promptops-gui' '/Volumes/SharedDrive/Dev/Projects/promptops-gui.identity_conflict.quarantine_20260304_173448'
+EXIT_CODE:0
+
+--- ROOT 3c: /Volumes/X9_DEV/Dev/Projects/promptops-gui._quarantine_20260304_133952 ---
+CMD: mv '/Volumes/X9_DEV/Dev/Projects/promptops-gui._quarantine_20260304_133952' '/Volumes/X9_DEV/Dev/Projects/promptops-gui.old_worktree.quarantine_20260304_173448'
+EXIT_CODE:0
