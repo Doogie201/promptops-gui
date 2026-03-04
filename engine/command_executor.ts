@@ -72,6 +72,11 @@ const COMMAND_ALLOWLIST: Record<string, CommandPolicy> = {
     timeoutMs: 45_000,
     requireRepoCwd: true,
   },
+  pwd: {
+    argPattern: /^[A-Za-z0-9_./:@=,+-]+$/,
+    timeoutMs: 5_000,
+    requireRepoCwd: false,
+  },
 };
 
 const SAFE_ENV_NAMES = new Set([
@@ -221,7 +226,9 @@ function validateRequest(req: CommandRequest, roots: string[]): ValidationResult
       return { error: `policy denied: argument '${arg}' violates allowlist token pattern`, cwd, repoRoot };
     }
 
-    if (arg.includes('..') || arg.startsWith('~')) {
+    const hasPathTraversalPattern =
+      arg === '..' || arg.startsWith('../') || arg.includes('/../') || arg.endsWith('/..');
+    if (hasPathTraversalPattern || arg.startsWith('~')) {
       return { error: `policy denied: unsafe path token '${arg}'`, cwd, repoRoot };
     }
 
