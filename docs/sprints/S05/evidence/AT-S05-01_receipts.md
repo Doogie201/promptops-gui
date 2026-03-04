@@ -36,4 +36,3 @@ Command evidence source: `EVD-S05-02_whitelist_violation_proofs.jsonl`
 - exit_code: `126`
 - stderr: `policy denied: policy denied: path '/etc' is outside allowlisted roots`
 - receipt_path: `/private/tmp/promptops/S05/security/at-s05-01/1772585723693-86839-54872edba4aa.receipt.json`
-
