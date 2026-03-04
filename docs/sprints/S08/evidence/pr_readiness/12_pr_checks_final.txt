@@ -1,5 +1,5 @@
-coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
-coverage	pass	59s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
+coverage	pass	59s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	checks completed successfully
-verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665

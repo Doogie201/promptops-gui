@@ -1,245 +1,245 @@
 [2026-03-04T17:41:39Z] poll=1
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
-verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
 ----
 [2026-03-04T17:41:56Z] poll=2
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:42:12Z] poll=3
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:42:28Z] poll=4
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:42:45Z] poll=5
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:43:01Z] poll=6
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:43:18Z] poll=7
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:43:34Z] poll=8
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:43:51Z] poll=9
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:44:07Z] poll=10
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:44:23Z] poll=11
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:44:40Z] poll=12
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:44:56Z] poll=13
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:45:12Z] poll=14
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:45:29Z] poll=15
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:45:45Z] poll=16
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:46:02Z] poll=17
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:46:18Z] poll=18
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:46:35Z] poll=19
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:46:51Z] poll=20
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:47:07Z] poll=21
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:47:24Z] poll=22
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:47:40Z] poll=23
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:47:57Z] poll=24
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:48:13Z] poll=25
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:48:29Z] poll=26
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:48:46Z] poll=27
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:49:02Z] poll=28
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:49:19Z] poll=29
-coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772	
+coverage	pass	33s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605086/job/65753331929
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608393/job/65753341772
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646064.CuAhd9oJR6mkNlY3nypPAQ	checks completed successfully
-verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885	
-verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394	
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22681605074/job/65753331885
+verify	pass	30s	https://github.com/Doogie201/promptops-gui/actions/runs/22681608497/job/65753342394
 ----
 [2026-03-04T17:49:35Z] poll=30
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
 pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	queued
-verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665
 ----
 [2026-03-04T17:49:52Z] poll=31
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
-verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	checks completed successfully
 ----
 [2026-03-04T17:50:08Z] poll=32
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
-coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	checks completed successfully
-verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665
 ----
 [2026-03-04T17:50:24Z] poll=33
-coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
-coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	checks completed successfully
-verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665
 ----
 [2026-03-04T17:50:40Z] poll=34
-coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
-coverage	pass	59s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
+coverage	pass	59s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	checks completed successfully
-verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665
 ----
 [2026-03-04T17:50:57Z] poll=35
-coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363	
-coverage	pass	59s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767	
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931519/job/65754499363
+coverage	pass	59s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932721/job/65754502767
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772646573.95FyWl5PSp-v0HRjBPLjHQ	checks completed successfully
-verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375	
-verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665	
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22681931533/job/65754499375
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22681932725/job/65754502665
 ----
