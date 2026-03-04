@@ -5,9 +5,9 @@ CMD: gh pr view 13 --repo Doogie201/promptops-gui --json number,title,state,merg
 EXIT_CODE: 0
 
 CMD: gh pr checks 13 --repo Doogie201/promptops-gui --watch=false
-coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22685269715/job/65766421379	
-coverage	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22685271550/job/65766413749	
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22685269715/job/65766421379
+coverage	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22685271550/job/65766413749
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772651949._nLpH8yhQJCiHScdDKPVVA	checks completed successfully
-verify	pass	29s	https://github.com/Doogie201/promptops-gui/actions/runs/22685269710/job/65766406373	
-verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22685271585/job/65766413721	
+verify	pass	29s	https://github.com/Doogie201/promptops-gui/actions/runs/22685269710/job/65766406373
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22685271585/job/65766413721
 EXIT_CODE: 0
