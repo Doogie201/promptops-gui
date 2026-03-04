@@ -57,4 +57,3 @@ a7b7c76 Merge pull request #8 from Doogie201/sprint/S06-git-worktree-preflight-a
 73ca924 fix: align primary sync probe with configured base branch
 a4631ae [S06] chore : git + worktree preflight automation
 EXIT_CODE:0
-
