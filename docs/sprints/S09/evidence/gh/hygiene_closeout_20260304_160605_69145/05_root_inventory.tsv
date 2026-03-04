@@ -1,0 +1,7 @@
+root	branch	dirty	ahead	behind	prune_exit	fsck_exit	integrity	status
+/Volumes/X9_DEV/Dev/Projects/promptops-gui	sprint/S08-agent-adapters-v1-continuity	1	8	1	0	0	PASS	OK
+/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt	main	0	0	1	0	0	PASS	OK
+/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui	main	0	0	0	0	0	PASS	OK
+/private/tmp/promptops/S09/20260304_140939_31327/repo	sprint/S09-gui-shell-setup-wizard-agent-switching	0	5	0	0	0	PASS	OK
+/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo	main	0	0	0	0	0	PASS	OK
+/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo	sprint/S09-gui-shell-setup-wizard-agent-switching	0	NA	NA	0	0	PASS	OK

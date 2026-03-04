@@ -1,0 +1,6 @@
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
+/private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui
+/private/tmp/promptops/S09/20260304_140939_31327/repo
+/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo
+/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo

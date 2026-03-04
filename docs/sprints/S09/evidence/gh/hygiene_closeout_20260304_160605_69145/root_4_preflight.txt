@@ -1,0 +1,55 @@
+ROOT_INDEX=4
+ROOT=/private/tmp/promptops/S09/20260304_140939_31327/repo
+START_UTC=2026-03-04T21:07:33Z
+CMD: pwd -P
+/Volumes/X9_DEV/Dev
+EXIT_CODE: 0
+
+CMD: echo "/private/tmp/promptops/S09/20260304_140939_31327/repo"
+/private/tmp/promptops/S09/20260304_140939_31327/repo
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" rev-parse --show-toplevel
+/private/tmp/promptops/S09/20260304_140939_31327/repo
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" worktree list --porcelain
+worktree /private/tmp/promptops/S09/20260304_140939_31327/repo
+HEAD 9922656a0ef9a16a34db77829912770b08340374
+branch refs/heads/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" status --porcelain=v1 --branch
+## sprint/S09-gui-shell-setup-wizard-agent-switching...origin/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" fetch --all --prune --tags
+From github.com:Doogie201/promptops-gui
+   9922656..9319d0f  sprint/S09-gui-shell-setup-wizard-agent-switching -> origin/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" rev-list --left-right --count HEAD...origin/main
+5	0
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" rev-parse --abbrev-ref HEAD
+sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" log --oneline -5
+9922656 docs: add S09 PR sync receipts
+126b0d0 [pre-commit.ci] auto fixes from pre-commit.com hooks
+24f063b docs: refresh S09 evidence receipts
+67d0900 [pre-commit.ci] auto fixes from pre-commit.com hooks
+1f0fc5f [S09] nav : gui shell v1 + setup wizard + agent switching
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" prune --dry-run
+
+EXIT_CODE: 0
+
+CMD: git -C "/private/tmp/promptops/S09/20260304_140939_31327/repo" fsck --no-reflogs
+dangling commit 5e322f92b92fc627be969da4efdc52afcc351b71
+dangling commit 2f671e7389d46ce19e6077a44e783ddcec43c587
+EXIT_CODE: 0
+

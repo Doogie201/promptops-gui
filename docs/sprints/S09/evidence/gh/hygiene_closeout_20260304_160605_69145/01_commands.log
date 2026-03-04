@@ -1,0 +1,278 @@
+[2026-03-04T21:06:14Z] CMD: pwd -P
+/Volumes/X9_DEV/Dev
+EXIT_CODE: 0
+[2026-03-04T21:06:14Z] CMD: echo "/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo"
+/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo
+EXIT_CODE: 0
+[2026-03-04T21:06:14Z] CMD: git -C "/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo" rev-parse --show-toplevel
+/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo
+EXIT_CODE: 0
+HARD STOP: REPO_ROOT_MISMATCH
+[2026-03-04T21:06:25Z] CMD: pwd -P
+/Volumes/X9_DEV/Dev
+EXIT_CODE: 0
+[2026-03-04T21:06:25Z] CMD: echo "/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo"
+/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo
+EXIT_CODE: 0
+[2026-03-04T21:06:25Z] CMD: git -C "/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo" rev-parse --show-toplevel
+/private/tmp/promptops/S09/closeout_cert/20260304_150150_56401/repo
+EXIT_CODE: 0
+[2026-03-04T21:06:35Z] CMD: gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt
+EXIT_CODE: 0
+[2026-03-04T21:07:35Z] CMD: fleet preflight loop across promptops-gui roots
+EXIT_CODE: 0
+## REMEDIATION R1: ff-only update on main
+ROOT=/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" rev-parse --abbrev-ref HEAD
+main
+EXIT_CODE: 0
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" rev-list --left-right --count HEAD...origin/main (before)
+0	1
+EXIT_CODE: 0
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" pull --ff-only origin main
+Updating 91a9263..83ba4d3
+Fast-forward
+ docs/backlog/README.md                             |   1 +
+ docs/sprints/README.md                             |   1 +
+ docs/sprints/S08/README.md                         |  60 +++++
+ .../claude-run-0002.normalized_output.json         |  32 +++
+ .../adapters/claude-run-0002.request.jsonl         |   1 +
+ .../adapters/claude-run-0002.response.jsonl        |   1 +
+ .../claude-run-0004.normalized_output.json         |  32 +++
+ .../adapters/claude-run-0004.request.jsonl         |   1 +
+ .../adapters/claude-run-0004.response.jsonl        |   1 +
+ .../adapters/codex-run-0001.normalized_output.json |  32 +++
+ .../evidence/adapters/codex-run-0001.request.jsonl |   1 +
+ .../adapters/codex-run-0001.response.jsonl         |   1 +
+ docs/sprints/S08/evidence/at/AT-S08-01_run.json    |  40 +++
+ docs/sprints/S08/evidence/at/AT-S08-02_run.json    |  22 ++
+ docs/sprints/S08/evidence/at/AT-S08-03_run.json    |  16 ++
+ docs/sprints/S08/evidence/at/AT-S08-all-final.tap  |  52 ++++
+ docs/sprints/S08/evidence/at/AT-S08-all.tap        |  34 +++
+ .../AT-S08-01_checkpoint-01.continuity_packet.json |  64 +++++
+ ...T-S08-01_checkpoint-01.continuity_packet.sha256 |   1 +
+ .../AT-S08-01_checkpoint-02.continuity_packet.json |  64 +++++
+ ...T-S08-01_checkpoint-02.continuity_packet.sha256 |   1 +
+ ...T-S08-02_checkpoint-auto.continuity_packet.json |  64 +++++
+ ...S08-02_checkpoint-auto.continuity_packet.sha256 |   1 +
+ .../AT-S08-03_packet-a.continuity_packet.json      |  64 +++++
+ .../AT-S08-03_packet-a.continuity_packet.sha256    |   1 +
+ .../AT-S08-03_packet-b.continuity_packet.json      |  64 +++++
+ .../AT-S08-03_packet-b.continuity_packet.sha256    |   1 +
+ docs/sprints/S08/evidence/continuity_hash_proof.md |   9 +
+ .../S08/evidence/contract_input_example.json       |  63 +++++
+ .../S08/evidence/contract_output_example.json      |  32 +++
+ docs/sprints/S08/evidence/gates/00_npm_ci.txt      |  13 +
+ .../S08/evidence/gates/01_verify_initial_fail.txt  |   3 +
+ .../S08/evidence/gates/04_verify_after_npm_ci.txt  | 151 ++++++++++++
+ .../S08/evidence/gates/05_gates_after_npm_ci.txt   | 167 +++++++++++++
+ .../S08/evidence/gates/06_verify_retry_pass.txt    | 164 +++++++++++++
+ docs/sprints/S08/evidence/gates/08_scope_proof.txt |  52 ++++
+ .../gates/09_maintainability_budget_eval.txt       |  76 ++++++
+ .../sprints/S08/evidence/gates/10_verify_final.txt | 164 +++++++++++++
+ docs/sprints/S08/evidence/gates/11_gates_final.txt | 167 +++++++++++++
+ .../S08/evidence/gates/12_precommit_all_files.txt  |  17 ++
+ .../gates/13_precommit_all_files_retry_pass.txt    |   8 +
+ .../evidence/gates/14_verify_post_review_fixes.txt | 164 +++++++++++++
+ .../evidence/gates/15_gates_post_review_fixes.txt  | 167 +++++++++++++
+ .../gates/16_precommit_post_review_fixes.txt       |   8 +
+ docs/sprints/S08/evidence/open_pr/00_pr_list.json  |   1 +
+ .../S08/evidence/open_pr/00_pr_list_receipt.txt    |   3 +
+ .../evidence/open_pr/01_pr_list_before_create.json |   1 +
+ .../S08/evidence/pr_readiness/01_checks_watch.txt  | 245 +++++++++++++++++++
+ .../S08/evidence/pr_readiness/02_pr_view.json      |   1 +
+ .../pr_readiness/03_review_threads_graphql.json    |   1 +
+ .../S08/evidence/pr_readiness/04_pr_checks.txt     |   5 +
+ .../05_review_threads_before_resolve.json          |   1 +
+ .../pr_readiness/06_codex_resolution_comment.md    |  11 +
+ .../pr_readiness/07_codex_threads_before.json      |   1 +
+ .../pr_readiness/08_codex_thread_mutations.jsonl   |   3 +
+ .../pr_readiness/09_codex_threads_after.json       |   1 +
+ .../pr_readiness/10_checks_until_green.txt         |  14 ++
+ .../pr_readiness/11_pr_readiness_final.json        |   1 +
+ .../evidence/pr_readiness/12_pr_checks_final.txt   |   5 +
+ .../pr_readiness/13_unresolved_threads_count.txt   |   1 +
+ .../evidence/pr_readiness/14_pr_readiness_eval.md  |  16 ++
+ .../pr_readiness/15_checks_after_final_push.txt    |  28 +++
+ .../16_pr_readiness_final_after_push.json          |   1 +
+ .../pr_readiness/17_pr_checks_final_after_push.txt |   5 +
+ .../18_review_threads_final_after_push.json        |   1 +
+ .../pr_readiness/19_pr_readiness_eval_final.md     |  17 ++
+ .../evidence/preflight/01_primary_preflight.txt    |  53 ++++
+ .../evidence/preflight/02_branch_and_context.txt   |  15 ++
+ .../evidence/preflight/03_active_repo_context.txt  |  11 +
+ .../06_docs_s08_appledouble_cleanup_3.txt          |  13 +
+ .../S08/evidence/stoplight/01_stoplight_greps.md   |  21 ++
+ src/s08/agent_adapters.ts                          | 242 +++++++++++++++++++
+ src/s08/continuity_packet.ts                       |  81 +++++++
+ src/s08/contract.ts                                | 122 ++++++++++
+ src/s08/s08.test.ts                                | 268 +++++++++++++++++++++
+ src/s08/switching.ts                               | 165 +++++++++++++
+ 76 files changed, 3432 insertions(+)
+ create mode 100644 docs/sprints/S08/README.md
+ create mode 100644 docs/sprints/S08/evidence/adapters/claude-run-0002.normalized_output.json
+ create mode 100644 docs/sprints/S08/evidence/adapters/claude-run-0002.request.jsonl
+ create mode 100644 docs/sprints/S08/evidence/adapters/claude-run-0002.response.jsonl
+ create mode 100644 docs/sprints/S08/evidence/adapters/claude-run-0004.normalized_output.json
+ create mode 100644 docs/sprints/S08/evidence/adapters/claude-run-0004.request.jsonl
+ create mode 100644 docs/sprints/S08/evidence/adapters/claude-run-0004.response.jsonl
+ create mode 100644 docs/sprints/S08/evidence/adapters/codex-run-0001.normalized_output.json
+ create mode 100644 docs/sprints/S08/evidence/adapters/codex-run-0001.request.jsonl
+ create mode 100644 docs/sprints/S08/evidence/adapters/codex-run-0001.response.jsonl
+ create mode 100644 docs/sprints/S08/evidence/at/AT-S08-01_run.json
+ create mode 100644 docs/sprints/S08/evidence/at/AT-S08-02_run.json
+ create mode 100644 docs/sprints/S08/evidence/at/AT-S08-03_run.json
+ create mode 100644 docs/sprints/S08/evidence/at/AT-S08-all-final.tap
+ create mode 100644 docs/sprints/S08/evidence/at/AT-S08-all.tap
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-01.continuity_packet.json
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-01.continuity_packet.sha256
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-02.continuity_packet.json
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-01_checkpoint-02.continuity_packet.sha256
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-02_checkpoint-auto.continuity_packet.json
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-02_checkpoint-auto.continuity_packet.sha256
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-03_packet-a.continuity_packet.json
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-03_packet-a.continuity_packet.sha256
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-03_packet-b.continuity_packet.json
+ create mode 100644 docs/sprints/S08/evidence/continuity/AT-S08-03_packet-b.continuity_packet.sha256
+ create mode 100644 docs/sprints/S08/evidence/continuity_hash_proof.md
+ create mode 100644 docs/sprints/S08/evidence/contract_input_example.json
+ create mode 100644 docs/sprints/S08/evidence/contract_output_example.json
+ create mode 100644 docs/sprints/S08/evidence/gates/00_npm_ci.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/01_verify_initial_fail.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/04_verify_after_npm_ci.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/05_gates_after_npm_ci.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/06_verify_retry_pass.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/08_scope_proof.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/09_maintainability_budget_eval.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/10_verify_final.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/11_gates_final.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/12_precommit_all_files.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/13_precommit_all_files_retry_pass.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/14_verify_post_review_fixes.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/15_gates_post_review_fixes.txt
+ create mode 100644 docs/sprints/S08/evidence/gates/16_precommit_post_review_fixes.txt
+ create mode 100644 docs/sprints/S08/evidence/open_pr/00_pr_list.json
+ create mode 100644 docs/sprints/S08/evidence/open_pr/00_pr_list_receipt.txt
+ create mode 100644 docs/sprints/S08/evidence/open_pr/01_pr_list_before_create.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/01_checks_watch.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/02_pr_view.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/03_review_threads_graphql.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/04_pr_checks.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/05_review_threads_before_resolve.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/06_codex_resolution_comment.md
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/07_codex_threads_before.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/08_codex_thread_mutations.jsonl
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/09_codex_threads_after.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/10_checks_until_green.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/11_pr_readiness_final.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/12_pr_checks_final.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/13_unresolved_threads_count.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/14_pr_readiness_eval.md
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/15_checks_after_final_push.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/16_pr_readiness_final_after_push.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/17_pr_checks_final_after_push.txt
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/18_review_threads_final_after_push.json
+ create mode 100644 docs/sprints/S08/evidence/pr_readiness/19_pr_readiness_eval_final.md
+ create mode 100644 docs/sprints/S08/evidence/preflight/01_primary_preflight.txt
+ create mode 100644 docs/sprints/S08/evidence/preflight/02_branch_and_context.txt
+ create mode 100644 docs/sprints/S08/evidence/preflight/03_active_repo_context.txt
+ create mode 100644 docs/sprints/S08/evidence/preflight/06_docs_s08_appledouble_cleanup_3.txt
+ create mode 100644 docs/sprints/S08/evidence/stoplight/01_stoplight_greps.md
+ create mode 100644 src/s08/agent_adapters.ts
+ create mode 100644 src/s08/continuity_packet.ts
+ create mode 100644 src/s08/contract.ts
+ create mode 100644 src/s08/s08.test.ts
+ create mode 100644 src/s08/switching.ts
+EXIT_CODE: 0
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" rev-list --left-right --count HEAD...origin/main (after)
+0	0
+EXIT_CODE: 0
+CMD: git -C "/private/tmp/promptops/S08-root-remediation/20260304_133528_16674/alt_repo/promptops-gui-alt" status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE: 0
+
+## REMEDIATION R2: ensure origin/main exists for rev-list accounting
+ROOT=/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" rev-list --left-right --count HEAD...origin/main (before)
+EXIT_CODE: 128
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" fetch origin main:refs/remotes/origin/main
+EXIT_CODE: 0
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" rev-list --left-right --count HEAD...origin/main (after)
+7	0
+EXIT_CODE: 0
+CMD: git -C "/private/tmp/promptops/S09/thread_remediation/20260304_151603_59417/repo" status --porcelain=v1 --branch
+## sprint/S09-gui-shell-setup-wizard-agent-switching...origin/sprint/S09-gui-shell-setup-wizard-agent-switching
+EXIT_CODE: 0
+
+## REMEDIATION R3: classify dirty/behind X9 root (no mutation)
+ROOT=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+CMD: git -C "/Volumes/X9_DEV/Dev/Projects/promptops-gui" status --porcelain=v1 --branch
+## sprint/S08-agent-adapters-v1-continuity...origin/sprint/S08-agent-adapters-v1-continuity [gone]
+ M docs/sprints/S06/README.md
+ M docs/sprints/S07/README.md
+ M docs/sprints/S08/README.md
+ M scripts/migration-sim.sh
+ M scripts/preflight.sh
+ M scripts/s07-open-pr-protocol.ts
+ M scripts/verify.sh
+ M src/s07/open_pr_protocol.ts
+?? docs/sprints/S08/MIGRATION_PLAYBOOK.md
+?? docs/sprints/S08/evidence/gh/
+EXIT_CODE: 0
+CMD: git -C "/Volumes/X9_DEV/Dev/Projects/promptops-gui" diff --stat
+ docs/sprints/S06/README.md      |   2 +-
+ docs/sprints/S07/README.md      |   2 +-
+ docs/sprints/S08/README.md      |   2 +
+ scripts/migration-sim.sh        |  13 ++++-
+ scripts/preflight.sh            | 106 +++++++++++++++++++++++++++++++++++-----
+ scripts/s07-open-pr-protocol.ts |   2 +-
+ scripts/verify.sh               |  17 ++++++-
+ src/s07/open_pr_protocol.ts     |   3 +-
+ 8 files changed, 127 insertions(+), 20 deletions(-)
+EXIT_CODE: 0
+CMD: git -C "/Volumes/X9_DEV/Dev/Projects/promptops-gui" status --porcelain=v1 --untracked-files=all
+ M docs/sprints/S06/README.md
+ M docs/sprints/S07/README.md
+ M docs/sprints/S08/README.md
+ M scripts/migration-sim.sh
+ M scripts/preflight.sh
+ M scripts/s07-open-pr-protocol.ts
+ M scripts/verify.sh
+ M src/s07/open_pr_protocol.ts
+?? docs/sprints/S08/MIGRATION_PLAYBOOK.md
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/00_clone.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/00_context.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/01_resolved_repo_root.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/01_step0_step1_preflight.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/01_step0_step1_preflight_rerun.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/02_open_pr_inventory.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/02_open_pr_inventory_eval.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/03_snapshot_a_pr.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/03a_snapshot_a_checks_raw.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/04_snapshot_a_threads_comments.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/04_snapshot_a_threads_graphql.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/05_snapshot_a_eval.md
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/06_timing_wait.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/07_snapshot_b_pr.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/07a_snapshot_b_checks_raw.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/08_snapshot_b_threads_graphql.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/09_snapshot_b_eval.md
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/10_stability_eval.md
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/11_merge_cmd.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/12_post_merge_pr_state.json
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/13_post_merge_local_sync.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/14_post_merge_log.txt
+?? docs/sprints/S08/evidence/gh/merge_run_R4_20260304_135258/16_durable_copy_receipt.txt
+EXIT_CODE: 0
+DECISION: QUARANTINE_LOGICAL=1 reason=UNKNOWN_INTENT_DIRTY_BRANCH_and_NOT_MAIN
+REMEDIATION_PLAN: human-review-or-save-patch -> checkout main -> pull --ff-only -> rerun preflight
+[2026-03-04T21:09:38Z] CMD: gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt
+EXIT_CODE: 0
+[2026-03-04T21:09:38Z] CMD: gh pr view 13 --repo Doogie201/promptops-gui --json number,title,headRefName,baseRefName,state,mergeable,mergeStateStatus,reviewDecision,statusCheckRollup,labels,body,url,updatedAt,headRefOid
+EXIT_CODE: 0
+[2026-03-04T21:09:39Z] CMD: gh api graphql PR threads/comments snapshot A
+EXIT_CODE: 0
+[2026-03-04T21:12:55Z] CMD: gh pr view 13 --repo Doogie201/promptops-gui --json number,title,headRefName,baseRefName,state,mergeable,mergeStateStatus,reviewDecision,statusCheckRollup,labels,body,url,updatedAt,headRefOid
+EXIT_CODE: 0
+[2026-03-04T21:12:56Z] CMD: gh api graphql PR threads/comments snapshot B
+EXIT_CODE: 0

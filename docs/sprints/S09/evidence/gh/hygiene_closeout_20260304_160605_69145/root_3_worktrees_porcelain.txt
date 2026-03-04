@@ -1,0 +1,4 @@
+worktree /private/tmp/promptops/S08/gh/merge_run_R4_20260304_135258/staging/promptops-gui
+HEAD 83ba4d32b2a449332d50924318f03282a39568f9
+branch refs/heads/main
+

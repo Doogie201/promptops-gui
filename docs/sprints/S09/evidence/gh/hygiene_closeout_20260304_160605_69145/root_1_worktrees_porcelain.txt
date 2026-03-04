@@ -1,0 +1,4 @@
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD c059e25258c5345b5e3828cfd17f73825f28a688
+branch refs/heads/sprint/S08-agent-adapters-v1-continuity
+
