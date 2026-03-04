@@ -27,6 +27,14 @@ jobs:
       - name: Generate evaluator coverage
         run: npm run -s coverage:evaluator
 
+      - name: Generate evaluator JUnit results
+        run: npm run -s test:evaluator:junit
+
+      - name: Build bundle analysis artifact
+        run: npm run -s build:bundle-analysis
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
@@ -34,4 +42,12 @@ jobs:
           files: ./coverage/tmp/*.json
           disable_search: true
           slug: Doogie201/promptops-gui
+          fail_ci_if_error: false
+
+      - name: Upload test results to Codecov
+        uses: codecov/test-results-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/junit.xml
+          disable_search: true
           fail_ci_if_error: false
