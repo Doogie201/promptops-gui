@@ -31,6 +31,8 @@ export type ReasonCode =
   | 'HARD_STOP_CANONICAL_CWD_MISMATCH'
   | 'HARD_STOP_PRIMARY_WORKTREE_NOT_ON_MAIN_NOT_SYNCED'
   | 'HARD_STOP_OBJECT_STORE_RISK'
+  | 'HARD_STOP_GH_INVENTORY_FAILED'
+  | 'HARD_STOP_GH_THREADS_QUERY_FAILED'
   | 'HARD_STOP_BRANCH_NONCOMPLIANCE';
 
 export interface TimelineEntry {
@@ -118,6 +120,11 @@ interface PrThreadPayload {
       };
     };
   };
+}
+
+interface ThreadQueryResult {
+  payload: PrThreadPayload;
+  receipt: CommandReceipt;
 }
 
 interface CheckIssue {
@@ -275,6 +282,16 @@ function runCanonicalPreflight(state: RunState): ProtocolResult | null {
     );
   }
 
+  if (readExitCode(state, 'pre_ahead_behind') !== 0) {
+    return hardStop(
+      state,
+      'INVENTORY',
+      'HARD_STOP_PRIMARY_WORKTREE_NOT_ON_MAIN_NOT_SYNCED',
+      'Ahead/behind probe failed; cannot prove canonical root sync state.',
+      { command: 'git rev-list --left-right --count HEAD...origin/<base>' },
+    );
+  }
+
   if (!state.config.enforceMainPreflight) return null;
   const branch = readStdout(state, 'pre_branch').trim();
   const statusRaw = readStdout(state, 'pre_status');
@@ -307,6 +324,18 @@ function runInventoryStage(state: RunState): { candidatePr: OpenPr | null; stop:
   const outPath = path.join(state.config.stagingRoot, 'gh', '00_pr_list.json');
   fs.writeFileSync(outPath, receipt.stdout || '[]', 'utf8');
   state.evidence.gh_inventory_json = outPath;
+  if (receipt.exit_code !== 0) {
+    return {
+      candidatePr: null,
+      stop: hardStop(
+        state,
+        'INVENTORY',
+        'HARD_STOP_GH_INVENTORY_FAILED',
+        'Open PR inventory command failed.',
+        { exit_code: receipt.exit_code, stderr: receipt.stderr },
+      ),
+    };
+  }
   const prs = parseJsonArray<OpenPr>(receipt.stdout);
 
   if (prs.length === 0) {
@@ -349,8 +378,19 @@ function runReadinessStage(state: RunState, prNumber: number): { stop: ProtocolR
   );
 
   const threads = queryThreads(state, prNumber, `threads_before_${prNumber}`);
+  if (threads.receipt.exit_code !== 0) {
+    return {
+      stop: hardStop(
+        state,
+        'READINESS',
+        'HARD_STOP_GH_THREADS_QUERY_FAILED',
+        `PR #${prNumber} thread query failed during readiness.`,
+        { exit_code: threads.receipt.exit_code, stderr: threads.receipt.stderr },
+      ),
+    };
+  }
   const prView = parseJsonObject(readStdout(state, `pr_view_${prNumber}`));
-  const issues = evaluateReadinessIssues(prView, threads);
+  const issues = evaluateReadinessIssues(prView, threads.payload);
   if (issues.length === 0) return { stop: null };
 
   return {
@@ -367,7 +407,18 @@ function runReadinessStage(state: RunState, prNumber: number): { stop: ProtocolR
 function runCodexStage(state: RunState, prNumber: number): { stop: ProtocolResult | null } {
   pushTimeline(state, 'CODEX_SCAN', 'RUNNING', 'NO_CODEX_THREADS', `Scanning codex threads for PR #${prNumber}.`, []);
   const before = queryThreads(state, prNumber, `threads_before_${prNumber}`);
-  const codex = codexUnresolvedThreadIds(before);
+  if (before.receipt.exit_code !== 0) {
+    return {
+      stop: hardStop(
+        state,
+        'CODEX_SCAN',
+        'HARD_STOP_GH_THREADS_QUERY_FAILED',
+        `PR #${prNumber} thread query failed during codex scan.`,
+        { exit_code: before.receipt.exit_code, stderr: before.receipt.stderr },
+      ),
+    };
+  }
+  const codex = codexUnresolvedThreadIds(before.payload);
   const codexEvidence = state.evidence[`threads_before_${prNumber}`];
 
   if (codex.allCodexCommentsCount === 0) {
@@ -410,7 +461,18 @@ function runCodexStage(state: RunState, prNumber: number): { stop: ProtocolResul
     );
   }
   const after = queryThreads(state, prNumber, `threads_after_${prNumber}`);
-  const remaining = codexUnresolvedThreadIds(after).unresolvedIds;
+  if (after.receipt.exit_code !== 0) {
+    return {
+      stop: hardStop(
+        state,
+        'CODEX_RESOLVE',
+        'HARD_STOP_GH_THREADS_QUERY_FAILED',
+        `PR #${prNumber} post-resolution thread query failed.`,
+        { exit_code: after.receipt.exit_code, stderr: after.receipt.stderr },
+      ),
+    };
+  }
+  const remaining = codexUnresolvedThreadIds(after.payload).unresolvedIds;
   if (remaining.length === 0) return { stop: null };
 
   return {
@@ -475,7 +537,7 @@ function runMergeStage(state: RunState, prNumber: number): { stop: ProtocolResul
   return { stop: null, reason: 'MERGE_EXECUTED', message: 'Protocol completed with merge execution.' };
 }
 
-function queryThreads(state: RunState, prNumber: number, id: string): PrThreadPayload {
+function queryThreads(state: RunState, prNumber: number, id: string): ThreadQueryResult {
   const queryPath = writeGraphqlThreadQuery(state);
   const receipt = runCommand(
     state,
@@ -499,7 +561,10 @@ function queryThreads(state: RunState, prNumber: number, id: string): PrThreadPa
   const outPath = path.join(state.config.stagingRoot, 'codex', `${id}.json`);
   fs.writeFileSync(outPath, receipt.stdout || '{}', 'utf8');
   state.evidence[id] = outPath;
-  return parseJsonObject(receipt.stdout) as PrThreadPayload;
+  return {
+    payload: parseJsonObject(receipt.stdout) as PrThreadPayload,
+    receipt,
+  };
 }
 
 function evaluateReadinessIssues(prView: Record<string, unknown>, threads: PrThreadPayload): CheckIssue[] {

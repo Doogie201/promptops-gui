@@ -231,3 +231,69 @@ test('AT-S07-03 codex unresolved thread resolves via GraphQL and passes', () => 
   assert.ok(result.timeline.some((item) => item.stage === 'CODEX_RESOLVE'));
   assert.ok(path.isAbsolute(result.canonical_root));
 });
+
+test('inventory command failure triggers HARD_STOP_GH_INVENTORY_FAILED', () => {
+  const result = runWithMock({}, (req) => {
+    const pre = preflightReceipt(req.command, req.args);
+    if (pre.stdout || req.command !== 'gh') return pre;
+    if (req.args[0] === 'pr' && req.args[1] === 'list') {
+      return makeReceipt('', 'gh auth expired', 1);
+    }
+    return makeReceipt('');
+  });
+
+  assert.strictEqual(result.status, 'HARD_STOP');
+  assert.strictEqual(result.reason_code, 'HARD_STOP_GH_INVENTORY_FAILED');
+});
+
+test('ahead-behind probe failure hard-stops primary sync preflight', () => {
+  const result = runWithMock({}, (req) => {
+    if (req.command === 'git' && req.args.join(' ') === 'rev-list --left-right --count HEAD...origin/main') {
+      return makeReceipt('', 'fatal: bad revision', 1);
+    }
+    return preflightReceipt(req.command, req.args);
+  });
+
+  assert.strictEqual(result.status, 'HARD_STOP');
+  assert.strictEqual(result.reason_code, 'HARD_STOP_PRIMARY_WORKTREE_NOT_ON_MAIN_NOT_SYNCED');
+});
+
+test('thread query failure triggers HARD_STOP_GH_THREADS_QUERY_FAILED', () => {
+  const result = runWithMock({}, (req) => {
+    const pre = preflightReceipt(req.command, req.args);
+    if (pre.stdout || req.command !== 'gh') return pre;
+    if (req.args[0] === 'pr' && req.args[1] === 'list') {
+      return makeReceipt(
+        JSON.stringify([
+          {
+            number: 400,
+            title: '[S06] chore : git + worktree preflight automation',
+            headRefName: 'sprint/S06-git-worktree-preflight-automation',
+            baseRefName: 'main',
+            url: 'https://example/pr/400',
+            updatedAt: '2026-03-04T00:00:00Z',
+          },
+        ]),
+      );
+    }
+    if (req.args[0] === 'pr' && req.args[1] === 'view') {
+      return makeReceipt(
+        JSON.stringify({
+          number: 400,
+          mergeable: 'MERGEABLE',
+          mergeStateStatus: 'CLEAN',
+          reviewDecision: 'APPROVED',
+          statusCheckRollup: [{ name: 'verify', status: 'COMPLETED', conclusion: 'SUCCESS' }],
+          comments: [],
+        }),
+      );
+    }
+    if (req.args[0] === 'api' && req.args[1] === 'graphql') {
+      return makeReceipt('', 'GraphQL timeout', 1);
+    }
+    return makeReceipt('');
+  });
+
+  assert.strictEqual(result.status, 'HARD_STOP');
+  assert.strictEqual(result.reason_code, 'HARD_STOP_GH_THREADS_QUERY_FAILED');
+});
