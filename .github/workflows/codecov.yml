@@ -35,7 +35,7 @@ jobs:
       - name: Assert coverage artifacts
         run: |
           test -s coverage/junit.xml
-          ls coverage/tmp/coverage-*.json >/dev/null
+          test -s coverage/lcov.info
 
       - name: Build bundle analysis artifact
         run: npm run -s build:bundle-analysis
@@ -46,7 +46,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/tmp/*.json
+          files: ./coverage/lcov.info
           disable_search: true
           slug: Doogie201/promptops-gui
           fail_ci_if_error: true
