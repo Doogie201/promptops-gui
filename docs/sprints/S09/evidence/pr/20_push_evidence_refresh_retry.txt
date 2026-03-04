@@ -1,0 +1,2 @@
+To github.com:Doogie201/promptops-gui.git
+   67d0900..24f063b  sprint/S09-gui-shell-setup-wizard-agent-switching -> sprint/S09-gui-shell-setup-wizard-agent-switching
