@@ -15,40 +15,94 @@ function appendJsonl(filePath: string, data: unknown): void {
   fs.appendFileSync(filePath, `${JSON.stringify(data)}\n`);
 }
 
+function assertBlocked(
+  receipt: ReturnType<typeof executeSandboxedCommand>,
+  stderrPattern: RegExp,
+): ReturnType<typeof executeSandboxedCommand> {
+  assert.strictEqual(receipt.policy_decision, 'blocked');
+  assert.strictEqual(receipt.exit_code, 126);
+  assert.match(receipt.stderr, stderrPattern);
+  assert.ok(fs.existsSync(receipt.raw_artifact_paths.receipt));
+  return receipt;
+}
+
+function runBlockedCase(input: {
+  command: string;
+  args: string[];
+  cwd: string;
+  receiptDir: string;
+  stderrPattern: RegExp;
+}): ReturnType<typeof executeSandboxedCommand> {
+  return assertBlocked(
+    executeSandboxedCommand({
+      command: input.command,
+      args: input.args,
+      cwd: input.cwd,
+      repoRoot: REPO_ROOT,
+      allowedRoots: defaultAllowedRoots(REPO_ROOT),
+      receiptDir: input.receiptDir,
+    }),
+    input.stderrPattern,
+  );
+}
+
 test('AT-S05-01 disallowed command/path is blocked with clear error and recorded event', () => {
   const securityDir = path.join(TMP_ROOT, 'security', 'at-s05-01');
   ensureDir(securityDir);
 
-  const blockedCommand = executeSandboxedCommand({
+  const blockedCommand = runBlockedCase({
     command: 'cat',
     args: ['/etc/passwd'],
     cwd: REPO_ROOT,
-    repoRoot: REPO_ROOT,
-    allowedRoots: defaultAllowedRoots(REPO_ROOT),
     receiptDir: securityDir,
+    stderrPattern: /not allowlisted/,
   });
 
-  assert.strictEqual(blockedCommand.policy_decision, 'blocked');
-  assert.strictEqual(blockedCommand.exit_code, 126);
-  assert.match(blockedCommand.stderr, /not allowlisted/);
-  assert.ok(fs.existsSync(blockedCommand.raw_artifact_paths.receipt));
-
-  const blockedPath = executeSandboxedCommand({
+  const blockedPath = runBlockedCase({
     command: 'git',
     args: ['status', '--', '/etc/passwd'],
     cwd: REPO_ROOT,
-    repoRoot: REPO_ROOT,
-    allowedRoots: defaultAllowedRoots(REPO_ROOT),
     receiptDir: securityDir,
+    stderrPattern: /escapes allowlisted roots|outside allowlisted roots/,
   });
 
-  assert.strictEqual(blockedPath.policy_decision, 'blocked');
-  assert.strictEqual(blockedPath.exit_code, 126);
-  assert.match(blockedPath.stderr, /escapes allowlisted roots|outside allowlisted roots/);
-  assert.ok(fs.existsSync(blockedPath.raw_artifact_paths.receipt));
+  const blockedOptionPath = runBlockedCase({
+    command: 'git',
+    args: ['--git-dir=/etc', 'status'],
+    cwd: REPO_ROOT,
+    receiptDir: securityDir,
+    stderrPattern: /escapes allowlisted roots/,
+  });
+
+  const symlinkRoot = path.join(TMP_ROOT, 'security', 'at-s05-01-symlink');
+  const symlinkPath = path.join(symlinkRoot, 'escape-link');
+  ensureDir(symlinkRoot);
+  fs.rmSync(symlinkPath, { force: true });
+  fs.symlinkSync('/etc', symlinkPath);
+
+  const blockedSymlinkPath = runBlockedCase({
+    command: 'git',
+    args: ['status', '--', './escape-link'],
+    cwd: symlinkRoot,
+    receiptDir: securityDir,
+    stderrPattern: /escapes allowlisted roots/,
+  });
+
+  fs.rmSync(symlinkPath, { force: true });
+
+  const blockedInvalidCwd = runBlockedCase({
+    command: 'git',
+    args: ['--version'],
+    cwd: '/etc',
+    receiptDir: securityDir,
+    stderrPattern: /outside allowlisted roots/,
+  });
 
   appendJsonl(path.join(securityDir, 'EVD-S05-02_whitelist_violation_proofs.jsonl'), blockedCommand);
   appendJsonl(path.join(securityDir, 'EVD-S05-02_whitelist_violation_proofs.jsonl'), blockedPath);
+  appendJsonl(path.join(securityDir, 'EVD-S05-02_whitelist_violation_proofs.jsonl'), blockedOptionPath);
+  appendJsonl(path.join(securityDir, 'EVD-S05-02_whitelist_violation_proofs.jsonl'), blockedSymlinkPath);
+  appendJsonl(path.join(securityDir, 'EVD-S05-02_whitelist_violation_proofs.jsonl'), blockedInvalidCwd);
 });
 
 test('AT-S05-02 allowed command captures stdout/stderr/exit code receipts', () => {

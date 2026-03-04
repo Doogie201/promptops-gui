@@ -40,6 +40,12 @@ interface CommandPolicy {
   requireRepoCwd: boolean;
 }
 
+interface ValidationResult {
+  error: string | null;
+  cwd: string;
+  repoRoot: string;
+}
+
 const COMMAND_ALLOWLIST: Record<string, CommandPolicy> = {
   git: {
     argPattern: /^[A-Za-z0-9_./:@=,+-]+$/,
@@ -89,25 +95,28 @@ const REDACTION_PATTERNS: Array<{ pattern: RegExp; replacement: string }> = [
   { pattern: /\bBearer\s+[A-Za-z0-9._-]+/gi, replacement: 'Bearer <REDACTED:BEARER_TOKEN>' },
 ];
 
+const OPTION_PATH_PREFIXES = ['--git-dir=', '--work-tree=', '--file=', '--output=', '--cwd='];
+const OPTION_NEXT_PATH_TOKENS = new Set(['-C', '--git-dir', '--work-tree', '--file', '--output', '--cwd']);
+
 export function defaultAllowedRoots(repoRoot: string): string[] {
   return [repoRoot, path.join(repoRoot, 'docs', 'sprints', 'S05', 'evidence'), '/tmp/promptops/S05'];
 }
 
 export function executeSandboxedCommand(req: CommandRequest): CommandReceipt {
   const roots = req.allowedRoots ?? defaultAllowedRoots(req.repoRoot);
-  const receiptDir = resolvePathWithinRoots(req.receiptDir ?? '/tmp/promptops/S05/receipts', roots);
+  const receiptDir = resolveReceiptDir(req.receiptDir, roots);
   fs.mkdirSync(receiptDir, { recursive: true });
 
   const startedAt = new Date().toISOString();
-  const policyError = validateRequest(req, roots);
-  if (policyError) {
+  const validation = validateRequest(req, roots);
+  if (validation.error) {
     return writeReceipt({
       req,
       receiptDir,
       startedAt,
       completedAt: new Date().toISOString(),
       stdout: '',
-      stderr: policyError,
+      stderr: validation.error,
       exitCode: 126,
       timeout: false,
       policyDecision: 'blocked',
@@ -115,10 +124,9 @@ export function executeSandboxedCommand(req: CommandRequest): CommandReceipt {
     });
   }
 
-  const cwd = resolvePathWithinRoots(req.cwd, roots);
   const env = buildEnv(req.env);
   const policy = COMMAND_ALLOWLIST[req.command];
-  const result = runCommand(req.command, req.args, cwd, env, req.timeoutMs ?? policy.timeoutMs);
+  const result = runCommand(req.command, req.args, validation.cwd, env, req.timeoutMs ?? policy.timeoutMs);
   const completedAt = new Date().toISOString();
 
   return writeReceipt({
@@ -183,38 +191,67 @@ function buildEnv(overrideEnv: Record<string, string> | undefined): Record<strin
   return env;
 }
 
-function validateRequest(req: CommandRequest, roots: string[]): string | null {
+function validateRequest(req: CommandRequest, roots: string[]): ValidationResult {
+  let cwd: string;
+  let repoRoot: string;
+  try {
+    cwd = resolvePathWithinRoots(req.cwd, roots);
+    repoRoot = resolvePathWithinRoots(req.repoRoot, roots);
+  } catch (error) {
+    return {
+      error: `policy denied: ${(error as Error).message}`,
+      cwd: req.cwd,
+      repoRoot: req.repoRoot,
+    };
+  }
+
   if (!Object.hasOwn(COMMAND_ALLOWLIST, req.command)) {
-    return `policy denied: command '${req.command}' is not allowlisted`;
+    return { error: `policy denied: command '${req.command}' is not allowlisted`, cwd, repoRoot };
   }
 
   const policy = COMMAND_ALLOWLIST[req.command];
-  const cwd = resolvePathWithinRoots(req.cwd, roots);
-  const repoRoot = resolvePathWithinRoots(req.repoRoot, roots);
 
   if (policy.requireRepoCwd && !isWithinRoot(cwd, repoRoot)) {
-    return `policy denied: command '${req.command}' requires cwd under repo root`;
+    return { error: `policy denied: command '${req.command}' requires cwd under repo root`, cwd, repoRoot };
   }
 
-  for (const arg of req.args) {
+  for (let i = 0; i < req.args.length; i++) {
+    const arg = req.args[i];
     if (!policy.argPattern.test(arg)) {
-      return `policy denied: argument '${arg}' violates allowlist token pattern`;
+      return { error: `policy denied: argument '${arg}' violates allowlist token pattern`, cwd, repoRoot };
     }
 
     if (arg.includes('..') || arg.startsWith('~')) {
-      return `policy denied: unsafe path token '${arg}'`;
+      return { error: `policy denied: unsafe path token '${arg}'`, cwd, repoRoot };
+    }
+
+    if (OPTION_NEXT_PATH_TOKENS.has(arg)) {
+      const nextArg = req.args[i + 1];
+      if (!nextArg) {
+        return { error: `policy denied: option '${arg}' requires a path value`, cwd, repoRoot };
+      }
+      if (!isPathTokenAllowed(nextArg, cwd, roots)) {
+        return { error: `policy denied: path '${nextArg}' escapes allowlisted roots`, cwd, repoRoot };
+      }
+      i += 1;
+      continue;
     }
 
     const maybePath = parsePathToken(arg, cwd);
     if (maybePath && !isPathWithinRoots(maybePath, roots)) {
-      return `policy denied: path '${arg}' escapes allowlisted roots`;
+      return { error: `policy denied: path '${arg}' escapes allowlisted roots`, cwd, repoRoot };
     }
   }
 
-  return null;
+  return { error: null, cwd, repoRoot };
 }
 
 function parsePathToken(token: string, cwd: string): string | null {
+  const attachedPath = optionAttachedPath(token);
+  if (attachedPath) {
+    return absoluteFromToken(attachedPath, cwd);
+  }
+
   if (token.startsWith('/')) {
     return token;
   }
@@ -231,6 +268,33 @@ function parsePathToken(token: string, cwd: string): string | null {
   return null;
 }
 
+function optionAttachedPath(token: string): string | null {
+  for (const prefix of OPTION_PATH_PREFIXES) {
+    if (token.startsWith(prefix)) {
+      const value = token.slice(prefix.length);
+      return value.length > 0 ? value : null;
+    }
+  }
+  return null;
+}
+
+function isPathTokenAllowed(token: string, cwd: string, roots: string[]): boolean {
+  return isPathWithinRoots(absoluteFromToken(token, cwd), roots);
+}
+
+function absoluteFromToken(token: string, cwd: string): string {
+  return token.startsWith('/') ? token : path.resolve(cwd, token);
+}
+
+function resolveReceiptDir(receiptDir: string | undefined, roots: string[]): string {
+  const candidate = receiptDir ?? '/tmp/promptops/S05/receipts';
+  try {
+    return resolvePathWithinRoots(candidate, roots);
+  } catch {
+    return '/tmp/promptops/S05/security';
+  }
+}
+
 function resolvePathWithinRoots(inputPath: string, roots: string[]): string {
   const resolved = fs.existsSync(inputPath) ? fs.realpathSync(inputPath) : path.resolve(inputPath);
   if (!isPathWithinRoots(resolved, roots)) {
@@ -240,15 +304,20 @@ function resolvePathWithinRoots(inputPath: string, roots: string[]): string {
 }
 
 function isPathWithinRoots(candidatePath: string, roots: string[]): boolean {
+  const resolvedCandidate = resolvePathForContainment(candidatePath);
   return roots.some((root) => {
-    const resolvedRoot = fs.existsSync(root) ? fs.realpathSync(root) : path.resolve(root);
-    return isWithinRoot(candidatePath, resolvedRoot);
+    const resolvedRoot = resolvePathForContainment(root);
+    return isWithinRoot(resolvedCandidate, resolvedRoot);
   });
 }
 
 function isWithinRoot(candidatePath: string, rootPath: string): boolean {
   const rel = path.relative(rootPath, candidatePath);
   return rel === '' || (!rel.startsWith('..') && !path.isAbsolute(rel));
+}
+
+function resolvePathForContainment(inputPath: string): string {
+  return fs.existsSync(inputPath) ? fs.realpathSync(inputPath) : path.resolve(inputPath);
 }
 
 function writeReceipt(input: {
