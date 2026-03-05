@@ -1,0 +1,27 @@
+$ git status --porcelain=v1 --branch
+## main...origin/main
+ M docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/02_preflight_after.json
+ M docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/03_branch_inventory_after.json
+ M docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/04_worktree_inventory_after.json
+EXIT_CODE=0
+
+$ git add docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/02_preflight_after.json docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/03_branch_inventory_after.json docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/04_worktree_inventory_after.json docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/05_health_verdict.md docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify/06_durable_copy_manifest.txt
+EXIT_CODE=0
+
+$ git commit -m "docs(s11): refresh postcheck after-state receipts"
+[main b2d87c0] docs(s11): refresh postcheck after-state receipts
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+EXIT_CODE=0
+
+$ git push origin main
+To https://github.com/Doogie201/promptops-gui.git
+   50f824f..b2d87c0  main -> main
+EXIT_CODE=0
+
+$ git status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE=0
+
+$ git rev-list --left-right --count HEAD...origin/main
+0	0
+EXIT_CODE=0
