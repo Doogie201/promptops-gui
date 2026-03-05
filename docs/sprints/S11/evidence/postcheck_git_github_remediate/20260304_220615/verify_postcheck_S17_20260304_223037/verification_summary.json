@@ -1,0 +1,37 @@
+{
+  "sprint_id": "S17-postcheck-git-github-remediation",
+  "ts": "20260304_223037",
+  "repo_root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "repo_root_proof": {
+    "pwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "promptops_repo": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "show_toplevel": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "match": true
+  },
+  "cleanliness": {
+    "branch": "main",
+    "status_raw": "## main...origin/main",
+    "on_main": true,
+    "clean_tree": true,
+    "worktree_detached": false
+  },
+  "sync": {
+    "head_vs_origin_main": "0\t0",
+    "synced_main": true
+  },
+  "integrity": {
+    "classification": "WARN",
+    "fsck_exit_code": 0,
+    "fsck_dangling_only": true,
+    "fsck_corruption_markers": false
+  },
+  "github": {
+    "open_prs_raw": "",
+    "pr18_state": "MERGED",
+    "pr18_base_ref": "main",
+    "pr18_head_ref": "sprint/S11-template-lifecycle-manager",
+    "unresolved_review_threads": 0
+  },
+  "verdict": "PASS_WITH_WARN",
+  "reason": "dangling-only fsck with exit 0"
+}

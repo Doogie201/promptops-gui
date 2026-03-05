@@ -1,0 +1,122 @@
+[
+  {
+    "name": "01_pwd",
+    "cmd": "pwd",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "02_echo_promptops_repo",
+    "cmd": "echo \"/Volumes/X9_DEV/Dev/Projects/promptops-gui\"",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "03_git_show_toplevel",
+    "cmd": "git rev-parse --show-toplevel",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "04_git_worktree_list_porcelain",
+    "cmd": "git worktree list --porcelain",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 8956f25a2733c431bb933647712470acde6c9321\nbranch refs/heads/main",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "05_git_status_porcelain_branch",
+    "cmd": "git status --porcelain=v1 --branch",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "## main...origin/main",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "06_git_fetch_all_prune_tags",
+    "cmd": "git fetch --all --prune --tags",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "07_git_rev_list_head_origin_main",
+    "cmd": "git rev-list --left-right --count HEAD...origin/main",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "0\t0",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "08_git_rev_parse_abbrev_ref_head",
+    "cmd": "git rev-parse --abbrev-ref HEAD",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "main",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "09_git_log_oneline_5",
+    "cmd": "git log --oneline -5",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "8956f25 docs(s11): add final postcheck sync receipt\nb2d87c0 docs(s11): refresh postcheck after-state receipts\n50f824f docs(s11): append final postcheck durable sync receipts\ne93d3ff docs(s11): finalize postcheck remediation verification receipts\n13164b9 docs(s11): add postcheck git/github remediation evidence bundles",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "10_git_prune_dry_run",
+    "cmd": "git prune --dry-run",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "00e71b44099a3cda377cf6661a73a6bd7596d056 commit\n025a390d6511b6a03c7f17723ced41a325e7b4e7 tree\n0769b4ea157c5e27ccc4c6562a6719ffa777614f blob\n08a11fc7f5e706930018739070b5377021f11345 tree\n0af929eb03f9e4ccb9957fe21b554dac736e88b6 tree\n15dac1ee22f297a3ebabb592bbb8e310bd6d5db8 tree\n15391a03a8b9422e4ee993b8320e01ece365c67a blob\n1e0a43496fcc73e575ecf2f5d610aab7e2f98908 tree\n1f2038bf537a0db4087356ec20eca0a121fa80b7 tree\n2a5cb1b8cec3cbc7ce150d69f0e1aecacaf02c3b tree\n2af46d3987fc4ab2dbd4d75ff3cb9cf6c167846a tree\n2b7205df290766a29ff709c8615b542805942161 commit\n302b6423744ef26530f583bdbd3d7ee82cfff9f6 tree\n37563a0c4f8af4e59106b3cb2888e4288c2bfd12 tree\n3849eab3e39e597ee8c38aef7350b2ed865ca54d blob\n3fb1a1de8fd9a91e8fd2bca172f23831f6767ad9 tree\n425c2a7d6153b7db43c74c3c3ffdb024607382fc tree\n4a7cbfdd1d4e6bad397475ff083314079303aa30 tree\n4df11cf47a7739b01306b13493f3e1cbbf2f965e tree\n4f750842693a8934f5d5b4b2451e4e0cafa93eaf tree\n514c091bfb7dd8411092dfb388a119d21dffe171 tree\n554fe3445fb79061fb73021aa57b327acdb74712 commit\n5a738a0a13ead2c75a71eb46f8dc4a517ead01b8 tree\n5a981d61d8b36981901bdfc5b966e5a06d34f4f6 tree\n60c027f2db8ef7e0e6ad312a10d94a1959973b69 blob\n63c7122cf2b80b579aef2c942c0d7fb865d3a38c tree\n689fa51f1ea5c04377fa9a17349534a53b5bdfdf tree\n6cd227837bb43f437ac128a60fedd0ba400a7a3e tree\n7410bc177ca95652b483e5aa5bf0392b604460cc blob\n763b2cb72c3dbe0993e95ee0381abf239025bb3c commit\n7a558968bb42fecca6dfbfc1659e46e0d3f5610b tree\n7ac8ca9f80a58cd7de39bd0f87694a1f0ef3285a blob\n7b70bc4bbcc0d4a0224939a3a1dde2411470e018 blob\n7c2b7dd8779844510138ec0e787511321b575376 tree\n7cf4cd410267785a231d84e1d4dcb424fa376eea tree\n7e8b3af5c416a665968d8980fa66c44b1a73632d blob\n8150ec48b7711b680637f6f7d6068da24d9f524f tree\n8277a971901d63499ea0a0671e11e8c3bd9fa8cd commit\n873aafeac59351fdf12c8d5a630bebc5175f50c1 blob\n91d35524bf4b9fd7f7ff9915e67a59cc69762404 blob\n91b490c1c7fe153d2a9be2e2855e55d851663977 tree\n921127f931cc4efe555ce81a2fafb0c7d930fad4 tree\n9317580857e87ae1e1fddf7568ba5a1272cbaa3d blob\n97f87e6dcc9949da559a73910c33b1a50629c20e tree\n984105c7ba61be9a6dbbc624e240ded5171d60bb tree\n9bb9af775c24ffff8c5ea0975c94e2a93915eb34 tree\n9eb4842eb1fba57eacae30b63545cea90b57aaed tree\na37cca7a6184e7be350795415c06c720d17651cb tree\na46d9062edc7f21b879dd59c5049aa52e8105b30 tree\nac73a908d88fa1115da4256f46c6b9d2cb3762c3 tree\nae507500b36d38874af7cdc54c4e704aefed5bf8 commit\naf42ecc7abb39f0d9c47a93b75b9fcf2e71334f5 tree\nb22afe824422ff488dd679ebfa65fb42ca490b30 tree\nb4b22a6cec6994e29a6811e37d2f81a797588d50 blob\nb5ee99efb9f471da4bf10bb8575a9b57550d5b2b tree\nb7b2abaee9e01bb37678b2fc5f9f91fcd1a7827e blob\nb969c0b4751c21746e3fd195e4c05a27ed03726a blob\nbcd52bf92f7a637a2d99bae938654b99c0269fe6 blob\ncf5afdd766dfed824fc1cb1ab75c170388fd3139 commit\nd75d1fb932640be058dc12144210ffe9172a005f tree\ndc631a3bf19fab00ce7560eb3c34b07151e01656 blob\ndd9ddf7a502a72ce89cdb7255ed07492a256f452 tree\ne01ea63bdbd8a8ce07eeedcc69c0586c243def69 blob\ne24d1d2070bb7daf255243cf68eb681d6232a554 commit\ne50b866d3367de63b609f0c153854b4ce605026e tree\ne88d8365b11150e49ff9906b74d194e0c97b7cc7 tree\nebfae8c5f43be78ac834977a2b5a08f1f1fbee2b tree\neb1f6f465f99ea94b0e430ea68512606f045424f tree\neeaa2ba74497e39cffa9120983ff5857a559528d blob\nf56ecad3287e679a3d040da9c25320dac75661a5 tree\nf7b028b7c59cddf0479f5a2dd0a559377d80a61e tree\nf840c2c246cc53b33767b1558aaf8002931823d4 tree\nfb24f3869c957755a6abf32f4f56e91d245faebb tree\nfcd795839dee7f367efc78e59e055ec40a2d334f tree\nfd23fff480a2c483df6d08086e6179dbf5dbdbde tree",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "11_git_fsck_no_reflogs",
+    "cmd": "git fsck --no-reflogs",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "dangling commit 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\ndangling commit 65227498ef4d7aaa82a6339912ca6679f3942307\ndangling commit b1944f1fd36789c9ad9f560fec417a34d9117aee\ndangling commit 6b16fb3236456d3efb9e6ebd0aba63546908380f\ndangling commit 8688b32df3640ee34b303b9b7b6a8308616e54e5\ndangling commit 1f0ab4f31c7d651893ec6e651c5af60c3863ea35\ndangling commit f77aad9207bd54a37154f041602ee5e20b39afcb\ndangling commit 0f7b32f940efbac8ac112a5f4c486c7522b6932e\ndangling commit 5b6c87d39d4ec45ec84160fecb4807961710836e\ndangling commit 554fe3445fb79061fb73021aa57b327acdb74712",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "12_gh_pr_list_open",
+    "cmd": "gh pr list --repo Doogie201/promptops-gui --state open",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "13_gh_pr_view_18_json",
+    "cmd": "gh pr view 18 --repo Doogie201/promptops-gui --json number,state,mergeable,mergeStateStatus,reviewDecision,headRefName,baseRefName,commits,statusCheckRollup,reviewThreads,url",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "Unknown JSON field: \"reviewThreads\"\nAvailable fields:\n  additions\n  assignees\n  author\n  autoMergeRequest\n  baseRefName\n  baseRefOid\n  body\n  changedFiles\n  closed\n  closedAt\n  closingIssuesReferences\n  comments\n  commits\n  createdAt\n  deletions\n  files\n  fullDatabaseId\n  headRefName\n  headRefOid\n  headRepository\n  headRepositoryOwner\n  id\n  isCrossRepository\n  isDraft\n  labels\n  latestReviews\n  maintainerCanModify\n  mergeCommit\n  mergeStateStatus\n  mergeable\n  mergedAt\n  mergedBy\n  milestone\n  number\n  potentialMergeCommit\n  projectCards\n  projectItems\n  reactionGroups\n  reviewDecision\n  reviewRequests\n  reviews\n  state\n  statusCheckRollup\n  title\n  updatedAt\n  url",
+    "exit_code": 1
+  },
+  {
+    "name": "14_gh_pr_view_18_json_compatible",
+    "cmd": "gh pr view 18 --repo Doogie201/promptops-gui --json number,state,mergeable,mergeStateStatus,reviewDecision,headRefName,baseRefName,commits,statusCheckRollup,comments,url",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "{\"baseRefName\":\"main\",\"comments\":[{\"id\":\"IC_kwDORZ8p_M7uhNku\",\"author\":{\"login\":\"codecov\"},\"authorAssociation\":\"NONE\",\"body\":\"## [Bundle](https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=bundle) Report\\n\\nBundle size has no change :white_check_mark:\\n\\n\\n\",\"createdAt\":\"2026-03-05T02:28:06Z\",\"includesCreatedEdit\":false,\"isMinimized\":false,\"minimizedReason\":\"\",\"reactionGroups\":[],\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001683758\",\"viewerDidAuthor\":false},{\"id\":\"IC_kwDORZ8p_M7uhRNT\",\"author\":{\"login\":\"codecov\"},\"authorAssociation\":\"NONE\",\"body\":\"## [Codecov](https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=coverage&src=pr&el=h1&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Marcus) Report\\n:white_check_mark: All modified and coverable lines are covered by tests.\\n:white_check_mark: All tests successful. No failed tests found.\\n\\n:loudspeaker: Thoughts on this report? [Let us know!](https://github.com/codecov/feedback/issues/255)\",\"createdAt\":\"2026-03-05T02:32:33Z\",\"includesCreatedEdit\":true,\"isMinimized\":false,\"minimizedReason\":\"\",\"reactionGroups\":[],\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001698643\",\"viewerDidAuthor\":false},{\"id\":\"IC_kwDORZ8p_M7uhSC5\",\"author\":{\"login\":\"Doogie201\"},\"authorAssociation\":\"OWNER\",\"body\":\"Addressed both connector findings in commit `aa4ea8a`:\\n- Fixed settings drift detection to catch removed required global bindings (no pre-filter on existing keys; sprint placeholders excluded explicitly).\\n- Fixed unresolved-placeholder determinism by using a non-global detection regex (`PLACEHOLDER_DETECT_PATTERN`) to avoid regex `lastIndex` carryover.\\n\\nValidation receipts:\\n- `/tmp/promptops/S11/run_20260304_212353/remediation/01_fix_diffstat.txt`\\n- `/tmp/promptops/S11/run_20260304_212353/remediation/02_s11_tests_after_fix.txt`\\n- `/tmp/promptops/S11/run_20260304_212353/remediation/03_build_after_fix.txt`\\n- `/tmp/promptops/S11/run_20260304_212353/remediation/04_lint_after_fix.txt`\\n- `/tmp/promptops/S11/run_20260304_212353/remediation/05_testall_after_fix.txt`\\n\",\"createdAt\":\"2026-03-05T02:33:44Z\",\"includesCreatedEdit\":false,\"isMinimized\":false,\"minimizedReason\":\"\",\"reactionGroups\":[],\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001702073\",\"viewerDidAuthor\":true}],\"commits\":[{\"authoredDate\":\"2026-03-05T02:26:43Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:26:43Z\",\"messageBody\":\"\",\"messageHeadline\":\"[S11] ux : template lifecycle manager\",\"oid\":\"bebcf3d5356c04bc18afaf84652022e704b17204\"},{\"authoredDate\":\"2026-03-05T02:27:18Z\",\"authors\":[{\"email\":\"66853113+pre-commit-ci[bot]@users.noreply.github.com\",\"id\":\"MDM6Qm90NjY4NTMxMTM=\",\"login\":\"pre-commit-ci[bot]\",\"name\":\"pre-commit-ci[bot]\"}],\"committedDate\":\"2026-03-05T02:27:18Z\",\"messageBody\":\"for more information, see https://pre-commit.ci\",\"messageHeadline\":\"[pre-commit.ci] auto fixes from pre-commit.com hooks\",\"oid\":\"c08f85c375fe9578fc32d6c8f61b9efe8229aa9f\"},{\"authoredDate\":\"2026-03-05T02:28:30Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:28:57Z\",\"messageBody\":\"\",\"messageHeadline\":\"docs(S11): add PR readiness receipts\",\"oid\":\"9825a654b6869acf8e0f4f6a43bf208134fe17de\"},{\"authoredDate\":\"2026-03-05T02:29:03Z\",\"authors\":[{\"email\":\"66853113+pre-commit-ci[bot]@users.noreply.github.com\",\"id\":\"MDM6Qm90NjY4NTMxMTM=\",\"login\":\"pre-commit-ci[bot]\",\"name\":\"pre-commit-ci[bot]\"}],\"committedDate\":\"2026-03-05T02:29:04Z\",\"messageBody\":\"for more information, see https://pre-commit.ci\",\"messageHeadline\":\"[pre-commit.ci] auto fixes from pre-commit.com hooks\",\"oid\":\"38d6e1941895d11443cdebf3ca7180d56281a3b4\"},{\"authoredDate\":\"2026-03-05T02:29:09Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:29:45Z\",\"messageBody\":\"\",\"messageHeadline\":\"docs(S11): add divergence remediation receipts\",\"oid\":\"ecdbc87d576cd2997b66a71711192f6e955e5085\"},{\"authoredDate\":\"2026-03-05T02:30:17Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:30:17Z\",\"messageBody\":\"\",\"messageHeadline\":\"docs(S11): add secondary divergence receipts\",\"oid\":\"0d447db30306c079cbe216eb2ab04baf55118c85\"},{\"authoredDate\":\"2026-03-05T02:31:45Z\",\"authors\":[{\"email\":\"66853113+pre-commit-ci[bot]@users.noreply.github.com\",\"id\":\"MDM6Qm90NjY4NTMxMTM=\",\"login\":\"pre-commit-ci[bot]\",\"name\":\"pre-commit-ci[bot]\"}],\"committedDate\":\"2026-03-05T02:31:45Z\",\"messageBody\":\"for more information, see https://pre-commit.ci\",\"messageHeadline\":\"[pre-commit.ci] auto fixes from pre-commit.com hooks\",\"oid\":\"110b8d453be42417959cb30bde53864086ce04b4\"},{\"authoredDate\":\"2026-03-05T02:33:00Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:33:18Z\",\"messageBody\":\"\",\"messageHeadline\":\"fix(S11): remediate codex contract + determinism findings\",\"oid\":\"27915661e8eda3f5dac35d4ab2d3158c4b53eaed\"}],\"headRefName\":\"sprint/S11-template-lifecycle-manager\",\"mergeStateStatus\":\"UNKNOWN\",\"mergeable\":\"UNKNOWN\",\"number\":18,\"reviewDecision\":\"\",\"state\":\"MERGED\",\"statusCheckRollup\":[{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:44Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543796/job/65813333777\",\"name\":\"coverage\",\"startedAt\":\"2026-03-05T02:33:25Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Codecov Coverage\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:56Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543072/job/65813331814\",\"name\":\"coverage\",\"startedAt\":\"2026-03-05T02:33:30Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Codecov Coverage\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:51Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543790/job/65813333698\",\"name\":\"verify\",\"startedAt\":\"2026-03-05T02:33:25Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Verify\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:49Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543040/job/65813331821\",\"name\":\"verify\",\"startedAt\":\"2026-03-05T02:33:23Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Verify\"},{\"__typename\":\"StatusContext\",\"context\":\"codecov/bundles\",\"startedAt\":\"2026-03-05T02:34:45Z\",\"state\":\"SUCCESS\",\"targetUrl\":\"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=bundle\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:34:07Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18\",\"name\":\"codecov/patch\",\"startedAt\":\"2026-03-05T02:34:07Z\",\"status\":\"COMPLETED\",\"workflowName\":\"\"},{\"__typename\":\"StatusContext\",\"context\":\"codecov/patch\",\"startedAt\":\"2026-03-05T02:46:12Z\",\"state\":\"SUCCESS\",\"targetUrl\":\"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18\"},{\"__typename\":\"StatusContext\",\"context\":\"pre-commit.ci - pr\",\"startedAt\":\"2026-03-05T02:33:26Z\",\"state\":\"SUCCESS\",\"targetUrl\":\"https://results.pre-commit.ci/run/github/1168058876/1772678001.1INzkmhXQNGTK1l7SYMfxg\"}],\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18\"}",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "15_gh_pr18_threads_graphql",
+    "cmd": "gh api graphql -f query='query { repository(owner:\"Doogie201\", name:\"promptops-gui\") { pullRequest(number: 18) { number state url reviewThreads(first: 100) { nodes { id isResolved comments(first: 20) { nodes { author { login } body } } } } } } }'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "{\"data\":{\"repository\":{\"pullRequest\":{\"number\":18,\"state\":\"MERGED\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18\",\"reviewThreads\":{\"nodes\":[{\"id\":\"PRRT_kwDORZ8p_M5yNkqX\",\"isResolved\":true,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"body\":\"**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Detect removed global bindings in drift check**\\n\\nIn `assessSettingsImpactOnPinnedTemplate`, the `required` set is built by filtering placeholders with `hasOwn(nextGlobalBindings, name)`, which means placeholders whose bindings were removed are excluded before `missing` is calculated. In the common settings-edit path, deleting a global binding that a pinned template still depends on will incorrectly return `ok: true`, so incompatible settings changes can slip through and later render/migration steps can proceed with broken placeholder resolution.\\n\\nUseful? React with 👍 / 👎.\"}]}},{\"id\":\"PRRT_kwDORZ8p_M5yNkqZ\",\"isResolved\":true,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"body\":\"**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Reset regex state before unresolved placeholder test**\\n\\n`evaluateUnresolvedRequirements` calls `.test` on the shared `PLACEHOLDER_PATTERN` regex, which is declared with the `g` flag, so `lastIndex` persists across calls. When previews are compiled repeatedly, this can cause `unresolved_placeholders` to appear/disappear nondeterministically for identical rendered content (notably when only one unresolved token exists), undermining the deterministic preview behavior this module is supposed to enforce.\\n\\nUseful? React with 👍 / 👎.\"}]}}]}}}}}",
+    "stderr": "",
+    "exit_code": 0
+  }
+]
