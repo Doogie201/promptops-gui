@@ -121,7 +121,7 @@ export function runDiffReviewTool(options: ToolOptions, diff: DiffOptions, runne
   const whitelistEval = outside.length === 0 ? 'PASS: all changed files are within whitelist.' : `HARD_STOP: outside whitelist\n${outside.join('\n')}`;
   const budgetEval = breaches.length === 0
     ? 'PASS: no budget breaches detected.'
-    : `HARD_STOP: BUDGET BREACH\n${breaches.map((item) => `${item.file}: +${item.added}`).join('\n')}`;
+    : `HARD_STOP: BUDGET BREACH\n${breaches.map((item) => `${item.file}: net=${item.net} (+${item.added}/-${item.deleted})`).join('\n')}`;
   writeText(path.join(context.bundleRoot, 'whitelist_eval.md'), whitelistEval);
   writeText(path.join(context.bundleRoot, 'budget_eval.md'), budgetEval);
 
@@ -526,6 +526,8 @@ function evaluatePreflight(repoRoot: string, records: CommandRecord[]): {
   const status = readRecordStdout(records, 'status');
   const dirty = parseStatusDirty(status);
   const aheadBehind = parseAheadBehind(readRecordStdout(records, 'ahead_behind'));
+  const fetch = lookupRecord(records, 'fetch');
+  const aheadBehindProbe = lookupRecord(records, 'ahead_behind');
   const prune = lookupRecord(records, 'prune_dry_run');
   const fsck = lookupRecord(records, 'fsck');
   const objectRisk = prune.exit_code !== 0 || fsck.exit_code !== 0 || BAD_OBJECT_PATTERN.test(`${prune.stdout}\n${fsck.stdout}\n${fsck.stderr}`);
@@ -535,7 +537,25 @@ function evaluatePreflight(repoRoot: string, records: CommandRecord[]): {
     return fail('REPO_ROOT_MISMATCH', `repoRoot mismatch: env=${envRepo} top=${toplevel} expected=${repoRoot}`, branch, dirty, aheadBehind);
   }
   if (objectRisk) return fail('GIT_OBJECT_INTEGRITY', 'git prune/fsck reported integrity risk.', branch, dirty, aheadBehind);
-  if (branch !== 'main' || dirty || aheadBehind.behind > 0) {
+  if (fetch.exit_code !== 0) {
+    return fail(
+      'REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED',
+      `fetch probe failed (exit=${fetch.exit_code}); cannot prove sync state.`,
+      branch,
+      dirty,
+      aheadBehind,
+    );
+  }
+  if (aheadBehindProbe.exit_code !== 0) {
+    return fail(
+      'REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED',
+      `ahead/behind probe failed (exit=${aheadBehindProbe.exit_code}); cannot prove sync state.`,
+      branch,
+      dirty,
+      aheadBehind,
+    );
+  }
+  if (branch !== 'main' || dirty || aheadBehind.behind > 0 || aheadBehind.ahead > 0) {
     return fail(
       'REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED',
       `repo not ready: branch=${branch} dirty=${dirty} ahead=${aheadBehind.ahead} behind=${aheadBehind.behind}`,
@@ -656,12 +676,15 @@ function parseLines(value: string): string[] {
     .filter((line) => line.length > 0);
 }
 
-function budgetBreaches(lines: string[], maxNetNewLines: number): Array<{ file: string; added: number }> {
-  const breaches: Array<{ file: string; added: number }> = [];
+function budgetBreaches(lines: string[], maxNetNewLines: number): Array<{ file: string; added: number; deleted: number; net: number }> {
+  const breaches: Array<{ file: string; added: number; deleted: number; net: number }> = [];
   for (const line of lines) {
-    const [addedRaw, _deletedRaw, file] = line.split(/\s+/);
+    const [addedRaw, deletedRaw, file] = line.split(/\s+/);
     const added = Number(addedRaw);
-    if (Number.isFinite(added) && added > maxNetNewLines && file) breaches.push({ file, added });
+    const deleted = Number(deletedRaw);
+    if (!Number.isFinite(added) || !Number.isFinite(deleted) || !file) continue;
+    const net = added - deleted;
+    if (net > maxNetNewLines) breaches.push({ file, added, deleted, net });
   }
   return breaches;
 }

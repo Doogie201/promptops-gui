@@ -62,6 +62,46 @@ test('AT-S10-01 preflight tool writes mandatory receipts and enforces hard-stop 
   });
 });
 
+test('AT-S10-01c preflight hard-stops when ahead>0 and when fetch/sync probes fail', () => {
+  resetDir(SANDBOX_ROOT);
+  fs.mkdirSync(MOCK_REPO, { recursive: true });
+  const baseMap = runnerMapFrom(createRunner({}));
+
+  const aheadRunner = createRunner({
+    ...baseMap,
+    status: response('## main...origin/main [ahead 1]\n'),
+    ahead_behind: response('1\t0\n'),
+  });
+  const aheadStop = runPreflightTool({ ...BASE_OPTIONS, runId: 'AT-S10-01c-ahead' }, aheadRunner);
+  assert.strictEqual(aheadStop.result.status, 'HARD_STOP');
+  assert.strictEqual(aheadStop.result.reasonCode, 'REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED');
+  assert.match(aheadStop.result.message, /ahead=1/);
+
+  const fetchFailRunner = createRunner({
+    ...baseMap,
+    fetch: response('', 128, 'fatal: auth failed\n'),
+  });
+  const fetchStop = runPreflightTool({ ...BASE_OPTIONS, runId: 'AT-S10-01c-fetch' }, fetchFailRunner);
+  assert.strictEqual(fetchStop.result.status, 'HARD_STOP');
+  assert.strictEqual(fetchStop.result.reasonCode, 'REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED');
+  assert.match(fetchStop.result.message, /fetch probe failed/);
+
+  const syncFailRunner = createRunner({
+    ...baseMap,
+    ahead_behind: response('', 2, 'fatal: probe failed\n'),
+  });
+  const syncStop = runPreflightTool({ ...BASE_OPTIONS, runId: 'AT-S10-01c-sync' }, syncFailRunner);
+  assert.strictEqual(syncStop.result.status, 'HARD_STOP');
+  assert.strictEqual(syncStop.result.reasonCode, 'REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED');
+  assert.match(syncStop.result.message, /ahead\/behind probe failed/);
+
+  writeEvidence('AT-S10-01c_run.json', {
+    ahead_stop: aheadStop.result,
+    fetch_stop: fetchStop.result,
+    sync_stop: syncStop.result,
+  });
+});
+
 test('AT-S10-02 PR protocol tool evaluates readiness and codex thread resolution with receipts', () => {
   resetDir(SANDBOX_ROOT);
   fs.mkdirSync(MOCK_REPO, { recursive: true });
@@ -211,6 +251,41 @@ test('AT-S10-03 gates + diff + out-of-sync + closeout assistant form determinist
     out_result: out.result,
     closeout_result: closeout.result,
     snapshot,
+  });
+});
+
+test('AT-S10-03b diff budget uses net line change (added - deleted)', () => {
+  resetDir(SANDBOX_ROOT);
+  fs.mkdirSync(MOCK_REPO, { recursive: true });
+
+  const neutralRunner = createRunner({
+    diff_files: response('src/s10/operator_tools.ts\n'),
+    diffstat: response(' src/s10/operator_tools.ts | 400 ++++++++++++++++++------------------\n'),
+    diff_numstat: response('200\t200\tsrc/s10/operator_tools.ts\n'),
+  });
+  const neutral = runDiffReviewTool(
+    { ...BASE_OPTIONS, runId: 'AT-S10-03b-neutral' },
+    { whitelist: ['src/**'], maxNetNewLinesPerFile: 120 },
+    neutralRunner,
+  );
+  assert.strictEqual(neutral.result.status, 'PASS');
+
+  const breachRunner = createRunner({
+    diff_files: response('src/s10/operator_tools.ts\n'),
+    diffstat: response(' src/s10/operator_tools.ts | 240 ++++++++++++++++++++++--\n'),
+    diff_numstat: response('200\t10\tsrc/s10/operator_tools.ts\n'),
+  });
+  const breach = runDiffReviewTool(
+    { ...BASE_OPTIONS, runId: 'AT-S10-03b-breach' },
+    { whitelist: ['src/**'], maxNetNewLinesPerFile: 120 },
+    breachRunner,
+  );
+  assert.strictEqual(breach.result.status, 'HARD_STOP');
+  assert.match(breach.result.message, /Budget breaches/);
+
+  writeEvidence('AT-S10-03b_run.json', {
+    neutral_result: neutral.result,
+    breach_result: breach.result,
   });
 });
 
