@@ -1,0 +1,3 @@
+CMD: gh api graphql addPullRequestReviewThreadReply
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+{"data":{"addPullRequestReviewThreadReply":{"comment":{"id":"PRRC_kwDORZ8p_M6sVs3x","url":"https://github.com/Doogie201/promptops-gui/pull/26#discussion_r2891369969"}}}}EXIT_CODE: 0

@@ -1,0 +1,4 @@
+CMD: gh pr comment 26 --repo Doogie201/promptops-gui --body <closeout note>
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+https://github.com/Doogie201/promptops-gui/pull/26#issuecomment-4006630495
+EXIT_CODE: 0
