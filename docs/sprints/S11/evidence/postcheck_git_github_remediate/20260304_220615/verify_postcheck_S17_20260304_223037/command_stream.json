@@ -118,5 +118,93 @@
     "stdout": "{\"data\":{\"repository\":{\"pullRequest\":{\"number\":18,\"state\":\"MERGED\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18\",\"reviewThreads\":{\"nodes\":[{\"id\":\"PRRT_kwDORZ8p_M5yNkqX\",\"isResolved\":true,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"body\":\"**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Detect removed global bindings in drift check**\\n\\nIn `assessSettingsImpactOnPinnedTemplate`, the `required` set is built by filtering placeholders with `hasOwn(nextGlobalBindings, name)`, which means placeholders whose bindings were removed are excluded before `missing` is calculated. In the common settings-edit path, deleting a global binding that a pinned template still depends on will incorrectly return `ok: true`, so incompatible settings changes can slip through and later render/migration steps can proceed with broken placeholder resolution.\\n\\nUseful? React with 👍 / 👎.\"}]}},{\"id\":\"PRRT_kwDORZ8p_M5yNkqZ\",\"isResolved\":true,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"body\":\"**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Reset regex state before unresolved placeholder test**\\n\\n`evaluateUnresolvedRequirements` calls `.test` on the shared `PLACEHOLDER_PATTERN` regex, which is declared with the `g` flag, so `lastIndex` persists across calls. When previews are compiled repeatedly, this can cause `unresolved_placeholders` to appear/disappear nondeterministically for identical rendered content (notably when only one unresolved token exists), undermining the deterministic preview behavior this module is supposed to enforce.\\n\\nUseful? React with 👍 / 👎.\"}]}}]}}}}}",
     "stderr": "",
     "exit_code": 0
+  },
+  {
+    "name": "16_cp_command_stream",
+    "cmd": "cp '/tmp/promptops/S17/postcheck_git_github_verify_20260304_223037/command_stream.json' '/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/command_stream.json'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "17_cp_summary",
+    "cmd": "cp '/tmp/promptops/S17/postcheck_git_github_verify_20260304_223037/verification_summary.json' '/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/verification_summary.json'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "18_cp_open_prs",
+    "cmd": "cp '/tmp/promptops/S17/postcheck_git_github_verify_20260304_223037/gh_open_prs.txt' '/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_open_prs.txt'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "19_cp_pr18_json",
+    "cmd": "cp '/tmp/promptops/S17/postcheck_git_github_verify_20260304_223037/gh_pr18.json' '/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_pr18.json'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "20_cp_pr18_threads",
+    "cmd": "cp '/tmp/promptops/S17/postcheck_git_github_verify_20260304_223037/gh_pr18_threads_graphql.json' '/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_pr18_threads_graphql.json'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "21_git_status_before_add",
+    "cmd": "git status --porcelain=v1 --branch",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "## main...origin/main\n?? docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "22_git_add_durable",
+    "cmd": "git add '/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "23_git_commit_durable",
+    "cmd": "git commit -m 'docs(s17): add postcheck-only verification receipts'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "[main a83aae3] docs(s17): add postcheck-only verification receipts\n 6 files changed, 169 insertions(+)\n create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/INDEX.md\n create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/command_stream.json\n create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_open_prs.txt\n create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_pr18.json\n create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_pr18_threads_graphql.json\n create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/verification_summary.json",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "24_git_push_main",
+    "cmd": "git push origin main",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "",
+    "stderr": "To https://github.com/Doogie201/promptops-gui.git\n   8956f25..a83aae3  main -> main",
+    "exit_code": 0
+  },
+  {
+    "name": "25_git_status_after_push",
+    "cmd": "git status --porcelain=v1 --branch",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "## main...origin/main",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "name": "26_git_revlist_after_push",
+    "cmd": "git rev-list --left-right --count HEAD...origin/main",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "0\t0",
+    "stderr": "",
+    "exit_code": 0
   }
 ]
