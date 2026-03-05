@@ -1,0 +1,3 @@
+## sprint/S12-health-drift-detection...origin/sprint/S12-health-drift-detection
+?? docs/sprints/S12/evidence/scope_fix/43_divergence_repair.txt
+?? docs/sprints/S12/evidence/scope_fix/44_status_after_divergence_repair.txt
