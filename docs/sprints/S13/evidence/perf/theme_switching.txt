@@ -1,0 +1,7 @@
+=== AT-S13-03: Theme Switching Perf ===
+
+Iterations: 100000
+Elapsed: 3.8ms
+Budget: 500ms
+Per-iteration: 0.0000ms
+Result: PASS

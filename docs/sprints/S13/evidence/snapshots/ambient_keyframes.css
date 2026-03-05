@@ -1,0 +1,16 @@
+@keyframes ds-ambient-pulse {
+  0%, 100% { opacity: 1; filter: none; }
+  25% { opacity: 0.95; filter: brightness(1.05); }
+  50% { opacity: 1; filter: brightness(1.1) saturate(1.1); }
+  75% { opacity: 0.98; filter: brightness(1.02); }
+}
+
+.ds-ambient {
+  animation: ds-ambient-pulse var(--ds-motion-ambient) var(--ds-motion-ease) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-ambient {
+    animation: none;
+  }
+}

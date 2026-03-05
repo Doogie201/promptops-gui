@@ -1,0 +1,33 @@
+=== AT-S13-01: Reduced Motion Transition Check ===
+
+Normal CSS contains '0.25s': PASS
+Reduced CSS contains '0s': PASS
+prefers-reduced-motion media query present: PASS
+
+--- Normal CSS ---
+:root {
+  transition-property: --ds-accent, --ds-accent-muted, --ds-glow, --ds-glow-intensity, --ds-elevation-low, --ds-elevation-mid, --ds-elevation-high, --ds-blur, --ds-surface-primary, --ds-surface-secondary, --ds-surface-tertiary, --ds-text-primary, --ds-text-secondary, --ds-text-muted, --ds-border, --ds-border-focus, --ds-danger, --ds-success, --ds-warning;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    transition-duration: 0s;
+    transition-timing-function: linear;
+  }
+}
+
+--- Reduced CSS ---
+:root {
+  transition-property: --ds-accent, --ds-accent-muted, --ds-glow, --ds-glow-intensity, --ds-elevation-low, --ds-elevation-mid, --ds-elevation-high, --ds-blur, --ds-surface-primary, --ds-surface-secondary, --ds-surface-tertiary, --ds-text-primary, --ds-text-secondary, --ds-text-muted, --ds-border, --ds-border-focus, --ds-danger, --ds-success, --ds-warning;
+  transition-duration: 0s;
+  transition-timing-function: linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    transition-duration: 0s;
+    transition-timing-function: linear;
+  }
+}

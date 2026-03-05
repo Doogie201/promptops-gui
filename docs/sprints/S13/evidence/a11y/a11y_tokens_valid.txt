@@ -1,0 +1,6 @@
+=== AT-S13-01: Token Validity Check ===
+
+All CSS variables prefixed --ds-: PASS
+All themes define all tokens: PASS
+Themes: operator, stealth, daylight
+Token count: 19

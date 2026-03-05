@@ -1,0 +1,7 @@
+=== AT-S13-03: Theme Generation Perf ===
+
+Iterations: 10000
+Elapsed: 44.5ms
+Budget: 500ms
+Per-iteration: 0.004ms
+Result: PASS

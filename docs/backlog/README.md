@@ -1,5 +1,6 @@
 # Product Backlog
 
+- **S13-design-system-v1**: Implement a performance-safe, a11y-safe design system foundation: semantic theme tokens, animated theme transitions (reduced-motion compliant), motion primitives, dynamic lighting/shadows, and a 3D-ready scene layer (off by default) with progressive enhancement and safe fallback.
 - **S12-health-drift-detection**: Detect drift/breakage/out-of-sync conditions deterministically, surface them in GUI with severity/root-cause/evidence links, and provide GUI-only repair actions (including Safe Mode) that restore stable state without terminal access.
 - **S11-template-lifecycle-manager**: Implement an operator-grade Template lifecycle manager with versioning, contract validation (including protected diffs), deterministic preview compile, activation/rollback, and explicit reversible sprint migration.
 - **S10-gui-operator-tools-v1**: Put the full operator workflow inside the GUI (preflight, PR protocol, gates, diff review, out-of-sync detection/repair, closeout assistant) with operator-grade evidence and hard stops, without requiring terminal usage.

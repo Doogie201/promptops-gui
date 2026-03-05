@@ -1,0 +1,8 @@
+=== AT-S13-03: Ambient Driver Perf ===
+
+Iterations: 1000
+Final phase: glow
+Final tick: 20
+Elapsed: 0.1ms
+Budget: 100ms
+Result: PASS
