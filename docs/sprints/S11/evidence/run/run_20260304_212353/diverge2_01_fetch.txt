@@ -1,0 +1,4 @@
+$ git fetch --all --prune --tags
+From https://github.com/Doogie201/promptops-gui
+   9825a65..38d6e19  sprint/S11-template-lifecycle-manager -> origin/sprint/S11-template-lifecycle-manager
+EXIT_CODE=0
