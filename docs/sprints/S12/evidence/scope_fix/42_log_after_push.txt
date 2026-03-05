@@ -1,0 +1,8 @@
+CMD=git log --oneline -5
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+4da408a [S12] chore: remove out-of-scope S11 files from PR diff
+23c1686 docs(s12): remove invalid JSON receipt artifact
+1bb1874 [pre-commit.ci] auto fixes from pre-commit.com hooks
+74e1c24 docs(s12): add closeout remediation stability receipts
+38533c6 fix(s12): harden safe-mode determinism and loop guard
+EXIT_CODE=0
