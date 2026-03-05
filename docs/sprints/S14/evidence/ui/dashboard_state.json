@@ -47,7 +47,7 @@
       "reason": "context exhausted"
     }
   ],
-  "activePhase": "closeout",
+  "activePhase": "idle",
   "nextDecisionReason": null,
   "totalEvents": 25,
   "hardStopped": false,

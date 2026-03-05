@@ -78,10 +78,18 @@ export function computeDashboard(events: readonly NarrationEvent[]): DashboardSt
       case 'phase_start': {
         if (phaseEntry) phaseEntry.status = 'active';
         activePhase = ev.phase;
+        // Issue 2: set activeAgent from earliest reliable agent identity
+        if (activeAgent === null && ev.agent) {
+          activeAgent = ev.agent;
+        }
         break;
       }
       case 'phase_end': {
         if (phaseEntry) phaseEntry.status = 'complete';
+        // Issue 1: clear activePhase when the active phase ends
+        if (activePhase === ev.phase) {
+          activePhase = 'idle';
+        }
         break;
       }
       case 'checkpoint': {

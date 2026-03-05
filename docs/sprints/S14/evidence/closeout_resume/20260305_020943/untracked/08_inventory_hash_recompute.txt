@@ -1,0 +1,16 @@
+CMD: python - <<"PY"
+import hashlib, json, os
+with open("docs/sprints/S14/evidence/untracked/inventory.json") as f:
+    items=json.load(f)
+for it in items:
+    p=it["path"]
+    h=hashlib.sha256(open(p,"rb").read()).hexdigest()
+    b=os.path.getsize(p)
+    print(f"{p}	sha256_match={h==it[sha256]}	bytes_match={b==it[bytes]}")
+PY
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+NameError: name 'sha256' is not defined
+EXIT_CODE: 1

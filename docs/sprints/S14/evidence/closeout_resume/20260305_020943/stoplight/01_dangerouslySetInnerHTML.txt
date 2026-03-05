@@ -1,0 +1,4 @@
+CMD: rg -n 'dangerouslySetInnerHTML' src || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

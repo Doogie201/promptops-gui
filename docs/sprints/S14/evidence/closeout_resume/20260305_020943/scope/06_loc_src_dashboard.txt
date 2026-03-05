@@ -1,0 +1,5 @@
+CMD: wc -l src/s14/dashboard.ts
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+     202 src/s14/dashboard.ts
+--- STDERR ---
+EXIT_CODE: 0

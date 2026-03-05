@@ -1,0 +1,21 @@
+CMD: python - <<'PY'
+from pathlib import Path
+p=Path('src/s14/dashboard.ts').read_text().splitlines()
+def span(start_token,end_token):
+    s=[i for i,l in enumerate(p,1) if start_token in l][0]
+    e=[i for i,l in enumerate(p,1) if end_token in l][0]
+    return s,e,e-s+1
+for st,en,name in [
+ ('export function computeDashboard','return {','computeDashboard_partial'),
+ ('export function renderDashboardText','return lines.join', 'renderDashboardText_partial'),
+ ('export function getDashboardStyles','};', 'getDashboardStyles_partial')
+]:
+    s,e,n=span(st,en)
+    print(f'{name}	start={s}	end={e}	lines={n}')
+PY
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+computeDashboard_partial	start=60	end=133	lines=74
+renderDashboardText_partial	start=149	end=185	lines=37
+getDashboardStyles_partial	start=196	end=144	lines=-51
+--- STDERR ---
+EXIT_CODE: 0

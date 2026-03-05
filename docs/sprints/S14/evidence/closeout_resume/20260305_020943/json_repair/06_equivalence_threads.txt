@@ -1,0 +1,5 @@
+CMD: cmp -s /tmp/s14_fix2.json docs/sprints/S13/evidence/closeout/03_threads/01_threads.json; ec=$?; echo CMP_EXIT=$ec; [ $ec -eq 0 ]
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+CMP_EXIT=2
+--- STDERR ---
+EXIT_CODE: 1

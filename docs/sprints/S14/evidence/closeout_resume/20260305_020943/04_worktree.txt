@@ -1,0 +1,8 @@
+CMD: git worktree list --porcelain
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD 325e802f4c0f928c59e357990fa283ae8e68e07a
+branch refs/heads/sprint/S14-jarvis-mode
+
+--- STDERR ---
+EXIT_CODE: 0

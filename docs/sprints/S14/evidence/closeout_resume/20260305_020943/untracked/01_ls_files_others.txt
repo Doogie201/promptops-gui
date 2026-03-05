@@ -1,0 +1,16 @@
+CMD: git ls-files --others --exclude-standard
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/00_open_pr_inventory.json.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/01_pwd.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/02_echo_promptops_repo.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/03_show_toplevel.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/04_worktree.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/05_status.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/06_fetch.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/07_revlist_main.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/08_branch.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/09_log5.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/10_prune.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/11_fsck.txt
+--- STDERR ---
+EXIT_CODE: 0

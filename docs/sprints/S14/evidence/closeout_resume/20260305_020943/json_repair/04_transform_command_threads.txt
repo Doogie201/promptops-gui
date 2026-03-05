@@ -1,0 +1,27 @@
+CMD: python - <<'PY'
+import subprocess
+path='docs/sprints/S13/evidence/closeout/03_threads/01_threads.json'
+raw=subprocess.check_output(['git','show',f'HEAD:{path}'],text=True)
+fixed='
+'.join([ln for ln in raw.splitlines() if ln.strip()!='EXIT_CODE=0'])
+print('HEAD_HAS_EXIT_TOKEN=', 'EXIT_CODE=0' in raw)
+print('FIXED_IS_VALID_JSON=', end=' ')
+import json
+json.loads(fixed)
+print(True)
+open('/tmp/s14_fix2.json','w').write(fixed+'
+')
+print('WROTE=/tmp/s14_fix2.json')
+PY
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD_HAS_EXIT_TOKEN= True
+FIXED_IS_VALID_JSON= --- STDERR ---
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "/Users/marcussmith/.local/share/mise/installs/python/3.11.9/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/marcussmith/.local/share/mise/installs/python/3.11.9/lib/python3.11/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 86 (char 85)
+EXIT_CODE: 1

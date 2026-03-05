@@ -40,6 +40,22 @@ These files complete the S13 evidence chain. Without them, the S13 closeout
 lacks durable proof of merge-readiness, stability, and post-merge sync.
 Committing them in-place preserves the audit trail.
 
+## JSON Repair Note (S14 closeout)
+
+Two S13 closeout evidence files were normalized from invalid JSON-with-trailer
+to valid JSON without semantic payload changes:
+
+- `docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json`
+- `docs/sprints/S13/evidence/closeout/03_threads/01_threads.json`
+
+Issue: each file previously included a trailing `EXIT_CODE=0` token appended
+after the JSON payload, causing `check-json` failure in pre-commit.
+
+Transformation: remove only the trailing non-JSON token and preserve payload
+content/order exactly. No fields were added/removed/renamed in the JSON body.
+Validation is evidenced via `python -m json.tool` receipts and a passing
+`pre-commit run --all-files`.
+
 ## Reference
 
 See `docs/sprints/S14/evidence/untracked/inventory.json` for per-file

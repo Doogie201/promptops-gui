@@ -1,0 +1,16 @@
+CMD: git diff --stat
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+ .../evidence/closeout/02_pr_state/01_pr_view.json  |  1 -
+ .../evidence/closeout/03_threads/01_threads.json   |  2 +-
+ .../jarvis/narration_snapshot_casual_verbose.txt   |  2 +-
+ .../jarvis/narration_snapshot_operator_quiet.txt   |  2 +-
+ .../jarvis/narration_snapshot_operator_verbose.txt |  2 +-
+ .../S14/evidence/ui/AT-S14-02_dashboard.txt        |  1 +
+ .../S14/evidence/ui/agent_switch_timeline.txt      |  2 +-
+ docs/sprints/S14/evidence/ui/dashboard_state.json  |  4 +-
+ .../S14/evidence/untracked/impact_assessment.md    | 16 +++++
+ src/s14/dashboard.ts                               |  8 +++
+ tests/s14.test.ts                                  | 74 ++++++++++++++++++++++
+ 11 files changed, 106 insertions(+), 8 deletions(-)
+--- STDERR ---
+EXIT_CODE: 0

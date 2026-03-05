@@ -1,0 +1,33 @@
+CMD: jq -r ".[].path" docs/sprints/S14/evidence/untracked/inventory.json
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/sprints/S13/evidence/closeout/00_timestamp.txt
+docs/sprints/S13/evidence/closeout/01_preflight/01_pwd.txt
+docs/sprints/S13/evidence/closeout/01_preflight/02_repo.txt
+docs/sprints/S13/evidence/closeout/01_preflight/03_toplevel.txt
+docs/sprints/S13/evidence/closeout/01_preflight/04_worktree.txt
+docs/sprints/S13/evidence/closeout/01_preflight/05_status.txt
+docs/sprints/S13/evidence/closeout/01_preflight/06_fetch.txt
+docs/sprints/S13/evidence/closeout/01_preflight/07_revlist.txt
+docs/sprints/S13/evidence/closeout/01_preflight/08_branch.txt
+docs/sprints/S13/evidence/closeout/01_preflight/09_log.txt
+docs/sprints/S13/evidence/closeout/01_preflight/10_prune.txt
+docs/sprints/S13/evidence/closeout/01_preflight/11_fsck.txt
+docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json
+docs/sprints/S13/evidence/closeout/02_pr_state/02_pr_files.txt
+docs/sprints/S13/evidence/closeout/03_threads/01_threads.json
+docs/sprints/S13/evidence/closeout/04_checks/01_fetch_before.txt
+docs/sprints/S13/evidence/closeout/04_checks/02_revlist_before.txt
+docs/sprints/S13/evidence/closeout/04_checks/03_checks_before.txt
+docs/sprints/S13/evidence/closeout/04_checks/04_fetch_after.txt
+docs/sprints/S13/evidence/closeout/04_checks/05_revlist_after.txt
+docs/sprints/S13/evidence/closeout/04_checks/06_checks_after.txt
+docs/sprints/S13/evidence/closeout/06_merge/01_merge.txt
+docs/sprints/S13/evidence/closeout/06_merge/02_pr_post_merge.json
+docs/sprints/S13/evidence/closeout/07_postmerge/01_checkout.txt
+docs/sprints/S13/evidence/closeout/07_postmerge/02_fetch.txt
+docs/sprints/S13/evidence/closeout/07_postmerge/03_pull.txt
+docs/sprints/S13/evidence/closeout/07_postmerge/04_status.txt
+docs/sprints/S13/evidence/closeout/07_postmerge/05_revlist.txt
+docs/sprints/S13/evidence/closeout/07_postmerge/06_log.txt
+--- STDERR ---
+EXIT_CODE: 0

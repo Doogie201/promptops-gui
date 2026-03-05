@@ -1,0 +1,10 @@
+CMD: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+## sprint/S14-jarvis-mode...origin/sprint/S14-jarvis-mode
+ M docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json
+ M docs/sprints/S13/evidence/closeout/03_threads/01_threads.json
+ M src/s14/dashboard.ts
+ M tests/s14.test.ts
+?? docs/sprints/S14/evidence/closeout_resume/
+--- STDERR ---
+EXIT_CODE: 0

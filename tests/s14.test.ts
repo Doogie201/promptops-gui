@@ -197,6 +197,10 @@ test('AT-S14-02: dashboard tracks phase progress correctly', () => {
   assert.strictEqual(dashboard.lastCheckpointId, 'cp-003');
   assert.strictEqual(dashboard.runComplete, true);
   assert.strictEqual(dashboard.hardStopped, false);
+  // Issue 1: after all phases end, activePhase must be idle
+  assert.strictEqual(dashboard.activePhase, 'idle');
+  // Issue 2: switch event remains source of truth for activeAgent
+  assert.strictEqual(dashboard.activeAgent, 'claude');
 
   fs.writeFileSync(
     path.join(UI_DIR, 'dashboard_state.json'),
@@ -210,6 +214,7 @@ test('AT-S14-02: dashboard tracks phase progress correctly', () => {
       `Evidence: ${dashboard.evidenceCount}\n` +
       `Last checkpoint: ${dashboard.lastCheckpointId}\n` +
       `Active agent: ${dashboard.activeAgent}\n` +
+      `Active phase: ${dashboard.activePhase}\n` +
       `Run complete: ${dashboard.runComplete}\n` +
       `Hard stopped: ${dashboard.hardStopped}\n` +
       `Agent switches: ${dashboard.agentTimeline.length}\n` +
@@ -345,4 +350,73 @@ test('health signal with WARN severity does not set nextDecisionReason', () => {
   ];
   const dashboard = computeDashboard(events);
   assert.strictEqual(dashboard.nextDecisionReason, null);
+});
+
+// ── Issue 1: activePhase clears on phase_end ──────────────────
+
+test('Issue 1A: phase_start->phase_end with no next phase clears activePhase', () => {
+  const events: NarrationEvent[] = [
+    { seq: 1, phase: 'preflight', type: 'phase_start' },
+    { seq: 2, phase: 'preflight', type: 'phase_end' },
+  ];
+  const dashboard = computeDashboard(events);
+  assert.strictEqual(dashboard.activePhase, 'idle');
+  assert.strictEqual(dashboard.phases[0].status, 'complete');
+});
+
+test('Issue 1B: phase_start->phase_end->phase_start sets new activePhase', () => {
+  const events: NarrationEvent[] = [
+    { seq: 1, phase: 'preflight', type: 'phase_start' },
+    { seq: 2, phase: 'preflight', type: 'phase_end' },
+    { seq: 3, phase: 'intake', type: 'phase_start' },
+  ];
+  const dashboard = computeDashboard(events);
+  assert.strictEqual(dashboard.activePhase, 'intake');
+  assert.strictEqual(dashboard.phases[0].status, 'complete');
+  assert.strictEqual(dashboard.phases[1].status, 'active');
+});
+
+test('Issue 1C: out-of-order phase_end for non-active phase does not clear activePhase', () => {
+  const events: NarrationEvent[] = [
+    { seq: 1, phase: 'preflight', type: 'phase_start' },
+    { seq: 2, phase: 'intake', type: 'phase_end' },
+  ];
+  const dashboard = computeDashboard(events);
+  // activePhase should still be preflight (intake end is out-of-order)
+  assert.strictEqual(dashboard.activePhase, 'preflight');
+  // intake is marked complete even though it was out-of-order (event is recorded)
+  assert.strictEqual(dashboard.phases[1].status, 'complete');
+});
+
+// ── Issue 2: activeAgent fallback from phase_start ────────────
+
+test('Issue 2A: no-switch stream with agent on phase_start sets activeAgent', () => {
+  const events: NarrationEvent[] = [
+    { seq: 1, phase: 'agent_invocation', type: 'phase_start', agent: 'codex' },
+    { seq: 2, phase: 'agent_invocation', type: 'evidence_collected', evidenceCount: 1 },
+    { seq: 3, phase: 'agent_invocation', type: 'phase_end' },
+  ];
+  const dashboard = computeDashboard(events);
+  assert.strictEqual(dashboard.activeAgent, 'codex');
+  assert.strictEqual(dashboard.agentTimeline.length, 0);
+});
+
+test('Issue 2B: switch stream uses switch events as source of truth', () => {
+  const events: NarrationEvent[] = [
+    { seq: 1, phase: 'agent_invocation', type: 'phase_start', agent: 'codex' },
+    { seq: 2, phase: 'switching', type: 'agent_switch_auto', agent: 'claude', reason: 'exhausted' },
+  ];
+  const dashboard = computeDashboard(events);
+  // activeAgent should be claude (from switch), not codex (from phase_start)
+  assert.strictEqual(dashboard.activeAgent, 'claude');
+});
+
+test('Issue 2C: agent identity absent remains null', () => {
+  const events: NarrationEvent[] = [
+    { seq: 1, phase: 'preflight', type: 'phase_start' },
+    { seq: 2, phase: 'intake', type: 'phase_start' },
+    { seq: 3, phase: 'intake', type: 'phase_end' },
+  ];
+  const dashboard = computeDashboard(events);
+  assert.strictEqual(dashboard.activeAgent, null);
 });

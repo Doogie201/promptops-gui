@@ -1,0 +1,4 @@
+CMD: python -m json.tool docs/sprints/S14/evidence/untracked/inventory.json > /dev/null
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

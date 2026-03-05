@@ -14,7 +14,7 @@ Phases:
 Evidence collected: 5
 Last checkpoint: cp-003
 Active agent: claude
-Active phase: closeout
+Active phase: idle
 
 Agent Timeline:
   #10 claude [auto] - context exhausted

@@ -1,0 +1,5 @@
+CMD: pwd
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

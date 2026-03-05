@@ -1,0 +1,5 @@
+CMD: git ls-files --others --exclude-standard | wc -l
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+      12
+--- STDERR ---
+EXIT_CODE: 0

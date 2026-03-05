@@ -1,0 +1,4 @@
+CMD: git diff --name-only | awk '!(/^(src\/|tests\/|docs\/backlog\/|docs\/sprints\/README\.md$|docs\/sprints\/S14\/|docs\/sprints\/S13\/evidence\/closeout\/)/){print}'
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

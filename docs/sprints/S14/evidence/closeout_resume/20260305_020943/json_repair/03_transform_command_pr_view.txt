@@ -1,0 +1,21 @@
+CMD: python - <<'PY'
+import subprocess
+path='docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json'
+raw=subprocess.check_output(['git','show',f'HEAD:{path}'],text=True)
+fixed='
+'.join([ln for ln in raw.splitlines() if ln.strip()!='EXIT_CODE=0'])
+print('HEAD_HAS_EXIT_TOKEN=', 'EXIT_CODE=0' in raw)
+print('FIXED_IS_VALID_JSON=', end=' ')
+import json
+json.loads(fixed)
+print(True)
+open('/tmp/s14_fix1.json','w').write(fixed+'
+')
+print('WROTE=/tmp/s14_fix1.json')
+PY
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD_HAS_EXIT_TOKEN= True
+FIXED_IS_VALID_JSON= True
+WROTE=/tmp/s14_fix1.json
+--- STDERR ---
+EXIT_CODE: 0
