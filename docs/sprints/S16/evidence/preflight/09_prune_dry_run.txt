@@ -1,0 +1,221 @@
+CMD: git prune --dry-run
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+00e71b44099a3cda377cf6661a73a6bd7596d056 commit
+025a390d6511b6a03c7f17723ced41a325e7b4e7 tree
+0769b4ea157c5e27ccc4c6562a6719ffa777614f blob
+08a11fc7f5e706930018739070b5377021f11345 tree
+08a375d8c72bff3e2751a659266f055987c8886a commit
+0af929eb03f9e4ccb9957fe21b554dac736e88b6 tree
+15dac1ee22f297a3ebabb592bbb8e310bd6d5db8 tree
+15391a03a8b9422e4ee993b8320e01ece365c67a blob
+19b597e1a420d939af0e438ac60e73be9849decd tree
+1db7a0982acde9751225ba26ec6b8ee6132f2221 tree
+1e0a43496fcc73e575ecf2f5d610aab7e2f98908 tree
+1f2038bf537a0db4087356ec20eca0a121fa80b7 tree
+228f826995f9b6369776ac45dbf337fe192c19c8 commit
+2a5cb1b8cec3cbc7ce150d69f0e1aecacaf02c3b tree
+2af46d3987fc4ab2dbd4d75ff3cb9cf6c167846a tree
+2b7205df290766a29ff709c8615b542805942161 commit
+302b6423744ef26530f583bdbd3d7ee82cfff9f6 tree
+32fd163438d5965c59b2e0360c4de0bde14db1c8 blob
+37563a0c4f8af4e59106b3cb2888e4288c2bfd12 tree
+3849eab3e39e597ee8c38aef7350b2ed865ca54d blob
+3fb1a1de8fd9a91e8fd2bca172f23831f6767ad9 tree
+425c2a7d6153b7db43c74c3c3ffdb024607382fc tree
+49829e4ae1ae0dd40df84c5b16dba84d9cdddfa7 tree
+4a7cbfdd1d4e6bad397475ff083314079303aa30 tree
+4df11cf47a7739b01306b13493f3e1cbbf2f965e tree
+4f750842693a8934f5d5b4b2451e4e0cafa93eaf tree
+50b06081eb3db21c3319e5137b64e854d066fc39 blob
+514c091bfb7dd8411092dfb388a119d21dffe171 tree
+5529897ee172cc8db6fe60ee7c8a6e0bb7d48b21 blob
+554fe3445fb79061fb73021aa57b327acdb74712 commit
+569ade85fda2c9c0786c86ec155a70c9d2562a51 commit
+5a738a0a13ead2c75a71eb46f8dc4a517ead01b8 tree
+5a981d61d8b36981901bdfc5b966e5a06d34f4f6 tree
+5f83f37a8594c9dc9166627d73af39264c046fed blob
+60c027f2db8ef7e0e6ad312a10d94a1959973b69 blob
+63c7122cf2b80b579aef2c942c0d7fb865d3a38c tree
+68685068221892c4fcbdf6aacbdbfe7dbd53acae tree
+689fa51f1ea5c04377fa9a17349534a53b5bdfdf tree
+6cd227837bb43f437ac128a60fedd0ba400a7a3e tree
+72324cbd872784e1bce100ea9e4d3ff64077ab4d tree
+7410bc177ca95652b483e5aa5bf0392b604460cc blob
+763b2cb72c3dbe0993e95ee0381abf239025bb3c commit
+7749b12ada2aed7c7005dad2810dcf0bb685a848 tree
+7a558968bb42fecca6dfbfc1659e46e0d3f5610b tree
+7ac8ca9f80a58cd7de39bd0f87694a1f0ef3285a blob
+7b70bc4bbcc0d4a0224939a3a1dde2411470e018 blob
+7c2b7dd8779844510138ec0e787511321b575376 tree
+7cf4cd410267785a231d84e1d4dcb424fa376eea tree
+7e8b3af5c416a665968d8980fa66c44b1a73632d blob
+7e0cfa7cb9a32db8a3e066fa24275936083db13e blob
+8150ec48b7711b680637f6f7d6068da24d9f524f tree
+8277a971901d63499ea0a0671e11e8c3bd9fa8cd commit
+873aafeac59351fdf12c8d5a630bebc5175f50c1 blob
+9120d742922c2943ea1e8fdb41c0f3c8c6c1767c blob
+91d35524bf4b9fd7f7ff9915e67a59cc69762404 blob
+91b490c1c7fe153d2a9be2e2855e55d851663977 tree
+921127f931cc4efe555ce81a2fafb0c7d930fad4 tree
+9317580857e87ae1e1fddf7568ba5a1272cbaa3d blob
+9608907abfcfb6cb79b3f8ac55841855b744cf6e tree
+97f87e6dcc9949da559a73910c33b1a50629c20e tree
+984105c7ba61be9a6dbbc624e240ded5171d60bb tree
+992f7a156e3067f71f05446f473c8793be4f1f06 commit
+9bb9af775c24ffff8c5ea0975c94e2a93915eb34 tree
+9eb4842eb1fba57eacae30b63545cea90b57aaed tree
+a37cca7a6184e7be350795415c06c720d17651cb tree
+a46d9062edc7f21b879dd59c5049aa52e8105b30 tree
+ab372eb66ce9cb84c2ad946e53793a5fb4bf55ea tree
+ac73a908d88fa1115da4256f46c6b9d2cb3762c3 tree
+ae507500b36d38874af7cdc54c4e704aefed5bf8 commit
+af42ecc7abb39f0d9c47a93b75b9fcf2e71334f5 tree
+b22afe824422ff488dd679ebfa65fb42ca490b30 tree
+b4b22a6cec6994e29a6811e37d2f81a797588d50 blob
+b5ee99efb9f471da4bf10bb8575a9b57550d5b2b tree
+b7f5058d5da413566a04f05d1c81e20555140a1f tree
+b7b2abaee9e01bb37678b2fc5f9f91fcd1a7827e blob
+b969c0b4751c21746e3fd195e4c05a27ed03726a blob
+bcd52bf92f7a637a2d99bae938654b99c0269fe6 blob
+c8eb17305cfb9c0d961e42c66e4a9ced7ba9adb9 blob
+c823f44b97ee24de7c8f399427a4dd31a3225cce tree
+cf5afdd766dfed824fc1cb1ab75c170388fd3139 commit
+d75d1fb932640be058dc12144210ffe9172a005f tree
+da8a1815c3a5552ec23d7b64c67d7394ce06cb05 blob
+dc631a3bf19fab00ce7560eb3c34b07151e01656 blob
+dd9ddf7a502a72ce89cdb7255ed07492a256f452 tree
+e01ea63bdbd8a8ce07eeedcc69c0586c243def69 blob
+e24d1d2070bb7daf255243cf68eb681d6232a554 commit
+e50b866d3367de63b609f0c153854b4ce605026e tree
+e6c0377b13b3f288e535f8fefa939d0f87146464 tree
+e66c5bedc4aabc4b5faf023fbfa8cb0b8d059a5c blob
+e88d8365b11150e49ff9906b74d194e0c97b7cc7 tree
+ebfae8c5f43be78ac834977a2b5a08f1f1fbee2b tree
+eb1f6f465f99ea94b0e430ea68512606f045424f tree
+eeaa2ba74497e39cffa9120983ff5857a559528d blob
+ee5e7f464c4aaf34d28d29b7499b83dc64a74832 tree
+ef35734202388bf766c6e3690996631278979334 tree
+f56ecad3287e679a3d040da9c25320dac75661a5 tree
+f7b028b7c59cddf0479f5a2dd0a559377d80a61e tree
+f840c2c246cc53b33767b1558aaf8002931823d4 tree
+fb24f3869c957755a6abf32f4f56e91d245faebb tree
+fcd795839dee7f367efc78e59e055ec40a2d334f tree
+fd23fff480a2c483df6d08086e6179dbf5dbdbde tree
+fd6f339ccc6031a04bd33a3355ded9560555e3cb tree
+rm -f .git/objects/01/b400e8c2791dd075daeb15ca1b15e441b44c23
+rm -f .git/objects/01/75376fc28de6899006d6046640e68279cd6351
+rm -f .git/objects/01/83011c50f73156ec267940a34427638375b21d
+rm -f .git/objects/03/857e78e993cdb11fb589b9115de01d757b3a2e
+rm -f .git/objects/04/485e990a81aa1c992b7f62cbd0f4780dbdf970
+rm -f .git/objects/08/138fae330c8d259c51d329a468e2e6b74ae799
+rm -f .git/objects/09/43dacb98ac6d2f8ecb5d243a87f5161698c3c0
+rm -f .git/objects/0c/275344e93070d029fd1e7f5c30e3dec62d6b3a
+rm -f .git/objects/0e/70237dd646cbd832c9b8a559234562efab8fcf
+rm -f .git/objects/11/5642796ecb2e2a38b5432e2e3b8fbf141ef40c
+rm -f .git/objects/13/2897294aff7efbd098f3a3d6115aecc272d37a
+rm -f .git/objects/14/82796773b332fa5746dad8b3530df558c81ffb
+rm -f .git/objects/15/04dd74a9674bd790e647998d47cbaaaac9f32b
+rm -f .git/objects/17/caf2cdd2f522690c1c07391e5f2ddc0c1c4e0a
+rm -f .git/objects/19/a15917b8b77bcbda3d959e4ffa8fbd01f586c4
+rm -f .git/objects/1e/5498b78a3499e0a95e5da387c344f5c41286cb
+rm -f .git/objects/20/23a29b26d73908da37a79ea1deae13d55ad0a7
+rm -f .git/objects/22/b1779075d5e926e894d3be65f0d849181ffebb
+rm -f .git/objects/23/7e46d1e3c238b7211c647579fc461e49f493b7
+rm -f .git/objects/25/f85593d7d4bc5cf8906ddd3b39805acaadf579
+rm -f .git/objects/2d/218d443a2a2fb2de8332cbcb9b5d98b7059513
+rm -f .git/objects/30/b1d1d6472b8abe5c6861072f7e745955785d44
+rm -f .git/objects/35/0b8204d114229fa2c7317344481c000e1704c0
+rm -f .git/objects/37/98c023d014da4ae5448115500a2cd01dd984a5
+rm -f .git/objects/3c/45b9465eb55a33735fedef86a12dd9ab6c06e1
+rm -f .git/objects/44/b3c607972595dc1e6d50cc5551ee57b33c3c28
+rm -f .git/objects/45/e3048c479adb44e4d03a44f36d6d833e22a6a8
+rm -f .git/objects/47/ab51af5d75bf6bbe7793aa59e4b6dbbe44b993
+rm -f .git/objects/4a/dab997c95e4009fd7127422a2b2a0be001b42a
+rm -f .git/objects/4b/bf7a9406fe65266f3da2818a69939f0b9047fa
+rm -f .git/objects/4c/7629433c5a4ba746d48925db7f22958108828c
+rm -f .git/objects/4c/70eda35b42cccf41ed968d0e9df481412c42e5
+rm -f .git/objects/51/a347a42be4fd88ead7a08b8a67ae44772429a0
+rm -f .git/objects/59/18a41a62bc40c4d32b3f44d667419cfe1c1486
+rm -f .git/objects/5b/b439b72aba41bb98f6c0dcbb3391f46f51ac07
+rm -f .git/objects/5c/3a324106f607f0a4144859fa9bbd7c3255c35b
+rm -f .git/objects/63/574443d611483d1c92c5f3bf8cc0b03b6626f8
+rm -f .git/objects/64/f722cd89368c249aae8c4983ad6364347b850a
+rm -f .git/objects/64/ed7a9e26900600833c4fce7aa62da21175193e
+rm -f .git/objects/69/677f70382ce06c5a5d9661341aecc576f534c8
+rm -f .git/objects/6a/104c5d49d7b44cc49ffcba617a4dfe338a29bb
+rm -f .git/objects/6c/33b1cc42c4c210398c4a76c602729d621d9fb9
+rm -f .git/objects/6c/00f532a561eee450f44957aa36a37a10df186f
+rm -f .git/objects/6c/bf66f156d7fbfc0486741c187430986a3150d0
+rm -f .git/objects/71/8dc48e8c3aafc7acbd561141d1bb192d619de3
+rm -f .git/objects/72/6d6dd4f71d4064b7d46ba95302eb1ea2ecd277
+rm -f .git/objects/72/29c3f487d06503245adbc294dc5bc29c7c0fbe
+rm -f .git/objects/74/abfe4e58b29ccbb461fb3f817d0e54a9f30da7
+rm -f .git/objects/75/c8d1a58e53e4a78d9ea957cea3c0b4c894c730
+rm -f .git/objects/76/eaa1ccbb7922a8dc85e0316905f2f751f80300
+rm -f .git/objects/77/61a1332b4b42c1715b377adfd4e25794a15c0a
+rm -f .git/objects/7a/66febe610fae4418482a491ed07dea01642b66
+rm -f .git/objects/7c/1a71231ac745b1001885be1014eb98572a3409
+rm -f .git/objects/7c/6da123f9fec039b2a19d47b005ccee33c0da47
+rm -f .git/objects/80/6599affaa9c60b0e4f37081c727f1cc648bb68
+rm -f .git/objects/81/a5c03f8ad4df01ebca10f7de4172c587171df4
+rm -f .git/objects/83/18e28b15934ca57504a97985b0513128403958
+rm -f .git/objects/85/a1932b32daeb0d852c7cb47ea42cc3f24b017b
+rm -f .git/objects/88/694a7e1fcebf9858085c6bb1996385ef96e16f
+rm -f .git/objects/88/278ce390d85cd9eaa6d913f66b7e54416a8eb3
+rm -f .git/objects/88/7a90c198dd49d646696cb5ad3a9f2d5a7d7603
+rm -f .git/objects/8b/34dd24745460b5abfecf04ca762211ee260b43
+rm -f .git/objects/8c/cf6f5e8f2c157ef7a30e2872ebbf7763d53e07
+rm -f .git/objects/8e/0ece6622e52395974dee17249fa111fef6650f
+rm -f .git/objects/90/35a4524d3d3d3aa637d03f47051d1be0bea94d
+rm -f .git/objects/93/23b85a793fe1de028ea3662f2b7aa3422173b1
+rm -f .git/objects/9c/97cf0503300a5aa557c50c54089dcb5f2fb8ab
+rm -f .git/objects/9c/aec658084c8bbf9f5dcee5bb3faf8405f26f70
+rm -f .git/objects/a3/36be27688c914d1578bdacf2b6dcf7b6bd5e56
+rm -f .git/objects/a3/885fe8aab88b362227ed37ab70a5dc09f2f0f2
+rm -f .git/objects/a3/4552174259104c1868c2d6a80f6474e04caae4
+rm -f .git/objects/a4/d9b68776696088cd456ba56f7486b47b1c5105
+rm -f .git/objects/a5/423476cbed917087f296cc0d05d92619cbd6ad
+rm -f .git/objects/a6/2c650034ea5a4980d400ad393582248038cd64
+rm -f .git/objects/a9/d976064c2363881a85bde21e6804ab1840f60c
+rm -f .git/objects/aa/4d4ca986a2689ec811598a929023491b8a5717
+rm -f .git/objects/ae/d2232b022705d280c492a24d96d6263b10dd2d
+rm -f .git/objects/b0/d038e27dbf4da66def497953b10ff3ed344c32
+rm -f .git/objects/b2/ae5a49836dafc86675f6daacbc3656719330e5
+rm -f .git/objects/b3/102e14d89d37a275238e6756bd7a8d74ccbabe
+rm -f .git/objects/b4/18f7f94cb99c81fc7f84e6d0ba1678bd3a5464
+rm -f .git/objects/b6/1e66347b5869eaeb755e81a7e76bdceb9c20ba
+rm -f .git/objects/b8/570475a4ce8aa636161c712898958b7e773a9a
+rm -f .git/objects/ba/616a277ee9fc9f08923493e0a3e47da2765deb
+rm -f .git/objects/bb/b0de5191af046fba004bd47d8f2a2b11d3300c
+rm -f .git/objects/bb/432ae3ea8cf90b93fbba9743c727b20372ab7a
+rm -f .git/objects/bd/b2b501a21073a9eed81b9cc5154c9480aa9d1b
+rm -f .git/objects/c1/8ba639078767a05c36ce3627e7fe5b51ffbc87
+rm -f .git/objects/c1/f47c9d1c3450e4dbeca17c24253f4a0866908a
+rm -f .git/objects/c3/fbbceda68eab89eca81b0e510ab89099863f40
+rm -f .git/objects/c3/c4a87de092f1ea47b1e0350afba3d5f3009ea1
+rm -f .git/objects/c3/ff6fd7d47890814295e20b63fc9d68d639c589
+rm -f .git/objects/c5/a4ac3e365f367cb86b40c9cafc1f7bc128a48b
+rm -f .git/objects/c6/d721c5ae09cec27ed30db5eb652200a4fbe156
+rm -f .git/objects/c6/d56831aa6a81366badcf5368886985ce481c72
+rm -f .git/objects/c6/a7b6131478d50c7c0672c2424c2379898ef69c
+rm -f .git/objects/c8/cbeae24b21be7691774c8eaf81ca46f32eb252
+rm -f .git/objects/cb/ac84ff56959ea16ff3ac42979e1889293823ee
+rm -f .git/objects/cd/cb4a38f8e8cd2375a5fdbfe37c449025d3d4b0
+rm -f .git/objects/cf/b67dc9b16140ad8f8fb1e4cfa4bfaf673f6f18
+rm -f .git/objects/d0/5b1f927f4be600faf4470aca7d27c46700c21b
+rm -f .git/objects/d2/13311b9551c0b0b790d2dd0d5639925e78f67f
+rm -f .git/objects/d4/c4c0007f74e659c61616b7965c3460803994d4
+rm -f .git/objects/db/0a97bebe22ec9ede10dd65bfc92bae12b89972
+rm -f .git/objects/dc/f1380ab3c1eee04bbb8e88215cce762c765e97
+rm -f .git/objects/de/b6c1574f97cb1de51e48f477c61e6933a3b5f8
+rm -f .git/objects/df/79e2bf5f117ceb07e36fcf324c96502fc9dfca
+rm -f .git/objects/e1/0978dcd6e6f9c26381c8f9b8106cf5baf8ef1c
+rm -f .git/objects/e9/078607df65c998951df4b378bf041c3bc1ad78
+rm -f .git/objects/ef/45cb72fedd837630a8b090154c9a89ff927398
+rm -f .git/objects/f2/dd4321e44ff881b8e0a569ef74a444d1ce74d5
+rm -f .git/objects/f7/730ebfa7a5058ac5d4aa4b2fa09c5ab8fbf518
+rm -f .git/objects/f9/b03b4eaec03cededfe73a71b0537f958402332
+rm -f .git/objects/fc/0dff0f8ba2550931b3e2496c754b1bc608b580
+rm -f .git/objects/fe/facb81249734e5fe92696071e989d80751a85b
+rm -f .git/objects/fe/1b4bc9f35803ae8900738de41e35f6d8b0e347
+EXIT_CODE: 0

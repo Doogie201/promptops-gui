@@ -1,0 +1,10 @@
+CMD: git push -u origin sprint/S16-hardening-regression
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+remote: 
+remote: Create a pull request for 'sprint/S16-hardening-regression' on GitHub by visiting:        
+remote:      https://github.com/Doogie201/promptops-gui/pull/new/sprint/S16-hardening-regression        
+remote: 
+To https://github.com/Doogie201/promptops-gui.git
+ * [new branch]      sprint/S16-hardening-regression -> sprint/S16-hardening-regression
+branch 'sprint/S16-hardening-regression' set up to track 'origin/sprint/S16-hardening-regression'.
+EXIT_CODE: 0

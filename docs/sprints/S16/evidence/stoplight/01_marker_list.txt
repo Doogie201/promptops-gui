@@ -1,0 +1,20 @@
+HTML markers:
+- dangerouslySetInnerHTML
+- Unhandled Runtime Error
+- Application error
+- Hydration failed
+- Cannot read properties of undefined
+- TypeError:
+
+Determinism markers:
+- Date.now(
+- Math.random(
+
+Storage markers:
+- localStorage(
+- sessionStorage(
+
+Hardcoded path markers:
+- /Users/
+- /Volumes/
+- C:\

@@ -1,0 +1,79 @@
+{
+  "stable_eval": {
+    "pass": true,
+    "failures": [],
+    "summary": {
+      "iterations": 4,
+      "heapGrowthBytes": 160000,
+      "logGrowthBytes": 1000,
+      "peakUiLatencyMs": 18,
+      "totalFatalErrors": 0
+    }
+  },
+  "unstable_eval": {
+    "pass": false,
+    "failures": [
+      "heap_growth_exceeded:160000",
+      "log_growth_exceeded:1000",
+      "ui_latency_exceeded:18"
+    ],
+    "summary": {
+      "iterations": 4,
+      "heapGrowthBytes": 160000,
+      "logGrowthBytes": 1000,
+      "peakUiLatencyMs": 18,
+      "totalFatalErrors": 0
+    }
+  },
+  "adapter_success": {
+    "status": "SUCCESS",
+    "attemptsProcessed": 3,
+    "retryScheduleMs": [
+      0,
+      50
+    ],
+    "salvagedOutput": "partial-output",
+    "events": [
+      {
+        "type": "adapter_failure",
+        "detail": "attempt=1;status=timeout"
+      },
+      {
+        "type": "adapter_failure",
+        "detail": "attempt=2;status=error"
+      },
+      {
+        "type": "adapter_success",
+        "detail": "attempt=3"
+      }
+    ]
+  },
+  "adapter_switch": {
+    "status": "SWITCH_AGENT",
+    "attemptsProcessed": 3,
+    "retryScheduleMs": [
+      0,
+      50,
+      150
+    ],
+    "salvagedOutput": "",
+    "events": [
+      {
+        "type": "adapter_failure",
+        "detail": "attempt=1;status=timeout"
+      },
+      {
+        "type": "adapter_failure",
+        "detail": "attempt=2;status=error"
+      },
+      {
+        "type": "adapter_failure",
+        "detail": "attempt=3;status=error"
+      },
+      {
+        "type": "agent_switch",
+        "detail": "failures=3;reason=retry_exhausted"
+      }
+    ]
+  }
+}

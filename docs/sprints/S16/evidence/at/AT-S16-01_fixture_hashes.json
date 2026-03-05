@@ -1,0 +1,25 @@
+{
+  "baseline_hash": "c1b1922bed228e1a744d6c4439b0739f0e1e95e4f81caef8395d53ebce8c791a",
+  "replay_pass": {
+    "pass": true,
+    "expectedHash": "c1b1922bed228e1a744d6c4439b0739f0e1e95e4f81caef8395d53ebce8c791a",
+    "actualHash": "c1b1922bed228e1a744d6c4439b0739f0e1e95e4f81caef8395d53ebce8c791a",
+    "mismatches": []
+  },
+  "replay_drifted": {
+    "pass": false,
+    "expectedHash": "c1b1922bed228e1a744d6c4439b0739f0e1e95e4f81caef8395d53ebce8c791a",
+    "actualHash": "6d16c096459ba1081fb92ec7c164c30dded189371e9b7e32867561b46ff19d89",
+    "mismatches": [
+      "events"
+    ]
+  },
+  "output_hashes": {
+    "events": "aaae61dafd2ad67e7db173d9bcd16f8714e186e4459964fbeacd22f5b9cb198a",
+    "ledger": "a21534a04af36b9fbc39eaca9b7d8bc90e5232ae04f94161d65913a015a58a72",
+    "narration": "391bce943073172cdc29b9db0a5eaadbdf5c609ee15eeea9742c3095748d9ee6",
+    "receipts": "add023f10c6b06bab17cdd4cf27d80ac994399e15a6de86671b37babf0056ca0",
+    "ticket": "a4eff4c194c12fad79ee55ec1dacab02c6fc2b9c3676b5a906b65bbeb15e2c33",
+    "verdict": "727e9bd17b077ba162e13ba877135cc6fbc6b30f83da0b34b3e20233f1cc885f"
+  }
+}
