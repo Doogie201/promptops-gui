@@ -20,3 +20,4 @@
 - `verify/05_health_verdict.md`: consolidated PASS/WARN/FAIL health verdict.
 - `verify/06_forbidden_ops_audit.txt`: forbidden-ops audit (no rebase/merge/reset --hard/force push/gh pr merge).
 - `verify/06_durable_copy_manifest.txt`: durable copy manifest.
+- `verify/07_durable_commit_push.txt`: durable evidence addendum commit/push proof (clean + 0 0 after push).
