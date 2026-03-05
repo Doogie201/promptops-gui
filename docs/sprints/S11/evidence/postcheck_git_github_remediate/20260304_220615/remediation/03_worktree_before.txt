@@ -5,4 +5,3 @@ branch refs/heads/main
 worktree /private/tmp/promptops/S10/wt_closeout_20260304_185656
 HEAD 554fe3445fb79061fb73021aa57b327acdb74712
 branch refs/heads/sprint/S10-gui-operator-tools-v1
-
