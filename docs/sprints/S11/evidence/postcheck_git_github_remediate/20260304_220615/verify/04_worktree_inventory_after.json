@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-05T03:14:18Z",
-  "worktree_list_raw": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 13164b99c78c42c8c0c48d37cd202d3113fdbc33\nbranch refs/heads/main",
+  "generated_at": "2026-03-05T03:16:39Z",
+  "worktree_list_raw": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 50f824fce615dfb91500a19bba54b22c92a435d4\nbranch refs/heads/main",
   "worktrees": [
     {
       "worktree_path": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
       "exists": true,
       "branch": "main",
-      "head_sha": "13164b99c78c42c8c0c48d37cd202d3113fdbc33",
+      "head_sha": "50f824fce615dfb91500a19bba54b22c92a435d4",
       "status_raw": "## main...origin/main",
       "status_exit_code": 0,
       "dirty": false

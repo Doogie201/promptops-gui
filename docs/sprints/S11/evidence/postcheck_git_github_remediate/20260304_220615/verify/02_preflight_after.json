@@ -1,5 +1,5 @@
 {
-  "run_ts": "2026-03-05T03:13:04Z",
+  "run_ts": "2026-03-05T03:16:12Z",
   "repo_root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
   "parsed": {
     "branch": "main",
@@ -66,7 +66,7 @@
       "name": "git_worktree_list_porcelain",
       "cmd": "git worktree list --porcelain",
       "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
-      "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 13164b99c78c42c8c0c48d37cd202d3113fdbc33\nbranch refs/heads/main",
+      "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 50f824fce615dfb91500a19bba54b22c92a435d4\nbranch refs/heads/main",
       "stderr": "",
       "exit_code": 0
     },
@@ -106,7 +106,7 @@
       "name": "git_log_oneline_5",
       "cmd": "git log --oneline -5",
       "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
-      "stdout": "13164b9 docs(s11): add postcheck git/github remediation evidence bundles\n70e2537 [S11] ux : template lifecycle manager (#18)\nb7ffdca [S10] devx : codecov bundle upload remediation (#17)\nfff206f [S10] devx : codecov bundle analysis (vite) (#16)\ndfc7289 [S10] devx : GUI operator tools v1 (#15)",
+      "stdout": "50f824f docs(s11): append final postcheck durable sync receipts\ne93d3ff docs(s11): finalize postcheck remediation verification receipts\n13164b9 docs(s11): add postcheck git/github remediation evidence bundles\n70e2537 [S11] ux : template lifecycle manager (#18)\nb7ffdca [S10] devx : codecov bundle upload remediation (#17)",
       "stderr": "",
       "exit_code": 0
     }
