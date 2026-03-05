@@ -1,0 +1,3 @@
+COMMAND: gh pr merge 22 --repo Doogie201/promptops-gui --squash --delete-branch
+STDOUT_STDERR: (none)
+EXIT_CODE: 0

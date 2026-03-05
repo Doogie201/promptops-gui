@@ -1,0 +1,7 @@
+COMMAND: git branch --list 'sprint/S15-terminal-panel'
+  sprint/S15-terminal-panel
+EXIT_CODE: 0
+
+COMMAND: gh pr view 22 --repo Doogie201/promptops-gui --json headRefName
+{"headRefName":"sprint/S15-terminal-panel"}
+EXIT_CODE: 0

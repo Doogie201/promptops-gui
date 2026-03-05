@@ -1,0 +1,20 @@
+COMMAND: gh pr checks 22 --repo Doogie201/promptops-gui
+codecov/bundles	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/22?dropdown=bundle	Bundle change: 0.0% (Threshold: 5.0%)
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/22
+coverage	pass	16s	https://github.com/Doogie201/promptops-gui/actions/runs/22710993292/job/65848792959
+coverage	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22710995004/job/65848798724
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772702421.olzSKjPfR-OXJivBvmyxcA	checks completed successfully
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22710993335/job/65848792954
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22710995014/job/65848798702
+EXIT_CODE: 0
+
+COMMAND: gh pr view 22 --repo Doogie201/promptops-gui --json mergeable,mergeStateStatus,statusCheckRollup
+{"mergeStateStatus":"CLEAN","mergeable":"MERGEABLE","statusCheckRollup":[{"__typename":"CheckRun","completedAt":"2026-03-05T09:20:54Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/Doogie201/promptops-gui/actions/runs/22710995004/job/65848798724","name":"coverage","startedAt":"2026-03-05T09:20:33Z","status":"COMPLETED","workflowName":"Codecov Coverage"},{"__typename":"CheckRun","completedAt":"2026-03-05T09:20:40Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/Doogie201/promptops-gui/actions/runs/22710993292/job/65848792959","name":"coverage","startedAt":"2026-03-05T09:20:24Z","status":"COMPLETED","workflowName":"Codecov Coverage"},{"__typename":"CheckRun","completedAt":"2026-03-05T09:21:00Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/Doogie201/promptops-gui/actions/runs/22710995014/job/65848798702","name":"verify","startedAt":"2026-03-05T09:20:32Z","status":"COMPLETED","workflowName":"Verify"},{"__typename":"CheckRun","completedAt":"2026-03-05T09:20:51Z","conclusion":"SUCCESS","detailsUrl":"https://github.com/Doogie201/promptops-gui/actions/runs/22710993335/job/65848792954","name":"verify","startedAt":"2026-03-05T09:20:25Z","status":"COMPLETED","workflowName":"Verify"},{"__typename":"StatusContext","context":"codecov/bundles","startedAt":"2026-03-05T09:21:06Z","state":"SUCCESS","targetUrl":"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/22?dropdown=bundle"},{"__typename":"CheckRun","completedAt":"2026-03-05T09:21:20Z","conclusion":"SUCCESS","detailsUrl":"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/22","name":"codecov/patch","startedAt":"2026-03-05T09:21:20Z","status":"COMPLETED","workflowName":""},{"__typename":"StatusContext","context":"pre-commit.ci - pr","startedAt":"2026-03-05T09:21:44Z","state":"SUCCESS","targetUrl":"https://results.pre-commit.ci/run/github/1168058876/1772702421.olzSKjPfR-OXJivBvmyxcA"}]}
+EXIT_CODE: 0
+
+COMMAND: gh api graphql reviewThreads recheck
+{"data":{"repository":{"pullRequest":{"reviewThreads":{"nodes":[{"id":"PRRT_kwDORZ8p_M5yRYHP","isResolved":true},{"id":"PRRT_kwDORZ8p_M5yRYHQ","isResolved":true}]}}}}}EXIT_CODE: 0
+
+COMMAND: git rev-parse HEAD
+b163e06b64b2d537987f95301d0f15b6dbbd5fad
+EXIT_CODE: 0
