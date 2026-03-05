@@ -6,5 +6,19 @@
     "code": "NONE",
     "message": "Pinned template v1 exists."
   },
+  "settings_drift": {
+    "ok": false,
+    "code": "PINNED_TEMPLATE_SETTINGS_DRIFT",
+    "message": "Settings change would invalidate pinned template placeholders: REPO_OWNER",
+    "missingGlobalBindings": [
+      "REPO_OWNER"
+    ]
+  },
+  "unresolved_requirements_run_a": [
+    "unresolved_placeholders"
+  ],
+  "unresolved_requirements_run_b": [
+    "unresolved_placeholders"
+  ],
   "import_ok": true
 }

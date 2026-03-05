@@ -145,6 +145,7 @@ export interface SettingsImpactWarning {
 }
 
 const PLACEHOLDER_PATTERN = /\[\[\s*([^\]]+?)\s*\]\]/g;
+const PLACEHOLDER_DETECT_PATTERN = /\[\[\s*([^\]]+?)\s*\]\]/;
 const DETERMINISM_RISK_PATTERNS = [
   /date\.now\s*\(/i,
   /math\.random\s*\(/i,
@@ -648,10 +649,11 @@ export function assessSettingsImpactOnPinnedTemplate(
     };
   }
 
+  const sprintScoped = new Set(['SPRINT_ID', 'PR_NUMBER', 'BRANCH_NAME', 'RUN_ID', 'SPRINT_BRANCH']);
   const required = collectPlaceholders(version.template)
-    .filter((name) => hasOwn(nextGlobalBindings, name))
+    .filter((name) => !sprintScoped.has(name))
     .sort();
-  const missing = required.filter((name) => !nextGlobalBindings[name]);
+  const missing = required.filter((name) => !hasOwn(nextGlobalBindings, name) || !nextGlobalBindings[name]);
   if (missing.length === 0) return { ok: true, code: 'NONE', message: 'Settings are compatible with pinned template.', missingGlobalBindings: [] };
   return {
     ok: false,
@@ -949,7 +951,7 @@ function evaluateUnresolvedRequirements(rendered: Record<string, unknown>): stri
   if (!Array.isArray(whitelist) || whitelist.length === 0) unresolved.push('missing_whitelist_paths');
 
   const canonical = canonicalJson(rendered);
-  if (PLACEHOLDER_PATTERN.test(canonical)) unresolved.push('unresolved_placeholders');
+  if (PLACEHOLDER_DETECT_PATTERN.test(canonical)) unresolved.push('unresolved_placeholders');
 
   return unresolved;
 }

@@ -4,6 +4,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import {
   activateTemplateVersion,
+  assessSettingsImpactOnPinnedTemplate,
   canonicalJson,
   compilePreview,
   confirmProtectedOverride,
@@ -245,6 +246,24 @@ test('AT-S11-04 rollback restores deterministic preview hash and pinned version 
   const pinGuard = ensurePinnedTemplateExists(rollbackActivation.registry, 'S11-template-lifecycle-manager', 'run-002');
   assert.strictEqual(pinGuard.ok, true);
 
+  const settingsDrift = assessSettingsImpactOnPinnedTemplate(
+    rollbackActivation.registry,
+    'S11-template-lifecycle-manager',
+    'run-002',
+    { REPO_NAME: 'promptops-gui' },
+  );
+  assert.strictEqual(settingsDrift.ok, false);
+  assert.ok(settingsDrift.missingGlobalBindings.includes('REPO_OWNER'));
+
+  const unresolvedInput: PreviewInput = {
+    ...PREVIEW_INPUT,
+    globalBindings: { REPO_NAME: 'promptops-gui' },
+  };
+  const unresolvedA = compilePreview(restoredVersion, unresolvedInput);
+  const unresolvedB = compilePreview(restoredVersion, unresolvedInput);
+  assert.ok(unresolvedA.unresolvedRequirements.includes('unresolved_placeholders'));
+  assert.ok(unresolvedB.unresolvedRequirements.includes('unresolved_placeholders'));
+
   const exported = exportRegistryCanonical(rollbackActivation.registry);
   const imported = importRegistryCanonical(exported);
   assert.strictEqual(imported.ok, true);
@@ -263,6 +282,9 @@ test('AT-S11-04 rollback restores deterministic preview hash and pinned version 
     result: 'PASS',
     rollback_activation_ok: rollbackActivation.ok,
     pin_guard: pinGuard,
+    settings_drift: settingsDrift,
+    unresolved_requirements_run_a: unresolvedA.unresolvedRequirements,
+    unresolved_requirements_run_b: unresolvedB.unresolvedRequirements,
     import_ok: imported.ok,
   });
 });
