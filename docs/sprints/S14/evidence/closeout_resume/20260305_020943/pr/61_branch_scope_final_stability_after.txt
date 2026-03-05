@@ -1,0 +1,8 @@
+$ git rev-parse HEAD
+d4d293e614f49e3a44f654066d500c67baecb73b
+$ git rev-parse origin/sprint/S14-jarvis-mode
+d4d293e614f49e3a44f654066d500c67baecb73b
+$ git rev-list --left-right --count HEAD...origin/sprint/S14-jarvis-mode
+0	0
+$ git diff --name-only origin/main...origin/sprint/S14-jarvis-mode | grep ^'docs/sprints/S11/' || true
+EXIT_CODE=0

@@ -6,4 +6,8 @@ VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/26_pr_vi
 VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/28_threads_snapshot_a.json
 VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/32_pr_view_snapshot_b.json
 VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/34_threads_snapshot_b.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/38_pr_view_post_push_before.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/40_threads_post_push_before.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/44_pr_view_post_push_after.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/46_threads_post_push_after.json
 VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/99_json_normalization_metadata.json

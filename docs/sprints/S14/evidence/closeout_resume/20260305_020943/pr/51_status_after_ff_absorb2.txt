@@ -1,0 +1,19 @@
+$ git status --porcelain=v1 --branch
+## sprint/S14-jarvis-mode...origin/sprint/S14-jarvis-mode
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/38_pr_view_post_push_before.json
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/39_checks_watch_post_push.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/40_threads_post_push_before.json
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/41_branch_sync_post_push_before.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/42_wait_190s_post_push.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/43_fetch_post_push_after_wait.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/44_pr_view_post_push_after.json
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/45_checks_post_push_after.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/46_threads_post_push_after.json
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/47_branch_scope_post_push_after.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/48_remote_head_after_post_push_wait.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/49_remote_commit_details_after_post_push_wait.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/50_ff_absorb_remote_bot_after_post_push_wait.txt
+?? docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/51_status_after_ff_absorb2.txt
+$ git rev-list --left-right --count HEAD...origin/sprint/S14-jarvis-mode
+0	0
+EXIT_CODE=0
