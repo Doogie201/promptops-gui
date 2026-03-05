@@ -1,0 +1,7 @@
+CMD=git diff --name-only origin/main...HEAD | grep '^docs/sprints/S11/' || true
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_worktree_before.txt
+docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/05_fsck_classification.md
+docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_open_prs.txt
+GREP_EXIT_CODE=0
+EXIT_CODE=0

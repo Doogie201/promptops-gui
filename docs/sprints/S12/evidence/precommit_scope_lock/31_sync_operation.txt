@@ -1,0 +1,11 @@
+CMD=git pull --ff-only
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+Updating 2deab80..27557c1
+Fast-forward
+ .../remediation/03_worktree_before.txt             |  1 -
+ .../remediation/05_fsck_classification.md          |  1 -
+ .../gh_open_prs.txt                                |  1 -
+ .../scope_fix/51_checks_watch_after_push.txt       | 56 +++++++++++-----------
+ .../evidence/scope_fix/52_threads_after_push.json  |  2 +-
+ 5 files changed, 29 insertions(+), 32 deletions(-)
+EXIT_CODE=0

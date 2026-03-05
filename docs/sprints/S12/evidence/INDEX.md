@@ -106,3 +106,34 @@
 - `scope_fix/52_threads_after_push.json`
 - `scope_fix/53_scope_comment_receipt.txt`
 - `scope_fix/60_index_update_diff.txt`
+
+## Pre-commit Scope Lock
+- `precommit_scope_lock/00_pwd.txt`
+- `precommit_scope_lock/01_echo_PROMPTOPS_REPO.txt`
+- `precommit_scope_lock/02_show_toplevel.txt`
+- `precommit_scope_lock/03_branch.txt`
+- `precommit_scope_lock/04_status.txt`
+- `precommit_scope_lock/10_remote_head.txt`
+- `precommit_scope_lock/11_remote_commit_showname.txt`
+- `precommit_scope_lock/12_pr_files_remote_head.txt`
+- `precommit_scope_lock/13_s11_grep_remote_head.txt`
+- `precommit_scope_lock/20_strategy_choice.txt`
+- `precommit_scope_lock/21_config_diff.txt`
+- `precommit_scope_lock/22_hook_target_proof.txt`
+- `precommit_scope_lock/30_revlist_before_sync.txt`
+- `precommit_scope_lock/31_sync_operation.txt`
+- `precommit_scope_lock/31b_sync_operation_final.txt`
+- `precommit_scope_lock/32_revlist_after_sync.txt`
+- `precommit_scope_lock/32b_revlist_after_final_sync.txt`
+- `precommit_scope_lock/33_scope_grep_after_sync.txt`
+- `precommit_scope_lock/34_whitelist_check_after_sync.txt`
+- `precommit_scope_lock/35_revert_remote_bot_commit.txt`
+- `precommit_scope_lock/36_status_after_revert_n.txt`
+- `precommit_scope_lock/40_commit.txt`
+- `precommit_scope_lock/41_push.txt`
+- `precommit_scope_lock/42_pr_files_after_push.txt`
+- `precommit_scope_lock/43_s11_grep_after_push.txt`
+- `precommit_scope_lock/44_checks_watch.txt`
+- `precommit_scope_lock/45_fetch_before_final_sync.txt`
+- `precommit_scope_lock/45_remote_only_commits_before_ff.txt`
+- `precommit_scope_lock/50_pr_comment.txt`

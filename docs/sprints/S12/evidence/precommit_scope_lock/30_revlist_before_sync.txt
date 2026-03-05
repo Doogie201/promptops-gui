@@ -1,0 +1,4 @@
+CMD=git rev-list --left-right --count HEAD...origin/sprint/S12-health-drift-detection
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+0	1
+EXIT_CODE=0

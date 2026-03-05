@@ -1,0 +1,6 @@
+CMD: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+## sprint/S12-health-drift-detection...origin/sprint/S12-health-drift-detection
+ M docs/sprints/S12/evidence/INDEX.md
+?? docs/sprints/S12/evidence/precommit_scope_lock/
+EXIT_CODE: 0
