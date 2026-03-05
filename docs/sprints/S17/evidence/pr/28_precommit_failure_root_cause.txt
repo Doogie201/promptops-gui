@@ -1,0 +1,12 @@
+326:check json...............................................................<span class=" -Color -Color-BGRed -C-BGRed">Failed</span>
+327:<span class=" -Color -Color-Faint -C-Faint">- hook id: check-json</span>
+330:docs/sprints/S17/evidence/pr/06_threads_comments.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+331:docs/sprints/S17/evidence/pr/21_threads_after_resolution.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+332:docs/sprints/S17/evidence/pr/15_stability2_before.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+333:docs/sprints/S17/evidence/pr/05_pr_view.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+334:docs/sprints/S17/evidence/pr/20_thread_resolve_mutation.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+335:docs/sprints/S17/evidence/pr/10_stability_after.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+336:docs/sprints/S17/evidence/pr/08_stability_before.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+337:docs/sprints/S17/evidence/pr/14_threads_after_drift.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+338:docs/sprints/S17/evidence/pr/17_stability2_after.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+339:docs/sprints/S17/evidence/pr/18_threads_before_resolution.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))

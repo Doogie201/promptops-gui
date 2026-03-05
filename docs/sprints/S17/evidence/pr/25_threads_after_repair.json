@@ -1,5 +1,5 @@
 {
-  "command": "gh api graphql unresolved threads after",
+  "command": "gh api graphql threads/comments",
   "exitCode": 0,
   "payload": {
     "data": {
