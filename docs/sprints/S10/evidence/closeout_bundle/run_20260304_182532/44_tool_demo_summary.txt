@@ -1,0 +1,115 @@
+CMD: generate_fixture_tool_receipts
+OUTPUT: /tmp/promptops/S10/tools/S10_tool_demo_summary.json
+{
+  "preflight": {
+    "tool": "preflight",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Preflight passed.",
+    "receiptPaths": {
+      "preflight_commands": "/tmp/promptops/S10/tools/preflight/S10-EVID-PREFLIGHT/S10-gui-operator-tools-v1_preflight_S10-EVID-PREFLIGHT_20260304T193000Z/preflight_commands.json",
+      "preflight_outputs": "/tmp/promptops/S10/tools/preflight/S10-EVID-PREFLIGHT/S10-gui-operator-tools-v1_preflight_S10-EVID-PREFLIGHT_20260304T193000Z/preflight_outputs.ndjson",
+      "preflight_eval": "/tmp/promptops/S10/tools/preflight/S10-EVID-PREFLIGHT/S10-gui-operator-tools-v1_preflight_S10-EVID-PREFLIGHT_20260304T193000Z/preflight_eval.md"
+    },
+    "summary": {
+      "branch": "main",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "continuity_hash": "3f132d56fb70fb38f0aa123249f3d713b577158127fadee0b00f70d0e73633d3"
+    }
+  },
+  "pr_protocol": {
+    "tool": "pr_protocol",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "PR protocol readiness checks passed.",
+    "receiptPaths": {
+      "open_pr_list": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/open_pr_list.json",
+      "pr_view": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/pr_view.json",
+      "pr_threads_before": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/pr_threads_before.json",
+      "pr_threads_after": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/pr_threads_after.json",
+      "graphql_resolve_mutations": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/graphql_resolve_mutations.jsonl",
+      "pr_protocol_eval": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z/pr_protocol_eval.md"
+    },
+    "summary": {
+      "open_count": 1,
+      "candidate_pr": 13,
+      "unresolved_before": 1,
+      "unresolved_after": 0,
+      "continuity_hash": "6df6c2e34cc9da2ee2224cf07b28589414b07fb4d3256c5804204f666d42537d"
+    }
+  },
+  "gates": {
+    "tool": "gates",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Gates passed.",
+    "receiptPaths": {
+      "gates_commands": "/tmp/promptops/S10/tools/gates/S10-EVID-GATES/S10-gui-operator-tools-v1_gates_S10-EVID-GATES_20260304T193000Z/gates_commands.json",
+      "gates_outputs": "/tmp/promptops/S10/tools/gates/S10-EVID-GATES/S10-gui-operator-tools-v1_gates_S10-EVID-GATES_20260304T193000Z/gates_outputs.ndjson",
+      "gates_eval": "/tmp/promptops/S10/tools/gates/S10-EVID-GATES/S10-gui-operator-tools-v1_gates_S10-EVID-GATES_20260304T193000Z/gates_eval.md"
+    },
+    "summary": {
+      "failed_count": 0,
+      "continuity_hash": "73da3f756fd6b2ab5379e1b8e11ba64f4e9fc09c1872ee501d6049723fae3fed"
+    }
+  },
+  "diff": {
+    "tool": "diff",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Diff review passed.",
+    "receiptPaths": {
+      "diff_files": "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z/diff_files.json",
+      "diffstat": "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z/diffstat.txt",
+      "whitelist_eval": "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z/whitelist_eval.md",
+      "budget_eval": "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z/budget_eval.md"
+    },
+    "summary": {
+      "changed_files": 2,
+      "outside_whitelist": 0,
+      "budget_breaches": 0,
+      "continuity_hash": "d5de8d2f0c3c07349821182feff9fc3d508c25cfe276b42c59a2610d73383199"
+    }
+  },
+  "out_of_sync": {
+    "tool": "out_of_sync",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "No out-of-sync signals detected.",
+    "receiptPaths": {
+      "radar_signals": "/tmp/promptops/S10/tools/out_of_sync/S10-EVID-OUT/S10-gui-operator-tools-v1_out_of_sync_S10-EVID-OUT_20260304T193000Z/radar_signals.json",
+      "repair_actions": "/tmp/promptops/S10/tools/out_of_sync/S10-EVID-OUT/S10-gui-operator-tools-v1_out_of_sync_S10-EVID-OUT_20260304T193000Z/repair_actions.json",
+      "diagnosis_report": "/tmp/promptops/S10/tools/out_of_sync/S10-EVID-OUT/S10-gui-operator-tools-v1_out_of_sync_S10-EVID-OUT_20260304T193000Z/diagnosis_report.md"
+    },
+    "summary": {
+      "signal_count": 0,
+      "continuity_hash": "1b09f640a3e0759ec408a0ea7f0a5dfee85a626dd5e99dafd62b737cd7218702"
+    }
+  },
+  "closeout": {
+    "tool": "closeout",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Closeout is complete.",
+    "receiptPaths": {
+      "closeout_summary": "/tmp/promptops/S10/tools/closeout/S10-EVID-CLOSEOUT/S10-gui-operator-tools-v1_closeout_S10-EVID-CLOSEOUT_20260304T193000Z/closeout_summary.md",
+      "closeout_manifest": "/tmp/promptops/S10/tools/closeout/S10-EVID-CLOSEOUT/S10-gui-operator-tools-v1_closeout_S10-EVID-CLOSEOUT_20260304T193000Z/closeout_manifest.json"
+    },
+    "summary": {
+      "missing_paths": 0,
+      "checklist_complete": true,
+      "continuity_hash": "5ace9bf9bdde9123cef11196185ae74e7c15cba40ece39ec388a8b288cbe77f7"
+    }
+  },
+  "durable_paths": [
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/preflight/S10-EVID-PREFLIGHT/S10-gui-operator-tools-v1_preflight_S10-EVID-PREFLIGHT_20260304T193000Z",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/gates/S10-EVID-GATES/S10-gui-operator-tools-v1_gates_S10-EVID-GATES_20260304T193000Z",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/out_of_sync/S10-EVID-OUT/S10-gui-operator-tools-v1_out_of_sync_S10-EVID-OUT_20260304T193000Z",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/closeout/S10-EVID-CLOSEOUT/S10-gui-operator-tools-v1_closeout_S10-EVID-CLOSEOUT_20260304T193000Z"
+  ]
+}
+EXIT_CODE: 0

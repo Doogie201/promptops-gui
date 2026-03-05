@@ -1,0 +1,4 @@
+thread_id	is_resolved	author	url
+PRRT_kwDORZ8p_M5yMJxV	False	chatgpt-codex-connector	https://github.com/Doogie201/promptops-gui/pull/15#discussion_r2886694020
+PRRT_kwDORZ8p_M5yMJxY	False	chatgpt-codex-connector	https://github.com/Doogie201/promptops-gui/pull/15#discussion_r2886694022
+PRRT_kwDORZ8p_M5yMJxc	False	chatgpt-codex-connector	https://github.com/Doogie201/promptops-gui/pull/15#discussion_r2886694026

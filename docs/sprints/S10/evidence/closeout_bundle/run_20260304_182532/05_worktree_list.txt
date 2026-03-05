@@ -1,0 +1,7 @@
+CMD: git worktree list --porcelain
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD d285a0b56e72f2131f5d8e6b9cdc6940b96aa063
+branch refs/heads/sprint/S10-gui-operator-tools-v1
+
+EXIT_CODE: 0

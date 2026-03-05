@@ -1,0 +1,7 @@
+CMD: python3 json validation on repaired files
+OK docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/53_open_pr_before_create.json
+OK docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/56_pr_snapshot.json
+OK docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/59_pr_readiness_snapshot.json
+OK docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/60_pr_threads_comments.json
+OK docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/65_final_pr_state.json
+EXIT_CODE: 0

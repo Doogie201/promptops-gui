@@ -1,0 +1,11 @@
+{
+  "sprintId": "S10-gui-operator-tools-v1",
+  "tool": "diff",
+  "runId": "S10-EVID-DIFF",
+  "timestamp": "20260304T193000Z",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/diff/S10-EVID-DIFF",
+  "bundleRoot": "/tmp/promptops/S10/tools/diff/S10-EVID-DIFF/S10-gui-operator-tools-v1_diff_S10-EVID-DIFF_20260304T193000Z",
+  "continuityHash": "d5de8d2f0c3c07349821182feff9fc3d508c25cfe276b42c59a2610d73383199"
+}

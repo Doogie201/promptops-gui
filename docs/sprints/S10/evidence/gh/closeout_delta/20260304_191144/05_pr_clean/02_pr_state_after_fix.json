@@ -1,0 +1,127 @@
+{
+  "comments": [
+    {
+      "id": "IC_kwDORZ8p_M7ueeQ4",
+      "author": {
+        "login": "codecov"
+      },
+      "authorAssociation": "NONE",
+      "body": "## [Codecov](https://app.codecov.io/gh/Doogie201/promptops-gui/pull/15?dropdown=coverage&src=pr&el=h1&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Doogie201) Report\n:white_check_mark: All modified and coverable lines are covered by tests.\n:white_check_mark: All tests successful. No failed tests found.\n\n:loudspeaker: Thoughts on this report? [Let us know!](https://github.com/codecov/feedback/issues/255)",
+      "createdAt": "2026-03-04T23:33:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4000965688",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDORZ8p_M7ueglj",
+      "author": {
+        "login": "Doogie201"
+      },
+      "authorAssociation": "OWNER",
+      "body": "S10 operator-tools receipts attached. Evidence: docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532, docs/sprints/S10/evidence/tools/, docs/sprints/S10/evidence/at/.",
+      "createdAt": "2026-03-04T23:35:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4000975203",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDORZ8p_M7ufICv",
+      "author": {
+        "login": "Doogie201"
+      },
+      "authorAssociation": "OWNER",
+      "body": "Closeout remediation update for unresolved codex threads on PR #15.\n\n- Scope for this closeout delta is limited to evidence + PR hygiene (no additional feature/refactor work).\n- All three codex review threads were read and triaged in this closeout run.\n- Existing sprint AT/gates evidence remains in `docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/`.\n- Closeout delta receipts are being captured under `/tmp/promptops/S10/closeout_*` and will be copied to `docs/sprints/S10/evidence/gh/closeout_delta/<ts>/`.\n\nThread IDs triaged in this pass:\n- PRRT_kwDORZ8p_M5yMJxV\n- PRRT_kwDORZ8p_M5yMJxY\n- PRRT_kwDORZ8p_M5yMJxc\n",
+      "createdAt": "2026-03-05T00:15:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4001136815",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDORZ8p_M7ufIV0",
+      "author": {
+        "login": "Doogie201"
+      },
+      "authorAssociation": "OWNER",
+      "body": "pre-commit.ci run",
+      "createdAt": "2026-03-05T00:15:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "ROCKET",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4001138036",
+      "viewerDidAuthor": true
+    }
+  ],
+  "headRefOid": "e24d1d2070bb7daf255243cf68eb681d6232a554",
+  "mergeStateStatus": "CLEAN",
+  "mergeable": "MERGEABLE",
+  "number": 15,
+  "reviewDecision": "",
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-05T00:17:58Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22695909776/job/65802102251",
+      "name": "coverage",
+      "startedAt": "2026-03-05T00:17:34Z",
+      "status": "COMPLETED",
+      "workflowName": "Codecov Coverage"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-05T00:17:58Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22695909028/job/65802100226",
+      "name": "coverage",
+      "startedAt": "2026-03-05T00:17:26Z",
+      "status": "COMPLETED",
+      "workflowName": "Codecov Coverage"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-05T00:17:56Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22695909752/job/65802102194",
+      "name": "verify",
+      "startedAt": "2026-03-05T00:17:28Z",
+      "status": "COMPLETED",
+      "workflowName": "Verify"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-05T00:17:57Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22695909032/job/65802100231",
+      "name": "verify",
+      "startedAt": "2026-03-05T00:17:26Z",
+      "status": "COMPLETED",
+      "workflowName": "Verify"
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "pre-commit.ci - pr",
+      "startedAt": "2026-03-05T00:17:26Z",
+      "state": "SUCCESS",
+      "targetUrl": "https://results.pre-commit.ci/run/github/1168058876/1772669844.AeT2CHC_TBCjqc7_kbWFVw"
+    }
+  ],
+  "url": "https://github.com/Doogie201/promptops-gui/pull/15"
+}

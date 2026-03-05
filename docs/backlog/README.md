@@ -1,5 +1,6 @@
 # Product Backlog
 
+- **S10-gui-operator-tools-v1**: Put the full operator workflow inside the GUI (preflight, PR protocol, gates, diff review, out-of-sync detection/repair, closeout assistant) with operator-grade evidence and hard stops, without requiring terminal usage.
 - **S09-gui-shell-setup-wizard-agent-switching**: Deliver macOS GUI shell v1 with Setup Wizard that pins Template/Task via versioned edits, plus Run controls and agent auto/manual switching UI with an operator-console navigation skeleton.
 - **S08-agent-adapters-v1-continuity**: Add deterministic programmatic invocation for Codex (primary) and Claude (secondary), auto/manual adapter switching, and Continuity Packet v1 with canonical hashing to resume without rework.
 - **S07-github-pr-protocol-automation**: Implement Open PR Handling Protocol in-engine with GUI-visible status, deterministic stop conditions, codex-thread resolution gating, and operator-grade receipts, while enforcing canonical-worktree preflight and migration-resilient canonical root discovery.

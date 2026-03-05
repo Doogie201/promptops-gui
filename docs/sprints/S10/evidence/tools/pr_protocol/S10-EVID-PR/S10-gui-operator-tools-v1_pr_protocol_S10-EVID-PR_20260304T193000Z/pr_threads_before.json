@@ -1,0 +1,29 @@
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "comments": {
+          "nodes": []
+        },
+        "reviewThreads": {
+          "nodes": [
+            {
+              "id": "thread-1",
+              "isResolved": false,
+              "comments": {
+                "nodes": [
+                  {
+                    "author": {
+                      "login": "chatgpt-codex"
+                    },
+                    "bodyText": "fix"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

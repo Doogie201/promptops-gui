@@ -1,0 +1,36 @@
+CMD: node --test --experimental-transform-types src/s10/s10.test.ts
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+TAP version 13
+# (node:7135) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:7135) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/src/s10/s10.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: AT-S10-01 preflight tool writes mandatory receipts and enforces hard-stop rules
+ok 1 - AT-S10-01 preflight tool writes mandatory receipts and enforces hard-stop rules
+  ---
+  duration_ms: 29.661333
+  type: 'test'
+  ...
+# Subtest: AT-S10-02 PR protocol tool evaluates readiness and codex thread resolution with receipts
+ok 2 - AT-S10-02 PR protocol tool evaluates readiness and codex thread resolution with receipts
+  ---
+  duration_ms: 13.5335
+  type: 'test'
+  ...
+# Subtest: AT-S10-03 gates + diff + out-of-sync + closeout assistant form deterministic GUI workflow
+ok 3 - AT-S10-03 gates + diff + out-of-sync + closeout assistant form deterministic GUI workflow
+  ---
+  duration_ms: 14.903667
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 239.81375
+EXIT_CODE: 0

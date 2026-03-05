@@ -1,0 +1,5 @@
+CMD: git diff --name-only
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/backlog/README.md
+docs/sprints/README.md
+EXIT_CODE: 0

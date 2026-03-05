@@ -1,0 +1,12 @@
+CMD: gh pr checks 15 --repo Doogie201/promptops-gui --watch --fail-fast=false
+pre-commit.ci - pr	fail	0	https://results.pre-commit.ci/run/github/1168058876/1772668689.VIGSiXYVRd6-SCXJEOXrLQ	checks completed with failures
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323438/job/65800262012
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323952/job/65800263422
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323395/job/65800261986
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323947/job/65800263353
+pre-commit.ci - pr	fail	0	https://results.pre-commit.ci/run/github/1168058876/1772668689.VIGSiXYVRd6-SCXJEOXrLQ	checks completed with failures
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323438/job/65800262012
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323952/job/65800263422
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323395/job/65800261986
+verify	pass	28s	https://github.com/Doogie201/promptops-gui/actions/runs/22695323947/job/65800263353
+EXIT_CODE: 1

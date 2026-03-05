@@ -1,0 +1,6 @@
+CMD: git pull --ff-only origin main
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+From https://github.com/Doogie201/promptops-gui
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+EXIT_CODE: 0

@@ -1,0 +1,11 @@
+{
+  "sprintId": "S10-gui-operator-tools-v1",
+  "tool": "pr_protocol",
+  "runId": "S10-EVID-PR",
+  "timestamp": "20260304T193000Z",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/pr_protocol/S10-EVID-PR",
+  "bundleRoot": "/tmp/promptops/S10/tools/pr_protocol/S10-EVID-PR/S10-gui-operator-tools-v1_pr_protocol_S10-EVID-PR_20260304T193000Z",
+  "continuityHash": "6df6c2e34cc9da2ee2224cf07b28589414b07fb4d3256c5804204f666d42537d"
+}

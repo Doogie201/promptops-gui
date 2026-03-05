@@ -1,0 +1,70 @@
+{
+  "baseRefName": "main",
+  "headRefName": "sprint/S10-gui-operator-tools-v1",
+  "mergeStateStatus": "CLEAN",
+  "mergeable": "MERGEABLE",
+  "number": 15,
+  "reviewDecision": "",
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-04T23:33:40Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694557749/job/65797938343",
+      "name": "coverage",
+      "startedAt": "2026-03-04T23:33:09Z",
+      "status": "COMPLETED",
+      "workflowName": "Codecov Coverage"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-04T23:33:32Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694556764/job/65797935095",
+      "name": "coverage",
+      "startedAt": "2026-03-04T23:33:13Z",
+      "status": "COMPLETED",
+      "workflowName": "Codecov Coverage"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-04T23:33:41Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694557744/job/65797938335",
+      "name": "verify",
+      "startedAt": "2026-03-04T23:33:14Z",
+      "status": "COMPLETED",
+      "workflowName": "Verify"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-04T23:33:28Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694556754/job/65797935033",
+      "name": "verify",
+      "startedAt": "2026-03-04T23:33:06Z",
+      "status": "COMPLETED",
+      "workflowName": "Verify"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-03-04T23:33:38Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://app.codecov.io/gh/Doogie201/promptops-gui/pull/15",
+      "name": "codecov/patch",
+      "startedAt": "2026-03-04T23:33:37Z",
+      "status": "COMPLETED",
+      "workflowName": ""
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "pre-commit.ci - pr",
+      "startedAt": "2026-03-04T23:33:07Z",
+      "state": "SUCCESS",
+      "targetUrl": "https://results.pre-commit.ci/run/github/1168058876/1772667184.dWEGZCYGQO2mvca8Ju8j9Q"
+    }
+  ],
+  "title": "[S10] devx : GUI operator tools v1",
+  "url": "https://github.com/Doogie201/promptops-gui/pull/15"
+}

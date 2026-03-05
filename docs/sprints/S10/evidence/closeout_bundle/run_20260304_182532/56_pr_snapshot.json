@@ -1,0 +1,92 @@
+{
+  "baseRefName": "main",
+  "headRefName": "sprint/S10-gui-operator-tools-v1",
+  "labels": [
+    {
+      "id": "LA_kwDORZ8p_M8AAAACZgiZ6g",
+      "name": "area:devx",
+      "description": "",
+      "color": "5319E7"
+    },
+    {
+      "id": "LA_kwDORZ8p_M8AAAACZg3RtQ",
+      "name": "type:feature",
+      "description": "",
+      "color": "0052CC"
+    },
+    {
+      "id": "LA_kwDORZ8p_M8AAAACZg3Rww",
+      "name": "risk:high",
+      "description": "",
+      "color": "d73a4a"
+    },
+    {
+      "id": "LA_kwDORZ8p_M8AAAACaFDmWQ",
+      "name": "evidence:required",
+      "description": "",
+      "color": "ededed"
+    },
+    {
+      "id": "LA_kwDORZ8p_M8AAAACaL5wQQ",
+      "name": "sprint:S10",
+      "description": "auto label sprint:S10",
+      "color": "BFD4F2"
+    }
+  ],
+  "mergeStateStatus": "UNSTABLE",
+  "mergeable": "MERGEABLE",
+  "number": 15,
+  "reviewDecision": "",
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694556764/job/65797935095",
+      "name": "coverage",
+      "startedAt": "2026-03-04T23:33:05Z",
+      "status": "QUEUED",
+      "workflowName": "Codecov Coverage"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694557744/job/65797938335",
+      "name": "verify",
+      "startedAt": "2026-03-04T23:33:07Z",
+      "status": "QUEUED",
+      "workflowName": "Verify"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694557749/job/65797938343",
+      "name": "coverage",
+      "startedAt": "2026-03-04T23:33:09Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Codecov Coverage"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22694556754/job/65797935033",
+      "name": "verify",
+      "startedAt": "2026-03-04T23:33:06Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Verify"
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "pre-commit.ci - pr",
+      "startedAt": "2026-03-04T23:33:07Z",
+      "state": "SUCCESS",
+      "targetUrl": "https://results.pre-commit.ci/run/github/1168058876/1772667184.dWEGZCYGQO2mvca8Ju8j9Q"
+    }
+  ],
+  "title": "[S10] devx : GUI operator tools v1",
+  "url": "https://github.com/Doogie201/promptops-gui/pull/15"
+}

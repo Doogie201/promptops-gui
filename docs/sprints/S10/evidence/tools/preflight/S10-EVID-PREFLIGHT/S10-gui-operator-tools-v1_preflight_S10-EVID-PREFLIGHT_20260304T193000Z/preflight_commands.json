@@ -1,0 +1,95 @@
+[
+  {
+    "id": "pwd",
+    "command": "pwd",
+    "args": []
+  },
+  {
+    "id": "echo_promptops_repo",
+    "command": "bash",
+    "args": [
+      "-lc",
+      "echo \"$PROMPTOPS_REPO\""
+    ]
+  },
+  {
+    "id": "show_toplevel",
+    "command": "git",
+    "args": [
+      "rev-parse",
+      "--show-toplevel"
+    ]
+  },
+  {
+    "id": "worktree_list",
+    "command": "git",
+    "args": [
+      "worktree",
+      "list",
+      "--porcelain"
+    ]
+  },
+  {
+    "id": "status",
+    "command": "git",
+    "args": [
+      "status",
+      "--porcelain=v1",
+      "--branch"
+    ]
+  },
+  {
+    "id": "fetch",
+    "command": "git",
+    "args": [
+      "fetch",
+      "--all",
+      "--prune",
+      "--tags"
+    ]
+  },
+  {
+    "id": "ahead_behind",
+    "command": "git",
+    "args": [
+      "rev-list",
+      "--left-right",
+      "--count",
+      "HEAD...origin/main"
+    ]
+  },
+  {
+    "id": "branch",
+    "command": "git",
+    "args": [
+      "rev-parse",
+      "--abbrev-ref",
+      "HEAD"
+    ]
+  },
+  {
+    "id": "log",
+    "command": "git",
+    "args": [
+      "log",
+      "--oneline",
+      "-5"
+    ]
+  },
+  {
+    "id": "prune_dry_run",
+    "command": "git",
+    "args": [
+      "prune",
+      "--dry-run"
+    ]
+  },
+  {
+    "id": "fsck",
+    "command": "git",
+    "args": [
+      "fsck",
+      "--no-reflogs"
+    ]
+  }
+]

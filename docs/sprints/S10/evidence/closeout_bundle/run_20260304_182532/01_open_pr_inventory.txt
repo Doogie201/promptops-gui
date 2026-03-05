@@ -1,0 +1,4 @@
+CMD: gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+[]
+EXIT_CODE: 0

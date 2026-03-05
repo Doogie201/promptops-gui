@@ -1,0 +1,11 @@
+{
+  "sprintId": "S10-gui-operator-tools-v1",
+  "tool": "preflight",
+  "runId": "S10-EVID-PREFLIGHT",
+  "timestamp": "20260304T193000Z",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S10/tools/preflight/S10-EVID-PREFLIGHT",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S10/evidence/tools/preflight/S10-EVID-PREFLIGHT",
+  "bundleRoot": "/tmp/promptops/S10/tools/preflight/S10-EVID-PREFLIGHT/S10-gui-operator-tools-v1_preflight_S10-EVID-PREFLIGHT_20260304T193000Z",
+  "continuityHash": "3f132d56fb70fb38f0aa123249f3d713b577158127fadee0b00f70d0e73633d3"
+}

@@ -1,0 +1,2 @@
+worktree /tmp/mock
+branch refs/heads/main

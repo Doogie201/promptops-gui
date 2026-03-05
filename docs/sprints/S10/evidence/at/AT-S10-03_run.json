@@ -1,0 +1,136 @@
+{
+  "gates_result": {
+    "tool": "gates",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Gates passed.",
+    "receiptPaths": {
+      "gates_commands": "/tmp/promptops/S10/test_workspace/tools/gates/AT-S10-03-gates/S10-gui-operator-tools-v1_gates_AT-S10-03-gates_20260304T190000Z/gates_commands.json",
+      "gates_outputs": "/tmp/promptops/S10/test_workspace/tools/gates/AT-S10-03-gates/S10-gui-operator-tools-v1_gates_AT-S10-03-gates_20260304T190000Z/gates_outputs.ndjson",
+      "gates_eval": "/tmp/promptops/S10/test_workspace/tools/gates/AT-S10-03-gates/S10-gui-operator-tools-v1_gates_AT-S10-03-gates_20260304T190000Z/gates_eval.md"
+    },
+    "summary": {
+      "failed_count": 0,
+      "continuity_hash": "6348fb1cf4fcb419c95784194f1d781d804443822bf0fe214b10ca985f6bc3d1"
+    }
+  },
+  "diff_result": {
+    "tool": "diff",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Diff review passed.",
+    "receiptPaths": {
+      "diff_files": "/tmp/promptops/S10/test_workspace/tools/diff/AT-S10-03-diff/S10-gui-operator-tools-v1_diff_AT-S10-03-diff_20260304T190000Z/diff_files.json",
+      "diffstat": "/tmp/promptops/S10/test_workspace/tools/diff/AT-S10-03-diff/S10-gui-operator-tools-v1_diff_AT-S10-03-diff_20260304T190000Z/diffstat.txt",
+      "whitelist_eval": "/tmp/promptops/S10/test_workspace/tools/diff/AT-S10-03-diff/S10-gui-operator-tools-v1_diff_AT-S10-03-diff_20260304T190000Z/whitelist_eval.md",
+      "budget_eval": "/tmp/promptops/S10/test_workspace/tools/diff/AT-S10-03-diff/S10-gui-operator-tools-v1_diff_AT-S10-03-diff_20260304T190000Z/budget_eval.md"
+    },
+    "summary": {
+      "changed_files": 2,
+      "outside_whitelist": 0,
+      "budget_breaches": 0,
+      "continuity_hash": "408ada4f8693e8ec8fb4ec3b78142fb38e833e042e1b195677e8bb713b06a275"
+    }
+  },
+  "out_result": {
+    "tool": "out_of_sync",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "No out-of-sync signals detected.",
+    "receiptPaths": {
+      "radar_signals": "/tmp/promptops/S10/test_workspace/tools/out_of_sync/AT-S10-03-out/S10-gui-operator-tools-v1_out_of_sync_AT-S10-03-out_20260304T190000Z/radar_signals.json",
+      "repair_actions": "/tmp/promptops/S10/test_workspace/tools/out_of_sync/AT-S10-03-out/S10-gui-operator-tools-v1_out_of_sync_AT-S10-03-out_20260304T190000Z/repair_actions.json",
+      "diagnosis_report": "/tmp/promptops/S10/test_workspace/tools/out_of_sync/AT-S10-03-out/S10-gui-operator-tools-v1_out_of_sync_AT-S10-03-out_20260304T190000Z/diagnosis_report.md"
+    },
+    "summary": {
+      "signal_count": 0,
+      "continuity_hash": "d2887445a3afa05024265b8b7da6e3850e3ab2efe733370923c66653d6d73186"
+    }
+  },
+  "closeout_result": {
+    "tool": "closeout",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Closeout is complete.",
+    "receiptPaths": {
+      "closeout_summary": "/tmp/promptops/S10/test_workspace/tools/closeout/AT-S10-03-closeout/S10-gui-operator-tools-v1_closeout_AT-S10-03-closeout_20260304T190000Z/closeout_summary.md",
+      "closeout_manifest": "/tmp/promptops/S10/test_workspace/tools/closeout/AT-S10-03-closeout/S10-gui-operator-tools-v1_closeout_AT-S10-03-closeout_20260304T190000Z/closeout_manifest.json"
+    },
+    "summary": {
+      "missing_paths": 0,
+      "checklist_complete": true,
+      "continuity_hash": "2c2543c908f492eeff1ed1484ba81eb326b97daf08fe85fb35f5065105f5030b"
+    }
+  },
+  "snapshot": {
+    "nav": {
+      "section": "Operator Tools",
+      "items": [
+        "Preflight",
+        "PR Protocol",
+        "Gates",
+        "Diff Review",
+        "Out-of-sync",
+        "Closeout"
+      ]
+    },
+    "guardrail": {
+      "wizardRoot": "/tmp/promptops/S10/test_workspace/mock-repo",
+      "promptopsRepo": "/tmp/promptops/S10/test_workspace/mock-repo",
+      "matches": true,
+      "blocked": false,
+      "remediation": "Root configuration is aligned."
+    },
+    "runTimelineState": "RUNNING",
+    "cards": [
+      {
+        "id": "preflight",
+        "title": "Preflight",
+        "status": "IDLE",
+        "reasonCode": "NONE",
+        "message": "Not run yet.",
+        "continuityHash": null
+      },
+      {
+        "id": "pr_protocol",
+        "title": "PR Protocol",
+        "status": "IDLE",
+        "reasonCode": "NONE",
+        "message": "Not run yet.",
+        "continuityHash": null
+      },
+      {
+        "id": "gates",
+        "title": "Gates",
+        "status": "PASS",
+        "reasonCode": "NONE",
+        "message": "Gates passed.",
+        "continuityHash": "6348fb1cf4fcb419c95784194f1d781d804443822bf0fe214b10ca985f6bc3d1"
+      },
+      {
+        "id": "diff",
+        "title": "Diff Review",
+        "status": "PASS",
+        "reasonCode": "NONE",
+        "message": "Diff review passed.",
+        "continuityHash": "408ada4f8693e8ec8fb4ec3b78142fb38e833e042e1b195677e8bb713b06a275"
+      },
+      {
+        "id": "out_of_sync",
+        "title": "Out-of-sync",
+        "status": "PASS",
+        "reasonCode": "NONE",
+        "message": "No out-of-sync signals detected.",
+        "continuityHash": "d2887445a3afa05024265b8b7da6e3850e3ab2efe733370923c66653d6d73186"
+      },
+      {
+        "id": "closeout",
+        "title": "Closeout",
+        "status": "PASS",
+        "reasonCode": "NONE",
+        "message": "Closeout is complete.",
+        "continuityHash": "2c2543c908f492eeff1ed1484ba81eb326b97daf08fe85fb35f5065105f5030b"
+      }
+    ]
+  }
+}

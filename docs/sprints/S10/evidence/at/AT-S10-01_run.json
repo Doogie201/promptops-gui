@@ -1,0 +1,42 @@
+{
+  "pass_result": {
+    "tool": "preflight",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "Preflight passed.",
+    "receiptPaths": {
+      "preflight_commands": "/tmp/promptops/S10/test_workspace/tools/preflight/AT-S10-01/S10-gui-operator-tools-v1_preflight_AT-S10-01_20260304T190000Z/preflight_commands.json",
+      "preflight_outputs": "/tmp/promptops/S10/test_workspace/tools/preflight/AT-S10-01/S10-gui-operator-tools-v1_preflight_AT-S10-01_20260304T190000Z/preflight_outputs.ndjson",
+      "preflight_eval": "/tmp/promptops/S10/test_workspace/tools/preflight/AT-S10-01/S10-gui-operator-tools-v1_preflight_AT-S10-01_20260304T190000Z/preflight_eval.md"
+    },
+    "summary": {
+      "branch": "main",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "continuity_hash": "301d58943183dac5211417662105b07c1ed4f2a34cff5b1e81dcd3fcacbc234f"
+    }
+  },
+  "hard_stop_result": {
+    "tool": "preflight",
+    "status": "HARD_STOP",
+    "reasonCode": "MISSING_REPO_ROOT",
+    "message": "PROMPTOPS_REPO is empty.",
+    "receiptPaths": {
+      "preflight_commands": "/tmp/promptops/S10/test_workspace/tools/preflight/AT-S10-01b/S10-gui-operator-tools-v1_preflight_AT-S10-01b_20260304T190000Z/preflight_commands.json",
+      "preflight_outputs": "/tmp/promptops/S10/test_workspace/tools/preflight/AT-S10-01b/S10-gui-operator-tools-v1_preflight_AT-S10-01b_20260304T190000Z/preflight_outputs.ndjson",
+      "preflight_eval": "/tmp/promptops/S10/test_workspace/tools/preflight/AT-S10-01b/S10-gui-operator-tools-v1_preflight_AT-S10-01b_20260304T190000Z/preflight_eval.md"
+    },
+    "summary": {
+      "branch": "main",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "continuity_hash": "fb5462e3f701d2e32e3ca9d97dc0944963385906044b2121c44d86e56036b409"
+    }
+  },
+  "durable_paths": [
+    "/tmp/promptops/S10/test_workspace/durable/preflight/AT-S10-01/S10-gui-operator-tools-v1_preflight_AT-S10-01_20260304T190000Z",
+    "/tmp/promptops/S10/test_workspace/durable/preflight/AT-S10-01b/S10-gui-operator-tools-v1_preflight_AT-S10-01b_20260304T190000Z"
+  ]
+}

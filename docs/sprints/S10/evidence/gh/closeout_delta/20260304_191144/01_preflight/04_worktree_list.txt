@@ -1,0 +1,11 @@
+CMD: git worktree list --porcelain
+CWD: /tmp/promptops/S10/wt_closeout_20260304_185656
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD d285a0b56e72f2131f5d8e6b9cdc6940b96aa063
+branch refs/heads/sprint/S10-codecov-bundle-analysis-vite
+
+worktree /private/tmp/promptops/S10/wt_closeout_20260304_185656
+HEAD ae507500b36d38874af7cdc54c4e704aefed5bf8
+branch refs/heads/sprint/S10-gui-operator-tools-v1
+
+EXIT_CODE: 0

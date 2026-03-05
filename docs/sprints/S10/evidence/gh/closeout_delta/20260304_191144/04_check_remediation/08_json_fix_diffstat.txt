@@ -1,0 +1,8 @@
+CMD: git diff --stat
+ .../53_open_pr_before_create.json                  |  2 -
+ .../run_20260304_182532/56_pr_snapshot.json        | 95 +++++++++++++++++++++-
+ .../59_pr_readiness_snapshot.json                  | 73 ++++++++++++++++-
+ .../60_pr_threads_comments.json                    | 72 +++++-----------
+ .../run_20260304_182532/65_final_pr_state.json     | 71 +++++++++++++++-
+ 5 files changed, 252 insertions(+), 61 deletions(-)
+EXIT_CODE: 0

@@ -1,0 +1,66 @@
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "number": 15,
+        "url": "https://github.com/Doogie201/promptops-gui/pull/15",
+        "headRefOid": "8277a971901d63499ea0a0671e11e8c3bd9fa8cd",
+        "reviewThreads": {
+          "nodes": [
+            {
+              "id": "PRRT_kwDORZ8p_M5yMJxV",
+              "isResolved": false,
+              "comments": {
+                "nodes": [
+                  {
+                    "id": "PRRC_kwDORZ8p_M6sD3SE",
+                    "author": {
+                      "login": "chatgpt-codex-connector"
+                    },
+                    "url": "https://github.com/Doogie201/promptops-gui/pull/15#discussion_r2886694020",
+                    "bodyText": "Reject preflight when local main is ahead of origin\nThe preflight sync gate only checks behind > 0, so a clean main branch that is ahead of origin/main still returns PASS. In that scenario the workflow proceeds on unpublished local commits, which can invalidate PR readiness, diff review, and evidence continuity because the baseline is no longer the remote mainline.\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+                    "createdAt": "2026-03-04T23:36:24Z"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "PRRT_kwDORZ8p_M5yMJxY",
+              "isResolved": false,
+              "comments": {
+                "nodes": [
+                  {
+                    "id": "PRRC_kwDORZ8p_M6sD3SG",
+                    "author": {
+                      "login": "chatgpt-codex-connector"
+                    },
+                    "url": "https://github.com/Doogie201/promptops-gui/pull/15#discussion_r2886694022",
+                    "bodyText": "Stop preflight when fetch/sync probes fail\nPreflight executes fetch and ahead_behind but never checks their exit codes, while only prune/fsck failures are treated as integrity risk. If git fetch fails (for example, auth/network issues), stale remote refs can make the sync check appear clean and incorrectly produce a PASS, so this should hard-stop when those prerequisite probes fail.\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+                    "createdAt": "2026-03-04T23:36:25Z"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "PRRT_kwDORZ8p_M5yMJxc",
+              "isResolved": false,
+              "comments": {
+                "nodes": [
+                  {
+                    "id": "PRRC_kwDORZ8p_M6sD3SK",
+                    "author": {
+                      "login": "chatgpt-codex-connector"
+                    },
+                    "url": "https://github.com/Doogie201/promptops-gui/pull/15#discussion_r2886694026",
+                    "bodyText": "Calculate budget breaches from net line change\nThe diff budget logic compares only added lines against maxNetNewLinesPerFile and ignores deletions, which contradicts the option semantics and over-reports breaches. A file with +200/-200 (net 0) is currently hard-stopped as a breach, unnecessarily blocking refactors that remain within a net-change budget.\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+                    "createdAt": "2026-03-04T23:36:25Z"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+CMD: gh pr comment 15 --repo Doogie201/promptops-gui --body-file /tmp/promptops/S10/closeout_20260304_191144/03_thread_remediation/03_pr_comment_body.md
+https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4001136815
+EXIT_CODE: 0

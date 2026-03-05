@@ -1,0 +1,18 @@
+[
+  {
+    "id": "pr_threads_after",
+    "command": "gh",
+    "args": [
+      "api",
+      "graphql",
+      "-f",
+      "query=query($owner:String!,$name:String!,$number:Int!){  repository(owner:$owner,name:$name){   pullRequest(number:$number){    comments(last:100){nodes{author{login} bodyText url createdAt}}    reviewThreads(last:100){nodes{id isResolved comments(first:20){nodes{author{login} bodyText url createdAt}}}}   }  } }",
+      "-F",
+      "owner=Doogie201",
+      "-F",
+      "name=promptops-gui",
+      "-F",
+      "number=13"
+    ]
+  }
+]
