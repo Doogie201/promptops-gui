@@ -1,0 +1,4 @@
+CMD: sleep 190
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+ELAPSED_SECONDS: 191
+EXIT_CODE: 0
