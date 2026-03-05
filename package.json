@@ -1,7 +1,7 @@
 {
   "name": "promptops-gui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Deterministic PromptOps engine + GUI operator tooling with evidence-first sprint workflows",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -27,7 +27,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Doogie201/promptops-gui/issues"
   },
