@@ -49,6 +49,11 @@
 - `docs/sprints/S17/evidence/pr/`
 - `docs/sprints/S17/evidence/ui/`
 
+## Whitelist Exception
+
+- `package.json` is explicitly in scope for S17.A1 scripts standardization to provide `npm run dev` for the Vite entrypoint.
+- No dependency, devDependency, peerDependency, optionalDependency, or lockfile churn is allowed under this exception.
+
 ## Definition of Done
 
 - All S17 ATs pass with durable evidence.
