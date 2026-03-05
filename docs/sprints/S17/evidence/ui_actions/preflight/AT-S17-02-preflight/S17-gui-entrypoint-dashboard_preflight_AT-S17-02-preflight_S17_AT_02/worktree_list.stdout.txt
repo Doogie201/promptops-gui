@@ -1,4 +1,3 @@
 worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
 HEAD 5aac09dad45c53bba6e37344056d004347a1f68b
 branch refs/heads/sprint/S17-gui-entrypoint-dashboard
-
