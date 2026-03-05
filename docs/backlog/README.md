@@ -1,5 +1,6 @@
 # Product Backlog
 
+- **S15-terminal-panel**: Add an optional in-app terminal panel that uses the exact same command executor, whitelists, and receipts/event pipeline as existing GUI actions so terminal usage cannot drift or bypass safeguards.
 - **S14-jarvis-mode**: Deliver Jarvis Mode: deterministic human one-way narration driven purely by event stream + a live mission-control dashboard showing phases, progress, evidence count, last checkpoint, and agent switching events, without affecting any decisions.
 - **S13-design-system-v1**: Implement a performance-safe, a11y-safe design system foundation: semantic theme tokens, animated theme transitions (reduced-motion compliant), motion primitives, dynamic lighting/shadows, and a 3D-ready scene layer (off by default) with progressive enhancement and safe fallback.
 - **S12-health-drift-detection**: Detect drift/breakage/out-of-sync conditions deterministically, surface them in GUI with severity/root-cause/evidence links, and provide GUI-only repair actions (including Safe Mode) that restore stable state without terminal access.

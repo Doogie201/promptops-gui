@@ -1,0 +1,13 @@
+COMMAND: git status --porcelain=v1 --branch
+STDOUT:
+## sprint/S15-terminal-panel...origin/sprint/S15-terminal-panel
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+ M src/s10/operator_tools.ts
+?? docs/sprints/S15/
+?? src/s15/
+?? tests/s15/
+
+STDERR:
+
+EXIT_CODE: 0

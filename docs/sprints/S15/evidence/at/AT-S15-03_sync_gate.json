@@ -1,0 +1,59 @@
+{
+  "terminal_result": {
+    "tool": "terminal",
+    "reasonCode": "OUT_OF_SYNC",
+    "status": "HARD_STOP",
+    "message": "Out-of-sync signals detected.",
+    "receiptPaths": {
+      "terminal_commands": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-03-terminal/S15-terminal-panel_terminal_AT-S15-03-terminal_20260305T040000Z/terminal_commands.json",
+      "terminal_outputs": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-03-terminal/S15-terminal-panel_terminal_AT-S15-03-terminal_20260305T040000Z/terminal_outputs.ndjson",
+      "terminal_events": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-03-terminal/S15-terminal-panel_terminal_AT-S15-03-terminal_20260305T040000Z/terminal_events.ndjson",
+      "terminal_eval": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-03-terminal/S15-terminal-panel_terminal_AT-S15-03-terminal_20260305T040000Z/terminal_eval.md",
+      "sync_gate_durable": "/tmp/promptops/S15/test_workspace/durable/out_of_sync/AT-S15-03-terminal_sync_gate/S15-terminal-panel_out_of_sync_AT-S15-03-terminal_sync_gate_20260305T040000Z"
+    },
+    "summary": {
+      "command": "git status --porcelain=v1 --branch",
+      "blocked": true,
+      "continuity_hash": "e4130fc6b787ae0cbd1b8ce9319340b35b4739e1d85b57504c163c368ac5ea84",
+      "sync_gate_status": "FAIL"
+    }
+  },
+  "terminal_events": [
+    {
+      "seq": 1,
+      "type": "terminal_sync_blocked",
+      "command": "git status --porcelain=v1 --branch",
+      "reason": "Out-of-sync signals detected.",
+      "reasonCode": "OUT_OF_SYNC"
+    },
+    {
+      "seq": 2,
+      "type": "terminal_sync_blocked",
+      "command": "git status --porcelain=v1 --branch",
+      "reason": "Out-of-sync signals detected.",
+      "reasonCode": "OUT_OF_SYNC"
+    }
+  ],
+  "gui_result": {
+    "tool": "out_of_sync",
+    "status": "FAIL",
+    "reasonCode": "OUT_OF_SYNC",
+    "message": "Out-of-sync signals detected.",
+    "receiptPaths": {
+      "radar_signals": "/tmp/promptops/S15/test_workspace/staging/out_of_sync/AT-S15-03-gui/S15-terminal-panel_out_of_sync_AT-S15-03-gui_20260305T040000Z/radar_signals.json",
+      "repair_actions": "/tmp/promptops/S15/test_workspace/staging/out_of_sync/AT-S15-03-gui/S15-terminal-panel_out_of_sync_AT-S15-03-gui_20260305T040000Z/repair_actions.json",
+      "diagnosis_report": "/tmp/promptops/S15/test_workspace/staging/out_of_sync/AT-S15-03-gui/S15-terminal-panel_out_of_sync_AT-S15-03-gui_20260305T040000Z/diagnosis_report.md"
+    },
+    "summary": {
+      "signal_count": 1,
+      "continuity_hash": "8074972816f1a5f631a9488fa19a87ddde4808c2329f23af34547064dbff18ae"
+    }
+  },
+  "invoked": [
+    "radar_status",
+    "radar_head",
+    "radar_ahead_behind"
+  ],
+  "terminal_durable": "/tmp/promptops/S15/test_workspace/durable/terminal/AT-S15-03-terminal/S15-terminal-panel_terminal_AT-S15-03-terminal_20260305T040000Z",
+  "gui_durable": "/tmp/promptops/S15/test_workspace/durable/out_of_sync/AT-S15-03-gui/S15-terminal-panel_out_of_sync_AT-S15-03-gui_20260305T040000Z"
+}

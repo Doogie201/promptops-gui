@@ -1,0 +1,11 @@
+COMMAND: git log --oneline -5
+STDOUT:
+d4ad141 [S14] ux : jarvis mode (#21)
+3b9f3eb [S13] ux : design system v1 (#20)
+4d3cffd [S12] perf : health & drift detection (#19)
+b48a491 docs(s17): refresh postcheck command stream
+a83aae3 docs(s17): add postcheck-only verification receipts
+
+STDERR:
+
+EXIT_CODE: 0

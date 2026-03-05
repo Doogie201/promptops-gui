@@ -1,0 +1,8 @@
+COMMAND: git checkout sprint/S15-terminal-panel
+STDOUT:
+Your branch is up to date with 'origin/sprint/S15-terminal-panel'.
+
+STDERR:
+Switched to branch 'sprint/S15-terminal-panel'
+
+EXIT_CODE: 0

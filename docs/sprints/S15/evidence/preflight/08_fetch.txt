@@ -1,0 +1,6 @@
+COMMAND: git fetch --all --prune --tags
+STDOUT:
+
+STDERR:
+
+EXIT_CODE: 0
