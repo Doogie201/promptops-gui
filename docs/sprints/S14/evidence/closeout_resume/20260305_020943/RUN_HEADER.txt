@@ -1,0 +1,3 @@
+RUN=/tmp/promptops/S14/closeout_resume_20260305_020943
+DUR=docs/sprints/S14/evidence/closeout_resume/20260305_020943
+PROMPTOPS_REPO=/Volumes/X9_DEV/Dev/Projects/promptops-gui

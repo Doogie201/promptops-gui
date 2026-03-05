@@ -1,0 +1,25 @@
+Running preflight.
+Saved checkpoint cp-001.
+Preflight done.
+Reading requirements.
+Got evidence (#1).
+Requirements ready.
+Calling the agent.
+Got evidence (#2).
+Saved checkpoint cp-002.
+Switched to claude (auto). context exhausted.
+Switching agents.
+Switch done.
+Agent done.
+Collecting evidence.
+Got evidence (#5).
+Evidence done.
+Running gates.
+build passed.
+test passed.
+lint passed.
+Gates done.
+Closing out.
+Saved checkpoint cp-003.
+All done! Ready for review.
+All done.

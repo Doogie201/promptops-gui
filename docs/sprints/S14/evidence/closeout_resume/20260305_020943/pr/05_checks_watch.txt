@@ -1,0 +1,110 @@
+CMD: gh pr checks 21 --repo Doogie201/promptops-gui --watch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706711801/job/65835093697
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712867/job/65835096221
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706712864/job/65835096319
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711795/job/65835093732
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694841.NIcZN8_2TR2iMJszV5h_EA	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706711801/job/65835093697
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711795/job/65835093732
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712867/job/65835096221
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712864/job/65835096319
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694841.NIcZN8_2TR2iMJszV5h_EA	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711795/job/65835093732
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712867/job/65835096221
+verify	pass	37s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711801/job/65835093697
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712864/job/65835096319
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694841.NIcZN8_2TR2iMJszV5h_EA	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711795/job/65835093732
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712867/job/65835096221
+verify	pass	37s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711801/job/65835093697
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712864/job/65835096319
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694841.NIcZN8_2TR2iMJszV5h_EA	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711795/job/65835093732
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712867/job/65835096221
+verify	pass	37s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711801/job/65835093697
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712864/job/65835096319
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694841.NIcZN8_2TR2iMJszV5h_EA	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711795/job/65835093732
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712867/job/65835096221
+verify	pass	37s	https://github.com/Doogie201/promptops-gui/actions/runs/22706711801/job/65835093697
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22706712864/job/65835096319
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694841.NIcZN8_2TR2iMJszV5h_EA	running
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/21
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/21
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/21
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	queued
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/21
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	checks completed successfully
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/21
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	checks completed successfully
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283
+--- STDERR ---
+EXIT_CODE: 0

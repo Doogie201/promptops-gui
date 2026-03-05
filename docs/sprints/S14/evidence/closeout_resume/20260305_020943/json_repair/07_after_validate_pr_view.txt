@@ -1,0 +1,4 @@
+CMD: python -m json.tool docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json > /dev/null
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

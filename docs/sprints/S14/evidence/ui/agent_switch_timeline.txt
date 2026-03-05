@@ -1,0 +1,22 @@
+=== AT-S14-02: Agent Switch Timeline ===
+
+=== Mission Control ===
+
+Phases:
+  [x] preflight (3 events)
+  [x] intake (3 events)
+  [x] agent_invocation (4 events)
+  [x] switching (3 events)
+  [x] evidence (3 events)
+  [x] gates (5 events)
+  [x] closeout (4 events)
+
+Evidence collected: 5
+Last checkpoint: cp-003
+Active agent: claude
+Active phase: idle
+
+Agent Timeline:
+  #10 claude [auto] - context exhausted
+
+STATUS: COMPLETE

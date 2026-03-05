@@ -1,0 +1,4 @@
+CMD: gh api graphql -f query='query($owner:String!, $repo:String!, $number:Int!){ repository(owner:$owner,name:$repo){ pullRequest(number:$number){ reviewThreads(first:100){ nodes { id isResolved } } } } }' -F owner=Doogie201 -F repo=promptops-gui -F number=21
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+{"data":{"repository":{"pullRequest":{"reviewThreads":{"nodes":[{"id":"PRRT_kwDORZ8p_M5yP3Oc","isResolved":false},{"id":"PRRT_kwDORZ8p_M5yP3Oj","isResolved":false}]}}}}}--- STDERR ---
+EXIT_CODE: 0

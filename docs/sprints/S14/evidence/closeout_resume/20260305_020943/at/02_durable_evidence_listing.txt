@@ -1,0 +1,28 @@
+CMD: find docs/sprints/S14/evidence -maxdepth 3 -type f | sort
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/sprints/S14/evidence/a11y/AT-S14-03_summary.txt
+docs/sprints/S14/evidence/a11y/aria_live_audit.txt
+docs/sprints/S14/evidence/a11y/reduced_motion_styles.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/00_open_pr_inventory.json.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/01_pwd.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/02_echo_promptops_repo.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/03_show_toplevel.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/04_worktree.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/05_status.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/06_fetch.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/07_revlist_main.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/08_branch.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/09_log5.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/10_prune.txt
+docs/sprints/S14/evidence/closeout_resume/20260305_020943/11_fsck.txt
+docs/sprints/S14/evidence/jarvis/AT-S14-01_determinism.txt
+docs/sprints/S14/evidence/jarvis/narration_snapshot_casual_verbose.txt
+docs/sprints/S14/evidence/jarvis/narration_snapshot_operator_quiet.txt
+docs/sprints/S14/evidence/jarvis/narration_snapshot_operator_verbose.txt
+docs/sprints/S14/evidence/ui/AT-S14-02_dashboard.txt
+docs/sprints/S14/evidence/ui/agent_switch_timeline.txt
+docs/sprints/S14/evidence/ui/dashboard_state.json
+docs/sprints/S14/evidence/untracked/impact_assessment.md
+docs/sprints/S14/evidence/untracked/inventory.json
+--- STDERR ---
+EXIT_CODE: 0

@@ -1,0 +1,9 @@
+=== AT-S14-03: Reduced Motion Styles ===
+
+Normal animation: 300ms
+Reduced animation: 0ms
+Normal transition: 200ms
+Reduced transition: 0ms
+Normal pulse: ds-ambient-pulse 2s ease infinite
+Reduced pulse: none
+Result: PASS

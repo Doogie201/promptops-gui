@@ -1,0 +1,5 @@
+CMD: git rev-parse HEAD
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+9d4288b421fccd34d35925c2932ca0a07ad9dcbc
+--- STDERR ---
+EXIT_CODE: 0

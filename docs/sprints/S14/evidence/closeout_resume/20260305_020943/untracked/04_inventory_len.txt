@@ -1,0 +1,5 @@
+CMD: jq "length" docs/sprints/S14/evidence/untracked/inventory.json
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+29
+--- STDERR ---
+EXIT_CODE: 0

@@ -1,0 +1,9 @@
+CMD: git log --oneline -5
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+325e802 [pre-commit.ci] auto fixes from pre-commit.com hooks
+16a7505 feat(s14): jarvis mode — deterministic narration + mission control dashboard
+3b9f3eb [S13] ux : design system v1 (#20)
+4d3cffd [S12] perf : health & drift detection (#19)
+b48a491 docs(s17): refresh postcheck command stream
+--- STDERR ---
+EXIT_CODE: 0

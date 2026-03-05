@@ -1,0 +1,24 @@
+CMD: python - <<'PY'
+import subprocess
+rows=subprocess.check_output(['git','diff','--numstat'],text=True).strip().splitlines()
+print('file	add	del	net')
+for r in rows:
+    a,d,f=r.split('	')
+    a=int(a); d=int(d)
+    print(f'{f}	{a}	{d}	{a-d}')
+PY
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+file	add	del	net
+docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json	0	1	-1
+docs/sprints/S13/evidence/closeout/03_threads/01_threads.json	1	1	0
+docs/sprints/S14/evidence/jarvis/narration_snapshot_casual_verbose.txt	1	1	0
+docs/sprints/S14/evidence/jarvis/narration_snapshot_operator_quiet.txt	1	1	0
+docs/sprints/S14/evidence/jarvis/narration_snapshot_operator_verbose.txt	1	1	0
+docs/sprints/S14/evidence/ui/AT-S14-02_dashboard.txt	1	0	1
+docs/sprints/S14/evidence/ui/agent_switch_timeline.txt	1	1	0
+docs/sprints/S14/evidence/ui/dashboard_state.json	2	2	0
+docs/sprints/S14/evidence/untracked/impact_assessment.md	16	0	16
+src/s14/dashboard.ts	8	0	8
+tests/s14.test.ts	74	0	74
+--- STDERR ---
+EXIT_CODE: 0

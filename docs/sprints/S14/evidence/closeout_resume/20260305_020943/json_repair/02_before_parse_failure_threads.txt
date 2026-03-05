@@ -1,0 +1,5 @@
+CMD: git show HEAD:docs/sprints/S13/evidence/closeout/03_threads/01_threads.json | python -m json.tool > /dev/null
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+Extra data: line 1 column 86 (char 85)
+EXIT_CODE: 1

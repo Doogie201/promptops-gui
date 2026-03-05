@@ -1,0 +1,5 @@
+CMD: wc -l tests/s14.test.ts
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+     422 tests/s14.test.ts
+--- STDERR ---
+EXIT_CODE: 0

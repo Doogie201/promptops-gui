@@ -1,0 +1,5 @@
+CMD: gh pr comment 21 --repo Doogie201/promptops-gui --body 'Addressed both codex review findings in commit 9d4288b (dashboard phase_end activePhase clear + activeAgent fallback for no-switch runs). Evidence: docs/sprints/S14/evidence/closeout_resume/20260305_020943/ and docs/sprints/S14/evidence/ui/AT-S14-02_dashboard.txt.'
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+https://github.com/Doogie201/promptops-gui/pull/21#issuecomment-4002842461
+--- STDERR ---
+EXIT_CODE: 0

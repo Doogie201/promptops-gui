@@ -1,0 +1,9 @@
+$ pre-commit run --files <new_receipt_files>
+trim trailing whitespace.............................(no files to check)Skipped
+fix end of files.....................................(no files to check)Skipped
+check yaml...........................................(no files to check)Skipped
+check json...........................................(no files to check)Skipped
+check for case conflicts.............................(no files to check)Skipped
+mixed line ending....................................(no files to check)Skipped
+Operator Gates (Build/Test/Lint/Stoplight)...........(no files to check)Skipped
+EXIT_CODE=0

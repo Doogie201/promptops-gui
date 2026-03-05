@@ -1,0 +1,7 @@
+$ git rev-parse HEAD
+53b6d3c4ed9d6efd9422ad1dcead65fcf5590146
+$ git rev-parse origin/sprint/S14-jarvis-mode
+d4d293e614f49e3a44f654066d500c67baecb73b
+$ git rev-list --left-right --count HEAD...origin/sprint/S14-jarvis-mode
+0	1
+EXIT_CODE=0

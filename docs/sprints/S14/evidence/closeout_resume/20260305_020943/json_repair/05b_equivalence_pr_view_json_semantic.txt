@@ -1,0 +1,5 @@
+CMD: python semantic equivalence check (HEAD sanitized vs working)
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD_HAS_TRAILING_TOKEN= True
+SEMANTIC_EQUAL= True
+EXIT_CODE: 0

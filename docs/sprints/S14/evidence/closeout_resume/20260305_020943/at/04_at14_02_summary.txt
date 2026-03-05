@@ -1,0 +1,15 @@
+CMD: cat docs/sprints/S14/evidence/ui/AT-S14-02_dashboard.txt
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+=== AT-S14-02: Dashboard State ===
+
+Completed phases: 7
+Evidence: 5
+Last checkpoint: cp-003
+Active agent: claude
+Active phase: idle
+Run complete: true
+Hard stopped: false
+Agent switches: 1
+Result: PASS
+--- STDERR ---
+EXIT_CODE: 0

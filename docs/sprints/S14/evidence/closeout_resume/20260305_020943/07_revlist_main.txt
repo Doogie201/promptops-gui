@@ -1,0 +1,5 @@
+CMD: git rev-list --left-right --count HEAD...origin/main
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+2	0
+--- STDERR ---
+EXIT_CODE: 0
