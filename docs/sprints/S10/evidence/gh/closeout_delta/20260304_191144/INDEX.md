@@ -1,7 +1,7 @@
 # S10 Closeout Delta Index (20260304_191144)
 
 ## Key Receipts
-- Preflight: 
+- Preflight:
   - 01_preflight/05_status_branch.txt
   - 01_preflight/10_worktree_prune_dry_run.txt
   - 01_preflight/11_git_prune_dry_run.txt
