@@ -1,0 +1,13 @@
+HTML markers:
+- Unhandled Runtime Error
+- hydration failed
+- 500 Internal Server Error
+- data-nextjs-dialog
+- __next_error__
+
+stderr markers:
+- Error:
+- TypeError:
+- ReferenceError:
+- ERR_
+- EADDRINUSE

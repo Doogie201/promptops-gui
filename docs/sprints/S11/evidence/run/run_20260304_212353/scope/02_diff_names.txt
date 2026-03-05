@@ -1,0 +1,4 @@
+$ git diff --name-only
+docs/backlog/README.md
+docs/sprints/README.md
+EXIT_CODE=0

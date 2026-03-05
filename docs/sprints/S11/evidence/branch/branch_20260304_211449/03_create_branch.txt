@@ -1,0 +1,3 @@
+$ git checkout -b sprint/S11-template-lifecycle-manager
+Switched to a new branch 'sprint/S11-template-lifecycle-manager'
+EXIT_CODE=0

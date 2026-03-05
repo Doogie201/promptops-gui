@@ -1,0 +1,5 @@
+$ git diff --stat src/s11/template_lifecycle.ts src/s11/s11.test.ts
+ src/s11/s11.test.ts           | 22 ++++++++++++++++++++++
+ src/s11/template_lifecycle.ts |  8 +++++---
+ 2 files changed, 27 insertions(+), 3 deletions(-)
+EXIT_CODE=0

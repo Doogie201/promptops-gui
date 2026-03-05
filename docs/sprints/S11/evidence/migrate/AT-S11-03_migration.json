@@ -1,0 +1,331 @@
+{
+  "migrated": {
+    "migration": {
+      "migrationId": "migration-1",
+      "sprintId": "S11-template-lifecycle-manager",
+      "runId": "run-001",
+      "fromVersionId": "v1",
+      "toVersionId": "v2",
+      "oldIdempotencyKey": "a26ec56b479871f634377460ea7912168cf219cd5c824673bd093bd97b821e30",
+      "newIdempotencyKey": "2964e5cf611b4003bac79f59779c75673c61c3b482ff2f0e2890ef22dcf042ec",
+      "continuityPacketHash": "aad914643d259d201119eeb0e515d2768dbbb9509f294d7ec55f7cf14a7bf040"
+    },
+    "continuityPacket": {
+      "version": "continuity_packet_v1",
+      "sprint_id": "S11-template-lifecycle-manager",
+      "run_id": "run-001",
+      "template_version_id": "v2",
+      "template_content_hash": "e26e0216b763e1e97180e3a61fb6fbe1c9a77dc0003aa6a84cbf9922386a594a",
+      "idempotency": {
+        "old": "a26ec56b479871f634377460ea7912168cf219cd5c824673bd093bd97b821e30",
+        "next": "2964e5cf611b4003bac79f59779c75673c61c3b482ff2f0e2890ef22dcf042ec",
+        "linked": true
+      },
+      "done_ledger_ids": [
+        "ledger_done_1",
+        "ledger_done_2"
+      ],
+      "outstanding_delta_ids": [
+        "delta_1"
+      ],
+      "rendered_ticket_json": {
+        "Sprint Metadata": {
+          "Sprint ID": "S11-template-lifecycle-manager",
+          "Objective (one sentence)": "Updated objective for migration validation",
+          "Acceptance Tests": [
+            "AT-S11-01",
+            "AT-S11-02",
+            "AT-S11-03",
+            "AT-S11-04"
+          ]
+        },
+        "Non-negotiables": {
+          "SECURITY": [
+            "no token leaks"
+          ],
+          "DETERMINISM": [
+            "single source of truth"
+          ],
+          "TESTING_AND_VALIDATION": [
+            "REPO ROOT RESOLUTION POLICY must be enforced"
+          ],
+          "SCOPE": [
+            "smallest safe change set"
+          ]
+        },
+        "OPEN PR HANDLING PROTOCOL": {
+          "Step 0 — Inventory open PRs (evidence required)": {
+            "Run": [
+              "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+            ]
+          }
+        },
+        "Mandatory Preflight": {
+          "Commands": [
+            "pwd",
+            "echo \"$PROMPTOPS_REPO\"",
+            "git rev-parse --show-toplevel"
+          ]
+        },
+        "Whitelist (allowed paths)": [
+          "src/**",
+          "tests/**",
+          "docs/sprints/S11/**",
+          "/tmp/**"
+        ],
+        "Hard Stops": [
+          "HARD STOP: MISSING_REPO_ROOT",
+          "HARD STOP: GIT_OBJECT_INTEGRITY"
+        ],
+        "Evidence-First Output Contract": {
+          "You must produce exactly two sections.": true,
+          "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+            "Sprint header",
+            "PASS/FAIL verdict"
+          ],
+          "SECTION 2 — APPENDIX (only if asked)": [
+            "Full logs"
+          ]
+        }
+      }
+    },
+    "continuityPacketHash": "aad914643d259d201119eeb0e515d2768dbbb9509f294d7ec55f7cf14a7bf040",
+    "predictedTopLevelDiff": [
+      "Sprint Metadata"
+    ],
+    "registry": {
+      "versions": [
+        {
+          "versionId": "v1",
+          "lifecycleState": "archived",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Template objective for [[REPO_OWNER]]/[[REPO_NAME]]",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "HARD STOP: MISSING_REPO_ROOT",
+              "HARD STOP: GIT_OBJECT_INTEGRITY"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d",
+          "createdAt": 3000,
+          "author": "operator",
+          "note": "seed"
+        },
+        {
+          "versionId": "v2",
+          "lifecycleState": "active",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Updated objective for migration validation",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "HARD STOP: MISSING_REPO_ROOT",
+              "HARD STOP: GIT_OBJECT_INTEGRITY"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "e26e0216b763e1e97180e3a61fb6fbe1c9a77dc0003aa6a84cbf9922386a594a",
+          "createdAt": 3020,
+          "author": "operator",
+          "note": "v2"
+        }
+      ],
+      "activeVersionId": "v2",
+      "runPins": {
+        "run-001": "v2"
+      },
+      "sprintPins": {
+        "S11-template-lifecycle-manager": "v2"
+      },
+      "events": [
+        {
+          "eventId": "version_created:3000:207cd489de",
+          "type": "version_created",
+          "at": 3000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d"
+          }
+        },
+        {
+          "eventId": "version_activated:3000:900705f75e",
+          "type": "version_activated",
+          "at": 3000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "reason": "initial"
+          }
+        },
+        {
+          "eventId": "run_pinned:3010:88f55d93d3",
+          "type": "run_pinned",
+          "at": 3010,
+          "actor": "operator",
+          "details": {
+            "sprintId": "S11-template-lifecycle-manager",
+            "runId": "run-001",
+            "versionId": "v1"
+          }
+        },
+        {
+          "eventId": "version_created:3020:82b760f0a3",
+          "type": "version_created",
+          "at": 3020,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "lifecycleState": "draft",
+            "contentHash": "e26e0216b763e1e97180e3a61fb6fbe1c9a77dc0003aa6a84cbf9922386a594a",
+            "note": "v2"
+          }
+        },
+        {
+          "eventId": "version_activated:3030:3c0434c543",
+          "type": "version_activated",
+          "at": 3030,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "contentHash": "e26e0216b763e1e97180e3a61fb6fbe1c9a77dc0003aa6a84cbf9922386a594a",
+            "protectedOverrideUsed": false
+          }
+        },
+        {
+          "eventId": "run_migrated:3040:58e54805d8",
+          "type": "run_migrated",
+          "at": 3040,
+          "actor": "operator",
+          "details": {
+            "migrationId": "migration-1",
+            "sprintId": "S11-template-lifecycle-manager",
+            "runId": "run-001",
+            "fromVersionId": "v1",
+            "toVersionId": "v2",
+            "oldIdempotencyKey": "a26ec56b479871f634377460ea7912168cf219cd5c824673bd093bd97b821e30",
+            "newIdempotencyKey": "2964e5cf611b4003bac79f59779c75673c61c3b482ff2f0e2890ef22dcf042ec",
+            "continuityPacketHash": "aad914643d259d201119eeb0e515d2768dbbb9509f294d7ec55f7cf14a7bf040"
+          }
+        }
+      ],
+      "pendingOverrides": {},
+      "confirmedOverrides": {},
+      "migrations": [
+        {
+          "migrationId": "migration-1",
+          "sprintId": "S11-template-lifecycle-manager",
+          "runId": "run-001",
+          "fromVersionId": "v1",
+          "toVersionId": "v2",
+          "oldIdempotencyKey": "a26ec56b479871f634377460ea7912168cf219cd5c824673bd093bd97b821e30",
+          "newIdempotencyKey": "2964e5cf611b4003bac79f59779c75673c61c3b482ff2f0e2890ef22dcf042ec",
+          "continuityPacketHash": "aad914643d259d201119eeb0e515d2768dbbb9509f294d7ec55f7cf14a7bf040"
+        }
+      ],
+      "clock": 3040
+    }
+  }
+}

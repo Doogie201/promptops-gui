@@ -1,0 +1,5 @@
+{
+  "migration_id": "migration-1",
+  "restored_version_id": "v1",
+  "reverted_packet_hash": "1ace478201ec78da1471d817003436f030dc2168006f3fc7e461aa7c6cbd8c73"
+}

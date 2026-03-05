@@ -1,0 +1,8 @@
+RUN_ROOT=/tmp/promptops/S11/preflight_fix_repo_root_20260304_211346
+PROMPTOPS_REPO=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+SHOW_TOPLEVEL=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+TOPLEVEL_MATCH_LINE=TOPLEVEL_MATCH=0
+BRANCH=main
+STATUS_LINE=## main...origin/main
+REVLIST=0	0
+OPEN_PRS=[]

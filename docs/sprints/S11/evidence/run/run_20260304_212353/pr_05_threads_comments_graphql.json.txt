@@ -1,0 +1,2 @@
+$ gh api graphql -f query=... (PR 18 threads/comments/headRefOid)
+{"data":{"repository":{"pullRequest":{"number":18,"headRefOid":"c08f85c375fe9578fc32d6c8f61b9efe8229aa9f","state":"OPEN","mergeable":"MERGEABLE","mergeStateStatus":"CLEAN","reviewDecision":null,"comments":{"nodes":[{"author":{"login":"codecov"},"bodyText":"Bundle Report\nBundle size has no change ✅","url":"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001683758","createdAt":"2026-03-05T02:28:06Z"}]},"reviewThreads":{"nodes":[]}}}}}EXIT_CODE=0

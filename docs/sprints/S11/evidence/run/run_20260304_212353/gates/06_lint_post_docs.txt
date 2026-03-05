@@ -1,0 +1,3 @@
+$ npm run -s lint
+[verify] lint
+EXIT_CODE=0

@@ -1,0 +1,3 @@
+$ git rev-parse --abbrev-ref HEAD
+sprint/S11-template-lifecycle-manager
+EXIT_CODE=0

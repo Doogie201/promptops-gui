@@ -1,0 +1,7 @@
+$ rg -n "Error:|TypeError:|ReferenceError:|ERR_|EADDRINUSE" /tmp/promptops/S11 2>/dev/null || true
+/tmp/promptops/S11/run_20260304_212353/stoplight/01_marker_list.txt:9:- Error:
+/tmp/promptops/S11/run_20260304_212353/stoplight/01_marker_list.txt:10:- TypeError:
+/tmp/promptops/S11/run_20260304_212353/stoplight/01_marker_list.txt:11:- ReferenceError:
+/tmp/promptops/S11/run_20260304_212353/stoplight/01_marker_list.txt:12:- ERR_
+/tmp/promptops/S11/run_20260304_212353/stoplight/01_marker_list.txt:13:- EADDRINUSE
+EXIT_CODE=0

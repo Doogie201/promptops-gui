@@ -1,0 +1,496 @@
+{
+  "blocked": {
+    "ok": false,
+    "versionId": "v2",
+    "reasonCode": "PROTECTED_OVERRIDE_REQUIRED",
+    "validation": {
+      "valid": true,
+      "missingTopLevelKeys": [],
+      "missingSubKeys": [],
+      "placeholderScan": {
+        "all": [
+          "REPO_NAME",
+          "REPO_OWNER",
+          "SPRINT_ID"
+        ],
+        "globalBound": [
+          "REPO_NAME",
+          "REPO_OWNER"
+        ],
+        "sprintBound": [
+          "SPRINT_ID"
+        ],
+        "forbidden": [],
+        "unknown": [],
+        "missingGlobalBindings": []
+      },
+      "determinismViolations": [],
+      "protectedDiff": {
+        "weakenedSections": [
+          "Hard Stops"
+        ],
+        "details": [
+          "Hard Stops: weakened (1 < 2)"
+        ]
+      },
+      "blockers": []
+    },
+    "registry": {
+      "versions": [
+        {
+          "versionId": "v1",
+          "lifecycleState": "active",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Template objective for [[REPO_OWNER]]/[[REPO_NAME]]",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "HARD STOP: MISSING_REPO_ROOT",
+              "HARD STOP: GIT_OBJECT_INTEGRITY"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d",
+          "createdAt": 2000,
+          "author": "operator",
+          "note": "seed"
+        },
+        {
+          "versionId": "v2",
+          "lifecycleState": "draft",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Template objective for [[REPO_OWNER]]/[[REPO_NAME]]",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "only-one-hard-stop"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "7920a27fd1d69705b3a880c03e65a7e19fbf6c5e4552efef66ec40522cd08e0b",
+          "createdAt": 2010,
+          "author": "operator",
+          "note": "weaken hard stops"
+        }
+      ],
+      "activeVersionId": "v1",
+      "runPins": {},
+      "sprintPins": {},
+      "events": [
+        {
+          "eventId": "version_created:2000:207cd489de",
+          "type": "version_created",
+          "at": 2000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d"
+          }
+        },
+        {
+          "eventId": "version_activated:2000:900705f75e",
+          "type": "version_activated",
+          "at": 2000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "reason": "initial"
+          }
+        },
+        {
+          "eventId": "version_created:2010:c7c88a47fa",
+          "type": "version_created",
+          "at": 2010,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "lifecycleState": "draft",
+            "contentHash": "7920a27fd1d69705b3a880c03e65a7e19fbf6c5e4552efef66ec40522cd08e0b",
+            "note": "weaken hard stops"
+          }
+        }
+      ],
+      "pendingOverrides": {},
+      "confirmedOverrides": {},
+      "migrations": [],
+      "clock": 2010
+    }
+  },
+  "override_request_token": "98ddca816beaef49",
+  "activated": {
+    "ok": true,
+    "versionId": "v2",
+    "reasonCode": "NONE",
+    "validation": {
+      "valid": true,
+      "missingTopLevelKeys": [],
+      "missingSubKeys": [],
+      "placeholderScan": {
+        "all": [
+          "REPO_NAME",
+          "REPO_OWNER",
+          "SPRINT_ID"
+        ],
+        "globalBound": [
+          "REPO_NAME",
+          "REPO_OWNER"
+        ],
+        "sprintBound": [
+          "SPRINT_ID"
+        ],
+        "forbidden": [],
+        "unknown": [],
+        "missingGlobalBindings": []
+      },
+      "determinismViolations": [],
+      "protectedDiff": {
+        "weakenedSections": [
+          "Hard Stops"
+        ],
+        "details": [
+          "Hard Stops: weakened (1 < 2)"
+        ]
+      },
+      "blockers": []
+    },
+    "registry": {
+      "versions": [
+        {
+          "versionId": "v1",
+          "lifecycleState": "archived",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Template objective for [[REPO_OWNER]]/[[REPO_NAME]]",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "HARD STOP: MISSING_REPO_ROOT",
+              "HARD STOP: GIT_OBJECT_INTEGRITY"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d",
+          "createdAt": 2000,
+          "author": "operator",
+          "note": "seed"
+        },
+        {
+          "versionId": "v2",
+          "lifecycleState": "active",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Template objective for [[REPO_OWNER]]/[[REPO_NAME]]",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "only-one-hard-stop"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "7920a27fd1d69705b3a880c03e65a7e19fbf6c5e4552efef66ec40522cd08e0b",
+          "createdAt": 2010,
+          "author": "operator",
+          "note": "weaken hard stops"
+        }
+      ],
+      "activeVersionId": "v2",
+      "runPins": {},
+      "sprintPins": {},
+      "events": [
+        {
+          "eventId": "version_created:2000:207cd489de",
+          "type": "version_created",
+          "at": 2000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d"
+          }
+        },
+        {
+          "eventId": "version_activated:2000:900705f75e",
+          "type": "version_activated",
+          "at": 2000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "reason": "initial"
+          }
+        },
+        {
+          "eventId": "version_created:2010:c7c88a47fa",
+          "type": "version_created",
+          "at": 2010,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "lifecycleState": "draft",
+            "contentHash": "7920a27fd1d69705b3a880c03e65a7e19fbf6c5e4552efef66ec40522cd08e0b",
+            "note": "weaken hard stops"
+          }
+        },
+        {
+          "eventId": "override_requested:2030:544762cf84",
+          "type": "override_requested",
+          "at": 2030,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "token": "98ddca816beaef49",
+            "requestedAt": 2030,
+            "requestedBy": "operator"
+          }
+        },
+        {
+          "eventId": "override_confirmed:2040:1924af2876",
+          "type": "override_confirmed",
+          "at": 2040,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "token": "98ddca816beaef49",
+            "confirmedAt": 2040,
+            "confirmedBy": "operator"
+          }
+        },
+        {
+          "eventId": "version_activated:2050:c2bd44ec43",
+          "type": "version_activated",
+          "at": 2050,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "contentHash": "7920a27fd1d69705b3a880c03e65a7e19fbf6c5e4552efef66ec40522cd08e0b",
+            "protectedOverrideUsed": true
+          }
+        }
+      ],
+      "pendingOverrides": {},
+      "confirmedOverrides": {},
+      "migrations": [],
+      "clock": 2050
+    }
+  },
+  "requested_event": {
+    "eventId": "override_requested:2030:544762cf84",
+    "type": "override_requested",
+    "at": 2030,
+    "actor": "operator",
+    "details": {
+      "versionId": "v2",
+      "token": "98ddca816beaef49",
+      "requestedAt": 2030,
+      "requestedBy": "operator"
+    }
+  },
+  "confirmed_event": {
+    "eventId": "override_confirmed:2040:1924af2876",
+    "type": "override_confirmed",
+    "at": 2040,
+    "actor": "operator",
+    "details": {
+      "versionId": "v2",
+      "token": "98ddca816beaef49",
+      "confirmedAt": 2040,
+      "confirmedBy": "operator"
+    }
+  }
+}

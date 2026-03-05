@@ -1,0 +1,7 @@
+$ git status --porcelain=v1 --branch
+## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+?? docs/sprints/S11/
+?? src/s11/
+EXIT_CODE=0

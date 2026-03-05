@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "blocked_reason": "ACTIVATION_BLOCKED",
+  "missing_top_level_keys": [
+    "Whitelist (allowed paths)"
+  ],
+  "unknown_placeholders": [
+    "UNKNOWN_PLACEHOLDER"
+  ],
+  "forbidden_placeholders": [
+    "FORBIDDEN_PLACEHOLDER"
+  ]
+}

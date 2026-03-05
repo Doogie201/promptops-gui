@@ -1,0 +1,3 @@
+$ git rev-list --left-right --count HEAD...origin/sprint/S11-template-lifecycle-manager
+0	0
+EXIT_CODE=0

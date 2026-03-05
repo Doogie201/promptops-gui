@@ -1,0 +1,12 @@
+$ git cherry-pick 6b16fb3
+[sprint/S11-template-lifecycle-manager 9825a65] docs(S11): add PR readiness receipts
+ Date: Wed Mar 4 21:28:30 2026 -0500
+ 7 files changed, 180 insertions(+)
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_01_add.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_02_status_after_add.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_03_commit.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_04_push.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/pr_05_threads_comments_graphql.json.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/pr_06_checks_watch.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/pr_07_view_after_checks.json.txt
+EXIT_CODE=0

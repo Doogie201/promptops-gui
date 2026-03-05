@@ -1,0 +1,23 @@
+# S11 Evidence Index
+
+- Preflight (full, includes prune/fsck/worktree/open PR):
+  -   docs/sprints/S11/evidence/preflight/full_preflight/
+- Repo-root input gate fix (PROMPTOPS_REPO + toplevel match):
+  -   docs/sprints/S11/evidence/preflight/repo_root_fix/
+- Branch compliance + creation:
+  -   docs/sprints/S11/evidence/branch/
+- Main run bundle:
+  -   docs/sprints/S11/evidence/run/run_20260304_212353/
+- AT receipts:
+  - docs/sprints/S11/evidence/at/AT-S11-01_run.json
+  - docs/sprints/S11/evidence/at/AT-S11-02_run.json
+  - docs/sprints/S11/evidence/at/AT-S11-03_run.json
+  - docs/sprints/S11/evidence/at/AT-S11-04_run.json
+- Template lifecycle artifacts (EVD-S11-01):
+  - docs/sprints/S11/evidence/templates/*
+- Preview artifacts + idempotency hash proofs (EVD-S11-02):
+  - docs/sprints/S11/evidence/preview/*
+- Migration artifacts + continuity packets (EVD-S11-03):
+  - docs/sprints/S11/evidence/migrate/*
+- Stoplight marker lists + grep outputs:
+  - docs/sprints/S11/evidence/stoplight/*

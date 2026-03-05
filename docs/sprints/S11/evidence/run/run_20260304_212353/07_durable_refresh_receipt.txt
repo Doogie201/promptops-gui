@@ -1,0 +1,4 @@
+$ rm -rf <old run copy> && cp -R run root durable
+SOURCE=/tmp/promptops/S11/run_20260304_212353
+TARGET=docs/sprints/S11/evidence/run/run_20260304_212353
+EXIT_CODE=0

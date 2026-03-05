@@ -1,0 +1,13 @@
+$ git cherry-pick 5b6c87d
+[sprint/S11-template-lifecycle-manager ecdbc87] docs(S11): add divergence remediation receipts
+ Date: Wed Mar 4 21:29:09 2026 -0500
+ 8 files changed, 35 insertions(+)
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_01_fetch.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_02_revlist.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_03_local_only.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_04_remote_only.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_05_reset.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_06_cherrypick.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_07_push.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_08_revlist_after.txt
+EXIT_CODE=0

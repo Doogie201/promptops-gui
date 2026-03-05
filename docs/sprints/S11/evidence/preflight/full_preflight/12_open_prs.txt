@@ -1,0 +1,3 @@
+$ gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url,headRefName,headRefOid,baseRefName
+[]
+EXIT_CODE=0

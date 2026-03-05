@@ -1,0 +1,3 @@
+$ git reset --hard origin/sprint/S11-template-lifecycle-manager
+HEAD is now at 38d6e19 [pre-commit.ci] auto fixes from pre-commit.com hooks
+EXIT_CODE=0

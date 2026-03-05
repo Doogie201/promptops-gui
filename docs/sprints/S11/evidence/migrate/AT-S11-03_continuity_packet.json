@@ -1,0 +1,79 @@
+{
+  "done_ledger_ids": [
+    "ledger_done_1",
+    "ledger_done_2"
+  ],
+  "idempotency": {
+    "linked": true,
+    "next": "2964e5cf611b4003bac79f59779c75673c61c3b482ff2f0e2890ef22dcf042ec",
+    "old": "a26ec56b479871f634377460ea7912168cf219cd5c824673bd093bd97b821e30"
+  },
+  "outstanding_delta_ids": [
+    "delta_1"
+  ],
+  "rendered_ticket_json": {
+    "Evidence-First Output Contract": {
+      "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+        "Sprint header",
+        "PASS/FAIL verdict"
+      ],
+      "SECTION 2 — APPENDIX (only if asked)": [
+        "Full logs"
+      ],
+      "You must produce exactly two sections.": true
+    },
+    "Hard Stops": [
+      "HARD STOP: MISSING_REPO_ROOT",
+      "HARD STOP: GIT_OBJECT_INTEGRITY"
+    ],
+    "Mandatory Preflight": {
+      "Commands": [
+        "pwd",
+        "echo \"$PROMPTOPS_REPO\"",
+        "git rev-parse --show-toplevel"
+      ]
+    },
+    "Non-negotiables": {
+      "DETERMINISM": [
+        "single source of truth"
+      ],
+      "SCOPE": [
+        "smallest safe change set"
+      ],
+      "SECURITY": [
+        "no token leaks"
+      ],
+      "TESTING_AND_VALIDATION": [
+        "REPO ROOT RESOLUTION POLICY must be enforced"
+      ]
+    },
+    "OPEN PR HANDLING PROTOCOL": {
+      "Step 0 — Inventory open PRs (evidence required)": {
+        "Run": [
+          "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+        ]
+      }
+    },
+    "Sprint Metadata": {
+      "Acceptance Tests": [
+        "AT-S11-01",
+        "AT-S11-02",
+        "AT-S11-03",
+        "AT-S11-04"
+      ],
+      "Objective (one sentence)": "Updated objective for migration validation",
+      "Sprint ID": "S11-template-lifecycle-manager"
+    },
+    "Whitelist (allowed paths)": [
+      "src/**",
+      "tests/**",
+      "docs/sprints/S11/**",
+      "/tmp/**"
+    ]
+  },
+  "run_id": "run-001",
+  "sprint_id": "S11-template-lifecycle-manager",
+  "template_content_hash": "e26e0216b763e1e97180e3a61fb6fbe1c9a77dc0003aa6a84cbf9922386a594a",
+  "template_version_id": "v2",
+  "version": "continuity_packet_v1"
+}
