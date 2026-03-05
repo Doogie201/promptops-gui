@@ -16,3 +16,4 @@
 - [S14 - Jarvis Mode](./S14/README.md)
 - [S15 - Terminal Panel](./S15/README.md)
 - [S16 - Hardening + Regression Suite](./S16/README.md)
+- [S17 - GUI Entrypoint + Dashboard](./S17/README.md)

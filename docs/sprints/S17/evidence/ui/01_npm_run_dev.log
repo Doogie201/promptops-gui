@@ -1,0 +1,8 @@
+
+> promptops-gui@1.0.0 dev
+> vite --config src/s17/vite.config.ts
+
+
+  VITE v6.4.1  ready in 235 ms
+
+  ➜  Local:   http://127.0.0.1:4173/

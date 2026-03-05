@@ -1,0 +1,41 @@
+CMD: node --test --experimental-transform-types tests/s17/s17.test.ts
+TAP version 13
+# (node:30143) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:30143) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s17/s17.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: AT-S17-02: preflight action flows through façade to operator pathway with deterministic envelope
+ok 1 - AT-S17-02: preflight action flows through façade to operator pathway with deterministic envelope
+  ---
+  duration_ms: 35.901083
+  type: 'test'
+  ...
+# Subtest: AT-S17-03: gates action returns FAIL deterministically on non-zero command
+ok 2 - AT-S17-03: gates action returns FAIL deterministically on non-zero command
+  ---
+  duration_ms: 4.071166
+  type: 'test'
+  ...
+# Subtest: AT-S17-04: S17 code has no mount-specific absolute paths and repo-root can come from env
+ok 3 - AT-S17-04: S17 code has no mount-specific absolute paths and repo-root can come from env
+  ---
+  duration_ms: 4.7005
+  type: 'test'
+  ...
+# Subtest: AT-S17-05: import-direction guard catches forbidden deep imports
+ok 4 - AT-S17-05: import-direction guard catches forbidden deep imports
+  ---
+  duration_ms: 0.524833
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 188.014416
+EXIT_CODE:0

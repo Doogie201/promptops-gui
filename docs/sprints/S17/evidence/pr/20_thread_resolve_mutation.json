@@ -1,0 +1,14 @@
+{
+  "command": "gh api graphql resolveReviewThread",
+  "exitCode": 0,
+  "payload": {
+    "data": {
+      "resolveReviewThread": {
+        "thread": {
+          "id": "PRRT_kwDORZ8p_M5ycwks",
+          "isResolved": true
+        }
+      }
+    }
+  }
+}

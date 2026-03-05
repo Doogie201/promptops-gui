@@ -1,0 +1,11 @@
+{
+  "sprintId": "S17-gui-entrypoint-dashboard",
+  "tool": "gates",
+  "runId": "AT-S17-03-gates",
+  "timestamp": "S17_AT_03",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/gates/AT-S17-03-gates",
+  "bundleRoot": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03",
+  "continuityHash": "83158e67f95825d351d672326f15e5edfeeeb624db1e9d25d4d100f5b2cdb191"
+}

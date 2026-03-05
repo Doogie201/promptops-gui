@@ -1,0 +1,49 @@
+{
+  "action": "gates",
+  "request": {
+    "action": "gates",
+    "requestId": "AT-S17-03-gates",
+    "args": {
+      "requestId": "AT-S17-03-gates",
+      "timestamp": "S17_AT_03"
+    },
+    "repoRootStrategy": "explicit_arg"
+  },
+  "status": "FAIL",
+  "reasonCode": "PR_NOT_READY",
+  "message": "Gate execution failed.",
+  "data": {
+    "failedCount": 2
+  },
+  "receipts": [
+    {
+      "id": "gate_readiness_status",
+      "cmd": "git status --porcelain=v1 --branch",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gate_readiness_status.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gate_readiness_status.stderr.txt"
+    },
+    {
+      "id": "gate_verify",
+      "cmd": "npm run -s verify",
+      "exitCode": 1,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gate_verify.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gate_verify.stderr.txt"
+    },
+    {
+      "id": "gate_gates_sh",
+      "cmd": "bash gates.sh",
+      "exitCode": 1,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gate_gates_sh.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gate_gates_sh.stderr.txt"
+    }
+  ],
+  "receiptPaths": {
+    "gates_commands": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gates_commands.json",
+    "gates_outputs": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gates_outputs.ndjson",
+    "gates_eval": "/tmp/promptops/S17/ui/actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03/gates_eval.md"
+  },
+  "durableBundlePath": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/gates/AT-S17-03-gates/S17-gui-entrypoint-dashboard_gates_AT-S17-03-gates_S17_AT_03",
+  "exitCode": 1,
+  "resultHash": "07cfae5e1a784b951b87e704501b8721d5abab86d69d3b0e7cef0100a5725272"
+}

@@ -1,0 +1,6 @@
+codecov/bundles	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/27?dropdown=bundle	Bundle change: 0.0% (Threshold: 5.0%)
+coverage	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22739760325/job/65950025977
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22739774762/job/65950081560
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772749634.udID9FSbQXKXU8VqeWIUHQ	checks completed successfully
+verify	pass	31s	https://github.com/Doogie201/promptops-gui/actions/runs/22739760333/job/65950025911
+verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22739774763/job/65950081485

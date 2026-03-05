@@ -1,0 +1,11 @@
+{
+  "sprintId": "S17-gui-entrypoint-dashboard",
+  "tool": "preflight",
+  "runId": "AT-S17-02-preflight",
+  "timestamp": "S17_AT_02",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/preflight/AT-S17-02-preflight",
+  "bundleRoot": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02",
+  "continuityHash": "fc64c121f852462f2904043b990acb65c731fd94e86e1a7a037b4ced346ac999"
+}

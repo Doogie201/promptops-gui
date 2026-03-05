@@ -1,0 +1,59 @@
+:root {
+  color-scheme: light;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  background: linear-gradient(180deg, #0f172a 0%, #111827 60%, #1f2937 100%);
+  color: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.card {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+button {
+  border: 1px solid #22d3ee;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #22d3ee;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 12px;
+}
+
+.muted {
+  color: #9ca3af;
+  font-size: 13px;
+}

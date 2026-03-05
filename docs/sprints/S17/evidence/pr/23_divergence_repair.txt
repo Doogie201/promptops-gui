@@ -1,0 +1,17 @@
+CMD: git reset --hard origin/sprint/S17-gui-entrypoint-dashboard
+HEAD is now at 58caac5 [pre-commit.ci] auto fixes from pre-commit.com hooks
+CMD: git cherry-pick 52e1aad
+[sprint/S17-gui-entrypoint-dashboard 684748c] [S17] docs: add PR thread remediation receipts
+ Date: Thu Mar 5 17:24:08 2026 -0500
+ 5 files changed, 10 insertions(+)
+ create mode 100644 docs/sprints/S17/evidence/pr/18_threads_before_resolution.json
+ create mode 100644 docs/sprints/S17/evidence/pr/18b_thread_id.txt
+ create mode 100644 docs/sprints/S17/evidence/pr/19_thread_response_comment.txt
+ create mode 100644 docs/sprints/S17/evidence/pr/20_thread_resolve_mutation.json
+ create mode 100644 docs/sprints/S17/evidence/pr/21_threads_after_resolution.json
+CMD: git push
+To https://github.com/Doogie201/promptops-gui.git
+   58caac5..684748c  sprint/S17-gui-entrypoint-dashboard -> sprint/S17-gui-entrypoint-dashboard
+CMD: git rev-list --left-right --count HEAD...origin/sprint/S17-gui-entrypoint-dashboard
+0	0
+EXIT_CODE:0

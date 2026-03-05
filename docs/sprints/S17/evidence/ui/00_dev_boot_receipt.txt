@@ -1,0 +1,4 @@
+CMD: npm run dev
+PID:23614
+READY:1
+EXIT_CODE:0

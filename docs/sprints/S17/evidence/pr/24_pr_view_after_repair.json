@@ -1,0 +1,103 @@
+{
+  "command": "gh pr view 27 --json number,title,state,mergeable,mergeStateStatus,reviewDecision,headRefName,headRefOid,baseRefName,statusCheckRollup,labels,url",
+  "exitCode": 0,
+  "payload": {
+    "baseRefName": "main",
+    "headRefName": "sprint/S17-gui-entrypoint-dashboard",
+    "headRefOid": "684748c35b91deae5d14fc2730bcf2b2b5f28942",
+    "labels": [
+      {
+        "id": "LA_kwDORZ8p_M8AAAACZgiaPQ",
+        "name": "evidence:attached",
+        "description": "",
+        "color": "FEF2C0"
+      },
+      {
+        "id": "LA_kwDORZ8p_M8AAAACZg3RtQ",
+        "name": "type:feature",
+        "description": "",
+        "color": "3FB950"
+      },
+      {
+        "id": "LA_kwDORZ8p_M8AAAACZg3Rww",
+        "name": "risk:high",
+        "description": "",
+        "color": "FF4D6A"
+      },
+      {
+        "id": "LA_kwDORZ8p_M8AAAACaFDmWQ",
+        "name": "evidence:required",
+        "description": "",
+        "color": "D29922"
+      },
+      {
+        "id": "LA_kwDORZ8p_M8AAAACaKm2Ew",
+        "name": "area:navigation",
+        "description": "",
+        "color": "5319E7"
+      },
+      {
+        "id": "LA_kwDORZ8p_M8AAAACaTzfbg",
+        "name": "sprint:S17",
+        "description": "",
+        "color": "ededed"
+      }
+    ],
+    "mergeStateStatus": "UNSTABLE",
+    "mergeable": "MERGEABLE",
+    "number": 27,
+    "reviewDecision": "",
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739667815/job/65949735756",
+        "name": "coverage",
+        "startedAt": "2026-03-05T22:24:47Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "Codecov Coverage"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739665871/job/65949730359",
+        "name": "coverage",
+        "startedAt": "2026-03-05T22:24:44Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "Codecov Coverage"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739667830/job/65949735600",
+        "name": "verify",
+        "startedAt": "2026-03-05T22:24:47Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "Verify"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739665835/job/65949730552",
+        "name": "verify",
+        "startedAt": "2026-03-05T22:24:44Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "Verify"
+      },
+      {
+        "__typename": "StatusContext",
+        "context": "pre-commit.ci - pr",
+        "startedAt": "2026-03-05T22:24:47Z",
+        "state": "FAILURE",
+        "targetUrl": "https://results.pre-commit.ci/run/github/1168058876/1772749482.Oa4TOF0hRJG6zdJWrbko-w"
+      }
+    ],
+    "title": "[S17] devx : gui entrypoint + dashboard",
+    "url": "https://github.com/Doogie201/promptops-gui/pull/27"
+  }
+}

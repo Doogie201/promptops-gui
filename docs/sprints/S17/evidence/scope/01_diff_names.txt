@@ -1,0 +1,36 @@
+CMD: git diff --name-only | sort
+docs/sprints/S17/evidence/at/AT-S17_eval.md
+docs/sprints/S17/evidence/gates/01_precommit.txt
+docs/sprints/S17/evidence/maintainability/01_file_sizes_and_numstat.txt
+docs/sprints/S17/evidence/maintainability/02_function_lengths.txt
+docs/sprints/S17/evidence/maintainability/03_eval.txt
+docs/sprints/S17/evidence/scope/01_diff_names.txt
+docs/sprints/S17/evidence/scope/02_whitelist_eval.txt
+src/s17/dashboard_app.ts
+tests/s17/s17.test.ts
+CMD: git ls-files --others --exclude-standard | sort
+docs/sprints/S17/evidence/gates/06_precommit_after_thread_fix.txt
+docs/sprints/S17/evidence/gates/07_lint_after_thread_fix.txt
+docs/sprints/S17/evidence/gates/08_test_after_thread_fix.txt
+docs/sprints/S17/evidence/gates/09_build_after_thread_fix.txt
+docs/sprints/S17/evidence/gates/10_s17_tests_after_thread_fix.txt
+docs/sprints/S17/evidence/pr/02_pr_create_or_edit.txt
+docs/sprints/S17/evidence/pr/03_labels_required.txt
+docs/sprints/S17/evidence/pr/04_label_attached.txt
+docs/sprints/S17/evidence/pr/05_pr_view.json
+docs/sprints/S17/evidence/pr/06_threads_comments.json
+docs/sprints/S17/evidence/pr/07_checks_watch.txt
+docs/sprints/S17/evidence/pr/08_stability_before.json
+docs/sprints/S17/evidence/pr/09_stability_wait.txt
+docs/sprints/S17/evidence/pr/09b_fetch_after_wait.txt
+docs/sprints/S17/evidence/pr/10_stability_after.json
+docs/sprints/S17/evidence/pr/11_pr_readiness_latest.exit.txt
+docs/sprints/S17/evidence/pr/11_pr_readiness_latest.json
+docs/sprints/S17/evidence/pr/12_sync_after_drift.txt
+docs/sprints/S17/evidence/pr/13_checks_after_drift.txt
+docs/sprints/S17/evidence/pr/14_threads_after_drift.json
+docs/sprints/S17/evidence/pr/15_stability2_before.json
+docs/sprints/S17/evidence/pr/16_stability2_wait.txt
+docs/sprints/S17/evidence/pr/16b_stability2_fetch.txt
+docs/sprints/S17/evidence/pr/17_stability2_after.json
+EXIT_CODE:0

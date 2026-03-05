@@ -1,0 +1,2 @@
+CMD: rg -n dangerouslySetInnerHTML src/s17 tests/s17 || true
+EXIT_CODE:0

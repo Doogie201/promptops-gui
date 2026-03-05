@@ -1,0 +1,13 @@
+CMD: npm run build
+
+> promptops-gui@1.0.0 build
+> tsc --noEmit && npm run -s build:bundle-analysis
+
+vite v6.4.1 building for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+computing gzip size...
+coverage/bundle-analysis/bundle.mjs  0.07 kB │ gzip: 0.09 kB
+✓ built in 33ms
+EXIT_CODE:0

@@ -1,0 +1,2 @@
+CMD: rg -n (^|\s)(/Users/|/Volumes/|[A-Za-z]:\\) src/s17 tests/s17 || true
+EXIT_CODE:0

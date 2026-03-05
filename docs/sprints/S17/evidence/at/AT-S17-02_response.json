@@ -1,0 +1,108 @@
+{
+  "action": "preflight",
+  "request": {
+    "action": "preflight",
+    "requestId": "AT-S17-02-preflight",
+    "args": {
+      "requestId": "AT-S17-02-preflight",
+      "timestamp": "S17_AT_02"
+    },
+    "repoRootStrategy": "explicit_arg"
+  },
+  "status": "HARD_STOP",
+  "reasonCode": "REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED",
+  "message": "repo not ready: branch=sprint/S17-gui-entrypoint-dashboard dirty=true ahead=0 behind=0",
+  "data": {
+    "branch": "sprint/S17-gui-entrypoint-dashboard",
+    "dirty": true,
+    "ahead": 0,
+    "behind": 0
+  },
+  "receipts": [
+    {
+      "id": "pwd",
+      "cmd": "pwd",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/pwd.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/pwd.stderr.txt"
+    },
+    {
+      "id": "echo_promptops_repo",
+      "cmd": "bash -lc echo \"$PROMPTOPS_REPO\"",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/echo_promptops_repo.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/echo_promptops_repo.stderr.txt"
+    },
+    {
+      "id": "show_toplevel",
+      "cmd": "git rev-parse --show-toplevel",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/show_toplevel.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/show_toplevel.stderr.txt"
+    },
+    {
+      "id": "worktree_list",
+      "cmd": "git worktree list --porcelain",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/worktree_list.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/worktree_list.stderr.txt"
+    },
+    {
+      "id": "status",
+      "cmd": "git status --porcelain=v1 --branch",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/status.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/status.stderr.txt"
+    },
+    {
+      "id": "fetch",
+      "cmd": "git fetch --all --prune --tags",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/fetch.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/fetch.stderr.txt"
+    },
+    {
+      "id": "ahead_behind",
+      "cmd": "git rev-list --left-right --count HEAD...origin/main",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/ahead_behind.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/ahead_behind.stderr.txt"
+    },
+    {
+      "id": "branch",
+      "cmd": "git rev-parse --abbrev-ref HEAD",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/branch.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/branch.stderr.txt"
+    },
+    {
+      "id": "log",
+      "cmd": "git log --oneline -5",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/log.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/log.stderr.txt"
+    },
+    {
+      "id": "prune_dry_run",
+      "cmd": "git prune --dry-run",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/prune_dry_run.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/prune_dry_run.stderr.txt"
+    },
+    {
+      "id": "fsck",
+      "cmd": "git fsck --no-reflogs",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/fsck.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/fsck.stderr.txt"
+    }
+  ],
+  "receiptPaths": {
+    "preflight_commands": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/preflight_commands.json",
+    "preflight_outputs": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/preflight_outputs.ndjson",
+    "preflight_eval": "/tmp/promptops/S17/ui/actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02/preflight_eval.md"
+  },
+  "durableBundlePath": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/preflight/AT-S17-02-preflight/S17-gui-entrypoint-dashboard_preflight_AT-S17-02-preflight_S17_AT_02",
+  "exitCode": 0,
+  "resultHash": "d9c2504d63a26c23cfc897b3fcd1c0b3bc64e1097f0c65eec40aa6fc4b441fa2"
+}

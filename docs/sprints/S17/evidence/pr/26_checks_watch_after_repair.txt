@@ -1,0 +1,25 @@
+CMD: gh pr checks 27 --watch
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+pre-commit.ci - pr	fail	0	https://results.pre-commit.ci/run/github/1168058876/1772749482.Oa4TOF0hRJG6zdJWrbko-w	checks completed with failures
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22739665871/job/65949730359
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22739667815/job/65949735756
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22739665835/job/65949730552
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22739667830/job/65949735600
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+pre-commit.ci - pr	fail	0	https://results.pre-commit.ci/run/github/1168058876/1772749482.Oa4TOF0hRJG6zdJWrbko-w	checks completed with failures
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22739667830/job/65949735600
+coverage	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22739665871/job/65949730359
+coverage	pass	16s	https://github.com/Doogie201/promptops-gui/actions/runs/22739667815/job/65949735756
+verify	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22739665835/job/65949730552
+pre-commit.ci - pr	fail	0	https://results.pre-commit.ci/run/github/1168058876/1772749482.Oa4TOF0hRJG6zdJWrbko-w	checks completed with failures
+coverage	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22739665871/job/65949730359
+coverage	pass	16s	https://github.com/Doogie201/promptops-gui/actions/runs/22739667815/job/65949735756
+verify	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22739665835/job/65949730552
+verify	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22739667830/job/65949735600
+pre-commit.ci - pr	fail	0	https://results.pre-commit.ci/run/github/1168058876/1772749482.Oa4TOF0hRJG6zdJWrbko-w	checks completed with failures
+coverage	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22739665871/job/65949730359
+coverage	pass	16s	https://github.com/Doogie201/promptops-gui/actions/runs/22739667815/job/65949735756
+verify	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22739665835/job/65949730552
+verify	pass	25s	https://github.com/Doogie201/promptops-gui/actions/runs/22739667830/job/65949735600

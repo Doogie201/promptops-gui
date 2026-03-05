@@ -1,0 +1,11 @@
+{
+  "sprintId": "S17-gui-entrypoint-dashboard",
+  "tool": "out_of_sync",
+  "runId": "AT-S17-status",
+  "timestamp": "S17_STATUS",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S17/ui/actions/out_of_sync/AT-S17-status",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/out_of_sync/AT-S17-status",
+  "bundleRoot": "/tmp/promptops/S17/ui/actions/out_of_sync/AT-S17-status/S17-gui-entrypoint-dashboard_out_of_sync_AT-S17-status_S17_STATUS",
+  "continuityHash": "880f0d9aa38b3ab24e854eb165e616daaf611566c904d30b16fa4e46d2642e66"
+}

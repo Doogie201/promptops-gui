@@ -1,0 +1,18 @@
+{
+  "command": "gh api graphql reviewThreads+comments",
+  "exitCode": 0,
+  "payload": {
+    "data": {
+      "repository": {
+        "pullRequest": {
+          "reviewThreads": {
+            "nodes": []
+          },
+          "comments": {
+            "nodes": []
+          }
+        }
+      }
+    }
+  }
+}

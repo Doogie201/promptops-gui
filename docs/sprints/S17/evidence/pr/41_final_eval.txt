@@ -1,0 +1,7 @@
+HEAD_BEFORE=97e819be2d392c9a9255b6aa46c7cee26842172d
+HEAD_AFTER=97e819be2d392c9a9255b6aa46c7cee26842172d
+HEAD_STABLE=1
+REVLIST_LOCAL_REMOTE_BEFORE=unknown
+REVLIST_LOCAL_REMOTE_AFTER=unknown
+INTERPRETATION=Remote head stable during final 190s; local branch required ff-only sync to absorb bot commit.
+EXIT_CODE:0

@@ -1,0 +1,66 @@
+{
+  "command": "gh pr view 27 --json headRefOid,mergeable,mergeStateStatus,statusCheckRollup,url",
+  "exitCode": 0,
+  "payload": {
+    "headRefOid": "97e819be2d392c9a9255b6aa46c7cee26842172d",
+    "mergeStateStatus": "CLEAN",
+    "mergeable": "MERGEABLE",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-03-05T22:28:06Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739774762/job/65950081560",
+        "name": "coverage",
+        "startedAt": "2026-03-05T22:27:47Z",
+        "status": "COMPLETED",
+        "workflowName": "Codecov Coverage"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-03-05T22:27:37Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739760325/job/65950025977",
+        "name": "coverage",
+        "startedAt": "2026-03-05T22:27:17Z",
+        "status": "COMPLETED",
+        "workflowName": "Codecov Coverage"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-03-05T22:28:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739774763/job/65950081485",
+        "name": "verify",
+        "startedAt": "2026-03-05T22:27:47Z",
+        "status": "COMPLETED",
+        "workflowName": "Verify"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-03-05T22:27:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Doogie201/promptops-gui/actions/runs/22739760333/job/65950025911",
+        "name": "verify",
+        "startedAt": "2026-03-05T22:27:17Z",
+        "status": "COMPLETED",
+        "workflowName": "Verify"
+      },
+      {
+        "__typename": "StatusContext",
+        "context": "codecov/bundles",
+        "startedAt": "2026-03-05T22:30:14Z",
+        "state": "SUCCESS",
+        "targetUrl": "https://app.codecov.io/gh/Doogie201/promptops-gui/pull/27?dropdown=bundle"
+      },
+      {
+        "__typename": "StatusContext",
+        "context": "pre-commit.ci - pr",
+        "startedAt": "2026-03-05T22:27:18Z",
+        "state": "SUCCESS",
+        "targetUrl": "https://results.pre-commit.ci/run/github/1168058876/1772749634.udID9FSbQXKXU8VqeWIUHQ"
+      }
+    ],
+    "url": "https://github.com/Doogie201/promptops-gui/pull/27"
+  }
+}

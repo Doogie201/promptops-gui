@@ -1,0 +1,15 @@
+HTML/SECURITY MARKERS:
+- dangerouslySetInnerHTML
+- Date.now(
+- Math.random(
+- localStorage(
+- sessionStorage(
+PATH MARKERS:
+- /Users/
+- /Volumes/
+- [A-Za-z]:\\
+IMPORT GUARD MARKERS:
+- from "../s10/"
+- from "../../engine/"
+- from "../../adapters/"
+- from "../../policy/"
