@@ -45,3 +45,15 @@
 - `at/AT-S12-03_template_restore.json`
 - `at/AT-S12-04_run.json`
 - `at/AT-S12-04_safe_mode_report.json`
+
+## PR Readiness
+- `pr/01_open_prs_before_create.json.txt`
+- `pr/03_pr_create_receipt.txt`
+- `pr/04_pr_labels.txt`
+- `pr/05_pr_view_initial.json.txt`
+- `pr/06_pr_checks.txt`
+- `pr/07_pr_checks_watch.txt`
+- `pr/08_pr_view_ready.json.txt`
+- `pr/09_pr_threads_comments.json.txt`
+- `pr/10_pr_threads_eval.json`
+- `scope/04_branch_sync_after_push.txt`
