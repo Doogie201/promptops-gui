@@ -1,0 +1,242 @@
+COMMAND: git fetch --all --prune --tags
+From https://github.com/Doogie201/promptops-gui
+ - [deleted]         (none)     -> origin/sprint/S15-terminal-panel
+   d4ad141..7344c49  main       -> origin/main
+EXIT_CODE: 0
+
+COMMAND: git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+EXIT_CODE: 0
+
+COMMAND: git pull --ff-only
+Updating d4ad141..7344c49
+Fast-forward
+ docs/backlog/README.md                             |   1 +
+ docs/sprints/README.md                             |   1 +
+ docs/sprints/S15/README.md                         |  52 +++
+ docs/sprints/S15/evidence/INDEX.md                 |  49 +++
+ docs/sprints/S15/evidence/at/10_at_s15.txt         |  48 +++
+ .../S15/evidence/at/AT-S15-01_receipt_schema.json  |  71 ++++
+ .../at/AT-S15-02_blocked_security_event.json       |  40 ++
+ .../S15/evidence/at/AT-S15-03_sync_gate.json       |  52 +++
+ .../S15/evidence/gates/20_precommit_all.txt        |  10 +
+ docs/sprints/S15/evidence/gates/21_npm_lint.txt    |   8 +
+ docs/sprints/S15/evidence/gates/22_npm_test.txt    | 165 +++++++++
+ docs/sprints/S15/evidence/gates/23_npm_build.txt   |  14 +
+ .../maintainability/04_touched_file_loc.txt        |  49 +++
+ .../maintainability/05_function_length_eval.txt    |   7 +
+ .../S15/evidence/maintainability/06_budget_eval.md |  25 ++
+ docs/sprints/S15/evidence/pr/01_pr_view_a.txt      |   4 +
+ .../S15/evidence/pr/01_pr_view_a.txt.stderr        |   0
+ .../S15/evidence/pr/01_pr_view_a.txt.stdout        |   1 +
+ docs/sprints/S15/evidence/pr/02_pr_threads_a.txt   |   3 +
+ .../S15/evidence/pr/02_pr_threads_a.txt.stderr     |  48 +++
+ .../S15/evidence/pr/02_pr_threads_a.txt.stdout     |   0
+ .../sprints/S15/evidence/pr/03_pr_checks_watch.txt |  10 +
+ .../S15/evidence/pr/03_pr_checks_watch.txt.stderr  |   0
+ .../S15/evidence/pr/03_pr_checks_watch.txt.stdout  |  12 +
+ .../S15/evidence/pr/04_pr_view_after_watch.txt     |   4 +
+ .../evidence/pr/04_pr_view_after_watch.txt.stderr  |   0
+ .../evidence/pr/04_pr_view_after_watch.txt.stdout  |   1 +
+ .../S15/evidence/pr/05_pr_threads_after_watch.txt  |   3 +
+ .../pr/05_pr_threads_after_watch.txt.stderr        |  48 +++
+ .../pr/05_pr_threads_after_watch.txt.stdout        |   0
+ docs/sprints/S15/evidence/pr/06_wait_190.txt       |   4 +
+ .../sprints/S15/evidence/pr/06_wait_190.txt.stderr |   0
+ .../sprints/S15/evidence/pr/06_wait_190.txt.stdout |   1 +
+ docs/sprints/S15/evidence/pr/07_pr_view_b.txt      |   4 +
+ .../S15/evidence/pr/07_pr_view_b.txt.stderr        |   0
+ .../S15/evidence/pr/07_pr_view_b.txt.stdout        |   1 +
+ docs/sprints/S15/evidence/pr/08_pr_threads_b.txt   |   3 +
+ .../S15/evidence/pr/08_pr_threads_b.txt.stderr     |  48 +++
+ .../S15/evidence/pr/08_pr_threads_b.txt.stdout     |   0
+ .../S15/evidence/pr/09_branch_revlist_sync.txt     |   4 +
+ .../evidence/pr/09_branch_revlist_sync.txt.stderr  |   0
+ .../evidence/pr/09_branch_revlist_sync.txt.stdout  |   1 +
+ docs/sprints/S15/evidence/pr/10_stability_eval.txt |   6 +
+ .../S15/evidence/pr/11_threads_before_resolve.txt  |   3 +
+ .../S15/evidence/pr/12_pr_comment_resolution.txt   |   4 +
+ .../S15/evidence/pr/13_resolve_thread_1.txt        |   3 +
+ .../S15/evidence/pr/14_resolve_thread_2.txt        |   3 +
+ .../S15/evidence/pr/15_threads_after_resolve.txt   |   3 +
+ .../sprints/S15/evidence/pr/20_pr_view_green_a.txt |   4 +
+ .../sprints/S15/evidence/pr/21_threads_green_a.txt |   3 +
+ docs/sprints/S15/evidence/pr/22_checks_green_a.txt |  10 +
+ docs/sprints/S15/evidence/pr/23_wait_190_final.txt |   4 +
+ .../sprints/S15/evidence/pr/24_pr_view_green_b.txt |   4 +
+ .../sprints/S15/evidence/pr/25_threads_green_b.txt |   3 +
+ docs/sprints/S15/evidence/pr/26_checks_green_b.txt |  10 +
+ .../S15/evidence/pr/27_revlist_sync_final.txt      |   4 +
+ .../S15/evidence/pr/28_stability_eval_final.txt    |   6 +
+ .../S15/evidence/pr/29_ff_sync_after_precommit.txt |   8 +
+ .../sprints/S15/evidence/pr/30_pr_view_final_a.txt |   4 +
+ .../sprints/S15/evidence/pr/31_threads_final_a.txt |   3 +
+ docs/sprints/S15/evidence/pr/32_checks_final_a.txt |   9 +
+ .../S15/evidence/pr/33_wait_190_final_head.txt     |   4 +
+ .../sprints/S15/evidence/pr/34_pr_view_final_b.txt |   4 +
+ .../sprints/S15/evidence/pr/35_threads_final_b.txt |   3 +
+ docs/sprints/S15/evidence/pr/36_checks_final_b.txt |   9 +
+ .../evidence/pr/37_stability_eval_final_head.txt   |   7 +
+ .../pr/38_ff_sync_after_precommit_second.txt       |  13 +
+ .../sprints/S15/evidence/pr/40_pr_view_ultra_a.txt |   4 +
+ .../sprints/S15/evidence/pr/41_threads_ultra_a.txt |   2 +
+ docs/sprints/S15/evidence/pr/42_checks_ultra_a.txt |  10 +
+ docs/sprints/S15/evidence/pr/43_wait_190_ultra.txt |   4 +
+ .../sprints/S15/evidence/pr/44_pr_view_ultra_b.txt |   4 +
+ .../sprints/S15/evidence/pr/45_threads_ultra_b.txt |   2 +
+ docs/sprints/S15/evidence/pr/46_checks_ultra_b.txt |  10 +
+ .../S15/evidence/pr/47_stability_eval_ultra.txt    |   8 +
+ .../evidence/preflight/00_status_before_stash.txt  |  13 +
+ .../S15/evidence/preflight/01_stash_push.txt       |   7 +
+ .../S15/evidence/preflight/02_checkout_main.txt    |   8 +
+ docs/sprints/S15/evidence/preflight/03_pwd.txt     |   7 +
+ .../evidence/preflight/04_echo_promptops_repo.txt  |   7 +
+ .../S15/evidence/preflight/05_show_toplevel.txt    |   7 +
+ .../S15/evidence/preflight/06_worktree_list.txt    |  10 +
+ .../S15/evidence/preflight/07_status_main.txt      |   7 +
+ docs/sprints/S15/evidence/preflight/08_fetch.txt   |   6 +
+ .../preflight/09_revlist_head_origin_main.txt      |   7 +
+ docs/sprints/S15/evidence/preflight/10_branch.txt  |   7 +
+ docs/sprints/S15/evidence/preflight/11_log5.txt    |  11 +
+ .../S15/evidence/preflight/12_prune_dry_run.txt    |  81 ++++
+ .../S15/evidence/preflight/13_fsck_no_reflogs.txt  |  19 +
+ .../evidence/preflight/14_open_pr_inventory.txt    |   6 +
+ .../S15/evidence/preflight/15_checkout_sprint.txt  |   8 +
+ .../S15/evidence/preflight/16_stash_pop.txt        |  24 ++
+ .../S15/evidence/preflight/17_status_restored.txt  |  13 +
+ .../S15/evidence/preflight/18_branch_sprint.txt    |   4 +
+ .../S15/evidence/scope/00_status_porcelain.txt     |   9 +
+ docs/sprints/S15/evidence/scope/01_diff_names.txt  |   9 +
+ .../S15/evidence/scope/02_whitelist_eval.txt       |   3 +
+ .../S15/evidence/scope/03_numstat_budget_eval.txt  |  11 +
+ .../S15/evidence/stoplight/01_marker_list.txt      |  16 +
+ .../S15/evidence/stoplight/02_html_marker_grep.txt |   6 +
+ .../stoplight/03_time_random_marker_grep.txt       |   6 +
+ .../evidence/stoplight/04_storage_marker_grep.txt  |   6 +
+ .../evidence/stoplight/05_hardpath_marker_grep.txt |   6 +
+ src/s10/operator_tools.ts                          |  29 ++
+ src/s15/terminal_panel.ts                          | 409 +++++++++++++++++++++
+ tests/s15/s15.test.ts                              | 249 +++++++++++++
+ 106 files changed, 1981 insertions(+)
+ create mode 100644 docs/sprints/S15/README.md
+ create mode 100644 docs/sprints/S15/evidence/INDEX.md
+ create mode 100644 docs/sprints/S15/evidence/at/10_at_s15.txt
+ create mode 100644 docs/sprints/S15/evidence/at/AT-S15-01_receipt_schema.json
+ create mode 100644 docs/sprints/S15/evidence/at/AT-S15-02_blocked_security_event.json
+ create mode 100644 docs/sprints/S15/evidence/at/AT-S15-03_sync_gate.json
+ create mode 100644 docs/sprints/S15/evidence/gates/20_precommit_all.txt
+ create mode 100644 docs/sprints/S15/evidence/gates/21_npm_lint.txt
+ create mode 100644 docs/sprints/S15/evidence/gates/22_npm_test.txt
+ create mode 100644 docs/sprints/S15/evidence/gates/23_npm_build.txt
+ create mode 100644 docs/sprints/S15/evidence/maintainability/04_touched_file_loc.txt
+ create mode 100644 docs/sprints/S15/evidence/maintainability/05_function_length_eval.txt
+ create mode 100644 docs/sprints/S15/evidence/maintainability/06_budget_eval.md
+ create mode 100644 docs/sprints/S15/evidence/pr/01_pr_view_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/01_pr_view_a.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/01_pr_view_a.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/02_pr_threads_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/02_pr_threads_a.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/02_pr_threads_a.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/03_pr_checks_watch.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/03_pr_checks_watch.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/03_pr_checks_watch.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/04_pr_view_after_watch.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/04_pr_view_after_watch.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/04_pr_view_after_watch.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/05_pr_threads_after_watch.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/05_pr_threads_after_watch.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/05_pr_threads_after_watch.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/06_wait_190.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/06_wait_190.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/06_wait_190.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/07_pr_view_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/07_pr_view_b.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/07_pr_view_b.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/08_pr_threads_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/08_pr_threads_b.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/08_pr_threads_b.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/09_branch_revlist_sync.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/09_branch_revlist_sync.txt.stderr
+ create mode 100644 docs/sprints/S15/evidence/pr/09_branch_revlist_sync.txt.stdout
+ create mode 100644 docs/sprints/S15/evidence/pr/10_stability_eval.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/11_threads_before_resolve.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/12_pr_comment_resolution.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/13_resolve_thread_1.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/14_resolve_thread_2.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/15_threads_after_resolve.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/20_pr_view_green_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/21_threads_green_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/22_checks_green_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/23_wait_190_final.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/24_pr_view_green_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/25_threads_green_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/26_checks_green_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/27_revlist_sync_final.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/28_stability_eval_final.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/29_ff_sync_after_precommit.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/30_pr_view_final_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/31_threads_final_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/32_checks_final_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/33_wait_190_final_head.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/34_pr_view_final_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/35_threads_final_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/36_checks_final_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/37_stability_eval_final_head.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/38_ff_sync_after_precommit_second.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/40_pr_view_ultra_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/41_threads_ultra_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/42_checks_ultra_a.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/43_wait_190_ultra.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/44_pr_view_ultra_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/45_threads_ultra_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/46_checks_ultra_b.txt
+ create mode 100644 docs/sprints/S15/evidence/pr/47_stability_eval_ultra.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/00_status_before_stash.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/01_stash_push.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/02_checkout_main.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/03_pwd.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/04_echo_promptops_repo.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/05_show_toplevel.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/06_worktree_list.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/07_status_main.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/08_fetch.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/09_revlist_head_origin_main.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/10_branch.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/11_log5.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/12_prune_dry_run.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/13_fsck_no_reflogs.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/14_open_pr_inventory.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/15_checkout_sprint.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/16_stash_pop.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/17_status_restored.txt
+ create mode 100644 docs/sprints/S15/evidence/preflight/18_branch_sprint.txt
+ create mode 100644 docs/sprints/S15/evidence/scope/00_status_porcelain.txt
+ create mode 100644 docs/sprints/S15/evidence/scope/01_diff_names.txt
+ create mode 100644 docs/sprints/S15/evidence/scope/02_whitelist_eval.txt
+ create mode 100644 docs/sprints/S15/evidence/scope/03_numstat_budget_eval.txt
+ create mode 100644 docs/sprints/S15/evidence/stoplight/01_marker_list.txt
+ create mode 100644 docs/sprints/S15/evidence/stoplight/02_html_marker_grep.txt
+ create mode 100644 docs/sprints/S15/evidence/stoplight/03_time_random_marker_grep.txt
+ create mode 100644 docs/sprints/S15/evidence/stoplight/04_storage_marker_grep.txt
+ create mode 100644 docs/sprints/S15/evidence/stoplight/05_hardpath_marker_grep.txt
+ create mode 100644 src/s15/terminal_panel.ts
+ create mode 100644 tests/s15/s15.test.ts
+EXIT_CODE: 0
+
+COMMAND: git status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE: 0
+
+COMMAND: git log --oneline -5
+7344c49 [S15] devx : terminal panel (#22)
+d4ad141 [S14] ux : jarvis mode (#21)
+3b9f3eb [S13] ux : design system v1 (#20)
+4d3cffd [S12] perf : health & drift detection (#19)
+b48a491 docs(s17): refresh postcheck command stream
+EXIT_CODE: 0
+
+COMMAND: git rev-list --left-right --count HEAD...origin/main
+0	0
+EXIT_CODE: 0

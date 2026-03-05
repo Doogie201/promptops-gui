@@ -1,0 +1,7 @@
+RUN_TS=20260305_094027
+REPO=Doogie201/promptops-gui
+PR=22
+EXPECTED_HEAD=sprint/S15-terminal-panel
+EXPECTED_BASE=main
+PROMPTOPS_REPO=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+PWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
