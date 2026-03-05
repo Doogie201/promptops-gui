@@ -15,7 +15,7 @@ Please do **not** open public issues for security-sensitive findings.
 
 Use one of these channels:
 
-1. GitHub Security Advisories (preferred):  
+1. GitHub Security Advisories (preferred):
    https://github.com/Doogie201/promptops-gui/security/advisories/new
 2. If advisories are unavailable, open a private contact request through repository maintainers and include:
    - vulnerability summary,
