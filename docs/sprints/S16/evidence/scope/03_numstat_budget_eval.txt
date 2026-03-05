@@ -1,0 +1,5 @@
+CMD: git diff --numstat
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+1	0	docs/backlog/README.md
+1	0	docs/sprints/README.md
+EXIT_CODE: 0

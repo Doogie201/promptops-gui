@@ -1,0 +1,4 @@
+CMD: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+## main...origin/main
+EXIT_CODE: 0

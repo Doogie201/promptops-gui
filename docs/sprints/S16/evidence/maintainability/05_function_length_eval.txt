@@ -1,0 +1,16 @@
+CMD: function length heuristic per file
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+src/s16/hardening.ts:export function buildGoldenFixture(input: GoldenRunArtifacts): GoldenFixture { lines=17
+src/s16/hardening.ts:export function compareGoldenReplay(expected: GoldenFixture, replay: GoldenRunArtifacts): ReplayComparison { lines=13
+src/s16/hardening.ts:export function evaluateLongRunStability(samples: LongRunSample[], budget: LongRunBudget): LongRunEvaluation { lines=33
+src/s16/hardening.ts:export function evaluateAdapterResilience( lines=49
+src/s16/hardening.ts:export function recoveryActionSpecs(actionId: RecoveryActionId): CommandSpec[] { lines=8
+src/s16/hardening.ts:export function runRecoveryAction(options: ToolOptions, actionId: RecoveryActionId, runner?: CommandRunner): RecoveryActionResult { lines=29
+src/s16/hardening.ts:function canonicalGoldenPayload(input: GoldenRunArtifacts): Record<string, unknown> { lines=11
+tests/s16/s16.test.ts:function signature(command: string, args: string[]): string { lines=4
+tests/s16/s16.test.ts:function createRunner(map: Record<string, MockResponse>, invoked: string[]): CommandRunner { lines=17
+tests/s16/s16.test.ts:function response(stdout: string, exitCode = 0, stderr = ''): MockResponse { lines=4
+tests/s16/s16.test.ts:function writeJson(target: string, payload: unknown): void { lines=5
+tests/s16/s16.test.ts:function ensureDir(target: string): void { lines=4
+tests/s16/s16.test.ts:function resetDir(target: string): void { lines=10
+EXIT_CODE: 0

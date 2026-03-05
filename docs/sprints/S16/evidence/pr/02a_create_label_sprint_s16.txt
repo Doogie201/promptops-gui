@@ -1,0 +1,3 @@
+CMD: gh label create sprint:S16 --repo Doogie201/promptops-gui --color 0969DA --description Sprint S16
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0

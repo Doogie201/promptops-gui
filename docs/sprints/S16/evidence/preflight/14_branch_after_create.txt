@@ -1,0 +1,4 @@
+CMD: git rev-parse --abbrev-ref HEAD
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+sprint/S16-hardening-regression
+EXIT_CODE: 0

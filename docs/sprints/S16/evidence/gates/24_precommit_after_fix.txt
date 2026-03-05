@@ -1,0 +1,22 @@
+CMD: pre-commit run --all-files
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+check yaml...............................................................Passed
+check json...............................................................Failed
+- hook id: check-json
+- exit code: 1
+
+docs/sprints/S16/evidence/pr/16_threads_b.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/03_pr_view_initial.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/23_threads_graphql.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/04_pr_threads_initial.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/11_threads_a.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/10_pr_view_a.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/15_pr_view_b.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+docs/sprints/S16/evidence/pr/02d_labels_after.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+
+check for case conflicts.................................................Passed
+mixed line ending........................................................Passed
+Operator Gates (Build/Test/Lint/Stoplight)...............................Passed
+EXIT_CODE: 1

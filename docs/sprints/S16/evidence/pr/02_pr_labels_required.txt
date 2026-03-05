@@ -1,0 +1,4 @@
+CMD: gh pr edit 26 --repo Doogie201/promptops-gui --add-label sprint:S16 --add-label area:cert --add-label type:perf --add-label risk:high --add-label evidence:required
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+GraphQL: Projects (classic) is being deprecated in favor of the new Projects experience, see: https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/. (repository.pullRequest.projectCards)
+EXIT_CODE: 1

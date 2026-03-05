@@ -1,0 +1,5 @@
+CMD: rg -n Date\.now\(|Math\.random\( src || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+src/s07/open_pr_protocol.test.ts:50:    stagingRoot: `/tmp/promptops/S07/tests/${process.pid}/${Math.random().toString(16).slice(2)}`,
+src/s14/narration.ts:5: * output for the same inputs. No Date.now(), no Math.random(), no env variance.
+EXIT_CODE: 0

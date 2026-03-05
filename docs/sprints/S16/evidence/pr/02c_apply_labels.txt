@@ -1,0 +1,4 @@
+CMD: gh issue edit 26 --repo Doogie201/promptops-gui --add-label sprint:S16 --add-label area:cert --add-label type:perf --add-label risk:high --add-label evidence:required --add-label evidence:attached
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+https://github.com/Doogie201/promptops-gui/pull/26
+EXIT_CODE: 0

@@ -1,0 +1,37 @@
+{
+  "command": "gh api graphql thread+comment query",
+  "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "exit_code": 0,
+  "payload": {
+    "data": {
+      "repository": {
+        "pullRequest": {
+          "reviewThreads": {
+            "nodes": [
+              {
+                "id": "PRRT_kwDORZ8p_M5yZHxX",
+                "isResolved": false,
+                "comments": {
+                  "nodes": [
+                    {
+                      "author": {
+                        "login": "chatgpt-codex-connector"
+                      },
+                      "bodyText": "Record retries only when another attempt will run\nIn evaluateAdapterResilience, the retry delay is appended before checking switchAfterFailures, so a terminal failure that immediately triggers SWITCH_AGENT still records an extra backoff entry (e.g. [0, 50, 150] for 3 failures even though no 4th attempt happens). This makes retry telemetry and replay evidence inaccurate in switch-on-threshold scenarios, which can skew hardening/regression conclusions.\nUseful? React with 👍 / 👎.",
+                      "url": "https://github.com/Doogie201/promptops-gui/pull/26#discussion_r2891341694",
+                      "createdAt": "2026-03-05T17:33:58Z"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "comments": {
+            "nodes": []
+          }
+        }
+      }
+    }
+  },
+  "raw_payload": "{\"data\":{\"repository\":{\"pullRequest\":{\"reviewThreads\":{\"nodes\":[{\"id\":\"PRRT_kwDORZ8p_M5yZHxX\",\"isResolved\":false,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"bodyText\":\"Record retries only when another attempt will run\\nIn evaluateAdapterResilience, the retry delay is appended before checking switchAfterFailures, so a terminal failure that immediately triggers SWITCH_AGENT still records an extra backoff entry (e.g. [0, 50, 150] for 3 failures even though no 4th attempt happens). This makes retry telemetry and replay evidence inaccurate in switch-on-threshold scenarios, which can skew hardening/regression conclusions.\\nUseful? React with 👍 / 👎.\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/26#discussion_r2891341694\",\"createdAt\":\"2026-03-05T17:33:58Z\"}]}}]},\"comments\":{\"nodes\":[]}}}}}"
+}

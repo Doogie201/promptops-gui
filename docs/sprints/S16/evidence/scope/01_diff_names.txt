@@ -1,0 +1,46 @@
+CMD: git diff --name-only; git ls-files --others --exclude-standard
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/backlog/README.md
+docs/sprints/README.md
+docs/sprints/S16/README.md
+docs/sprints/S16/evidence/INDEX.md
+docs/sprints/S16/evidence/at/10_at_s16_all.txt
+docs/sprints/S16/evidence/at/AT-S16-01_fixture_hashes.json
+docs/sprints/S16/evidence/at/AT-S16-02_stability_adapter_eval.json
+docs/sprints/S16/evidence/at/AT-S16-03_recovery_receipts.json
+docs/sprints/S16/evidence/gates/20_precommit_all.txt
+docs/sprints/S16/evidence/gates/21_npm_lint.txt
+docs/sprints/S16/evidence/gates/22_npm_test.txt
+docs/sprints/S16/evidence/gates/23_npm_build.txt
+docs/sprints/S16/evidence/hardening/AT-S16-02_stability_adapter_eval.json
+docs/sprints/S16/evidence/hardening/AT-S16-03_recovery_receipts.json
+docs/sprints/S16/evidence/maintainability/04_touched_file_loc.txt
+docs/sprints/S16/evidence/maintainability/05_function_length_eval.txt
+docs/sprints/S16/evidence/maintainability/06_budget_eval.md
+docs/sprints/S16/evidence/preflight/00_pwd.txt
+docs/sprints/S16/evidence/preflight/01_echo_promptops_repo.txt
+docs/sprints/S16/evidence/preflight/02_show_toplevel.txt
+docs/sprints/S16/evidence/preflight/03_worktree_list.txt
+docs/sprints/S16/evidence/preflight/04_status_branch.txt
+docs/sprints/S16/evidence/preflight/05_fetch.txt
+docs/sprints/S16/evidence/preflight/06_revlist_head_origin_main.txt
+docs/sprints/S16/evidence/preflight/07_branch.txt
+docs/sprints/S16/evidence/preflight/08_log5.txt
+docs/sprints/S16/evidence/preflight/09_prune_dry_run.txt
+docs/sprints/S16/evidence/preflight/10_fsck_no_reflogs.txt
+docs/sprints/S16/evidence/preflight/11_open_pr_inventory.txt
+docs/sprints/S16/evidence/preflight/12_checkout_branch.txt
+docs/sprints/S16/evidence/preflight/13_push_branch.txt
+docs/sprints/S16/evidence/preflight/14_branch_after_create.txt
+docs/sprints/S16/evidence/regression/AT-S16-01_fixture_hashes.json
+docs/sprints/S16/evidence/scope/01_diff_names.txt
+docs/sprints/S16/evidence/scope/02_whitelist_eval.txt
+docs/sprints/S16/evidence/scope/03_numstat_budget_eval.txt
+docs/sprints/S16/evidence/stoplight/01_marker_list.txt
+docs/sprints/S16/evidence/stoplight/02_html_marker_grep.txt
+docs/sprints/S16/evidence/stoplight/03_time_random_marker_grep.txt
+docs/sprints/S16/evidence/stoplight/04_storage_marker_grep.txt
+docs/sprints/S16/evidence/stoplight/05_hardpath_marker_grep.txt
+src/s16/hardening.ts
+tests/s16/s16.test.ts
+EXIT_CODE: 0

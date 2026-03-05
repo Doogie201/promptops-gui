@@ -1,0 +1,8 @@
+CMD: npm run lint
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+
+> promptops-gui@1.0.0 lint
+> bash scripts/verify.sh lint
+
+[verify] lint
+EXIT_CODE: 0

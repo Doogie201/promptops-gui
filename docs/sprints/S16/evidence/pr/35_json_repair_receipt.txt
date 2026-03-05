@@ -1,0 +1,21 @@
+CMD: node /tmp/promptops/S16/fix_pr_json_receipts.js
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+Transformed files to valid JSON wrapper objects:
+- docs/sprints/S16/evidence/pr/02d_labels_after.json
+- docs/sprints/S16/evidence/pr/03_pr_view_initial.json
+- docs/sprints/S16/evidence/pr/04_pr_threads_initial.json
+- docs/sprints/S16/evidence/pr/10_pr_view_a.json
+- docs/sprints/S16/evidence/pr/11_threads_a.json
+- docs/sprints/S16/evidence/pr/15_pr_view_b.json
+- docs/sprints/S16/evidence/pr/16_threads_b.json
+- docs/sprints/S16/evidence/pr/23_threads_graphql.json
+Validation:
+VALID:docs/sprints/S16/evidence/pr/02d_labels_after.json
+VALID:docs/sprints/S16/evidence/pr/03_pr_view_initial.json
+VALID:docs/sprints/S16/evidence/pr/04_pr_threads_initial.json
+VALID:docs/sprints/S16/evidence/pr/10_pr_view_a.json
+VALID:docs/sprints/S16/evidence/pr/11_threads_a.json
+VALID:docs/sprints/S16/evidence/pr/15_pr_view_b.json
+VALID:docs/sprints/S16/evidence/pr/16_threads_b.json
+VALID:docs/sprints/S16/evidence/pr/23_threads_graphql.json
+EXIT_CODE: 0

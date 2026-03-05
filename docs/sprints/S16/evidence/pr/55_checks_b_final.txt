@@ -1,0 +1,4 @@
+CMD: gh pr checks 26 --repo Doogie201/promptops-gui
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772732554.SZUcUYcxQkSSfO7YH_YjDA	checks completed successfully
+EXIT_CODE: 0
