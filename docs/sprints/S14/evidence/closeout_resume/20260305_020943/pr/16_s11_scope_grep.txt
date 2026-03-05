@@ -1,0 +1,4 @@
+CMD: git diff --name-only origin/main...origin/sprint/S14-jarvis-mode | grep '^docs/sprints/S11/' || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

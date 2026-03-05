@@ -1,0 +1,50 @@
+[
+  {
+    "cmd": "",
+    "cwd": "",
+    "exit_code": null,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/01_pr_view_before.json"
+  },
+  {
+    "cmd": "",
+    "cwd": "",
+    "exit_code": null,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/13_pr_view_after.json"
+  },
+  {
+    "cmd": "gh api graphql -f query='mutation($threadId:ID!){ resolveReviewThread(input:{threadId:$threadId}){ thread { id isResolved } } }' -F threadId=PRRT_kwDORZ8p_M5yP3Oc",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "exit_code": 0,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/22_resolve_thread_PRRT_kwDORZ8p_M5yP3Oc.json"
+  },
+  {
+    "cmd": "gh api graphql -f query='mutation($threadId:ID!){ resolveReviewThread(input:{threadId:$threadId}){ thread { id isResolved } } }' -F threadId=PRRT_kwDORZ8p_M5yP3Oj",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "exit_code": 0,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/23_resolve_thread_PRRT_kwDORZ8p_M5yP3Oj.json"
+  },
+  {
+    "cmd": "gh pr view 21 --repo Doogie201/promptops-gui --json number,title,state,mergeable,mergeStateStatus,reviewDecision,headRefName,headRefOid,baseRefName,statusCheckRollup,labels,url",
+    "cwd": "",
+    "exit_code": 0,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/26_pr_view_snapshot_a.json"
+  },
+  {
+    "cmd": "gh api graphql reviewThreads",
+    "cwd": "",
+    "exit_code": 0,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/28_threads_snapshot_a.json"
+  },
+  {
+    "cmd": "gh pr view 21 --repo Doogie201/promptops-gui --json number,title,state,mergeable,mergeStateStatus,reviewDecision,headRefName,headRefOid,baseRefName,statusCheckRollup,labels,url",
+    "cwd": "",
+    "exit_code": 0,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/32_pr_view_snapshot_b.json"
+  },
+  {
+    "cmd": "gh api graphql reviewThreads",
+    "cwd": "",
+    "exit_code": 0,
+    "file": "docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/34_threads_snapshot_b.json"
+  }
+]

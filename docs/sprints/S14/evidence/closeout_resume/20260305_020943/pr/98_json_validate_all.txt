@@ -1,0 +1,9 @@
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/01_pr_view_before.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/13_pr_view_after.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/22_resolve_thread_PRRT_kwDORZ8p_M5yP3Oc.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/23_resolve_thread_PRRT_kwDORZ8p_M5yP3Oj.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/26_pr_view_snapshot_a.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/28_threads_snapshot_a.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/32_pr_view_snapshot_b.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/34_threads_snapshot_b.json
+VALID_JSON docs/sprints/S14/evidence/closeout_resume/20260305_020943/pr/99_json_normalization_metadata.json

@@ -1,0 +1,5 @@
+CMD: git rev-list --left-right --count HEAD...origin/sprint/S14-jarvis-mode
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+0	1
+--- STDERR ---
+EXIT_CODE: 0

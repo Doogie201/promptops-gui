@@ -1,0 +1,8 @@
+$ gh pr checks 21 --repo Doogie201/promptops-gui
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/21	
+coverage	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753307/job/65835213958	
+coverage	pass	18s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753887/job/65835215381	
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772694925.XCN06kvPSxikKiqZ4kcB2g	checks completed successfully
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753299/job/65835213908	
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22706753840/job/65835215283	
+EXIT_CODE=0

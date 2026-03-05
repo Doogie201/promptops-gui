@@ -1,0 +1,5 @@
+CMD: gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url,headRefName,baseRefName
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+[{"baseRefName":"main","headRefName":"sprint/S14-jarvis-mode","number":21,"title":"[S14] ux : jarvis mode","url":"https://github.com/Doogie201/promptops-gui/pull/21"}]
+--- STDERR ---
+EXIT_CODE: 0
