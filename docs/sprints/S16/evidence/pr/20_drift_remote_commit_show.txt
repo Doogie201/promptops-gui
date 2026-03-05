@@ -5,7 +5,7 @@ Author: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com
 Date:   Thu Mar 5 17:29:33 2026 +0000
 
     [pre-commit.ci] auto fixes from pre-commit.com hooks
-    
+
     for more information, see https://pre-commit.ci
 
 M	docs/sprints/S16/evidence/preflight/13_push_branch.txt
