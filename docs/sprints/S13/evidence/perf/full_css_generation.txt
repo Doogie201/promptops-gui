@@ -1,0 +1,7 @@
+=== AT-S13-03: Full CSS Generation Perf ===
+
+Iterations: 5000
+Elapsed: 38.6ms
+Budget: 1000ms
+Per-iteration: 0.008ms
+Result: PASS

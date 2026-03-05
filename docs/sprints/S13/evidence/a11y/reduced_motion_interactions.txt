@@ -1,0 +1,6 @@
+=== AT-S13-01: Interaction Reduced Motion Behavior ===
+
+button-hover: instant → PASS
+button-press: instant → PASS
+panel-enter: skip → PASS
+panel-exit: skip → PASS

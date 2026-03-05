@@ -12,3 +12,4 @@
 - [S10 - GUI Operator Tools v1](./S10/README.md)
 - [S11 - Template Lifecycle Manager](./S11/README.md)
 - [S12 - Health & Drift Detection](./S12/README.md)
+- [S13 - Design System v1](./S13/README.md)

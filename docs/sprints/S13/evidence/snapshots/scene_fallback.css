@@ -1,0 +1,23 @@
+.ds-scene-container {
+  position: relative;
+  overflow: hidden;
+  background: var(--ds-surface-primary);
+}
+
+.ds-scene-fallback {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    var(--ds-accent-muted) 0%,
+    transparent 70%
+  );
+  opacity: var(--ds-glow-intensity, 0.2);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-scene-fallback {
+    opacity: 0.1;
+  }
+}

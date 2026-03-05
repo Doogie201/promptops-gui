@@ -1,0 +1,5 @@
+=== AT-S13-01: Scene Layer Reduced Motion ===
+
+Reduced motion detected: PASS
+Fallback active: PASS
+CSS respects prefers-reduced-motion: PASS

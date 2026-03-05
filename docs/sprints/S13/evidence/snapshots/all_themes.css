@@ -1,0 +1,65 @@
+:root[data-theme="operator"] {
+  --ds-accent: #00e5ff;
+  --ds-accent-muted: rgba(0, 229, 255, 0.25);
+  --ds-glow: rgba(0, 229, 255, 0.35);
+  --ds-glow-intensity: 0.35;
+  --ds-elevation-low: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --ds-elevation-mid: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --ds-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.7);
+  --ds-blur: 12px;
+  --ds-surface-primary: #0a0e14;
+  --ds-surface-secondary: #111820;
+  --ds-surface-tertiary: #1a2230;
+  --ds-text-primary: #e6edf3;
+  --ds-text-secondary: #8b949e;
+  --ds-text-muted: #484f58;
+  --ds-border: rgba(255, 255, 255, 0.08);
+  --ds-border-focus: #00e5ff;
+  --ds-danger: #ff4d6a;
+  --ds-success: #3fb950;
+  --ds-warning: #d29922;
+}
+
+:root[data-theme="stealth"] {
+  --ds-accent: #7c3aed;
+  --ds-accent-muted: rgba(124, 58, 237, 0.25);
+  --ds-glow: rgba(124, 58, 237, 0.3);
+  --ds-glow-intensity: 0.3;
+  --ds-elevation-low: 0 1px 3px rgba(0, 0, 0, 0.7);
+  --ds-elevation-mid: 0 4px 12px rgba(0, 0, 0, 0.8);
+  --ds-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.9);
+  --ds-blur: 16px;
+  --ds-surface-primary: #05050a;
+  --ds-surface-secondary: #0c0c14;
+  --ds-surface-tertiary: #14141e;
+  --ds-text-primary: #c8cdd3;
+  --ds-text-secondary: #6e7681;
+  --ds-text-muted: #3a3f47;
+  --ds-border: rgba(255, 255, 255, 0.05);
+  --ds-border-focus: #7c3aed;
+  --ds-danger: #e5534b;
+  --ds-success: #2ea043;
+  --ds-warning: #bb8009;
+}
+
+:root[data-theme="daylight"] {
+  --ds-accent: #0969da;
+  --ds-accent-muted: rgba(9, 105, 218, 0.15);
+  --ds-glow: rgba(9, 105, 218, 0.2);
+  --ds-glow-intensity: 0.2;
+  --ds-elevation-low: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --ds-elevation-mid: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --ds-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --ds-blur: 8px;
+  --ds-surface-primary: #ffffff;
+  --ds-surface-secondary: #f6f8fa;
+  --ds-surface-tertiary: #eaeef2;
+  --ds-text-primary: #1f2328;
+  --ds-text-secondary: #656d76;
+  --ds-text-muted: #8c959f;
+  --ds-border: rgba(0, 0, 0, 0.1);
+  --ds-border-focus: #0969da;
+  --ds-danger: #cf222e;
+  --ds-success: #1a7f37;
+  --ds-warning: #9a6700;
+}

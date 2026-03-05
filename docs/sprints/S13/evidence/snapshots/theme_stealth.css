@@ -1,0 +1,21 @@
+:root[data-theme="stealth"] {
+  --ds-accent: #7c3aed;
+  --ds-accent-muted: rgba(124, 58, 237, 0.25);
+  --ds-glow: rgba(124, 58, 237, 0.3);
+  --ds-glow-intensity: 0.3;
+  --ds-elevation-low: 0 1px 3px rgba(0, 0, 0, 0.7);
+  --ds-elevation-mid: 0 4px 12px rgba(0, 0, 0, 0.8);
+  --ds-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.9);
+  --ds-blur: 16px;
+  --ds-surface-primary: #05050a;
+  --ds-surface-secondary: #0c0c14;
+  --ds-surface-tertiary: #14141e;
+  --ds-text-primary: #c8cdd3;
+  --ds-text-secondary: #6e7681;
+  --ds-text-muted: #3a3f47;
+  --ds-border: rgba(255, 255, 255, 0.05);
+  --ds-border-focus: #7c3aed;
+  --ds-danger: #e5534b;
+  --ds-success: #2ea043;
+  --ds-warning: #bb8009;
+}

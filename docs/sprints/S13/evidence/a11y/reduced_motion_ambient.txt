@@ -1,0 +1,4 @@
+=== AT-S13-01: Ambient Animation Reduced Motion ===
+
+Phase stays idle under reduced motion: PASS
+Keyframes CSS includes animation:none under reduced motion: PASS

@@ -1,0 +1,18 @@
+=== AT-S13-02: Visual Regression Snapshot Index ===
+
+Generated: 2026-03-05T06:15:53.244Z
+
+Theme snapshots (deterministic CSS text comparison):
+  theme_operator.css  (685 bytes)
+  theme_stealth.css   (684 bytes)
+  theme_daylight.css  (678 bytes)
+  all_themes.css      (2051 bytes)
+
+Motion/Lighting snapshots:
+  motion_tokens.css     (610 bytes)
+  lighting_tokens.css   (935 bytes)
+  ambient_keyframes.css (425 bytes)
+  scene_fallback.css    (431 bytes)
+
+Determinism verified: each theme generated twice, byte-identical: PASS
+Theme distinctness verified: all 3 themes produce different CSS: PASS

@@ -1,0 +1,19 @@
+:root {
+  --ds-shadow-flat: none;
+  --ds-shadow-subtle: 0px 1px 2px 0px rgba(0,0,0, 0.05);
+  --ds-shadow-elevated: 0px 2px 4px 0px rgba(0,0,0, 0.1), 0px 8px 16px 0px rgba(0,0,0, 0.15);
+  --ds-shadow-floating: 0px 4px 8px 0px rgba(0,0,0, 0.12), 0px 12px 24px 0px rgba(0,0,0, 0.18), 0px 0px 48px 0px rgba(0,0,0, 0.08);
+}
+
+:root {
+  --ds-glow-accent: 0 0 20px 0px var(--ds-accent);
+  --ds-glow-accent-filter: drop-shadow(0 0 20px var(--ds-accent));
+  --ds-glow-success: 0 0 16px 0px var(--ds-success);
+  --ds-glow-success-filter: drop-shadow(0 0 16px var(--ds-success));
+  --ds-glow-danger: 0 0 24px 0px var(--ds-danger);
+  --ds-glow-danger-filter: drop-shadow(0 0 24px var(--ds-danger));
+  --ds-glow-warning: 0 0 12px 0px var(--ds-warning);
+  --ds-glow-warning-filter: drop-shadow(0 0 12px var(--ds-warning));
+  --ds-glow-muted: 0 0 8px 0px var(--ds-accent-muted);
+  --ds-glow-muted-filter: drop-shadow(0 0 8px var(--ds-accent-muted));
+}

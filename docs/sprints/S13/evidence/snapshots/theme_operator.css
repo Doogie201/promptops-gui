@@ -1,0 +1,21 @@
+:root[data-theme="operator"] {
+  --ds-accent: #00e5ff;
+  --ds-accent-muted: rgba(0, 229, 255, 0.25);
+  --ds-glow: rgba(0, 229, 255, 0.35);
+  --ds-glow-intensity: 0.35;
+  --ds-elevation-low: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --ds-elevation-mid: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --ds-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.7);
+  --ds-blur: 12px;
+  --ds-surface-primary: #0a0e14;
+  --ds-surface-secondary: #111820;
+  --ds-surface-tertiary: #1a2230;
+  --ds-text-primary: #e6edf3;
+  --ds-text-secondary: #8b949e;
+  --ds-text-muted: #484f58;
+  --ds-border: rgba(255, 255, 255, 0.08);
+  --ds-border-focus: #00e5ff;
+  --ds-danger: #ff4d6a;
+  --ds-success: #3fb950;
+  --ds-warning: #d29922;
+}

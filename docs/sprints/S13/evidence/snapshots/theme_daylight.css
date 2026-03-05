@@ -1,0 +1,21 @@
+:root[data-theme="daylight"] {
+  --ds-accent: #0969da;
+  --ds-accent-muted: rgba(9, 105, 218, 0.15);
+  --ds-glow: rgba(9, 105, 218, 0.2);
+  --ds-glow-intensity: 0.2;
+  --ds-elevation-low: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --ds-elevation-mid: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --ds-elevation-high: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --ds-blur: 8px;
+  --ds-surface-primary: #ffffff;
+  --ds-surface-secondary: #f6f8fa;
+  --ds-surface-tertiary: #eaeef2;
+  --ds-text-primary: #1f2328;
+  --ds-text-secondary: #656d76;
+  --ds-text-muted: #8c959f;
+  --ds-border: rgba(0, 0, 0, 0.1);
+  --ds-border-focus: #0969da;
+  --ds-danger: #cf222e;
+  --ds-success: #1a7f37;
+  --ds-warning: #9a6700;
+}
