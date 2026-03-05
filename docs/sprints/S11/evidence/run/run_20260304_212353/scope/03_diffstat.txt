@@ -1,0 +1,5 @@
+$ git diff --stat
+ docs/backlog/README.md | 1 +
+ docs/sprints/README.md | 1 +
+ 2 files changed, 2 insertions(+)
+EXIT_CODE=0

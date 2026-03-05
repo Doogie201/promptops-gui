@@ -1,0 +1,9 @@
+$ git push -u origin sprint/S11-template-lifecycle-manager
+remote: 
+remote: Create a pull request for 'sprint/S11-template-lifecycle-manager' on GitHub by visiting:        
+remote:      https://github.com/Doogie201/promptops-gui/pull/new/sprint/S11-template-lifecycle-manager        
+remote: 
+To https://github.com/Doogie201/promptops-gui.git
+ * [new branch]      sprint/S11-template-lifecycle-manager -> sprint/S11-template-lifecycle-manager
+branch 'sprint/S11-template-lifecycle-manager' set up to track 'origin/sprint/S11-template-lifecycle-manager'.
+EXIT_CODE=0

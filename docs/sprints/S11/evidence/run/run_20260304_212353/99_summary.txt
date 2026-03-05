@@ -1,0 +1,6 @@
+RUN_ROOT=/tmp/promptops/S11/run_20260304_212353
+STATUS=## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager
+S11_TEST_EXIT=EXIT_CODE=0
+BUILD_EXIT=EXIT_CODE=0
+TEST_ALL_EXIT=EXIT_CODE=0
+LINT_EXIT=EXIT_CODE=0

@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "old_idempotency_key": "a26ec56b479871f634377460ea7912168cf219cd5c824673bd093bd97b821e30",
+  "new_idempotency_key": "2964e5cf611b4003bac79f59779c75673c61c3b482ff2f0e2890ef22dcf042ec",
+  "continuity_packet_hash": "aad914643d259d201119eeb0e515d2768dbbb9509f294d7ec55f7cf14a7bf040",
+  "predicted_diff": [
+    "Sprint Metadata"
+  ]
+}

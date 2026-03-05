@@ -1,0 +1,6 @@
+$ git status --porcelain=v1
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+?? docs/sprints/S11/
+?? src/s11/
+EXIT_CODE=0

@@ -1,0 +1,3 @@
+$ bash -lc test "$(git rev-parse --show-toplevel)" = "$PROMPTOPS_REPO"; echo "TOPLEVEL_MATCH=$?"
+TOPLEVEL_MATCH=0
+EXIT_CODE=0

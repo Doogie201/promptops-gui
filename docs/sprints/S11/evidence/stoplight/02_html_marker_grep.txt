@@ -1,0 +1,2 @@
+$ rg -n "Unhandled Runtime Error|hydration failed|500 Internal Server Error|data-nextjs-dialog|__next_error__" src apps ui 2>/dev/null || true
+EXIT_CODE=0

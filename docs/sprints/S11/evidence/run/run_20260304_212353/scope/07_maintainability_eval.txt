@@ -1,0 +1,50 @@
+FILES= src/s11/template_lifecycle.ts,src/s11/s11.test.ts
+src/s11/template_lifecycle.ts LOC=1048 LOC_OK=True
+  fn canonicalJson lines=3 OK=True
+  fn sha256Hex lines=3 OK=True
+  fn templateHash lines=3 OK=True
+  fn createTemplateRegistry lines=31 OK=True
+  fn createDraftVersion lines=36 OK=True
+  fn validateTemplateContract lines=31 OK=True
+  fn requestProtectedOverride lines=17 OK=True
+  fn confirmProtectedOverride lines=29 OK=True
+  fn activateTemplateVersion lines=60 OK=True
+  fn rollbackToVersion lines=21 OK=True
+  fn pinNewRun lines=25 OK=True
+  fn compilePreview lines=29 OK=True
+  fn migratePinnedRun lines=72 OK=True
+  fn revertMigration lines=52 OK=True
+  fn ensurePinnedTemplateExists lines=23 OK=True
+  fn assessSettingsImpactOnPinnedTemplate lines=31 OK=True
+  fn exportRegistryCanonical lines=3 OK=True
+  fn importRegistryCanonical lines=22 OK=True
+  fn applySafeFormModeEdits lines=9 OK=True
+  fn parseAdvancedJsonMode lines=11 OK=True
+  fn blockedActivation lines=29 OK=True
+  fn evaluateProtectedDiff lines=39 OK=True
+  fn findProtectedValue lines=9 OK=True
+  fn sectionStrengthScore lines=12 OK=True
+  fn collectMissingSubKeys lines=10 OK=True
+  fn scanPlaceholders lines=38 OK=True
+  fn detectDeterminismViolations lines=13 OK=True
+  fn collectPlaceholders lines=12 OK=True
+  fn walkStringValues lines=15 OK=True
+  fn renderTemplate lines=20 OK=True
+  fn evaluateUnresolvedRequirements lines=13 OK=True
+  fn topLevelDiff lines=8 OK=True
+  fn buildIdempotencyKey lines=3 OK=True
+  fn buildContinuityPacket lines=26 OK=True
+  fn findVersion lines=3 OK=True
+  fn findVersionOrThrow lines=5 OK=True
+  fn makeEvent lines=9 OK=True
+  fn monotonicAt lines=3 OK=True
+  fn objectFrom lines=4 OK=True
+  fn hasOwn lines=3 OK=True
+  fn uniqueSorted lines=3 OK=True
+  fn canonicalize lines=11 OK=True
+src/s11/s11.test.ts LOC=316 LOC_OK=True
+  fn createTemplateFixture lines=30 OK=True
+  fn resetEvidence lines=6 OK=True
+  fn writeJson lines=4 OK=True
+  fn writeText lines=4 OK=True
+EXIT_CODE=0

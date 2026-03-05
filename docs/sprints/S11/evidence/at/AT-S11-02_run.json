@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "blocked_reason": "PROTECTED_OVERRIDE_REQUIRED",
+  "weakened_sections": [
+    "Hard Stops"
+  ],
+  "override_token": "98ddca816beaef49",
+  "activation_ok": true
+}

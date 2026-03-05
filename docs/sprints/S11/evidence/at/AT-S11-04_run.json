@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "rollback_activation_ok": true,
+  "pin_guard": {
+    "ok": true,
+    "code": "NONE",
+    "message": "Pinned template v1 exists."
+  },
+  "import_ok": true
+}

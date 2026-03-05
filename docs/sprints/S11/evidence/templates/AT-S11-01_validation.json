@@ -1,0 +1,214 @@
+{
+  "blocked": {
+    "ok": false,
+    "versionId": "v2",
+    "reasonCode": "ACTIVATION_BLOCKED",
+    "validation": {
+      "valid": false,
+      "missingTopLevelKeys": [
+        "Whitelist (allowed paths)"
+      ],
+      "missingSubKeys": [],
+      "placeholderScan": {
+        "all": [
+          "FORBIDDEN_PLACEHOLDER",
+          "SPRINT_ID",
+          "UNKNOWN_PLACEHOLDER"
+        ],
+        "globalBound": [],
+        "sprintBound": [
+          "SPRINT_ID"
+        ],
+        "forbidden": [
+          "FORBIDDEN_PLACEHOLDER"
+        ],
+        "unknown": [
+          "UNKNOWN_PLACEHOLDER"
+        ],
+        "missingGlobalBindings": []
+      },
+      "determinismViolations": [],
+      "protectedDiff": {
+        "weakenedSections": [],
+        "details": []
+      },
+      "blockers": [
+        "missing_top_level:Whitelist (allowed paths)",
+        "forbidden_placeholder:FORBIDDEN_PLACEHOLDER",
+        "unknown_placeholder:UNKNOWN_PLACEHOLDER"
+      ]
+    },
+    "registry": {
+      "versions": [
+        {
+          "versionId": "v1",
+          "lifecycleState": "active",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "Template objective for [[REPO_OWNER]]/[[REPO_NAME]]",
+              "Acceptance Tests": [
+                "AT-S11-01",
+                "AT-S11-02",
+                "AT-S11-03",
+                "AT-S11-04"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "no token leaks"
+              ],
+              "DETERMINISM": [
+                "single source of truth"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY must be enforced"
+              ],
+              "SCOPE": [
+                "smallest safe change set"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Whitelist (allowed paths)": [
+              "src/**",
+              "tests/**",
+              "docs/sprints/S11/**",
+              "/tmp/**"
+            ],
+            "Hard Stops": [
+              "HARD STOP: MISSING_REPO_ROOT",
+              "HARD STOP: GIT_OBJECT_INTEGRITY"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d",
+          "createdAt": 1000,
+          "author": "operator",
+          "note": "seed"
+        },
+        {
+          "versionId": "v2",
+          "lifecycleState": "draft",
+          "template": {
+            "Sprint Metadata": {
+              "Sprint ID": "[[SPRINT_ID]]",
+              "Objective (one sentence)": "[[UNKNOWN_PLACEHOLDER]]",
+              "Acceptance Tests": [
+                "AT-S11-01"
+              ]
+            },
+            "Non-negotiables": {
+              "SECURITY": [
+                "No leak [[FORBIDDEN_PLACEHOLDER]]"
+              ],
+              "DETERMINISM": [
+                "Stable"
+              ],
+              "TESTING_AND_VALIDATION": [
+                "REPO ROOT RESOLUTION POLICY required"
+              ],
+              "SCOPE": [
+                "minimal"
+              ]
+            },
+            "OPEN PR HANDLING PROTOCOL": {
+              "Step 0 — Inventory open PRs (evidence required)": {
+                "Run": [
+                  "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,url"
+                ]
+              }
+            },
+            "Mandatory Preflight": {
+              "Commands": [
+                "pwd",
+                "echo \"$PROMPTOPS_REPO\"",
+                "git rev-parse --show-toplevel"
+              ]
+            },
+            "Hard Stops": [
+              "HARD STOP: MISSING_REPO_ROOT",
+              "HARD STOP: GIT_OBJECT_INTEGRITY"
+            ],
+            "Evidence-First Output Contract": {
+              "You must produce exactly two sections.": true,
+              "SECTION 1 — MINIMAL EVIDENCE BUNDLE (single message)": [
+                "Sprint header",
+                "PASS/FAIL verdict"
+              ],
+              "SECTION 2 — APPENDIX (only if asked)": [
+                "Full logs"
+              ]
+            }
+          },
+          "contentHash": "890b83ef470816763a70bb6a654691df518742dacb7a4200b4864a477249a19b",
+          "createdAt": 1010,
+          "author": "operator",
+          "note": "invalid draft"
+        }
+      ],
+      "activeVersionId": "v1",
+      "runPins": {},
+      "sprintPins": {},
+      "events": [
+        {
+          "eventId": "version_created:1000:207cd489de",
+          "type": "version_created",
+          "at": 1000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "contentHash": "f89b216364d706657efaa6ed38e55699c0d7806111fffbd8e0804001dda20c5d"
+          }
+        },
+        {
+          "eventId": "version_activated:1000:900705f75e",
+          "type": "version_activated",
+          "at": 1000,
+          "actor": "operator",
+          "details": {
+            "versionId": "v1",
+            "reason": "initial"
+          }
+        },
+        {
+          "eventId": "version_created:1010:81670be708",
+          "type": "version_created",
+          "at": 1010,
+          "actor": "operator",
+          "details": {
+            "versionId": "v2",
+            "lifecycleState": "draft",
+            "contentHash": "890b83ef470816763a70bb6a654691df518742dacb7a4200b4864a477249a19b",
+            "note": "invalid draft"
+          }
+        }
+      ],
+      "pendingOverrides": {},
+      "confirmedOverrides": {},
+      "migrations": [],
+      "clock": 1010
+    }
+  }
+}

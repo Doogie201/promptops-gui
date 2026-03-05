@@ -1,0 +1,3 @@
+$ git pull --ff-only
+Already up to date.
+EXIT_CODE=0
