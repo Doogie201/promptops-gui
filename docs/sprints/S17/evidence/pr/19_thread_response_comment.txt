@@ -1,0 +1,3 @@
+CMD: gh pr comment 27 remediation note
+https://github.com/Doogie201/promptops-gui/pull/27#issuecomment-4008198578
+EXIT_CODE:0
