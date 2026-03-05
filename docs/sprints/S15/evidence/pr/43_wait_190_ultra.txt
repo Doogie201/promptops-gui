@@ -1,0 +1,4 @@
+COMMAND: sleep 190
+elapsed_seconds=190
+
+EXIT_CODE: 0

@@ -42,3 +42,8 @@
 - `pr/11_threads_before_resolve.txt`, `pr/15_threads_after_resolve.txt`
 - `pr/13_resolve_thread_1.txt`, `pr/14_resolve_thread_2.txt`
 - `pr/33_wait_190_final_head.txt`, `pr/37_stability_eval_final_head.txt`
+- `pr/38_ff_sync_after_precommit_second.txt` — second ff-only sync after bot advance.
+- `pr/40_pr_view_ultra_a.txt`, `pr/44_pr_view_ultra_b.txt`
+- `pr/41_threads_ultra_a.txt`, `pr/45_threads_ultra_b.txt`
+- `pr/42_checks_ultra_a.txt`, `pr/46_checks_ultra_b.txt`
+- `pr/43_wait_190_ultra.txt`, `pr/47_stability_eval_ultra.txt`
