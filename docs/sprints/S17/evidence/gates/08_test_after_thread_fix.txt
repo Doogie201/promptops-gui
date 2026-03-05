@@ -1,162 +1,128 @@
-CMD: pre-commit run --all-files
-trim trailing whitespace.................................................Failed
-- hook id: trailing-whitespace
-- files were modified by this hook
-fix end of files.........................................................Failed
-- hook id: end-of-file-fixer
-- exit code: 1
-- files were modified by this hook
+CMD: npm test
 
-Fixing docs/sprints/S17/evidence/gates/01_precommit.txt
+> promptops-gui@1.0.0 test
+> npm run -s test:all
 
-check yaml...............................................................Failed
-- hook id: check-yaml
-- files were modified by this hook
-check json...............................................................Failed
-- hook id: check-json
-- files were modified by this hook
-check for case conflicts.................................................Failed
-- hook id: check-case-conflict
-- files were modified by this hook
-mixed line ending........................................................Failed
-- hook id: mixed-line-ending
-- files were modified by this hook
-Operator Gates (Build/Test/Lint/Stoplight)...............................Failed
-- hook id: gates
-- files were modified by this hook
-
---- Running Deterministic Gates ---
-[1/4] Preflight
-preflight ok: repo_root=/Volumes/X9_DEV/Dev/Projects/promptops-gui node=v22.15.0 npm=10.9.2
-[2/4] Build
-vite v6.4.1 building for production...
-transforming...
-✓ 1 modules transformed.
-rendering chunks...
-computing gzip size...
-coverage/bundle-analysis/bundle.mjs  0.07 kB │ gzip: 0.09 kB
-✓ built in 32ms
-[3/4] Test
 TAP version 13
-# (node:40453) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:45835) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:40453) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/command_executor.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:45835) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/command_executor.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: AT-S05-01 disallowed command/path is blocked with clear error and recorded event
 ok 1 - AT-S05-01 disallowed command/path is blocked with clear error and recorded event
   ---
-  duration_ms: 16.058792
+  duration_ms: 14.483583
   type: 'test'
   ...
 # Subtest: AT-S05-02 allowed command captures stdout/stderr/exit code receipts
 ok 2 - AT-S05-02 allowed command captures stdout/stderr/exit code receipts
   ---
-  duration_ms: 21.826959
+  duration_ms: 24.011667
   type: 'test'
   ...
 # Subtest: AT-S05-03 repeated allowed command yields stable normalized hash
 ok 3 - AT-S05-03 repeated allowed command yields stable normalized hash
   ---
-  duration_ms: 38.686083
+  duration_ms: 41.999916
   type: 'test'
   ...
-# (node:40454) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:45836) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:40454) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/evaluator.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:45836) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/evaluator.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: AT-S04-01: ledger marks done/partial/todo with stable citations
 ok 4 - AT-S04-01: ledger marks done/partial/todo with stable citations
   ---
-  duration_ms: 13.63025
+  duration_ms: 10.712625
   type: 'test'
   ...
 # Subtest: AT-S04-02: delta ticket includes only outstanding items and is deterministic
 ok 5 - AT-S04-02: delta ticket includes only outstanding items and is deterministic
   ---
-  duration_ms: 1.953792
+  duration_ms: 1.345666
   type: 'test'
   ...
 # Subtest: AT-S04-03: done items are never re-asked in delta ticket
 ok 6 - AT-S04-03: done items are never re-asked in delta ticket
   ---
-  duration_ms: 0.801667
+  duration_ms: 0.620792
   type: 'test'
   ...
 # Subtest: AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
 ok 7 - AT-S04-05: repeat request is blocked/needs_input and emits no looping delta ticket
   ---
-  duration_ms: 1.238208
+  duration_ms: 0.829167
   type: 'test'
   ...
 # Subtest: AT-S04-06: when complete, evaluator emits no delta ticket file
 ok 8 - AT-S04-06: when complete, evaluator emits no delta ticket file
   ---
-  duration_ms: 0.755291
+  duration_ms: 0.478417
   type: 'test'
   ...
-# (node:40455) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:45837) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:40455) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/events/schema.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:45837) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/events/schema.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: canonicalSerialize sorts keys deterministically
 ok 9 - canonicalSerialize sorts keys deterministically
   ---
-  duration_ms: 4.097791
+  duration_ms: 0.579666
   type: 'test'
   ...
 # Subtest: idForEvent is stable across payload key ordering
 ok 10 - idForEvent is stable across payload key ordering
   ---
-  duration_ms: 6.919125
+  duration_ms: 0.386667
   type: 'test'
   ...
-# (node:40456) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:45838) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:40456) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/preflight_s06.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:45838) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/preflight_s06.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: AT-S06-02 branch noncompliance triggers hard stop with deterministic remediation
 ok 11 - AT-S06-02 branch noncompliance triggers hard stop with deterministic remediation
   ---
-  duration_ms: 610.392792
+  duration_ms: 618.101833
   type: 'test'
   ...
 # Subtest: AT-S06-03 out-of-sync state change emits deterministic OUT_OF_SYNC hard stop
 ok 12 - AT-S06-03 out-of-sync state change emits deterministic OUT_OF_SYNC hard stop
   ---
-  duration_ms: 666.280375
+  duration_ms: 674.862625
   type: 'test'
   ...
-# (node:40457) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:45839) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:40457) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/policy/index.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:45839) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/policy/index.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: policy defaults satisfy invariants
 ok 13 - policy defaults satisfy invariants
   ---
-  duration_ms: 0.554125
+  duration_ms: 0.488791
   type: 'test'
   ...
 # Subtest: policy rejects duplicate whitelist entries
 ok 14 - policy rejects duplicate whitelist entries
   ---
-  duration_ms: 0.242542
+  duration_ms: 0.228
   type: 'test'
   ...
 # Subtest: policy enforces positive line and function budgets
 ok 15 - policy enforces positive line and function budgets
   ---
-  duration_ms: 0.080875
+  duration_ms: 0.077041
   type: 'test'
   ...
 # Subtest: policy whitelist root is absolute
 ok 16 - policy whitelist root is absolute
   ---
-  duration_ms: 0.284917
+  duration_ms: 0.092458
   type: 'test'
   ...
 1..16
@@ -167,23 +133,23 @@ ok 16 - policy whitelist root is absolute
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1470.42625
+# duration_ms 1491.152583
 TAP version 13
-# (node:41484) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (node:47282) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:41484) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/integration.test.ts is not specified and it doesn't parse as CommonJS.
+# (node:47282) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/engine/integration.test.ts is not specified and it doesn't parse as CommonJS.
 # Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 # To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 # Subtest: integration: store plus evaluator remains deterministic
 ok 1 - integration: store plus evaluator remains deterministic
   ---
-  duration_ms: 13.747459
+  duration_ms: 11.933042
   type: 'test'
   ...
 # Subtest: integration: complete flow removes stale delta ticket
 ok 2 - integration: complete flow removes stale delta ticket
   ---
-  duration_ms: 1.12175
+  duration_ms: 0.730584
   type: 'test'
   ...
 1..2
@@ -194,7 +160,5 @@ ok 2 - integration: complete flow removes stale delta ticket
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 176.976042
-[4/4] Lint & Stoplight Greps
-[verify] lint
-Gates passed.
+# duration_ms 177.164458
+EXIT_CODE:0

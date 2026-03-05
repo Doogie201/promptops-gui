@@ -139,6 +139,12 @@ test('AT-S17-05: import-direction guard catches forbidden deep imports', () => {
   assert.strictEqual(violations.length, 0);
 });
 
+test('AT-S17-05b: dashboard uses delegated click handling to preserve actions across re-renders', () => {
+  const dashboardSource = fs.readFileSync(path.join(REPO_ROOT, 'src/s17/dashboard_app.ts'), 'utf8');
+  assert.ok(dashboardSource.includes("root.addEventListener('click'"));
+  assert.ok(!dashboardSource.includes('querySelector<HTMLButtonElement>('));
+});
+
 function createRunner(map: Record<string, MockResponse>, invoked?: string[]): CommandRunner {
   return (spec: CommandSpec, _cwd: string, _env: Record<string, string>, outStd: string, outErr: string) => {
     if (invoked) invoked.push(spec.id);

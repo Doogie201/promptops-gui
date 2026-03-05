@@ -1,0 +1,10 @@
+CMD: git rev-parse HEAD
+978043833a02271c9bcf3b24a6416eb4c936af74
+CMD: git rev-parse origin/sprint/S17-gui-entrypoint-dashboard
+978043833a02271c9bcf3b24a6416eb4c936af74
+CMD: git rev-list --left-right --count HEAD...origin/sprint/S17-gui-entrypoint-dashboard
+0	0
+CMD: git status --porcelain=v1 --branch
+## sprint/S17-gui-entrypoint-dashboard...origin/sprint/S17-gui-entrypoint-dashboard
+?? docs/sprints/S17/evidence/pr/
+EXIT_CODE:0

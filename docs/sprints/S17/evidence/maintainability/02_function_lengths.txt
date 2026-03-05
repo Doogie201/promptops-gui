@@ -1,14 +1,14 @@
 CMD: function-length scan for src/s17
 src/s17/dashboard_app.ts:20:15:export function mountDashboardApp(root: HTMLElement, facade: OperatorApiFacade): void {
-src/s17/dashboard_app.ts:36:9:function bindCardButtons(root: HTMLElement, state: DashboardState, facade: OperatorApiFacade): void {
-src/s17/dashboard_app.ts:46:19:async function runCardAction(
-src/s17/dashboard_app.ts:66:15:function applyResponse(state: DashboardState, cardId: DashboardActionId, response: ActionResponseEnvelope<unknown>): void {
-src/s17/dashboard_app.ts:82:11:async function invokeFacadeAction(
-src/s17/dashboard_app.ts:94:27:async function withTimeout(
-src/s17/dashboard_app.ts:122:3:function render(root: HTMLElement, state: DashboardState): void {
-src/s17/dashboard_app.ts:126:12:function dashboardTemplate(state: DashboardState): string {
-src/s17/dashboard_app.ts:139:5:function formatReceipts(receipts: ReceiptSummary[]): string {
-src/s17/dashboard_app.ts:145:8:function escapeHtml(value: string): string {
+src/s17/dashboard_app.ts:36:11:function bindCardButtons(root: HTMLElement, state: DashboardState, facade: OperatorApiFacade): void {
+src/s17/dashboard_app.ts:48:19:async function runCardAction(
+src/s17/dashboard_app.ts:68:15:function applyResponse(state: DashboardState, cardId: DashboardActionId, response: ActionResponseEnvelope<unknown>): void {
+src/s17/dashboard_app.ts:84:11:async function invokeFacadeAction(
+src/s17/dashboard_app.ts:96:27:async function withTimeout(
+src/s17/dashboard_app.ts:124:3:function render(root: HTMLElement, state: DashboardState): void {
+src/s17/dashboard_app.ts:128:13:function dashboardTemplate(state: DashboardState): string {
+src/s17/dashboard_app.ts:142:5:function formatReceipts(receipts: ReceiptSummary[]): string {
+src/s17/dashboard_app.ts:148:8:function escapeHtml(value: string): string {
 src/s17/import_guard.ts:14:21:export function findForbiddenUiImports(source: string): ImportGuardViolation[] {
 src/s17/import_guard.ts:36:12:export function guardUiImportDirection(files: Array<{ filePath: string; source: string }>): ImportGuardViolation[] {
 src/s17/operator_api_browser.ts:14:24:export function createBrowserOperatorApi(): OperatorApiFacade {

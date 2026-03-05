@@ -10,3 +10,5 @@
   - Receipts: `AT-S17-status_response.json`, `../audit/01_absolute_paths.txt`, `../gates/05_s17_tests.txt`.
 - AT-S17-05 PASS: import-direction guard catches deliberate forbidden import and cleanly passes real S17 UI files.
   - Receipts: `../stoplight/05_forbidden_imports.txt`, `../gates/05_s17_tests.txt`.
+- AT-S17-05b PASS: dashboard uses delegated click handling so action buttons remain active after re-renders.
+  - Receipts: `../gates/10_s17_tests_after_thread_fix.txt`, `../pr/14_threads_after_drift.json`.

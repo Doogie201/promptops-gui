@@ -1,0 +1,2 @@
+CMD: gh api graphql reviewThreads+comments
+{"data":{"repository":{"pullRequest":{"reviewThreads":{"nodes":[]},"comments":{"nodes":[]}}}}}EXIT_CODE:0

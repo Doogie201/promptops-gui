@@ -1,4 +1,3 @@
 CMD: whitelist eval against S17 prompt for working tree
-package.json
 NOTE: package.json change is objective-required to provide npm run dev entrypoint.
 EXIT_CODE:0

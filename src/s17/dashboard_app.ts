@@ -34,13 +34,15 @@ export function mountDashboardApp(root: HTMLElement, facade: OperatorApiFacade):
 }
 
 function bindCardButtons(root: HTMLElement, state: DashboardState, facade: OperatorApiFacade): void {
-  for (const card of state.cards) {
-    const button = root.querySelector<HTMLButtonElement>(`button[data-action="${card.id}"]`);
-    if (!button) continue;
-    button.addEventListener('click', async () => {
-      await runCardAction(root, state, facade, card.id);
-    });
-  }
+  root.addEventListener('click', async (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    const button = target.closest<HTMLButtonElement>('button[data-action]');
+    if (!button) return;
+    const action = button.dataset.action as DashboardActionId | undefined;
+    if (!action || button.disabled) return;
+    await runCardAction(root, state, facade, action);
+  });
 }
 
 async function runCardAction(
@@ -129,7 +131,8 @@ function dashboardTemplate(state: DashboardState): string {
       const receipts = card.receipts.length
         ? `<details><summary>Receipts (${card.receipts.length})</summary><pre>${formatReceipts(card.receipts)}</pre></details>`
         : '<p class="muted">No receipts yet.</p>';
-      return `<section class="card" aria-live="polite"><h2>${card.title}</h2><p>Status: <strong>${card.status}</strong></p><p>${escapeHtml(card.summary)}</p><p class="muted">Hash: ${escapeHtml(card.hash ?? 'none')}</p><button data-action="${card.id}">Run ${card.title}</button>${receipts}</section>`;
+      const disabled = card.status === 'RUNNING' ? ' disabled aria-disabled="true"' : '';
+      return `<section class="card" aria-live="polite"><h2>${card.title}</h2><p>Status: <strong>${card.status}</strong></p><p>${escapeHtml(card.summary)}</p><p class="muted">Hash: ${escapeHtml(card.hash ?? 'none')}</p><button data-action="${card.id}"${disabled}>Run ${card.title}</button>${receipts}</section>`;
     })
     .join('');
 

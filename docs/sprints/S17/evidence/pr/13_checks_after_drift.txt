@@ -1,0 +1,8 @@
+CMD: gh pr checks 27
+codecov/bundles	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/27?dropdown=bundle	Bundle change: 0.0% (Threshold: 5.0%)
+coverage	pass	17s	https://github.com/Doogie201/promptops-gui/actions/runs/22739096914/job/65947902175	
+coverage	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22739097802/job/65947904303	
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772748552.8t9bvDHdRYux_W5KIl0qPw	checks completed successfully
+verify	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22739096938/job/65947902134	
+verify	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22739097807/job/65947904357	
+EXIT_CODE:0
