@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [
     codecovVitePlugin({
-      enableBundleAnalysis: Boolean(process.env.CODECOV_TOKEN),
+      enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
       bundleName: "promptops-gui",
       uploadToken: process.env.CODECOV_TOKEN,
     }),

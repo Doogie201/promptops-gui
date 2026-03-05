@@ -8,7 +8,7 @@
   },
   "scripts": {
     "preflight": "bash scripts/preflight.sh",
-    "build": "tsc --noEmit",
+    "build": "tsc --noEmit && npm run -s build:bundle-analysis",
     "build:bundle-analysis": "vite build --config vite.config.ts",
     "test": "npm run -s test:all",
     "test:unit": "node --test --experimental-transform-types engine/command_executor.test.ts engine/preflight_s06.test.ts engine/evaluator.test.ts engine/events/schema.test.ts policy/index.test.ts",
