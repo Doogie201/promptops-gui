@@ -391,6 +391,7 @@ export function detectLoopStuck(
   evidenceRefs: EvidenceRef[],
   threshold = 3,
 ): HealthSignal | null {
+  if (!Number.isInteger(threshold) || threshold <= 0) return null;
   if (history.length < threshold) return null;
   const window = history.slice(history.length - threshold);
   const first = loopSignature(window[0]);
@@ -446,15 +447,16 @@ export function buildContinuityPacketHash(
 
 export function actionsForSignal(signal: HealthSignalId, hasCheckpoint: boolean): RepairAction[] {
   const actionIds = SIGNAL_RULES[signal].actions.filter((action) => hasCheckpoint || action !== 'restore_last_checkpoint');
-  return actionIds.map((actionId) => REPAIR_ACTION_LIBRARY[actionId]);
+  return actionIds.map((actionId) => cloneRepairAction(REPAIR_ACTION_LIBRARY[actionId]));
 }
 
 export function allRepairActions(): RepairAction[] {
-  return Object.values(REPAIR_ACTION_LIBRARY);
+  return Object.values(REPAIR_ACTION_LIBRARY).map((action) => cloneRepairAction(action));
 }
 
 export function buildSafeModeDiagnosis(input: SafeModeInput): SafeModeDiagnosis {
   const sortedSignals = sortSignals(input.activeSignals);
+  const sortedActions = sortAndCloneActions(input.allowedActions);
   const violations = input.agentInvocationEvents.length > 0 ? ['agent_invocation_detected_in_safe_mode'] : [];
   const status = deriveStatus(sortedSignals);
   const payload = {
@@ -462,7 +464,7 @@ export function buildSafeModeDiagnosis(input: SafeModeInput): SafeModeDiagnosis 
     status,
     active_signals: sortedSignals,
     last_known_checkpoint_id: input.lastKnownCheckpointId,
-    next_allowed_actions: input.allowedActions,
+    next_allowed_actions: sortedActions,
     evidence_refs: sortEvidence(input.evidenceRefs),
     safe_mode_compliant: violations.length === 0,
     violations,
@@ -473,7 +475,7 @@ export function buildSafeModeDiagnosis(input: SafeModeInput): SafeModeDiagnosis 
     status,
     activeSignals: sortedSignals,
     lastKnownCheckpointId: input.lastKnownCheckpointId,
-    nextAllowedActions: input.allowedActions,
+    nextAllowedActions: sortedActions,
     evidenceRefs: sortEvidence(input.evidenceRefs),
     safeModeCompliant: violations.length === 0,
     violations,
@@ -601,6 +603,19 @@ function normalizePath(value: string): string {
 
 function sortEvidence(evidenceRefs: EvidenceRef[]): EvidenceRef[] {
   return [...evidenceRefs].sort((a, b) => a.path.localeCompare(b.path) || a.sha256.localeCompare(b.sha256));
+}
+
+function cloneRepairAction(action: RepairAction): RepairAction {
+  return {
+    ...action,
+    commandPlan: [...action.commandPlan],
+  };
+}
+
+function sortAndCloneActions(actions: RepairAction[]): RepairAction[] {
+  return [...actions]
+    .map((action) => cloneRepairAction(action))
+    .sort((a, b) => a.id.localeCompare(b.id));
 }
 
 function stableJson(value: unknown): string {

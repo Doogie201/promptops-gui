@@ -3,6 +3,7 @@ import assert from 'node:assert';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import {
+  allRepairActions,
   buildAuditFlags,
   buildDiagnosticsDashboardModel,
   actionsForSignal,
@@ -297,6 +298,82 @@ test('AT-S12-04 safe mode diagnosis is deterministic and blocks agent invocation
     safe_mode_compliant: diagnosisA.safeModeCompliant,
     violation_detected: violatingDiagnosis.violations,
   });
+});
+
+test('regression: safe mode hash is invariant to action ordering', () => {
+  const repoSignal = detectRepoDrift(
+    {
+      branch: 'main',
+      statusSummary: '## main...origin/main',
+      ahead: 0,
+      behind: 0,
+      headSha: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      repoRoot: '/repo',
+      primaryWorktree: '/repo',
+    },
+    {
+      branch: 'main',
+      statusSummary: '## main...origin/main\n M src/s12/health_drift.ts',
+      ahead: 0,
+      behind: 0,
+      headSha: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
+      repoRoot: '/repo',
+      primaryWorktree: '/repo',
+    },
+    500,
+    [],
+  );
+  assert.ok(repoSignal);
+
+  const orderedActions = actionsForSignal('REPO_DRIFT', true);
+  const reversedActions = [...orderedActions].reverse();
+  const diagOrdered = buildSafeModeDiagnosis({
+    runId: 'run-s12-reg-01',
+    activeSignals: [repoSignal],
+    lastKnownCheckpointId: 'cp-reg-01',
+    allowedActions: orderedActions,
+    evidenceRefs: [],
+    agentInvocationEvents: [],
+  });
+  const diagReversed = buildSafeModeDiagnosis({
+    runId: 'run-s12-reg-01',
+    activeSignals: [repoSignal],
+    lastKnownCheckpointId: 'cp-reg-01',
+    allowedActions: reversedActions,
+    evidenceRefs: [],
+    agentInvocationEvents: [],
+  });
+
+  assert.strictEqual(diagOrdered.reportHash, diagReversed.reportHash);
+});
+
+test('regression: repair action APIs return independent clones', () => {
+  const firstActions = actionsForSignal('REPO_DRIFT', true);
+  firstActions[0].title = 'mutated-title';
+  firstActions[0].commandPlan.push('mutated-command');
+
+  const secondActions = actionsForSignal('REPO_DRIFT', true);
+  assert.notStrictEqual(secondActions[0].title, 'mutated-title');
+  assert.ok(!secondActions[0].commandPlan.includes('mutated-command'));
+
+  const libraryA = allRepairActions();
+  libraryA[0].title = 'library-mutated';
+  const libraryB = allRepairActions();
+  assert.notStrictEqual(libraryB[0].title, 'library-mutated');
+});
+
+test('regression: loop stuck detector ignores invalid thresholds', () => {
+  const observations: LoopObservation[] = [
+    { signalSet: ['ADAPTER_DOWN'], deltaFingerprint: 'same' },
+    { signalSet: ['ADAPTER_DOWN'], deltaFingerprint: 'same' },
+  ];
+  const invalidZero = detectLoopStuck(observations, 600, [], 0);
+  const invalidNegative = detectLoopStuck(observations, 601, [], -1);
+  const invalidFloat = detectLoopStuck(observations, 602, [], 1.5);
+
+  assert.strictEqual(invalidZero, null);
+  assert.strictEqual(invalidNegative, null);
+  assert.strictEqual(invalidFloat, null);
 });
 
 function prepareEvidenceRoot(): void {
