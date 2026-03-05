@@ -1,0 +1,3 @@
+CMD: gh label create type:perf --repo Doogie201/promptops-gui --color 1D76DB --description Performance
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0

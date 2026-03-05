@@ -1,0 +1,4 @@
+CMD: gh pr create --repo Doogie201/promptops-gui --base main --head sprint/S16-hardening-regression --title [S16] perf : hardening + regression suite --body-file /tmp/promptops/S16/pr_body.md
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+https://github.com/Doogie201/promptops-gui/pull/26
+EXIT_CODE: 0
