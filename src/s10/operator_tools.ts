@@ -208,6 +208,8 @@ export function runCloseoutTool(
     atomicOptions?.commitMessage ?? `[${sprintCode(options.sprintId)}] docs: atomic closeout evidence sync (${options.runId})`;
   const atomicEvalPath = path.join(context.bundleRoot, 'closeout_atomic_eval.md');
   const atomicDetailsPath = path.join(context.bundleRoot, 'closeout_atomic_details.json');
+  const atomicFinalEvalPath = path.join(context.bundleRoot, 'closeout_atomic_final_eval.md');
+  const atomicFinalDetailsPath = path.join(context.bundleRoot, 'closeout_atomic_final_details.json');
 
   let closeoutCode: HardStopCode = basePass ? 'NONE' : 'PR_NOT_READY';
   let closeoutStatus: 'PASS' | 'FAIL' | 'HARD_STOP' = basePass ? 'PASS' : 'FAIL';
@@ -282,6 +284,49 @@ export function runCloseoutTool(
   writeText(path.join(context.bundleRoot, 'closeout_summary.md'), summary);
   writeJson(path.join(context.bundleRoot, 'closeout_manifest.json'), manifest);
 
+  const finalDurablePath = copyBundleToDurable(context);
+  if (basePass && closeoutStatus === 'PASS') {
+    const finalSpecs = closeoutAtomicSpecs(context, finalDurablePath, atomicCommitMessage, pushEnabled, '_final');
+    records.push(...executeCommandSet(context, finalSpecs, 'closeout_atomic_outputs.ndjson', runner));
+    const finalAtomic = evaluateCloseoutAtomic(records, pushEnabled, '_final');
+    writeText(atomicFinalEvalPath, formatEval('Closeout Atomic Final', finalAtomic));
+    writeJson(atomicFinalDetailsPath, {
+      attempted: true,
+      pass: finalAtomic.pass,
+      code: finalAtomic.code,
+      message: finalAtomic.message,
+      before_untracked_evidence: finalAtomic.beforeUntrackedEvidence,
+      after_untracked_evidence: finalAtomic.afterUntrackedEvidence,
+      commit_noop: finalAtomic.commitNoop,
+      push_enabled: pushEnabled,
+      commit_message: atomicCommitMessage,
+    });
+    if (!finalAtomic.pass) {
+      closeoutCode = finalAtomic.code;
+      closeoutStatus = 'HARD_STOP';
+      closeoutMessage = finalAtomic.message;
+    } else {
+      closeoutMessage = finalAtomic.message;
+    }
+  } else {
+    writeText(
+      atomicFinalEvalPath,
+      formatEval('Closeout Atomic Final', {
+        pass: false,
+        code: closeoutCode,
+        message: 'Skipped: initial atomic phase did not pass.',
+      }),
+    );
+    writeJson(atomicFinalDetailsPath, {
+      attempted: false,
+      pass: false,
+      code: closeoutCode,
+      message: 'Skipped: initial atomic phase did not pass.',
+      push_enabled: pushEnabled,
+      commit_message: atomicCommitMessage,
+    });
+  }
+
   const result = buildResult('closeout', closeoutCode, closeoutStatus, closeoutMessage, {
     closeout_summary: path.join(context.bundleRoot, 'closeout_summary.md'),
     closeout_manifest: path.join(context.bundleRoot, 'closeout_manifest.json'),
@@ -289,6 +334,8 @@ export function runCloseoutTool(
     closeout_atomic_outputs: path.join(context.bundleRoot, 'closeout_atomic_outputs.ndjson'),
     closeout_atomic_eval: atomicEvalPath,
     closeout_atomic_details: atomicDetailsPath,
+    closeout_atomic_final_eval: atomicFinalEvalPath,
+    closeout_atomic_final_details: atomicFinalDetailsPath,
   }, {
     missing_paths: missing.length,
     checklist_complete: allDone,
@@ -297,7 +344,6 @@ export function runCloseoutTool(
     continuity_hash: context.continuityHash,
   });
 
-  const finalDurablePath = copyBundleToDurable(context);
   return { context, records, result, durablePath: finalDurablePath };
 }
 
@@ -583,29 +629,31 @@ function closeoutAtomicSpecs(
   durablePath: string,
   commitMessage: string,
   pushEnabled: boolean,
+  suffix = '',
 ): CommandSpec[] {
   const stagePath = gitAddTarget(context.repoRoot, durablePath);
   const specs: CommandSpec[] = [
-    { id: 'closeout_status_before', command: 'git', args: ['status', '--porcelain=v1', '--branch'] },
-    { id: 'closeout_add_evidence', command: 'git', args: ['add', '--', stagePath] },
-    { id: 'closeout_commit', command: 'git', args: ['commit', '-m', commitMessage] },
+    { id: `closeout_status_before${suffix}`, command: 'git', args: ['status', '--porcelain=v1', '--branch'] },
+    { id: `closeout_add_evidence${suffix}`, command: 'git', args: ['add', '--', stagePath] },
+    { id: `closeout_commit${suffix}`, command: 'git', args: ['commit', '-m', commitMessage] },
   ];
-  if (pushEnabled) specs.push({ id: 'closeout_push', command: 'git', args: ['push'] });
-  specs.push({ id: 'closeout_status_after_push', command: 'git', args: ['status', '--porcelain=v1', '--branch'] });
+  if (pushEnabled) specs.push({ id: `closeout_push${suffix}`, command: 'git', args: ['push'] });
+  specs.push({ id: `closeout_status_after_push${suffix}`, command: 'git', args: ['status', '--porcelain=v1', '--branch'] });
   return specs;
 }
 
 function evaluateCloseoutAtomic(
   records: CommandRecord[],
   pushEnabled: boolean,
+  suffix = '',
 ): { pass: boolean; code: HardStopCode; message: string; beforeUntrackedEvidence: string[]; afterUntrackedEvidence: string[]; commitNoop: boolean } {
-  const statusBefore = readRecordStdout(records, 'closeout_status_before');
-  const statusAfter = readRecordStdout(records, 'closeout_status_after_push');
+  const statusBefore = readRecordStdout(records, `closeout_status_before${suffix}`);
+  const statusAfter = readRecordStdout(records, `closeout_status_after_push${suffix}`);
   const beforeUntrackedEvidence = parseUntrackedEvidencePaths(statusBefore);
   const afterUntrackedEvidence = parseUntrackedEvidencePaths(statusAfter);
-  const add = lookupRecord(records, 'closeout_add_evidence');
-  const commit = lookupRecord(records, 'closeout_commit');
-  const push = lookupRecord(records, 'closeout_push');
+  const add = lookupRecord(records, `closeout_add_evidence${suffix}`);
+  const commit = lookupRecord(records, `closeout_commit${suffix}`);
+  const push = lookupRecord(records, `closeout_push${suffix}`);
   const commitNoop = commit.exit_code !== 0 && /nothing to commit|no changes added to commit/i.test(`${commit.stdout}\n${commit.stderr}`);
 
   if (add.exit_code !== 0) {
