@@ -2,9 +2,6 @@ CMD=git diff --name-only origin/main...HEAD | sort
 CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
 docs/backlog/README.md
 docs/sprints/README.md
-docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_worktree_before.txt
-docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/05_fsck_classification.md
-docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_open_prs.txt
 docs/sprints/S12/README.md
 docs/sprints/S12/evidence/INDEX.md
 docs/sprints/S12/evidence/at/AT-S12-01_repo_drift.json
@@ -71,6 +68,16 @@ docs/sprints/S12/evidence/scope/closeout_fix_changed_files.txt
 docs/sprints/S12/evidence/scope/closeout_fix_diffstat.txt
 docs/sprints/S12/evidence/scope/maintainability_eval.txt
 docs/sprints/S12/evidence/scope/whitelist_eval.txt
+docs/sprints/S12/evidence/scope_fix/00_pwd.txt
+docs/sprints/S12/evidence/scope_fix/01_echo_PROMPTOPS_REPO.txt
+docs/sprints/S12/evidence/scope_fix/02_show_toplevel.txt
+docs/sprints/S12/evidence/scope_fix/10_pr_files_before.txt
+docs/sprints/S12/evidence/scope_fix/20_reset_s11_paths.txt
+docs/sprints/S12/evidence/scope_fix/21_status_after_reset.txt
+docs/sprints/S12/evidence/scope_fix/30_pr_files_after.txt
+docs/sprints/S12/evidence/scope_fix/40_git_commit.txt
+docs/sprints/S12/evidence/scope_fix/41_git_push.txt
+docs/sprints/S12/evidence/scope_fix/42_log_after_push.txt
 docs/sprints/S12/evidence/stoplight/01_marker_list.txt
 docs/sprints/S12/evidence/stoplight/02_html_marker_grep.txt
 docs/sprints/S12/evidence/stoplight/03_stderr_marker_grep.txt

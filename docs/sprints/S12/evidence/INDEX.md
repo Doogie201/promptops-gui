@@ -82,3 +82,20 @@
 - `pr/closeout_fix_20260304_225400/17_durable_copy_receipt.txt`
 - `scope/closeout_fix_changed_files.txt`
 - `scope/closeout_fix_diffstat.txt`
+
+## Scope Fix Closeout
+- `scope_fix/00_pwd.txt`
+- `scope_fix/01_echo_PROMPTOPS_REPO.txt`
+- `scope_fix/02_show_toplevel.txt`
+- `scope_fix/03_branch.txt`
+- `scope_fix/04_status.txt`
+- `scope_fix/10_pr_files_before.txt`
+- `scope_fix/11_scope_violation_excerpt_before.txt`
+- `scope_fix/20_reset_s11_paths.txt`
+- `scope_fix/21_status_after_reset.txt`
+- `scope_fix/30_pr_files_after.txt`
+- `scope_fix/31_scope_blocker_grep_after.txt`
+- `scope_fix/32_whitelist_check_after.txt`
+- `scope_fix/40_git_commit.txt`
+- `scope_fix/41_git_push.txt`
+- `scope_fix/42_log_after_push.txt`
