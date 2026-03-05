@@ -1,50 +1,22 @@
-CMD: gh pr view 15 --repo Doogie201/promptops-gui --json reviewThreads,comments
-Unknown JSON field: "reviewThreads"
-Available fields:
-  additions
-  assignees
-  author
-  autoMergeRequest
-  baseRefName
-  baseRefOid
-  body
-  changedFiles
-  closed
-  closedAt
-  closingIssuesReferences
-  comments
-  commits
-  createdAt
-  deletions
-  files
-  fullDatabaseId
-  headRefName
-  headRefOid
-  headRepository
-  headRepositoryOwner
-  id
-  isCrossRepository
-  isDraft
-  labels
-  latestReviews
-  maintainerCanModify
-  mergeCommit
-  mergeStateStatus
-  mergeable
-  mergedAt
-  mergedBy
-  milestone
-  number
-  potentialMergeCommit
-  projectCards
-  projectItems
-  reactionGroups
-  reviewDecision
-  reviewRequests
-  reviews
-  state
-  statusCheckRollup
-  title
-  updatedAt
-  url
-EXIT_CODE: 1
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "comments": {
+          "nodes": [
+            {
+              "id": "IC_kwDORZ8p_M7ueeQ4",
+              "author": {
+                "login": "codecov"
+              },
+              "bodyText": "Codecov Report\n\u2705 All modified and coverable lines are covered by tests.\n\u2705 All tests successful. No failed tests found.\n\ud83d\udce2 Thoughts on this report? Let us know!"
+            }
+          ]
+        },
+        "reviewThreads": {
+          "nodes": []
+        }
+      }
+    }
+  }
+}
