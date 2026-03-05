@@ -1,0 +1,51 @@
+{
+  "command": "gh api graphql threads/comments",
+  "exitCode": 0,
+  "payload": {
+    "data": {
+      "repository": {
+        "pullRequest": {
+          "reviewThreads": {
+            "nodes": [
+              {
+                "id": "PRRT_kwDORZ8p_M5ycwks",
+                "isResolved": true,
+                "comments": {
+                  "nodes": [
+                    {
+                      "author": {
+                        "login": "chatgpt-codex-connector"
+                      },
+                      "bodyText": "Preserve button handlers across dashboard re-renders\nRe-rendering with root.innerHTML = ... replaces every card button element, but click handlers are only attached once in mountDashboardApp via bindCardButtons, so after the first action updates state and calls render, all buttons in the new DOM become inert. In practice, users can run one action, then subsequent clicks do nothing because no listeners are rebound.\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+                      "url": "https://github.com/Doogie201/promptops-gui/pull/27#discussion_r2892650823"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "comments": {
+            "nodes": [
+              {
+                "author": {
+                  "login": "codecov"
+                },
+                "bodyText": "Bundle Report\nBundle size has no change \u2705",
+                "url": "https://github.com/Doogie201/promptops-gui/pull/27#issuecomment-4008134899",
+                "createdAt": "2026-03-05T22:10:14Z"
+              },
+              {
+                "author": {
+                  "login": "Doogie201"
+                },
+                "bodyText": "Addressed connector finding on button handler loss after rerender. Fix: delegated click handling on dashboard root + disabled running buttons. Commit: 78f7abe. Evidence: docs/sprints/S17/evidence/gates/10_s17_tests_after_thread_fix.txt and docs/sprints/S17/evidence/at/AT-S17_eval.md.",
+                "url": "https://github.com/Doogie201/promptops-gui/pull/27#issuecomment-4008198578",
+                "createdAt": "2026-03-05T22:23:45Z"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
