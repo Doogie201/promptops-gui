@@ -1,11 +1,11 @@
 CMD: gh pr checks 19 --repo Doogie201/promptops-gui
 CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
 codecov/bundles	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/19?dropdown=bundle	Bundle change: 0.0% (Threshold: 5.0%)
-codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/19	
-coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22703310553/job/65825074455	
-coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22703311482/job/65825077869	
+codecov/patch	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/19
+coverage	pass	27s	https://github.com/Doogie201/promptops-gui/actions/runs/22703310553/job/65825074455
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22703311482/job/65825077869
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772687341.i8Q3-zRbS06n3E76CmbuPA	checks completed successfully
-verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22703310555/job/65825074465	
-verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22703311512/job/65825078124	
+verify	pass	26s	https://github.com/Doogie201/promptops-gui/actions/runs/22703310555/job/65825074465
+verify	pass	21s	https://github.com/Doogie201/promptops-gui/actions/runs/22703311512/job/65825078124
 --- STDERR ---
 EXIT_CODE: 0
