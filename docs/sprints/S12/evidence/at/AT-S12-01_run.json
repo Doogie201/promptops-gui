@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "signal_id": "REPO_DRIFT",
+  "signal_severity": "FAIL",
+  "restored_stable": true
+}

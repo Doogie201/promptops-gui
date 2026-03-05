@@ -1,0 +1,7 @@
+CMD: git worktree list --porcelain
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD b48a4911554be6a4ad429b0103f58bd46585263c
+branch refs/heads/main
+
+EXIT_CODE=0

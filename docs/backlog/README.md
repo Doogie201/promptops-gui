@@ -1,5 +1,6 @@
 # Product Backlog
 
+- **S12-health-drift-detection**: Detect drift/breakage/out-of-sync conditions deterministically, surface them in GUI with severity/root-cause/evidence links, and provide GUI-only repair actions (including Safe Mode) that restore stable state without terminal access.
 - **S11-template-lifecycle-manager**: Implement an operator-grade Template lifecycle manager with versioning, contract validation (including protected diffs), deterministic preview compile, activation/rollback, and explicit reversible sprint migration.
 - **S10-gui-operator-tools-v1**: Put the full operator workflow inside the GUI (preflight, PR protocol, gates, diff review, out-of-sync detection/repair, closeout assistant) with operator-grade evidence and hard stops, without requiring terminal usage.
 - **S09-gui-shell-setup-wizard-agent-switching**: Deliver macOS GUI shell v1 with Setup Wizard that pins Template/Task via versioned edits, plus Run controls and agent auto/manual switching UI with an operator-console navigation skeleton.

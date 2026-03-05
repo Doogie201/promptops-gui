@@ -1,0 +1,8 @@
+CMD: git diff --name-only && git ls-files --others --exclude-standard
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+docs/backlog/README.md
+docs/sprints/README.md
+docs/sprints/S12/README.md
+src/s12/health_drift.ts
+src/s12/s12.test.ts
+EXIT_CODE=0

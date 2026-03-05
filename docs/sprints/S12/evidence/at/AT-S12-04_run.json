@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "deterministic_hash": "000cac8318c3b53722d065616297f958adad013848760b56ac1e7c0e8d323436",
+  "safe_mode_compliant": true,
+  "violation_detected": [
+    "agent_invocation_detected_in_safe_mode"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "hard_stop_signal": "TEMPLATE_DRIFT",
+  "hard_stop": true,
+  "resumed_after_restore": true
+}

@@ -1,0 +1,11 @@
+CMD: whitelist evaluation against sprint whitelist
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+FILES:
+docs/backlog/README.md
+docs/sprints/README.md
+docs/sprints/S12/README.md
+src/s12/health_drift.ts
+src/s12/s12.test.ts
+OUTSIDE:
+RESULT=PASS
+EXIT_CODE=0

@@ -1,0 +1,3 @@
+CMD: rg -n -i -f html_markers.txt gates at
+CWD: /tmp/promptops/S12/run_20260304_224431
+EXIT_CODE=1

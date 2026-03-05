@@ -1,0 +1,560 @@
+{
+  "diagnosis_a": {
+    "runId": "run-s12-004",
+    "status": "FAIL",
+    "activeSignals": [
+      {
+        "id": "83de21c200db86c9",
+        "signalId": "REPO_DRIFT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.repo_drift",
+        "summary": "repo drift detected (statusSummary)",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/repo_signal.json",
+            "sha256": "55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609"
+          }
+        ],
+        "remediationActions": [
+          "re_run_min_sync_check",
+          "re_run_preflight_full",
+          "restore_last_checkpoint"
+        ],
+        "hardFail": false,
+        "createdAt": 400
+      },
+      {
+        "id": "8651105b7f39be78",
+        "signalId": "LEDGER_INCONSISTENT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.ledger_drift",
+        "summary": "requirements_changed_without_update_event; missing_done_citations:REQ-2",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/ledger_signal.json",
+            "sha256": "4882cd9ada218d09152651953785988c75c57578d2c743e62083e653dd4da0d5"
+          }
+        ],
+        "remediationActions": [
+          "restore_last_checkpoint",
+          "rerender_ticket_no_agent"
+        ],
+        "hardFail": false,
+        "createdAt": 401
+      },
+      {
+        "id": "4f6f1d35b7f7896d",
+        "signalId": "LOOP_STUCK",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.loop_stuck",
+        "summary": "repeated blocker pattern x3: {\"delta_fingerprint\":\"same\",\"signal_set\":[\"ADAPTER_DOWN\",\"REPO_DRIFT\"]}",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/loop_signal.json",
+            "sha256": "9c5f0590231a6b605ddbd1b20ce33d14c030d2fd72e836a03200ef0543333379"
+          }
+        ],
+        "remediationActions": [
+          "generate_diagnosis_report"
+        ],
+        "hardFail": true,
+        "createdAt": 402
+      }
+    ],
+    "lastKnownCheckpointId": "cp-004",
+    "nextAllowedActions": [
+      {
+        "id": "re_run_min_sync_check",
+        "title": "Re-run Minimal Sync Check",
+        "mutatesState": false,
+        "requiresConfirmation": false,
+        "commandPlan": [
+          "git fetch --all --prune --tags",
+          "git status --porcelain=v1 --branch",
+          "git rev-list --left-right --count HEAD...origin/main"
+        ]
+      },
+      {
+        "id": "re_run_preflight_full",
+        "title": "Re-run Preflight (full)",
+        "mutatesState": false,
+        "requiresConfirmation": false,
+        "commandPlan": [
+          "pwd",
+          "echo \"$PROMPTOPS_REPO\"",
+          "git rev-parse --show-toplevel",
+          "git worktree list --porcelain",
+          "git status --porcelain=v1 --branch",
+          "git fetch --all --prune --tags",
+          "git rev-list --left-right --count HEAD...origin/main",
+          "git rev-parse --abbrev-ref HEAD",
+          "git log --oneline -5",
+          "git prune --dry-run",
+          "git fsck --no-reflogs"
+        ]
+      },
+      {
+        "id": "restore_last_checkpoint",
+        "title": "Restore to Last Checkpoint",
+        "mutatesState": true,
+        "requiresConfirmation": true,
+        "commandPlan": [
+          "restore from checkpoint artifact and re-evaluate health"
+        ]
+      }
+    ],
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/diagnose/report_input.json",
+        "sha256": "161fba8d4d5318f7fae65ea073ff11f352437ebe4f1344c1ffdaaf3db050b208"
+      }
+    ],
+    "safeModeCompliant": true,
+    "violations": [],
+    "reportCanonical": "{\"active_signals\":[{\"createdAt\":400,\"detectorId\":\"detector.repo_drift\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/repo_signal.json\",\"sha256\":\"55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609\"}],\"hardFail\":false,\"id\":\"83de21c200db86c9\",\"remediationActions\":[\"re_run_min_sync_check\",\"re_run_preflight_full\",\"restore_last_checkpoint\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"REPO_DRIFT\",\"summary\":\"repo drift detected (statusSummary)\"},{\"createdAt\":401,\"detectorId\":\"detector.ledger_drift\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/ledger_signal.json\",\"sha256\":\"4882cd9ada218d09152651953785988c75c57578d2c743e62083e653dd4da0d5\"}],\"hardFail\":false,\"id\":\"8651105b7f39be78\",\"remediationActions\":[\"restore_last_checkpoint\",\"rerender_ticket_no_agent\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"LEDGER_INCONSISTENT\",\"summary\":\"requirements_changed_without_update_event; missing_done_citations:REQ-2\"},{\"createdAt\":402,\"detectorId\":\"detector.loop_stuck\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/loop_signal.json\",\"sha256\":\"9c5f0590231a6b605ddbd1b20ce33d14c030d2fd72e836a03200ef0543333379\"}],\"hardFail\":true,\"id\":\"4f6f1d35b7f7896d\",\"remediationActions\":[\"generate_diagnosis_report\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"LOOP_STUCK\",\"summary\":\"repeated blocker pattern x3: {\\\"delta_fingerprint\\\":\\\"same\\\",\\\"signal_set\\\":[\\\"ADAPTER_DOWN\\\",\\\"REPO_DRIFT\\\"]}\"}],\"evidence_refs\":[{\"path\":\"/tmp/promptops/S12/diagnose/report_input.json\",\"sha256\":\"161fba8d4d5318f7fae65ea073ff11f352437ebe4f1344c1ffdaaf3db050b208\"}],\"last_known_checkpoint_id\":\"cp-004\",\"next_allowed_actions\":[{\"commandPlan\":[\"git fetch --all --prune --tags\",\"git status --porcelain=v1 --branch\",\"git rev-list --left-right --count HEAD...origin/main\"],\"id\":\"re_run_min_sync_check\",\"mutatesState\":false,\"requiresConfirmation\":false,\"title\":\"Re-run Minimal Sync Check\"},{\"commandPlan\":[\"pwd\",\"echo \\\"$PROMPTOPS_REPO\\\"\",\"git rev-parse --show-toplevel\",\"git worktree list --porcelain\",\"git status --porcelain=v1 --branch\",\"git fetch --all --prune --tags\",\"git rev-list --left-right --count HEAD...origin/main\",\"git rev-parse --abbrev-ref HEAD\",\"git log --oneline -5\",\"git prune --dry-run\",\"git fsck --no-reflogs\"],\"id\":\"re_run_preflight_full\",\"mutatesState\":false,\"requiresConfirmation\":false,\"title\":\"Re-run Preflight (full)\"},{\"commandPlan\":[\"restore from checkpoint artifact and re-evaluate health\"],\"id\":\"restore_last_checkpoint\",\"mutatesState\":true,\"requiresConfirmation\":true,\"title\":\"Restore to Last Checkpoint\"}],\"run_id\":\"run-s12-004\",\"safe_mode_compliant\":true,\"status\":\"FAIL\",\"violations\":[]}",
+    "reportHash": "000cac8318c3b53722d065616297f958adad013848760b56ac1e7c0e8d323436"
+  },
+  "diagnosis_b": {
+    "runId": "run-s12-004",
+    "status": "FAIL",
+    "activeSignals": [
+      {
+        "id": "83de21c200db86c9",
+        "signalId": "REPO_DRIFT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.repo_drift",
+        "summary": "repo drift detected (statusSummary)",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/repo_signal.json",
+            "sha256": "55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609"
+          }
+        ],
+        "remediationActions": [
+          "re_run_min_sync_check",
+          "re_run_preflight_full",
+          "restore_last_checkpoint"
+        ],
+        "hardFail": false,
+        "createdAt": 400
+      },
+      {
+        "id": "8651105b7f39be78",
+        "signalId": "LEDGER_INCONSISTENT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.ledger_drift",
+        "summary": "requirements_changed_without_update_event; missing_done_citations:REQ-2",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/ledger_signal.json",
+            "sha256": "4882cd9ada218d09152651953785988c75c57578d2c743e62083e653dd4da0d5"
+          }
+        ],
+        "remediationActions": [
+          "restore_last_checkpoint",
+          "rerender_ticket_no_agent"
+        ],
+        "hardFail": false,
+        "createdAt": 401
+      },
+      {
+        "id": "4f6f1d35b7f7896d",
+        "signalId": "LOOP_STUCK",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.loop_stuck",
+        "summary": "repeated blocker pattern x3: {\"delta_fingerprint\":\"same\",\"signal_set\":[\"ADAPTER_DOWN\",\"REPO_DRIFT\"]}",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/loop_signal.json",
+            "sha256": "9c5f0590231a6b605ddbd1b20ce33d14c030d2fd72e836a03200ef0543333379"
+          }
+        ],
+        "remediationActions": [
+          "generate_diagnosis_report"
+        ],
+        "hardFail": true,
+        "createdAt": 402
+      }
+    ],
+    "lastKnownCheckpointId": "cp-004",
+    "nextAllowedActions": [
+      {
+        "id": "re_run_min_sync_check",
+        "title": "Re-run Minimal Sync Check",
+        "mutatesState": false,
+        "requiresConfirmation": false,
+        "commandPlan": [
+          "git fetch --all --prune --tags",
+          "git status --porcelain=v1 --branch",
+          "git rev-list --left-right --count HEAD...origin/main"
+        ]
+      },
+      {
+        "id": "re_run_preflight_full",
+        "title": "Re-run Preflight (full)",
+        "mutatesState": false,
+        "requiresConfirmation": false,
+        "commandPlan": [
+          "pwd",
+          "echo \"$PROMPTOPS_REPO\"",
+          "git rev-parse --show-toplevel",
+          "git worktree list --porcelain",
+          "git status --porcelain=v1 --branch",
+          "git fetch --all --prune --tags",
+          "git rev-list --left-right --count HEAD...origin/main",
+          "git rev-parse --abbrev-ref HEAD",
+          "git log --oneline -5",
+          "git prune --dry-run",
+          "git fsck --no-reflogs"
+        ]
+      },
+      {
+        "id": "restore_last_checkpoint",
+        "title": "Restore to Last Checkpoint",
+        "mutatesState": true,
+        "requiresConfirmation": true,
+        "commandPlan": [
+          "restore from checkpoint artifact and re-evaluate health"
+        ]
+      }
+    ],
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/diagnose/report_input.json",
+        "sha256": "161fba8d4d5318f7fae65ea073ff11f352437ebe4f1344c1ffdaaf3db050b208"
+      }
+    ],
+    "safeModeCompliant": true,
+    "violations": [],
+    "reportCanonical": "{\"active_signals\":[{\"createdAt\":400,\"detectorId\":\"detector.repo_drift\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/repo_signal.json\",\"sha256\":\"55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609\"}],\"hardFail\":false,\"id\":\"83de21c200db86c9\",\"remediationActions\":[\"re_run_min_sync_check\",\"re_run_preflight_full\",\"restore_last_checkpoint\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"REPO_DRIFT\",\"summary\":\"repo drift detected (statusSummary)\"},{\"createdAt\":401,\"detectorId\":\"detector.ledger_drift\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/ledger_signal.json\",\"sha256\":\"4882cd9ada218d09152651953785988c75c57578d2c743e62083e653dd4da0d5\"}],\"hardFail\":false,\"id\":\"8651105b7f39be78\",\"remediationActions\":[\"restore_last_checkpoint\",\"rerender_ticket_no_agent\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"LEDGER_INCONSISTENT\",\"summary\":\"requirements_changed_without_update_event; missing_done_citations:REQ-2\"},{\"createdAt\":402,\"detectorId\":\"detector.loop_stuck\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/loop_signal.json\",\"sha256\":\"9c5f0590231a6b605ddbd1b20ce33d14c030d2fd72e836a03200ef0543333379\"}],\"hardFail\":true,\"id\":\"4f6f1d35b7f7896d\",\"remediationActions\":[\"generate_diagnosis_report\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"LOOP_STUCK\",\"summary\":\"repeated blocker pattern x3: {\\\"delta_fingerprint\\\":\\\"same\\\",\\\"signal_set\\\":[\\\"ADAPTER_DOWN\\\",\\\"REPO_DRIFT\\\"]}\"}],\"evidence_refs\":[{\"path\":\"/tmp/promptops/S12/diagnose/report_input.json\",\"sha256\":\"161fba8d4d5318f7fae65ea073ff11f352437ebe4f1344c1ffdaaf3db050b208\"}],\"last_known_checkpoint_id\":\"cp-004\",\"next_allowed_actions\":[{\"commandPlan\":[\"git fetch --all --prune --tags\",\"git status --porcelain=v1 --branch\",\"git rev-list --left-right --count HEAD...origin/main\"],\"id\":\"re_run_min_sync_check\",\"mutatesState\":false,\"requiresConfirmation\":false,\"title\":\"Re-run Minimal Sync Check\"},{\"commandPlan\":[\"pwd\",\"echo \\\"$PROMPTOPS_REPO\\\"\",\"git rev-parse --show-toplevel\",\"git worktree list --porcelain\",\"git status --porcelain=v1 --branch\",\"git fetch --all --prune --tags\",\"git rev-list --left-right --count HEAD...origin/main\",\"git rev-parse --abbrev-ref HEAD\",\"git log --oneline -5\",\"git prune --dry-run\",\"git fsck --no-reflogs\"],\"id\":\"re_run_preflight_full\",\"mutatesState\":false,\"requiresConfirmation\":false,\"title\":\"Re-run Preflight (full)\"},{\"commandPlan\":[\"restore from checkpoint artifact and re-evaluate health\"],\"id\":\"restore_last_checkpoint\",\"mutatesState\":true,\"requiresConfirmation\":true,\"title\":\"Restore to Last Checkpoint\"}],\"run_id\":\"run-s12-004\",\"safe_mode_compliant\":true,\"status\":\"FAIL\",\"violations\":[]}",
+    "reportHash": "000cac8318c3b53722d065616297f958adad013848760b56ac1e7c0e8d323436"
+  },
+  "violating_diagnosis": {
+    "runId": "run-s12-004",
+    "status": "FAIL",
+    "activeSignals": [
+      {
+        "id": "83de21c200db86c9",
+        "signalId": "REPO_DRIFT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.repo_drift",
+        "summary": "repo drift detected (statusSummary)",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/repo_signal.json",
+            "sha256": "55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609"
+          }
+        ],
+        "remediationActions": [
+          "re_run_min_sync_check",
+          "re_run_preflight_full",
+          "restore_last_checkpoint"
+        ],
+        "hardFail": false,
+        "createdAt": 400
+      }
+    ],
+    "lastKnownCheckpointId": "cp-004",
+    "nextAllowedActions": [
+      {
+        "id": "re_run_min_sync_check",
+        "title": "Re-run Minimal Sync Check",
+        "mutatesState": false,
+        "requiresConfirmation": false,
+        "commandPlan": [
+          "git fetch --all --prune --tags",
+          "git status --porcelain=v1 --branch",
+          "git rev-list --left-right --count HEAD...origin/main"
+        ]
+      },
+      {
+        "id": "re_run_preflight_full",
+        "title": "Re-run Preflight (full)",
+        "mutatesState": false,
+        "requiresConfirmation": false,
+        "commandPlan": [
+          "pwd",
+          "echo \"$PROMPTOPS_REPO\"",
+          "git rev-parse --show-toplevel",
+          "git worktree list --porcelain",
+          "git status --porcelain=v1 --branch",
+          "git fetch --all --prune --tags",
+          "git rev-list --left-right --count HEAD...origin/main",
+          "git rev-parse --abbrev-ref HEAD",
+          "git log --oneline -5",
+          "git prune --dry-run",
+          "git fsck --no-reflogs"
+        ]
+      },
+      {
+        "id": "restore_last_checkpoint",
+        "title": "Restore to Last Checkpoint",
+        "mutatesState": true,
+        "requiresConfirmation": true,
+        "commandPlan": [
+          "restore from checkpoint artifact and re-evaluate health"
+        ]
+      }
+    ],
+    "evidenceRefs": [],
+    "safeModeCompliant": false,
+    "violations": [
+      "agent_invocation_detected_in_safe_mode"
+    ],
+    "reportCanonical": "{\"active_signals\":[{\"createdAt\":400,\"detectorId\":\"detector.repo_drift\",\"evidenceRefs\":[{\"path\":\"/tmp/promptops/S12/diagnose/repo_signal.json\",\"sha256\":\"55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609\"}],\"hardFail\":false,\"id\":\"83de21c200db86c9\",\"remediationActions\":[\"re_run_min_sync_check\",\"re_run_preflight_full\",\"restore_last_checkpoint\"],\"severity\":\"FAIL\",\"severityRank\":2,\"signalId\":\"REPO_DRIFT\",\"summary\":\"repo drift detected (statusSummary)\"}],\"evidence_refs\":[],\"last_known_checkpoint_id\":\"cp-004\",\"next_allowed_actions\":[{\"commandPlan\":[\"git fetch --all --prune --tags\",\"git status --porcelain=v1 --branch\",\"git rev-list --left-right --count HEAD...origin/main\"],\"id\":\"re_run_min_sync_check\",\"mutatesState\":false,\"requiresConfirmation\":false,\"title\":\"Re-run Minimal Sync Check\"},{\"commandPlan\":[\"pwd\",\"echo \\\"$PROMPTOPS_REPO\\\"\",\"git rev-parse --show-toplevel\",\"git worktree list --porcelain\",\"git status --porcelain=v1 --branch\",\"git fetch --all --prune --tags\",\"git rev-list --left-right --count HEAD...origin/main\",\"git rev-parse --abbrev-ref HEAD\",\"git log --oneline -5\",\"git prune --dry-run\",\"git fsck --no-reflogs\"],\"id\":\"re_run_preflight_full\",\"mutatesState\":false,\"requiresConfirmation\":false,\"title\":\"Re-run Preflight (full)\"},{\"commandPlan\":[\"restore from checkpoint artifact and re-evaluate health\"],\"id\":\"restore_last_checkpoint\",\"mutatesState\":true,\"requiresConfirmation\":true,\"title\":\"Restore to Last Checkpoint\"}],\"run_id\":\"run-s12-004\",\"safe_mode_compliant\":false,\"status\":\"FAIL\",\"violations\":[\"agent_invocation_detected_in_safe_mode\"]}",
+    "reportHash": "8f2b6c41bb439288a2250e3064808988dffef7f1134bc00110dad3b907cdd41e"
+  },
+  "loop_signal": {
+    "id": "4f6f1d35b7f7896d",
+    "signalId": "LOOP_STUCK",
+    "severity": "FAIL",
+    "severityRank": 2,
+    "detectorId": "detector.loop_stuck",
+    "summary": "repeated blocker pattern x3: {\"delta_fingerprint\":\"same\",\"signal_set\":[\"ADAPTER_DOWN\",\"REPO_DRIFT\"]}",
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/diagnose/loop_signal.json",
+        "sha256": "9c5f0590231a6b605ddbd1b20ce33d14c030d2fd72e836a03200ef0543333379"
+      }
+    ],
+    "remediationActions": [
+      "generate_diagnosis_report"
+    ],
+    "hardFail": true,
+    "createdAt": 402
+  },
+  "worktree_signal": {
+    "id": "0fd4e649876e2d9d",
+    "signalId": "WORKTREE_DRIFT",
+    "severity": "FAIL",
+    "severityRank": 2,
+    "detectorId": "detector.worktree_drift",
+    "summary": "worktree drift expected=/repo current=/unexpected",
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/diagnose/worktree_signal.json",
+        "sha256": "30a0db492ab7b9a09d81ffda0fabb665fb1d72eacb169d9e3e89ba9dd5621ea0"
+      }
+    ],
+    "remediationActions": [
+      "re_run_preflight_full",
+      "restore_last_checkpoint"
+    ],
+    "hardFail": true,
+    "createdAt": 403
+  },
+  "dashboard": {
+    "status": "FAIL",
+    "activeSignals": [
+      {
+        "id": "83de21c200db86c9",
+        "signalId": "REPO_DRIFT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.repo_drift",
+        "summary": "repo drift detected (statusSummary)",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/repo_signal.json",
+            "sha256": "55f36aa3789f085b84874711f54707fec002a667e968ad6a03a8c5ba191f1609"
+          }
+        ],
+        "remediationActions": [
+          "re_run_min_sync_check",
+          "re_run_preflight_full",
+          "restore_last_checkpoint"
+        ],
+        "hardFail": false,
+        "createdAt": 400
+      },
+      {
+        "id": "8651105b7f39be78",
+        "signalId": "LEDGER_INCONSISTENT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.ledger_drift",
+        "summary": "requirements_changed_without_update_event; missing_done_citations:REQ-2",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/ledger_signal.json",
+            "sha256": "4882cd9ada218d09152651953785988c75c57578d2c743e62083e653dd4da0d5"
+          }
+        ],
+        "remediationActions": [
+          "restore_last_checkpoint",
+          "rerender_ticket_no_agent"
+        ],
+        "hardFail": false,
+        "createdAt": 401
+      },
+      {
+        "id": "4f6f1d35b7f7896d",
+        "signalId": "LOOP_STUCK",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.loop_stuck",
+        "summary": "repeated blocker pattern x3: {\"delta_fingerprint\":\"same\",\"signal_set\":[\"ADAPTER_DOWN\",\"REPO_DRIFT\"]}",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/loop_signal.json",
+            "sha256": "9c5f0590231a6b605ddbd1b20ce33d14c030d2fd72e836a03200ef0543333379"
+          }
+        ],
+        "remediationActions": [
+          "generate_diagnosis_report"
+        ],
+        "hardFail": true,
+        "createdAt": 402
+      },
+      {
+        "id": "0fd4e649876e2d9d",
+        "signalId": "WORKTREE_DRIFT",
+        "severity": "FAIL",
+        "severityRank": 2,
+        "detectorId": "detector.worktree_drift",
+        "summary": "worktree drift expected=/repo current=/unexpected",
+        "evidenceRefs": [
+          {
+            "path": "/tmp/promptops/S12/diagnose/worktree_signal.json",
+            "sha256": "30a0db492ab7b9a09d81ffda0fabb665fb1d72eacb169d9e3e89ba9dd5621ea0"
+          }
+        ],
+        "remediationActions": [
+          "re_run_preflight_full",
+          "restore_last_checkpoint"
+        ],
+        "hardFail": true,
+        "createdAt": 403
+      }
+    ],
+    "actionsBySignal": {
+      "REPO_DRIFT": [
+        {
+          "id": "re_run_min_sync_check",
+          "title": "Re-run Minimal Sync Check",
+          "mutatesState": false,
+          "requiresConfirmation": false,
+          "commandPlan": [
+            "git fetch --all --prune --tags",
+            "git status --porcelain=v1 --branch",
+            "git rev-list --left-right --count HEAD...origin/main"
+          ]
+        },
+        {
+          "id": "re_run_preflight_full",
+          "title": "Re-run Preflight (full)",
+          "mutatesState": false,
+          "requiresConfirmation": false,
+          "commandPlan": [
+            "pwd",
+            "echo \"$PROMPTOPS_REPO\"",
+            "git rev-parse --show-toplevel",
+            "git worktree list --porcelain",
+            "git status --porcelain=v1 --branch",
+            "git fetch --all --prune --tags",
+            "git rev-list --left-right --count HEAD...origin/main",
+            "git rev-parse --abbrev-ref HEAD",
+            "git log --oneline -5",
+            "git prune --dry-run",
+            "git fsck --no-reflogs"
+          ]
+        },
+        {
+          "id": "restore_last_checkpoint",
+          "title": "Restore to Last Checkpoint",
+          "mutatesState": true,
+          "requiresConfirmation": true,
+          "commandPlan": [
+            "restore from checkpoint artifact and re-evaluate health"
+          ]
+        }
+      ],
+      "LEDGER_INCONSISTENT": [
+        {
+          "id": "restore_last_checkpoint",
+          "title": "Restore to Last Checkpoint",
+          "mutatesState": true,
+          "requiresConfirmation": true,
+          "commandPlan": [
+            "restore from checkpoint artifact and re-evaluate health"
+          ]
+        },
+        {
+          "id": "rerender_ticket_no_agent",
+          "title": "Re-render Ticket (no agent)",
+          "mutatesState": true,
+          "requiresConfirmation": true,
+          "commandPlan": [
+            "compile ticket from pinned template + settings without invoking agent"
+          ]
+        }
+      ],
+      "LOOP_STUCK": [
+        {
+          "id": "generate_diagnosis_report",
+          "title": "Generate Diagnosis Report",
+          "mutatesState": false,
+          "requiresConfirmation": false,
+          "commandPlan": [
+            "collect health signals",
+            "render deterministic diagnosis report"
+          ]
+        }
+      ],
+      "WORKTREE_DRIFT": [
+        {
+          "id": "re_run_preflight_full",
+          "title": "Re-run Preflight (full)",
+          "mutatesState": false,
+          "requiresConfirmation": false,
+          "commandPlan": [
+            "pwd",
+            "echo \"$PROMPTOPS_REPO\"",
+            "git rev-parse --show-toplevel",
+            "git worktree list --porcelain",
+            "git status --porcelain=v1 --branch",
+            "git fetch --all --prune --tags",
+            "git rev-list --left-right --count HEAD...origin/main",
+            "git rev-parse --abbrev-ref HEAD",
+            "git log --oneline -5",
+            "git prune --dry-run",
+            "git fsck --no-reflogs"
+          ]
+        },
+        {
+          "id": "restore_last_checkpoint",
+          "title": "Restore to Last Checkpoint",
+          "mutatesState": true,
+          "requiresConfirmation": true,
+          "commandPlan": [
+            "restore from checkpoint artifact and re-evaluate health"
+          ]
+        }
+      ]
+    },
+    "timelineDeltas": [
+      {
+        "field": "statusSummary",
+        "before": "## main...origin/main",
+        "after": "## main...origin/main\n M docs/sprints/S12/evidence/INDEX.md"
+      }
+    ],
+    "auditFlags": [
+      "PROTECTED_TEMPLATE_OVERRIDE_USED",
+      "REPEATED_FAILURES:2",
+      "MANUAL_AGENT_SWITCHES:1"
+    ]
+  },
+  "audit_flags": [
+    "PROTECTED_TEMPLATE_OVERRIDE_USED",
+    "REPEATED_FAILURES:2",
+    "MANUAL_AGENT_SWITCHES:1"
+  ]
+}

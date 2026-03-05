@@ -1,0 +1,13 @@
+HTML markers
+- Unhandled Runtime Error
+- Application error
+- Hydration failed
+- Cannot read properties of undefined
+- TypeError:
+
+stderr markers
+- ERROR
+- UnhandledPromiseRejection
+- EADDRINUSE
+- ECONNREFUSED
+- FATAL

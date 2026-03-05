@@ -1,0 +1,8 @@
+CMD: maintainability budget evaluation (existing files net new <=120, docs exempt)
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+CHANGED_NUMSTAT:
+1	0	docs/backlog/README.md
+1	0	docs/sprints/README.md
+VIOLATIONS:
+RESULT=PASS
+EXIT_CODE=0

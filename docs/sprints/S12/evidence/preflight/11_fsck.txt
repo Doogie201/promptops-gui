@@ -1,0 +1,13 @@
+CMD: git fsck --no-reflogs
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+dangling commit 27915661e8eda3f5dac35d4ab2d3158c4b53eaed
+dangling commit 65227498ef4d7aaa82a6339912ca6679f3942307
+dangling commit b1944f1fd36789c9ad9f560fec417a34d9117aee
+dangling commit 6b16fb3236456d3efb9e6ebd0aba63546908380f
+dangling commit 8688b32df3640ee34b303b9b7b6a8308616e54e5
+dangling commit 1f0ab4f31c7d651893ec6e651c5af60c3863ea35
+dangling commit f77aad9207bd54a37154f041602ee5e20b39afcb
+dangling commit 0f7b32f940efbac8ac112a5f4c486c7522b6932e
+dangling commit 5b6c87d39d4ec45ec84160fecb4807961710836e
+dangling commit 554fe3445fb79061fb73021aa57b327acdb74712
+EXIT_CODE=0

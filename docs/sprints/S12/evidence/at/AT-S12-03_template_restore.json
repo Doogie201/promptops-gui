@@ -1,0 +1,38 @@
+{
+  "missing_pin": {
+    "sprintId": "S12-health-drift-detection",
+    "runId": "run-s12-003",
+    "pinnedVersionId": "v5",
+    "expectedTemplateHash": "abc123",
+    "pinnedTemplateExists": false
+  },
+  "drift_signal": {
+    "id": "c6db5fb638841987",
+    "signalId": "TEMPLATE_DRIFT",
+    "severity": "FAIL",
+    "severityRank": 2,
+    "detectorId": "detector.template_drift",
+    "summary": "missing pinned template for run=run-s12-003",
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/drift/template_pin_missing.json",
+        "sha256": "6759b00b57b0e6e5f3f85eab83dffe794af16d09c22fe57ee07640a0fc958f25"
+      }
+    ],
+    "remediationActions": [
+      "reindex_evidence",
+      "rerender_ticket_no_agent"
+    ],
+    "hardFail": true,
+    "createdAt": 300
+  },
+  "restored_pin": {
+    "sprintId": "S12-health-drift-detection",
+    "runId": "run-s12-003",
+    "pinnedVersionId": "v5",
+    "expectedTemplateHash": "abc123",
+    "pinnedTemplateExists": true,
+    "pinnedTemplateHash": "abc123"
+  },
+  "post_restore_signal": null
+}
