@@ -1,0 +1,2 @@
+COMMAND: gh api graphql ultra threads snapshot A
+{"data":{"repository":{"pullRequest":{"reviewThreads":{"nodes":[{"id":"PRRT_kwDORZ8p_M5yRYHP","isResolved":true},{"id":"PRRT_kwDORZ8p_M5yRYHQ","isResolved":true}]},"comments":{"nodes":[{"author":{"login":"codecov"}},{"author":{"login":"codecov"}},{"author":{"login":"Doogie201"}}]}}}}}EXIT_CODE: 0

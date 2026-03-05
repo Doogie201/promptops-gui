@@ -1,0 +1,3 @@
+COMMAND: whitelist eval (changed+untracked)
+
+EXIT_CODE: 0

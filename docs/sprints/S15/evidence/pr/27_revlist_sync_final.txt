@@ -1,0 +1,4 @@
+COMMAND: git fetch --all --prune --tags && git rev-list --left-right --count HEAD...origin/sprint/S15-terminal-panel
+0	0
+
+EXIT_CODE: 0

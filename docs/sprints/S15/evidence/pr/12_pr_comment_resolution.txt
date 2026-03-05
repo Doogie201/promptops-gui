@@ -1,0 +1,4 @@
+COMMAND: gh pr comment 22 ...
+https://github.com/Doogie201/promptops-gui/pull/22#issuecomment-4003447535
+
+EXIT_CODE: 0

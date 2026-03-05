@@ -1,0 +1,71 @@
+{
+  "terminal_result": {
+    "tool": "terminal",
+    "reasonCode": "NONE",
+    "status": "PASS",
+    "message": "Terminal command executed through shared executor.",
+    "receiptPaths": {
+      "terminal_commands": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-01-terminal/S15-terminal-panel_terminal_AT-S15-01-terminal_20260305T040000Z/terminal_commands.json",
+      "terminal_outputs": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-01-terminal/S15-terminal-panel_terminal_AT-S15-01-terminal_20260305T040000Z/terminal_outputs.ndjson",
+      "terminal_events": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-01-terminal/S15-terminal-panel_terminal_AT-S15-01-terminal_20260305T040000Z/terminal_events.ndjson",
+      "terminal_eval": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-01-terminal/S15-terminal-panel_terminal_AT-S15-01-terminal_20260305T040000Z/terminal_eval.md",
+      "sync_gate_durable": "/tmp/promptops/S15/test_workspace/durable/out_of_sync/AT-S15-01-terminal_sync_gate/S15-terminal-panel_out_of_sync_AT-S15-01-terminal_sync_gate_20260305T040000Z"
+    },
+    "summary": {
+      "command": "git status --porcelain=v1 --branch",
+      "blocked": false,
+      "continuity_hash": "1256141160ad71b6a6df312c342bc531b0df8079cbe7b8249c584da4729ba964",
+      "sync_gate_status": "PASS"
+    }
+  },
+  "gui_result": {
+    "tool": "out_of_sync",
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "message": "No out-of-sync signals detected.",
+    "receiptPaths": {
+      "radar_signals": "/tmp/promptops/S15/test_workspace/staging/out_of_sync/AT-S15-01-gui/S15-terminal-panel_out_of_sync_AT-S15-01-gui_20260305T040000Z/radar_signals.json",
+      "repair_actions": "/tmp/promptops/S15/test_workspace/staging/out_of_sync/AT-S15-01-gui/S15-terminal-panel_out_of_sync_AT-S15-01-gui_20260305T040000Z/repair_actions.json",
+      "diagnosis_report": "/tmp/promptops/S15/test_workspace/staging/out_of_sync/AT-S15-01-gui/S15-terminal-panel_out_of_sync_AT-S15-01-gui_20260305T040000Z/diagnosis_report.md"
+    },
+    "summary": {
+      "signal_count": 0,
+      "continuity_hash": "fa2bf59211484f5cd5d143b5eddddae27c38be6f5b1ba38b6405bc6cbd4a9edd"
+    }
+  },
+  "terminal_record_keys": [
+    "cmd",
+    "cwd",
+    "end_ts",
+    "exit_code",
+    "id",
+    "start_ts",
+    "stderr",
+    "stderr_path",
+    "stdout",
+    "stdout_path"
+  ],
+  "gui_record_keys": [
+    "cmd",
+    "cwd",
+    "end_ts",
+    "exit_code",
+    "id",
+    "start_ts",
+    "stderr",
+    "stderr_path",
+    "stdout",
+    "stdout_path"
+  ],
+  "terminal_durable": "/tmp/promptops/S15/test_workspace/durable/terminal/AT-S15-01-terminal/S15-terminal-panel_terminal_AT-S15-01-terminal_20260305T040000Z",
+  "gui_durable": "/tmp/promptops/S15/test_workspace/durable/out_of_sync/AT-S15-01-gui/S15-terminal-panel_out_of_sync_AT-S15-01-gui_20260305T040000Z",
+  "invoked": [
+    "radar_status",
+    "radar_head",
+    "radar_ahead_behind",
+    "terminal_command",
+    "radar_status",
+    "radar_head",
+    "radar_ahead_behind"
+  ]
+}

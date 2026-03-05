@@ -1,0 +1,4 @@
+COMMAND: bash -lc 'start=$(date +%s); sleep 190; end=$(date +%s); echo elapsed_seconds=$((end-start))'
+elapsed_seconds=190
+
+EXIT_CODE: 0

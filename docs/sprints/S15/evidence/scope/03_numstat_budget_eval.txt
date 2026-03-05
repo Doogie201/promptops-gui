@@ -1,0 +1,11 @@
+COMMAND: git diff --numstat
+1	0	docs/backlog/README.md
+1	0	docs/sprints/README.md
+25	0	src/s10/operator_tools.ts
+
+Existing-file net additions budget (<=120):
+OK docs/backlog/README.md net=1 (+1/-0)
+OK docs/sprints/README.md net=1 (+1/-0)
+OK src/s10/operator_tools.ts net=25 (+25/-0)
+BUDGET_STATUS: PASS
+EXIT_CODE: 0

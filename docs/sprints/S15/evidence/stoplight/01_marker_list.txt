@@ -1,0 +1,16 @@
+HTML / Injection markers:
+- dangerouslySetInnerHTML
+
+Determinism markers:
+- Date.now(
+- Math.random(
+
+Client storage markers:
+- localStorage(
+- sessionStorage(
+
+Hardcoded path markers:
+- PROMPTOPS_REPO=
+- /Volumes/
+- /Users/
+- ~/

@@ -511,6 +511,35 @@ function outOfSyncSpecs(): CommandSpec[] {
   ];
 }
 
+export function operatorExecutorAllowedSpecs(repo = 'Doogie201/promptops-gui'): CommandSpec[] {
+  return [
+    ...preflightCommandSpecs(),
+    ...gatesSpecs(),
+    ...diffSpecs(),
+    ...outOfSyncSpecs(),
+    openPrSpec(repo),
+    prViewSpec(repo, 1),
+    threadQuerySpec(repo, 1, 'thread_query'),
+    threadResolveSpec(repo, 'thread_id'),
+  ];
+}
+
+export function operatorExecutorCommandFamilies(repo = 'Doogie201/promptops-gui'): Record<string, string[]> {
+  const specs = operatorExecutorAllowedSpecs(repo);
+  const map = new Map<string, Set<string>>();
+  for (const spec of specs) {
+    const firstArg = spec.args[0] ?? '';
+    const existing = map.get(spec.command) ?? new Set<string>();
+    existing.add(firstArg);
+    map.set(spec.command, existing);
+  }
+  const output: Record<string, string[]> = {};
+  for (const [command, firstArgs] of map.entries()) {
+    output[command] = [...firstArgs].sort();
+  }
+  return output;
+}
+
 function evaluatePreflight(repoRoot: string, records: CommandRecord[]): {
   pass: boolean;
   code: HardStopCode;

@@ -1,0 +1,7 @@
+COMMAND: function length line-span spot check
+src/s15/terminal_panel.ts runTerminalPanelCommand lines 143-187 => 45
+src/s15/terminal_panel.ts finalizeBlocked lines 263-339 => 77
+src/s15/terminal_panel.ts finalizeExecuted lines 353-389 => 37
+src/s10/operator_tools.ts operatorExecutorCommandFamilies lines 514-537 => 24
+
+EXIT_CODE: 0

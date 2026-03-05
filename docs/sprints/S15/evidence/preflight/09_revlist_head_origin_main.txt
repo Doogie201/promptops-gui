@@ -1,0 +1,7 @@
+COMMAND: git rev-list --left-right --count HEAD...origin/main
+STDOUT:
+0	0
+
+STDERR:
+
+EXIT_CODE: 0

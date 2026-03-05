@@ -1,0 +1,8 @@
+COMMAND: git checkout main
+STDOUT:
+Your branch is up to date with 'origin/main'.
+
+STDERR:
+Switched to branch 'main'
+
+EXIT_CODE: 0

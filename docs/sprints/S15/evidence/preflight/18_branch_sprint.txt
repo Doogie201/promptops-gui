@@ -1,0 +1,4 @@
+COMMAND: git rev-parse --abbrev-ref HEAD
+sprint/S15-terminal-panel
+
+EXIT_CODE: 0

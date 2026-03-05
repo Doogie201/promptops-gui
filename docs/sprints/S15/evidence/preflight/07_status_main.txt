@@ -1,0 +1,7 @@
+COMMAND: git status --porcelain=v1 --branch
+STDOUT:
+## main...origin/main
+
+STDERR:
+
+EXIT_CODE: 0

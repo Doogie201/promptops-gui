@@ -1,0 +1,40 @@
+{
+  "result": {
+    "tool": "terminal",
+    "reasonCode": "WHITELIST_VIOLATION",
+    "status": "HARD_STOP",
+    "message": "Disallowed command class: rm",
+    "receiptPaths": {
+      "terminal_commands": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_commands.json",
+      "terminal_outputs": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_outputs.ndjson",
+      "terminal_events": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_events.ndjson",
+      "terminal_eval": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_eval.md"
+    },
+    "summary": {
+      "command": "rm -rf /tmp/unsafe",
+      "blocked": true,
+      "continuity_hash": "5b226157b5fa48e2d547a90783f5a5a8dc996a628a21762d0761310435c205f8",
+      "sync_gate_status": "SKIPPED"
+    }
+  },
+  "event": {
+    "seq": 1,
+    "type": "terminal_command_blocked",
+    "command": "rm -rf /tmp/unsafe",
+    "reason": "Disallowed command class: rm",
+    "reasonCode": "WHITELIST_VIOLATION"
+  },
+  "record": {
+    "id": "terminal_command",
+    "cmd": "rm -rf /tmp/unsafe",
+    "cwd": "/tmp/promptops/S15/test_workspace/mock-repo",
+    "stdout": "",
+    "stderr": "Disallowed command class: rm",
+    "exit_code": 126,
+    "start_ts": "2026-03-05T08:59:00.921Z",
+    "end_ts": "2026-03-05T08:59:00.921Z",
+    "stdout_path": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_command.stdout.txt",
+    "stderr_path": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_command.stderr.txt"
+  },
+  "durable": "/tmp/promptops/S15/test_workspace/durable/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z"
+}

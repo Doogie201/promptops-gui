@@ -1,0 +1,7 @@
+COMMAND: git rev-parse --abbrev-ref HEAD
+STDOUT:
+main
+
+STDERR:
+
+EXIT_CODE: 0

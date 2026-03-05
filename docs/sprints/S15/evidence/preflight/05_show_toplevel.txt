@@ -1,0 +1,7 @@
+COMMAND: git rev-parse --show-toplevel
+STDOUT:
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+
+STDERR:
+
+EXIT_CODE: 0

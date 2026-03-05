@@ -1,0 +1,6 @@
+COMMAND: rg -n 'localStorage\(|sessionStorage\(' src/s10 src/s15 tests/s15 docs/sprints/S15 docs/backlog/README.md docs/sprints/README.md || true
+STDOUT:
+
+STDERR:
+
+EXIT_CODE: 0

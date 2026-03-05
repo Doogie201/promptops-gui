@@ -1,0 +1,10 @@
+COMMAND: git worktree list --porcelain
+STDOUT:
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD d4ad141290f40bd570c54545fb64ee1eea094bc3
+branch refs/heads/main
+
+
+STDERR:
+
+EXIT_CODE: 0

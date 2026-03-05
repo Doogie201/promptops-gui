@@ -1,0 +1,7 @@
+COMMAND: git stash push -u -m "S15-preflight-recap"
+STDOUT:
+Saved working directory and index state On sprint/S15-terminal-panel: S15-preflight-recap
+
+STDERR:
+
+EXIT_CODE: 0
