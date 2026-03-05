@@ -1,0 +1,55 @@
+{
+  "phases": [
+    {
+      "phase": "preflight",
+      "status": "complete",
+      "eventCount": 3
+    },
+    {
+      "phase": "intake",
+      "status": "complete",
+      "eventCount": 3
+    },
+    {
+      "phase": "agent_invocation",
+      "status": "complete",
+      "eventCount": 4
+    },
+    {
+      "phase": "switching",
+      "status": "complete",
+      "eventCount": 3
+    },
+    {
+      "phase": "evidence",
+      "status": "complete",
+      "eventCount": 3
+    },
+    {
+      "phase": "gates",
+      "status": "complete",
+      "eventCount": 5
+    },
+    {
+      "phase": "closeout",
+      "status": "complete",
+      "eventCount": 4
+    }
+  ],
+  "evidenceCount": 5,
+  "lastCheckpointId": "cp-003",
+  "activeAgent": "claude",
+  "agentTimeline": [
+    {
+      "seq": 10,
+      "agent": "claude",
+      "mode": "auto",
+      "reason": "context exhausted"
+    }
+  ],
+  "activePhase": "closeout",
+  "nextDecisionReason": null,
+  "totalEvents": 25,
+  "hardStopped": false,
+  "runComplete": true
+}

@@ -1,0 +1,3 @@
+=== git rev-list ===
+2	0
+EXIT_CODE=0

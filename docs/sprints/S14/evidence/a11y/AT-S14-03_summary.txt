@@ -1,0 +1,7 @@
+=== AT-S14-03: Reduced Motion Summary ===
+
+Dashboard animations: 0ms under reduced motion: PASS
+Dashboard transitions: 0ms under reduced motion: PASS
+Dashboard pulse: none under reduced motion: PASS
+ARIA live attributes: correctly assigned: PASS
+Narration text unchanged by motion setting: PASS

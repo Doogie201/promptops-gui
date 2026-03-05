@@ -1,0 +1,234 @@
+[
+  {
+    "path": "docs/sprints/S13/evidence/closeout/00_timestamp.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "26c7f221c4a20d8357c973271bbe7cb5817f5a46773d3fd4a36b1123892fd57d",
+    "bytes": 16
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/01_pwd.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "118260561dd88fb86d09b112f666cfa419b39ce68dcf664c1a6bba2da2fcd522",
+    "bytes": 67
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/02_repo.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "d56a71a6fde763989120bbe58e02672e944dba36c700c3997ddb36a1bb197062",
+    "bytes": 78
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/03_toplevel.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "b2e0f5c7c35ac275123d9c6291c257b2fe6674c64d9637492599cebb770177d3",
+    "bytes": 93
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/04_worktree.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "0e35c9d17e7a9d1192b7ea2440a90ad1b4485ce14635f12e738d846697438058",
+    "bytes": 195
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/05_status.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "802ac2f91beecd79bb81bedbe23b2de62885b33e5d15d3355d12ecc06e081041",
+    "bytes": 99
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/06_fetch.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "76f43158715049aa17a29ed4f5a8baa005a5b545bf423fe268d2990fdbe1a120",
+    "bytes": 30
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/07_revlist.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "7995341eaefe7e104785cd06673d60c6f30222eccae9792fd703973d54239c32",
+    "bytes": 37
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/08_branch.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "009741c39a1eea2872cd912299861ce24514203e4d4692976e84edcd7dd1ed03",
+    "bytes": 80
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/09_log.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "c8b0ffaedc9ef9a4275837203b143cb5f74b821cf1a483bf96721262c64453f0",
+    "bytes": 342
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/10_prune.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "48b3e0bbce475c2274c5d91e940ade350c131a027a8c77da72470579e2d59553",
+    "bytes": 3506
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/01_preflight/11_fsck.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "eb1f43d4a232f53dabad024fb1e480202f009172cb8c5b662b06a74e9a820258",
+    "bytes": 669
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/02_pr_state/01_pr_view.json",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "5ad702fbb7f0d2b5084ef2ed8cf7825fe1fd310655a221f631a8d636e26c0246",
+    "bytes": 2587
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/02_pr_state/02_pr_files.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "5772540186d0b08e0d722b35a3a201f4dfe61893038eedfcf87a511252a73823",
+    "bytes": 1262
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/03_threads/01_threads.json",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "6e8204e65c1db008a76e8a2e143ebddf8ed1231300d22239a06298e57803266d",
+    "bytes": 97
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/04_checks/01_fetch_before.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/04_checks/02_revlist_before.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "4b14c7b5549e560a68e9c4daaae3fdb8a28fe32d0247050325e7c5a3b2b3271c",
+    "bytes": 4
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/04_checks/03_checks_before.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "e02eaed67b3d46c92194c572ed73176ac38e9506c037f0c69a7faafa828fd82d",
+    "bytes": 765
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/04_checks/04_fetch_after.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/04_checks/05_revlist_after.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "4b14c7b5549e560a68e9c4daaae3fdb8a28fe32d0247050325e7c5a3b2b3271c",
+    "bytes": 4
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/04_checks/06_checks_after.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "e02eaed67b3d46c92194c572ed73176ac38e9506c037f0c69a7faafa828fd82d",
+    "bytes": 765
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/06_merge/01_merge.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "1ca4a13146b2891c0e462123ac0cb848f92e6221f18b870a1b78c232d1956c35",
+    "bytes": 12
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/06_merge/02_pr_post_merge.json",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "532939cb246bad5d6abfde6724a3e893ade89e1e1e4e3eb6e8da7c372feef8ef",
+    "bytes": 211
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/07_postmerge/01_checkout.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "e51f1dd7542d908a17fa18066b637016c51c0ab97a7ca6ec8890df5b16dc1c46",
+    "bytes": 46
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/07_postmerge/02_fetch.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/07_postmerge/03_pull.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "05c355f17cb870358f5ac013dfb195a9dc77ab123b7707241e8bac29ee995d6e",
+    "bytes": 3452
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/07_postmerge/04_status.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "5fbcb2990ad25e368c12219bf3ddca36e464d044e7acac16696fa8cd54159185",
+    "bytes": 22
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/07_postmerge/05_revlist.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "4b14c7b5549e560a68e9c4daaae3fdb8a28fe32d0247050325e7c5a3b2b3271c",
+    "bytes": 4
+  },
+  {
+    "path": "docs/sprints/S13/evidence/closeout/07_postmerge/06_log.txt",
+    "class": "evidence-artifact",
+    "disposition": "keep",
+    "reason": "S13 closeout durable receipt generated post-merge",
+    "sha256": "60e903d2231181edc4f8d0bf84995a5b893c34c945223e11a307400f8ab89682",
+    "bytes": 258
+  }
+]

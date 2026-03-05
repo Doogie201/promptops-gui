@@ -13,3 +13,4 @@
 - [S11 - Template Lifecycle Manager](./S11/README.md)
 - [S12 - Health & Drift Detection](./S12/README.md)
 - [S13 - Design System v1](./S13/README.md)
+- [S14 - Jarvis Mode](./S14/README.md)

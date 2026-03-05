@@ -1,0 +1,7 @@
+=== git log ===
+229dc2a [pre-commit.ci] auto fixes from pre-commit.com hooks
+ddfbd35 [S13] ux : design system v1 — tokens, themes, motion, lighting, 3D-ready scene
+4d3cffd [S12] perf : health & drift detection (#19)
+b48a491 docs(s17): refresh postcheck command stream
+a83aae3 docs(s17): add postcheck-only verification receipts
+EXIT_CODE=0

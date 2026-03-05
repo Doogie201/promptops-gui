@@ -1,0 +1,25 @@
+Preflight.
+Checkpoint: cp-001.
+OK.
+Intake.
+Evidence: 1.
+OK.
+Agent.
+Evidence: 2.
+Checkpoint: cp-002.
+Switch: claude (auto).
+Switch.
+OK.
+OK.
+Evidence.
+Evidence: 5.
+OK.
+Gates.
+build: PASS.
+test: PASS.
+lint: PASS.
+OK.
+Closeout.
+Checkpoint: cp-003.
+Complete.
+Done.

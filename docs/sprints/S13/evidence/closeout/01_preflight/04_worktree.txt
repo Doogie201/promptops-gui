@@ -1,0 +1,6 @@
+=== git worktree list --porcelain ===
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD 229dc2a5d8aea03b56fc4064e09ef0299766590d
+branch refs/heads/sprint/S13-design-system-v1
+
+EXIT_CODE=0
