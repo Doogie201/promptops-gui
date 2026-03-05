@@ -1,0 +1,5 @@
+STRATEGY=A_precommit_exclude_S11_docs
+RATIONALE=pre-commit.ci rewrites are from pre-commit-hooks text normalizers; apply narrow per-hook exclude for docs/sprints/S11 only
+TARGET_HOOKS=trailing-whitespace,end-of-file-fixer
+PATH_SCOPE=^docs/sprints/S11/
+EXIT_CODE=0

@@ -1,0 +1,64 @@
+{
+  "receipts": [
+    {
+      "file": "01_pwd.txt",
+      "cmd": "pwd",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "02_echo_PROMPTOPS_REPO.txt",
+      "cmd": "echo \"$PROMPTOPS_REPO\"",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "03_show_toplevel.txt",
+      "cmd": "git rev-parse --show-toplevel",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "04_worktree_list.txt",
+      "cmd": "git worktree list --porcelain",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "05_prune_dry_run.txt",
+      "cmd": "git prune --dry-run",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "06_fsck.txt",
+      "cmd": "git fsck --no-reflogs",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "07_fetch.txt",
+      "cmd": "git fetch --all --prune --tags",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "08_branch.txt",
+      "cmd": "git rev-parse --abbrev-ref HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "09_status.txt",
+      "cmd": "git status --porcelain=v1 --branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    },
+    {
+      "file": "10_log5.txt",
+      "cmd": "git log --oneline -5",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "exit_code": 0
+    }
+  ]
+}

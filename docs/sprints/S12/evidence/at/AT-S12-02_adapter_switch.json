@@ -1,0 +1,41 @@
+{
+  "adapter_down_signal": {
+    "id": "1a8b72ca527bf8aa",
+    "signalId": "ADAPTER_DOWN",
+    "severity": "FAIL",
+    "severityRank": 2,
+    "detectorId": "detector.adapter_health",
+    "summary": "codex unavailable (process_exit_137)",
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/adapters/codex_stderr.log",
+        "sha256": "06e39bd7c42e23f4ae826e9edc1413f6c41e8fb7dd719654d45285ab2c3e2053"
+      }
+    ],
+    "remediationActions": [
+      "adapter_restart",
+      "generate_diagnosis_report"
+    ],
+    "hardFail": false,
+    "createdAt": 200
+  },
+  "retry1": {
+    "action": "retry",
+    "delaySeconds": 0,
+    "targetAgent": "codex",
+    "reason": "retry_1_of_3"
+  },
+  "retry2": {
+    "action": "retry",
+    "delaySeconds": 30,
+    "targetAgent": "codex",
+    "reason": "retry_2_of_3"
+  },
+  "switch_decision": {
+    "action": "switch_agent",
+    "delaySeconds": 0,
+    "targetAgent": "claude",
+    "reason": "retry_exhausted_auto_switch"
+  },
+  "continuity_hash": "dfd19cf3f222aaabd6cf29f26cfddb79e771a5efa9cf4f084cafdc7da386806b"
+}

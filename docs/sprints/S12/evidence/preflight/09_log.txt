@@ -1,0 +1,8 @@
+CMD: git log --oneline -5
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+b48a491 docs(s17): refresh postcheck command stream
+a83aae3 docs(s17): add postcheck-only verification receipts
+8956f25 docs(s11): add final postcheck sync receipt
+b2d87c0 docs(s11): refresh postcheck after-state receipts
+50f824f docs(s11): append final postcheck durable sync receipts
+EXIT_CODE=0

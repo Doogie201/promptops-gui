@@ -1,0 +1,4 @@
+CMD: test -f .pre-commit-config.yml && sed -n "1,260p" .pre-commit-config.yml || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

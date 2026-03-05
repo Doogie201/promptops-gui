@@ -1,0 +1,2 @@
+CMD: git add docs/sprints/S12/evidence/precommit_scope_lock docs/sprints/S12/evidence/INDEX.md && git commit -m '[S12] docs: add pre-commit scope-lock evidence receipts'
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui

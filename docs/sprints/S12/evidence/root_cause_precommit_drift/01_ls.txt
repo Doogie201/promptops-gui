@@ -1,0 +1,40 @@
+CMD: ls -la
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+total 288
+drwxr-xr-x@ 35 marcussmith  staff   1120 Mar  4 21:03 .
+drwx------@ 15 marcussmith  staff    480 Mar  4 17:36 ..
+drwxr-xr-x@  2 marcussmith  staff     64 Mar  4 23:15 .agent_state
+drwxr-xr-x@ 15 marcussmith  staff    480 Mar  5 00:24 .git
+drwxr-xr-x@  3 marcussmith  staff     96 Mar  4 16:41 .github
+-rw-r--r--@  1 marcussmith  staff     97 Mar  4 16:41 .gitignore
+-rw-r--r--@  1 marcussmith  staff    538 Mar  5 00:02 .pre-commit-config.yaml
+-rw-r--r--@  1 marcussmith  staff   1774 Mar  4 16:41 AGENTS.md
+-rw-r--r--@  1 marcussmith  staff   1684 Mar  4 16:41 ARCHITECTURE_INFERENCE.md
+-rw-r--r--@  1 marcussmith  staff    657 Mar  4 16:41 CHANGELOG_AGENT.md
+-rw-r--r--@  1 marcussmith  staff    968 Mar  4 16:41 DECISIONS.md
+-rw-r--r--@  1 marcussmith  staff    499 Mar  4 16:41 NEXT_AUTONOMOUS_ACTIONS.md
+-rw-r--r--@  1 marcussmith  staff   1375 Mar  4 16:41 OPERATIONS.md
+-rw-r--r--@  1 marcussmith  staff    388 Mar  4 20:47 README.md
+-rw-r--r--@  1 marcussmith  staff    279 Mar  4 16:41 SKILL_REGISTRY.md
+-rw-r--r--@  1 marcussmith  staff   1476 Mar  4 16:41 SYSTEM_MAP.md
+-rw-r--r--@  1 marcussmith  staff    936 Mar  4 16:41 WORKSTREAM_MAP.md
+drwxr-xr-x@  3 marcussmith  staff     96 Mar  4 16:41 adapters
+drwxr-xr-x@  4 marcussmith  staff    128 Mar  4 20:47 apps
+-rw-r--r--@  1 marcussmith  staff    326 Mar  4 16:41 codecov.yml
+drwxr-xr-x@  3 marcussmith  staff     96 Mar  4 18:41 coverage
+drwxr-xr-x@  4 marcussmith  staff    128 Mar  4 16:41 docs
+drwxr-xr-x@ 15 marcussmith  staff    480 Mar  4 16:41 engine
+drwxr-xr-x@  4 marcussmith  staff    128 Mar  4 16:41 fixtures
+-rwxr-xr-x@  1 marcussmith  staff    350 Mar  4 16:41 gates.sh
+drwxr-xr-x@ 88 marcussmith  staff   2816 Mar  4 18:26 node_modules
+-rw-r--r--@  1 marcussmith  staff  74817 Mar  4 16:41 package-lock.json
+-rw-r--r--@  1 marcussmith  staff   1839 Mar  4 20:47 package.json
+drwxr-xr-x@  5 marcussmith  staff    160 Mar  4 16:41 policy
+drwxr-xr-x@  7 marcussmith  staff    224 Mar  4 17:07 scripts
+drwxr-xr-x@  4 marcussmith  staff    128 Mar  4 16:41 skills
+drwxr-xr-x@  8 marcussmith  staff    256 Mar  4 22:42 src
+-rw-r--r--@  1 marcussmith  staff    358 Mar  4 16:41 tsconfig.json
+drwxr-xr-x@  3 marcussmith  staff     96 Mar  4 16:41 ui
+-rw-r--r--@  1 marcussmith  staff    609 Mar  4 21:03 vite.config.ts
+--- STDERR ---
+EXIT_CODE: 0

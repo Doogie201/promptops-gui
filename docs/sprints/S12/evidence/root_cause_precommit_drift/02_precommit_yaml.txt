@@ -1,4 +1,5 @@
-exclude: ^docs/sprints/S11/
+CMD: test -f .pre-commit-config.yaml && sed -n "1,260p" .pre-commit-config.yaml || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
 ci:
     skip: [gates]
 repos:
@@ -20,3 +21,5 @@ repos:
         entry: ./gates.sh
         language: script
         pass_filenames: false
+--- STDERR ---
+EXIT_CODE: 0

@@ -1,0 +1,4 @@
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+COMMAND=npm run -s lint
+[verify] lint
+EXIT_CODE=0

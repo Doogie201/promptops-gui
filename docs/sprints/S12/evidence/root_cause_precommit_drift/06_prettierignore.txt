@@ -1,0 +1,4 @@
+CMD: test -f .prettierignore && sed -n "1,260p" .prettierignore || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

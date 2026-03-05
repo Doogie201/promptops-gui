@@ -1,0 +1,5 @@
+CMD: rg -n -i -f stderr_markers.txt gates at
+CWD: /tmp/promptops/S12/run_20260304_224431
+/tmp/promptops/S12/run_20260304_224431/gates/test_all.txt:9:# Subtest: AT-S05-01 disallowed command/path is blocked with clear error and recorded event
+/tmp/promptops/S12/run_20260304_224431/gates/test_all.txt:10:ok 1 - AT-S05-01 disallowed command/path is blocked with clear error and recorded event
+EXIT_CODE=0

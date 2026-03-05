@@ -1,0 +1,22 @@
+CMD: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+## sprint/S12-health-drift-detection...origin/sprint/S12-health-drift-detection [ahead 1]
+EXIT_CODE=0
+CMD: git fetch --all --prune --tags
+From https://github.com/Doogie201/promptops-gui
+   66fa71d..7a36de1  sprint/S12-health-drift-detection -> origin/sprint/S12-health-drift-detection
+EXIT_CODE=0
+CMD: git rev-list --left-right --count HEAD...origin/sprint/S12-health-drift-detection
+1	1
+EXIT_CODE=0
+CMD: git pull --ff-only
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint:
+hint: 	git merge --no-ff
+hint:
+hint: or:
+hint:
+hint: 	git rebase
+hint:
+hint: Disable this message with "git config set advice.diverging false"
+fatal: Not possible to fast-forward, aborting.

@@ -1,0 +1,7 @@
+CMD=rg -n 'id: trailing-whitespace|id: end-of-file-fixer|exclude: \^docs/sprints/S11/' .pre-commit-config.yaml
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+7:    -   id: trailing-whitespace
+8:        exclude: ^docs/sprints/S11/
+9:    -   id: end-of-file-fixer
+10:        exclude: ^docs/sprints/S11/
+EXIT_CODE=0

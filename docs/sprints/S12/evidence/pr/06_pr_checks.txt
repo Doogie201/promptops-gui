@@ -1,0 +1,7 @@
+CMD: gh pr checks 19 --repo Doogie201/promptops-gui
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22701333709/job/65818837277
+coverage	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22701334256/job/65818838613
+pre-commit.ci - pr	pending	0	https://results.pre-commit.ci/run/github/1168058876/1772682483.eqi-Um-2SeyJDhH-CopJYg	queued
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22701333722/job/65818837331
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22701334249/job/65818838608

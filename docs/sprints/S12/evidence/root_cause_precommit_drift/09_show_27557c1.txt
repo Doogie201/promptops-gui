@@ -1,0 +1,10 @@
+CMD: git show --name-status --oneline --no-renames 27557c1
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+27557c1 [pre-commit.ci] auto fixes from pre-commit.com hooks
+M	docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_worktree_before.txt
+M	docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/05_fsck_classification.md
+M	docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_open_prs.txt
+M	docs/sprints/S12/evidence/scope_fix/51_checks_watch_after_push.txt
+M	docs/sprints/S12/evidence/scope_fix/52_threads_after_push.json
+--- STDERR ---
+EXIT_CODE: 0

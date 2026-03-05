@@ -1,0 +1,95 @@
+{
+  "before": {
+    "branch": "main",
+    "statusSummary": "## main...origin/main",
+    "ahead": 0,
+    "behind": 0,
+    "headSha": "1111111111111111111111111111111111111111",
+    "repoRoot": "/repo",
+    "primaryWorktree": "/repo"
+  },
+  "drifted": {
+    "branch": "main",
+    "statusSummary": "## main...origin/main\n M src/s12/health_drift.ts",
+    "ahead": 0,
+    "behind": 0,
+    "headSha": "2222222222222222222222222222222222222222",
+    "repoRoot": "/repo",
+    "primaryWorktree": "/repo"
+  },
+  "drift_signal": {
+    "id": "c18bd23ac74b904a",
+    "signalId": "REPO_DRIFT",
+    "severity": "FAIL",
+    "severityRank": 2,
+    "detectorId": "detector.repo_drift",
+    "summary": "repo drift detected (statusSummary, headSha)",
+    "evidenceRefs": [
+      {
+        "path": "/tmp/promptops/S12/drift/repo_delta.json",
+        "sha256": "30410dfa08b5a0949d5a6ce2cc0ca4ce197a3ccfe996b9ac5b32bd80b3b7efb8"
+      }
+    ],
+    "remediationActions": [
+      "re_run_min_sync_check",
+      "re_run_preflight_full",
+      "restore_last_checkpoint"
+    ],
+    "hardFail": false,
+    "createdAt": 100
+  },
+  "restoration_actions": [
+    {
+      "id": "re_run_min_sync_check",
+      "title": "Re-run Minimal Sync Check",
+      "mutatesState": false,
+      "requiresConfirmation": false,
+      "commandPlan": [
+        "git fetch --all --prune --tags",
+        "git status --porcelain=v1 --branch",
+        "git rev-list --left-right --count HEAD...origin/main"
+      ]
+    },
+    {
+      "id": "re_run_preflight_full",
+      "title": "Re-run Preflight (full)",
+      "mutatesState": false,
+      "requiresConfirmation": false,
+      "commandPlan": [
+        "pwd",
+        "echo \"$PROMPTOPS_REPO\"",
+        "git rev-parse --show-toplevel",
+        "git worktree list --porcelain",
+        "git status --porcelain=v1 --branch",
+        "git fetch --all --prune --tags",
+        "git rev-list --left-right --count HEAD...origin/main",
+        "git rev-parse --abbrev-ref HEAD",
+        "git log --oneline -5",
+        "git prune --dry-run",
+        "git fsck --no-reflogs"
+      ]
+    },
+    {
+      "id": "restore_last_checkpoint",
+      "title": "Restore to Last Checkpoint",
+      "mutatesState": true,
+      "requiresConfirmation": true,
+      "commandPlan": [
+        "restore from checkpoint artifact and re-evaluate health"
+      ]
+    }
+  ],
+  "post_restore_signal": null,
+  "delta": [
+    {
+      "field": "statusSummary",
+      "before": "## main...origin/main",
+      "after": "## main...origin/main\n M src/s12/health_drift.ts"
+    },
+    {
+      "field": "headSha",
+      "before": "1111111111111111111111111111111111111111",
+      "after": "2222222222222222222222222222222222222222"
+    }
+  ]
+}

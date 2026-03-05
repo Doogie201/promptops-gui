@@ -1,0 +1,100 @@
+CMD: for f in .github/workflows/*.yml; do echo "--- $f"; sed -n "1,260p" "$f"; done
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- .github/workflows/codecov.yml
+name: "Codecov Coverage"
+
+on:
+  push:
+    branches: ["main", "sprint/**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run evaluator tests
+        run: npm run -s test:evaluator
+
+      - name: Generate evaluator coverage
+        run: npm run -s coverage:evaluator
+
+      - name: Generate evaluator JUnit results
+        run: npm run -s test:evaluator:junit
+
+      - name: Assert coverage artifacts
+        run: |
+          test -s coverage/junit.xml
+          test -s coverage/lcov.info
+
+      - name: Build bundle analysis artifact
+        run: npm run -s build:bundle-analysis
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/lcov.info
+          disable_search: true
+          slug: Doogie201/promptops-gui
+          fail_ci_if_error: true
+          verbose: true
+
+      - name: Upload test results to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/junit.xml
+          disable_search: true
+          report_type: test_results
+          slug: Doogie201/promptops-gui
+          fail_ci_if_error: true
+          verbose: true
+--- .github/workflows/verify.yml
+name: Verify
+
+on:
+  push:
+    branches: ["main", "sprint/**", "codex/**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install
+        run: npm ci
+
+      - name: Install ripgrep
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ripgrep
+
+      - name: Verify
+        run: npm run -s verify
+--- STDERR ---
+EXIT_CODE: 0

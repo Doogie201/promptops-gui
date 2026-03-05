@@ -1,0 +1,18 @@
+CMD=git diff -- docs/sprints/S12/evidence/INDEX.md
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+diff --git a/docs/sprints/S12/evidence/INDEX.md b/docs/sprints/S12/evidence/INDEX.md
+index 68df5c3..c4d5061 100644
+--- a/docs/sprints/S12/evidence/INDEX.md
++++ b/docs/sprints/S12/evidence/INDEX.md
+@@ -99,3 +99,10 @@
+ - `scope_fix/40_git_commit.txt`
+ - `scope_fix/41_git_push.txt`
+ - `scope_fix/42_log_after_push.txt`
++- `scope_fix/43_divergence_repair.txt`
++- `scope_fix/44_status_after_divergence_repair.txt`
++- `scope_fix/50_pr_view_after_push.json`
++- `scope_fix/51_checks_watch_after_push.txt`
++- `scope_fix/52_threads_after_push.json`
++- `scope_fix/53_scope_comment_receipt.txt`
++- `scope_fix/60_index_update_diff.txt`
+EXIT_CODE=0

@@ -11,3 +11,4 @@
 - [S09 - GUI Shell v1 + Setup Wizard + Agent Switching](./S09/README.md)
 - [S10 - GUI Operator Tools v1](./S10/README.md)
 - [S11 - Template Lifecycle Manager](./S11/README.md)
+- [S12 - Health & Drift Detection](./S12/README.md)

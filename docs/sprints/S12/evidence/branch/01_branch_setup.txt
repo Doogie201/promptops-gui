@@ -1,0 +1,22 @@
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+EXIT_CODE=0
+$ git pull --ff-only
+Already up to date.
+EXIT_CODE=0
+$ git checkout -b sprint/S12-health-drift-detection
+Switched to a new branch 'sprint/S12-health-drift-detection'
+EXIT_CODE=0
+$ git push -u origin sprint/S12-health-drift-detection
+remote:
+remote: Create a pull request for 'sprint/S12-health-drift-detection' on GitHub by visiting:
+remote:      https://github.com/Doogie201/promptops-gui/pull/new/sprint/S12-health-drift-detection
+remote:
+To https://github.com/Doogie201/promptops-gui.git
+ * [new branch]      sprint/S12-health-drift-detection -> sprint/S12-health-drift-detection
+branch 'sprint/S12-health-drift-detection' set up to track 'origin/sprint/S12-health-drift-detection'.
+EXIT_CODE=0
+$ git rev-parse --abbrev-ref HEAD
+sprint/S12-health-drift-detection
+EXIT_CODE=0

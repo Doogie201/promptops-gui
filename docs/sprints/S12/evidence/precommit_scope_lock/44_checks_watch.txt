@@ -1,0 +1,20 @@
+CMD=gh pr checks 19 --repo Doogie201/promptops-gui --watch
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+Refreshing checks status every 10 seconds. Press Ctrl+C to quit.
+
+verify	pending	0	https://github.com/Doogie201/promptops-gui/actions/runs/22703223350/job/65824807109
+coverage	pass	24s	https://github.com/Doogie201/promptops-gui/actions/runs/22703222652/job/65824804615
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22703223340/job/65824807097
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772687125.Lk4taC09TPKVFvkcFcGktA	checks completed successfully
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22703222628/job/65824804500
+coverage	pass	24s	https://github.com/Doogie201/promptops-gui/actions/runs/22703222652/job/65824804615
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22703223340/job/65824807097
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772687125.Lk4taC09TPKVFvkcFcGktA	checks completed successfully
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22703222628/job/65824804500
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22703223350/job/65824807109
+coverage	pass	24s	https://github.com/Doogie201/promptops-gui/actions/runs/22703222652/job/65824804615
+coverage	pass	23s	https://github.com/Doogie201/promptops-gui/actions/runs/22703223340/job/65824807097
+pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772687125.Lk4taC09TPKVFvkcFcGktA	checks completed successfully
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22703222628/job/65824804500
+verify	pass	22s	https://github.com/Doogie201/promptops-gui/actions/runs/22703223350/job/65824807109
+EXIT_CODE=0

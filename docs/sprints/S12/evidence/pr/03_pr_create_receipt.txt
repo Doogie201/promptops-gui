@@ -1,0 +1,4 @@
+CMD: gh pr create ...
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+https://github.com/Doogie201/promptops-gui/pull/19
+EXIT_CODE=0

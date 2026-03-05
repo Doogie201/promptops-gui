@@ -1,0 +1,4 @@
+CMD: git rev-parse --abbrev-ref HEAD
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+main
+EXIT_CODE=0
