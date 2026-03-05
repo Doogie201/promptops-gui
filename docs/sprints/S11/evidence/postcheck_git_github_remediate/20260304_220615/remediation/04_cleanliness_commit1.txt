@@ -1,0 +1,70 @@
+$ git status --porcelain=v1 --branch
+## main...origin/main
+?? docs/sprints/S11/evidence/postcheck_git_github/
+?? docs/sprints/S11/evidence/postcheck_git_github_remediate/
+EXIT_CODE=0
+
+$ git add docs/sprints/S11/evidence/postcheck_git_github docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615
+EXIT_CODE=0
+
+$ git status --porcelain=v1 --branch
+## main...origin/main
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/01_preflight.json
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/02_branch_inventory.json
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/03_worktree_inventory.json
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/04_pr18_parity.json
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/05_verdict.md
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/06_safety_audit.txt
+A  docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/99_command_stream.json
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/pr/03_pr18_state.json
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/preflight/01_preflight.json
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/preflight/01_preflight_commands.json
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/02_main_ff_sync.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_branch_vv_before.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_cleanup_gone_branches_and_worktree.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_local_s11_branch_head.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_remaining_gone_branches_probe.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_sprint_branch_remediation.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_sprint_branch_upstream_probe.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_worktree_before.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/04_dirty_cause_before.txt
+A  docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/05_fsck_classification.md
+EXIT_CODE=0
+
+$ git commit -m "docs(s11): add postcheck git/github remediation evidence bundles"
+[main 13164b9] docs(s11): add postcheck git/github remediation evidence bundles
+ 20 files changed, 1333 insertions(+)
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/01_preflight.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/02_branch_inventory.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/03_worktree_inventory.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/04_pr18_parity.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/05_verdict.md
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/06_safety_audit.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/99_command_stream.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/pr/03_pr18_state.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/preflight/01_preflight.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/preflight/01_preflight_commands.json
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/02_main_ff_sync.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_branch_vv_before.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_cleanup_gone_branches_and_worktree.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_local_s11_branch_head.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_remaining_gone_branches_probe.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_sprint_branch_remediation.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_sprint_branch_upstream_probe.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_worktree_before.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/04_dirty_cause_before.txt
+ create mode 100644 docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/05_fsck_classification.md
+EXIT_CODE=0
+
+$ git push origin main
+To https://github.com/Doogie201/promptops-gui.git
+   70e2537..13164b9  main -> main
+EXIT_CODE=0
+
+$ git status --porcelain=v1 --branch
+## main...origin/main
+EXIT_CODE=0
+
+$ git rev-list --left-right --count HEAD...origin/main
+0	0
+EXIT_CODE=0

@@ -1,0 +1,3 @@
+$ rg -n "git rebase|git merge|reset --hard|push --force|gh pr merge" "$BUNDLE"
+EXIT_CODE=1
+AUDIT_RESULT=PASS (no forbidden operations found in receipts)

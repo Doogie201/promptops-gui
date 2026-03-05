@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-03-05T03:13:49Z",
+  "local_branches": [
+    {
+      "local_branch": "main",
+      "sha": "13164b99c78c42c8c0c48d37cd202d3113fdbc33",
+      "upstream": "origin/main",
+      "upstream_track": "=",
+      "bucket": "CLEAN_SYNCED",
+      "ahead": 0,
+      "behind": 0
+    }
+  ],
+  "remote_branches": [
+    {
+      "remote_branch": "origin/main",
+      "sha": "13164b99c78c42c8c0c48d37cd202d3113fdbc33",
+      "has_local": true
+    }
+  ]
+}
