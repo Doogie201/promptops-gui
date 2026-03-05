@@ -36,8 +36,9 @@
 - `stoplight/05_hardpath_marker_grep.txt`
 
 ## PR Readiness
-- `pr/01_pr_view_a.txt`, `pr/20_pr_view_green_a.txt`, `pr/24_pr_view_green_b.txt`
-- `pr/03_pr_checks_watch.txt`, `pr/22_checks_green_a.txt`, `pr/26_checks_green_b.txt`
+- `pr/29_ff_sync_after_precommit.txt` — ff-only sync after pre-commit.ci remote advance.
+- `pr/30_pr_view_final_a.txt`, `pr/34_pr_view_final_b.txt`
+- `pr/32_checks_final_a.txt`, `pr/36_checks_final_b.txt`
 - `pr/11_threads_before_resolve.txt`, `pr/15_threads_after_resolve.txt`
 - `pr/13_resolve_thread_1.txt`, `pr/14_resolve_thread_2.txt`
-- `pr/23_wait_190_final.txt`, `pr/28_stability_eval_final.txt`
+- `pr/33_wait_190_final_head.txt`, `pr/37_stability_eval_final_head.txt`
