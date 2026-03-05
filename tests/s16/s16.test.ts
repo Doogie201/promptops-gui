@@ -110,6 +110,7 @@ test('AT-S16-02 long-run stability and adapter resilience are bounded and determ
   ];
   const resilienceSwitch = evaluateAdapterResilience(switchAttempts);
   assert.strictEqual(resilienceSwitch.status, 'SWITCH_AGENT');
+  assert.deepStrictEqual(resilienceSwitch.retryScheduleMs, [0, 50]);
   assert.ok(resilienceSwitch.events.some((event) => event.type === 'agent_switch'));
 
   writeJson(path.join(HARDENING_ROOT, 'stability_adapter_eval.json'), {

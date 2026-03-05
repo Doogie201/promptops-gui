@@ -217,8 +217,6 @@ export function evaluateAdapterResilience(
     }
     failureCount += 1;
     events.push({ type: 'adapter_failure', detail: `attempt=${attempt.attempt};status=${attempt.status}` });
-    const retryDelay = policy.retryDelaysMs[Math.min(failureCount - 1, policy.retryDelaysMs.length - 1)] ?? 0;
-    retryScheduleMs.push(retryDelay);
     if (failureCount >= policy.switchAfterFailures) {
       events.push({ type: 'agent_switch', detail: `failures=${failureCount};reason=retry_exhausted` });
       return {
@@ -228,6 +226,11 @@ export function evaluateAdapterResilience(
         salvagedOutput,
         events,
       };
+    }
+    const hasAnotherAttempt = attempt.attempt < policy.maxAttempts;
+    if (hasAnotherAttempt) {
+      const retryDelay = policy.retryDelaysMs[Math.min(failureCount - 1, policy.retryDelaysMs.length - 1)] ?? 0;
+      retryScheduleMs.push(retryDelay);
     }
   }
   events.push({ type: 'adapter_hard_stop', detail: 'max_attempts_reached' });
