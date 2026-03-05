@@ -1,0 +1,9 @@
+CMD: git log --oneline -5
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+4a7a2f5 [pre-commit.ci] auto fixes from pre-commit.com hooks
+e619386 [S12] docs: add pre-commit scope-lock evidence receipts
+46a2d7b [pre-commit.ci] auto fixes from pre-commit.com hooks
+28ec9d3 [S12] chore: prevent pre-commit.ci from touching docs/sprints/S11
+27557c1 [pre-commit.ci] auto fixes from pre-commit.com hooks
+--- STDERR ---
+EXIT_CODE: 0

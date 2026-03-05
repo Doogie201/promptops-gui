@@ -1,0 +1,19 @@
+CMD: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+## sprint/S12-health-drift-detection...origin/sprint/S12-health-drift-detection
+ M docs/sprints/S12/evidence/precommit_scope_lock/44_checks_watch.txt
+ M docs/sprints/S12/evidence/precommit_scope_lock/50_pr_comment.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/45_threads.json
+?? docs/sprints/S12/evidence/precommit_scope_lock/45_threads_eval.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/46_wait_190s.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/47_head_compare_after_wait.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/48_revlist_after_wait.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/49_scope_grep_after_wait.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/54_status_before_drift_ff.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/55_pull_ff_after_drift.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/56_revlist_after_drift_ff.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/57_status_final_snapshot.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/58_revlist_final_snapshot.txt
+?? docs/sprints/S12/evidence/precommit_scope_lock/59_pr_view_final.json
+--- STDERR ---
+EXIT_CODE: 0

@@ -1,0 +1,5 @@
+CMD: gh pr view 19 --repo Doogie201/promptops-gui --json number,title,headRefName,baseRefName,state,url
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+{"baseRefName":"main","headRefName":"sprint/S12-health-drift-detection","number":19,"state":"OPEN","title":"[S12] perf : health & drift detection","url":"https://github.com/Doogie201/promptops-gui/pull/19"}
+--- STDERR ---
+EXIT_CODE: 0

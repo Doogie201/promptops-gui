@@ -1,0 +1,5 @@
+CMD: git rev-parse --abbrev-ref HEAD
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+sprint/S12-health-drift-detection
+--- STDERR ---
+EXIT_CODE: 0

@@ -1,0 +1,9 @@
+CHECK_RUN_COUNT=5
+RUN name=codecov/patch conclusion=success status=completed app_slug=codecov app_name=Codecov
+RUN name=verify conclusion=success status=completed app_slug=github-actions app_name=GitHub Actions
+RUN name=coverage conclusion=success status=completed app_slug=github-actions app_name=GitHub Actions
+RUN name=verify conclusion=success status=completed app_slug=github-actions app_name=GitHub Actions
+RUN name=coverage conclusion=success status=completed app_slug=github-actions app_name=GitHub Actions
+COMMIT_SHA=4a7a2f557a3bf3ff79739bf5fd91b25059d7a0af
+COMMIT_AUTHOR_LOGIN=pre-commit-ci[bot]
+COMMIT_COMMITTER_LOGIN=pre-commit-ci[bot]

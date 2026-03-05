@@ -1,0 +1,8 @@
+CMD: git worktree list --porcelain
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD 4a7a2f557a3bf3ff79739bf5fd91b25059d7a0af
+branch refs/heads/sprint/S12-health-drift-detection
+
+--- STDERR ---
+EXIT_CODE: 0

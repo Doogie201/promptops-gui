@@ -1,0 +1,4 @@
+CMD: test -f .editorconfig && sed -n "1,260p" .editorconfig || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+--- STDERR ---
+EXIT_CODE: 0

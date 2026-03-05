@@ -1,0 +1,8 @@
+MECHANISM_EVIDENCE: pre-commit hooks scope
+PATTERN=- id: trailing-whitespace
+NOT_FOUND
+PATTERN=- id: end-of-file-fixer
+NOT_FOUND
+PATTERN=exclude:\s*\^docs/sprints/S11/
+        exclude: ^docs/sprints/S11/
+        exclude: ^docs/sprints/S11/
