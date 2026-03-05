@@ -1,0 +1,91 @@
+{
+  "repo_root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "promptops_repo": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "evaluated": {
+    "show_toplevel": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "branch": "sprint/S11-template-lifecycle-manager",
+    "dirty": false,
+    "ahead": 8,
+    "behind": 1,
+    "hard_stop": null
+  },
+  "commands": [
+    {
+      "cmd": "pwd",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "bash -lc 'echo \"$PROMPTOPS_REPO\"'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse --show-toplevel",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git worktree list --porcelain",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nbranch refs/heads/sprint/S11-template-lifecycle-manager\n\nworktree /private/tmp/promptops/S10/wt_closeout_20260304_185656\nHEAD 554fe3445fb79061fb73021aa57b327acdb74712\nbranch refs/heads/sprint/S10-gui-operator-tools-v1\n\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git status --porcelain=v1 --branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git fetch --all --prune --tags",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "From https://github.com/Doogie201/promptops-gui\n - [deleted]         (none)     -> origin/sprint/S11-template-lifecycle-manager\n",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-list --left-right --count HEAD...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "8\t1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse --abbrev-ref HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git log --oneline -10",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "2791566 fix(S11): remediate codex contract + determinism findings\n110b8d4 [pre-commit.ci] auto fixes from pre-commit.com hooks\n0d447db docs(S11): add secondary divergence receipts\necdbc87 docs(S11): add divergence remediation receipts\n38d6e19 [pre-commit.ci] auto fixes from pre-commit.com hooks\n9825a65 docs(S11): add PR readiness receipts\nc08f85c [pre-commit.ci] auto fixes from pre-commit.com hooks\nbebcf3d [S11] ux : template lifecycle manager\nb7ffdca [S10] devx : codecov bundle upload remediation (#17)\nfff206f [S10] devx : codecov bundle analysis (vite) (#16)\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git prune --dry-run",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git fsck --no-reflogs",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "dangling commit 65227498ef4d7aaa82a6339912ca6679f3942307\ndangling commit b1944f1fd36789c9ad9f560fec417a34d9117aee\ndangling commit 6b16fb3236456d3efb9e6ebd0aba63546908380f\ndangling commit 8688b32df3640ee34b303b9b7b6a8308616e54e5\ndangling commit 1f0ab4f31c7d651893ec6e651c5af60c3863ea35\ndangling commit 5b6c87d39d4ec45ec84160fecb4807961710836e\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ]
+}

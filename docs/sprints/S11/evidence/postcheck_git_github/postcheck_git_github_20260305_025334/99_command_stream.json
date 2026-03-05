@@ -1,0 +1,423 @@
+{
+  "records": [
+    {
+      "cmd": "pwd",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "bash -lc 'echo \"$PROMPTOPS_REPO\"'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse --show-toplevel",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git worktree list --porcelain",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nbranch refs/heads/sprint/S11-template-lifecycle-manager\n\nworktree /private/tmp/promptops/S10/wt_closeout_20260304_185656\nHEAD 554fe3445fb79061fb73021aa57b327acdb74712\nbranch refs/heads/sprint/S10-gui-operator-tools-v1\n\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git status --porcelain=v1 --branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git fetch --all --prune --tags",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "From https://github.com/Doogie201/promptops-gui\n - [deleted]         (none)     -> origin/sprint/S11-template-lifecycle-manager\n",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-list --left-right --count HEAD...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "8\t1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse --abbrev-ref HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git log --oneline -10",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "2791566 fix(S11): remediate codex contract + determinism findings\n110b8d4 [pre-commit.ci] auto fixes from pre-commit.com hooks\n0d447db docs(S11): add secondary divergence receipts\necdbc87 docs(S11): add divergence remediation receipts\n38d6e19 [pre-commit.ci] auto fixes from pre-commit.com hooks\n9825a65 docs(S11): add PR readiness receipts\nc08f85c [pre-commit.ci] auto fixes from pre-commit.com hooks\nbebcf3d [S11] ux : template lifecycle manager\nb7ffdca [S10] devx : codecov bundle upload remediation (#17)\nfff206f [S10] devx : codecov bundle analysis (vite) (#16)\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git prune --dry-run",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git fsck --no-reflogs",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "dangling commit 65227498ef4d7aaa82a6339912ca6679f3942307\ndangling commit b1944f1fd36789c9ad9f560fec417a34d9117aee\ndangling commit 6b16fb3236456d3efb9e6ebd0aba63546908380f\ndangling commit 8688b32df3640ee34b303b9b7b6a8308616e54e5\ndangling commit 1f0ab4f31c7d651893ec6e651c5af60c3863ea35\ndangling commit 5b6c87d39d4ec45ec84160fecb4807961710836e\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git remote -v",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "origin\thttps://github.com/Doogie201/promptops-gui.git (fetch)\norigin\thttps://github.com/Doogie201/promptops-gui.git (push)\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git branch --show-current",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git show -s --format=fuller HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "commit 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nAuthor:     Doogie201 <Doogie201@gmail.com>\nAuthorDate: Wed Mar 4 21:33:00 2026 -0500\nCommit:     Doogie201 <Doogie201@gmail.com>\nCommitDate: Wed Mar 4 21:33:18 2026 -0500\n\n    fix(S11): remediate codex contract + determinism findings\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "70e253781de113e5cf1429fbb4cfc9639ea0b1b8\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git show -s --format=fuller origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "commit 70e253781de113e5cf1429fbb4cfc9639ea0b1b8\nAuthor:     Marcus <3824471+Doogie201@users.noreply.github.com>\nAuthorDate: Wed Mar 4 21:45:45 2026 -0500\nCommit:     GitHub <noreply@github.com>\nCommitDate: Wed Mar 4 21:45:45 2026 -0500\n\n    [S11] ux : template lifecycle manager (#18)\n    \n    * [S11] ux : template lifecycle manager\n    \n    * [pre-commit.ci] auto fixes from pre-commit.com hooks\n    \n    for more information, see https://pre-commit.ci\n    \n    * docs(S11): add PR readiness receipts\n    \n    * [pre-commit.ci] auto fixes from pre-commit.com hooks\n    \n    for more information, see https://pre-commit.ci\n    \n    * docs(S11): add divergence remediation receipts\n    \n    * docs(S11): add secondary divergence receipts\n    \n    * [pre-commit.ci] auto fixes from pre-commit.com hooks\n    \n    for more information, see https://pre-commit.ci\n    \n    * fix(S11): remediate codex contract + determinism findings\n    \n    ---------\n    \n    Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh repo view --json nameWithOwner,defaultBranchRef,url",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "{\"defaultBranchRef\":{\"name\":\"main\"},\"nameWithOwner\":\"Doogie201/promptops-gui\",\"url\":\"https://github.com/Doogie201/promptops-gui\"}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh api repos/Doogie201/promptops-gui --jq .default_branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "main\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git branch -vv",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "  codex/codecov-bundle-upload-remediation 0f7b32f [origin/codex/codecov-bundle-upload-remediation: gone] ci: trigger fresh Codecov run after secret refresh\n  main                                    b7ffdca [origin/main: behind 1] [S10] devx : codecov bundle upload remediation (#17)\n  sprint/S10-codecov-bundle-analysis-vite f77aad9 [origin/sprint/S10-codecov-bundle-analysis-vite: gone] [S10] devx : codecov bundle analysis (vite)\n+ sprint/S10-gui-operator-tools-v1        554fe34 (/private/tmp/promptops/S10/wt_closeout_20260304_185656) [origin/sprint/S10-gui-operator-tools-v1: gone] [S10] bug : enforce preflight sync probes and net-line budget logic\n* sprint/S11-template-lifecycle-manager   2791566 [origin/sprint/S11-template-lifecycle-manager: gone] fix(S11): remediate codex contract + determinism findings\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git branch -r",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "  origin/HEAD -> origin/main\n  origin/main\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git for-each-ref refs/heads '--format=%(refname:short) %(objectname) %(upstream:short) %(upstream:trackshort)'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "codex/codecov-bundle-upload-remediation 0f7b32f940efbac8ac112a5f4c486c7522b6932e origin/codex/codecov-bundle-upload-remediation \nmain b7ffdca14235958eeca236919ca9e0372b6e1130 origin/main <\nsprint/S10-codecov-bundle-analysis-vite f77aad9207bd54a37154f041602ee5e20b39afcb origin/sprint/S10-codecov-bundle-analysis-vite \nsprint/S10-gui-operator-tools-v1 554fe3445fb79061fb73021aa57b327acdb74712 origin/sprint/S10-gui-operator-tools-v1 \nsprint/S11-template-lifecycle-manager 27915661e8eda3f5dac35d4ab2d3158c4b53eaed origin/sprint/S11-template-lifecycle-manager \n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git for-each-ref refs/remotes/origin '--format=%(refname:short) %(objectname)'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "origin 70e253781de113e5cf1429fbb4cfc9639ea0b1b8\norigin/main 70e253781de113e5cf1429fbb4cfc9639ea0b1b8\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git log --graph --oneline --decorate -25 --all",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "* 70e2537 (origin/main, origin/HEAD) [S11] ux : template lifecycle manager (#18)\n| * 2791566 (HEAD -> sprint/S11-template-lifecycle-manager) fix(S11): remediate codex contract + determinism findings\n| * 110b8d4 [pre-commit.ci] auto fixes from pre-commit.com hooks\n| * 0d447db docs(S11): add secondary divergence receipts\n| * ecdbc87 docs(S11): add divergence remediation receipts\n| * 38d6e19 [pre-commit.ci] auto fixes from pre-commit.com hooks\n| * 9825a65 docs(S11): add PR readiness receipts\n| * c08f85c [pre-commit.ci] auto fixes from pre-commit.com hooks\n| * bebcf3d [S11] ux : template lifecycle manager\n|/  \n* b7ffdca (main) [S10] devx : codecov bundle upload remediation (#17)\n| * 0f7b32f (codex/codecov-bundle-upload-remediation) ci: trigger fresh Codecov run after secret refresh\n| * a43cc3c fix: set Codecov Vite gitService for CI uploads\n|/  \n* fff206f [S10] devx : codecov bundle analysis (vite) (#16)\n| * f77aad9 (sprint/S10-codecov-bundle-analysis-vite) [S10] devx : codecov bundle analysis (vite)\n|/  \n* dfc7289 [S10] devx : GUI operator tools v1 (#15)\n| * 554fe34 (sprint/S10-gui-operator-tools-v1) [S10] bug : enforce preflight sync probes and net-line budget logic\n| * 2b7205d [S10] docs : sanitize closeout delta JSON receipts for check-json\n| * 00e71b4 [pre-commit.ci] auto fixes from pre-commit.com hooks\n| * cf5afdd [S10] docs : add closeout delta evidence bundle (20260304_191144)\n| * e24d1d2 [S10] docs : repair invalid JSON evidence files for pre-commit\n| * 8277a97 [pre-commit.ci] auto fixes from pre-commit.com hooks\n| * ae50750 [S10] docs : refresh closeout receipts\n| * 763b2cb [pre-commit.ci] auto fixes from pre-commit.com hooks\n| * 2cb148f [S10] devx : GUI operator tools v1\n|/  \n* d285a0b [S09] docs : SharedDrive complex quarantine disposition + evidence\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-list --left-right --count codex/codecov-bundle-upload-remediation...origin/codex/codecov-bundle-upload-remediation",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "fatal: ambiguous argument 'codex/codecov-bundle-upload-remediation...origin/codex/codecov-bundle-upload-remediation': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+      "exit_code": 128
+    },
+    {
+      "cmd": "git rev-list --left-right --count main...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "0\t1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-list --left-right --count sprint/S10-codecov-bundle-analysis-vite...origin/sprint/S10-codecov-bundle-analysis-vite",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "fatal: ambiguous argument 'sprint/S10-codecov-bundle-analysis-vite...origin/sprint/S10-codecov-bundle-analysis-vite': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+      "exit_code": 128
+    },
+    {
+      "cmd": "git rev-list --left-right --count sprint/S10-gui-operator-tools-v1...origin/sprint/S10-gui-operator-tools-v1",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "fatal: ambiguous argument 'sprint/S10-gui-operator-tools-v1...origin/sprint/S10-gui-operator-tools-v1': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+      "exit_code": 128
+    },
+    {
+      "cmd": "git rev-list --left-right --count sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "fatal: ambiguous argument 'sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+      "exit_code": 128
+    },
+    {
+      "cmd": "git worktree list --porcelain",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nbranch refs/heads/sprint/S11-template-lifecycle-manager\n\nworktree /private/tmp/promptops/S10/wt_closeout_20260304_185656\nHEAD 554fe3445fb79061fb73021aa57b327acdb74712\nbranch refs/heads/sprint/S10-gui-operator-tools-v1\n\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui rev-parse --abbrev-ref HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui status --porcelain=v1 --branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager [gone]\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git -C /Volumes/X9_DEV/Dev/Projects/promptops-gui rev-parse HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git -C /private/tmp/promptops/S10/wt_closeout_20260304_185656 rev-parse --abbrev-ref HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S10-gui-operator-tools-v1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git -C /private/tmp/promptops/S10/wt_closeout_20260304_185656 status --porcelain=v1 --branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "## sprint/S10-gui-operator-tools-v1...origin/sprint/S10-gui-operator-tools-v1 [gone]\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git -C /private/tmp/promptops/S10/wt_closeout_20260304_185656 rev-parse HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "554fe3445fb79061fb73021aa57b327acdb74712\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "bash -lc 'git tag -l --sort=-creatordate | head -n 50'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "bash -lc 'git show-ref --tags | head -n 50'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh pr view 18 --repo Doogie201/promptops-gui --json number,title,state,mergeable,mergeStateStatus,headRefName,baseRefName,headRefOid,statusCheckRollup,reviewDecision,commits,url,labels,updatedAt",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "{\"baseRefName\":\"main\",\"commits\":[{\"authoredDate\":\"2026-03-05T02:26:43Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:26:43Z\",\"messageBody\":\"\",\"messageHeadline\":\"[S11] ux : template lifecycle manager\",\"oid\":\"bebcf3d5356c04bc18afaf84652022e704b17204\"},{\"authoredDate\":\"2026-03-05T02:27:18Z\",\"authors\":[{\"email\":\"66853113+pre-commit-ci[bot]@users.noreply.github.com\",\"id\":\"MDM6Qm90NjY4NTMxMTM=\",\"login\":\"pre-commit-ci[bot]\",\"name\":\"pre-commit-ci[bot]\"}],\"committedDate\":\"2026-03-05T02:27:18Z\",\"messageBody\":\"for more information, see https://pre-commit.ci\",\"messageHeadline\":\"[pre-commit.ci] auto fixes from pre-commit.com hooks\",\"oid\":\"c08f85c375fe9578fc32d6c8f61b9efe8229aa9f\"},{\"authoredDate\":\"2026-03-05T02:28:30Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:28:57Z\",\"messageBody\":\"\",\"messageHeadline\":\"docs(S11): add PR readiness receipts\",\"oid\":\"9825a654b6869acf8e0f4f6a43bf208134fe17de\"},{\"authoredDate\":\"2026-03-05T02:29:03Z\",\"authors\":[{\"email\":\"66853113+pre-commit-ci[bot]@users.noreply.github.com\",\"id\":\"MDM6Qm90NjY4NTMxMTM=\",\"login\":\"pre-commit-ci[bot]\",\"name\":\"pre-commit-ci[bot]\"}],\"committedDate\":\"2026-03-05T02:29:04Z\",\"messageBody\":\"for more information, see https://pre-commit.ci\",\"messageHeadline\":\"[pre-commit.ci] auto fixes from pre-commit.com hooks\",\"oid\":\"38d6e1941895d11443cdebf3ca7180d56281a3b4\"},{\"authoredDate\":\"2026-03-05T02:29:09Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:29:45Z\",\"messageBody\":\"\",\"messageHeadline\":\"docs(S11): add divergence remediation receipts\",\"oid\":\"ecdbc87d576cd2997b66a71711192f6e955e5085\"},{\"authoredDate\":\"2026-03-05T02:30:17Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:30:17Z\",\"messageBody\":\"\",\"messageHeadline\":\"docs(S11): add secondary divergence receipts\",\"oid\":\"0d447db30306c079cbe216eb2ab04baf55118c85\"},{\"authoredDate\":\"2026-03-05T02:31:45Z\",\"authors\":[{\"email\":\"66853113+pre-commit-ci[bot]@users.noreply.github.com\",\"id\":\"MDM6Qm90NjY4NTMxMTM=\",\"login\":\"pre-commit-ci[bot]\",\"name\":\"pre-commit-ci[bot]\"}],\"committedDate\":\"2026-03-05T02:31:45Z\",\"messageBody\":\"for more information, see https://pre-commit.ci\",\"messageHeadline\":\"[pre-commit.ci] auto fixes from pre-commit.com hooks\",\"oid\":\"110b8d453be42417959cb30bde53864086ce04b4\"},{\"authoredDate\":\"2026-03-05T02:33:00Z\",\"authors\":[{\"email\":\"Doogie201@gmail.com\",\"id\":\"MDQ6VXNlcjM4MjQ0NzE=\",\"login\":\"Doogie201\",\"name\":\"Doogie201\"}],\"committedDate\":\"2026-03-05T02:33:18Z\",\"messageBody\":\"\",\"messageHeadline\":\"fix(S11): remediate codex contract + determinism findings\",\"oid\":\"27915661e8eda3f5dac35d4ab2d3158c4b53eaed\"}],\"headRefName\":\"sprint/S11-template-lifecycle-manager\",\"headRefOid\":\"27915661e8eda3f5dac35d4ab2d3158c4b53eaed\",\"labels\":[{\"id\":\"LA_kwDORZ8p_M8AAAACZg3RtQ\",\"name\":\"type:feature\",\"description\":\"\",\"color\":\"0052CC\"},{\"id\":\"LA_kwDORZ8p_M8AAAACZg3Rww\",\"name\":\"risk:high\",\"description\":\"\",\"color\":\"d73a4a\"},{\"id\":\"LA_kwDORZ8p_M8AAAACZg-7xg\",\"name\":\"area:import-export\",\"description\":\"\",\"color\":\"5319E7\"},{\"id\":\"LA_kwDORZ8p_M8AAAACaFDmWQ\",\"name\":\"evidence:required\",\"description\":\"\",\"color\":\"ededed\"},{\"id\":\"LA_kwDORZ8p_M8AAAACaMpvDA\",\"name\":\"sprint:S11\",\"description\":\"\",\"color\":\"ededed\"}],\"mergeStateStatus\":\"UNKNOWN\",\"mergeable\":\"UNKNOWN\",\"number\":18,\"reviewDecision\":\"\",\"state\":\"MERGED\",\"statusCheckRollup\":[{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:44Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543796/job/65813333777\",\"name\":\"coverage\",\"startedAt\":\"2026-03-05T02:33:25Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Codecov Coverage\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:56Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543072/job/65813331814\",\"name\":\"coverage\",\"startedAt\":\"2026-03-05T02:33:30Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Codecov Coverage\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:51Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543790/job/65813333698\",\"name\":\"verify\",\"startedAt\":\"2026-03-05T02:33:25Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Verify\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:33:49Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://github.com/Doogie201/promptops-gui/actions/runs/22699543040/job/65813331821\",\"name\":\"verify\",\"startedAt\":\"2026-03-05T02:33:23Z\",\"status\":\"COMPLETED\",\"workflowName\":\"Verify\"},{\"__typename\":\"StatusContext\",\"context\":\"codecov/bundles\",\"startedAt\":\"2026-03-05T02:34:45Z\",\"state\":\"SUCCESS\",\"targetUrl\":\"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=bundle\"},{\"__typename\":\"CheckRun\",\"completedAt\":\"2026-03-05T02:34:07Z\",\"conclusion\":\"SUCCESS\",\"detailsUrl\":\"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18\",\"name\":\"codecov/patch\",\"startedAt\":\"2026-03-05T02:34:07Z\",\"status\":\"COMPLETED\",\"workflowName\":\"\"},{\"__typename\":\"StatusContext\",\"context\":\"codecov/patch\",\"startedAt\":\"2026-03-05T02:46:12Z\",\"state\":\"SUCCESS\",\"targetUrl\":\"https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18\"},{\"__typename\":\"StatusContext\",\"context\":\"pre-commit.ci - pr\",\"startedAt\":\"2026-03-05T02:33:26Z\",\"state\":\"SUCCESS\",\"targetUrl\":\"https://results.pre-commit.ci/run/github/1168058876/1772678001.1INzkmhXQNGTK1l7SYMfxg\"}],\"title\":\"[S11] ux : template lifecycle manager\",\"updatedAt\":\"2026-03-05T02:46:13Z\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18\"}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh api graphql -f 'query=query($owner:String!,$name:String!,$number:Int!){repository(owner:$owner,name:$name){pullRequest(number:$number){number headRefName headRefOid baseRefName state mergeable mergeStateStatus reviewDecision comments(last:100){nodes{author{login} bodyText url createdAt}} reviewThreads(last:100){nodes{id isResolved isOutdated comments(first:20){nodes{author{login} bodyText url createdAt}}}}}}}' -F owner=Doogie201 -F name=promptops-gui -F number=18",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "{\"data\":{\"repository\":{\"pullRequest\":{\"number\":18,\"headRefName\":\"sprint/S11-template-lifecycle-manager\",\"headRefOid\":\"27915661e8eda3f5dac35d4ab2d3158c4b53eaed\",\"baseRefName\":\"main\",\"state\":\"MERGED\",\"mergeable\":\"UNKNOWN\",\"mergeStateStatus\":\"UNKNOWN\",\"reviewDecision\":null,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"codecov\"},\"bodyText\":\"Bundle Report\\nBundle size has no change \u2705\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001683758\",\"createdAt\":\"2026-03-05T02:28:06Z\"},{\"author\":{\"login\":\"codecov\"},\"bodyText\":\"Codecov Report\\n\u2705 All modified and coverable lines are covered by tests.\\n\u2705 All tests successful. No failed tests found.\\n\ud83d\udce2 Thoughts on this report? Let us know!\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001698643\",\"createdAt\":\"2026-03-05T02:32:33Z\"},{\"author\":{\"login\":\"Doogie201\"},\"bodyText\":\"Addressed both connector findings in commit aa4ea8a:\\n\\nFixed settings drift detection to catch removed required global bindings (no pre-filter on existing keys; sprint placeholders excluded explicitly).\\nFixed unresolved-placeholder determinism by using a non-global detection regex (PLACEHOLDER_DETECT_PATTERN) to avoid regex lastIndex carryover.\\n\\nValidation receipts:\\n\\n/tmp/promptops/S11/run_20260304_212353/remediation/01_fix_diffstat.txt\\n/tmp/promptops/S11/run_20260304_212353/remediation/02_s11_tests_after_fix.txt\\n/tmp/promptops/S11/run_20260304_212353/remediation/03_build_after_fix.txt\\n/tmp/promptops/S11/run_20260304_212353/remediation/04_lint_after_fix.txt\\n/tmp/promptops/S11/run_20260304_212353/remediation/05_testall_after_fix.txt\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#issuecomment-4001702073\",\"createdAt\":\"2026-03-05T02:33:44Z\"}]},\"reviewThreads\":{\"nodes\":[{\"id\":\"PRRT_kwDORZ8p_M5yNkqX\",\"isResolved\":true,\"isOutdated\":false,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"bodyText\":\"Detect removed global bindings in drift check\\nIn assessSettingsImpactOnPinnedTemplate, the required set is built by filtering placeholders with hasOwn(nextGlobalBindings, name), which means placeholders whose bindings were removed are excluded before missing is calculated. In the common settings-edit path, deleting a global binding that a pinned template still depends on will incorrectly return ok: true, so incompatible settings changes can slip through and later render/migration steps can proceed with broken placeholder resolution.\\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#discussion_r2887211360\",\"createdAt\":\"2026-03-05T02:30:14Z\"}]}},{\"id\":\"PRRT_kwDORZ8p_M5yNkqZ\",\"isResolved\":true,\"isOutdated\":true,\"comments\":{\"nodes\":[{\"author\":{\"login\":\"chatgpt-codex-connector\"},\"bodyText\":\"Reset regex state before unresolved placeholder test\\nevaluateUnresolvedRequirements calls .test on the shared PLACEHOLDER_PATTERN regex, which is declared with the g flag, so lastIndex persists across calls. When previews are compiled repeatedly, this can cause unresolved_placeholders to appear/disappear nondeterministically for identical rendered content (notably when only one unresolved token exists), undermining the deterministic preview behavior this module is supposed to enforce.\\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.\",\"url\":\"https://github.com/Doogie201/promptops-gui/pull/18#discussion_r2887211362\",\"createdAt\":\"2026-03-05T02:30:14Z\"}]}}]}}}}}",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh pr checks 18 --repo Doogie201/promptops-gui",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "codecov/bundles\tpass\t0\thttps://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=bundle\tBundle change: 0.0% (Threshold: 5.0%)\ncodecov/patch\tpass\t0\thttps://app.codecov.io/gh/Doogie201/promptops-gui/pull/18\t\ncodecov/patch\tpass\t0\thttps://app.codecov.io/gh/Doogie201/promptops-gui/pull/18\tCoverage not affected when comparing b7ffdca...2791566\ncoverage\tpass\t26s\thttps://github.com/Doogie201/promptops-gui/actions/runs/22699543072/job/65813331814\t\ncoverage\tpass\t19s\thttps://github.com/Doogie201/promptops-gui/actions/runs/22699543796/job/65813333777\t\npre-commit.ci - pr\tpass\t0\thttps://results.pre-commit.ci/run/github/1168058876/1772678001.1INzkmhXQNGTK1l7SYMfxg\tchecks completed successfully\nverify\tpass\t26s\thttps://github.com/Doogie201/promptops-gui/actions/runs/22699543040/job/65813331821\t\nverify\tpass\t26s\thttps://github.com/Doogie201/promptops-gui/actions/runs/22699543790/job/65813333698\t\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "bash -lc 'git show-ref --verify --quiet refs/heads/sprint/S11-template-lifecycle-manager; echo $?'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "0\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse sprint/S11-template-lifecycle-manager",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-list --left-right --count 27915661e8eda3f5dac35d4ab2d3158c4b53eaed...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "8\t1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-list --left-right --count main...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "0\t1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git branch --show-current",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "cmd": "bash -lc 'git rev-parse --abbrev-ref sprint/S11-template-lifecycle-manager@{upstream}'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager@{upstream}\n",
+      "stderr": "fatal: ambiguous argument 'sprint/S11-template-lifecycle-manager@{upstream}': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+      "exit_code": 128
+    }
+  ],
+  "extra": {
+    "truth": {
+      "remote_v": {
+        "cmd": "git remote -v",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "origin\thttps://github.com/Doogie201/promptops-gui.git (fetch)\norigin\thttps://github.com/Doogie201/promptops-gui.git (push)\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "branch_current": {
+        "cmd": "git branch --show-current",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "sprint/S11-template-lifecycle-manager\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "head_sha": {
+        "cmd": "git rev-parse HEAD",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "head_meta": {
+        "cmd": "git show -s --format=fuller HEAD",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "commit 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nAuthor:     Doogie201 <Doogie201@gmail.com>\nAuthorDate: Wed Mar 4 21:33:00 2026 -0500\nCommit:     Doogie201 <Doogie201@gmail.com>\nCommitDate: Wed Mar 4 21:33:18 2026 -0500\n\n    fix(S11): remediate codex contract + determinism findings\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "origin_main_sha": {
+        "cmd": "git rev-parse origin/main",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "70e253781de113e5cf1429fbb4cfc9639ea0b1b8\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "origin_main_meta": {
+        "cmd": "git show -s --format=fuller origin/main",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "commit 70e253781de113e5cf1429fbb4cfc9639ea0b1b8\nAuthor:     Marcus <3824471+Doogie201@users.noreply.github.com>\nAuthorDate: Wed Mar 4 21:45:45 2026 -0500\nCommit:     GitHub <noreply@github.com>\nCommitDate: Wed Mar 4 21:45:45 2026 -0500\n\n    [S11] ux : template lifecycle manager (#18)\n    \n    * [S11] ux : template lifecycle manager\n    \n    * [pre-commit.ci] auto fixes from pre-commit.com hooks\n    \n    for more information, see https://pre-commit.ci\n    \n    * docs(S11): add PR readiness receipts\n    \n    * [pre-commit.ci] auto fixes from pre-commit.com hooks\n    \n    for more information, see https://pre-commit.ci\n    \n    * docs(S11): add divergence remediation receipts\n    \n    * docs(S11): add secondary divergence receipts\n    \n    * [pre-commit.ci] auto fixes from pre-commit.com hooks\n    \n    for more information, see https://pre-commit.ci\n    \n    * fix(S11): remediate codex contract + determinism findings\n    \n    ---------\n    \n    Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "gh_repo_view": {
+        "cmd": "gh repo view --json nameWithOwner,defaultBranchRef,url",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "{\"defaultBranchRef\":{\"name\":\"main\"},\"nameWithOwner\":\"Doogie201/promptops-gui\",\"url\":\"https://github.com/Doogie201/promptops-gui\"}\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "gh_default_branch": {
+        "cmd": "gh api repos/Doogie201/promptops-gui --jq .default_branch",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "main\n",
+        "stderr": "",
+        "exit_code": 0
+      }
+    },
+    "tags_top": {
+      "cmd": "bash -lc 'git tag -l --sort=-creatordate | head -n 50'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "show_ref_tags": {
+      "cmd": "bash -lc 'git show-ref --tags | head -n 50'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "main_vs_origin": {
+      "cmd": "git rev-list --left-right --count main...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "0\t1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "current_upstream_probe": {
+      "cmd": "bash -lc 'git rev-parse --abbrev-ref sprint/S11-template-lifecycle-manager@{upstream}'",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager@{upstream}\n",
+      "stderr": "fatal: ambiguous argument 'sprint/S11-template-lifecycle-manager@{upstream}': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+      "exit_code": 128
+    },
+    "current_vs_upstream": null,
+    "all_records_count": 47
+  }
+}

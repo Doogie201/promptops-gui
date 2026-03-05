@@ -1,0 +1,5 @@
+  codex/codecov-bundle-upload-remediation 0f7b32f [origin/codex/codecov-bundle-upload-remediation: gone] ci: trigger fresh Codecov run after secret refresh
+* main                                    70e2537 [origin/main] [S11] ux : template lifecycle manager (#18)
+  sprint/S10-codecov-bundle-analysis-vite f77aad9 [origin/sprint/S10-codecov-bundle-analysis-vite: gone] [S10] devx : codecov bundle analysis (vite)
++ sprint/S10-gui-operator-tools-v1        554fe34 (/private/tmp/promptops/S10/wt_closeout_20260304_185656) [origin/sprint/S10-gui-operator-tools-v1: gone] [S10] bug : enforce preflight sync probes and net-line budget logic
+  sprint/S11-template-lifecycle-manager   2791566 [origin/sprint/S11-template-lifecycle-manager: gone] fix(S11): remediate codex contract + determinism findings

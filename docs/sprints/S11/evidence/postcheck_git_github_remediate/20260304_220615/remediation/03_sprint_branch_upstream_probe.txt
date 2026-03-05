@@ -1,0 +1,33 @@
+
+$ git show-ref --verify --quiet refs/heads/sprint/S11-template-lifecycle-manager
+EXIT_CODE=0
+
+$ git rev-parse sprint/S11-template-lifecycle-manager
+27915661e8eda3f5dac35d4ab2d3158c4b53eaed
+EXIT_CODE=0
+
+$ git show-ref --verify --quiet refs/remotes/origin/sprint/S11-template-lifecycle-manager
+EXIT_CODE=1
+
+$ git rev-parse origin/sprint/S11-template-lifecycle-manager
+fatal: ambiguous argument 'origin/sprint/S11-template-lifecycle-manager': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+origin/sprint/S11-template-lifecycle-manager
+EXIT_CODE=128
+
+$ git branch -vv | rg 'sprint/S11-template-lifecycle-manager|main'
+* main                                    70e2537 [origin/main] [S11] ux : template lifecycle manager (#18)
+  sprint/S11-template-lifecycle-manager   2791566 [origin/sprint/S11-template-lifecycle-manager: gone] fix(S11): remediate codex contract + determinism findings
+EXIT_CODE=0
+
+$ git worktree list --porcelain
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD 70e253781de113e5cf1429fbb4cfc9639ea0b1b8
+branch refs/heads/main
+
+worktree /private/tmp/promptops/S10/wt_closeout_20260304_185656
+HEAD 554fe3445fb79061fb73021aa57b327acdb74712
+branch refs/heads/sprint/S10-gui-operator-tools-v1
+
+EXIT_CODE=0

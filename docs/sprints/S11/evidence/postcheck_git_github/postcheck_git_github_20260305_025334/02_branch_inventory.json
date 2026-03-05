@@ -1,0 +1,120 @@
+{
+  "generated_after_state_change": true,
+  "branch_vv": {
+    "cmd": "git branch -vv",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "  codex/codecov-bundle-upload-remediation 0f7b32f [origin/codex/codecov-bundle-upload-remediation: gone] ci: trigger fresh Codecov run after secret refresh\n  main                                    b7ffdca [origin/main: behind 1] [S10] devx : codecov bundle upload remediation (#17)\n  sprint/S10-codecov-bundle-analysis-vite f77aad9 [origin/sprint/S10-codecov-bundle-analysis-vite: gone] [S10] devx : codecov bundle analysis (vite)\n+ sprint/S10-gui-operator-tools-v1        554fe34 (/private/tmp/promptops/S10/wt_closeout_20260304_185656) [origin/sprint/S10-gui-operator-tools-v1: gone] [S10] bug : enforce preflight sync probes and net-line budget logic\n* sprint/S11-template-lifecycle-manager   2791566 [origin/sprint/S11-template-lifecycle-manager: gone] fix(S11): remediate codex contract + determinism findings\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "branch_r": {
+    "cmd": "git branch -r",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "  origin/HEAD -> origin/main\n  origin/main\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "heads_ref": {
+    "cmd": "git for-each-ref refs/heads '--format=%(refname:short) %(objectname) %(upstream:short) %(upstream:trackshort)'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "codex/codecov-bundle-upload-remediation 0f7b32f940efbac8ac112a5f4c486c7522b6932e origin/codex/codecov-bundle-upload-remediation \nmain b7ffdca14235958eeca236919ca9e0372b6e1130 origin/main <\nsprint/S10-codecov-bundle-analysis-vite f77aad9207bd54a37154f041602ee5e20b39afcb origin/sprint/S10-codecov-bundle-analysis-vite \nsprint/S10-gui-operator-tools-v1 554fe3445fb79061fb73021aa57b327acdb74712 origin/sprint/S10-gui-operator-tools-v1 \nsprint/S11-template-lifecycle-manager 27915661e8eda3f5dac35d4ab2d3158c4b53eaed origin/sprint/S11-template-lifecycle-manager \n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "remotes_ref": {
+    "cmd": "git for-each-ref refs/remotes/origin '--format=%(refname:short) %(objectname)'",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "origin 70e253781de113e5cf1429fbb4cfc9639ea0b1b8\norigin/main 70e253781de113e5cf1429fbb4cfc9639ea0b1b8\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "local_branches": [
+    {
+      "branch": "codex/codecov-bundle-upload-remediation",
+      "sha": "0f7b32f940efbac8ac112a5f4c486c7522b6932e",
+      "upstream": "origin/codex/codecov-bundle-upload-remediation",
+      "trackshort": "",
+      "ahead_behind_probe": {
+        "cmd": "git rev-list --left-right --count codex/codecov-bundle-upload-remediation...origin/codex/codecov-bundle-upload-remediation",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "",
+        "stderr": "fatal: ambiguous argument 'codex/codecov-bundle-upload-remediation...origin/codex/codecov-bundle-upload-remediation': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+        "exit_code": 128
+      },
+      "classification": "NO_UPSTREAM",
+      "probe_error": "upstream_ref_missing_or_invalid"
+    },
+    {
+      "branch": "main",
+      "sha": "b7ffdca14235958eeca236919ca9e0372b6e1130",
+      "upstream": "origin/main",
+      "trackshort": "<",
+      "ahead_behind_probe": {
+        "cmd": "git rev-list --left-right --count main...origin/main",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "0\t1\n",
+        "stderr": "",
+        "exit_code": 0
+      },
+      "ahead": 0,
+      "behind": 1,
+      "classification": "BEHIND_ONLY"
+    },
+    {
+      "branch": "sprint/S10-codecov-bundle-analysis-vite",
+      "sha": "f77aad9207bd54a37154f041602ee5e20b39afcb",
+      "upstream": "origin/sprint/S10-codecov-bundle-analysis-vite",
+      "trackshort": "",
+      "ahead_behind_probe": {
+        "cmd": "git rev-list --left-right --count sprint/S10-codecov-bundle-analysis-vite...origin/sprint/S10-codecov-bundle-analysis-vite",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "",
+        "stderr": "fatal: ambiguous argument 'sprint/S10-codecov-bundle-analysis-vite...origin/sprint/S10-codecov-bundle-analysis-vite': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+        "exit_code": 128
+      },
+      "classification": "NO_UPSTREAM",
+      "probe_error": "upstream_ref_missing_or_invalid"
+    },
+    {
+      "branch": "sprint/S10-gui-operator-tools-v1",
+      "sha": "554fe3445fb79061fb73021aa57b327acdb74712",
+      "upstream": "origin/sprint/S10-gui-operator-tools-v1",
+      "trackshort": "",
+      "ahead_behind_probe": {
+        "cmd": "git rev-list --left-right --count sprint/S10-gui-operator-tools-v1...origin/sprint/S10-gui-operator-tools-v1",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "",
+        "stderr": "fatal: ambiguous argument 'sprint/S10-gui-operator-tools-v1...origin/sprint/S10-gui-operator-tools-v1': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+        "exit_code": 128
+      },
+      "classification": "NO_UPSTREAM",
+      "probe_error": "upstream_ref_missing_or_invalid"
+    },
+    {
+      "branch": "sprint/S11-template-lifecycle-manager",
+      "sha": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed",
+      "upstream": "origin/sprint/S11-template-lifecycle-manager",
+      "trackshort": "",
+      "ahead_behind_probe": {
+        "cmd": "git rev-list --left-right --count sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager",
+        "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+        "stdout": "",
+        "stderr": "fatal: ambiguous argument 'sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n",
+        "exit_code": 128
+      },
+      "classification": "NO_UPSTREAM",
+      "probe_error": "upstream_ref_missing_or_invalid"
+    }
+  ],
+  "remote_branches": [
+    {
+      "remote_ref": "origin",
+      "sha": "70e253781de113e5cf1429fbb4cfc9639ea0b1b8"
+    },
+    {
+      "remote_ref": "origin/main",
+      "sha": "70e253781de113e5cf1429fbb4cfc9639ea0b1b8"
+    }
+  ],
+  "remote_only": []
+}

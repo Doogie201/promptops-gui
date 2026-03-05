@@ -1,0 +1,4 @@
+# Safety Audit
+
+command_count=47
+forbidden_hit_count=0

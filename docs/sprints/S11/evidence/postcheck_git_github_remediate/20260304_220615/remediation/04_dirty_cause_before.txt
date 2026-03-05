@@ -1,0 +1,18 @@
+$ git status --porcelain=v1 --branch
+## main...origin/main
+?? docs/sprints/S11/evidence/postcheck_git_github/
+EXIT_CODE=0
+
+$ git status --porcelain=v1
+?? docs/sprints/S11/evidence/postcheck_git_github/
+EXIT_CODE=0
+
+$ find docs/sprints/S11/evidence/postcheck_git_github -type f | sort
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/01_preflight.json
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/02_branch_inventory.json
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/03_worktree_inventory.json
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/04_pr18_parity.json
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/05_verdict.md
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/06_safety_audit.txt
+docs/sprints/S11/evidence/postcheck_git_github/postcheck_git_github_20260305_025334/99_command_stream.json
+EXIT_CODE=0

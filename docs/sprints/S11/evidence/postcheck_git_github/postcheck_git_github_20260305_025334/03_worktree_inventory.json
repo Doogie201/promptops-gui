@@ -1,0 +1,39 @@
+{
+  "worktree_list": {
+    "cmd": "git worktree list --porcelain",
+    "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+    "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nbranch refs/heads/sprint/S11-template-lifecycle-manager\n\nworktree /private/tmp/promptops/S10/wt_closeout_20260304_185656\nHEAD 554fe3445fb79061fb73021aa57b327acdb74712\nbranch refs/heads/sprint/S10-gui-operator-tools-v1\n\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "worktrees": [
+    {
+      "path": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "listed_head": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed",
+      "listed_branch_ref": "refs/heads/sprint/S11-template-lifecycle-manager",
+      "exists": true,
+      "branch": "sprint/S11-template-lifecycle-manager",
+      "status": "## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager [gone]\n?? docs/sprints/S11/evidence/postcheck_git_github/\n",
+      "head_sha": "27915661e8eda3f5dac35d4ab2d3158c4b53eaed",
+      "dirty": true,
+      "detached_head": false,
+      "classification": "ISSUE"
+    },
+    {
+      "path": "/private/tmp/promptops/S10/wt_closeout_20260304_185656",
+      "listed_head": "554fe3445fb79061fb73021aa57b327acdb74712",
+      "listed_branch_ref": "refs/heads/sprint/S10-gui-operator-tools-v1",
+      "exists": true,
+      "branch": "sprint/S10-gui-operator-tools-v1",
+      "status": "## sprint/S10-gui-operator-tools-v1...origin/sprint/S10-gui-operator-tools-v1 [gone]\n",
+      "head_sha": "554fe3445fb79061fb73021aa57b327acdb74712",
+      "dirty": false,
+      "detached_head": false,
+      "classification": "OK"
+    }
+  ],
+  "issues": [
+    "dirty:/Volumes/X9_DEV/Dev/Projects/promptops-gui"
+  ],
+  "generated_after_state_change": true
+}

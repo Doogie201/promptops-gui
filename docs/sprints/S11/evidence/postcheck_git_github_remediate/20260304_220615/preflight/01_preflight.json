@@ -1,0 +1,105 @@
+{
+  "run_ts": "2026-03-05T03:06:59Z",
+  "repo_root": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "parsed": {
+    "branch": "sprint/S11-template-lifecycle-manager",
+    "status_raw": "?? docs/sprints/S11/evidence/postcheck_git_github/",
+    "tracked_count": 0,
+    "untracked_count": 0,
+    "rev_list_head_origin_main": "8\t1",
+    "fsck_exit_code": 0,
+    "fsck_dangling_only": true,
+    "fsck_corruption_markers": false,
+    "toplevel_matches_promptops_repo": true
+  },
+  "commands": [
+    {
+      "name": "pwd",
+      "cmd": "pwd",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "echo_promptops_repo",
+      "cmd": "echo \"/Volumes/X9_DEV/Dev/Projects/promptops-gui\"",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_show_toplevel",
+      "cmd": "git rev-parse --show-toplevel",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_fetch_all_prune_tags",
+      "cmd": "git fetch --all --prune --tags",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_prune_dry_run",
+      "cmd": "git prune --dry-run",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_fsck_no_reflogs",
+      "cmd": "git fsck --no-reflogs",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "dangling commit 65227498ef4d7aaa82a6339912ca6679f3942307\ndangling commit b1944f1fd36789c9ad9f560fec417a34d9117aee\ndangling commit 6b16fb3236456d3efb9e6ebd0aba63546908380f\ndangling commit 8688b32df3640ee34b303b9b7b6a8308616e54e5\ndangling commit 1f0ab4f31c7d651893ec6e651c5af60c3863ea35\ndangling commit 5b6c87d39d4ec45ec84160fecb4807961710836e",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_worktree_list_porcelain",
+      "cmd": "git worktree list --porcelain",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui\nHEAD 27915661e8eda3f5dac35d4ab2d3158c4b53eaed\nbranch refs/heads/sprint/S11-template-lifecycle-manager\n\nworktree /private/tmp/promptops/S10/wt_closeout_20260304_185656\nHEAD 554fe3445fb79061fb73021aa57b327acdb74712\nbranch refs/heads/sprint/S10-gui-operator-tools-v1",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_status_porcelain_branch",
+      "cmd": "git status --porcelain=v1 --branch",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "## sprint/S11-template-lifecycle-manager...origin/sprint/S11-template-lifecycle-manager [gone]\n?? docs/sprints/S11/evidence/postcheck_git_github/",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_rev_list_head_origin_main",
+      "cmd": "git rev-list --left-right --count HEAD...origin/main",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "8\t1",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_rev_parse_abbrev_ref_head",
+      "cmd": "git rev-parse --abbrev-ref HEAD",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "sprint/S11-template-lifecycle-manager",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "name": "git_log_oneline_5",
+      "cmd": "git log --oneline -5",
+      "cwd": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+      "stdout": "2791566 fix(S11): remediate codex contract + determinism findings\n110b8d4 [pre-commit.ci] auto fixes from pre-commit.com hooks\n0d447db docs(S11): add secondary divergence receipts\necdbc87 docs(S11): add divergence remediation receipts\n38d6e19 [pre-commit.ci] auto fixes from pre-commit.com hooks",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+
+$ git branch -d sprint/S11-template-lifecycle-manager
+error: the branch 'sprint/S11-template-lifecycle-manager' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D sprint/S11-template-lifecycle-manager'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+EXIT_CODE=1
+$ git branch -D sprint/S11-template-lifecycle-manager
+Deleted branch sprint/S11-template-lifecycle-manager (was 2791566).
+EXIT_CODE=0
+
+$ git branch -vv
+  codex/codecov-bundle-upload-remediation 0f7b32f [origin/codex/codecov-bundle-upload-remediation: gone] ci: trigger fresh Codecov run after secret refresh
+* main                                    70e2537 [origin/main] [S11] ux : template lifecycle manager (#18)
+  sprint/S10-codecov-bundle-analysis-vite f77aad9 [origin/sprint/S10-codecov-bundle-analysis-vite: gone] [S10] devx : codecov bundle analysis (vite)
++ sprint/S10-gui-operator-tools-v1        554fe34 (/private/tmp/promptops/S10/wt_closeout_20260304_185656) [origin/sprint/S10-gui-operator-tools-v1: gone] [S10] bug : enforce preflight sync probes and net-line budget logic
+EXIT_CODE=0
+
+$ git worktree list --porcelain
+worktree /Volumes/X9_DEV/Dev/Projects/promptops-gui
+HEAD 70e253781de113e5cf1429fbb4cfc9639ea0b1b8
+branch refs/heads/main
+
+worktree /private/tmp/promptops/S10/wt_closeout_20260304_185656
+HEAD 554fe3445fb79061fb73021aa57b327acdb74712
+branch refs/heads/sprint/S10-gui-operator-tools-v1
+
+EXIT_CODE=0

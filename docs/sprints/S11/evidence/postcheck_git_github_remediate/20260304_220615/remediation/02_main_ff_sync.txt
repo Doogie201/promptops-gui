@@ -1,0 +1,246 @@
+
+$ git rev-parse --abbrev-ref HEAD
+sprint/S11-template-lifecycle-manager
+EXIT_CODE=0
+
+$ git rev-list --left-right --count main...origin/main
+0	1
+EXIT_CODE=0
+
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+EXIT_CODE=0
+
+$ git fetch --all --prune --tags
+EXIT_CODE=0
+
+$ git pull --ff-only
+Updating b7ffdca..70e2537
+Fast-forward
+ docs/backlog/README.md                             |    1 +
+ docs/sprints/README.md                             |    1 +
+ docs/sprints/S11/README.md                         |   41 +
+ docs/sprints/S11/evidence/INDEX.md                 |   23 +
+ docs/sprints/S11/evidence/at/AT-S11-01_run.json    |   13 +
+ docs/sprints/S11/evidence/at/AT-S11-02_run.json    |    9 +
+ docs/sprints/S11/evidence/at/AT-S11-03_run.json    |    9 +
+ docs/sprints/S11/evidence/at/AT-S11-04_run.json    |   24 +
+ .../branch_20260304_211449/01_checkout_main.txt    |    4 +
+ .../branch/branch_20260304_211449/02_pull_ff.txt   |    3 +
+ .../branch_20260304_211449/03_create_branch.txt    |    3 +
+ .../branch_20260304_211449/04_push_branch.txt      |    9 +
+ .../branch_20260304_211449/05_branch_verify.txt    |    3 +
+ .../migrate/AT-S11-03_continuity_packet.json       |   79 ++
+ .../migrate/AT-S11-03_continuity_packet.sha256     |    1 +
+ .../S11/evidence/migrate/AT-S11-03_migration.json  |  331 ++++++
+ .../S11/evidence/migrate/AT-S11-04_revert.json     |    5 +
+ .../preflight/full_preflight/00_run_root.txt       |    1 +
+ .../evidence/preflight/full_preflight/01_pwd.txt   |    3 +
+ .../full_preflight/02_echo_promptops_repo.txt      |    3 +
+ .../preflight/full_preflight/03_show_toplevel.txt  |    3 +
+ .../preflight/full_preflight/04_worktree_list.txt  |   10 +
+ .../preflight/full_preflight/05_status.txt         |    3 +
+ .../evidence/preflight/full_preflight/06_fetch.txt |    2 +
+ .../preflight/full_preflight/07_revlist.txt        |    3 +
+ .../preflight/full_preflight/08_branch.txt         |    3 +
+ .../evidence/preflight/full_preflight/09_log.txt   |    7 +
+ .../evidence/preflight/full_preflight/10_prune.txt |    2 +
+ .../evidence/preflight/full_preflight/11_fsck.txt  |    5 +
+ .../preflight/full_preflight/12_open_prs.txt       |    3 +
+ .../preflight/full_preflight/99_summary.txt        |    8 +
+ .../evidence/preflight/repo_root_fix/01_pwd.txt    |    3 +
+ .../repo_root_fix/02_echo_promptops_repo.txt       |    3 +
+ .../preflight/repo_root_fix/03_show_toplevel.txt   |    3 +
+ .../preflight/repo_root_fix/04_toplevel_match.txt  |    3 +
+ .../evidence/preflight/repo_root_fix/05_status.txt |    3 +
+ .../evidence/preflight/repo_root_fix/06_branch.txt |    3 +
+ .../preflight/repo_root_fix/07_revlist.txt         |    3 +
+ .../preflight/repo_root_fix/08_open_prs.txt        |    3 +
+ .../preflight/repo_root_fix/99_summary.txt         |    8 +
+ .../evidence/preview/AT-S11-04_preview_hashes.json |    5 +
+ .../06_durable_copy_receipt.txt                    |   14 +
+ .../07_durable_refresh_receipt.txt                 |    4 +
+ .../run/run_20260304_212353/99_summary.txt         |    6 +
+ .../run/run_20260304_212353/at/01_s11_tests.txt    |   41 +
+ .../at/02_s11_tests_post_docs.txt                  |   41 +
+ .../run_20260304_212353/at/03_s11_tests_final.txt  |   41 +
+ .../run/run_20260304_212353/commit_01_add.txt      |    2 +
+ .../commit_02_status_after_add.txt                 |   78 ++
+ .../run/run_20260304_212353/commit_03_commit.txt   |   77 ++
+ .../run/run_20260304_212353/commit_04_push.txt     |    4 +
+ .../run/run_20260304_212353/diverge2_01_fetch.txt  |    4 +
+ .../run_20260304_212353/diverge2_02_revlist.txt    |    3 +
+ .../diverge2_03_remote_only.txt                    |    3 +
+ .../run_20260304_212353/diverge2_04_local_only.txt |    3 +
+ .../diverge2_05_remote_commit_meta.txt             |   11 +
+ .../run/run_20260304_212353/diverge2_06_reset.txt  |    3 +
+ .../run_20260304_212353/diverge2_07_cherrypick.txt |   13 +
+ .../run/run_20260304_212353/diverge2_08_push.txt   |    4 +
+ .../diverge2_09_revlist_after.txt                  |    3 +
+ .../run/run_20260304_212353/diverge_01_fetch.txt   |    4 +
+ .../run/run_20260304_212353/diverge_02_revlist.txt |    3 +
+ .../run_20260304_212353/diverge_03_local_only.txt  |    3 +
+ .../run_20260304_212353/diverge_04_remote_only.txt |    3 +
+ .../run/run_20260304_212353/diverge_05_reset.txt   |    3 +
+ .../run_20260304_212353/diverge_06_cherrypick.txt  |   12 +
+ .../run/run_20260304_212353/diverge_07_push.txt    |    4 +
+ .../diverge_08_revlist_after.txt                   |    3 +
+ .../run/run_20260304_212353/gates/01_build.txt     |    9 +
+ .../run/run_20260304_212353/gates/02_test_all.txt  |  160 +++
+ .../run/run_20260304_212353/gates/03_lint.txt      |    3 +
+ .../gates/04_build_post_docs.txt                   |    9 +
+ .../gates/05_test_all_post_docs.txt                |  160 +++
+ .../gates/06_lint_post_docs.txt                    |    3 +
+ .../run_20260304_212353/gates/07_build_final.txt   |    9 +
+ .../gates/08_test_all_final.txt                    |  160 +++
+ .../run_20260304_212353/gates/09_lint_final.txt    |    3 +
+ .../pr_05_threads_comments_graphql.json.txt        |    2 +
+ .../run/run_20260304_212353/pr_06_checks_watch.txt |   14 +
+ .../pr_07_view_after_checks.json.txt               |    3 +
+ .../preflight_refs/01_open_pr_inventory.json.txt   |    3 +
+ .../preflight_refs/repo_root_fix_path.txt          |    1 +
+ .../remediation/01_fix_diffstat.txt                |    5 +
+ .../remediation/02_s11_tests_after_fix.txt         |   41 +
+ .../remediation/03_build_after_fix.txt             |    9 +
+ .../remediation/04_lint_after_fix.txt              |    3 +
+ .../remediation/05_testall_after_fix.txt           |  160 +++
+ .../run/run_20260304_212353/scope/01_status.txt    |    7 +
+ .../run_20260304_212353/scope/02_diff_names.txt    |    4 +
+ .../run/run_20260304_212353/scope/03_diffstat.txt  |    5 +
+ .../scope/04_whitelist_budget_eval.txt             |    4 +
+ .../scope/05_status_porcelain.txt                  |    6 +
+ .../scope/06_whitelist_eval_with_untracked.txt     |    3 +
+ .../scope/07_maintainability_eval.txt              |   50 +
+ .../stoplight/01_marker_list.txt                   |   13 +
+ .../stoplight/02_html_marker_grep.txt              |    2 +
+ .../stoplight/03_stderr_marker_grep.txt            |    7 +
+ .../S11/evidence/stoplight/01_marker_list.txt      |   13 +
+ .../S11/evidence/stoplight/02_html_marker_grep.txt |    2 +
+ .../evidence/stoplight/03_stderr_marker_grep.txt   |    7 +
+ .../evidence/templates/AT-S11-01_validation.json   |  214 ++++
+ .../S11/evidence/templates/AT-S11-02_override.json |  496 +++++++++
+ src/s11/s11.test.ts                                |  346 +++++++
+ src/s11/template_lifecycle.ts                      | 1050 ++++++++++++++++++++
+ 104 files changed, 4028 insertions(+)
+ create mode 100644 docs/sprints/S11/README.md
+ create mode 100644 docs/sprints/S11/evidence/INDEX.md
+ create mode 100644 docs/sprints/S11/evidence/at/AT-S11-01_run.json
+ create mode 100644 docs/sprints/S11/evidence/at/AT-S11-02_run.json
+ create mode 100644 docs/sprints/S11/evidence/at/AT-S11-03_run.json
+ create mode 100644 docs/sprints/S11/evidence/at/AT-S11-04_run.json
+ create mode 100644 docs/sprints/S11/evidence/branch/branch_20260304_211449/01_checkout_main.txt
+ create mode 100644 docs/sprints/S11/evidence/branch/branch_20260304_211449/02_pull_ff.txt
+ create mode 100644 docs/sprints/S11/evidence/branch/branch_20260304_211449/03_create_branch.txt
+ create mode 100644 docs/sprints/S11/evidence/branch/branch_20260304_211449/04_push_branch.txt
+ create mode 100644 docs/sprints/S11/evidence/branch/branch_20260304_211449/05_branch_verify.txt
+ create mode 100644 docs/sprints/S11/evidence/migrate/AT-S11-03_continuity_packet.json
+ create mode 100644 docs/sprints/S11/evidence/migrate/AT-S11-03_continuity_packet.sha256
+ create mode 100644 docs/sprints/S11/evidence/migrate/AT-S11-03_migration.json
+ create mode 100644 docs/sprints/S11/evidence/migrate/AT-S11-04_revert.json
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/00_run_root.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/01_pwd.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/02_echo_promptops_repo.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/03_show_toplevel.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/04_worktree_list.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/05_status.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/06_fetch.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/07_revlist.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/08_branch.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/09_log.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/10_prune.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/11_fsck.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/12_open_prs.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/full_preflight/99_summary.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/01_pwd.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/02_echo_promptops_repo.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/03_show_toplevel.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/04_toplevel_match.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/05_status.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/06_branch.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/07_revlist.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/08_open_prs.txt
+ create mode 100644 docs/sprints/S11/evidence/preflight/repo_root_fix/99_summary.txt
+ create mode 100644 docs/sprints/S11/evidence/preview/AT-S11-04_preview_hashes.json
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/06_durable_copy_receipt.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/07_durable_refresh_receipt.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/99_summary.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/at/01_s11_tests.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/at/02_s11_tests_post_docs.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/at/03_s11_tests_final.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_01_add.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_02_status_after_add.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_03_commit.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/commit_04_push.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_01_fetch.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_02_revlist.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_03_remote_only.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_04_local_only.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_05_remote_commit_meta.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_06_reset.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_07_cherrypick.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_08_push.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge2_09_revlist_after.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_01_fetch.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_02_revlist.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_03_local_only.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_04_remote_only.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_05_reset.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_06_cherrypick.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_07_push.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/diverge_08_revlist_after.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/01_build.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/02_test_all.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/03_lint.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/04_build_post_docs.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/05_test_all_post_docs.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/06_lint_post_docs.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/07_build_final.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/08_test_all_final.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/gates/09_lint_final.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/pr_05_threads_comments_graphql.json.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/pr_06_checks_watch.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/pr_07_view_after_checks.json.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/preflight_refs/01_open_pr_inventory.json.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/preflight_refs/repo_root_fix_path.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/remediation/01_fix_diffstat.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/remediation/02_s11_tests_after_fix.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/remediation/03_build_after_fix.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/remediation/04_lint_after_fix.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/remediation/05_testall_after_fix.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/01_status.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/02_diff_names.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/03_diffstat.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/04_whitelist_budget_eval.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/05_status_porcelain.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/06_whitelist_eval_with_untracked.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/scope/07_maintainability_eval.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/stoplight/01_marker_list.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/stoplight/02_html_marker_grep.txt
+ create mode 100644 docs/sprints/S11/evidence/run/run_20260304_212353/stoplight/03_stderr_marker_grep.txt
+ create mode 100644 docs/sprints/S11/evidence/stoplight/01_marker_list.txt
+ create mode 100644 docs/sprints/S11/evidence/stoplight/02_html_marker_grep.txt
+ create mode 100644 docs/sprints/S11/evidence/stoplight/03_stderr_marker_grep.txt
+ create mode 100644 docs/sprints/S11/evidence/templates/AT-S11-01_validation.json
+ create mode 100644 docs/sprints/S11/evidence/templates/AT-S11-02_override.json
+ create mode 100644 src/s11/s11.test.ts
+ create mode 100644 src/s11/template_lifecycle.ts
+EXIT_CODE=0
+
+$ git rev-list --left-right --count main...origin/main
+0	0
+EXIT_CODE=0
+
+$ git log --oneline -5
+70e2537 [S11] ux : template lifecycle manager (#18)
+b7ffdca [S10] devx : codecov bundle upload remediation (#17)
+fff206f [S10] devx : codecov bundle analysis (vite) (#16)
+dfc7289 [S10] devx : GUI operator tools v1 (#15)
+d285a0b [S09] docs : SharedDrive complex quarantine disposition + evidence
+EXIT_CODE=0
+
+$ git status --porcelain=v1 --branch
+## main...origin/main
+?? docs/sprints/S11/evidence/postcheck_git_github/
+EXIT_CODE=0
