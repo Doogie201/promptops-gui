@@ -1,0 +1,5 @@
+CMD: forbidden import fixed-string scans
+src/s17/operator_api_node.ts:3:import { runGatesTool, runOutOfSyncTool, runPreflightTool, runPrProtocolTool } from '../s10/operator_tools.ts';
+src/s17/operator_api_node.ts:4:import { sha256, stableJson } from '../s10/operator_exec.ts';
+src/s17/operator_api_node.ts:5:import type { CommandRecord, CommandRunner, ToolOptions } from '../s10/operator_types.ts';
+EXIT_CODE:0

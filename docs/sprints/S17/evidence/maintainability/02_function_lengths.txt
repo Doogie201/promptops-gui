@@ -1,0 +1,29 @@
+CMD: function-length scan for src/s17
+src/s17/dashboard_app.ts:20:15:export function mountDashboardApp(root: HTMLElement, facade: OperatorApiFacade): void {
+src/s17/dashboard_app.ts:36:9:function bindCardButtons(root: HTMLElement, state: DashboardState, facade: OperatorApiFacade): void {
+src/s17/dashboard_app.ts:46:19:async function runCardAction(
+src/s17/dashboard_app.ts:66:15:function applyResponse(state: DashboardState, cardId: DashboardActionId, response: ActionResponseEnvelope<unknown>): void {
+src/s17/dashboard_app.ts:82:11:async function invokeFacadeAction(
+src/s17/dashboard_app.ts:94:27:async function withTimeout(
+src/s17/dashboard_app.ts:122:3:function render(root: HTMLElement, state: DashboardState): void {
+src/s17/dashboard_app.ts:126:12:function dashboardTemplate(state: DashboardState): string {
+src/s17/dashboard_app.ts:139:5:function formatReceipts(receipts: ReceiptSummary[]): string {
+src/s17/dashboard_app.ts:145:8:function escapeHtml(value: string): string {
+src/s17/import_guard.ts:14:21:export function findForbiddenUiImports(source: string): ImportGuardViolation[] {
+src/s17/import_guard.ts:36:12:export function guardUiImportDirection(files: Array<{ filePath: string; source: string }>): ImportGuardViolation[] {
+src/s17/operator_api_browser.ts:14:24:export function createBrowserOperatorApi(): OperatorApiFacade {
+src/s17/operator_api_browser.ts:39:25:function blockedEnvelope<TData>(
+src/s17/operator_api_node.ts:41:11:export function createNodeOperatorApi(config: NodeOperatorApiConfig = {}, runner?: CommandRunner): OperatorApiFacade {
+src/s17/operator_api_node.ts:53:36:async function runPreflightAction(
+src/s17/operator_api_node.ts:90:24:async function runGatesAction(
+src/s17/operator_api_node.ts:115:43:async function runPrInventoryAction(
+src/s17/operator_api_node.ts:159:29:async function runStatusAction(
+src/s17/operator_api_node.ts:189:41:function toEnvelope<TData>(
+src/s17/operator_api_node.ts:231:25:function missingRepoRootEnvelope<TData>(ctx: ActionContext, data: TData): ActionResponseEnvelope<TData> {
+src/s17/operator_api_node.ts:257:13:function resolveRepoRoot(ctx: ActionContext, config: NodeOperatorApiConfig): ResolvedRepoRoot | null {
+src/s17/operator_api_node.ts:271:8:function requestEnvelope(ctx: ActionContext, strategy: RepoRootStrategy): ActionRequestEnvelope {
+src/s17/operator_api_node.ts:280:9:function mapReceipts(records: CommandRecord[]): ReceiptSummary[] {
+src/s17/operator_api_node.ts:290:13:function toolOptions(ctx: ActionContext, config: NodeOperatorApiConfig, repoRoot: string): ToolOptions {
+src/s17/operator_api_node.ts:304:3:function requestId(action: DashboardActionId, args: Record<string, string>): string {
+src/s17/operator_api_node.ts:308:10:function loadSignalCount(filePath: string | undefined): number {
+EXIT_CODE:0

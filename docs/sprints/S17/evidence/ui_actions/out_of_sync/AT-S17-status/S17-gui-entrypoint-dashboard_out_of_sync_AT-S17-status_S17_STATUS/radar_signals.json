@@ -1,0 +1,27 @@
+[
+  {
+    "id": "DIRTY_TREE_MID_RUN",
+    "active": true,
+    "detail": "status has tracked/untracked changes"
+  },
+  {
+    "id": "HEAD_CHANGED_UNEXPECTEDLY",
+    "active": false,
+    "detail": "expected=n/a current=5aac09dad45c53bba6e37344056d004347a1f68b"
+  },
+  {
+    "id": "BEHIND_ORIGIN_MAIN",
+    "active": false,
+    "detail": "ahead=0 behind=0"
+  },
+  {
+    "id": "MISSING_EVIDENCE_PATHS",
+    "active": false,
+    "detail": "none"
+  },
+  {
+    "id": "MISSING_SPRINT_DOCS",
+    "active": false,
+    "detail": "docs/sprints/S10/README.md"
+  }
+]

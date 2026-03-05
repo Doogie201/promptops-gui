@@ -1,0 +1,36 @@
+{
+  "action": "pr_inventory",
+  "request": {
+    "action": "pr_inventory",
+    "requestId": "AT-S17-pr-inventory",
+    "args": {
+      "requestId": "AT-S17-pr-inventory",
+      "timestamp": "S17_PR"
+    },
+    "repoRootStrategy": "explicit_arg"
+  },
+  "status": "PASS",
+  "reasonCode": "NONE",
+  "message": "No merge candidate; inventory is clean.",
+  "data": {
+    "openCount": 0,
+    "candidatePr": null,
+    "unresolvedThreadsAfter": 0
+  },
+  "receipts": [
+    {
+      "id": "open_pr_list",
+      "cmd": "gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt",
+      "exitCode": 0,
+      "stdoutPath": "/tmp/promptops/S17/ui/actions/pr_protocol/AT-S17-pr-inventory/S17-gui-entrypoint-dashboard_pr_protocol_AT-S17-pr-inventory_S17_PR/open_pr_list.stdout.txt",
+      "stderrPath": "/tmp/promptops/S17/ui/actions/pr_protocol/AT-S17-pr-inventory/S17-gui-entrypoint-dashboard_pr_protocol_AT-S17-pr-inventory_S17_PR/open_pr_list.stderr.txt"
+    }
+  ],
+  "receiptPaths": {
+    "open_pr_list": "/tmp/promptops/S17/ui/actions/pr_protocol/AT-S17-pr-inventory/S17-gui-entrypoint-dashboard_pr_protocol_AT-S17-pr-inventory_S17_PR/open_pr_list.json",
+    "pr_protocol_eval": "/tmp/promptops/S17/ui/actions/pr_protocol/AT-S17-pr-inventory/S17-gui-entrypoint-dashboard_pr_protocol_AT-S17-pr-inventory_S17_PR/pr_protocol_eval.md"
+  },
+  "durableBundlePath": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/pr_protocol/AT-S17-pr-inventory/S17-gui-entrypoint-dashboard_pr_protocol_AT-S17-pr-inventory_S17_PR",
+  "exitCode": 0,
+  "resultHash": "5cbdf385b7ca2c434009fef40ef9bad80b9c1a83155868719e25bf27fa5e56d3"
+}

@@ -1,0 +1,2 @@
+CMD: gh pr list --repo Doogie201/promptops-gui --state open
+EXIT_CODE:0

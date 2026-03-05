@@ -1,0 +1,2 @@
+CMD: curl http://127.0.0.1:4173
+EXIT_CODE:0

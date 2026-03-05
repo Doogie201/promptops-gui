@@ -1,0 +1,16 @@
+[
+  {
+    "id": "open_pr_list",
+    "command": "gh",
+    "args": [
+      "pr",
+      "list",
+      "--repo",
+      "Doogie201/promptops-gui",
+      "--state",
+      "open",
+      "--json",
+      "number,title,headRefName,baseRefName,url,updatedAt"
+    ]
+  }
+]

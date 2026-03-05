@@ -1,0 +1,4 @@
+CMD: git diff --numstat origin/main...HEAD
+---
+CMD: wc -l touched files
+EXIT_CODE:0

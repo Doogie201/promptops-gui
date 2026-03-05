@@ -1,0 +1,11 @@
+{
+  "sprintId": "S17-gui-entrypoint-dashboard",
+  "tool": "pr_protocol",
+  "runId": "AT-S17-pr-inventory",
+  "timestamp": "S17_PR",
+  "repoRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui",
+  "stagingRoot": "/tmp/promptops/S17/ui/actions/pr_protocol/AT-S17-pr-inventory",
+  "durableRoot": "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S17/evidence/ui_actions/pr_protocol/AT-S17-pr-inventory",
+  "bundleRoot": "/tmp/promptops/S17/ui/actions/pr_protocol/AT-S17-pr-inventory/S17-gui-entrypoint-dashboard_pr_protocol_AT-S17-pr-inventory_S17_PR",
+  "continuityHash": "f48b6840ebe459d7dc1204c9ed133d1217aadedea2340a9caa3c8935157bef29"
+}

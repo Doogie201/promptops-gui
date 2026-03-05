@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "dev": "vite --config src/s17/vite.config.ts",
     "preflight": "bash scripts/preflight.sh",
     "build": "tsc --noEmit && npm run -s build:bundle-analysis",
     "build:bundle-analysis": "vite build --config vite.config.ts",

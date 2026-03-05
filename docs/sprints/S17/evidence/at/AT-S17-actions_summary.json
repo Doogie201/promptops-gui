@@ -1,0 +1,22 @@
+{
+  "preflight": {
+    "status": "HARD_STOP",
+    "reasonCode": "REPO_ROOT_NOT_ON_MAIN_NOT_SYNCED",
+    "resultHash": "d9c2504d63a26c23cfc897b3fcd1c0b3bc64e1097f0c65eec40aa6fc4b441fa2"
+  },
+  "gates": {
+    "status": "FAIL",
+    "reasonCode": "PR_NOT_READY",
+    "resultHash": "07cfae5e1a784b951b87e704501b8721d5abab86d69d3b0e7cef0100a5725272"
+  },
+  "prInventory": {
+    "status": "PASS",
+    "reasonCode": "NONE",
+    "openCount": 0
+  },
+  "runStatus": {
+    "status": "FAIL",
+    "reasonCode": "OUT_OF_SYNC",
+    "signalCount": 1
+  }
+}

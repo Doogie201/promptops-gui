@@ -1,0 +1,3 @@
+CMD: git rev-parse --abbrev-ref HEAD
+sprint/S17-gui-entrypoint-dashboard
+EXIT_CODE:0

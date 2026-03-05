@@ -1,0 +1,27 @@
+[
+  {
+    "id": "gate_readiness_status",
+    "command": "git",
+    "args": [
+      "status",
+      "--porcelain=v1",
+      "--branch"
+    ]
+  },
+  {
+    "id": "gate_verify",
+    "command": "npm",
+    "args": [
+      "run",
+      "-s",
+      "verify"
+    ]
+  },
+  {
+    "id": "gate_gates_sh",
+    "command": "bash",
+    "args": [
+      "gates.sh"
+    ]
+  }
+]

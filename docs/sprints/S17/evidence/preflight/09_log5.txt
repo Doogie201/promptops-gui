@@ -1,0 +1,7 @@
+CMD: git log --oneline -5
+5aac09d [S16] perf : hardening + regression suite (#26)
+7a5f0c3 s10: enforce final atomic closeout gate after durable sync (#25)
+7166737 s10: enforce atomic closeout and untracked-evidence hard-stop (#24)
+90c175a [S15] docs : track merge closeout receipts (#23)
+7344c49 [S15] devx : terminal panel (#22)
+EXIT_CODE:0

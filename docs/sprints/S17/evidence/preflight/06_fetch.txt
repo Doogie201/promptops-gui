@@ -1,0 +1,2 @@
+CMD: git fetch --all --prune --tags
+EXIT_CODE:0
