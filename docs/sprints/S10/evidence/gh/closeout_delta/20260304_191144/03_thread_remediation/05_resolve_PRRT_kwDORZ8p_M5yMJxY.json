@@ -1,2 +1,10 @@
-CMD: gh api graphql resolveReviewThread threadId=PRRT_kwDORZ8p_M5yMJxY
-{"data":{"resolveReviewThread":{"thread":{"id":"PRRT_kwDORZ8p_M5yMJxY","isResolved":true}}}}EXIT_CODE: 0
+{
+  "data": {
+    "resolveReviewThread": {
+      "thread": {
+        "id": "PRRT_kwDORZ8p_M5yMJxY",
+        "isResolved": true
+      }
+    }
+  }
+}
