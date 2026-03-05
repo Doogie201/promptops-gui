@@ -57,3 +57,5 @@
 - `pr/09_pr_threads_comments.json.txt`
 - `pr/10_pr_threads_eval.json`
 - `scope/04_branch_sync_after_push.txt`
+- `pr/11_push_ff_remediation.txt`
+- `pr/12_divergence_merge_resolution.txt`
