@@ -1,9 +1,9 @@
 COMMAND: gh pr checks 22 final snapshot A
-codecov/patch	pass	1s	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/22	
-coverage	pass	15s	https://github.com/Doogie201/promptops-gui/actions/runs/22710450983/job/65846983699	
-coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22710452437/job/65846989379	
+codecov/patch	pass	1s	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/22
+coverage	pass	15s	https://github.com/Doogie201/promptops-gui/actions/runs/22710450983/job/65846983699
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22710452437/job/65846989379
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772701557.s31qHTC6QXu3Djy1r2i0Qw	checks completed successfully
-verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22710450991/job/65846983629	
-verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22710452446/job/65846989396	
+verify	pass	20s	https://github.com/Doogie201/promptops-gui/actions/runs/22710450991/job/65846983629
+verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22710452446/job/65846989396
 
 EXIT_CODE: 0
