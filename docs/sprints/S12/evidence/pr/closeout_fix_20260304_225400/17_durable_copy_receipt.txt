@@ -1,0 +1,4 @@
+RUN_DIR=/tmp/promptops/S12/closeout_fix_20260304_225400
+DURABLE_PR_DIR=docs/sprints/S12/evidence/pr/closeout_fix_20260304_225400
+COPIED_AT=2026-03-05T04:02:46Z
+EXIT_CODE=0

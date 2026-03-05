@@ -1,0 +1,12 @@
+# PR #19 Stability Evaluation
+- snapshot_a_head: 38533c6a7cb740e12cc8223287baa4354b222840
+- snapshot_b_head: 38533c6a7cb740e12cc8223287baa4354b222840
+- head_match: 1
+- elapsed_seconds: 190
+- green_a: 1
+- green_b: 1
+- unresolved_threads_a: 0
+- unresolved_threads_b: 0
+- non_success_checks_a: 0
+- non_success_checks_b: 0
+- stable_green: 1

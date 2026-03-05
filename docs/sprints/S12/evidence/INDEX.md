@@ -37,6 +37,7 @@
 - `stoplight/03_stderr_marker_grep.txt`
 
 ## Acceptance Tests
+- `at/AT-S12_suite.txt`
 - `at/AT-S12-01_run.json`
 - `at/AT-S12-01_repo_drift.json`
 - `at/AT-S12-02_run.json`
@@ -59,3 +60,25 @@
 - `scope/04_branch_sync_after_push.txt`
 - `pr/11_push_ff_remediation.txt`
 - `pr/12_divergence_merge_resolution.txt`
+
+## Closeout Fix (20260304_225400)
+- `pr/closeout_fix_20260304_225400/01_pr_view_after_push.json`
+- `pr/closeout_fix_20260304_225400/02_pr_review_threads_after_push.json`
+- `pr/closeout_fix_20260304_225400/03_pr_checks_after_push.txt`
+- `pr/closeout_fix_20260304_225400/04_pr_comment_remediation.txt`
+- `pr/closeout_fix_20260304_225400/06_resolve_thread_1_PRRT_kwDORZ8p_M5yOLLa.json`
+- `pr/closeout_fix_20260304_225400/06_resolve_thread_2_PRRT_kwDORZ8p_M5yOLLb.json`
+- `pr/closeout_fix_20260304_225400/06_resolve_thread_3_PRRT_kwDORZ8p_M5yOLLd.json`
+- `pr/closeout_fix_20260304_225400/07_pr_review_threads_after_resolve.json`
+- `pr/closeout_fix_20260304_225400/08_snapshot_A_pr_view.json`
+- `pr/closeout_fix_20260304_225400/09_snapshot_A_threads.json`
+- `pr/closeout_fix_20260304_225400/10_snapshot_A_checks.txt`
+- `pr/closeout_fix_20260304_225400/11_timing_gate_190s.txt`
+- `pr/closeout_fix_20260304_225400/12_snapshot_B_pr_view.json`
+- `pr/closeout_fix_20260304_225400/13_snapshot_B_threads.json`
+- `pr/closeout_fix_20260304_225400/14_snapshot_B_checks.txt`
+- `pr/closeout_fix_20260304_225400/15_stability_eval.md`
+- `pr/closeout_fix_20260304_225400/16_thread_resolution_eval.md`
+- `pr/closeout_fix_20260304_225400/17_durable_copy_receipt.txt`
+- `scope/closeout_fix_changed_files.txt`
+- `scope/closeout_fix_diffstat.txt`

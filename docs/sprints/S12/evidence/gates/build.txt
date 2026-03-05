@@ -1,10 +1,10 @@
-CMD: npm run -s build
-CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+COMMAND=npm run -s build
 vite v6.4.1 building for production...
 transforming...
 ✓ 1 modules transformed.
 rendering chunks...
 computing gzip size...
 coverage/bundle-analysis/bundle.mjs  0.07 kB │ gzip: 0.09 kB
-✓ built in 31ms
+✓ built in 30ms
 EXIT_CODE=0

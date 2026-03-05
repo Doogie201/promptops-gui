@@ -1,11 +1,7 @@
-CMD: whitelist evaluation against sprint whitelist
-CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
-FILES:
-docs/backlog/README.md
-docs/sprints/README.md
-docs/sprints/S12/README.md
-src/s12/health_drift.ts
-src/s12/s12.test.ts
-OUTSIDE:
-RESULT=PASS
+WHITELIST_EVAL_START
+CHANGED_FILE_COUNT=54
+VIOLATION=docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/03_worktree_before.txt
+VIOLATION=docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/remediation/05_fsck_classification.md
+VIOLATION=docs/sprints/S11/evidence/postcheck_git_github_remediate/20260304_220615/verify_postcheck_S17_20260304_223037/gh_open_prs.txt
+WHITELIST_STATUS=FAIL
 EXIT_CODE=0
