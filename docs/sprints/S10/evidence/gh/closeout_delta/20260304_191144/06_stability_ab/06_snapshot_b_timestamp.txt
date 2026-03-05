@@ -1,0 +1,3 @@
+CMD: date -u +%Y-%m-%dT%H:%M:%SZ
+2026-03-05T00:21:53Z
+EXIT_CODE: 0

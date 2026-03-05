@@ -1,0 +1,11 @@
+# PR_CLEAN Eval
+headRefOid=e24d1d2070bb7daf255243cf68eb681d6232a554
+state=OPEN
+mergeable=MERGEABLE
+mergeStateStatus=CLEAN
+reviewDecision=
+checks_fail_count=0
+checks_pending_count=0
+unresolved_thread_count=0
+actionable_top_comment_count=0
+PR_CLEAN=1

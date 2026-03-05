@@ -1,0 +1,19 @@
+CMD: rg -n 'Failed|failure|hook|files were modified|reformat|exit code|error|auto-fix|autofix|changed files|black|prettier|trailing|whitespace'
+68:    .pc-run-error, .pc-run-failure {
+72:    .pc-run-error::after, .pc-run-failure::after {
+126:    .pc-step-failure label::before {
+175:    .pc-small-run-status-failure::before, .pc-small-run-status-error::before {
+220:  <div class="container pc-run pc-run-failure"></div>
+270:              <div><div class="pc-highlight my-2 p-2 d-inline-block mw-100 rounded"><pre><span></span>autofix_commit_msg: &#39;[pre-commit.ci] auto fixes from pre-commit.com hooks\n\nfor more information, see https://pre-commit.ci\n&#39;
+271:autofix_prs: True
+324:        <div class="pc-step pc-step-failure mb-2">
+326:          <div><div class="pc-highlight my-2 p-2 d-inline-block mw-100 rounded"><pre><span></span>trim trailing whitespace.................................................<span class=" -Color -Color-BGGreen -C-BGGreen">Passed</span>
+329:check json...............................................................<span class=" -Color -Color-BGRed -C-BGRed">Failed</span>
+330:<span class=" -Color -Color-Faint -C-Faint">- hook id: check-json</span>
+331:<span class=" -Color -Color-Faint -C-Faint">- exit code: 1</span>
+333:docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/60_pr_threads_comments.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+334:docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/56_pr_snapshot.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+335:docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/59_pr_readiness_snapshot.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+336:docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/65_final_pr_state.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+337:docs/sprints/S10/evidence/closeout_bundle/run_20260304_182532/53_open_pr_before_create.json: Failed to json decode (Expecting value: line 1 column 1 (char 0))
+EXIT_CODE: 0

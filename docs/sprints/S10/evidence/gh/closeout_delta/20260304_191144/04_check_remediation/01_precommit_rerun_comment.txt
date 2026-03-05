@@ -1,0 +1,3 @@
+CMD: gh pr comment 15 --repo Doogie201/promptops-gui --body 'pre-commit.ci run'
+https://github.com/Doogie201/promptops-gui/pull/15#issuecomment-4001138036
+EXIT_CODE: 0

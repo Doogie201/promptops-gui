@@ -1,0 +1,6 @@
+CMD: git fsck --no-reflogs
+CWD: /tmp/promptops/S10/wt_closeout_20260304_185656
+dangling commit 8688b32df3640ee34b303b9b7b6a8308616e54e5
+dangling commit 65227498ef4d7aaa82a6339912ca6679f3942307
+dangling commit b1944f1fd36789c9ad9f560fec417a34d9117aee
+EXIT_CODE: 0

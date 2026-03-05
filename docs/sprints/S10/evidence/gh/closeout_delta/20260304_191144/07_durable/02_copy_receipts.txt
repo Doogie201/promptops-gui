@@ -1,0 +1,1 @@
+CMD: cp -R /tmp/promptops/S10/closeout_20260304_191144/* /tmp/promptops/S10/wt_closeout_20260304_185656/docs/sprints/S10/evidence/gh/closeout_delta/20260304_191144/
