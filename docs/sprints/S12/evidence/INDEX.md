@@ -99,3 +99,10 @@
 - `scope_fix/40_git_commit.txt`
 - `scope_fix/41_git_push.txt`
 - `scope_fix/42_log_after_push.txt`
+- `scope_fix/43_divergence_repair.txt`
+- `scope_fix/44_status_after_divergence_repair.txt`
+- `scope_fix/50_pr_view_after_push.json`
+- `scope_fix/51_checks_watch_after_push.txt`
+- `scope_fix/52_threads_after_push.json`
+- `scope_fix/53_scope_comment_receipt.txt`
+- `scope_fix/60_index_update_diff.txt`
