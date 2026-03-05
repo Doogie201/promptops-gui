@@ -6,6 +6,6 @@ Commit:     pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github
 CommitDate: Thu Mar 5 02:29:04 2026 +0000
 
     [pre-commit.ci] auto fixes from pre-commit.com hooks
-    
+
     for more information, see https://pre-commit.ci
 EXIT_CODE=0
