@@ -25,13 +25,6 @@
       "command": "git status --porcelain=v1 --branch",
       "reason": "Out-of-sync signals detected.",
       "reasonCode": "OUT_OF_SYNC"
-    },
-    {
-      "seq": 2,
-      "type": "terminal_sync_blocked",
-      "command": "git status --porcelain=v1 --branch",
-      "reason": "Out-of-sync signals detected.",
-      "reasonCode": "OUT_OF_SYNC"
     }
   ],
   "gui_result": {

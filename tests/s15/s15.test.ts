@@ -116,6 +116,21 @@ test('AT-S15-02: disallowed commands are blocked and recorded as security events
   );
 });
 
+test('AT-S15-02b: command must match full shared argument signature', () => {
+  prepareMockRepo();
+
+  const state = setTerminalPanelEnabled(createTerminalPanelState(), true);
+  const blocked = runTerminalPanelCommand(
+    { ...BASE_OPTIONS, runId: 'AT-S15-02b-blocked' },
+    state,
+    { commandLine: 'git prune --expire now' },
+  );
+
+  assert.strictEqual(blocked.result.status, 'HARD_STOP');
+  assert.strictEqual(blocked.result.reasonCode, 'WHITELIST_VIOLATION');
+  assert.match(blocked.result.message, /outside shared GUI policy/);
+});
+
 test('AT-S15-03: terminal command path cannot bypass out-of-sync hard stop', () => {
   prepareMockRepo();
   ensureDir(DRIFT_EVIDENCE);
@@ -141,6 +156,7 @@ test('AT-S15-03: terminal command path cannot bypass out-of-sync hard stop', () 
 
   assert.strictEqual(terminal.result.status, 'HARD_STOP');
   assert.strictEqual(terminal.result.reasonCode, 'OUT_OF_SYNC');
+  assert.strictEqual(terminal.events.length, 1);
   assert.strictEqual(terminal.events[0].type, 'terminal_sync_blocked');
   assert.ok(!invoked.includes('terminal_command'), 'Command execution must be blocked before terminal command dispatch.');
 
@@ -177,8 +193,11 @@ test('S15 templates are deterministic and parameterized safely', () => {
   const templates = terminalCommandTemplates();
   assert.ok(templates.length >= 5);
   assert.strictEqual(renderTemplateCommand('git_status'), 'git status --porcelain=v1 --branch');
-  assert.strictEqual(renderTemplateCommand('gh_pr_checks', 19), 'gh pr checks 19 --repo Doogie201/promptops-gui');
-  assert.throws(() => renderTemplateCommand('gh_pr_checks'));
+  assert.strictEqual(
+    renderTemplateCommand('gh_pr_checks'),
+    'gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt',
+  );
+  assert.strictEqual(renderTemplateCommand('npm_test_all'), 'npm run -s verify');
 });
 
 function createRunner(map: Record<string, MockResponse>, invoked: string[]): CommandRunner {

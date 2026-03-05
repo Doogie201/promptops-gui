@@ -1,5 +1,4 @@
 COMMAND: npm run build
-STDOUT:
 
 > promptops-gui@1.0.0 build
 > tsc --noEmit && npm run -s build:bundle-analysis
@@ -11,7 +10,5 @@ rendering chunks...
 computing gzip size...
 coverage/bundle-analysis/bundle.mjs  0.07 kB │ gzip: 0.09 kB
 ✓ built in 21ms
-
-STDERR:
 
 EXIT_CODE: 0

@@ -1,11 +1,8 @@
 COMMAND: npm run lint
-STDOUT:
 
 > promptops-gui@1.0.0 lint
 > bash scripts/verify.sh lint
 
 [verify] lint
-
-STDERR:
 
 EXIT_CODE: 0

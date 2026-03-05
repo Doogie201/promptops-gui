@@ -511,8 +511,8 @@ function outOfSyncSpecs(): CommandSpec[] {
   ];
 }
 
-export function operatorExecutorCommandFamilies(repo = 'Doogie201/promptops-gui'): Record<string, string[]> {
-  const specs = [
+export function operatorExecutorAllowedSpecs(repo = 'Doogie201/promptops-gui'): CommandSpec[] {
+  return [
     ...preflightCommandSpecs(),
     ...gatesSpecs(),
     ...diffSpecs(),
@@ -522,6 +522,10 @@ export function operatorExecutorCommandFamilies(repo = 'Doogie201/promptops-gui'
     threadQuerySpec(repo, 1, 'thread_query'),
     threadResolveSpec(repo, 'thread_id'),
   ];
+}
+
+export function operatorExecutorCommandFamilies(repo = 'Doogie201/promptops-gui'): Record<string, string[]> {
+  const specs = operatorExecutorAllowedSpecs(repo);
   const map = new Map<string, Set<string>>();
   for (const spec of specs) {
     const firstArg = spec.args[0] ?? '';

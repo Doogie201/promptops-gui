@@ -31,8 +31,8 @@
     "stdout": "",
     "stderr": "Disallowed command class: rm",
     "exit_code": 126,
-    "start_ts": "2026-03-05T08:40:50.147Z",
-    "end_ts": "2026-03-05T08:40:50.147Z",
+    "start_ts": "2026-03-05T08:59:00.921Z",
+    "end_ts": "2026-03-05T08:59:00.921Z",
     "stdout_path": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_command.stdout.txt",
     "stderr_path": "/tmp/promptops/S15/test_workspace/staging/terminal/AT-S15-02-blocked/S15-terminal-panel_terminal_AT-S15-02-blocked_20260305T040000Z/terminal_command.stderr.txt"
   },

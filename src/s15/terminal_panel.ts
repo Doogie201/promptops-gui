@@ -7,7 +7,7 @@ import {
   writeJson,
   writeText,
 } from '../s10/operator_exec.ts';
-import { operatorExecutorCommandFamilies, runOutOfSyncTool } from '../s10/operator_tools.ts';
+import { operatorExecutorAllowedSpecs, runOutOfSyncTool } from '../s10/operator_tools.ts';
 import type {
   CommandRecord,
   CommandRunner,
@@ -56,7 +56,6 @@ export interface TerminalPanelState {
 export interface TerminalRunRequest {
   commandLine?: string;
   templateId?: TerminalTemplateId;
-  prNumber?: number;
   expectedHead?: string;
   expectedEvidencePaths?: string[];
 }
@@ -94,14 +93,14 @@ const TEMPLATES: readonly TerminalCommandTemplate[] = [
   {
     id: 'gh_pr_checks',
     label: 'PR Checks',
-    description: 'View CI checks for a PR number.',
-    commandLine: 'gh pr checks {{prNumber}} --repo Doogie201/promptops-gui',
+    description: 'List open PRs with stable JSON fields.',
+    commandLine: 'gh pr list --repo Doogie201/promptops-gui --state open --json number,title,headRefName,baseRefName,url,updatedAt',
   },
   {
     id: 'npm_test_all',
-    label: 'Test All',
-    description: 'Run repository all-tests script.',
-    commandLine: 'npm run -s test:all',
+    label: 'Verify',
+    description: 'Run repository verify script.',
+    commandLine: 'npm run -s verify',
   },
   {
     id: 'bash_gates',
@@ -130,14 +129,10 @@ export function terminalCommandTemplates(): readonly TerminalCommandTemplate[] {
   return TEMPLATES;
 }
 
-export function renderTemplateCommand(templateId: TerminalTemplateId, prNumber?: number): string {
+export function renderTemplateCommand(templateId: TerminalTemplateId): string {
   const template = TEMPLATES.find((item) => item.id === templateId);
   if (!template) throw new Error(`Unknown template: ${templateId}`);
-  if (!template.commandLine.includes('{{prNumber}}')) return template.commandLine;
-  if (!Number.isInteger(prNumber) || (prNumber ?? 0) <= 0) {
-    throw new Error('Template gh_pr_checks requires a positive integer PR number.');
-  }
-  return template.commandLine.replace('{{prNumber}}', String(prNumber));
+  return template.commandLine;
 }
 
 export function runTerminalPanelCommand(
@@ -161,21 +156,14 @@ export function runTerminalPanelCommand(
   }
 
   const parsed = parseCommand(commandLine);
-  const allowlist = operatorExecutorCommandFamilies();
-  const blockReason = validateCommand(parsed, allowlist);
+  const allowedSignatures = buildAllowedSignatures();
+  const blockReason = validateCommand(parsed, allowedSignatures);
   if (blockReason) {
     return finalizeBlocked(context, commandLine, blockReason, 'WHITELIST_VIOLATION', events);
   }
 
   const syncGate = runSyncGate(options, request, runner);
   if (syncGate.result.status !== 'PASS') {
-    events.push({
-      seq: 1,
-      type: 'terminal_sync_blocked',
-      command: commandLine,
-      reason: syncGate.result.message,
-      reasonCode: syncGate.result.reasonCode,
-    });
     return finalizeBlocked(context, commandLine, syncGate.result.message, 'OUT_OF_SYNC', events, syncGate.result, {
       sync_gate_durable: syncGate.durablePath,
     });
@@ -205,7 +193,7 @@ function resolveCommandLine(request: TerminalRunRequest): string {
     return normalizeCommandLine(request.commandLine);
   }
   if (!request.templateId) throw new Error('Terminal request requires commandLine or templateId.');
-  return renderTemplateCommand(request.templateId, request.prNumber);
+  return renderTemplateCommand(request.templateId);
 }
 
 function normalizeCommandLine(value: string): string {
@@ -222,16 +210,16 @@ function parseCommand(commandLine: string): { command: string; args: string[] } 
 
 function validateCommand(
   parsed: { command: string; args: string[] },
-  allowlist: Record<string, string[]>,
+  allowedSignatures: Record<string, Set<string>>,
 ): string | null {
   if (!parsed.command) return 'Command is empty after normalization.';
   if (SHELL_ESCAPE_PATTERN.test(parsed.command) || parsed.args.some((token) => SHELL_ESCAPE_PATTERN.test(token))) {
     return 'Shell escape characters are not allowed.';
   }
-  if (DANGEROUS_COMMANDS.has(parsed.command) && !(parsed.command in allowlist)) {
+  if (DANGEROUS_COMMANDS.has(parsed.command) && !(parsed.command in allowedSignatures)) {
     return `Disallowed command class: ${parsed.command}`;
   }
-  if (!(parsed.command in allowlist)) {
+  if (!(parsed.command in allowedSignatures)) {
     return `Command '${parsed.command}' is not in the shared executor allowlist.`;
   }
 
@@ -251,13 +239,27 @@ function validateCommand(
     return null;
   }
 
-  const allowedFirstArgs = allowlist[parsed.command] ?? [];
-  const firstArg = parsed.args[0] ?? '';
-  if (allowedFirstArgs.length > 0 && !allowedFirstArgs.includes(firstArg)) {
-    return `Subcommand '${parsed.command} ${firstArg}' is outside shared GUI policy.`;
+  const signature = normalizeSignature(parsed.args);
+  if (!allowedSignatures[parsed.command]?.has(signature)) {
+    return `Arguments for '${parsed.command}' are outside shared GUI policy.`;
   }
 
   return null;
+}
+
+function buildAllowedSignatures(): Record<string, Set<string>> {
+  const map: Record<string, Set<string>> = {};
+  for (const spec of operatorExecutorAllowedSpecs()) {
+    if (!(spec.command in map)) {
+      map[spec.command] = new Set<string>();
+    }
+    map[spec.command].add(normalizeSignature(spec.args));
+  }
+  return map;
+}
+
+function normalizeSignature(args: string[]): string {
+  return args.join('\u0001');
 }
 
 function finalizeBlocked(
