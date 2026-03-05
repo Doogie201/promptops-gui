@@ -43,6 +43,11 @@ export interface OutOfSyncOptions {
   expectedEvidencePaths?: string[];
 }
 
+export interface CloseoutAtomicOptions {
+  commitMessage?: string;
+  push?: boolean;
+}
+
 export function runPreflightTool(options: ToolOptions, runner?: CommandRunner): ToolRunResponse {
   const context = createToolRunContext('preflight', options);
   const records = executeCommandSet(context, preflightCommandSpecs(), 'preflight_outputs.ndjson', runner);
@@ -189,11 +194,63 @@ export function runCloseoutTool(
   options: ToolOptions,
   checklist: Array<{ id: string; label: string; done: boolean }>,
   requiredPaths: string[],
+  runner?: CommandRunner,
+  atomicOptions?: CloseoutAtomicOptions,
 ): ToolRunResponse {
   const context = createToolRunContext('closeout', options);
   const missing = requiredPaths.filter((entry) => !fs.existsSync(path.resolve(entry)));
   const allDone = checklist.every((item) => item.done);
-  const pass = allDone && missing.length === 0;
+  const basePass = allDone && missing.length === 0;
+  const durablePath = copyBundleToDurable(context);
+  const records: CommandRecord[] = [];
+  const pushEnabled = atomicOptions?.push !== false;
+  const atomicCommitMessage =
+    atomicOptions?.commitMessage ?? `[${sprintCode(options.sprintId)}] docs: atomic closeout evidence sync (${options.runId})`;
+  const atomicEvalPath = path.join(context.bundleRoot, 'closeout_atomic_eval.md');
+  const atomicDetailsPath = path.join(context.bundleRoot, 'closeout_atomic_details.json');
+
+  let closeoutCode: HardStopCode = basePass ? 'NONE' : 'PR_NOT_READY';
+  let closeoutStatus: 'PASS' | 'FAIL' | 'HARD_STOP' = basePass ? 'PASS' : 'FAIL';
+  let closeoutMessage = basePass
+    ? 'Closeout is complete.'
+    : 'Closeout is missing required receipts or checklist items.';
+  let atomicDetails: Record<string, unknown> = {
+    attempted: false,
+    push_enabled: pushEnabled,
+    commit_message: atomicCommitMessage,
+  };
+
+  if (basePass) {
+    const atomicSpecs = closeoutAtomicSpecs(context, durablePath, atomicCommitMessage, pushEnabled);
+    records.push(...executeCommandSet(context, atomicSpecs, 'closeout_atomic_outputs.ndjson', runner));
+    const atomic = evaluateCloseoutAtomic(records, pushEnabled);
+    atomicDetails = {
+      attempted: true,
+      pass: atomic.pass,
+      code: atomic.code,
+      message: atomic.message,
+      before_untracked_evidence: atomic.beforeUntrackedEvidence,
+      after_untracked_evidence: atomic.afterUntrackedEvidence,
+      commit_noop: atomic.commitNoop,
+      push_enabled: pushEnabled,
+      commit_message: atomicCommitMessage,
+    };
+    writeText(atomicEvalPath, formatEval('Closeout Atomic', atomic));
+    writeJson(atomicDetailsPath, atomicDetails);
+    if (!atomic.pass) {
+      closeoutCode = atomic.code;
+      closeoutStatus = 'HARD_STOP';
+      closeoutMessage = atomic.message;
+    }
+  } else {
+    writeText(
+      atomicEvalPath,
+      formatEval('Closeout Atomic', { pass: false, code: 'PR_NOT_READY', message: 'Skipped: checklist/required paths not complete.' }),
+    );
+    writeJson(atomicDetailsPath, atomicDetails);
+  }
+
+  const pass = closeoutStatus === 'PASS';
 
   const summary = [
     `# S10 Closeout Summary`,
@@ -203,6 +260,9 @@ export function runCloseoutTool(
     `- Continuity Hash: ${context.continuityHash}`,
     `- Checklist Complete: ${allDone}`,
     `- Missing Receipts: ${missing.length}`,
+    `- Atomic Closeout: ${basePass ? closeoutStatus : 'SKIPPED'}`,
+    `- Closeout Code: ${closeoutCode}`,
+    `- Closeout Message: ${closeoutMessage}`,
     '',
     '## Checklist',
     ...checklist.map((item) => `- [${item.done ? 'x' : ' '}] ${item.id}: ${item.label}`),
@@ -215,23 +275,30 @@ export function runCloseoutTool(
     checklist,
     required_paths: requiredPaths,
     missing_paths: missing,
+    atomic_closeout: atomicDetails,
     pass,
   };
 
   writeText(path.join(context.bundleRoot, 'closeout_summary.md'), summary);
   writeJson(path.join(context.bundleRoot, 'closeout_manifest.json'), manifest);
 
-  const result = buildResult('closeout', pass ? 'NONE' : 'PR_NOT_READY', pass ? 'PASS' : 'FAIL', pass ? 'Closeout is complete.' : 'Closeout is missing required receipts or checklist items.', {
+  const result = buildResult('closeout', closeoutCode, closeoutStatus, closeoutMessage, {
     closeout_summary: path.join(context.bundleRoot, 'closeout_summary.md'),
     closeout_manifest: path.join(context.bundleRoot, 'closeout_manifest.json'),
+    closeout_atomic_commands: path.join(context.bundleRoot, 'closeout_atomic_commands.json'),
+    closeout_atomic_outputs: path.join(context.bundleRoot, 'closeout_atomic_outputs.ndjson'),
+    closeout_atomic_eval: atomicEvalPath,
+    closeout_atomic_details: atomicDetailsPath,
   }, {
     missing_paths: missing.length,
     checklist_complete: allDone,
+    atomic_closeout_attempted: basePass,
+    atomic_closeout_pass: closeoutStatus === 'PASS',
     continuity_hash: context.continuityHash,
   });
 
-  const durablePath = copyBundleToDurable(context);
-  return { context, records: [], result, durablePath };
+  const finalDurablePath = copyBundleToDurable(context);
+  return { context, records, result, durablePath: finalDurablePath };
 }
 
 function loadPrInventory(
@@ -511,6 +578,88 @@ function outOfSyncSpecs(): CommandSpec[] {
   ];
 }
 
+function closeoutAtomicSpecs(
+  context: ToolRunContext,
+  durablePath: string,
+  commitMessage: string,
+  pushEnabled: boolean,
+): CommandSpec[] {
+  const stagePath = gitAddTarget(context.repoRoot, durablePath);
+  const specs: CommandSpec[] = [
+    { id: 'closeout_status_before', command: 'git', args: ['status', '--porcelain=v1', '--branch'] },
+    { id: 'closeout_add_evidence', command: 'git', args: ['add', '--', stagePath] },
+    { id: 'closeout_commit', command: 'git', args: ['commit', '-m', commitMessage] },
+  ];
+  if (pushEnabled) specs.push({ id: 'closeout_push', command: 'git', args: ['push'] });
+  specs.push({ id: 'closeout_status_after_push', command: 'git', args: ['status', '--porcelain=v1', '--branch'] });
+  return specs;
+}
+
+function evaluateCloseoutAtomic(
+  records: CommandRecord[],
+  pushEnabled: boolean,
+): { pass: boolean; code: HardStopCode; message: string; beforeUntrackedEvidence: string[]; afterUntrackedEvidence: string[]; commitNoop: boolean } {
+  const statusBefore = readRecordStdout(records, 'closeout_status_before');
+  const statusAfter = readRecordStdout(records, 'closeout_status_after_push');
+  const beforeUntrackedEvidence = parseUntrackedEvidencePaths(statusBefore);
+  const afterUntrackedEvidence = parseUntrackedEvidencePaths(statusAfter);
+  const add = lookupRecord(records, 'closeout_add_evidence');
+  const commit = lookupRecord(records, 'closeout_commit');
+  const push = lookupRecord(records, 'closeout_push');
+  const commitNoop = commit.exit_code !== 0 && /nothing to commit|no changes added to commit/i.test(`${commit.stdout}\n${commit.stderr}`);
+
+  if (add.exit_code !== 0) {
+    return {
+      pass: false,
+      code: 'ATOMIC_CLOSEOUT_FAILED',
+      message: `closeout add failed (exit=${add.exit_code}).`,
+      beforeUntrackedEvidence,
+      afterUntrackedEvidence,
+      commitNoop,
+    };
+  }
+  if (commit.exit_code !== 0 && !(commitNoop && beforeUntrackedEvidence.length === 0)) {
+    return {
+      pass: false,
+      code: 'ATOMIC_CLOSEOUT_FAILED',
+      message: `closeout commit failed (exit=${commit.exit_code}).`,
+      beforeUntrackedEvidence,
+      afterUntrackedEvidence,
+      commitNoop,
+    };
+  }
+  if (pushEnabled && !commitNoop && push.exit_code !== 0) {
+    return {
+      pass: false,
+      code: 'ATOMIC_CLOSEOUT_FAILED',
+      message: `closeout push failed (exit=${push.exit_code}).`,
+      beforeUntrackedEvidence,
+      afterUntrackedEvidence,
+      commitNoop,
+    };
+  }
+  if (afterUntrackedEvidence.length > 0) {
+    return {
+      pass: false,
+      code: 'UNTRACKED_EVIDENCE',
+      message: `untracked durable evidence remains: ${afterUntrackedEvidence.join(', ')}`,
+      beforeUntrackedEvidence,
+      afterUntrackedEvidence,
+      commitNoop,
+    };
+  }
+  return {
+    pass: true,
+    code: 'NONE',
+    message: commitNoop
+      ? 'Atomic closeout complete: no new durable evidence changes to commit.'
+      : 'Atomic closeout complete: durable evidence committed and pushed.',
+    beforeUntrackedEvidence,
+    afterUntrackedEvidence,
+    commitNoop,
+  };
+}
+
 export function operatorExecutorAllowedSpecs(repo = 'Doogie201/promptops-gui'): CommandSpec[] {
   return [
     ...preflightCommandSpecs(),
@@ -698,6 +847,19 @@ function parseAheadBehind(value: string): { ahead: number; behind: number } {
   };
 }
 
+function parseUntrackedEvidencePaths(status: string): string[] {
+  return parseLines(status)
+    .filter((line) => line.startsWith('?? '))
+    .map((line) => line.slice(3).trim())
+    .filter((entry) => /^docs\/sprints\/[^/]+\/evidence\//.test(entry));
+}
+
+function gitAddTarget(repoRoot: string, targetPath: string): string {
+  const relative = path.relative(repoRoot, targetPath);
+  if (!relative.startsWith('..') && !path.isAbsolute(relative)) return relative;
+  return path.resolve(targetPath);
+}
+
 function parseLines(value: string): string[] {
   return value
     .split(/\r?\n/)
@@ -737,6 +899,11 @@ function previousSprintId(sprintId: string): string {
   const n = Number(match[1]);
   const previous = Math.max(0, n - 1);
   return `S${String(previous).padStart(2, '0')}`;
+}
+
+function sprintCode(sprintId: string): string {
+  const match = sprintId.match(/S\d{2}/i);
+  return (match?.[0] ?? sprintId).toUpperCase();
 }
 
 function matchesPreviousSprint(item: { title?: unknown; headRefName?: unknown }, previous: string): boolean {

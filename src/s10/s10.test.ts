@@ -237,8 +237,18 @@ test('AT-S10-03 gates + diff + out-of-sync + closeout assistant form determinist
       { id: 'AT-S10-03', label: 'Workflow tools', done: true },
     ],
     [gates.result.receiptPaths.gates_eval, diff.result.receiptPaths.whitelist_eval, out.result.receiptPaths.diagnosis_report],
+    createRunner({
+      closeout_status_before: response('## sprint/S10...origin/sprint/S10\n?? docs/sprints/S10/evidence/closeout/AT-S10-03-closeout/bundle/run_context.json\n'),
+      closeout_add_evidence: response(''),
+      closeout_commit: response('[sprint/S10 123abc] docs: atomic closeout evidence sync\n 3 files changed\n'),
+      closeout_push: response('To origin\n   abc..def  sprint/S10 -> sprint/S10\n'),
+      closeout_status_after_push: response('## sprint/S10...origin/sprint/S10\n'),
+    }),
   );
   assert.strictEqual(closeout.result.status, 'PASS');
+  assert.ok(fileExists(closeout.result.receiptPaths.closeout_atomic_commands));
+  assert.ok(fileExists(closeout.result.receiptPaths.closeout_atomic_outputs));
+  assert.ok(fileExists(closeout.result.receiptPaths.closeout_atomic_eval));
 
   const shell = createShellState(createWizardState('2026-03-04T19:00:00Z'));
   const snapshot = createOperatorToolsSnapshot(shell, MOCK_REPO, MOCK_REPO, [gates.result, diff.result, out.result, closeout.result]);
@@ -286,6 +296,33 @@ test('AT-S10-03b diff budget uses net line change (added - deleted)', () => {
   writeEvidence('AT-S10-03b_run.json', {
     neutral_result: neutral.result,
     breach_result: breach.result,
+  });
+});
+
+test('AT-S10-03c closeout hard-stops when untracked evidence remains after atomic sync', () => {
+  resetDir(SANDBOX_ROOT);
+  fs.mkdirSync(MOCK_REPO, { recursive: true });
+
+  const closeout = runCloseoutTool(
+    { ...BASE_OPTIONS, runId: 'AT-S10-03c-closeout' },
+    [{ id: 'AT-S10-03c', label: 'Atomic closeout gate', done: true }],
+    [],
+    createRunner({
+      closeout_status_before: response('## sprint/S10...origin/sprint/S10\n?? docs/sprints/S10/evidence/closeout/AT-S10-03c-closeout/bundle/run_context.json\n'),
+      closeout_add_evidence: response(''),
+      closeout_commit: response('[sprint/S10 456def] docs: atomic closeout evidence sync\n 1 file changed\n'),
+      closeout_push: response('To origin\n   def..ghi  sprint/S10 -> sprint/S10\n'),
+      closeout_status_after_push: response('## sprint/S10...origin/sprint/S10\n?? docs/sprints/S10/evidence/closeout/AT-S10-03c-closeout/bundle/run_context.json\n'),
+    }),
+  );
+
+  assert.strictEqual(closeout.result.status, 'HARD_STOP');
+  assert.strictEqual(closeout.result.reasonCode, 'UNTRACKED_EVIDENCE');
+  assert.match(closeout.result.message, /untracked durable evidence remains/);
+
+  writeEvidence('AT-S10-03c_run.json', {
+    closeout_result: closeout.result,
+    durable_path: closeout.durablePath,
   });
 });
 
