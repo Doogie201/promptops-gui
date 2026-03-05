@@ -1,14 +1,14 @@
 $ gh pr checks 18 --repo Doogie201/promptops-gui --watch --fail-fast=false
 codecov/bundles	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=bundle	Bundle change: 0.0% (Threshold: 5.0%)
-coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397806/job/65812898865	
-coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398375/job/65812900392	
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397806/job/65812898865
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398375/job/65812900392
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772677640.VSpa1yKxQy-z4z5rYB6rzQ	checks completed successfully
-verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397811/job/65812898911	
-verify	pass	29s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398380/job/65812900384	
+verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397811/job/65812898911
+verify	pass	29s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398380/job/65812900384
 codecov/bundles	pass	0	https://app.codecov.io/gh/Doogie201/promptops-gui/pull/18?dropdown=bundle	Bundle change: 0.0% (Threshold: 5.0%)
-coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397806/job/65812898865	
-coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398375/job/65812900392	
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397806/job/65812898865
+coverage	pass	19s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398375/job/65812900392
 pre-commit.ci - pr	pass	0	https://results.pre-commit.ci/run/github/1168058876/1772677640.VSpa1yKxQy-z4z5rYB6rzQ	checks completed successfully
-verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397811/job/65812898911	
-verify	pass	29s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398380/job/65812900384	
+verify	pass	32s	https://github.com/Doogie201/promptops-gui/actions/runs/22699397811/job/65812898911
+verify	pass	29s	https://github.com/Doogie201/promptops-gui/actions/runs/22699398380/job/65812900384
 EXIT_CODE=0
