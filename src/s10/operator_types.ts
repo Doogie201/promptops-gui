@@ -10,7 +10,9 @@ export type HardStopCode =
   | 'PR_NOT_READY'
   | 'WHITELIST_VIOLATION'
   | 'OUT_OF_SYNC'
-  | 'BUDGET_BREACH';
+  | 'BUDGET_BREACH'
+  | 'UNTRACKED_EVIDENCE'
+  | 'ATOMIC_CLOSEOUT_FAILED';
 
 export interface CommandSpec {
   id: string;
