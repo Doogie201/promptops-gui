@@ -1,0 +1,3 @@
+$ git log --oneline origin/sprint/S11-template-lifecycle-manager..HEAD
+6b16fb3 docs(S11): add PR readiness receipts
+EXIT_CODE=0
