@@ -1,0 +1,7 @@
+CMD: git status --porcelain=v1 --branch
+## main...origin/main
+ M docs/backlog/README.md
+ M docs/sprints/README.md
+?? docs/sprints/S17/evidence/closeout_delta_20260305_180434/
+?? docs/sprints/S18/
+EXIT_CODE: 0

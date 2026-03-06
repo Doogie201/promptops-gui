@@ -1,0 +1,3 @@
+CMD: git rev-parse --abbrev-ref HEAD
+main
+EXIT_CODE: 0

@@ -1,3 +1,4 @@
+CMD: sed -n '1,240p' scripts/verify.sh
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -43,11 +44,6 @@ run_lint() {
   return "$status"
 }
 
-run_s18() {
-  echo "[verify] s18"
-  npm run -s verify:s18
-}
-
 case "$MODE" in
   preflight)
     run_preflight
@@ -61,18 +57,15 @@ case "$MODE" in
   lint)
     run_lint
     ;;
-  s18)
-    run_s18
-    ;;
   all)
     run_preflight
     run_build
     run_tests
     run_lint
-    run_s18
     ;;
   *)
-    echo "usage: scripts/verify.sh [preflight|build|test|lint|s18|all]" >&2
+    echo "usage: scripts/verify.sh [preflight|build|test|lint|all]" >&2
     exit 2
     ;;
 esac
+EXIT_CODE: 0

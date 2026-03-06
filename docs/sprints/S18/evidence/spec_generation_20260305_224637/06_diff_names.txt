@@ -1,0 +1,4 @@
+CMD: git diff --name-only | sort
+docs/backlog/README.md
+docs/sprints/README.md
+EXIT_CODE: 0

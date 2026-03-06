@@ -1,0 +1,119 @@
+CMD: sed -n '1,260p' docs/sprints/S18/contracts_v1.json
+{
+  "version": "s18.contracts.v1",
+  "north_star_loop": [
+    "idea_to_requirements",
+    "requirements_to_prompt",
+    "prompt_to_agent_run",
+    "agent_output_to_evaluation",
+    "evaluation_to_done_or_delta",
+    "delta_repeat_until_done"
+  ],
+  "states": [
+    "planning",
+    "requirements_ready",
+    "prompt_ready",
+    "awaiting_agent_output",
+    "evaluating",
+    "delta_required",
+    "done",
+    "blocked"
+  ],
+  "allowed_transitions": [
+    ["planning", "requirements_ready"],
+    ["requirements_ready", "prompt_ready"],
+    ["prompt_ready", "awaiting_agent_output"],
+    ["awaiting_agent_output", "evaluating"],
+    ["evaluating", "done"],
+    ["evaluating", "delta_required"],
+    ["delta_required", "prompt_ready"],
+    ["planning", "blocked"],
+    ["requirements_ready", "blocked"],
+    ["prompt_ready", "blocked"],
+    ["awaiting_agent_output", "blocked"],
+    ["evaluating", "blocked"],
+    ["delta_required", "blocked"],
+    ["blocked", "planning"]
+  ],
+  "artifacts": {
+    "idea_input": {
+      "required_fields": ["ideaId", "text", "constraints", "sha256"]
+    },
+    "sprint_requirements": {
+      "required_fields": [
+        "sprintId",
+        "templateVersionHash",
+        "requirements",
+        "canonicalJson",
+        "sha256"
+      ]
+    },
+    "json_prompt": {
+      "required_fields": [
+        "sprintId",
+        "requirementsHash",
+        "templateVersionHash",
+        "promptJson",
+        "sha256"
+      ]
+    },
+    "agent_run": {
+      "required_fields": [
+        "runId",
+        "sprintId",
+        "promptHash",
+        "adapter",
+        "rawOutputPath",
+        "normalizedOutputPath",
+        "sha256"
+      ]
+    },
+    "evaluation": {
+      "required_fields": [
+        "sprintId",
+        "runId",
+        "verdict",
+        "ledgerPath",
+        "sha256"
+      ],
+      "optional_fields": ["deltaPromptPath"]
+    },
+    "transition_receipt": {
+      "required_fields": [
+        "transitionId",
+        "from",
+        "to",
+        "inputHashes",
+        "outputHashes",
+        "receiptPaths",
+        "exitCode"
+      ]
+    }
+  },
+  "determinism_rules": {
+    "forbidden_patterns": ["Date.now(", "Math.random("],
+    "canonical_json": true,
+    "stable_key_order": true,
+    "hash_algorithm": "sha256",
+    "memory_free_resume_required": true
+  },
+  "ci_enforcement": {
+    "required_tests": [
+      "tests/s18/contracts.test.ts",
+      "tests/s18/state_machine.test.ts",
+      "tests/s18/planner_determinism.test.ts",
+      "tests/s18/compiler_determinism.test.ts",
+      "tests/s18/orchestration_loop.test.ts",
+      "tests/s18/replay_resume.test.ts",
+      "tests/s18/ci_policy.test.ts"
+    ],
+    "required_gate_outcomes": [
+      "deterministic_replay_hash_match",
+      "illegal_transition_rejected",
+      "delta_requires_evidence",
+      "artifact_fields_complete",
+      "forbidden_import_guard_pass"
+    ]
+  }
+}
+EXIT_CODE: 0

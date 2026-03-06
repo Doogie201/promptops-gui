@@ -1,0 +1,7 @@
+CMD: ls -la docs/sprints/S18
+total 24
+drwxr-xr-x@  4 marcussmith  staff   128 Mar  5 22:45 .
+drwxr-xr-x@ 21 marcussmith  staff   672 Mar  5 22:44 ..
+-rw-r--r--@  1 marcussmith  staff  8129 Mar  5 22:45 README.md
+-rw-r--r--@  1 marcussmith  staff  2881 Mar  5 22:45 contracts_v1.json
+EXIT_CODE: 0
