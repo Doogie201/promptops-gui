@@ -16,13 +16,15 @@ test('S18-UXQ-03 human gates: requirements approval is explicit, recorded, and g
   const pending = buildHumanGateControlModel({
     currentState: machine.currentState,
     records: [],
+    requiredSequenceByGate: { requirements_approval: 1 },
   });
 
   assert.strictEqual(pending.currentGateId, 'requirements_approval');
+  assert.strictEqual(pending.currentGateRequiredSequence, 1);
   assert.strictEqual(pending.currentGateSatisfied, false);
   assert.match(pending.rendered, /\[Requirements approval: pending\]/);
   assert.throws(
-    () => transitionWithHumanGate(machine, 'prompt_ready', []),
+    () => transitionWithHumanGate(machine, 'prompt_ready', [], 1),
     /HUMAN_GATE_APPROVAL_REQUIRED:requirements_approval/,
   );
 
@@ -38,52 +40,56 @@ test('S18-UXQ-03 human gates: requirements approval is explicit, recorded, and g
   assert.strictEqual(approval.gateId, 'requirements_approval');
   assert.strictEqual(approval.decision, 'approved');
   assert.ok(approval.sha256);
-  assert.strictEqual(transitionWithHumanGate(machine, 'prompt_ready', [approval]), 'prompt_ready');
+  assert.strictEqual(transitionWithHumanGate(machine, 'prompt_ready', [approval], 1), 'prompt_ready');
 });
 
-test('S18-UXQ-03 human gates: latest recorded delta approval governs loop-back', () => {
-  const rejected = recordHumanGateDecision({
+test('S18-UXQ-03 human gates: fresh delta approval is required for each loop-back cycle', () => {
+  const priorApproval = recordHumanGateDecision({
     gateId: 'delta_approval',
-    decision: 'rejected',
+    decision: 'approved',
     actor: 'operator',
     sequence: 1,
-    rationale: 'delta needs refinement',
+    rationale: 'delta accepted for cycle one',
   });
-  const approved = recordHumanGateDecision({
+  const currentApproval = recordHumanGateDecision({
     gateId: 'delta_approval',
     decision: 'approved',
     actor: 'operator',
     sequence: 2,
-    rationale: 'delta accepted after review',
+    rationale: 'delta accepted for cycle two',
   });
 
   const machine = new BuildModeStateMachine('delta_required');
   assert.throws(
-    () => transitionWithHumanGate(machine, 'prompt_ready', [rejected]),
+    () => transitionWithHumanGate(machine, 'prompt_ready', [priorApproval], 2),
     /HUMAN_GATE_APPROVAL_REQUIRED:delta_approval/,
   );
 
   const model = buildHumanGateControlModel({
     currentState: 'delta_required',
-    records: [rejected, approved],
+    records: [priorApproval],
+    requiredSequenceByGate: { delta_approval: 2 },
   });
 
   assert.strictEqual(model.currentGateId, 'delta_approval');
-  assert.strictEqual(model.currentGateSatisfied, true);
-  assert.match(model.rendered, /\[Delta approval: approved\]/);
-  assert.strictEqual(transitionWithHumanGate(machine, 'prompt_ready', [rejected, approved]), 'prompt_ready');
+  assert.strictEqual(model.currentGateRequiredSequence, 2);
+  assert.strictEqual(model.currentGateSatisfied, false);
+  assert.match(model.rendered, /\[Delta approval: pending\]/);
+  assert.strictEqual(transitionWithHumanGate(machine, 'prompt_ready', [priorApproval, currentApproval], 2), 'prompt_ready');
 });
 
 test('S18-UXQ-03 human gates: auto-advance approval remains explicit at done state', () => {
   const pending = buildHumanGateControlModel({
     currentState: 'done',
     records: [],
+    requiredSequenceByGate: { auto_advance_approval: 1 },
   });
 
   assert.strictEqual(pending.currentGateId, 'auto_advance_approval');
+  assert.strictEqual(pending.currentGateRequiredSequence, 1);
   assert.strictEqual(pending.currentGateSatisfied, false);
   assert.match(pending.rendered, /\[Auto-advance approval: pending\]/);
-  assert.throws(() => assertAutoAdvanceApproved([]), /HUMAN_GATE_APPROVAL_REQUIRED:auto_advance_approval/);
+  assert.throws(() => assertAutoAdvanceApproved([], 1), /HUMAN_GATE_APPROVAL_REQUIRED:auto_advance_approval/);
 
   const approved = recordHumanGateDecision({
     gateId: 'auto_advance_approval',
@@ -93,9 +99,13 @@ test('S18-UXQ-03 human gates: auto-advance approval remains explicit at done sta
     rationale: 'advance to next sprint',
   });
 
-  const recorded = assertAutoAdvanceApproved([approved]);
+  const recorded = assertAutoAdvanceApproved([approved], 1);
   assert.strictEqual(recorded.decision, 'approved');
   assert.strictEqual(recorded.actor, 'operator');
+  assert.throws(
+    () => assertAutoAdvanceApproved([approved], 2),
+    /HUMAN_GATE_APPROVAL_REQUIRED:auto_advance_approval/,
+  );
 });
 
 test('S18-UXQ-03 human gates: duplicate gate sequence values are rejected as ambiguous', () => {

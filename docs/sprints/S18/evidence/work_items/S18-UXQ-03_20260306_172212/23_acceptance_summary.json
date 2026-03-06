@@ -4,6 +4,7 @@
     "requirements_control": {
       "currentState": "requirements_ready",
       "currentGateId": "requirements_approval",
+      "currentGateRequiredSequence": 1,
       "currentGateSatisfied": true,
       "gates": [
         {
@@ -11,6 +12,7 @@
           "label": "Requirements approval",
           "status": "approved",
           "requiredNow": true,
+          "requiredSequence": 1,
           "latestRecord": {
             "gateId": "requirements_approval",
             "decision": "approved",
@@ -28,6 +30,7 @@
           "label": "Delta approval",
           "status": "pending",
           "requiredNow": false,
+          "requiredSequence": null,
           "latestRecord": null
         },
         {
@@ -35,36 +38,40 @@
           "label": "Auto-advance approval",
           "status": "pending",
           "requiredNow": false,
+          "requiredSequence": null,
           "latestRecord": null
         }
       ],
       "rendered": "[Requirements approval: approved] | Delta approval: pending | Auto-advance approval: pending"
     },
-    "delta_control": {
+    "delta_control_pending_stale": {
       "currentState": "delta_required",
       "currentGateId": "delta_approval",
-      "currentGateSatisfied": true,
+      "currentGateRequiredSequence": 2,
+      "currentGateSatisfied": false,
       "gates": [
         {
           "id": "requirements_approval",
           "label": "Requirements approval",
           "status": "pending",
           "requiredNow": false,
+          "requiredSequence": null,
           "latestRecord": null
         },
         {
           "id": "delta_approval",
           "label": "Delta approval",
-          "status": "approved",
+          "status": "pending",
           "requiredNow": true,
+          "requiredSequence": 2,
           "latestRecord": {
             "gateId": "delta_approval",
             "decision": "approved",
             "actor": "operator",
-            "rationale": "delta accepted after review",
+            "rationale": "delta accepted for cycle one",
             "evidenceRefs": [],
-            "sequence": 2,
-            "sha256": "8cf64ad50e21b631338997362d3d3d1ba60f13561b8b87cf73e6b1280e027035"
+            "sequence": 1,
+            "sha256": "ffefa3867021efd650c37adc812399b751d64de366d757e8c8273077d676725a"
           }
         },
         {
@@ -72,6 +79,50 @@
           "label": "Auto-advance approval",
           "status": "pending",
           "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        }
+      ],
+      "rendered": "Requirements approval: pending | [Delta approval: pending] | Auto-advance approval: pending"
+    },
+    "delta_control_approved_current": {
+      "currentState": "delta_required",
+      "currentGateId": "delta_approval",
+      "currentGateRequiredSequence": 2,
+      "currentGateSatisfied": true,
+      "gates": [
+        {
+          "id": "requirements_approval",
+          "label": "Requirements approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        },
+        {
+          "id": "delta_approval",
+          "label": "Delta approval",
+          "status": "approved",
+          "requiredNow": true,
+          "requiredSequence": 2,
+          "latestRecord": {
+            "gateId": "delta_approval",
+            "decision": "approved",
+            "actor": "operator",
+            "rationale": "delta accepted for cycle two",
+            "evidenceRefs": [
+              "docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/15_targeted_tests_post.txt"
+            ],
+            "sequence": 2,
+            "sha256": "5786cace80f248b65cf963f874f5a02b0c8025cfd1706e5b56088cfe16760752"
+          }
+        },
+        {
+          "id": "auto_advance_approval",
+          "label": "Auto-advance approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
           "latestRecord": null
         }
       ],
@@ -80,6 +131,7 @@
     "auto_advance_control": {
       "currentState": "done",
       "currentGateId": "auto_advance_approval",
+      "currentGateRequiredSequence": 1,
       "currentGateSatisfied": true,
       "gates": [
         {
@@ -87,6 +139,7 @@
           "label": "Requirements approval",
           "status": "pending",
           "requiredNow": false,
+          "requiredSequence": null,
           "latestRecord": null
         },
         {
@@ -94,6 +147,7 @@
           "label": "Delta approval",
           "status": "pending",
           "requiredNow": false,
+          "requiredSequence": null,
           "latestRecord": null
         },
         {
@@ -101,6 +155,7 @@
           "label": "Auto-advance approval",
           "status": "approved",
           "requiredNow": true,
+          "requiredSequence": 1,
           "latestRecord": {
             "gateId": "auto_advance_approval",
             "decision": "approved",

@@ -4,6 +4,7 @@ import type { BuildModeState } from './state_machine.ts';
 export type HumanGateId = 'requirements_approval' | 'delta_approval' | 'auto_advance_approval';
 export type HumanGateDecision = 'approved' | 'rejected';
 export type HumanGateStatus = 'pending' | HumanGateDecision;
+export type HumanGateSequenceMap = Partial<Record<HumanGateId, number>>;
 
 export interface HumanGateRecord {
   gateId: HumanGateId;
@@ -20,12 +21,14 @@ export interface HumanGateSnapshot {
   label: string;
   status: HumanGateStatus;
   requiredNow: boolean;
+  requiredSequence: number | null;
   latestRecord: HumanGateRecord | null;
 }
 
 export interface HumanGateControlModel {
   currentState: BuildModeState;
   currentGateId: HumanGateId | null;
+  currentGateRequiredSequence: number | null;
   currentGateSatisfied: boolean;
   gates: HumanGateSnapshot[];
   rendered: string;
@@ -48,6 +51,16 @@ function normalizeText(value?: string): string {
 
 function normalizeEvidenceRefs(value?: readonly string[]): string[] {
   return [...new Set((value ?? []).map((entry) => entry.trim()).filter(Boolean))];
+}
+
+function normalizeRequiredSequence(value?: number): number | null {
+  if (value === undefined) {
+    return null;
+  }
+  if (!Number.isInteger(value) || value < 1) {
+    throw new Error('HUMAN_GATE_SEQUENCE_INVALID');
+  }
+  return value;
 }
 
 function assertHumanGateSequence(records: readonly HumanGateRecord[], gateId: HumanGateId): void {
@@ -109,8 +122,19 @@ export function latestHumanGateRecord(
 export function humanGateStatus(
   records: readonly HumanGateRecord[],
   gateId: HumanGateId,
+  requiredSequence?: number,
 ): HumanGateStatus {
-  return latestHumanGateRecord(records, gateId)?.decision ?? 'pending';
+  const latest = latestHumanGateRecord(records, gateId);
+  if (!latest) {
+    return 'pending';
+  }
+
+  const normalizedRequiredSequence = normalizeRequiredSequence(requiredSequence);
+  if (normalizedRequiredSequence !== null && latest.sequence !== normalizedRequiredSequence) {
+    return 'pending';
+  }
+
+  return latest.decision;
 }
 
 export function requiredHumanGateForState(currentState: BuildModeState): HumanGateId | null {
@@ -144,13 +168,15 @@ function renderGate(snapshot: HumanGateSnapshot): string {
 export function buildHumanGateControlModel(input: {
   currentState: BuildModeState;
   records: readonly HumanGateRecord[];
+  requiredSequenceByGate?: HumanGateSequenceMap;
 }): HumanGateControlModel {
   const currentGateId = requiredHumanGateForState(input.currentState);
   const gates = GATE_ORDER.map((gate) => ({
     id: gate.id,
     label: gate.label,
-    status: humanGateStatus(input.records, gate.id),
+    status: humanGateStatus(input.records, gate.id, input.requiredSequenceByGate?.[gate.id]),
     requiredNow: currentGateId === gate.id,
+    requiredSequence: normalizeRequiredSequence(input.requiredSequenceByGate?.[gate.id]),
     latestRecord: latestHumanGateRecord(input.records, gate.id),
   }));
   const currentGate = gates.find((gate) => gate.id === currentGateId) ?? null;
@@ -158,6 +184,7 @@ export function buildHumanGateControlModel(input: {
   return {
     currentState: input.currentState,
     currentGateId,
+    currentGateRequiredSequence: currentGate?.requiredSequence ?? null,
     currentGateSatisfied: currentGate ? currentGate.status === 'approved' : true,
     gates,
     rendered: gates.map(renderGate).join(' | '),
@@ -168,12 +195,18 @@ export function assertHumanGateAllowsTransition(input: {
   from: BuildModeState;
   to: BuildModeState;
   records: readonly HumanGateRecord[];
+  requiredApprovalSequence?: number;
 }): void {
   const gateId = requiredHumanGateForTransition(input.from, input.to);
   if (!gateId) {
     return;
   }
-  if (humanGateStatus(input.records, gateId) !== 'approved') {
+
+  const requiredApprovalSequence = normalizeRequiredSequence(input.requiredApprovalSequence);
+  if (requiredApprovalSequence === null) {
+    throw new Error(`HUMAN_GATE_SEQUENCE_REQUIRED:${gateId}`);
+  }
+  if (humanGateStatus(input.records, gateId, requiredApprovalSequence) !== 'approved') {
     throw new Error(`HUMAN_GATE_APPROVAL_REQUIRED:${gateId}`);
   }
 }
@@ -182,11 +215,13 @@ export function transitionWithHumanGate(
   machine: HumanGateTransitionMachine,
   to: BuildModeState,
   records: readonly HumanGateRecord[],
+  requiredApprovalSequence?: number,
 ): BuildModeState {
   assertHumanGateAllowsTransition({
     from: machine.currentState,
     to,
     records,
+    requiredApprovalSequence,
   });
   machine.transition(to);
   return machine.currentState;
@@ -194,9 +229,14 @@ export function transitionWithHumanGate(
 
 export function assertAutoAdvanceApproved(
   records: readonly HumanGateRecord[],
+  requiredApprovalSequence?: number,
 ): HumanGateRecord {
+  const normalizedRequiredSequence = normalizeRequiredSequence(requiredApprovalSequence);
+  if (normalizedRequiredSequence === null) {
+    throw new Error('HUMAN_GATE_SEQUENCE_REQUIRED:auto_advance_approval');
+  }
   const latest = latestHumanGateRecord(records, 'auto_advance_approval');
-  if (!latest || latest.decision !== 'approved') {
+  if (!latest || latest.sequence !== normalizedRequiredSequence || latest.decision !== 'approved') {
     throw new Error('HUMAN_GATE_APPROVAL_REQUIRED:auto_advance_approval');
   }
   return latest;
