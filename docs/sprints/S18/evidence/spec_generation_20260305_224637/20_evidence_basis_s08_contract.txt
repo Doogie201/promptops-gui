@@ -1,0 +1,124 @@
+CMD: sed -n '1,220p' src/s08/contract.ts
+export type AdapterName = 'codex' | 'claude';
+
+export type AdapterStatus = 'success' | 'needs_input' | 'blocked' | 'exhausted' | 'error';
+
+export type LedgerStatus = 'done' | 'partial' | 'todo' | 'blocked';
+
+export interface EvidenceLedgerItem {
+  requirement_id: string;
+  status: LedgerStatus;
+  citations: string[];
+}
+
+export interface EvidenceLedgerSnapshot {
+  items: EvidenceLedgerItem[];
+}
+
+export interface RepoContextSnapshot {
+  branch: string;
+  diff_summary: string[];
+  preflight_receipts: string[];
+}
+
+export interface PolicyBundle {
+  budgets: Record<string, unknown>;
+  whitelist: string[];
+  policy: Record<string, unknown>;
+}
+
+export interface TimelineEvent {
+  event_id: string;
+  adapter: AdapterName;
+  status: AdapterStatus;
+  reason: string;
+}
+
+export interface ContinuityPacketV1 {
+  version: 'continuity_packet_v1';
+  rendered_ticket_json: Record<string, unknown>;
+  template_version_hash: string;
+  evidence_ledger_snapshot: EvidenceLedgerSnapshot;
+  repo_context_snapshot: RepoContextSnapshot;
+  run_timeline_tail: TimelineEvent[];
+  last_checkpoint_id: string;
+  outstanding_delta_ids: string[];
+  policy_bundle: PolicyBundle;
+}
+
+export interface NoReworkRule {
+  close_deltas_only: true;
+  directive: string;
+}
+
+export interface AdapterInputEnvelope {
+  rendered_ticket_json: Record<string, unknown>;
+  template_version_hash: string;
+  continuity_packet?: ContinuityPacketV1;
+  continuity_sha256?: string;
+  evidence_ledger_snapshot: EvidenceLedgerSnapshot;
+  repo_context_snapshot: RepoContextSnapshot;
+  run_timeline_tail: TimelineEvent[];
+  last_checkpoint_id: string;
+  outstanding_delta_ids: string[];
+  policy_bundle: PolicyBundle;
+  no_rework_rule: NoReworkRule;
+}
+
+export interface ParsedEvidence {
+  receipt_paths: string[];
+  diff_summary: string[];
+  at_results: string[];
+  touched_ids: string[];
+}
+
+export type DeterministicErrorType =
+  | 'none'
+  | 'approval_required'
+  | 'transient_failure'
+  | 'invalid_output'
+  | 'exhausted';
+
+export interface AdapterOutputEnvelope {
+  adapter: AdapterName;
+  status: AdapterStatus;
+  raw_output: string;
+  parsed_payload: Record<string, unknown> | null;
+  parsed_evidence: ParsedEvidence;
+  work_summary: string;
+  deterministic_error_type: DeterministicErrorType;
+  transcript_paths: {
+    request_jsonl: string;
+    response_jsonl: string;
+    normalized_output: string;
+    prompt_txt: string;
+  };
+}
+
+export function normalizeAdapterStatus(value: unknown): AdapterStatus {
+  const lowered = String(value ?? '').trim().toLowerCase();
+  if (lowered === 'success') return 'success';
+  if (lowered === 'needs_input') return 'needs_input';
+  if (lowered === 'blocked') return 'blocked';
+  if (lowered === 'exhausted') return 'exhausted';
+  return 'error';
+}
+
+export function validateNoReworkRule(input: AdapterInputEnvelope): string | null {
+  if (!input.no_rework_rule?.close_deltas_only) {
+    return 'HARD_STOP: missing no-rework close_deltas_only=true directive';
+  }
+  const directive = input.no_rework_rule.directive ?? '';
+  if (!directive.toLowerCase().includes('do not redo evidenced work')) {
+    return 'HARD_STOP: no-rework directive must include "do not redo evidenced work"';
+  }
+  if (!Array.isArray(input.evidence_ledger_snapshot.items) || input.evidence_ledger_snapshot.items.length === 0) {
+    return 'HARD_STOP: evidence ledger excerpt is required';
+  }
+  return null;
+}
+
+export function continuityFirstLine(hash: string): string {
+  return `continuity_sha256=${hash} | do not redo evidenced work; close only listed deltas`;
+}
+EXIT_CODE: 0

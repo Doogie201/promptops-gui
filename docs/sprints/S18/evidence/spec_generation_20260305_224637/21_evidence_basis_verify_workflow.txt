@@ -1,3 +1,4 @@
+CMD: sed -n '1,220p' .github/workflows/verify.yml
 name: Verify
 
 on:
@@ -26,8 +27,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ripgrep
 
-      - name: Verify S18 governance
-        run: npm run -s verify:s18
-
       - name: Verify
         run: npm run -s verify
+EXIT_CODE: 0

@@ -1,0 +1,319 @@
+{
+  "version": "s18.contracts.v1",
+  "north_star_loop": [
+    "project_bootstrap",
+    "idea_to_requirements",
+    "requirements_to_prompt",
+    "prompt_to_agent_run",
+    "agent_output_to_evaluation",
+    "evaluation_to_done_or_delta",
+    "delta_repeat_until_done"
+  ],
+  "states": [
+    "planning",
+    "project_bootstrapped",
+    "requirements_ready",
+    "prompt_ready",
+    "awaiting_agent_output",
+    "evaluating",
+    "delta_required",
+    "done",
+    "blocked"
+  ],
+  "allowed_transitions": [
+    ["planning", "project_bootstrapped"],
+    ["project_bootstrapped", "requirements_ready"],
+    ["planning", "requirements_ready"],
+    ["requirements_ready", "prompt_ready"],
+    ["prompt_ready", "awaiting_agent_output"],
+    ["awaiting_agent_output", "evaluating"],
+    ["evaluating", "done"],
+    ["evaluating", "delta_required"],
+    ["delta_required", "prompt_ready"],
+    ["planning", "blocked"],
+    ["requirements_ready", "blocked"],
+    ["prompt_ready", "blocked"],
+    ["awaiting_agent_output", "blocked"],
+    ["evaluating", "blocked"],
+    ["delta_required", "blocked"],
+    ["blocked", "planning"]
+  ],
+  "artifacts": {
+    "idea_input": {
+      "required_fields": ["ideaId", "text", "constraints", "sha256"]
+    },
+    "project_context": {
+      "required_fields": [
+        "projectId",
+        "projectName",
+        "projectNameSource",
+        "repoRoot",
+        "repoRootStrategy",
+        "sha256"
+      ]
+    },
+    "sprint_requirements": {
+      "required_fields": [
+        "sprintId",
+        "projectId",
+        "projectName",
+        "repoRoot",
+        "templateVersionHash",
+        "requirements",
+        "canonicalJson",
+        "sha256"
+      ]
+    },
+    "json_prompt": {
+      "required_fields": [
+        "sprintId",
+        "projectId",
+        "projectName",
+        "repoRoot",
+        "repoRootStrategy",
+        "requirementsHash",
+        "templateVersionHash",
+        "promptJson",
+        "sha256"
+      ]
+    },
+    "agent_run": {
+      "required_fields": [
+        "runId",
+        "sprintId",
+        "promptHash",
+        "adapter",
+        "rawOutputPath",
+        "normalizedOutputPath",
+        "sha256"
+      ]
+    },
+    "evaluation": {
+      "required_fields": [
+        "sprintId",
+        "runId",
+        "verdict",
+        "ledgerPath",
+        "sha256"
+      ],
+      "optional_fields": ["deltaPromptPath"]
+    },
+    "transition_receipt": {
+      "required_fields": [
+        "transitionId",
+        "from",
+        "to",
+        "inputHashes",
+        "outputHashes",
+        "receiptPaths",
+        "exitCode"
+      ]
+    }
+  },
+  "determinism_rules": {
+    "forbidden_patterns": ["Date.now(", "Math.random("],
+    "canonical_json": true,
+    "stable_key_order": true,
+    "hash_algorithm": "sha256",
+    "memory_free_resume_required": true,
+    "project_context_required": true,
+    "prompt_repo_root_injection_required": true
+  },
+  "governance": {
+    "milestones": [
+      {
+        "id": "M0",
+        "name": "Deterministic Foundation",
+        "required_outcomes": [
+          "contracts_valid",
+          "illegal_transition_rejected",
+          "replay_hash_parity"
+        ]
+      },
+      {
+        "id": "M1",
+        "name": "Build Mode Vertical Slice",
+        "required_outcomes": [
+          "idea_to_requirements_to_prompt_live",
+          "project_context_persisted",
+          "prompt_contains_repo_root_context"
+        ]
+      },
+      {
+        "id": "M2",
+        "name": "Agent Loop and Delta Automation",
+        "required_outcomes": [
+          "complete_verdict_path",
+          "delta_required_path",
+          "deterministic_delta_generation"
+        ]
+      },
+      {
+        "id": "M3",
+        "name": "Resume and Migration Safety",
+        "required_outcomes": [
+          "artifact_only_resume_parity",
+          "explicit_migration_event_required"
+        ]
+      },
+      {
+        "id": "M4",
+        "name": "UX and PM Operator Console",
+        "required_outcomes": [
+          "human_gate_recording",
+          "milestone_status_visibility",
+          "deterministic_timeline_links"
+        ]
+      },
+      {
+        "id": "M5",
+        "name": "Release Hardening",
+        "required_outcomes": [
+          "ci_enforcement_complete",
+          "release_replay_certified",
+          "rollback_path_validated"
+        ]
+      }
+    ],
+    "versioning": {
+      "app_versioning": "semver",
+      "contract_version": "s18.contracts.v1",
+      "template_version_hash_required": true,
+      "breaking_change_requires_new_contract_version": true
+    },
+    "definition_of_done": {
+      "sprint_required": [
+        "all_acceptance_tests_pass",
+        "required_gates_pass",
+        "scope_and_budget_pass",
+        "checks_green_threads_resolved"
+      ],
+      "milestone_required": [
+        "milestone_required_outcomes_pass",
+        "regression_suite_updated",
+        "replay_and_migration_parity_pass"
+      ],
+      "release_required": [
+        "version_compatibility_documented",
+        "rollback_plan_validated",
+        "operator_runbook_updated"
+      ]
+    },
+    "scope_control": {
+      "in_scope_lock_required": true,
+      "scope_change_request_required_for_out_of_scope": true,
+      "allowed_paths": [
+        "src/s18/**",
+        "tests/s18/**",
+        "docs/sprints/S18/**",
+        "scripts/verify_s18.sh",
+        "scripts/verify.sh",
+        "package.json",
+        ".github/workflows/verify.yml"
+      ],
+      "scope_change_request_fields": [
+        "change_id",
+        "requested_by",
+        "reason",
+        "impact_on_scope",
+        "files_affected",
+        "risk_level",
+        "approval_decision"
+      ]
+    },
+    "quality_controls": {
+      "max_net_new_lines_per_existing_file": 120,
+      "max_total_loc_per_touched_file": 1200,
+      "max_function_length": 80,
+      "human_readable_required": true,
+      "gap_proof_required_before_net_new": true,
+      "receipt_index_required_for_status_claims": true,
+      "forbidden_shortcuts": [
+        "claim_pass_without_receipts",
+        "code_without_gap_proof",
+        "out_of_scope_diff_without_scr"
+      ]
+    },
+    "workflow_experience_queue": [
+      {
+        "id": "S18-UXQ-01",
+        "title": "Guided first-run wizard",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "wizard captures idea + projectName (auto/manual) + repoRoot confirmation"
+      },
+      {
+        "id": "S18-UXQ-02",
+        "title": "Visual loop stepper",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "stepper renders planning->requirements->prompt->run->evaluate->delta/done with current state pin"
+      },
+      {
+        "id": "S18-UXQ-03",
+        "title": "Human gate controls in-flow",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "requirements approval, delta approval, and auto-advance approval are explicit and recorded"
+      },
+      {
+        "id": "S18-UXQ-04",
+        "title": "Diff-first delta review",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "delta view shows deterministic diff vs prior prompt/requirements before dispatch"
+      },
+      {
+        "id": "S18-UXQ-05",
+        "title": "One-click replay/resume",
+        "status": "queued",
+        "target_milestone": "M3",
+        "acceptance_hook": "resume action from artifact bundle shows hash parity badge"
+      },
+      {
+        "id": "S18-UXQ-06",
+        "title": "Scope guard UX",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope"
+      },
+      {
+        "id": "S18-UXQ-07",
+        "title": "Deterministic timeline pane",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "timeline links each transition to receipts/evidence paths"
+      }
+    ]
+  },
+  "ci_enforcement": {
+    "required_tests": [
+      "tests/s18/project_bootstrap.test.ts",
+      "tests/s18/repo_root_injection.test.ts",
+      "tests/s18/contracts.test.ts",
+      "tests/s18/state_machine.test.ts",
+      "tests/s18/planner_determinism.test.ts",
+      "tests/s18/compiler_determinism.test.ts",
+      "tests/s18/orchestration_loop.test.ts",
+      "tests/s18/replay_resume.test.ts",
+      "tests/s18/ci_policy.test.ts",
+      "tests/s18/policy_controls.test.ts"
+    ],
+    "required_gate_outcomes": [
+      "deterministic_replay_hash_match",
+      "illegal_transition_rejected",
+      "delta_requires_evidence",
+      "artifact_fields_complete",
+      "forbidden_import_guard_pass",
+      "project_context_complete",
+      "prompt_contains_repo_root_context",
+      "milestone_exit_criteria_met",
+      "scope_change_control_enforced",
+      "scope_allowlist_enforced",
+      "no_god_files_enforced",
+      "maintainability_budget_enforced",
+      "gap_proof_verified_before_net_new",
+      "receipt_index_verified"
+    ]
+  }
+}

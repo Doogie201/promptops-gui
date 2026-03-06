@@ -8,6 +8,8 @@
   },
   "scripts": {
     "dev": "vite --config src/s17/vite.config.ts",
+    "test:s18": "node --test --experimental-transform-types tests/s18/*.test.ts",
+    "verify:s18": "bash scripts/verify_s18.sh",
     "preflight": "bash scripts/preflight.sh",
     "build": "tsc --noEmit && npm run -s build:bundle-analysis",
     "build:bundle-analysis": "vite build --config vite.config.ts",

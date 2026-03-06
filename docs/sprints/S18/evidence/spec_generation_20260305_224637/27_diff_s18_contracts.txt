@@ -1,0 +1,2 @@
+CMD: git diff -- docs/sprints/S18/contracts_v1.json
+EXIT_CODE: 0

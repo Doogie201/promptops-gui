@@ -1,5 +1,6 @@
 # Product Backlog
 
+- **S18-build-mode-orchestrator**: Make Build Mode the primary product path (`Idea -> Sprint Requirements -> JSON Prompt -> Agent Run -> Evaluation -> Delta/Done -> Next Sprint`) with deterministic contracts, replayable checkpoints, and CI-enforced invariants.
 - **S16-hardening-regression**: Harden the system for real-world release with deterministic replay/regression fixtures, long-run stability checks, adapter resilience behaviors, and GUI recovery tooling with operator-grade receipts.
 - **S17-gui-entrypoint-dashboard**: Create a real runnable Vite GUI entrypoint (`npm run dev`) that boots a deterministic Dashboard and invokes existing operator modules only through a strict façade boundary with receipts and hard stops.
 - **S15-terminal-panel**: Add an optional in-app terminal panel that uses the exact same command executor, whitelists, and receipts/event pipeline as existing GUI actions so terminal usage cannot drift or bypass safeguards.
