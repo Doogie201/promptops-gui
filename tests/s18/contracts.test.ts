@@ -41,3 +41,17 @@ test('S18 contracts: blocked transition coverage includes project_bootstrapped',
   const hasTransition = transitions.some(([from, to]) => from === 'project_bootstrapped' && to === 'blocked');
   assert.strictEqual(hasTransition, true);
 });
+
+test('S18 contracts: UXQ-01 status and evidence path are tracked once implemented', () => {
+  const contracts = readContracts();
+  const queue = (contracts.governance as { workflow_experience_queue?: Array<Record<string, unknown>> })
+    ?.workflow_experience_queue;
+  const item = queue?.find((entry) => entry.id === 'S18-UXQ-01');
+
+  assert.ok(item);
+  assert.strictEqual(item?.status, 'implemented');
+  assert.match(String(item?.acceptance_evidence_path ?? ''), /^docs\/sprints\/S18\/evidence\/work_items\/S18-UXQ-01_/);
+  assert.ok(Array.isArray(item?.implementation_paths));
+  assert.ok((item?.implementation_paths as string[]).includes('src/s18/build_mode/first_run_wizard.ts'));
+  assert.ok((item?.implementation_paths as string[]).includes('tests/s18/first_run_wizard.test.ts'));
+});

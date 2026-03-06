@@ -1,0 +1,59 @@
+{
+  "artifact_version": "s18.work_item_gap_proof.v1",
+  "work_item": "S18-UXQ-01",
+  "decision": "IMPLEMENT_TARGETED_ITEM_ONLY",
+  "current_branch": "main",
+  "source_of_truth": [
+    "docs/sprints/S18/contracts_v1.json",
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/evidence/**"
+  ],
+  "inventory": {
+    "queue_entry": {
+      "id": "S18-UXQ-01",
+      "title": "Guided first-run wizard",
+      "status": "queued",
+      "target_milestone": "M4",
+      "acceptance_hook": "wizard captures idea + projectName (auto/manual) + repoRoot confirmation"
+    },
+    "src_files": [
+      "checkpoints.ts",
+      "hash.ts",
+      "orchestrator.ts",
+      "planner.ts",
+      "project_bootstrap.ts",
+      "prompt_compiler.ts",
+      "prompt_context.ts",
+      "state_machine.ts"
+    ],
+    "test_files": [
+      "ci_policy.test.ts",
+      "compiler_determinism.test.ts",
+      "contracts.test.ts",
+      "orchestration_loop.test.ts",
+      "planner_determinism.test.ts",
+      "policy_controls.test.ts",
+      "project_bootstrap.test.ts",
+      "replay_resume.test.ts",
+      "repo_root_injection.test.ts",
+      "state_machine.test.ts"
+    ],
+    "readme_has_queue_section": true,
+    "wizard_related_files_preexisting": [],
+    "targeted_test_exists": false
+  },
+  "open_blockers_from_files_and_tests_only": [
+    "no targeted wizard test exists in tests/s18"
+  ],
+  "source_receipts": [
+    "00_pwd.txt",
+    "01_show_toplevel.txt",
+    "02_status.txt",
+    "03_branch.txt",
+    "04_queue_scan.txt",
+    "05_s18_files.txt",
+    "06_evidence_index.txt",
+    "07_gap_proof_latest.txt",
+    "08_verify_pre.txt"
+  ]
+}

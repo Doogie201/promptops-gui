@@ -241,9 +241,14 @@
       {
         "id": "S18-UXQ-01",
         "title": "Guided first-run wizard",
-        "status": "queued",
+        "status": "implemented",
         "target_milestone": "M4",
-        "acceptance_hook": "wizard captures idea + projectName (auto/manual) + repoRoot confirmation"
+        "acceptance_hook": "wizard captures idea + projectName (auto/manual) + repoRoot confirmation",
+        "implementation_paths": [
+          "src/s18/build_mode/first_run_wizard.ts",
+          "tests/s18/first_run_wizard.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/"
       },
       {
         "id": "S18-UXQ-02",
@@ -292,6 +297,7 @@
   "ci_enforcement": {
     "required_tests": [
       "tests/s18/project_bootstrap.test.ts",
+      "tests/s18/first_run_wizard.test.ts",
       "tests/s18/repo_root_injection.test.ts",
       "tests/s18/contracts.test.ts",
       "tests/s18/state_machine.test.ts",

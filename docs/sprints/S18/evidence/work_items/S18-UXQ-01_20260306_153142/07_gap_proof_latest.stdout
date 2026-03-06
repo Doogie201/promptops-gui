@@ -1,0 +1,37 @@
+{
+  "artifact_version": "s18.gap_proof.v1",
+  "decision": "IMPLEMENT_ONLY_UNDONE_ITEMS",
+  "completed_sprint_count": 17,
+  "evaluated_sprint_dirs": [
+    "docs/sprints/S01",
+    "docs/sprints/S02",
+    "docs/sprints/S03",
+    "docs/sprints/S04",
+    "docs/sprints/S05",
+    "docs/sprints/S06",
+    "docs/sprints/S07",
+    "docs/sprints/S08",
+    "docs/sprints/S09",
+    "docs/sprints/S10",
+    "docs/sprints/S11",
+    "docs/sprints/S12",
+    "docs/sprints/S13",
+    "docs/sprints/S14",
+    "docs/sprints/S15",
+    "docs/sprints/S16",
+    "docs/sprints/S17"
+  ],
+  "open_blockers": [],
+  "source_receipts": [
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/13_evidence_basis_s17_main.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/14_evidence_basis_browser_facade.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/15_evidence_basis_dashboard_cards.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/16_evidence_basis_template_compiler.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/17_evidence_basis_evaluator.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/18_evidence_basis_store.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/19_evidence_basis_schema.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/20_evidence_basis_s08_contract.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/21_evidence_basis_verify_workflow.txt",
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/22_evidence_basis_verify_script.txt"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "work_item": "S18-UXQ-01",
+  "branch": "codex/s18-uxq-01",
+  "status": "PASS",
+  "acceptance": {
+    "wizard_capture_hook": true,
+    "verify_s18": true,
+    "scope_lock_all_files": true,
+    "maintainability_lock_all_files": true
+  },
+  "evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/",
+  "working_tree_snapshot_exit": 0,
+  "receipts": {
+    "gap_proof": "09_gate_gap_proof.json",
+    "gate_summary": "13_gate_summary.json",
+    "targeted_tests": "14_targeted_tests.txt",
+    "verify": "15_verify_post.txt",
+    "status": "20_status_after_impl.txt",
+    "scope": "22_scope_lock_post_all_files.json",
+    "maintainability": "23_maintainability_lock_post_all_files.json"
+  }
+}
