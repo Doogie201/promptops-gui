@@ -54,3 +54,33 @@ test('S18-UXQ-01 wizard: repo root confirmation is mandatory and resets on chang
   assert.throws(() => finalizeFirstRunWizard(changedRootDraft), /WIZARD_REPO_ROOT_CONFIRMATION_REQUIRED/);
   assert.throws(() => confirmFirstRunWizardRepoRoot(createFirstRunWizardDraft({ ideaText: 'No root yet' })), /WIZARD_REPO_ROOT_UNRESOLVED/);
 });
+
+test('S18-UXQ-01 wizard: create draft ignores preconfirmed repo-root input', () => {
+  const draft = createFirstRunWizardDraft({
+    ideaText: 'Ship first-run wizard',
+    explicitRepoRoot: '/tmp/promptops/repo-wizard-e',
+    repoRootConfirmed: true,
+  });
+
+  assert.strictEqual(draft.repoRootConfirmed, false);
+  assert.throws(() => finalizeFirstRunWizard(draft), /WIZARD_REPO_ROOT_CONFIRMATION_REQUIRED/);
+});
+
+test('S18-UXQ-01 wizard: finalization uses confirmed repo root rather than mutable draft input', () => {
+  const confirmed = confirmFirstRunWizardRepoRoot(
+    createFirstRunWizardDraft({
+      ideaText: 'Ship first-run wizard',
+      explicitRepoRoot: '/tmp/promptops/repo-wizard-f',
+      projectNameOverride: 'Operator Console',
+    }),
+  );
+
+  const artifact = finalizeFirstRunWizard({
+    ...confirmed,
+    repoRootInput: './mutated-relative-root',
+  });
+
+  assert.strictEqual(artifact.repoRoot, '/tmp/promptops/repo-wizard-f');
+  assert.strictEqual(artifact.projectContext.repoRoot, '/tmp/promptops/repo-wizard-f');
+  assert.strictEqual(artifact.projectContext.projectName, 'operator-console');
+});

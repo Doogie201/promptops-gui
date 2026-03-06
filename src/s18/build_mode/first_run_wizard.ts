@@ -53,7 +53,7 @@ export function createFirstRunWizardDraft(input: {
     repoRootInput: input.explicitRepoRoot?.trim() ?? input.envPromptopsRepo?.trim() ?? '',
     repoRoot: resolved?.repoRoot ?? null,
     repoRootStrategy: resolved?.strategy ?? null,
-    repoRootConfirmed: Boolean(resolved && input.repoRootConfirmed),
+    repoRootConfirmed: false,
   };
 }
 
@@ -78,7 +78,7 @@ export function finalizeFirstRunWizard(draft: FirstRunWizardDraft): FirstRunWiza
 
   const projectContext = buildProjectContextArtifact({
     ideaText: draft.ideaText,
-    explicitRepoRoot: draft.repoRootStrategy === 'explicit_input' ? draft.repoRootInput : undefined,
+    explicitRepoRoot: draft.repoRootStrategy === 'explicit_input' ? draft.repoRoot : undefined,
     envPromptopsRepo: draft.repoRootStrategy === 'env_PROMPTOPS_REPO' ? draft.repoRoot : undefined,
     projectNameOverride: draft.projectNameSource === 'manual' ? draft.projectNameOverride : undefined,
   });

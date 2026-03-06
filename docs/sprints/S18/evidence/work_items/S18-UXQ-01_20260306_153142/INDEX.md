@@ -18,6 +18,8 @@
 - `21_untracked_after_impl.txt`
 - `25_status_final.txt`
 - `26_untracked_final.txt`
+- `29_review_fix_targeted_tests.txt`
+- `30_review_fix_verify.txt`
 
 ## Status Claims
 - `09_gate_gap_proof.json` — current-run proof that the work item was still queued and lacked targeted coverage before implementation.
@@ -27,3 +29,5 @@
 - `27_scope_lock_final.json` — final whitelist evaluation over tracked and untracked files after all evidence writes.
 - `28_maintainability_lock_final.json` — final budget evaluation over touched `src/s18/**` and `tests/s18/**` files.
 - `28_final_status.json` — final PASS/FAIL verdict for `S18-UXQ-01`.
+- `29_review_fix_targeted_tests.txt` — targeted regression receipt for codex review fixes.
+- `30_review_fix_verify.txt` — full `verify:s18` receipt after codex review fixes.
