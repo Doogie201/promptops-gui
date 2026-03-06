@@ -1,0 +1,15 @@
+COMMAND: git status --short
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/17_diff_names.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/17_diff_names.stderr
+--- STDOUT ---
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M docs/sprints/S18/evidence/INDEX.md
+ M docs/sprints/S18/evidence/gap_proof/latest.json
+ M tests/s18/contracts.test.ts
+?? src/s18/build_mode/loop_stepper.ts
+?? tests/s18/loop_stepper.test.ts
+
+--- STDERR ---

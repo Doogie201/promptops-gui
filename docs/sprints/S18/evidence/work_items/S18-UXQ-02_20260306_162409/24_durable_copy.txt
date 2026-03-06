@@ -1,0 +1,5 @@
+COMMAND: cp -R /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409 docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+DURABLE_BUNDLE: docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409
+TMP_BUNDLE: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409

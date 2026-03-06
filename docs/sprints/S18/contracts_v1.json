@@ -253,9 +253,14 @@
       {
         "id": "S18-UXQ-02",
         "title": "Visual loop stepper",
-        "status": "queued",
+        "status": "implemented",
         "target_milestone": "M4",
-        "acceptance_hook": "stepper renders planning->requirements->prompt->run->evaluate->delta/done with current state pin"
+        "acceptance_hook": "stepper renders planning->requirements->prompt->run->evaluate->delta/done with current state pin",
+        "implementation_paths": [
+          "src/s18/build_mode/loop_stepper.ts",
+          "tests/s18/loop_stepper.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409/"
       },
       {
         "id": "S18-UXQ-03",
@@ -298,6 +303,7 @@
     "required_tests": [
       "tests/s18/project_bootstrap.test.ts",
       "tests/s18/first_run_wizard.test.ts",
+      "tests/s18/loop_stepper.test.ts",
       "tests/s18/repo_root_injection.test.ts",
       "tests/s18/contracts.test.ts",
       "tests/s18/state_machine.test.ts",

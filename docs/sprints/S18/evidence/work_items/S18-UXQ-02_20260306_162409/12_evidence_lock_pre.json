@@ -1,0 +1,19 @@
+{
+  "bundle": "/tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409",
+  "required": [
+    "00_pwd.txt",
+    "01_show_toplevel.txt",
+    "02_branch_status.txt",
+    "03_queue_scan.txt",
+    "04_src_inventory.txt",
+    "05_test_inventory.txt",
+    "06_stepper_gap_scan.txt",
+    "07_targeted_tests_pre.txt",
+    "08_verify_pre.txt",
+    "09_gate_gap_proof.json",
+    "10_scope_lock_pre.json",
+    "11_maintainability_lock_pre.json"
+  ],
+  "missing": [],
+  "pass": true
+}

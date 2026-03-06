@@ -61,6 +61,8 @@ The following items are now explicitly queued under S18 governance so they are n
    - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/`.
 2. `S18-UXQ-02` Visual loop stepper
    - Render `planning -> requirements -> prompt -> run -> evaluate -> delta/done` with a pinned current state.
+   - Status: implemented.
+   - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409/`.
 3. `S18-UXQ-03` Human gates in-flow
    - Require explicit approvals for requirements, delta prompt, and auto-advance decisions.
 4. `S18-UXQ-04` Diff-first delta review

@@ -1,0 +1,17 @@
+COMMAND: find src/s18 -maxdepth 3 -type f
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/04_src_inventory.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/04_src_inventory.stderr
+--- STDOUT ---
+src/s18/build_mode/orchestrator.ts
+src/s18/build_mode/hash.ts
+src/s18/build_mode/state_machine.ts
+src/s18/build_mode/checkpoints.ts
+src/s18/build_mode/prompt_compiler.ts
+src/s18/build_mode/first_run_wizard.ts
+src/s18/build_mode/project_bootstrap.ts
+src/s18/build_mode/prompt_context.ts
+src/s18/build_mode/planner.ts
+
+--- STDERR ---

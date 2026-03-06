@@ -1,0 +1,15 @@
+COMMAND: rg -n S18-UXQ-02|workflow_experience_queue|Visual loop stepper docs/sprints/S18/contracts_v1.json docs/sprints/S18/README.md tests/s18 src/s18
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/03_queue_scan.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/03_queue_scan.stderr
+--- STDOUT ---
+docs/sprints/S18/contracts_v1.json:240:    "workflow_experience_queue": [
+docs/sprints/S18/contracts_v1.json:254:        "id": "S18-UXQ-02",
+docs/sprints/S18/contracts_v1.json:255:        "title": "Visual loop stepper",
+docs/sprints/S18/README.md:62:2. `S18-UXQ-02` Visual loop stepper
+docs/sprints/S18/README.md:77:- These items are queued in machine-readable contract metadata (`workflow_experience_queue`) with owner, milestone target, and acceptance hooks.
+tests/s18/contracts.test.ts:47:  const queue = (contracts.governance as { workflow_experience_queue?: Array<Record<string, unknown>> })
+tests/s18/contracts.test.ts:48:    ?.workflow_experience_queue;
+
+--- STDERR ---

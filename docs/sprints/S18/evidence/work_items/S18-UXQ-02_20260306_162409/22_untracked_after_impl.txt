@@ -1,0 +1,10 @@
+COMMAND: git ls-files --others --exclude-standard
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/22_untracked_after_impl.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/22_untracked_after_impl.stderr
+--- STDOUT ---
+src/s18/build_mode/loop_stepper.ts
+tests/s18/loop_stepper.test.ts
+
+--- STDERR ---
