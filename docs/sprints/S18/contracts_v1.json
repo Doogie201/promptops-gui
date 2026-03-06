@@ -23,6 +23,7 @@
   "allowed_transitions": [
     ["planning", "project_bootstrapped"],
     ["project_bootstrapped", "requirements_ready"],
+    ["project_bootstrapped", "blocked"],
     ["planning", "requirements_ready"],
     ["requirements_ready", "prompt_ready"],
     ["prompt_ready", "awaiting_agent_output"],

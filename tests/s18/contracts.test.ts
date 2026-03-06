@@ -34,3 +34,10 @@ test('S18 contracts: CI required tests list exists and files are present', () =>
     assert.ok(fs.existsSync(abs), `missing required test file: ${file}`);
   }
 });
+
+test('S18 contracts: blocked transition coverage includes project_bootstrapped', () => {
+  const contracts = readContracts();
+  const transitions = (contracts.allowed_transitions ?? []) as Array<[string, string]>;
+  const hasTransition = transitions.some(([from, to]) => from === 'project_bootstrapped' && to === 'blocked');
+  assert.strictEqual(hasTransition, true);
+});

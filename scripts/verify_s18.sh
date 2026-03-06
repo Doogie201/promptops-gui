@@ -255,14 +255,14 @@ try {
 }
 
 if (!hasParent) {
-  console.log('scope_allowlist:SKIP(no parent commit)');
-  process.exit(0);
+  console.error('scope_allowlist:FAIL missing HEAD^ in CI; fetch full history to enforce scope gate');
+  process.exit(31);
 }
 
 const raw = cp.execSync('git diff --name-only HEAD^..HEAD', { encoding: 'utf8' }).trim();
 if (!raw) {
-  console.log('scope_allowlist:SKIP(no commit delta)');
-  process.exit(0);
+  console.error('scope_allowlist:FAIL empty commit delta in CI; cannot enforce allowlist');
+  process.exit(32);
 }
 
 const changed = raw.split('\n').filter(Boolean);
