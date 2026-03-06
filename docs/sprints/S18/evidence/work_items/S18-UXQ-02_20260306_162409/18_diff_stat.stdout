@@ -1,0 +1,6 @@
+ docs/sprints/S18/README.md                      |  2 ++
+ docs/sprints/S18/contracts_v1.json              | 10 ++++++++--
+ docs/sprints/S18/evidence/INDEX.md              |  4 ++++
+ docs/sprints/S18/evidence/gap_proof/latest.json |  4 +++-
+ tests/s18/contracts.test.ts                     | 15 +++++++++++++++
+ 5 files changed, 32 insertions(+), 3 deletions(-)

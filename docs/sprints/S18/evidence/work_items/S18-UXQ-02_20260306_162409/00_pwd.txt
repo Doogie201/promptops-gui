@@ -1,0 +1,9 @@
+COMMAND: pwd
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/00_pwd.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/00_pwd.stderr
+--- STDOUT ---
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+
+--- STDERR ---

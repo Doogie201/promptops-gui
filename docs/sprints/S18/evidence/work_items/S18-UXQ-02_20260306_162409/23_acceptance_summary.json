@@ -1,0 +1,14 @@
+{
+  "work_item": "S18-UXQ-02",
+  "rendered_examples": {
+    "planning": "[Planning] -> Requirements -> Prompt -> Run -> Evaluate -> Delta/Done",
+    "delta_required": "Planning -> Requirements -> Prompt -> Run -> Evaluate -> [Delta]/Done",
+    "done": "Planning -> Requirements -> Prompt -> Run -> Evaluate -> Delta/[Done]",
+    "blocked_from_evaluating": "Planning -> Requirements -> Prompt -> Run -> [Evaluate] -> Delta/Done | BLOCKED"
+  },
+  "current_pin_examples": {
+    "planning": "[Planning]",
+    "prompt_ready": "[Prompt]",
+    "delta_required": "[Delta]/Done"
+  }
+}

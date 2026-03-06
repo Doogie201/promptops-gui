@@ -1,0 +1,9 @@
+COMMAND: git rev-parse --show-toplevel
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/01_show_toplevel.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/01_show_toplevel.stderr
+--- STDOUT ---
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+
+--- STDERR ---

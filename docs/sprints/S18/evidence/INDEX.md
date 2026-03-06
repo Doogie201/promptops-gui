@@ -16,6 +16,7 @@
 - `spec_generation_20260305_224637/13_*` to `22_*` — current-state evidence basis from existing modules/workflows used by the spec.
 - `spec_generation_20260305_224637/00_tmp_bundle_path.txt` — source `/tmp` bundle pointer.
 - `work_items/S18-UXQ-01_20260306_153142/00_*` to `18_*` — current-run gate, regression, scope, maintainability, and closeout receipts for the first-run wizard work item.
+- `work_items/S18-UXQ-02_20260306_162409/00_*` to `28_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the visual loop stepper work item.
 
 ## Status Claims
 
@@ -25,3 +26,6 @@
 - `work_items/S18-UXQ-01_20260306_153142/09_gate_gap_proof.json` — current-run proof that `S18-UXQ-01` was still queued and lacked targeted tests before implementation.
 - `work_items/S18-UXQ-01_20260306_153142/13_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, and evidence locks before code.
 - `work_items/S18-UXQ-01_20260306_153142/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
+- `work_items/S18-UXQ-02_20260306_162409/09_gate_gap_proof.json` — current-run proof that `S18-UXQ-02` was still queued and lacked implementation/test coverage before code.
+- `work_items/S18-UXQ-02_20260306_162409/13_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, and evidence locks before code.
+- `work_items/S18-UXQ-02_20260306_162409/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.

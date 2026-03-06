@@ -1,0 +1,9 @@
+COMMAND: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/02_branch_status.stdout
+STDERR_PATH: /tmp/promptops/S18/work_items/S18-UXQ-02_20260306_162409/02_branch_status.stderr
+--- STDOUT ---
+## main...origin/main
+
+--- STDERR ---

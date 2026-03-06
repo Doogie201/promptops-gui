@@ -1,0 +1,9 @@
+## codex/s18-uxq-02
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M docs/sprints/S18/evidence/INDEX.md
+ M docs/sprints/S18/evidence/gap_proof/latest.json
+ M tests/s18/contracts.test.ts
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409/
+?? src/s18/build_mode/loop_stepper.ts
+?? tests/s18/loop_stepper.test.ts

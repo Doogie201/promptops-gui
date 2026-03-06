@@ -1,0 +1,26 @@
+{
+  "targets": [
+    "tests/s18/contracts.test.ts",
+    "src/s18/build_mode/loop_stepper.ts",
+    "tests/s18/loop_stepper.test.ts"
+  ],
+  "fileMetrics": [
+    {
+      "file": "tests/s18/contracts.test.ts",
+      "loc": 73,
+      "longestFunction": 0
+    },
+    {
+      "file": "src/s18/build_mode/loop_stepper.ts",
+      "loc": 122,
+      "longestFunction": 0
+    },
+    {
+      "file": "tests/s18/loop_stepper.test.ts",
+      "loc": 58,
+      "longestFunction": 0
+    }
+  ],
+  "violations": [],
+  "pass": true
+}
