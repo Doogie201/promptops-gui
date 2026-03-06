@@ -207,6 +207,8 @@
         "src/s18/**",
         "tests/s18/**",
         "docs/sprints/S18/**",
+        "docs/backlog/README.md",
+        "docs/sprints/README.md",
         "scripts/verify_s18.sh",
         "scripts/verify.sh",
         "package.json",
