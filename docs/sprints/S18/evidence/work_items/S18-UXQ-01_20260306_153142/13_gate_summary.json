@@ -1,0 +1,8 @@
+{
+  "gap_proof_pass": true,
+  "scope_lock_pass": true,
+  "maintainability_lock_pass": true,
+  "evidence_lock_pass": true,
+  "pre_verify_pass": true,
+  "implementation_allowed": true
+}

@@ -1,0 +1,8 @@
+{
+  "artifact_version": "s18.maintainability_lock.v1",
+  "tracked": [
+    "tests/s18/contracts.test.ts"
+  ],
+  "violations": [],
+  "pass": true
+}

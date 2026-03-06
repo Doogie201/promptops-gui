@@ -1,0 +1,64 @@
+COMMAND: git ls-files --others --exclude-standard
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+--- STDOUT ---
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/00_pwd.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/00_pwd.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/00_pwd.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/01_show_toplevel.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/01_show_toplevel.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/01_show_toplevel.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/02_status.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/02_status.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/02_status.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/03_branch.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/03_branch.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/03_branch.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/04_queue_scan.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/04_queue_scan.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/04_queue_scan.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/05_s18_files.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/05_s18_files.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/05_s18_files.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/06_evidence_index.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/06_evidence_index.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/06_evidence_index.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/07_gap_proof_latest.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/07_gap_proof_latest.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/07_gap_proof_latest.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/08_verify_pre.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/08_verify_pre.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/08_verify_pre.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/09_gate_gap_proof.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/10_scope_lock.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/11_maintainability_lock.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/12_evidence_lock.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/13_gate_summary.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/14_targeted_tests.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/14_targeted_tests.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/14_targeted_tests.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/15_verify_post.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/15_verify_post.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/15_verify_post.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/16_diff_names.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/16_diff_names.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/16_diff_names.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/17_diff_stat.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/17_diff_stat.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/17_diff_stat.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/18_scope_lock_post.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/19_maintainability_lock_post.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/20_final_status.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/20_status_after_impl.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/20_status_after_impl.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/20_status_after_impl.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/21_untracked_after_impl.stderr
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/21_untracked_after_impl.stdout
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/21_untracked_after_impl.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/22_scope_lock_post_all_files.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/23_maintainability_lock_post_all_files.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/24_final_status.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/INDEX.md
+src/s18/build_mode/first_run_wizard.ts
+tests/s18/first_run_wizard.test.ts
+--- STDERR ---

@@ -1,0 +1,15 @@
+{
+  "artifact_version": "s18.maintainability_lock.v1",
+  "files": [
+    "src/s18/build_mode/checkpoints.ts",
+    "src/s18/build_mode/hash.ts",
+    "src/s18/build_mode/orchestrator.ts",
+    "src/s18/build_mode/planner.ts",
+    "src/s18/build_mode/project_bootstrap.ts",
+    "src/s18/build_mode/prompt_compiler.ts",
+    "src/s18/build_mode/prompt_context.ts",
+    "src/s18/build_mode/state_machine.ts"
+  ],
+  "violations": [],
+  "pass": true
+}

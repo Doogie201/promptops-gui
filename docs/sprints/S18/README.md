@@ -57,6 +57,8 @@ The following items are now explicitly queued under S18 governance so they are n
 
 1. `S18-UXQ-01` Guided first-run wizard
    - Capture idea input, project name (auto + manual override), and repo-root confirmation in one deterministic onboarding flow.
+   - Status: implemented.
+   - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/`.
 2. `S18-UXQ-02` Visual loop stepper
    - Render `planning -> requirements -> prompt -> run -> evaluate -> delta/done` with a pinned current state.
 3. `S18-UXQ-03` Human gates in-flow
@@ -74,6 +76,7 @@ Execution policy:
 
 - These items are queued in machine-readable contract metadata (`workflow_experience_queue`) with owner, milestone target, and acceptance hooks.
 - No item is considered complete unless associated acceptance tests and evidence artifacts are present.
+- `S18-UXQ-01` is the first completed queue item and is now enforced by code via `tests/s18/first_run_wizard.test.ts`.
 
 ## App Development Milestones (Product Roadmap)
 

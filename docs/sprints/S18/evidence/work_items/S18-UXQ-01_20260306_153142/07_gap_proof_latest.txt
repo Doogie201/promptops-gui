@@ -1,3 +1,7 @@
+COMMAND: cat docs/sprints/S18/evidence/gap_proof/latest.json
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+--- STDOUT ---
 {
   "artifact_version": "s18.gap_proof.v1",
   "decision": "IMPLEMENT_ONLY_UNDONE_ITEMS",
@@ -32,8 +36,7 @@
     "docs/sprints/S18/evidence/spec_generation_20260305_224637/19_evidence_basis_schema.txt",
     "docs/sprints/S18/evidence/spec_generation_20260305_224637/20_evidence_basis_s08_contract.txt",
     "docs/sprints/S18/evidence/spec_generation_20260305_224637/21_evidence_basis_verify_workflow.txt",
-    "docs/sprints/S18/evidence/spec_generation_20260305_224637/22_evidence_basis_verify_script.txt",
-    "docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/09_gate_gap_proof.json",
-    "docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/28_final_status.json"
+    "docs/sprints/S18/evidence/spec_generation_20260305_224637/22_evidence_basis_verify_script.txt"
   ]
 }
+--- STDERR ---

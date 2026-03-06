@@ -1,0 +1,7 @@
+COMMAND: git ls-files --others --exclude-standard
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+--- STDOUT ---
+src/s18/build_mode/first_run_wizard.ts
+tests/s18/first_run_wizard.test.ts
+--- STDERR ---

@@ -1,0 +1,63 @@
+COMMAND: rg --files src/s18 tests/s18 docs/sprints/S18 | sort
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+--- STDOUT ---
+docs/sprints/S18/README.md
+docs/sprints/S18/contracts_v1.json
+docs/sprints/S18/evidence/INDEX.md
+docs/sprints/S18/evidence/gap_proof/latest.json
+docs/sprints/S18/evidence/spec_generation_20260305_224637/00_tmp_bundle_path.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/01_pwd.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/02_promptops_repo.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/03_show_toplevel.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/04_branch.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/05_status.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/06_diff_names.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/07_diff_backlog.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/08_diff_sprints_index.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/09_ls_s18.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/10_readme_head.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/11_contracts_json.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/12_contracts_json_valid.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/13_evidence_basis_s17_main.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/14_evidence_basis_browser_facade.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/15_evidence_basis_dashboard_cards.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/16_evidence_basis_template_compiler.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/17_evidence_basis_evaluator.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/18_evidence_basis_store.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/19_evidence_basis_schema.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/20_evidence_basis_s08_contract.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/21_evidence_basis_verify_workflow.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/22_evidence_basis_verify_script.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/23_readme_updated_head.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/24_contracts_updated_json.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/25_contracts_updated_valid.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/26_diff_s18_readme.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/27_diff_s18_contracts.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/28_diff_no_index_s18_readme.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/29_diff_no_index_s18_contracts.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/30_readme_governance_capture.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/31_contracts_governance_capture.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/32_contracts_governance_valid.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/33_diff_no_index_readme_governance.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/34_diff_no_index_contracts_governance.txt
+docs/sprints/S18/evidence/spec_generation_20260305_224637/35_status_after_governance.txt
+src/s18/build_mode/checkpoints.ts
+src/s18/build_mode/hash.ts
+src/s18/build_mode/orchestrator.ts
+src/s18/build_mode/planner.ts
+src/s18/build_mode/project_bootstrap.ts
+src/s18/build_mode/prompt_compiler.ts
+src/s18/build_mode/prompt_context.ts
+src/s18/build_mode/state_machine.ts
+tests/s18/ci_policy.test.ts
+tests/s18/compiler_determinism.test.ts
+tests/s18/contracts.test.ts
+tests/s18/orchestration_loop.test.ts
+tests/s18/planner_determinism.test.ts
+tests/s18/policy_controls.test.ts
+tests/s18/project_bootstrap.test.ts
+tests/s18/replay_resume.test.ts
+tests/s18/repo_root_injection.test.ts
+tests/s18/state_machine.test.ts
+--- STDERR ---

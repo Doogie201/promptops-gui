@@ -1,0 +1,10 @@
+COMMAND: rg -n "S18-UXQ-01|workflow_experience_queue|Guided first-run wizard" docs/sprints/S18/contracts_v1.json docs/sprints/S18/README.md tests/s18 src/s18 || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+--- STDOUT ---
+docs/sprints/S18/contracts_v1.json:240:    "workflow_experience_queue": [
+docs/sprints/S18/contracts_v1.json:242:        "id": "S18-UXQ-01",
+docs/sprints/S18/contracts_v1.json:243:        "title": "Guided first-run wizard",
+docs/sprints/S18/README.md:58:1. `S18-UXQ-01` Guided first-run wizard
+docs/sprints/S18/README.md:75:- These items are queued in machine-readable contract metadata (`workflow_experience_queue`) with owner, milestone target, and acceptance hooks.
+--- STDERR ---

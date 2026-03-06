@@ -1,0 +1,8 @@
+{
+  "artifact_version": "s18.evidence_lock.v1",
+  "indexPath": "docs/sprints/S18/evidence/INDEX.md",
+  "hasCommands": true,
+  "hasStatus": true,
+  "hasReceiptRefs": true,
+  "pass": true
+}
