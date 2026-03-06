@@ -1,0 +1,9 @@
+{
+  "artifact_version": "s18.work_item_status.v0",
+  "status": "superseded",
+  "reason": "Intermediate file from an incomplete summary write was retained for auditability and later replaced by valid final status artifacts.",
+  "superseded_by": [
+    "docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/24_final_status.json",
+    "docs/sprints/S18/evidence/work_items/S18-UXQ-01_20260306_153142/28_final_status.json"
+  ]
+}
