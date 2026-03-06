@@ -265,9 +265,14 @@
       {
         "id": "S18-UXQ-03",
         "title": "Human gate controls in-flow",
-        "status": "queued",
+        "status": "implemented",
         "target_milestone": "M4",
-        "acceptance_hook": "requirements approval, delta approval, and auto-advance approval are explicit and recorded"
+        "acceptance_hook": "requirements approval, delta approval, and auto-advance approval are explicit and recorded",
+        "implementation_paths": [
+          "src/s18/build_mode/human_gate_controls.ts",
+          "tests/s18/human_gate_controls.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/"
       },
       {
         "id": "S18-UXQ-04",
@@ -304,6 +309,7 @@
       "tests/s18/project_bootstrap.test.ts",
       "tests/s18/first_run_wizard.test.ts",
       "tests/s18/loop_stepper.test.ts",
+      "tests/s18/human_gate_controls.test.ts",
       "tests/s18/repo_root_injection.test.ts",
       "tests/s18/contracts.test.ts",
       "tests/s18/state_machine.test.ts",

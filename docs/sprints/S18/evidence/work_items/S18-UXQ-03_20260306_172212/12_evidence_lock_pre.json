@@ -1,0 +1,14 @@
+{
+  "work_item": "S18-UXQ-03",
+  "required_receipts": [
+    "01_repo_root.txt",
+    "02_queue_scan.txt",
+    "03_src_inventory.txt",
+    "04_test_inventory.txt",
+    "05_gap_scan.txt",
+    "06_targeted_tests_pre.txt",
+    "07_verify_pre.txt"
+  ],
+  "missing_receipts": [],
+  "pass": true
+}

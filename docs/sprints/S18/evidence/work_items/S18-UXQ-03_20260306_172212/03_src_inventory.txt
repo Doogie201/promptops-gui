@@ -1,0 +1,19 @@
+COMMAND: rg --files src/s18
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+src/s18/build_mode/planner.ts
+src/s18/build_mode/prompt_context.ts
+src/s18/build_mode/project_bootstrap.ts
+src/s18/build_mode/first_run_wizard.ts
+src/s18/build_mode/prompt_compiler.ts
+src/s18/build_mode/checkpoints.ts
+src/s18/build_mode/state_machine.ts
+src/s18/build_mode/hash.ts
+src/s18/build_mode/orchestrator.ts
+src/s18/build_mode/loop_stepper.ts
+
+EOF
+STDERR<<EOF
+
+EOF

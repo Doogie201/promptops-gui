@@ -64,7 +64,7 @@ The following items are now explicitly queued under S18 governance so they are n
    - Status: implemented.
    - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409/`.
 3. `S18-UXQ-03` Human gates in-flow
-   - Require explicit approvals for requirements, delta prompt, and auto-advance decisions.
+   - Implemented in `src/s18/build_mode/human_gate_controls.ts` with evidence at `docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/`.
 4. `S18-UXQ-04` Diff-first delta review
    - Show deterministic delta between prior and current prompt/requirements before dispatch.
 5. `S18-UXQ-05` One-click replay/resume

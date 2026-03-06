@@ -1,0 +1,14 @@
+COMMAND: printf 'PROMPTOPS_REPO=%s\n' '/Volumes/X9_DEV/Dev/Projects/promptops-gui' && pwd && git rev-parse --show-toplevel && git rev-parse --abbrev-ref HEAD && git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+PROMPTOPS_REPO=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+main
+## main...origin/main
+
+EOF
+STDERR<<EOF
+
+EOF

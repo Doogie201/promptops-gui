@@ -1,0 +1,16 @@
+{
+  "work_item": "S18-UXQ-03",
+  "decision": "IMPLEMENT_ALLOWED",
+  "queue_status": "queued",
+  "acceptance_hook": "requirements approval, delta approval, and auto-advance approval are explicit and recorded",
+  "existing_paths": [],
+  "blockers": [],
+  "source_receipts": [
+    "/tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/02_queue_scan.txt",
+    "/tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/03_src_inventory.txt",
+    "/tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/04_test_inventory.txt",
+    "/tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/05_gap_scan.txt",
+    "/tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/06_targeted_tests_pre.txt",
+    "/tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/07_verify_pre.txt"
+  ]
+}

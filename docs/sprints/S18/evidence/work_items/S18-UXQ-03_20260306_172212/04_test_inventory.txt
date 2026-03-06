@@ -1,0 +1,21 @@
+COMMAND: rg --files tests/s18
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+tests/s18/contracts.test.ts
+tests/s18/state_machine.test.ts
+tests/s18/replay_resume.test.ts
+tests/s18/first_run_wizard.test.ts
+tests/s18/compiler_determinism.test.ts
+tests/s18/ci_policy.test.ts
+tests/s18/orchestration_loop.test.ts
+tests/s18/planner_determinism.test.ts
+tests/s18/project_bootstrap.test.ts
+tests/s18/repo_root_injection.test.ts
+tests/s18/policy_controls.test.ts
+tests/s18/loop_stepper.test.ts
+
+EOF
+STDERR<<EOF
+
+EOF

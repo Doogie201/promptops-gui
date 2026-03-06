@@ -1,0 +1,41 @@
+{
+  "touched_files": [
+    {
+      "file": "docs/sprints/S18/README.md",
+      "lines": 477
+    },
+    {
+      "file": "docs/sprints/S18/contracts_v1.json",
+      "lines": 341
+    },
+    {
+      "file": "docs/sprints/S18/evidence/INDEX.md",
+      "lines": 36
+    },
+    {
+      "file": "docs/sprints/S18/evidence/gap_proof/latest.json",
+      "lines": 44
+    },
+    {
+      "file": "src/s18/build_mode/human_gate_controls.ts",
+      "lines": 204
+    },
+    {
+      "file": "tests/s18/contracts.test.ts",
+      "lines": 88
+    },
+    {
+      "file": "tests/s18/human_gate_controls.test.ts",
+      "lines": 124
+    }
+  ],
+  "existing_file_net_new": {
+    "docs/sprints/S18/README.md": 0,
+    "docs/sprints/S18/contracts_v1.json": 6,
+    "docs/sprints/S18/evidence/INDEX.md": 4,
+    "docs/sprints/S18/evidence/gap_proof/latest.json": 2,
+    "tests/s18/contracts.test.ts": 15
+  },
+  "violations": [],
+  "pass": true
+}
