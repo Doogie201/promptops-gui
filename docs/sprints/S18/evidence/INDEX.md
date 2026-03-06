@@ -32,4 +32,6 @@
 - `work_items/S18-UXQ-02_20260306_162409/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
 - `work_items/S18-UXQ-03_20260306_172212/09_gate_gap_proof.json` — current-run proof that `S18-UXQ-03` was still queued and lacked implementation/test coverage before code.
 - `work_items/S18-UXQ-03_20260306_172212/13_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, and evidence locks before code.
+- `work_items/S18-UXQ-03_20260306_172212/15_targeted_tests_post.txt` — refreshed targeted proof that each delta loop-back now requires the current approval sequence after PR review.
+- `work_items/S18-UXQ-03_20260306_172212/26_verify_final.txt` — refreshed full `verify:s18` proof after the stale delta-approval fix.
 - `work_items/S18-UXQ-03_20260306_172212/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
