@@ -8,3 +8,7 @@
 - Final maintainability lock: `25_maintainability_lock_final.json`
 - Final verify: `23_verify_final.txt`
 - Final status: `28_final_status.json`
+- Review-fix acceptance: `31_review_fix_acceptance.json`
+- Review-fix pre-commit: `32_review_fix_precommit.txt`
+- Review-fix targeted tests: `33_review_fix_targeted_tests.txt`
+- Review-fix verify: `34_review_fix_verify.txt`

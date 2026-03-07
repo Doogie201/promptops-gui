@@ -31,6 +31,29 @@ test('S18-UXQ-06 scope guard: out-of-scope paths require approved SCR before dis
   assert.throws(() => assertScopeGuardReadyForDispatch(model), /SCOPE_GUARD_DISPATCH_BLOCKED/);
 });
 
+test('S18-UXQ-06 scope guard: directory wildcard does not leak into sibling prefixes', () => {
+  const model = buildScopeGuardModel({
+    requestedPaths: ['src/s180/hack.ts'],
+    allowedPaths: ['src/s18/**', 'tests/s18/**', 'docs/sprints/S18/**'],
+  });
+
+  assert.strictEqual(model.status, 'out_of_scope');
+  assert.deepStrictEqual(model.outOfScopePaths, ['src/s180/hack.ts']);
+  assert.strictEqual(model.dispatchAllowed, false);
+});
+
+test('S18-UXQ-06 scope guard: dot-segment paths normalize before scope evaluation', () => {
+  const model = buildScopeGuardModel({
+    requestedPaths: ['./src/s18/../s19/file.ts'],
+    allowedPaths: ['src/s18/**', 'tests/s18/**', 'docs/sprints/S18/**'],
+  });
+
+  assert.strictEqual(model.status, 'out_of_scope');
+  assert.deepStrictEqual(model.requestedPaths, ['src/s19/file.ts']);
+  assert.deepStrictEqual(model.outOfScopePaths, ['src/s19/file.ts']);
+  assert.strictEqual(model.dispatchAllowed, false);
+});
+
 test('S18-UXQ-06 scope guard: approved SCR preserves out-of-scope warning but allows dispatch', () => {
   const model = buildScopeGuardModel({
     requestedPaths: ['docs/sprints/S17/README.md'],

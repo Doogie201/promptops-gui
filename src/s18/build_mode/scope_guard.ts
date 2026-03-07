@@ -1,3 +1,4 @@
+import { posix as pathPosix } from 'node:path';
 import { stableHash } from './hash.ts';
 
 export type ScopeGuardStatus = 'in_scope' | 'out_of_scope';
@@ -40,15 +41,47 @@ export interface ScopeGuardModel {
   sha256: string;
 }
 
+function normalizeRepoPath(value: string): string | null {
+  const trimmed = value.trim().replaceAll('\\', '/');
+  if (!trimmed) {
+    return null;
+  }
+
+  const normalized = pathPosix.normalize(trimmed);
+  if (normalized === '.' || normalized === '') {
+    return null;
+  }
+
+  if (normalized === '..' || normalized.startsWith('../') || normalized.startsWith('/')) {
+    return normalized;
+  }
+
+  return normalized.startsWith('./') ? normalized.slice(2) : normalized;
+}
+
+function normalizePathPattern(value: string): string | null {
+  if (!value.endsWith('/**')) {
+    return normalizeRepoPath(value);
+  }
+
+  const prefix = normalizeRepoPath(value.slice(0, -3));
+  return prefix ? `${prefix}/**` : null;
+}
+
 function matchesPathPattern(filePath: string, pattern: string): boolean {
   if (pattern.endsWith('/**')) {
-    return filePath.startsWith(pattern.slice(0, -3));
+    const prefix = pattern.slice(0, -3);
+    return filePath === prefix || filePath.startsWith(`${prefix}/`);
   }
   return filePath === pattern;
 }
 
 function normalizePaths(paths: readonly string[]): string[] {
-  return [...new Set(paths.map((value) => value.trim()).filter(Boolean))].sort();
+  return [...new Set(paths.map(normalizeRepoPath).filter((value): value is string => Boolean(value)))].sort();
+}
+
+function normalizePathPatterns(paths: readonly string[]): string[] {
+  return [...new Set(paths.map(normalizePathPattern).filter((value): value is string => Boolean(value)))].sort();
 }
 
 function resolveMatchedRule(filePath: string, allowedPaths: readonly string[]): string | null {
@@ -135,7 +168,7 @@ export function buildScopeGuardModel(input: {
   scopeChangeRequest?: ScopeChangeRequestArtifact;
 }): ScopeGuardModel {
   const requestedPaths = normalizePaths(input.requestedPaths);
-  const allowedPaths = normalizePaths(input.allowedPaths);
+  const allowedPaths = normalizePathPatterns(input.allowedPaths);
   const entries = buildEntries(requestedPaths, allowedPaths);
   const outOfScopePaths = entries.filter((entry) => !entry.inScope).map((entry) => entry.path);
   const scopeChangeRequestStatus = resolveScopeChangeRequestStatus(outOfScopePaths, input.scopeChangeRequest);

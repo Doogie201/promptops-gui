@@ -62,3 +62,9 @@
 - `work_items/S18-UXQ-06_20260306_210115/16_acceptance_summary.json` — acceptance proof that pre-dispatch
   scope signals expose in-scope and out-of-scope paths and require approved SCR coverage before dispatch.
 - `work_items/S18-UXQ-06_20260306_210115/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
+- `work_items/S18-UXQ-06_20260306_210115/31_review_fix_acceptance.json` — remediation proof that `src/s18/**`
+  no longer matches sibling prefixes and that dot-segment paths normalize out of scope before dispatch.
+- `work_items/S18-UXQ-06_20260306_210115/32_review_fix_precommit.txt` — pre-commit proof for the PR review remediation.
+- `work_items/S18-UXQ-06_20260306_210115/33_review_fix_targeted_tests.txt` — targeted regression proof for the
+  directory-boundary and path-normalization remediation.
+- `work_items/S18-UXQ-06_20260306_210115/34_review_fix_verify.txt` — full `verify:s18` proof for the PR review remediation.
