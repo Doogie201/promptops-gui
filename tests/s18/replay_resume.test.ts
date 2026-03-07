@@ -70,6 +70,18 @@ test('S18-UXQ-05 replay/resume: latest checkpoint from bundle shows hash parity 
   assert.strictEqual(resumed.model.checkpointId, 'cp-002');
 });
 
+test('S18-UXQ-05 replay/resume: latest checkpoint prefers highest numeric sequence over lexicographic order', () => {
+  const root = resetRoot('latest_bundle_sequence');
+  writeCheckpoint(root, 'cp-9', { state: 'requirements_ready', sprintId: 'S18', runId: 'run-9' });
+  writeCheckpoint(root, 'cp-10', { state: 'done', sprintId: 'S18', runId: 'run-10' });
+
+  const model = buildReplayResumeModel({ bundleRoot: root });
+  assert.strictEqual(model.selectionMode, 'latest');
+  assert.strictEqual(model.checkpointId, 'cp-10');
+  assert.strictEqual(model.checkpointState, 'done');
+  assert.strictEqual(model.resumeActionEnabled, true);
+});
+
 test('S18-UXQ-05 replay/resume: hash drift blocks resume and exposes drift badge', () => {
   const root = resetRoot('drift_bundle');
   const artifact = writeCheckpoint(root, 'cp-003', { state: 'prompt_ready', sprintId: 'S18' });

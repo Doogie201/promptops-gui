@@ -58,7 +58,7 @@ function resolveCheckpointId(bundleRoot: string, checkpointId?: string): {
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .filter((entry) => fs.existsSync(path.join(bundleRoot, entry, 'checkpoint.json')))
-    .sort();
+    .sort(compareCheckpointIds);
 
   if (candidates.length === 0) {
     throw new Error('REPLAY_RESUME_CHECKPOINT_NOT_FOUND');
@@ -68,6 +68,34 @@ function resolveCheckpointId(bundleRoot: string, checkpointId?: string): {
     checkpointId: candidates[candidates.length - 1] ?? '',
     selectionMode: 'latest',
   };
+}
+
+function compareCheckpointIds(left: string, right: string): number {
+  const leftSequence = readCheckpointSequence(left);
+  const rightSequence = readCheckpointSequence(right);
+
+  if (leftSequence !== null && rightSequence !== null && leftSequence !== rightSequence) {
+    return leftSequence - rightSequence;
+  }
+
+  if (leftSequence !== null && rightSequence === null) {
+    return 1;
+  }
+
+  if (leftSequence === null && rightSequence !== null) {
+    return -1;
+  }
+
+  return left.localeCompare(right);
+}
+
+function readCheckpointSequence(checkpointId: string): number | null {
+  const match = checkpointId.match(/(\d+)(?!.*\d)/);
+  if (!match) {
+    return null;
+  }
+
+  return Number.parseInt(match[1] ?? '', 10);
 }
 
 function readExpectedHash(hashPath: string): string | null {
