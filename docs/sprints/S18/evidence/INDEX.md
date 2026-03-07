@@ -20,6 +20,7 @@
 - `work_items/S18-UXQ-03_20260306_172212/00_*` to `29_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the in-flow human gate controls work item.
 - `work_items/S18-UXQ-04_20260306_191031/00_*` to `23_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the diff-first delta review work item.
 - `work_items/S18-UXQ-04_20260306_194829/00_*` to `10_*` — remediation receipts closing PR #32 review findings for dispatch enforcement and collision-safe prompt diff paths.
+- `work_items/S18-UXQ-05_20260306_202359/00_*` to `29_*` — current-run gate, replay/resume acceptance, scope, maintainability, and closeout receipts for the one-click replay/resume work item.
 
 ## Status Claims
 
@@ -44,3 +45,7 @@
 - `work_items/S18-UXQ-04_20260306_194829/01_pr32_threads_before.json` — proof of the two unresolved PR #32 findings before remediation.
 - `work_items/S18-UXQ-04_20260306_194829/05_acceptance_summary.json` — remediation proof that dispatch now blocks no-op delta review and escaped prompt paths avoid collisions.
 - `work_items/S18-UXQ-04_20260306_194829/10_final_status.json` — corrected work-item verdict and updated acceptance evidence path after remediation.
+- `work_items/S18-UXQ-05_20260306_202359/05_gate_gap_proof.json` — current-run proof that `S18-UXQ-05` was still queued and lacked implementation coverage before code.
+- `work_items/S18-UXQ-05_20260306_202359/09_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, and evidence locks before code.
+- `work_items/S18-UXQ-05_20260306_202359/14_acceptance_summary.json` — acceptance proof that replay/resume auto-selects the latest checkpoint, exposes a hash parity badge, and blocks drifted or unhashed resumes.
+- `work_items/S18-UXQ-05_20260306_202359/29_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.

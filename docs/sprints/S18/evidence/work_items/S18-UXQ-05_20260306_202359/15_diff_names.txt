@@ -1,0 +1,7 @@
+COMMAND: git diff --name-only
+docs/sprints/S18/README.md
+docs/sprints/S18/contracts_v1.json
+tests/s18/contracts.test.ts
+tests/s18/replay_resume.test.ts
+src/s18/build_mode/replay_resume.ts
+EXIT_CODE: 0

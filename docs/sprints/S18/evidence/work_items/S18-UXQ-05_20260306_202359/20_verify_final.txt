@@ -1,0 +1,14 @@
+COMMAND: npm run -s verify:s18
+[verify:s18] validate contracts JSON
+contracts_v1.json:VALID
+[verify:s18] contract policy controls present
+policy_controls:VALID
+[verify:s18] required tests declared in contracts exist
+required_tests_count=14
+[verify:s18] gap-proof artifact exists and is complete
+gap_proof:VALID
+[verify:s18] evidence index present for status claims
+[verify:s18] maintainability budgets (no-god-file checks)
+maintainability violations:
+src/s18/build_mode/replay_resume.ts line 92 nested ternary detected
+EXIT_CODE: 15

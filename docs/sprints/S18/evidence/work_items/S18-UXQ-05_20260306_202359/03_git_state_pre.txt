@@ -1,0 +1,4 @@
+COMMAND: git rev-parse --abbrev-ref HEAD; git status --porcelain=v1 --branch
+main
+## main...origin/main
+EXIT_CODE: 0

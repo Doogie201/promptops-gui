@@ -1,0 +1,5 @@
+COMMAND: rg -n "S18-UXQ-05|buildReplayResume|resumeFromArtifactBundle|hash parity badge" src tests docs/sprints/S18
+/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/contracts_v1.json:292:        "id": "S18-UXQ-05",
+/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/contracts_v1.json:296:        "acceptance_hook": "resume action from artifact bundle shows hash parity badge"
+/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/README.md:70:5. `S18-UXQ-05` One-click replay/resume
+EXIT_CODE: 0

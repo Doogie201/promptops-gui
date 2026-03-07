@@ -1,0 +1,18 @@
+{
+  "work_item": "S18-UXQ-05",
+  "verdict": "PASS",
+  "branch": "codex/s18-uxq-05",
+  "implementation_paths": [
+    "src/s18/build_mode/replay_resume.ts",
+    "tests/s18/replay_resume.test.ts"
+  ],
+  "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-05_20260306_202359/",
+  "key_receipts": [
+    "05_gate_gap_proof.json",
+    "09_gate_summary.json",
+    "14_acceptance_summary.json",
+    "24_targeted_tests_final.txt",
+    "26_verify_final.txt",
+    "27_verify_post_index.txt"
+  ]
+}

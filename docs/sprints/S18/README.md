@@ -68,7 +68,7 @@ The following items are now explicitly queued under S18 governance so they are n
 4. `S18-UXQ-04` Diff-first delta review
    - Implemented in `src/s18/build_mode/delta_review.ts` and enforced at dispatch time via `src/s18/build_mode/orchestrator.ts`, with evidence at `docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/`.
 5. `S18-UXQ-05` One-click replay/resume
-   - Resume from artifact bundle with visible hash parity indicator.
+   - Implemented in `src/s18/build_mode/replay_resume.ts` with evidence at `docs/sprints/S18/evidence/work_items/S18-UXQ-05_20260306_202359/`.
 6. `S18-UXQ-06` Scope guard UX
    - Show in-scope/out-of-scope status before run dispatch.
 7. `S18-UXQ-07` Deterministic timeline pane

@@ -1,0 +1,8 @@
+{
+  "gate": "MAINTAINABILITY_LOCK",
+  "files_checked": 13,
+  "violations": [
+    "src/s18/build_mode/replay_resume.ts line 92 nested ternary detected"
+  ],
+  "pass": false
+}

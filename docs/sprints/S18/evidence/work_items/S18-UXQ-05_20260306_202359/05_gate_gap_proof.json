@@ -1,0 +1,21 @@
+{
+  "gate": "GAP_PROOF",
+  "item_id": "S18-UXQ-05",
+  "queued_status": "queued",
+  "acceptance_hook": "resume action from artifact bundle shows hash parity badge",
+  "implementation_paths_declared": [],
+  "current_branch": "main",
+  "current_repo_hits": [
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/contracts_v1.json:292:        \"id\": \"S18-UXQ-05\",",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/contracts_v1.json:296:        \"acceptance_hook\": \"resume action from artifact bundle shows hash parity badge\"",
+    "/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/README.md:70:5. `S18-UXQ-05` One-click replay/resume"
+  ],
+  "implementation_hits": [],
+  "pass": true,
+  "receipts": [
+    "01_queue_scan.txt",
+    "02_gap_scan.txt",
+    "03_git_state_pre.txt",
+    "04_branch_main_sync.txt"
+  ]
+}

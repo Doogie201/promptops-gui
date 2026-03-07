@@ -1,0 +1,9 @@
+{
+  "implementation_allowed": true,
+  "gates": {
+    "GAP_PROOF": true,
+    "SCOPE_LOCK": true,
+    "MAINTAINABILITY_LOCK": true,
+    "EVIDENCE_LOCK": true
+  }
+}

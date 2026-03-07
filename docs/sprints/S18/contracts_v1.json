@@ -291,9 +291,14 @@
       {
         "id": "S18-UXQ-05",
         "title": "One-click replay/resume",
-        "status": "queued",
+        "status": "implemented",
         "target_milestone": "M3",
-        "acceptance_hook": "resume action from artifact bundle shows hash parity badge"
+        "acceptance_hook": "resume action from artifact bundle shows hash parity badge",
+        "implementation_paths": [
+          "src/s18/build_mode/replay_resume.ts",
+          "tests/s18/replay_resume.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-05_20260306_202359/"
       },
       {
         "id": "S18-UXQ-06",
