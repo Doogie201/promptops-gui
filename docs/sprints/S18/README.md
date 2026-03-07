@@ -76,7 +76,8 @@ The following items are now explicitly queued under S18 governance so they are n
    - Dispatch enforcement lives in `src/s18/build_mode/orchestrator.ts`.
    - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/`.
 7. `S18-UXQ-07` Deterministic timeline pane
-   - Link each transition to receipts and evidence paths.
+   - Implemented in `src/s18/build_mode/timeline_pane.ts`.
+   - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/`.
 
 Execution policy:
 

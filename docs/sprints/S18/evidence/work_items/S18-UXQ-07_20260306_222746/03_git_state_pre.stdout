@@ -1,0 +1,7 @@
+branch=main
+## main...origin/main
+1a0669b [S18] ux : scope guard UX (#35)
+4c93007 [S18] ux : one-click replay resume (#34)
+3b10ab3 [S18] bug : delta review dispatch + path escaping (#33)
+ac88eee [S18] ux: implement diff-first delta review (#32)
+e89fcde [S18] perf : human gate controls in-flow (#31)

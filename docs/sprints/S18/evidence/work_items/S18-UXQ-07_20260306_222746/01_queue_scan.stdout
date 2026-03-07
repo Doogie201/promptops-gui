@@ -1,0 +1,38 @@
+docs/sprints/S18/contracts_v1.json:165:          "milestone_status_visibility",
+docs/sprints/S18/contracts_v1.json:233:      "receipt_index_required_for_status_claims": true,
+docs/sprints/S18/contracts_v1.json:244:        "status": "implemented",
+docs/sprints/S18/contracts_v1.json:256:        "status": "implemented",
+docs/sprints/S18/contracts_v1.json:268:        "status": "implemented",
+docs/sprints/S18/contracts_v1.json:280:        "status": "implemented",
+docs/sprints/S18/contracts_v1.json:294:        "status": "implemented",
+docs/sprints/S18/contracts_v1.json:306:        "status": "implemented",
+docs/sprints/S18/contracts_v1.json:318:        "id": "S18-UXQ-07",
+docs/sprints/S18/contracts_v1.json:319:        "title": "Deterministic timeline pane",
+docs/sprints/S18/contracts_v1.json:320:        "status": "queued",
+docs/sprints/S18/README.md:17:- S17 dashboard cards are diagnostic actions (`preflight`, `gates`, `pr_inventory`, `run_status`): `src/s17/dashboard_app.ts`.
+docs/sprints/S18/README.md:78:7. `S18-UXQ-07` Deterministic timeline pane
+docs/sprints/S18/README.md:123:  - User can see milestone status, sprint status, blockers, next action.
+docs/sprints/S18/README.md:196:   - PASS/FAIL style status claims require an evidence index with command receipts.
+docs/sprints/S18/README.md:442:- Missing milestone metadata in sprint status artifacts.
+tests/s18/replay_resume.test.ts:62:  assert.strictEqual(modelA.parityBadge.status, 'match');
+tests/s18/replay_resume.test.ts:92:  assert.strictEqual(model.parityBadge.status, 'drift');
+tests/s18/replay_resume.test.ts:107:  assert.strictEqual(model.parityBadge.status, 'missing');
+tests/s18/contracts.test.ts:45:test('S18 contracts: UXQ-01 status and evidence path are tracked once implemented', () => {
+tests/s18/contracts.test.ts:52:  assert.strictEqual(item?.status, 'implemented');
+tests/s18/contracts.test.ts:59:test('S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented', () => {
+tests/s18/contracts.test.ts:67:  assert.strictEqual(item?.status, 'implemented');
+tests/s18/contracts.test.ts:74:test('S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented', () => {
+tests/s18/contracts.test.ts:82:  assert.strictEqual(item?.status, 'implemented');
+tests/s18/contracts.test.ts:89:test('S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented', () => {
+tests/s18/contracts.test.ts:97:  assert.strictEqual(item?.status, 'implemented');
+tests/s18/contracts.test.ts:104:test('S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented', () => {
+tests/s18/contracts.test.ts:112:  assert.strictEqual(item?.status, 'implemented');
+tests/s18/contracts.test.ts:119:test('S18 contracts: UXQ-06 status, test registration, and evidence path are tracked once implemented', () => {
+tests/s18/contracts.test.ts:127:  assert.strictEqual(item?.status, 'implemented');
+tests/s18/scope_guard.test.ts:14:  assert.strictEqual(model.status, 'in_scope');
+tests/s18/scope_guard.test.ts:27:  assert.strictEqual(model.status, 'out_of_scope');
+tests/s18/scope_guard.test.ts:40:  assert.strictEqual(model.status, 'out_of_scope');
+tests/s18/scope_guard.test.ts:51:  assert.strictEqual(model.status, 'out_of_scope');
+tests/s18/scope_guard.test.ts:72:  assert.strictEqual(model.status, 'out_of_scope');
+tests/s18/policy_controls.test.ts:32:  assert.strictEqual(quality.receipt_index_required_for_status_claims, true);
+tests/s18/policy_controls.test.ts:54:  assert.match(script, /evidence index present for status claims/);

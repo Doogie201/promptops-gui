@@ -1,0 +1,16 @@
+{
+  "gate": "EVIDENCE_LOCK",
+  "pass": true,
+  "receipt_index_required_for_status_claims": true,
+  "evidence_index_exists": true,
+  "gap_proof_exists": true,
+  "source_receipts": [
+    "00_run_header.txt",
+    "01_queue_scan.txt",
+    "02_gap_scan.txt",
+    "03_git_state_pre.txt",
+    "04_branch_main_sync.txt",
+    "10_targeted_tests_pre.txt",
+    "11_verify_pre.txt"
+  ]
+}

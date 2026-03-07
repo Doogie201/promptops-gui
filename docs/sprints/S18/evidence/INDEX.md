@@ -24,6 +24,8 @@
 - `work_items/S18-UXQ-05_20260306_202359/00_*` to `36_*` — current-run gate, replay/resume acceptance, scope,
   maintainability, closeout, and review-remediation receipts for the one-click replay/resume work item.
 - `work_items/S18-UXQ-06_20260306_210115/00_*` to `28_*` — current-run gate, scope-guard acceptance, scope, maintainability, and closeout receipts for the scope guard UX work item.
+- `work_items/S18-UXQ-07_20260306_222746/00_*` to `28_*` — current-run gate, regression, scope, maintainability,
+  and acceptance receipts for the deterministic timeline pane work item.
 
 ## Status Claims
 
@@ -72,3 +74,14 @@
   was refreshed so the review-fix commit satisfies the S18 commit-delta governance rule.
 - `work_items/S18-UXQ-06_20260306_210115/38_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh.
 - `work_items/S18-UXQ-06_20260306_210115/39_review_fix_verify_gap.txt` — full `verify:s18` proof after the gap-proof refresh.
+- `work_items/S18-UXQ-07_20260306_222746/05_gate_gap_proof.json` — current-run proof that `S18-UXQ-07` was still queued and lacked implementation/test coverage before code.
+- `work_items/S18-UXQ-07_20260306_222746/09_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, evidence, and regression locks before code.
+- `work_items/S18-UXQ-07_20260306_222746/18_acceptance_summary.json` — acceptance proof that the timeline stays deterministic, pins the current transition, and links each transition to receipt/evidence/checkpoint paths.
+- `work_items/S18-UXQ-07_20260306_222746/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
+- `work_items/S18-UXQ-07_20260306_222746/33_review_fix_acceptance.json` — remediation proof that unmatched current states stay unset and checkpoint links survive path overlap.
+- `work_items/S18-UXQ-07_20260306_222746/34_review_fix_targeted_tests.txt` — targeted regression proof for the post-review timeline remediation.
+- `work_items/S18-UXQ-07_20260306_222746/35_review_fix_verify.txt` — full `verify:s18` proof for the post-review timeline remediation.
+- `work_items/S18-UXQ-07_20260306_222746/36_review_fix_gap_proof_update.txt` — proof that `gap_proof/latest.json`
+  and the S18 evidence indexes were refreshed for the review-fix commit.
+- `work_items/S18-UXQ-07_20260306_222746/37_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh for the review-fix commit.
+- `work_items/S18-UXQ-07_20260306_222746/38_review_fix_verify_gap.txt` — full `verify:s18` proof after the gap-proof refresh for the review-fix commit.

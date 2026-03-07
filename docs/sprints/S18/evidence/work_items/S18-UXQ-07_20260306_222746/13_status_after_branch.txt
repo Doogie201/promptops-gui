@@ -1,0 +1,7 @@
+COMMAND=git status --porcelain=v1 --branch
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+## codex/s18-uxq-07
+
+--- STDERR ---

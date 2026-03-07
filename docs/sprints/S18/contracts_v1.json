@@ -317,9 +317,14 @@
       {
         "id": "S18-UXQ-07",
         "title": "Deterministic timeline pane",
-        "status": "queued",
+        "status": "implemented",
         "target_milestone": "M4",
-        "acceptance_hook": "timeline links each transition to receipts/evidence paths"
+        "acceptance_hook": "timeline links each transition to receipts/evidence paths",
+        "implementation_paths": [
+          "src/s18/build_mode/timeline_pane.ts",
+          "tests/s18/timeline_pane.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/"
       }
     ]
   },
@@ -338,6 +343,7 @@
       "tests/s18/orchestration_loop.test.ts",
       "tests/s18/replay_resume.test.ts",
       "tests/s18/scope_guard.test.ts",
+      "tests/s18/timeline_pane.test.ts",
       "tests/s18/ci_policy.test.ts",
       "tests/s18/policy_controls.test.ts"
     ],

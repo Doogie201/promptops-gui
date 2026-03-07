@@ -1,0 +1,10 @@
+COMMAND=git fetch --all --prune --tags >/dev/null && printf 'branch=%s\n' "$(git rev-parse --abbrev-ref HEAD)" && git rev-list --left-right --count HEAD...origin/main
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+branch=main
+0	0
+
+--- STDERR ---
+From https://github.com/Doogie201/promptops-gui
+ - [deleted]         (none)     -> origin/codex/s18-uxq-06

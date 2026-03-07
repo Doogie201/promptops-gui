@@ -1,0 +1,12 @@
+COMMAND=git status --porcelain=v1 --branch
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+## codex/s18-uxq-07
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M tests/s18/contracts.test.ts
+?? src/s18/build_mode/timeline_pane.ts
+?? tests/s18/timeline_pane.test.ts
+
+--- STDERR ---

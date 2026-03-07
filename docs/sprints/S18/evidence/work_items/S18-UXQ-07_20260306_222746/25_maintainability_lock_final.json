@@ -1,0 +1,52 @@
+{
+  "gate": "MAINTAINABILITY_LOCK",
+  "pass": true,
+  "limits": {
+    "max_net_new_lines_per_existing_file": 120,
+    "max_total_loc_per_touched_file": 1200,
+    "max_function_length": 80,
+    "human_readable_required": true,
+    "gap_proof_required_before_net_new": true,
+    "receipt_index_required_for_status_claims": true,
+    "forbidden_shortcuts": [
+      "claim_pass_without_receipts",
+      "code_without_gap_proof",
+      "out_of_scope_diff_without_scr"
+    ]
+  },
+  "checked_paths": [
+    "src/s18/build_mode/timeline_pane.ts",
+    "tests/s18/contracts.test.ts",
+    "tests/s18/timeline_pane.test.ts"
+  ],
+  "files": [
+    {
+      "file": "src/s18/build_mode/timeline_pane.ts",
+      "loc": 229,
+      "existing": false,
+      "net_new_lines": null,
+      "function_lengths": []
+    },
+    {
+      "file": "tests/s18/contracts.test.ts",
+      "loc": 150,
+      "existing": true,
+      "net_new_lines": 15,
+      "function_lengths": []
+    },
+    {
+      "file": "tests/s18/timeline_pane.test.ts",
+      "loc": 154,
+      "existing": false,
+      "net_new_lines": null,
+      "function_lengths": [
+        {
+          "startLine": 5,
+          "endLine": 48,
+          "length": 44
+        }
+      ]
+    }
+  ],
+  "violations": []
+}

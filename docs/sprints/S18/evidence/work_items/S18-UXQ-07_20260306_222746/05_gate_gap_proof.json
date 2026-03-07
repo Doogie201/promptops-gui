@@ -1,0 +1,19 @@
+{
+  "gate": "GAP_PROOF",
+  "pass": true,
+  "work_item": "S18-UXQ-07",
+  "queued_status": "queued",
+  "title": "Deterministic timeline pane",
+  "acceptance_hook": "timeline links each transition to receipts/evidence paths",
+  "existing_implementation_hits": [],
+  "existing_test_hits": [],
+  "open_blockers": [],
+  "source_receipts": [
+    "01_queue_scan.txt",
+    "02_gap_scan.txt",
+    "03_git_state_pre.txt",
+    "10_targeted_tests_pre.txt",
+    "11_verify_pre.txt"
+  ],
+  "implementation_allowed": true
+}

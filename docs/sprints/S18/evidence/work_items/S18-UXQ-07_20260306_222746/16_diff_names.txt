@@ -1,0 +1,9 @@
+COMMAND=git diff --name-only
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+docs/sprints/S18/README.md
+docs/sprints/S18/contracts_v1.json
+tests/s18/contracts.test.ts
+
+--- STDERR ---
