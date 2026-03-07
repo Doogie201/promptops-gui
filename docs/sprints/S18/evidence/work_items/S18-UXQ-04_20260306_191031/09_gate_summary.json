@@ -1,0 +1,16 @@
+{
+  "gap_proof": true,
+  "scope_lock": true,
+  "maintainability_lock": true,
+  "evidence_lock": true,
+  "regression_lock_pre": true,
+  "implementation_allowed": true,
+  "source_receipts": [
+    "03_targeted_tests_pre.txt",
+    "04_verify_pre.txt",
+    "05_gate_gap_proof.json",
+    "06_scope_lock_pre.json",
+    "07_maintainability_lock_pre.json",
+    "08_evidence_lock_pre.json"
+  ]
+}

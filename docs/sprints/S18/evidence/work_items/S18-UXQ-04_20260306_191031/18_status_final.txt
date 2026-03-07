@@ -1,0 +1,36 @@
+command=git status --porcelain=v1 --branch -uall
+## codex/s18-uxq-04
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M docs/sprints/S18/evidence/INDEX.md
+ M docs/sprints/S18/evidence/gap_proof/latest.json
+ M tests/s18/contracts.test.ts
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/00_repo_root_and_branch.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/00_tmp_bundle_path.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/01_queue_scan.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/02_gap_scan.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/03_targeted_tests_pre.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/04_verify_pre.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/05_gate_gap_proof.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/06_scope_lock_pre.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/07_maintainability_lock_pre.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/08_evidence_lock_pre.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/09_gate_summary.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/10_targeted_tests_post.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/11_verify_post.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/12_diff_names.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/13_status_post.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/14_scope_lock_post.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/15_maintainability_lock_post.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/16_acceptance_summary.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/17_copy_durable.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/18_status_final.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/19_verify_final.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/20_scope_lock_final.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/21_maintainability_lock_final.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/22_json_validation.txt
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/23_final_status.json
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/INDEX.md
+?? src/s18/build_mode/delta_review.ts
+?? tests/s18/delta_review.test.ts
+EXIT_CODE=0

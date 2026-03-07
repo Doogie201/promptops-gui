@@ -1,0 +1,16 @@
+{
+  "work_item": "S18-UXQ-04",
+  "title": "Diff-first delta review",
+  "queue_status_before": "queued",
+  "acceptance_hook": "delta view shows deterministic diff vs prior prompt/requirements before dispatch",
+  "implementation_present": false,
+  "implementation_hits": [],
+  "blockers_from_files_and_tests": [],
+  "pass": true,
+  "source_receipts": [
+    "01_queue_scan.txt",
+    "02_gap_scan.txt",
+    "03_targeted_tests_pre.txt",
+    "04_verify_pre.txt"
+  ]
+}

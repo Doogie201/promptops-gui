@@ -1,0 +1,8 @@
+command=git status --porcelain=v1 --branch
+## codex/s18-uxq-04
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M tests/s18/contracts.test.ts
+?? src/s18/build_mode/delta_review.ts
+?? tests/s18/delta_review.test.ts
+EXIT_CODE=0

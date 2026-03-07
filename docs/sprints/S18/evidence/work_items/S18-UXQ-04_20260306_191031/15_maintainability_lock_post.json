@@ -1,0 +1,22 @@
+{
+  "tracked_files": [
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/contracts_v1.json",
+    "tests/s18/contracts.test.ts"
+  ],
+  "current_loc": {
+    "docs/sprints/S18/README.md": 477,
+    "docs/sprints/S18/contracts_v1.json": 347,
+    "tests/s18/contracts.test.ts": 103
+  },
+  "net_new_lines": {
+    "docs/sprints/S18/README.md": 0,
+    "docs/sprints/S18/contracts_v1.json": 6,
+    "tests/s18/contracts.test.ts": 15
+  },
+  "max_total_loc_per_touched_file": 1200,
+  "max_net_new_lines_per_existing_file": 120,
+  "max_function_length": 80,
+  "violations": [],
+  "pass": true
+}

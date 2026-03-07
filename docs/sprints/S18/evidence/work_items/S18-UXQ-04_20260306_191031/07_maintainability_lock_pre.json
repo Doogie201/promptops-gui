@@ -1,0 +1,24 @@
+{
+  "planned_new_files": [
+    "src/s18/build_mode/delta_review.ts",
+    "tests/s18/delta_review.test.ts"
+  ],
+  "planned_existing_files": [
+    "tests/s18/contracts.test.ts",
+    "docs/sprints/S18/contracts_v1.json",
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/evidence/INDEX.md",
+    "docs/sprints/S18/evidence/gap_proof/latest.json"
+  ],
+  "baseline_line_counts": {
+    "tests/s18/contracts.test.ts": 87,
+    "docs/sprints/S18/contracts_v1.json": 340,
+    "docs/sprints/S18/README.md": 476,
+    "docs/sprints/S18/evidence/INDEX.md": 37,
+    "docs/sprints/S18/evidence/gap_proof/latest.json": 45
+  },
+  "max_total_loc_per_touched_file": 1200,
+  "max_net_new_lines_per_existing_file": 120,
+  "max_function_length": 80,
+  "pass": true
+}

@@ -1,0 +1,3 @@
+tmp_bundle=/tmp/promptops/S18/work_items/S18-UXQ-04_20260306_191031
+durable_bundle=/Volumes/X9_DEV/Dev/Projects/promptops-gui/docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031
+final_sync=done

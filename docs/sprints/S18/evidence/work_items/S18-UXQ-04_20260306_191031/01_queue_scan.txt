@@ -1,0 +1,12 @@
+command=jq workflow queue + readme excerpt for S18-UXQ-04
+{
+  "id": "S18-UXQ-04",
+  "title": "Diff-first delta review",
+  "status": "queued",
+  "target_milestone": "M4",
+  "acceptance_hook": "delta view shows deterministic diff vs prior prompt/requirements before dispatch"
+}
+
+---README-HIT---
+68:4. `S18-UXQ-04` Diff-first delta review
+EXIT_CODE=0
