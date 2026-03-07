@@ -1,9 +1,3 @@
-COMMAND: node --experimental-transform-types --input-type=module build replay/resume acceptance summary
-(node:33376) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:33376) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/src/s18/build_mode/replay_resume.ts is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
 {
   "acceptance_hook": "resume action from artifact bundle shows hash parity badge",
   "latest_bundle": {
@@ -13,6 +7,17 @@ To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/
     "rendered": "Resume latest checkpoint (cp-002) | delta_required | [HASH MATCH]",
     "sha256_match": true,
     "resumed_state": "delta_required"
+  },
+  "sequence_bundle": {
+    "candidateIds": [
+      "cp-9",
+      "cp-10"
+    ],
+    "checkpointId": "cp-10",
+    "selectionMode": "latest",
+    "checkpointState": "done",
+    "resumeActionEnabled": true,
+    "rendered": "Resume latest checkpoint (cp-10) | done | [HASH MATCH]"
   },
   "drift_bundle": {
     "checkpointId": "cp-003",
@@ -25,4 +30,3 @@ To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/
     "resumeActionEnabled": false
   }
 }
-EXIT_CODE: 0

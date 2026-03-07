@@ -20,7 +20,7 @@
 - `work_items/S18-UXQ-03_20260306_172212/00_*` to `29_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the in-flow human gate controls work item.
 - `work_items/S18-UXQ-04_20260306_191031/00_*` to `23_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the diff-first delta review work item.
 - `work_items/S18-UXQ-04_20260306_194829/00_*` to `10_*` — remediation receipts closing PR #32 review findings for dispatch enforcement and collision-safe prompt diff paths.
-- `work_items/S18-UXQ-05_20260306_202359/00_*` to `29_*` — current-run gate, replay/resume acceptance, scope, maintainability, and closeout receipts for the one-click replay/resume work item.
+- `work_items/S18-UXQ-05_20260306_202359/00_*` to `36_*` — current-run gate, replay/resume acceptance, scope, maintainability, closeout, and review-remediation receipts for the one-click replay/resume work item.
 
 ## Status Claims
 
@@ -47,5 +47,7 @@
 - `work_items/S18-UXQ-04_20260306_194829/10_final_status.json` — corrected work-item verdict and updated acceptance evidence path after remediation.
 - `work_items/S18-UXQ-05_20260306_202359/05_gate_gap_proof.json` — current-run proof that `S18-UXQ-05` was still queued and lacked implementation coverage before code.
 - `work_items/S18-UXQ-05_20260306_202359/09_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, and evidence locks before code.
-- `work_items/S18-UXQ-05_20260306_202359/14_acceptance_summary.json` — acceptance proof that replay/resume auto-selects the latest checkpoint, exposes a hash parity badge, and blocks drifted or unhashed resumes.
+- `work_items/S18-UXQ-05_20260306_202359/14_acceptance_summary.json` — acceptance proof that replay/resume auto-selects the latest checkpoint, prefers the highest checkpoint sequence, exposes a hash parity badge, and blocks drifted or unhashed resumes.
 - `work_items/S18-UXQ-05_20260306_202359/29_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
+- `work_items/S18-UXQ-05_20260306_202359/35_review_fix_targeted_tests.txt` — targeted regression proof for the post-review checkpoint ordering remediation.
+- `work_items/S18-UXQ-05_20260306_202359/36_review_fix_verify.txt` — full `verify:s18` proof for the post-review checkpoint ordering remediation.
