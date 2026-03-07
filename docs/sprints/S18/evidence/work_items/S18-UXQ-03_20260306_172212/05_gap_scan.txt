@@ -1,0 +1,13 @@
+COMMAND: rg -n 'S18-UXQ-03|human gate|approve requirements|approve delta|auto-advance' docs/sprints/S18/contracts_v1.json docs/sprints/S18/README.md tests/s18 src/s18 || true
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+docs/sprints/S18/contracts_v1.json:266:        "id": "S18-UXQ-03",
+docs/sprints/S18/contracts_v1.json:270:        "acceptance_hook": "requirements approval, delta approval, and auto-advance approval are explicit and recorded"
+docs/sprints/S18/README.md:66:3. `S18-UXQ-03` Human gates in-flow
+docs/sprints/S18/README.md:67:   - Require explicit approvals for requirements, delta prompt, and auto-advance decisions.
+
+EOF
+STDERR<<EOF
+
+EOF

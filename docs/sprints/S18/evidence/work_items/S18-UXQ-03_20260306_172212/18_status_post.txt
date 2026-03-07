@@ -1,0 +1,17 @@
+COMMAND: git status --porcelain=v1 --branch
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+## codex/s18-uxq-03
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M docs/sprints/S18/evidence/INDEX.md
+ M docs/sprints/S18/evidence/gap_proof/latest.json
+ M tests/s18/contracts.test.ts
+?? src/s18/build_mode/human_gate_controls.ts
+?? tests/s18/human_gate_controls.test.ts
+
+EOF
+STDERR<<EOF
+
+EOF

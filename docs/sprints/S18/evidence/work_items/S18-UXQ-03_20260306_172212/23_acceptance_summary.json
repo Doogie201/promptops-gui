@@ -1,0 +1,182 @@
+{
+  "work_item": "S18-UXQ-03",
+  "acceptance": {
+    "requirements_control": {
+      "currentState": "requirements_ready",
+      "currentGateId": "requirements_approval",
+      "currentGateRequiredSequence": 1,
+      "currentGateSatisfied": true,
+      "gates": [
+        {
+          "id": "requirements_approval",
+          "label": "Requirements approval",
+          "status": "approved",
+          "requiredNow": true,
+          "requiredSequence": 1,
+          "latestRecord": {
+            "gateId": "requirements_approval",
+            "decision": "approved",
+            "actor": "operator",
+            "rationale": "requirements approved for prompt compilation",
+            "evidenceRefs": [
+              "docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/15_targeted_tests_post.txt"
+            ],
+            "sequence": 1,
+            "sha256": "b054f42a21894f9a1e37bd70023af63f328c96c532d6edb9bb30ab27a77cce00"
+          }
+        },
+        {
+          "id": "delta_approval",
+          "label": "Delta approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        },
+        {
+          "id": "auto_advance_approval",
+          "label": "Auto-advance approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        }
+      ],
+      "rendered": "[Requirements approval: approved] | Delta approval: pending | Auto-advance approval: pending"
+    },
+    "delta_control_pending_stale": {
+      "currentState": "delta_required",
+      "currentGateId": "delta_approval",
+      "currentGateRequiredSequence": 2,
+      "currentGateSatisfied": false,
+      "gates": [
+        {
+          "id": "requirements_approval",
+          "label": "Requirements approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        },
+        {
+          "id": "delta_approval",
+          "label": "Delta approval",
+          "status": "pending",
+          "requiredNow": true,
+          "requiredSequence": 2,
+          "latestRecord": {
+            "gateId": "delta_approval",
+            "decision": "approved",
+            "actor": "operator",
+            "rationale": "delta accepted for cycle one",
+            "evidenceRefs": [],
+            "sequence": 1,
+            "sha256": "ffefa3867021efd650c37adc812399b751d64de366d757e8c8273077d676725a"
+          }
+        },
+        {
+          "id": "auto_advance_approval",
+          "label": "Auto-advance approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        }
+      ],
+      "rendered": "Requirements approval: pending | [Delta approval: pending] | Auto-advance approval: pending"
+    },
+    "delta_control_approved_current": {
+      "currentState": "delta_required",
+      "currentGateId": "delta_approval",
+      "currentGateRequiredSequence": 2,
+      "currentGateSatisfied": true,
+      "gates": [
+        {
+          "id": "requirements_approval",
+          "label": "Requirements approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        },
+        {
+          "id": "delta_approval",
+          "label": "Delta approval",
+          "status": "approved",
+          "requiredNow": true,
+          "requiredSequence": 2,
+          "latestRecord": {
+            "gateId": "delta_approval",
+            "decision": "approved",
+            "actor": "operator",
+            "rationale": "delta accepted for cycle two",
+            "evidenceRefs": [
+              "docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/15_targeted_tests_post.txt"
+            ],
+            "sequence": 2,
+            "sha256": "5786cace80f248b65cf963f874f5a02b0c8025cfd1706e5b56088cfe16760752"
+          }
+        },
+        {
+          "id": "auto_advance_approval",
+          "label": "Auto-advance approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        }
+      ],
+      "rendered": "Requirements approval: pending | [Delta approval: approved] | Auto-advance approval: pending"
+    },
+    "auto_advance_control": {
+      "currentState": "done",
+      "currentGateId": "auto_advance_approval",
+      "currentGateRequiredSequence": 1,
+      "currentGateSatisfied": true,
+      "gates": [
+        {
+          "id": "requirements_approval",
+          "label": "Requirements approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        },
+        {
+          "id": "delta_approval",
+          "label": "Delta approval",
+          "status": "pending",
+          "requiredNow": false,
+          "requiredSequence": null,
+          "latestRecord": null
+        },
+        {
+          "id": "auto_advance_approval",
+          "label": "Auto-advance approval",
+          "status": "approved",
+          "requiredNow": true,
+          "requiredSequence": 1,
+          "latestRecord": {
+            "gateId": "auto_advance_approval",
+            "decision": "approved",
+            "actor": "operator",
+            "rationale": "advance to next sprint",
+            "evidenceRefs": [],
+            "sequence": 1,
+            "sha256": "82fc826784ce2c6694b1b298b8f1fbf943486aa0d4375f70feedb77c206f78ee"
+          }
+        }
+      ],
+      "rendered": "Requirements approval: pending | Delta approval: pending | [Auto-advance approval: approved]"
+    },
+    "auto_advance_record": {
+      "gateId": "auto_advance_approval",
+      "decision": "approved",
+      "actor": "operator",
+      "rationale": "advance to next sprint",
+      "evidenceRefs": [],
+      "sequence": 1,
+      "sha256": "82fc826784ce2c6694b1b298b8f1fbf943486aa0d4375f70feedb77c206f78ee"
+    }
+  }
+}

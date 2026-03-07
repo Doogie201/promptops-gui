@@ -1,0 +1,8 @@
+COMMAND: mkdir -p docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212 && cp -R /tmp/promptops/S18/work_items/S18-UXQ-03_20260306_172212/. docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212
+EOF
+STDERR<<EOF
+EOF

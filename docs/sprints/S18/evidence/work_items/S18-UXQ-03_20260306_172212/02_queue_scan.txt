@@ -1,0 +1,51 @@
+COMMAND: sed -n '260,290p' docs/sprints/S18/contracts_v1.json && sed -n '62,72p' docs/sprints/S18/README.md
+CWD: /Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE: 0
+STDOUT<<EOF
+          "src/s18/build_mode/loop_stepper.ts",
+          "tests/s18/loop_stepper.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409/"
+      },
+      {
+        "id": "S18-UXQ-03",
+        "title": "Human gate controls in-flow",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "requirements approval, delta approval, and auto-advance approval are explicit and recorded"
+      },
+      {
+        "id": "S18-UXQ-04",
+        "title": "Diff-first delta review",
+        "status": "queued",
+        "target_milestone": "M4",
+        "acceptance_hook": "delta view shows deterministic diff vs prior prompt/requirements before dispatch"
+      },
+      {
+        "id": "S18-UXQ-05",
+        "title": "One-click replay/resume",
+        "status": "queued",
+        "target_milestone": "M3",
+        "acceptance_hook": "resume action from artifact bundle shows hash parity badge"
+      },
+      {
+        "id": "S18-UXQ-06",
+        "title": "Scope guard UX",
+        "status": "queued",
+        "target_milestone": "M4",
+2. `S18-UXQ-02` Visual loop stepper
+   - Render `planning -> requirements -> prompt -> run -> evaluate -> delta/done` with a pinned current state.
+   - Status: implemented.
+   - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-02_20260306_162409/`.
+3. `S18-UXQ-03` Human gates in-flow
+   - Require explicit approvals for requirements, delta prompt, and auto-advance decisions.
+4. `S18-UXQ-04` Diff-first delta review
+   - Show deterministic delta between prior and current prompt/requirements before dispatch.
+5. `S18-UXQ-05` One-click replay/resume
+   - Resume from artifact bundle with visible hash parity indicator.
+6. `S18-UXQ-06` Scope guard UX
+
+EOF
+STDERR<<EOF
+
+EOF
