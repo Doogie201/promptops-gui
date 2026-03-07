@@ -132,3 +132,18 @@ test('S18 contracts: UXQ-06 status, test registration, and evidence path are tra
   assert.ok((item?.implementation_paths as string[]).includes('tests/s18/orchestration_loop.test.ts'));
   assert.ok(requiredTests.includes('tests/s18/scope_guard.test.ts'));
 });
+
+test('S18 contracts: UXQ-07 status, test registration, and evidence path are tracked once implemented', () => {
+  const contracts = readContracts();
+  const queue = (contracts.governance as { workflow_experience_queue?: Array<Record<string, unknown>> })
+    ?.workflow_experience_queue;
+  const item = queue?.find((entry) => entry.id === 'S18-UXQ-07');
+  const requiredTests = (contracts.ci_enforcement as { required_tests?: string[] })?.required_tests ?? [];
+
+  assert.ok(item);
+  assert.strictEqual(item?.status, 'implemented');
+  assert.match(String(item?.acceptance_evidence_path ?? ''), /^docs\/sprints\/S18\/evidence\/work_items\/S18-UXQ-07_/);
+  assert.ok((item?.implementation_paths as string[]).includes('src/s18/build_mode/timeline_pane.ts'));
+  assert.ok((item?.implementation_paths as string[]).includes('tests/s18/timeline_pane.test.ts'));
+  assert.ok(requiredTests.includes('tests/s18/timeline_pane.test.ts'));
+});

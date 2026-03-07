@@ -1,0 +1,20 @@
+{
+  "work_item": "S18-UXQ-07",
+  "pass": true,
+  "deterministic_hash_match": true,
+  "deterministic_render_match": true,
+  "current_transition_id": "tr-003",
+  "current_sequence": 3,
+  "last_checkpoint_id": "cp-002",
+  "total_transitions": 3,
+  "total_links": 8,
+  "latest_transition_failed": true,
+  "latest_transition_link_paths": [
+    "docs/sprints/S18/evidence/gates/verify_fail.txt",
+    "docs/sprints/S18/evidence/at/AT-S18-03.json"
+  ],
+  "source_receipts": [
+    "14_targeted_tests_post.txt",
+    "15_verify_post.txt"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "gate": "MAINTAINABILITY_LOCK",
+  "pass": true,
+  "checked_paths": [],
+  "limits": {
+    "max_net_new_lines_per_existing_file": 120,
+    "max_total_loc_per_touched_file": 1200,
+    "max_function_length": 80,
+    "human_readable_required": true
+  },
+  "violations": []
+}

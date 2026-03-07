@@ -1,0 +1,6 @@
+COMMAND=rg -n 'timeline_pane|Deterministic timeline pane|timeline links each transition|S18-UXQ-07' src/s18 tests/s18 docs/sprints/S18/evidence || true
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+
+--- STDERR ---

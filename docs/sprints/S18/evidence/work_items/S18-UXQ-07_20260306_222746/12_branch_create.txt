@@ -1,0 +1,7 @@
+COMMAND=if git show-ref --verify --quiet refs/heads/codex/s18-uxq-07; then git checkout codex/s18-uxq-07; else git checkout -b codex/s18-uxq-07; fi
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+
+--- STDERR ---
+Switched to a new branch 'codex/s18-uxq-07'

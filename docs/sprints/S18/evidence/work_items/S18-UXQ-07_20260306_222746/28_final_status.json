@@ -1,0 +1,32 @@
+{
+  "work_item": "S18-UXQ-07",
+  "verdict": "PASS",
+  "branch": "codex/s18-uxq-07",
+  "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/",
+  "gates": {
+    "pre_code": {
+      "GAP_PROOF": true,
+      "SCOPE_LOCK": true,
+      "MAINTAINABILITY_LOCK": true,
+      "EVIDENCE_LOCK": true,
+      "REGRESSION_LOCK": true
+    },
+    "scope_final": true,
+    "maintainability_final": true,
+    "acceptance": true,
+    "targeted_tests_final": "22_targeted_tests_final.txt",
+    "verify_final": "23_verify_final.txt",
+    "json_validation": "27_json_validation.txt"
+  },
+  "source_receipts": [
+    "05_gate_gap_proof.json",
+    "09_gate_summary.json",
+    "18_acceptance_summary.json",
+    "22_targeted_tests_final.txt",
+    "23_verify_final.txt",
+    "24_scope_lock_final.json",
+    "25_maintainability_lock_final.json",
+    "26_status_final.txt",
+    "27_json_validation.txt"
+  ]
+}

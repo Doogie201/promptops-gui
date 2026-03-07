@@ -1,0 +1,10 @@
+COMMAND=printf 'repo=%s\nsprint=%s\nwork_item=%s\nbranch=%s\n' '/Volumes/X9_DEV/Dev/Projects/promptops-gui' 'S18' 'S18-UXQ-07' "$(git rev-parse --abbrev-ref HEAD)"
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+repo=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+sprint=S18
+work_item=S18-UXQ-07
+branch=main
+
+--- STDERR ---

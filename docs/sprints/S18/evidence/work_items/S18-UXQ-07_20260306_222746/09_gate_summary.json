@@ -1,0 +1,20 @@
+{
+  "work_item": "S18-UXQ-07",
+  "pass": true,
+  "implementation_allowed": true,
+  "gates": {
+    "GAP_PROOF": true,
+    "SCOPE_LOCK": true,
+    "MAINTAINABILITY_LOCK": true,
+    "EVIDENCE_LOCK": true,
+    "REGRESSION_LOCK": true
+  },
+  "source_receipts": [
+    "05_gate_gap_proof.json",
+    "06_scope_lock_pre.json",
+    "07_maintainability_lock_pre.json",
+    "08_evidence_lock_pre.json",
+    "10_targeted_tests_pre.txt",
+    "11_verify_pre.txt"
+  ]
+}
