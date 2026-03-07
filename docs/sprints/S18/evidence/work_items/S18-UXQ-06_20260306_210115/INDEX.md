@@ -12,3 +12,6 @@
 - Review-fix pre-commit: `32_review_fix_precommit.txt`
 - Review-fix targeted tests: `33_review_fix_targeted_tests.txt`
 - Review-fix verify: `34_review_fix_verify.txt`
+- Review-fix gap-proof update: `37_review_fix_gap_proof_update.txt`
+- Review-fix pre-commit after gap-proof: `38_review_fix_precommit_gap.txt`
+- Review-fix verify after gap-proof: `39_review_fix_verify_gap.txt`

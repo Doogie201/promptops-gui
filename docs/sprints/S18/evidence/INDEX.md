@@ -68,3 +68,7 @@
 - `work_items/S18-UXQ-06_20260306_210115/33_review_fix_targeted_tests.txt` — targeted regression proof for the
   directory-boundary and path-normalization remediation.
 - `work_items/S18-UXQ-06_20260306_210115/34_review_fix_verify.txt` — full `verify:s18` proof for the PR review remediation.
+- `work_items/S18-UXQ-06_20260306_210115/37_review_fix_gap_proof_update.txt` — proof that `gap_proof/latest.json`
+  was refreshed so the review-fix commit satisfies the S18 commit-delta governance rule.
+- `work_items/S18-UXQ-06_20260306_210115/38_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh.
+- `work_items/S18-UXQ-06_20260306_210115/39_review_fix_verify_gap.txt` — full `verify:s18` proof after the gap-proof refresh.
