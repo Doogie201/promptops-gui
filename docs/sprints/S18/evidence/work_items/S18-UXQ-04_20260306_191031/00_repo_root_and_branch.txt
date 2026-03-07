@@ -1,0 +1,19 @@
+command=pwd
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+
+command=echo PROMPTOPS_REPO
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+
+command=git rev-parse --show-toplevel
+/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+
+command=git status --porcelain=v1 --branch
+## codex/s18-uxq-04
+EXIT_CODE=0
+
+command=git branch --show-current
+codex/s18-uxq-04
+EXIT_CODE=0

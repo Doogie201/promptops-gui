@@ -1,0 +1,27 @@
+{
+  "work_item": "S18-UXQ-04",
+  "acceptance_hook": "delta view shows deterministic diff vs prior prompt/requirements before dispatch",
+  "changed_delta": {
+    "mode": "delta",
+    "reviewRequired": true,
+    "hasMaterialChanges": true,
+    "readyForDispatch": true,
+    "requirementsSummary": "2 change(s) vs prior",
+    "promptSummary": "2 change(s) vs prior",
+    "rendered": "Requirements delta: 2 change(s) vs prior\n  ~ REQ-001: {\"text\":\"Keep current requirement set\",\"acceptance\":[\"REQ-001 is complete with evidence.\"]} -> {\"text\":\"Update requirement set\",\"acceptance\":[\"REQ-001 is complete with evidence.\"]}\n  + REQ-003: {\"text\":\"Add delta review gate\",\"acceptance\":[\"REQ-003 is complete with evidence.\"]}\n---\nPrompt delta: 2 change(s) vs prior\n  ~ requirements_hash: \"3b5e90095b092a2c0156152393b54695c0725d2dd63d16d9abb19cb8e9dd7d1c\" -> \"12fbdbc071c24d83b1647d2f64fce2d0a87c1131d3eb41738c27e7325e063983\"\n  ~ requirements_json: \"sha256:f9b57667d193aa39 len:430\" -> \"sha256:ff71bbdbf83e3470 len:536\"",
+    "sha256": "757730413639d0d8e106f22e69b3b18ebf7b2038ae000eb370f382fdc5dc2797"
+  },
+  "noop_delta": {
+    "mode": "delta",
+    "reviewRequired": true,
+    "hasMaterialChanges": false,
+    "readyForDispatch": false,
+    "requirementsSummary": "No material changes vs prior",
+    "promptSummary": "No material changes vs prior",
+    "sha256": "d30119e0ab124c1288eed44a6390d1a4acfe9a62768886aae5e570d5418866aa"
+  },
+  "deterministic_parity": {
+    "rendered_match": true,
+    "hash_match": true
+  }
+}

@@ -1,0 +1,2 @@
+command=rg src inventory for S18-UXQ-04 / diff-first delta review
+EXIT_CODE=0

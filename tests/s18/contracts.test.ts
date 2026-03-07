@@ -85,3 +85,18 @@ test('S18 contracts: UXQ-03 status, test registration, and evidence path are tra
   assert.ok((item?.implementation_paths as string[]).includes('tests/s18/human_gate_controls.test.ts'));
   assert.ok(requiredTests.includes('tests/s18/human_gate_controls.test.ts'));
 });
+
+test('S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented', () => {
+  const contracts = readContracts();
+  const queue = (contracts.governance as { workflow_experience_queue?: Array<Record<string, unknown>> })
+    ?.workflow_experience_queue;
+  const item = queue?.find((entry) => entry.id === 'S18-UXQ-04');
+  const requiredTests = (contracts.ci_enforcement as { required_tests?: string[] })?.required_tests ?? [];
+
+  assert.ok(item);
+  assert.strictEqual(item?.status, 'implemented');
+  assert.match(String(item?.acceptance_evidence_path ?? ''), /^docs\/sprints\/S18\/evidence\/work_items\/S18-UXQ-04_/);
+  assert.ok((item?.implementation_paths as string[]).includes('src/s18/build_mode/delta_review.ts'));
+  assert.ok((item?.implementation_paths as string[]).includes('tests/s18/delta_review.test.ts'));
+  assert.ok(requiredTests.includes('tests/s18/delta_review.test.ts'));
+});

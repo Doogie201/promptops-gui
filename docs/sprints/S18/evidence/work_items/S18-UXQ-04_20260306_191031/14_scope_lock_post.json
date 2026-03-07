@@ -1,0 +1,14 @@
+{
+  "tracked": [
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/contracts_v1.json",
+    "tests/s18/contracts.test.ts"
+  ],
+  "staged": [],
+  "untracked": [
+    "src/s18/build_mode/delta_review.ts",
+    "tests/s18/delta_review.test.ts"
+  ],
+  "violations": [],
+  "pass": true
+}
