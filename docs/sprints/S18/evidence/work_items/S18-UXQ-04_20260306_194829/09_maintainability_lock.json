@@ -1,0 +1,34 @@
+{
+  "touched_files": [
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/contracts_v1.json",
+    "docs/sprints/S18/evidence/INDEX.md",
+    "docs/sprints/S18/evidence/gap_proof/latest.json",
+    "src/s18/build_mode/delta_review.ts",
+    "src/s18/build_mode/orchestrator.ts",
+    "tests/s18/delta_review.test.ts",
+    "tests/s18/orchestration_loop.test.ts"
+  ],
+  "current_loc": {
+    "docs/sprints/S18/README.md": 477,
+    "docs/sprints/S18/contracts_v1.json": 349,
+    "docs/sprints/S18/evidence/INDEX.md": 47,
+    "docs/sprints/S18/evidence/gap_proof/latest.json": 52,
+    "src/s18/build_mode/delta_review.ts": 297,
+    "src/s18/build_mode/orchestrator.ts": 40,
+    "tests/s18/delta_review.test.ts": 173,
+    "tests/s18/orchestration_loop.test.ts": 97
+  },
+  "net_new_lines": {
+    "docs/sprints/S18/README.md": 0,
+    "docs/sprints/S18/contracts_v1.json": 2,
+    "docs/sprints/S18/evidence/INDEX.md": 4,
+    "docs/sprints/S18/evidence/gap_proof/latest.json": 3,
+    "src/s18/build_mode/delta_review.ts": 10,
+    "src/s18/build_mode/orchestrator.ts": 14,
+    "tests/s18/delta_review.test.ts": 37,
+    "tests/s18/orchestration_loop.test.ts": 64
+  },
+  "violations": [],
+  "pass": true
+}

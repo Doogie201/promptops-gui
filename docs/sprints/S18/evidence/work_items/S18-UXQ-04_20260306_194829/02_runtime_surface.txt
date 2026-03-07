@@ -1,0 +1,29 @@
+>>> rg -n "buildDiffFirstDeltaReview|readyForDispatch|dispatchPromptWithDeltaReview|jsonPathSegment|flattenValue" src/s18 tests/s18
+src/s18/build_mode/orchestrator.ts:28:export function dispatchPromptWithDeltaReview(
+src/s18/build_mode/delta_review.ts:32:  readyForDispatch: boolean;
+src/s18/build_mode/delta_review.ts:46:function jsonPathSegment(key: string): string {
+src/s18/build_mode/delta_review.ts:153:function flattenValue(value: unknown, path: string, target: FlatValueMap): void {
+src/s18/build_mode/delta_review.ts:160:      flattenValue(entry, `${path}[${index}]`, target);
+src/s18/build_mode/delta_review.ts:172:      const nextPath = `${path}${jsonPathSegment(key)}`;
+src/s18/build_mode/delta_review.ts:173:      flattenValue((value as Record<string, unknown>)[key], nextPath, target);
+src/s18/build_mode/delta_review.ts:186:  flattenValue(JSON.parse(prompt.promptJson) as Record<string, unknown>, '$', flattened);
+src/s18/build_mode/delta_review.ts:251:export function buildDiffFirstDeltaReview(input: {
+src/s18/build_mode/delta_review.ts:281:    readyForDispatch: mode === 'initial' || hasMaterialChanges,
+src/s18/build_mode/delta_review.ts:293:  if (review.reviewRequired && !review.readyForDispatch) {
+tests/s18/delta_review.test.ts:6:import { buildDiffFirstDeltaReview } from '../../src/s18/build_mode/delta_review.ts';
+tests/s18/delta_review.test.ts:54:  const first = buildDiffFirstDeltaReview({
+tests/s18/delta_review.test.ts:60:  const second = buildDiffFirstDeltaReview({
+tests/s18/delta_review.test.ts:81:  const review = buildDiffFirstDeltaReview({
+tests/s18/delta_review.test.ts:91:  assert.strictEqual(review.readyForDispatch, true);
+tests/s18/delta_review.test.ts:104:  const review = buildDiffFirstDeltaReview({
+tests/s18/delta_review.test.ts:111:  assert.strictEqual(review.readyForDispatch, true);
+tests/s18/delta_review.test.ts:122:  const review = buildDiffFirstDeltaReview({
+tests/s18/delta_review.test.ts:132:  assert.strictEqual(review.readyForDispatch, false);
+tests/s18/delta_review.test.ts:160:  const review = buildDiffFirstDeltaReview({
+tests/s18/orchestration_loop.test.ts:6:import { buildDiffFirstDeltaReview } from '../../src/s18/build_mode/delta_review.ts';
+tests/s18/orchestration_loop.test.ts:7:import { applyEvaluationVerdict, dispatchPromptWithDeltaReview } from '../../src/s18/build_mode/orchestrator.ts';
+tests/s18/orchestration_loop.test.ts:47:  dispatchPromptWithDeltaReview(
+tests/s18/orchestration_loop.test.ts:49:    buildDiffFirstDeltaReview({
+tests/s18/orchestration_loop.test.ts:84:  const noopReview = buildDiffFirstDeltaReview({
+tests/s18/orchestration_loop.test.ts:92:    () => dispatchPromptWithDeltaReview(machine, noopReview),
+EXIT_CODE=0

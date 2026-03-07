@@ -92,7 +92,7 @@ test('S18-UXQ-04 delta review: shows deterministic diff for changed requirements
   assert.match(review.sections[0].rendered, /Requirements delta: 2 change\(s\) vs prior/);
   assert.match(review.sections[0].rendered, /~ REQ-001:/);
   assert.match(review.sections[0].rendered, /\+ REQ-003:/);
-  assert.match(review.sections[1].rendered, /~ requirements_hash:/);
+  assert.match(review.sections[1].rendered, /~ \$\["requirements_hash"\]:/);
 });
 
 test('S18-UXQ-04 delta review: initial prompt path records absence of prior artifacts', () => {
@@ -132,4 +132,41 @@ test('S18-UXQ-04 delta review: no-op delta remains reviewable and blocks redunda
   assert.strictEqual(review.readyForDispatch, false);
   assert.match(review.sections[0].rendered, /No material changes vs prior/);
   assert.match(review.sections[1].rendered, /No material changes vs prior/);
+});
+
+test('S18-UXQ-04 delta review: escaped prompt paths distinguish dotted keys from nested paths', () => {
+  const template = JSON.stringify({
+    'a.b': 'flat-value',
+    a: { b: '{{requirements_hash}}' },
+    'items[0]': 'literal-slot',
+    items: ['{{requirements_hash}}'],
+  });
+  const previous = buildArtifacts({
+    repoRoot: '/tmp/promptops/repo-k',
+    sprintTemplateText: '- Keep current requirement set',
+    ticketTemplateBody: template,
+  });
+  const current = buildArtifacts({
+    repoRoot: '/tmp/promptops/repo-k',
+    sprintTemplateText: '- Update requirement set',
+    ticketTemplateBody: JSON.stringify({
+      'a.b': '{{requirements_hash}}',
+      a: { b: 'nested-value' },
+      'items[0]': '{{requirements_hash}}',
+      items: ['array-value'],
+    }),
+  });
+
+  const review = buildDiffFirstDeltaReview({
+    previousRequirements: previous.requirements,
+    currentRequirements: current.requirements,
+    previousPrompt: previous.prompt,
+    currentPrompt: current.prompt,
+  });
+  const paths = review.sections[1].entries.map((entry) => entry.path);
+
+  assert.ok(paths.includes('$["a.b"]'));
+  assert.ok(paths.includes('$["a"]["b"]'));
+  assert.ok(paths.includes('$["items[0]"]'));
+  assert.ok(paths.includes('$["items"][0]'));
 });

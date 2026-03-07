@@ -19,6 +19,7 @@
 - `work_items/S18-UXQ-02_20260306_162409/00_*` to `28_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the visual loop stepper work item.
 - `work_items/S18-UXQ-03_20260306_172212/00_*` to `29_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the in-flow human gate controls work item.
 - `work_items/S18-UXQ-04_20260306_191031/00_*` to `23_*` — current-run gate, regression, scope, maintainability, and acceptance receipts for the diff-first delta review work item.
+- `work_items/S18-UXQ-04_20260306_194829/00_*` to `10_*` — remediation receipts closing PR #32 review findings for dispatch enforcement and collision-safe prompt diff paths.
 
 ## Status Claims
 
@@ -40,3 +41,6 @@
 - `work_items/S18-UXQ-04_20260306_191031/09_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, and evidence locks before code.
 - `work_items/S18-UXQ-04_20260306_191031/16_acceptance_summary.json` — acceptance proof that delta review output is deterministic, diff-first, and blocks no-op redispatch.
 - `work_items/S18-UXQ-04_20260306_191031/23_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
+- `work_items/S18-UXQ-04_20260306_194829/01_pr32_threads_before.json` — proof of the two unresolved PR #32 findings before remediation.
+- `work_items/S18-UXQ-04_20260306_194829/05_acceptance_summary.json` — remediation proof that dispatch now blocks no-op delta review and escaped prompt paths avoid collisions.
+- `work_items/S18-UXQ-04_20260306_194829/10_final_status.json` — corrected work-item verdict and updated acceptance evidence path after remediation.

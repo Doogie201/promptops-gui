@@ -1,0 +1,11 @@
+>>> git status --porcelain=v1 --branch -uall
+## codex/s18-uxq-04-remediation
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M docs/sprints/S18/evidence/INDEX.md
+ M docs/sprints/S18/evidence/gap_proof/latest.json
+ M src/s18/build_mode/delta_review.ts
+ M src/s18/build_mode/orchestrator.ts
+ M tests/s18/delta_review.test.ts
+ M tests/s18/orchestration_loop.test.ts
+EXIT_CODE=0

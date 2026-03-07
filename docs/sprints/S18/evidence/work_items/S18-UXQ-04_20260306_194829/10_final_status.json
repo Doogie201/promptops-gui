@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "work_item": "S18-UXQ-04",
+  "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/",
+  "targeted_tests_exit_code": 0,
+  "verify_exit_code": 0,
+  "acceptance_summary_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/05_acceptance_summary.json",
+  "scope_lock_pass": true,
+  "maintainability_lock_pass": true
+}
