@@ -282,9 +282,11 @@
         "acceptance_hook": "delta view shows deterministic diff vs prior prompt/requirements before dispatch",
         "implementation_paths": [
           "src/s18/build_mode/delta_review.ts",
-          "tests/s18/delta_review.test.ts"
+          "src/s18/build_mode/orchestrator.ts",
+          "tests/s18/delta_review.test.ts",
+          "tests/s18/orchestration_loop.test.ts"
         ],
-        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_191031/"
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/"
       },
       {
         "id": "S18-UXQ-05",

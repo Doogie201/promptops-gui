@@ -43,6 +43,10 @@ interface RequirementLike {
 
 type FlatValueMap = Map<string, string>;
 
+function jsonPathSegment(key: string): string {
+  return `[${JSON.stringify(key)}]`;
+}
+
 function summarizeScalar(value: unknown): string {
   const raw = JSON.stringify(value);
   if (raw.length <= 96 && !raw.includes('\\n')) {
@@ -165,13 +169,13 @@ function flattenValue(value: unknown, path: string, target: FlatValueMap): void 
       return;
     }
     for (const key of keys) {
-      const nextPath = path ? `${path}.${key}` : key;
+      const nextPath = `${path}${jsonPathSegment(key)}`;
       flattenValue((value as Record<string, unknown>)[key], nextPath, target);
     }
     return;
   }
 
-  target.set(path || '$', summarizeScalar(value));
+  target.set(path, summarizeScalar(value));
 }
 
 function flattenPrompt(prompt: PromptArtifact | undefined): FlatValueMap {
@@ -179,7 +183,7 @@ function flattenPrompt(prompt: PromptArtifact | undefined): FlatValueMap {
   if (!prompt) {
     return flattened;
   }
-  flattenValue(JSON.parse(prompt.promptJson) as Record<string, unknown>, '', flattened);
+  flattenValue(JSON.parse(prompt.promptJson) as Record<string, unknown>, '$', flattened);
   return flattened;
 }
 
@@ -283,4 +287,10 @@ export function buildDiffFirstDeltaReview(input: {
     ...review,
     sha256: stableHash(review),
   };
+}
+
+export function assertDeltaReviewReadyForDispatch(review: DeltaReviewModel): void {
+  if (review.reviewRequired && !review.readyForDispatch) {
+    throw new Error('DELTA_REVIEW_DISPATCH_BLOCKED');
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "work_item": "S18-UXQ-04",
+  "remediation_findings": [
+    "P1 dispatch enforcement",
+    "P2 escaped prompt paths"
+  ],
+  "p1_dispatch_guard": {
+    "blocked_error": "DELTA_REVIEW_DISPATCH_BLOCKED",
+    "state_after_block": "prompt_ready",
+    "initial_dispatch_state": "awaiting_agent_output"
+  },
+  "p2_escaped_paths": {
+    "paths": [
+      "$[\"a\"][\"b\"]",
+      "$[\"a.b\"]",
+      "$[\"items\"][0]",
+      "$[\"items[0]\"]"
+    ],
+    "changed_path_count": 4
+  },
+  "deterministic_parity": {
+    "rendered_match": true,
+    "hash_match": true
+  }
+}
