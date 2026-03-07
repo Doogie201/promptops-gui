@@ -57,10 +57,10 @@ not ok 8 - S18 contracts: UXQ-05 status, test registration, and evidence path ar
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 'queued'
     - 'implemented'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'implemented'
