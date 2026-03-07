@@ -1,0 +1,22 @@
+COMMAND: rg -n "S18-UXQ-06|scope guard|in-scope|out-of-scope|dispatchPromptWithDeltaReview|Scope guard UX" src tests docs/sprints/S18
+docs/sprints/S18/contracts_v1.json:304:        "id": "S18-UXQ-06",
+docs/sprints/S18/contracts_v1.json:305:        "title": "Scope guard UX",
+docs/sprints/S18/contracts_v1.json:308:        "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope"
+tests/s18/orchestration_loop.test.ts:7:import { applyEvaluationVerdict, dispatchPromptWithDeltaReview } from '../../src/s18/build_mode/orchestrator.ts';
+tests/s18/orchestration_loop.test.ts:47:  dispatchPromptWithDeltaReview(
+tests/s18/orchestration_loop.test.ts:92:    () => dispatchPromptWithDeltaReview(machine, noopReview),
+docs/sprints/S18/README.md:72:6. `S18-UXQ-06` Scope guard UX
+docs/sprints/S18/README.md:73:   - Show in-scope/out-of-scope status before run dispatch.
+docs/sprints/S18/README.md:170:- Without approved SCR, out-of-scope changes are hard-stop failures.
+src/s18/build_mode/orchestrator.ts:28:export function dispatchPromptWithDeltaReview(
+docs/sprints/S18/evidence/spec_generation_20260305_224637/30_readme_governance_capture.txt:142:- Without approved SCR, out-of-scope changes are hard-stop failures.
+docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/02_runtime_surface.txt:1:>>> rg -n "buildDiffFirstDeltaReview|readyForDispatch|dispatchPromptWithDeltaReview|jsonPathSegment|flattenValue" src/s18 tests/s18
+docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/02_runtime_surface.txt:2:src/s18/build_mode/orchestrator.ts:28:export function dispatchPromptWithDeltaReview(
+docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/02_runtime_surface.txt:24:tests/s18/orchestration_loop.test.ts:7:import { applyEvaluationVerdict, dispatchPromptWithDeltaReview } from '../../src/s18/build_mode/orchestrator.ts';
+docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/02_runtime_surface.txt:25:tests/s18/orchestration_loop.test.ts:47:  dispatchPromptWithDeltaReview(
+docs/sprints/S18/evidence/work_items/S18-UXQ-04_20260306_194829/02_runtime_surface.txt:28:tests/s18/orchestration_loop.test.ts:92:    () => dispatchPromptWithDeltaReview(machine, noopReview),
+docs/sprints/S18/evidence/spec_generation_20260305_224637/33_diff_no_index_readme_governance.txt:148:+- Without approved SCR, out-of-scope changes are hard-stop failures.
+docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/02_queue_scan.txt:32:        "id": "S18-UXQ-06",
+docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/02_queue_scan.txt:33:        "title": "Scope guard UX",
+docs/sprints/S18/evidence/work_items/S18-UXQ-03_20260306_172212/02_queue_scan.txt:46:6. `S18-UXQ-06` Scope guard UX
+EXIT_CODE: 0

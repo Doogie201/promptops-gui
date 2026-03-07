@@ -1,0 +1,135 @@
+$ node --test --experimental-transform-types tests/s18/scope_guard.test.ts tests/s18/orchestration_loop.test.ts tests/s18/contracts.test.ts
+TAP version 13
+# (node:51289) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:51289) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/contracts.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 contracts: schema file is valid and includes core loop/state guarantees
+ok 1 - S18 contracts: schema file is valid and includes core loop/state guarantees
+  ---
+  duration_ms: 2.935833
+  type: 'test'
+  ...
+# Subtest: S18 contracts: CI required tests list exists and files are present
+ok 2 - S18 contracts: CI required tests list exists and files are present
+  ---
+  duration_ms: 4.1325
+  type: 'test'
+  ...
+# Subtest: S18 contracts: blocked transition coverage includes project_bootstrapped
+ok 3 - S18 contracts: blocked transition coverage includes project_bootstrapped
+  ---
+  duration_ms: 1.235792
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-01 status and evidence path are tracked once implemented
+ok 4 - S18 contracts: UXQ-01 status and evidence path are tracked once implemented
+  ---
+  duration_ms: 1.302084
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented
+ok 5 - S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.280042
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented
+ok 6 - S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.179791
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented
+ok 7 - S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.240708
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented
+ok 8 - S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.352208
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-06 status, test registration, and evidence path are tracked once implemented
+ok 9 - S18 contracts: UXQ-06 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.946667
+  type: 'test'
+  ...
+# (node:51290) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:51290) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/orchestration_loop.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 orchestration: complete verdict reaches done
+ok 10 - S18 orchestration: complete verdict reaches done
+  ---
+  duration_ms: 3.380041
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: delta verdict routes to delta_required then prompt_ready
+ok 11 - S18 orchestration: delta verdict routes to delta_required then prompt_ready
+  ---
+  duration_ms: 0.600917
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: needs_input verdict routes to blocked
+ok 12 - S18 orchestration: needs_input verdict routes to blocked
+  ---
+  duration_ms: 0.27125
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: no-op delta review blocks dispatch before awaiting_agent_output
+ok 13 - S18 orchestration: no-op delta review blocks dispatch before awaiting_agent_output
+  ---
+  duration_ms: 0.54525
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: out-of-scope paths block dispatch before awaiting_agent_output
+ok 14 - S18 orchestration: out-of-scope paths block dispatch before awaiting_agent_output
+  ---
+  duration_ms: 0.355333
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: approved scope change request allows out-of-scope dispatch
+ok 15 - S18 orchestration: approved scope change request allows out-of-scope dispatch
+  ---
+  duration_ms: 0.270334
+  type: 'test'
+  ...
+# (node:51291) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:51291) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/scope_guard.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18-UXQ-06 scope guard: in-scope paths render clear pre-dispatch signal
+ok 16 - S18-UXQ-06 scope guard: in-scope paths render clear pre-dispatch signal
+  ---
+  duration_ms: 2.952625
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-06 scope guard: out-of-scope paths require approved SCR before dispatch
+ok 17 - S18-UXQ-06 scope guard: out-of-scope paths require approved SCR before dispatch
+  ---
+  duration_ms: 1.416792
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-06 scope guard: approved SCR preserves out-of-scope warning but allows dispatch
+ok 18 - S18-UXQ-06 scope guard: approved SCR preserves out-of-scope warning but allows dispatch
+  ---
+  duration_ms: 0.238958
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 275.860792
+EXIT_CODE: 0

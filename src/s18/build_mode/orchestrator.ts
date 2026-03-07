@@ -1,4 +1,5 @@
 import { assertDeltaReviewReadyForDispatch, type DeltaReviewModel } from './delta_review.ts';
+import { assertScopeGuardReadyForDispatch, type ScopeGuardModel } from './scope_guard.ts';
 import { BuildModeStateMachine, type BuildModeState } from './state_machine.ts';
 
 export type EvaluationVerdict = 'complete' | 'delta' | 'needs_input';
@@ -28,12 +29,14 @@ export function applyEvaluationVerdict(
 export function dispatchPromptWithDeltaReview(
   machine: BuildModeStateMachine,
   review: DeltaReviewModel,
+  scopeGuard: ScopeGuardModel,
 ): BuildModeState {
   if (machine.currentState !== 'prompt_ready') {
     throw new Error(`Expected prompt_ready state, got ${machine.currentState}`);
   }
 
   assertDeltaReviewReadyForDispatch(review);
+  assertScopeGuardReadyForDispatch(scopeGuard);
   machine.transition('awaiting_agent_output');
   return machine.currentState;
 }

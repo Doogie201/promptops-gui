@@ -1,0 +1,7 @@
+{
+  "id": "S18-UXQ-06",
+  "title": "Scope guard UX",
+  "status": "queued",
+  "target_milestone": "M4",
+  "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope"
+}

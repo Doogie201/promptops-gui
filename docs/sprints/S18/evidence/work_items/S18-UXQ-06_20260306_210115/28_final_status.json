@@ -1,0 +1,20 @@
+{
+  "item_id": "S18-UXQ-06",
+  "verdict": "PASS",
+  "branch": "codex/s18-uxq-06",
+  "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope",
+  "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/16_acceptance_summary.json",
+  "contracts_path": "docs/sprints/S18/contracts_v1.json",
+  "readme_path": "docs/sprints/S18/README.md",
+  "durable_bundle": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/",
+  "receipts": {
+    "gap_proof": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/05_gate_gap_proof.json",
+    "gate_summary": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/09_gate_summary.json",
+    "targeted_tests": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/22_targeted_tests_final.txt",
+    "verify": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/23_verify_final.txt",
+    "scope_lock": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/24_scope_lock_final.json",
+    "maintainability_lock": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/25_maintainability_lock_final.json",
+    "status": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/26_status_final.txt",
+    "json_validation": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/27_json_validation.txt"
+  }
+}

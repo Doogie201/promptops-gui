@@ -4,6 +4,10 @@ import { buildProjectContextArtifact } from '../../src/s18/build_mode/project_bo
 import { generateSprintRequirements } from '../../src/s18/build_mode/planner.ts';
 import { compilePromptFromRequirements } from '../../src/s18/build_mode/prompt_compiler.ts';
 import { buildDiffFirstDeltaReview } from '../../src/s18/build_mode/delta_review.ts';
+import {
+  buildScopeGuardModel,
+  type ScopeChangeRequestArtifact,
+} from '../../src/s18/build_mode/scope_guard.ts';
 import { applyEvaluationVerdict, dispatchPromptWithDeltaReview } from '../../src/s18/build_mode/orchestrator.ts';
 import { BuildModeStateMachine } from '../../src/s18/build_mode/state_machine.ts';
 
@@ -39,6 +43,17 @@ function buildArtifacts(repoRoot: string, sprintTemplateText: string) {
   return { requirements, prompt };
 }
 
+function buildScopeGuard(
+  requestedPaths: string[],
+  scopeChangeRequest?: ScopeChangeRequestArtifact,
+) {
+  return buildScopeGuardModel({
+    requestedPaths,
+    allowedPaths: ['src/s18/**', 'tests/s18/**', 'docs/sprints/S18/**'],
+    scopeChangeRequest,
+  });
+}
+
 function moveToEvaluating(machine: BuildModeStateMachine): void {
   const initial = buildArtifacts('/tmp/promptops/repo-l', '- Initial prompt');
   machine.transition('project_bootstrapped');
@@ -50,6 +65,7 @@ function moveToEvaluating(machine: BuildModeStateMachine): void {
       currentRequirements: initial.requirements,
       currentPrompt: initial.prompt,
     }),
+    buildScopeGuard(['src/s18/build_mode/orchestrator.ts']),
   );
   machine.transition('evaluating');
 }
@@ -89,8 +105,51 @@ test('S18 orchestration: no-op delta review blocks dispatch before awaiting_agen
   });
 
   assert.throws(
-    () => dispatchPromptWithDeltaReview(machine, noopReview),
+    () => dispatchPromptWithDeltaReview(machine, noopReview, buildScopeGuard(['src/s18/build_mode/orchestrator.ts'])),
     /DELTA_REVIEW_DISPATCH_BLOCKED/,
   );
   assert.strictEqual(machine.currentState, 'prompt_ready');
+});
+
+test('S18 orchestration: out-of-scope paths block dispatch before awaiting_agent_output', () => {
+  const machine = new BuildModeStateMachine('planning');
+  machine.transition('project_bootstrapped');
+  machine.transition('requirements_ready');
+  machine.transition('prompt_ready');
+
+  const initial = buildArtifacts('/tmp/promptops/repo-scope', '- Keep scope declared');
+  const review = buildDiffFirstDeltaReview({
+    currentRequirements: initial.requirements,
+    currentPrompt: initial.prompt,
+  });
+
+  assert.throws(
+    () => dispatchPromptWithDeltaReview(machine, review, buildScopeGuard(['docs/sprints/S17/README.md'])),
+    /SCOPE_GUARD_DISPATCH_BLOCKED/,
+  );
+  assert.strictEqual(machine.currentState, 'prompt_ready');
+});
+
+test('S18 orchestration: approved scope change request allows out-of-scope dispatch', () => {
+  const machine = new BuildModeStateMachine('planning');
+  machine.transition('project_bootstrapped');
+  machine.transition('requirements_ready');
+  machine.transition('prompt_ready');
+
+  const initial = buildArtifacts('/tmp/promptops/repo-approved', '- Approved scope exception');
+  const review = buildDiffFirstDeltaReview({
+    currentRequirements: initial.requirements,
+    currentPrompt: initial.prompt,
+  });
+  const scopeGuard = buildScopeGuard(['docs/sprints/S17/README.md'], {
+    change_id: 'SCR-S18-001',
+    requested_by: 'operator',
+    reason: 'Document migration dependency',
+    impact_on_scope: 'Single readme reference only',
+    files_affected: ['docs/sprints/S17/README.md'],
+    risk_level: 'low',
+    approval_decision: 'approved',
+  });
+
+  assert.strictEqual(dispatchPromptWithDeltaReview(machine, review, scopeGuard), 'awaiting_agent_output');
 });

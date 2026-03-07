@@ -1,0 +1,27 @@
+{
+  "pass": false,
+  "changed": [
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/contracts_v1.json",
+    "src/s18/build_mode/orchestrator.ts",
+    "tests/s18/contracts.test.ts",
+    "tests/s18/orchestration_loop.test.ts"
+  ],
+  "loc": {
+    "docs/sprints/S18/README.md": 477,
+    "docs/sprints/S18/contracts_v1.json": 362,
+    "src/s18/build_mode/orchestrator.ts": 43,
+    "tests/s18/contracts.test.ts": 135,
+    "tests/s18/orchestration_loop.test.ts": 156
+  },
+  "netNew": {
+    "docs/sprints/S18/README.md": 0,
+    "docs/sprints/S18/contracts_v1.json": 8,
+    "src/s18/build_mode/orchestrator.ts": 3,
+    "tests/s18/contracts.test.ts": 17,
+    "tests/s18/orchestration_loop.test.ts": 59
+  },
+  "violations": [
+    "docs/sprints/S18/README.md line 10 exceeds 180 chars"
+  ]
+}

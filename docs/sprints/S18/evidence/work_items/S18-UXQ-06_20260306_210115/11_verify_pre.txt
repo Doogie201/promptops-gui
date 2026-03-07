@@ -1,0 +1,429 @@
+$ npm run -s verify:s18
+[verify:s18] validate contracts JSON
+contracts_v1.json:VALID
+[verify:s18] contract policy controls present
+policy_controls:VALID
+[verify:s18] required tests declared in contracts exist
+required_tests_count=14
+[verify:s18] gap-proof artifact exists and is complete
+gap_proof:VALID
+[verify:s18] evidence index present for status claims
+[verify:s18] maintainability budgets (no-god-file checks)
+maintainability:PASS files=13
+[verify:s18] scope allowlist gate and gap-proof-before-net-new (commit delta)
+scope_allowlist:SKIP(local run, enforced in CI)
+[verify:s18] run S18 tests
+TAP version 13
+# (node:49751) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49751) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/ci_policy.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 CI policy: package scripts expose governance verification commands
+ok 1 - S18 CI policy: package scripts expose governance verification commands
+  ---
+  duration_ms: 1.098833
+  type: 'test'
+  ...
+# Subtest: S18 CI policy: verify workflow executes S18 governance gate
+ok 2 - S18 CI policy: verify workflow executes S18 governance gate
+  ---
+  duration_ms: 1.427917
+  type: 'test'
+  ...
+# Subtest: S18 CI policy: verify_s18 enforces determinism and hardpath stoplights
+ok 3 - S18 CI policy: verify_s18 enforces determinism and hardpath stoplights
+  ---
+  duration_ms: 2.253334
+  type: 'test'
+  ...
+# Subtest: S18 CI policy: contract gate outcomes include milestone and scope controls
+ok 4 - S18 CI policy: contract gate outcomes include milestone and scope controls
+  ---
+  duration_ms: 0.31975
+  type: 'test'
+  ...
+# (node:49752) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49752) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/compiler_determinism.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 compiler: same inputs produce byte-identical prompt artifact
+ok 5 - S18 compiler: same inputs produce byte-identical prompt artifact
+  ---
+  duration_ms: 12.812875
+  type: 'test'
+  ...
+# Subtest: S18 compiler: missing placeholders fail deterministically
+ok 6 - S18 compiler: missing placeholders fail deterministically
+  ---
+  duration_ms: 0.356958
+  type: 'test'
+  ...
+# (node:49753) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49753) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/contracts.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 contracts: schema file is valid and includes core loop/state guarantees
+ok 7 - S18 contracts: schema file is valid and includes core loop/state guarantees
+  ---
+  duration_ms: 1.517541
+  type: 'test'
+  ...
+# Subtest: S18 contracts: CI required tests list exists and files are present
+ok 8 - S18 contracts: CI required tests list exists and files are present
+  ---
+  duration_ms: 0.767541
+  type: 'test'
+  ...
+# Subtest: S18 contracts: blocked transition coverage includes project_bootstrapped
+ok 9 - S18 contracts: blocked transition coverage includes project_bootstrapped
+  ---
+  duration_ms: 13.28
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-01 status and evidence path are tracked once implemented
+ok 10 - S18 contracts: UXQ-01 status and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.316166
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented
+ok 11 - S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.290917
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented
+ok 12 - S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.159375
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented
+ok 13 - S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.134625
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented
+ok 14 - S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.135666
+  type: 'test'
+  ...
+# (node:49754) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49754) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/delta_review.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18-UXQ-04 delta review: same inputs produce byte-identical review output
+ok 15 - S18-UXQ-04 delta review: same inputs produce byte-identical review output
+  ---
+  duration_ms: 3.873875
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-04 delta review: shows deterministic diff for changed requirements and prompt fields
+ok 16 - S18-UXQ-04 delta review: shows deterministic diff for changed requirements and prompt fields
+  ---
+  duration_ms: 2.262125
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-04 delta review: initial prompt path records absence of prior artifacts
+ok 17 - S18-UXQ-04 delta review: initial prompt path records absence of prior artifacts
+  ---
+  duration_ms: 0.378417
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-04 delta review: no-op delta remains reviewable and blocks redundant dispatch
+ok 18 - S18-UXQ-04 delta review: no-op delta remains reviewable and blocks redundant dispatch
+  ---
+  duration_ms: 0.610625
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-04 delta review: escaped prompt paths distinguish dotted keys from nested paths
+ok 19 - S18-UXQ-04 delta review: escaped prompt paths distinguish dotted keys from nested paths
+  ---
+  duration_ms: 1.186125
+  type: 'test'
+  ...
+# (node:49755) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49755) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/first_run_wizard.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18-UXQ-01 wizard: captures idea and auto project name deterministically
+ok 20 - S18-UXQ-01 wizard: captures idea and auto project name deterministically
+  ---
+  duration_ms: 1.310333
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-01 wizard: manual project name override survives finalization
+ok 21 - S18-UXQ-01 wizard: manual project name override survives finalization
+  ---
+  duration_ms: 0.840625
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-01 wizard: repo root confirmation is mandatory and resets on changed input
+ok 22 - S18-UXQ-01 wizard: repo root confirmation is mandatory and resets on changed input
+  ---
+  duration_ms: 0.311875
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-01 wizard: create draft ignores preconfirmed repo-root input
+ok 23 - S18-UXQ-01 wizard: create draft ignores preconfirmed repo-root input
+  ---
+  duration_ms: 0.0975
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-01 wizard: finalization uses confirmed repo root rather than mutable draft input
+ok 24 - S18-UXQ-01 wizard: finalization uses confirmed repo root rather than mutable draft input
+  ---
+  duration_ms: 0.259416
+  type: 'test'
+  ...
+# (node:49756) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49756) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/human_gate_controls.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18-UXQ-03 human gates: requirements approval is explicit, recorded, and gates prompt transition
+ok 25 - S18-UXQ-03 human gates: requirements approval is explicit, recorded, and gates prompt transition
+  ---
+  duration_ms: 1.850833
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-03 human gates: fresh delta approval is required for each loop-back cycle
+ok 26 - S18-UXQ-03 human gates: fresh delta approval is required for each loop-back cycle
+  ---
+  duration_ms: 0.256958
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-03 human gates: auto-advance approval remains explicit at done state
+ok 27 - S18-UXQ-03 human gates: auto-advance approval remains explicit at done state
+  ---
+  duration_ms: 0.158125
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-03 human gates: duplicate gate sequence values are rejected as ambiguous
+ok 28 - S18-UXQ-03 human gates: duplicate gate sequence values are rejected as ambiguous
+  ---
+  duration_ms: 0.119917
+  type: 'test'
+  ...
+# (node:49757) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49757) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/loop_stepper.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18-UXQ-02 stepper: renders canonical sequence with planning pinned first
+ok 29 - S18-UXQ-02 stepper: renders canonical sequence with planning pinned first
+  ---
+  duration_ms: 8.253417
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-02 stepper: pins requirements and prompt states deterministically
+ok 30 - S18-UXQ-02 stepper: pins requirements and prompt states deterministically
+  ---
+  duration_ms: 0.300541
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-02 stepper: pins delta outcome and exposes loop-back target
+ok 31 - S18-UXQ-02 stepper: pins delta outcome and exposes loop-back target
+  ---
+  duration_ms: 0.298959
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-02 stepper: pins done outcome without delta loop-back
+ok 32 - S18-UXQ-02 stepper: pins done outcome without delta loop-back
+  ---
+  duration_ms: 0.161375
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-02 stepper: blocked state requires context and preserves current-state pin
+ok 33 - S18-UXQ-02 stepper: blocked state requires context and preserves current-state pin
+  ---
+  duration_ms: 0.504
+  type: 'test'
+  ...
+# (node:49758) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49758) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/orchestration_loop.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 orchestration: complete verdict reaches done
+ok 34 - S18 orchestration: complete verdict reaches done
+  ---
+  duration_ms: 2.534042
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: delta verdict routes to delta_required then prompt_ready
+ok 35 - S18 orchestration: delta verdict routes to delta_required then prompt_ready
+  ---
+  duration_ms: 3.234458
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: needs_input verdict routes to blocked
+ok 36 - S18 orchestration: needs_input verdict routes to blocked
+  ---
+  duration_ms: 1.069083
+  type: 'test'
+  ...
+# Subtest: S18 orchestration: no-op delta review blocks dispatch before awaiting_agent_output
+ok 37 - S18 orchestration: no-op delta review blocks dispatch before awaiting_agent_output
+  ---
+  duration_ms: 13.1985
+  type: 'test'
+  ...
+# (node:49759) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49759) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/planner_determinism.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 planner: same input yields identical canonical JSON and hash
+ok 38 - S18 planner: same input yields identical canonical JSON and hash
+  ---
+  duration_ms: 1.0885
+  type: 'test'
+  ...
+# Subtest: S18 planner: fallback requirement is deterministic when template has no bullets
+ok 39 - S18 planner: fallback requirement is deterministic when template has no bullets
+  ---
+  duration_ms: 0.24775
+  type: 'test'
+  ...
+# (node:49760) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49760) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/policy_controls.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 policy controls: contract defines maintainability, scope, and evidence locks
+ok 40 - S18 policy controls: contract defines maintainability, scope, and evidence locks
+  ---
+  duration_ms: 1.3115
+  type: 'test'
+  ...
+# Subtest: S18 policy controls: verify script enforces gap-proof, scope allowlist, and receipt index
+ok 41 - S18 policy controls: verify script enforces gap-proof, scope allowlist, and receipt index
+  ---
+  duration_ms: 0.762542
+  type: 'test'
+  ...
+# (node:49761) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49761) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/project_bootstrap.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 bootstrap: deterministic project naming and explicit repo root
+ok 42 - S18 bootstrap: deterministic project naming and explicit repo root
+  ---
+  duration_ms: 2.42325
+  type: 'test'
+  ...
+# Subtest: S18 bootstrap: env fallback works when explicit input is absent
+ok 43 - S18 bootstrap: env fallback works when explicit input is absent
+  ---
+  duration_ms: 0.270125
+  type: 'test'
+  ...
+# Subtest: S18 bootstrap: missing repo root hard-stops deterministically
+ok 44 - S18 bootstrap: missing repo root hard-stops deterministically
+  ---
+  duration_ms: 0.25225
+  type: 'test'
+  ...
+# (node:49762) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49762) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/replay_resume.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 replay/resume: checkpoint round-trip preserves payload hash
+ok 45 - S18 replay/resume: checkpoint round-trip preserves payload hash
+  ---
+  duration_ms: 8.521834
+  type: 'test'
+  ...
+# Subtest: S18 replay/resume: payload drift changes deterministic hash
+ok 46 - S18 replay/resume: payload drift changes deterministic hash
+  ---
+  duration_ms: 0.848458
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: latest checkpoint from bundle shows hash parity badge and resumes state
+ok 47 - S18-UXQ-05 replay/resume: latest checkpoint from bundle shows hash parity badge and resumes state
+  ---
+  duration_ms: 3.630125
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: latest checkpoint prefers highest numeric sequence over lexicographic order
+ok 48 - S18-UXQ-05 replay/resume: latest checkpoint prefers highest numeric sequence over lexicographic order
+  ---
+  duration_ms: 1.570333
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: hash drift blocks resume and exposes drift badge
+ok 49 - S18-UXQ-05 replay/resume: hash drift blocks resume and exposes drift badge
+  ---
+  duration_ms: 1.122125
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: missing hash file blocks resume and exposes missing badge
+ok 50 - S18-UXQ-05 replay/resume: missing hash file blocks resume and exposes missing badge
+  ---
+  duration_ms: 3.371958
+  type: 'test'
+  ...
+# (node:49763) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49763) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/repo_root_injection.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 prompt context: injects deterministic project context fields
+ok 51 - S18 prompt context: injects deterministic project context fields
+  ---
+  duration_ms: 1.393
+  type: 'test'
+  ...
+# Subtest: S18 compiler: generated prompt includes repo root + strategy context
+ok 52 - S18 compiler: generated prompt includes repo root + strategy context
+  ---
+  duration_ms: 0.482833
+  type: 'test'
+  ...
+# (node:49764) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:49764) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/state_machine.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 state machine: legal path reaches done
+ok 53 - S18 state machine: legal path reaches done
+  ---
+  duration_ms: 0.449334
+  type: 'test'
+  ...
+# Subtest: S18 state machine: delta verdict loops back via delta_required
+ok 54 - S18 state machine: delta verdict loops back via delta_required
+  ---
+  duration_ms: 0.137
+  type: 'test'
+  ...
+# Subtest: S18 state machine: illegal transitions are rejected
+ok 55 - S18 state machine: illegal transitions are rejected
+  ---
+  duration_ms: 0.221083
+  type: 'test'
+  ...
+1..55
+# tests 55
+# suites 0
+# pass 55
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 586.357167
+[verify:s18] stoplight non-determinism grep (src/s18 only)
+[verify:s18] stoplight hardcoded path grep (src/s18 only)
+[verify:s18] PASS
+EXIT_CODE: 0

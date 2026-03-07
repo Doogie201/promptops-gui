@@ -1,0 +1,61 @@
+$ git status --porcelain=v1 --branch
+## codex/s18-uxq-06
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M docs/sprints/S18/evidence/INDEX.md
+ M docs/sprints/S18/evidence/gap_proof/latest.json
+ M src/s18/build_mode/orchestrator.ts
+ M tests/s18/contracts.test.ts
+ M tests/s18/orchestration_loop.test.ts
+?? docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/
+?? src/s18/build_mode/scope_guard.ts
+?? tests/s18/scope_guard.test.ts
+
+$ git diff --name-only
+docs/sprints/S18/README.md
+docs/sprints/S18/contracts_v1.json
+docs/sprints/S18/evidence/INDEX.md
+docs/sprints/S18/evidence/gap_proof/latest.json
+src/s18/build_mode/orchestrator.ts
+tests/s18/contracts.test.ts
+tests/s18/orchestration_loop.test.ts
+
+$ git ls-files --others --exclude-standard
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/00_run_header.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/01_queue_scan.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/02_gap_scan.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/03_git_state_pre.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/04_branch_main_sync.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/05_gate_gap_proof.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/06_scope_lock_pre.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/07_maintainability_lock_pre.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/08_evidence_lock_pre.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/09_gate_summary.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/10_targeted_tests_pre.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/11_verify_pre.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/12_branch_create.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/13_status_after_branch.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/14_targeted_tests_post.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/15_verify_post.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/16_acceptance_summary.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/17_diff_names.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/18_status_after_patch.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/19_scope_lock_post.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/20_maintainability_lock_post.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/21_gap_proof_update.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/22_targeted_tests_final.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/23_verify_final.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/24_scope_lock_final.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/25_maintainability_lock_final.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/26_status_final.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/27_json_validation.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/28_final_status.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/29_scope_lock_closure.json
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/30_status_closure.txt
+docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/INDEX.md
+src/s18/build_mode/scope_guard.ts
+tests/s18/scope_guard.test.ts
+
+$ git rev-parse --abbrev-ref HEAD
+codex/s18-uxq-06
+EXIT_CODE=0

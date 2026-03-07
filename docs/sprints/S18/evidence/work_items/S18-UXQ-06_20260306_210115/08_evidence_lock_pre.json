@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "required": [
+    "docs/sprints/S18/contracts_v1.json",
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/evidence/INDEX.md",
+    "docs/sprints/S18/evidence/gap_proof/latest.json"
+  ],
+  "missing": []
+}

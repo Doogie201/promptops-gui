@@ -1,0 +1,26 @@
+{
+  "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope",
+  "in_scope_signal": {
+    "status": "in_scope",
+    "dispatchAllowed": true,
+    "rendered": "Scope guard: IN SCOPE\nSummary: All 2 planned path(s) are in scope\nSCR: not_required\n- IN src/s18/build_mode/orchestrator.ts <= src/s18/**\n- IN tests/s18/orchestration_loop.test.ts <= tests/s18/**"
+  },
+  "out_of_scope_signal": {
+    "status": "out_of_scope",
+    "outOfScopePaths": [
+      "docs/sprints/S17/README.md"
+    ],
+    "dispatchAllowed": false,
+    "summary": "1 out-of-scope path(s) require approved SCR"
+  },
+  "approved_scr_signal": {
+    "status": "out_of_scope",
+    "scopeChangeRequestStatus": "approved",
+    "dispatchAllowed": true,
+    "summary": "Out-of-scope paths covered by approved SCR SCR-S18-001"
+  },
+  "dispatch_enforcement": {
+    "blockedError": "SCOPE_GUARD_DISPATCH_BLOCKED",
+    "approvedState": "awaiting_agent_output"
+  }
+}
