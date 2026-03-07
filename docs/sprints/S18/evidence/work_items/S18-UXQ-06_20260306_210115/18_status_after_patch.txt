@@ -1,0 +1,10 @@
+$ git status --porcelain=v1 --branch
+## codex/s18-uxq-06
+ M docs/sprints/S18/README.md
+ M docs/sprints/S18/contracts_v1.json
+ M src/s18/build_mode/orchestrator.ts
+ M tests/s18/contracts.test.ts
+ M tests/s18/orchestration_loop.test.ts
+?? src/s18/build_mode/scope_guard.ts
+?? tests/s18/scope_guard.test.ts
+EXIT_CODE: 0

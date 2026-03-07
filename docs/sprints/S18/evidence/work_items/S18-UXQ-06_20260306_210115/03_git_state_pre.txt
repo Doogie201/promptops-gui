@@ -1,0 +1,4 @@
+COMMAND: git status --porcelain=v1 --branch && git rev-list --left-right --count HEAD...origin/main
+## main...origin/main
+0	0
+EXIT_CODE: 0

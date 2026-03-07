@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "maxFileLoc": 1200,
+  "maxFnLen": 80,
+  "files_scanned": 13,
+  "loc": {
+    "src/s18/build_mode/checkpoints.ts": 27,
+    "src/s18/build_mode/delta_review.ts": 297,
+    "src/s18/build_mode/first_run_wizard.ts": 101,
+    "src/s18/build_mode/hash.ts": 15,
+    "src/s18/build_mode/human_gate_controls.ts": 244,
+    "src/s18/build_mode/loop_stepper.ts": 122,
+    "src/s18/build_mode/orchestrator.ts": 40,
+    "src/s18/build_mode/planner.ts": 61,
+    "src/s18/build_mode/project_bootstrap.ts": 65,
+    "src/s18/build_mode/prompt_compiler.ts": 92,
+    "src/s18/build_mode/prompt_context.ts": 18,
+    "src/s18/build_mode/replay_resume.ts": 195,
+    "src/s18/build_mode/state_machine.ts": 46
+  },
+  "violations": []
+}

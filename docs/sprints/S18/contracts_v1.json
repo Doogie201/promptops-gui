@@ -303,9 +303,16 @@
       {
         "id": "S18-UXQ-06",
         "title": "Scope guard UX",
-        "status": "queued",
+        "status": "implemented",
         "target_milestone": "M4",
-        "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope"
+        "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope",
+        "implementation_paths": [
+          "src/s18/build_mode/scope_guard.ts",
+          "src/s18/build_mode/orchestrator.ts",
+          "tests/s18/scope_guard.test.ts",
+          "tests/s18/orchestration_loop.test.ts"
+        ],
+        "acceptance_evidence_path": "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/"
       },
       {
         "id": "S18-UXQ-07",
@@ -330,6 +337,7 @@
       "tests/s18/compiler_determinism.test.ts",
       "tests/s18/orchestration_loop.test.ts",
       "tests/s18/replay_resume.test.ts",
+      "tests/s18/scope_guard.test.ts",
       "tests/s18/ci_policy.test.ts",
       "tests/s18/policy_controls.test.ts"
     ],

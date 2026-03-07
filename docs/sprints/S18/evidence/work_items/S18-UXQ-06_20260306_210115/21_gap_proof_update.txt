@@ -1,0 +1,8 @@
+{
+  "updated": "docs/sprints/S18/evidence/gap_proof/latest.json",
+  "added": [
+    "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/05_gate_gap_proof.json",
+    "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/16_acceptance_summary.json"
+  ]
+}
+EXIT_CODE=0

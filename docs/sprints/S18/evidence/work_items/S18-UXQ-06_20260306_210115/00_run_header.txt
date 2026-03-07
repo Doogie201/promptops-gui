@@ -1,0 +1,5 @@
+timestamp=2026-03-07T02:01:15Z
+repo=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+branch=main
+work_item=S18-UXQ-06
+bundle=/tmp/promptops/S18/work_items/S18-UXQ-06_20260306_210115

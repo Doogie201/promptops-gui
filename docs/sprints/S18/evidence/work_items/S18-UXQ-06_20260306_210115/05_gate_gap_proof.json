@@ -1,0 +1,12 @@
+{
+  "item_id": "S18-UXQ-06",
+  "queued_status": "queued",
+  "acceptance_hook": "pre-dispatch scope signal indicates in-scope/out-of-scope",
+  "implementation_allowed": true,
+  "blocking_findings": [],
+  "source_receipts": [
+    "docs/sprints/S18/contracts_v1.json",
+    "docs/sprints/S18/README.md",
+    "docs/sprints/S18/evidence/gap_proof/latest.json"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "review_fix": "P1 directory boundary and path normalization",
+  "sibling_prefix_case": {
+    "status": "out_of_scope",
+    "outOfScopePaths": [
+      "src/s180/hack.ts"
+    ],
+    "dispatchAllowed": false
+  },
+  "dot_segment_case": {
+    "requestedPaths": [
+      "src/s19/file.ts"
+    ],
+    "outOfScopePaths": [
+      "src/s19/file.ts"
+    ],
+    "dispatchAllowed": false
+  }
+}
