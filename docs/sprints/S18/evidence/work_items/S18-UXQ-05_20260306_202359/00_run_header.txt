@@ -1,0 +1,5 @@
+work_item=S18-UXQ-05
+repo=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+branch_before=main
+started_at=20260306_202359
+mode=STRICT_OPERATOR_MODE

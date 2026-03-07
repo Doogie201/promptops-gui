@@ -1,0 +1,9 @@
+COMMAND: node scan contracts for S18-UXQ-05
+{
+  "id": "S18-UXQ-05",
+  "title": "One-click replay/resume",
+  "status": "queued",
+  "target_milestone": "M3",
+  "acceptance_hook": "resume action from artifact bundle shows hash parity badge"
+}
+EXIT_CODE: 0

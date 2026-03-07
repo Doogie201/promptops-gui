@@ -1,0 +1,32 @@
+{
+  "acceptance_hook": "resume action from artifact bundle shows hash parity badge",
+  "latest_bundle": {
+    "checkpointId": "cp-002",
+    "selectionMode": "latest",
+    "parityStatus": "match",
+    "rendered": "Resume latest checkpoint (cp-002) | delta_required | [HASH MATCH]",
+    "sha256_match": true,
+    "resumed_state": "delta_required"
+  },
+  "sequence_bundle": {
+    "candidateIds": [
+      "cp-9",
+      "cp-10"
+    ],
+    "checkpointId": "cp-10",
+    "selectionMode": "latest",
+    "checkpointState": "done",
+    "resumeActionEnabled": true,
+    "rendered": "Resume latest checkpoint (cp-10) | done | [HASH MATCH]"
+  },
+  "drift_bundle": {
+    "checkpointId": "cp-003",
+    "parityStatus": "drift",
+    "resumeActionEnabled": false
+  },
+  "missing_hash_bundle": {
+    "checkpointId": "cp-004",
+    "parityStatus": "missing",
+    "resumeActionEnabled": false
+  }
+}

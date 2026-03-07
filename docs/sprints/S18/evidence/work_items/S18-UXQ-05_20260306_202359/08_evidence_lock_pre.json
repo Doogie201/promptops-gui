@@ -1,0 +1,16 @@
+{
+  "gate": "EVIDENCE_LOCK",
+  "bundle": "/tmp/promptops/S18/work_items/S18-UXQ-05_20260306_202359",
+  "required_receipts": [
+    "00_run_header.txt",
+    "01_queue_scan.txt",
+    "02_gap_scan.txt",
+    "03_git_state_pre.txt",
+    "04_branch_main_sync.txt",
+    "05_gate_gap_proof.json",
+    "06_scope_lock_pre.json",
+    "07_maintainability_lock_pre.json"
+  ],
+  "missing": [],
+  "pass": true
+}

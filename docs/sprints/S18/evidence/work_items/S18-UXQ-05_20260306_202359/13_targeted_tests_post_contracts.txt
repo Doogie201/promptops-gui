@@ -1,0 +1,100 @@
+COMMAND: node --test --experimental-transform-types tests/s18/replay_resume.test.ts tests/s18/contracts.test.ts
+TAP version 13
+# (node:28725) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:28725) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/contracts.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 contracts: schema file is valid and includes core loop/state guarantees
+ok 1 - S18 contracts: schema file is valid and includes core loop/state guarantees
+  ---
+  duration_ms: 1.077334
+  type: 'test'
+  ...
+# Subtest: S18 contracts: CI required tests list exists and files are present
+ok 2 - S18 contracts: CI required tests list exists and files are present
+  ---
+  duration_ms: 0.817375
+  type: 'test'
+  ...
+# Subtest: S18 contracts: blocked transition coverage includes project_bootstrapped
+ok 3 - S18 contracts: blocked transition coverage includes project_bootstrapped
+  ---
+  duration_ms: 4.410834
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-01 status and evidence path are tracked once implemented
+ok 4 - S18 contracts: UXQ-01 status and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.675042
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented
+ok 5 - S18 contracts: UXQ-02 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.540625
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented
+ok 6 - S18 contracts: UXQ-03 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.463334
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented
+ok 7 - S18 contracts: UXQ-04 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.795084
+  type: 'test'
+  ...
+# Subtest: S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented
+ok 8 - S18 contracts: UXQ-05 status, test registration, and evidence path are tracked once implemented
+  ---
+  duration_ms: 0.411542
+  type: 'test'
+  ...
+# (node:28726) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:28726) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Volumes/X9_DEV/Dev/Projects/promptops-gui/tests/s18/replay_resume.test.ts is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /Volumes/X9_DEV/Dev/Projects/promptops-gui/package.json.
+# Subtest: S18 replay/resume: checkpoint round-trip preserves payload hash
+ok 9 - S18 replay/resume: checkpoint round-trip preserves payload hash
+  ---
+  duration_ms: 5.917
+  type: 'test'
+  ...
+# Subtest: S18 replay/resume: payload drift changes deterministic hash
+ok 10 - S18 replay/resume: payload drift changes deterministic hash
+  ---
+  duration_ms: 0.117667
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: latest checkpoint from bundle shows hash parity badge and resumes state
+ok 11 - S18-UXQ-05 replay/resume: latest checkpoint from bundle shows hash parity badge and resumes state
+  ---
+  duration_ms: 2.313083
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: hash drift blocks resume and exposes drift badge
+ok 12 - S18-UXQ-05 replay/resume: hash drift blocks resume and exposes drift badge
+  ---
+  duration_ms: 0.982666
+  type: 'test'
+  ...
+# Subtest: S18-UXQ-05 replay/resume: missing hash file blocks resume and exposes missing badge
+ok 13 - S18-UXQ-05 replay/resume: missing hash file blocks resume and exposes missing badge
+  ---
+  duration_ms: 0.833
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 263.422458
+EXIT_CODE: 0
