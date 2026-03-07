@@ -21,6 +21,10 @@
 - `26_status_final.txt` — final worktree snapshot before closure receipts.
 - `27_json_validation.txt` — JSON validation receipt for updated S18 artifacts.
 - `30_status_closure.txt` — closure snapshot after the durable bundle and closure receipts were synced.
+- `34_review_fix_targeted_tests.txt` — targeted regression proof for the post-review timeline remediation.
+- `35_review_fix_verify.txt` — full `verify:s18` proof for the post-review timeline remediation.
+- `37_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh for the review-fix commit.
+- `38_review_fix_verify_gap.txt` — full `verify:s18` proof after the gap-proof refresh for the review-fix commit.
 
 ## Status Claims
 
@@ -34,3 +38,5 @@
 - `25_maintainability_lock_final.json` — final budget/human-readability evaluation for touched code files.
 - `28_final_status.json` — final machine-readable verdict for `S18-UXQ-07`.
 - `29_scope_lock_closure.json` — closure scope evaluation including the bundle index and final receipt sync.
+- `33_review_fix_acceptance.json` — remediation proof that unmatched current states stay unset and checkpoint links survive path overlap.
+- `36_review_fix_gap_proof_update.txt` — proof that `gap_proof/latest.json`, the work-item index, and the S18 evidence index were refreshed for the review-fix commit.

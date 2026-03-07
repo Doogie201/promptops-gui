@@ -1,0 +1,57 @@
+COMMAND=git diff -- docs/sprints/S18/evidence/gap_proof/latest.json docs/sprints/S18/evidence/INDEX.md docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/INDEX.md
+CWD=/Volumes/X9_DEV/Dev/Projects/promptops-gui
+EXIT_CODE=0
+--- STDOUT ---
+diff --git a/docs/sprints/S18/evidence/INDEX.md b/docs/sprints/S18/evidence/INDEX.md
+index 1f4af78..32505fd 100644
+--- a/docs/sprints/S18/evidence/INDEX.md
++++ b/docs/sprints/S18/evidence/INDEX.md
+@@ -78,3 +78,10 @@
+ - `work_items/S18-UXQ-07_20260306_222746/09_gate_summary.json` — current-run PASS decision for gap-proof, scope, maintainability, evidence, and regression locks before code.
+ - `work_items/S18-UXQ-07_20260306_222746/18_acceptance_summary.json` — acceptance proof that the timeline stays deterministic, pins the current transition, and links each transition to receipt/evidence/checkpoint paths.
+ - `work_items/S18-UXQ-07_20260306_222746/28_final_status.json` — final work-item verdict with acceptance evidence paths and gate results.
++- `work_items/S18-UXQ-07_20260306_222746/33_review_fix_acceptance.json` — remediation proof that unmatched current states stay unset and checkpoint links survive path overlap.
++- `work_items/S18-UXQ-07_20260306_222746/34_review_fix_targeted_tests.txt` — targeted regression proof for the post-review timeline remediation.
++- `work_items/S18-UXQ-07_20260306_222746/35_review_fix_verify.txt` — full `verify:s18` proof for the post-review timeline remediation.
++- `work_items/S18-UXQ-07_20260306_222746/36_review_fix_gap_proof_update.txt` — proof that `gap_proof/latest.json`
++  and the S18 evidence indexes were refreshed for the review-fix commit.
++- `work_items/S18-UXQ-07_20260306_222746/37_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh for the review-fix commit.
++- `work_items/S18-UXQ-07_20260306_222746/38_review_fix_verify_gap.txt` — full `verify:s18` proof after the gap-proof refresh for the review-fix commit.
+diff --git a/docs/sprints/S18/evidence/gap_proof/latest.json b/docs/sprints/S18/evidence/gap_proof/latest.json
+index 0e6464c..826055b 100644
+--- a/docs/sprints/S18/evidence/gap_proof/latest.json
++++ b/docs/sprints/S18/evidence/gap_proof/latest.json
+@@ -58,6 +58,9 @@
+     "docs/sprints/S18/evidence/work_items/S18-UXQ-06_20260306_210115/36_review_fix_verify_post_index.txt",
+     "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/05_gate_gap_proof.json",
+     "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/09_gate_summary.json",
+-    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/18_acceptance_summary.json"
++    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/18_acceptance_summary.json",
++    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/33_review_fix_acceptance.json",
++    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/34_review_fix_targeted_tests.txt",
++    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/35_review_fix_verify.txt"
+   ]
+ }
+diff --git a/docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/INDEX.md b/docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/INDEX.md
+index 764b5b1..ab66d61 100644
+--- a/docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/INDEX.md
++++ b/docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/INDEX.md
+@@ -21,6 +21,10 @@
+ - `26_status_final.txt` — final worktree snapshot before closure receipts.
+ - `27_json_validation.txt` — JSON validation receipt for updated S18 artifacts.
+ - `30_status_closure.txt` — closure snapshot after the durable bundle and closure receipts were synced.
++- `34_review_fix_targeted_tests.txt` — targeted regression proof for the post-review timeline remediation.
++- `35_review_fix_verify.txt` — full `verify:s18` proof for the post-review timeline remediation.
++- `37_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh for the review-fix commit.
++- `38_review_fix_verify_gap.txt` — full `verify:s18` proof after the gap-proof refresh for the review-fix commit.
+ 
+ ## Status Claims
+ 
+@@ -34,3 +38,5 @@
+ - `25_maintainability_lock_final.json` — final budget/human-readability evaluation for touched code files.
+ - `28_final_status.json` — final machine-readable verdict for `S18-UXQ-07`.
+ - `29_scope_lock_closure.json` — closure scope evaluation including the bundle index and final receipt sync.
++- `33_review_fix_acceptance.json` — remediation proof that unmatched current states stay unset and checkpoint links survive path overlap.
++- `36_review_fix_gap_proof_update.txt` — proof that `gap_proof/latest.json`, the work-item index, and the S18 evidence index were refreshed for the review-fix commit.
+
+--- STDERR ---

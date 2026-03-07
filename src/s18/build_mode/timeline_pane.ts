@@ -110,7 +110,7 @@ function buildLinks(input: {
   );
 
   const checkpointPath = normalizePath(input.checkpointPath);
-  if (checkpointPath && !links.some((entry) => entry.path === checkpointPath)) {
+  if (checkpointPath) {
     links.push({
       kind: 'checkpoint',
       path: checkpointPath,
@@ -180,7 +180,7 @@ function findCurrentIndex(
       return index;
     }
   }
-  return transitions.length - 1;
+  return -1;
 }
 
 function assertUniqueTransitionIds(transitions: readonly TimelineTransitionReceipt[]): void {

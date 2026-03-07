@@ -103,6 +103,50 @@ test('S18-UXQ-07 timeline pane: empty transitions remain deterministic and expli
   assert.strictEqual(model.rendered, 'Timeline empty | current=planning');
 });
 
+test('S18-UXQ-07 timeline pane: leaves current transition unset when no transition reaches current state', () => {
+  const model = buildDeterministicTimelinePane({
+    currentState: 'awaiting_human_gate',
+    transitions: buildTransitions().slice(0, 2),
+  });
+
+  assert.strictEqual(model.currentTransitionId, null);
+  assert.strictEqual(model.currentSequence, null);
+  assert.deepStrictEqual(
+    model.entries.map((entry) => entry.status),
+    ['complete', 'complete'],
+  );
+  assert.doesNotMatch(model.rendered, /\[current\]/);
+});
+
+test('S18-UXQ-07 timeline pane: preserves checkpoint links when checkpoint path matches another link path', () => {
+  const model = buildDeterministicTimelinePane({
+    currentState: 'requirements_ready',
+    transitions: [
+      {
+        transitionId: 'tr-overlap',
+        from: 'project_bootstrapped',
+        to: 'requirements_ready',
+        inputHashes: ['project-a'],
+        outputHashes: ['requirements-a'],
+        receiptPaths: ['docs/sprints/S18/evidence/gates/verify.txt'],
+        evidencePaths: ['docs/sprints/S18/evidence/at/AT-S18-02.json'],
+        checkpointId: 'cp-overlap',
+        checkpointPath: 'docs/sprints/S18/evidence/gates/verify.txt',
+        exitCode: 0,
+      },
+    ],
+  });
+
+  assert.deepStrictEqual(
+    model.entries[0]?.links.map((entry) => `${entry.kind}:${entry.path}`),
+    [
+      'receipt:docs/sprints/S18/evidence/gates/verify.txt',
+      'evidence:docs/sprints/S18/evidence/at/AT-S18-02.json',
+      'checkpoint:docs/sprints/S18/evidence/gates/verify.txt',
+    ],
+  );
+});
+
 test('S18-UXQ-07 timeline pane: invalid transition inputs are rejected deterministically', () => {
   assert.throws(
     () =>

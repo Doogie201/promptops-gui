@@ -1,0 +1,28 @@
+{
+  "artifact_version": "s18.uxq07.review_fix.v1",
+  "work_item": "S18-UXQ-07",
+  "review_findings": [
+    "P2 leave current transition unset when no transition reaches current state",
+    "P2 preserve checkpoint-typed link when checkpoint path overlaps another link path"
+  ],
+  "current_state_miss": {
+    "currentTransitionId": null,
+    "currentSequence": null,
+    "statuses": [
+      "complete",
+      "complete"
+    ],
+    "renderedHasCurrentMarker": false
+  },
+  "checkpoint_overlap": {
+    "links": [
+      "receipt:docs/sprints/S18/evidence/gates/verify.txt",
+      "evidence:docs/sprints/S18/evidence/at/AT-S18-02.json",
+      "checkpoint:docs/sprints/S18/evidence/gates/verify.txt"
+    ]
+  },
+  "evidence_refs": [
+    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/34_review_fix_targeted_tests.txt",
+    "docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/35_review_fix_verify.txt"
+  ]
+}
