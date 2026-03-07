@@ -13,9 +13,9 @@ index bc4b720..50f9ce4 100644
 -   - Link each transition to receipts and evidence paths.
 +   - Implemented in `src/s18/build_mode/timeline_pane.ts`.
 +   - Evidence: `docs/sprints/S18/evidence/work_items/S18-UXQ-07_20260306_222746/`.
- 
+
  Execution policy:
- 
+
 diff --git a/docs/sprints/S18/contracts_v1.json b/docs/sprints/S18/contracts_v1.json
 index 708bf59..bccfd26 100644
 --- a/docs/sprints/S18/contracts_v1.json
@@ -55,9 +55,9 @@ index 03eb016..1f4af78 100644
  - `work_items/S18-UXQ-06_20260306_210115/00_*` to `28_*` — current-run gate, scope-guard acceptance, scope, maintainability, and closeout receipts for the scope guard UX work item.
 +- `work_items/S18-UXQ-07_20260306_222746/00_*` to `28_*` — current-run gate, regression, scope, maintainability,
 +  and acceptance receipts for the deterministic timeline pane work item.
- 
+
  ## Status Claims
- 
+
 @@ -72,3 +74,7 @@
    was refreshed so the review-fix commit satisfies the S18 commit-delta governance rule.
  - `work_items/S18-UXQ-06_20260306_210115/38_review_fix_precommit_gap.txt` — pre-commit proof after the gap-proof refresh.
